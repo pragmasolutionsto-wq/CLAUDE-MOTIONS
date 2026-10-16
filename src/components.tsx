@@ -39,7 +39,6 @@ export const Background: React.FC = () => {
         height: r * 2,
         borderRadius: '50%',
         background: `radial-gradient(circle, ${color} 0%, transparent 70%)`,
-        filter: 'blur(40px)',
       }}
     />
   );
@@ -195,7 +194,6 @@ export const Glass: React.FC<{style?: React.CSSProperties; children: React.React
         background: 'linear-gradient(145deg, rgba(255,255,255,0.075), rgba(255,255,255,0.02))',
         border: `1px solid rgba(244,239,228,0.14)`,
         borderRadius: 28,
-        backdropFilter: 'blur(14px)',
         boxShadow: '0 30px 80px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08)',
         opacity: Math.min(1, p * 1.4),
         transform: `${tr} scale(${0.96 + p * 0.04})`,
