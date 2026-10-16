@@ -1,0 +1,18 @@
+{
+  "fps": 30,
+  "overlap": 15,
+  "scenes": [
+    {"key": "logo", "dur": 135, "trans": "none"},
+    {"key": "headline", "dur": 150, "trans": "circle", "cx": 1500, "cy": 540},
+    {"key": "triad", "dur": 150, "trans": "bars"},
+    {"key": "about", "dur": 210, "trans": "diag"},
+    {"key": "treatTitle", "dur": 105, "trans": "circle", "cx": 300, "cy": 800},
+    {"key": "ihht", "dur": 180, "trans": "slide"},
+    {"key": "h2", "dur": 180, "trans": "bars"},
+    {"key": "iv", "dur": 180, "trans": "circle", "cx": 960, "cy": 540},
+    {"key": "pbm", "dur": 180, "trans": "diag"},
+    {"key": "montage", "dur": 135, "trans": "slide"},
+    {"key": "cta", "dur": 240, "trans": "circle", "cx": 1600, "cy": 300},
+    {"key": "outro", "dur": 120, "trans": "bars"}
+  ]
+}

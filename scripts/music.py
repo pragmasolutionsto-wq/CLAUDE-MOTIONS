@@ -1,45 +1,38 @@
-"""Genera la colonna sonora ambient/cinematica del video (royalty-free, sintetizzata).
+"""Colonna sonora sintetizzata (royalty-free) sincronizzata sulla timeline del video.
 
+120 BPM: ogni cambio scena cade su un battito. Impatti + riser sui tagli.
 Uso: python3 scripts/music.py public/music.wav
 """
+import json
 import sys
 import wave
+from pathlib import Path
 
 import numpy as np
 
 SR = 44100
-DUR = 100.0
-BPM = 80
+BPM = 120
 BEAT = 60 / BPM
+
+tl = json.loads((Path(__file__).parent.parent / 'src' / 'timeline.json').read_text())
+FPS, OV = tl['fps'], tl['overlap']
+starts, acc = [], 0
+for i, s in enumerate(tl['scenes']):
+    acc = 0 if i == 0 else starts[-1] + tl['scenes'][i - 1]['dur'] - OV
+    starts.append(acc)
+total_f = starts[-1] + tl['scenes'][-1]['dur']
+DUR = total_f / FPS
+cuts = [s / FPS for s in starts[1:]]  # secondi dei tagli
 N = int(SR * DUR)
 t = np.arange(N) / SR
-rng = np.random.default_rng(7)
+rng = np.random.default_rng(11)
 
 
 def hz(m):
     return 440.0 * 2 ** ((m - 69) / 12)
 
 
-# Progressione (2 battute = 6s per accordo): Dm9 · Bbmaj7 · Fadd9 · C6/E
-CHORDS = [
-    [50, 57, 60, 64, 65, 69],
-    [46, 53, 57, 62, 65, 69],
-    [41, 53, 57, 60, 67, 69],
-    [40, 52, 55, 60, 64, 67],
-]
-CH_LEN = 8 * BEAT
-
-
-def env_adsr(n, a, r):
-    e = np.ones(n)
-    ai, ri = int(a * SR), int(r * SR)
-    e[:ai] = np.linspace(0, 1, ai) ** 2
-    e[-ri:] *= np.linspace(1, 0, ri) ** 2
-    return e
-
-
 def lowpass(x, cutoff):
-    # one-pole semplice
     a = np.exp(-2 * np.pi * cutoff / SR)
     y = np.empty_like(x)
     acc = 0.0
@@ -50,115 +43,192 @@ def lowpass(x, cutoff):
     return y
 
 
+def add(buf, sig, at, gain=1.0):
+    s = int(at * SR)
+    if s >= N or s < 0:
+        return
+    e = min(N, s + len(sig))
+    buf[s:e] += sig[: e - s] * gain
+
+
 L = np.zeros(N)
 R = np.zeros(N)
 
-# ---- PAD ----
-n_ch = int(np.ceil(DUR / CH_LEN)) + 1
-for k in range(n_ch):
-    start = k * CH_LEN - 1.0
-    length = CH_LEN + 2.5
-    s0 = max(0, int(start * SR))
-    s1 = min(N, int((start + length) * SR))
-    if s1 <= s0:
+# ---------- struttura energia ----------
+def section(sec):
+    """0 = intro, 1 = build, 2 = groove, 3 = montage (max), 4 = CTA (calmo), 5 = outro"""
+    if sec < cuts[0]:
+        return 0
+    if sec < cuts[1] + 4.0:
+        return 1
+    if sec < starts[9] / FPS:
+        return 2
+    if sec < starts[10] / FPS:
+        return 3
+    if sec < starts[11] / FPS:
+        return 4
+    return 5
+
+
+# ---------- PAD (accordi 2 battute = 4s) ----------
+CHORDS = [
+    [48, 55, 59, 64, 67],  # Cmaj7(9)
+    [45, 52, 57, 60, 64],  # Am9
+    [41, 48, 55, 60, 64],  # Fmaj7
+    [43, 50, 55, 59, 62],  # G6
+]
+CH = 4 * BEAT * 2 / 2  # 4 s
+pad_l = np.zeros(N)
+pad_r = np.zeros(N)
+k = 0
+while k * CH < DUR + CH:
+    s0 = max(0, int((k * CH - 0.6) * SR))
+    s1 = min(N, int(((k + 1) * CH + 1.2) * SR))
+    if s1 > s0:
+        tt = np.arange(s1 - s0) / SR
+        e = np.ones(s1 - s0)
+        a = r = 0
+        a, r = min(int(0.9 * SR), (s1 - s0) // 2), min(int(1.2 * SR), (s1 - s0) // 2)
+        e[:a] = np.linspace(0, 1, a) ** 2
+        e[-r:] *= np.linspace(1, 0, r) ** 2
+        for m in CHORDS[k % 4]:
+            for det, pan in ((-0.09, 0.8), (0.0, 0.5), (0.11, 0.2)):
+                f = hz(m) * 2 ** (det / 12)
+                ph = rng.uniform(0, 6.28)
+                w = np.sin(2 * np.pi * f * tt + ph) + 0.3 * np.sin(4 * np.pi * f * tt) + 0.12 * np.sin(6 * np.pi * f * tt)
+                pad_l[s0:s1] += w * 0.045 * pan * e
+                pad_r[s0:s1] += w * 0.045 * (1 - pan) * e
+    k += 1
+pad_l = lowpass(pad_l, 2400)
+pad_r = lowpass(pad_r, 2400)
+
+# sidechain (pompa sul kick)
+beats = np.arange(0, DUR, BEAT)
+sc = np.ones(N)
+for b in beats:
+    if section(b) == 0:
         continue
-    tt = np.arange(s1 - s0) / SR
-    seg_l = np.zeros(s1 - s0)
-    seg_r = np.zeros(s1 - s0)
-    for m in CHORDS[k % 4]:
-        f = hz(m)
-        for det, pan in ((-0.11, 0.8), (0.0, 0.5), (0.13, 0.2)):
-            ff = f * 2 ** (det / 12)
-            ph = rng.uniform(0, 2 * np.pi)
-            w = np.sin(2 * np.pi * ff * tt + ph) + 0.28 * np.sin(4 * np.pi * ff * tt + ph) + 0.1 * np.sin(6 * np.pi * ff * tt)
-            amp = 0.05 if m > 48 else 0.07
-            seg_l += w * amp * pan
-            seg_r += w * amp * (1 - pan)
-    e = env_adsr(s1 - s0, 1.8, 2.2)
-    L[s0:s1] += seg_l * e
-    R[s0:s1] += seg_r * e
+    s = int(b * SR)
+    n = int(0.42 * SR)
+    if s + n < N:
+        sc[s:s + n] *= 1 - 0.55 * np.exp(-np.arange(n) / SR * 9)
 
-# filtro che si apre lentamente lungo il brano
-L = lowpass(L, 2600)
-R = lowpass(R, 2600)
-swell = 0.55 + 0.45 * np.clip(t / 30, 0, 1)
-L *= swell
-R *= swell
+L += pad_l * sc
+R += pad_r * sc
 
-# ---- SUB BASS ----
-sub = np.zeros(N)
-for k in range(n_ch):
-    s0 = int(k * CH_LEN * SR)
-    s1 = min(N, int((k + 1) * CH_LEN * SR))
-    if s0 >= N:
-        break
-    tt = np.arange(s1 - s0) / SR
-    sub[s0:s1] = np.sin(2 * np.pi * hz(CHORDS[k % 4][0] - 12) * tt) * env_adsr(s1 - s0, 0.4, 0.6)
-sub *= 0.16 * np.clip((t - 5) / 6, 0, 1)
-L += sub
-R += sub
-
-# ---- PULSE (battito cardiaco) ----
-def kick(n):
-    tt = np.arange(n) / SR
-    f = 50 + 70 * np.exp(-tt * 30)
-    return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 7)
-
+# ---------- KICK ----------
 kn = int(0.5 * SR)
-kk = kick(kn)
-beat_t = 5.0
-while beat_t < DUR - 6:
-    for off, g in ((0, 0.42), (0.32, 0.24)):
-        s = int((beat_t + off) * SR)
-        if s + kn < N:
-            fade = np.clip((beat_t - 5) / 8, 0, 1)
-            L[s:s + kn] += kk * g * fade
-            R[s:s + kn] += kk * g * fade
-    beat_t += 2 * BEAT
+tk = np.arange(kn) / SR
+kick = np.sin(2 * np.pi * np.cumsum(48 + 110 * np.exp(-tk * 28)) / SR) * np.exp(-tk * 6.5)
+kick += 0.25 * np.sin(2 * np.pi * 60 * tk) * np.exp(-tk * 14)
+for b in beats:
+    sec = section(b)
+    if sec in (0, 5):
+        continue
+    if sec == 1 and b < cuts[0]:
+        continue
+    g = 0.62 if sec != 4 else 0.45
+    add(L, kick, b, g)
+    add(R, kick, b, g)
 
-# ---- ARPEGGIO pluck (dal 15s) ----
+# ---------- CLAP (2 e 4) ----------
+cn = int(0.22 * SR)
+tc = np.arange(cn) / SR
+noise = rng.normal(0, 1, cn)
+clap = (noise - lowpass(noise, 900)) * np.exp(-tc * 24) * 0.35
+for bi, b in enumerate(beats):
+    if bi % 2 == 1 and section(b) in (2, 3):
+        add(L, clap, b + 0.004, 1)
+        add(R, clap, b - 0.004, 1)
+
+# ---------- HI-HAT (8vi, 16esimi nel montage) ----------
+hn = int(0.06 * SR)
+th = np.arange(hn) / SR
+hn_noise = rng.normal(0, 1, hn)
+hat = (hn_noise - lowpass(hn_noise, 5000)) * np.exp(-th * 90) * 0.18
+step = BEAT / 2
+x = 0.0
+while x < DUR:
+    sec = section(x)
+    if sec in (1, 2, 3):
+        off = int(round(x / step)) % 2 == 1
+        g = (1.0 if off else 0.5) * (0.6 if sec == 1 else 1)
+        add(L, hat, x, g)
+        add(R, hat, x + 0.003, g)
+        if sec == 3:
+            add(L, hat, x + step / 2, 0.45)
+            add(R, hat, x + step / 2, 0.45)
+    x += step
+
+# ---------- BASS (8vi) ----------
+bass = np.zeros(N)
+x = 0.0
+while x < DUR:
+    sec = section(x)
+    if sec in (2, 3, 4):
+        ch = int(x // CH) % 4
+        root = CHORDS[ch][0] - 12
+        n = int(step * 0.95 * SR)
+        tt = np.arange(n) / SR
+        w = np.sin(2 * np.pi * hz(root) * tt) + 0.35 * np.sin(4 * np.pi * hz(root) * tt)
+        w *= np.exp(-tt * 3.5) * 0.28
+        add(bass, w, x, 1)
+    x += step
+bass *= sc
+L += bass
+R += bass
+
+# ---------- ARPEGGIO pluck (16esimi) ----------
 arp_l = np.zeros(N)
 arp_r = np.zeros(N)
-step = BEAT / 2
+pn = int(0.5 * SR)
+pt = np.arange(pn) / SR
+step16 = BEAT / 4
+x = 0.0
 i = 0
-tt0 = 15.0
-pn = int(0.9 * SR)
-ptt = np.arange(pn) / SR
-while tt0 < DUR - 8:
-    k = int(tt0 // CH_LEN) % 4
-    notes = sorted(CHORDS[k][2:]) + [CHORDS[k][3] + 12]
-    m = notes[[0, 2, 1, 3, 2, 4, 3, 1][i % 8]] + 12
-    f = hz(m)
-    p = (np.sin(2 * np.pi * f * ptt) + 0.3 * np.sin(4 * np.pi * f * ptt)) * np.exp(-ptt * 6)
-    s = int(tt0 * SR)
-    pan = 0.5 + 0.35 * np.sin(i * 0.7)
-    g = 0.06 * np.clip((tt0 - 15) / 10, 0, 1)
-    if s + pn < N:
-        arp_l[s:s + pn] += p * g * pan
-        arp_r[s:s + pn] += p * g * (1 - pan)
-    tt0 += step
+pattern = [0, 2, 4, 2, 3, 2, 4, 2]
+while x < DUR:
+    sec = section(x)
+    if sec in (2, 3, 4) or (sec == 1 and x > cuts[1]):
+        ch = int(x // CH) % 4
+        notes = CHORDS[ch]
+        m = notes[pattern[i % 8]] + 24
+        f = hz(m)
+        p = (np.sin(2 * np.pi * f * pt) + 0.35 * np.sin(4 * np.pi * f * pt)) * np.exp(-pt * 9)
+        pan = 0.5 + 0.3 * np.sin(i * 0.6)
+        g = 0.05 if sec != 4 else 0.035
+        add(arp_l, p, x, g * pan)
+        add(arp_r, p, x, g * (1 - pan))
+    x += step16
     i += 1
-# delay ping-pong
 d = int(BEAT * 0.75 * SR)
-for _ in range(4):
-    arp_l[d:] += arp_r[:-d] * 0.45
-    arp_r[d:] += arp_l[:-d] * 0.45
+for _ in range(3):
+    arp_l[d:] += arp_r[:-d] * 0.4
+    arp_r[d:] += arp_l[:-d] * 0.4
 L += arp_l
 R += arp_r
 
-# ---- SHIMMER / riser verso l'outro ----
-riser_s, riser_e = 86.0, 90.0
-mask = (t >= riser_s) & (t < riser_e)
-noise = rng.normal(0, 1, N) * mask
-noise = lowpass(noise, 3000) * np.clip((t - riser_s) / (riser_e - riser_s), 0, 1) ** 2 * 0.12
-L += noise
-R += noise
+# ---------- RISER + IMPATTO sui tagli ----------
+imp_n = int(1.2 * SR)
+ti = np.arange(imp_n) / SR
+impact = np.sin(2 * np.pi * np.cumsum(70 * np.exp(-ti * 3) + 35) / SR) * np.exp(-ti * 4)
+sh = rng.normal(0, 1, imp_n)
+impact += (sh - lowpass(sh, 2500)) * np.exp(-ti * 9) * 0.35
+for c in cuts:
+    rn = int(0.9 * SR)
+    tr = np.arange(rn) / SR
+    nz = rng.normal(0, 1, rn)
+    nz = (nz - lowpass(nz, 1500)) * (tr / 0.9) ** 3 * 0.22
+    add(L, nz, c - 0.9, 1)
+    add(R, nz, c - 0.9, 1)
+    add(L, impact, c + 0.04, 0.5)
+    add(R, impact, c + 0.04, 0.5)
 
-# ---- RIVERBERO (convoluzione con IR sintetica) ----
-ir_n = int(3.2 * SR)
+# ---------- RIVERBERO ----------
+ir_n = int(2.4 * SR)
 ir_t = np.arange(ir_n) / SR
-irL = rng.normal(0, 1, ir_n) * np.exp(-ir_t * 2.1)
-irR = rng.normal(0, 1, ir_n) * np.exp(-ir_t * 2.1)
+irL = rng.normal(0, 1, ir_n) * np.exp(-ir_t * 2.6)
+irR = rng.normal(0, 1, ir_n) * np.exp(-ir_t * 2.6)
 irL /= np.sqrt(np.sum(irL ** 2))
 irR /= np.sqrt(np.sum(irR ** 2))
 
@@ -169,24 +239,21 @@ def conv(x, h):
     return np.fft.irfft(np.fft.rfft(x, nf) * np.fft.rfft(h, nf), nf)[: len(x)]
 
 
-wetL = conv(L, irL)
-wetR = conv(R, irR)
-L = L * 0.7 + wetL * 0.45
-R = R * 0.7 + wetR * 0.45
+L = L * 0.78 + conv(L, irL) * 0.32
+R = R * 0.78 + conv(R, irR) * 0.32
 
-# fade in/out + normalizzazione
-fade = np.clip(t / 2.0, 0, 1) * np.clip((DUR - t) / 6.0, 0, 1)
+# fade in/out
+fade = np.clip(t / 0.4, 0, 1) * np.clip((DUR - t) / 1.8, 0, 1)
 L *= fade
 R *= fade
 peak = max(np.abs(L).max(), np.abs(R).max())
-L = np.tanh(L / peak * 1.1) * 0.89
-R = np.tanh(R / peak * 1.1) * 0.89
+L = np.tanh(L / peak * 1.25) * 0.9
+R = np.tanh(R / peak * 1.25) * 0.9
 
-out = np.stack([L, R], axis=1)
-pcm = (out * 32767).astype(np.int16)
+pcm = (np.stack([L, R], axis=1) * 32767).astype(np.int16)
 with wave.open(sys.argv[1], 'wb') as w:
     w.setnchannels(2)
     w.setsampwidth(2)
     w.setframerate(SR)
     w.writeframes(pcm.tobytes())
-print('ok', sys.argv[1], DUR, 's')
+print('ok', sys.argv[1], round(DUR, 2), 's')
