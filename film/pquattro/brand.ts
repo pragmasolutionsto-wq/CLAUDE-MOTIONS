@@ -1,12 +1,13 @@
-/** PALETTE PROVVISORIA — sostituire con i colori reali di pquattro.it */
+/** Palette Pquattro: magenta + turchese su base bianca. Il "dark" è un prugna profondo derivato dal magenta. */
 export const B = {
-  provisional: true,
+  provisional: false,
   name: 'PQUATTRO',
   tagline: 'MARKETING PER LA FARMACIA',
-  dark: '#0E1626',
-  navy: '#1B2A41',
-  ivory: '#F3F1EC',
-  accent: '#E0613B',
-  accent2: '#F2A465',
-  mute: 'rgba(243,241,236,0.6)',
+  dark: '#1B0A17', // prugna profondo (sfondi scuri, ombre)
+  navy: '#0F3A3E', // turchese profondo (facce laterali, fondo Formazione)
+  ivory: '#FFFFFF', // bianco: base neutra e testo su scuro
+  accent: '#B42684', // magenta
+  accent2: '#5FAFB4', // turchese
+  tint: '#CFE8EA', // turchese chiarissimo (box, dettagli)
+  mute: 'rgba(255,255,255,0.6)',
 };

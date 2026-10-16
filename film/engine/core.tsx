@@ -15,7 +15,7 @@ export const DBG: Record<string, any> = (() => {
 })();
 
 /* ============ tempo ============ */
-export const FPS = 120; // render a 120fps, ffmpeg ricampiona a 30 con motion blur vero
+export const FPS = 90; // render a 90fps, ffmpeg ricampiona a 30 con 3 campioni di motion blur
 
 const TCtx = createContext(0);
 export const TProvider = TCtx.Provider;

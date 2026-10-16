@@ -263,9 +263,9 @@ export const BoxCanvas: React.FC = () => {
             ctx.closePath();
             ctx.fill();
           };
-          const dark = b.front === '#EDE8DF' || b.front === '#F3F1EC' || b.front === '#D6D0C4';
-          bar(0.18, 0.82, 0.2, 0.26, dark ? '#0E1626' : '#FFFFFF', 0.85);
-          bar(0.18, 0.56, 0.32, 0.36, dark ? '#0E1626' : '#FFFFFF', 0.5);
+          const dark = ['#FFFFFF', '#CFE8EA', '#5FAFB4'].includes(String(b.front).toUpperCase());
+          bar(0.18, 0.82, 0.2, 0.26, dark ? '#1B0A17' : '#FFFFFF', 0.85);
+          bar(0.18, 0.56, 0.32, 0.36, dark ? '#1B0A17' : '#FFFFFF', 0.5);
           ctx.globalAlpha = b.opacity ?? 1;
         }
       }

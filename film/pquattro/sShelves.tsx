@@ -15,7 +15,7 @@ export const shelvesCam = (): CamKey[] => [
 
 const ROWS = [60, 410];
 const N = 9;
-const PAL = [B.accent, B.dark, B.navy, '#D6D0C4', B.accent2];
+const PAL = [B.accent, B.dark, B.navy, B.tint, B.accent2];
 
 export const SShelves: React.FC = () => {
   const t = useT();

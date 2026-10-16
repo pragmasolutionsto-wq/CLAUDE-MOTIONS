@@ -5,7 +5,7 @@ name=$1; shift
 mkdir -p out/$name
 i=0; files=()
 for t in "$@"; do
-  f=$(python3 -c "print(round($t*120))")
+  f=$(python3 -c "print(round($t*90))")
   out=out/$name/f$(printf %02d $i).jpg
   npx remotion still film/index.ts Pquattro $out --frame=$f --browser-executable=$B --log=error >/dev/null 2>&1 || echo "fail $t"
   files+=($out); i=$((i+1))
