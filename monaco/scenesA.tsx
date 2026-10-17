@@ -250,7 +250,7 @@ export const Holter: React.FC<{lt: number; p: string}> = ({lt, p}) => {
 export const HolterScene: React.FC<SceneProps> = ({lt, s}) => {
   const dur = s.end - s.start;
   const tPB = s.sentences[2][0] - s.start - 0.4; // pull-back su "Per questo esiste l'Holter cardiaco"
-  const L = 2.4;
+  const L = 3.2;
   const speed = 0.75;
   const uPB = clamp((lt - tPB) / L);
   const pos = speed * (lt < tPB ? lt : tPB + (L / 2) * (1 - (1 - uPB) * (1 - uPB)));
@@ -286,9 +286,9 @@ export const HolterScene: React.FC<SceneProps> = ({lt, s}) => {
     const o = clamp((12 - z) / 4) * clamp((z - 0.35) / 0.6);
     parts.push(<circle key={j} cx={x} cy={y} r={size} fill={j % 4 === 0 ? C.cyan : '#FFF8F2'} opacity={o * 0.9} />);
   }
-  const dev = ip(lt, tPB + 0.9, tPB + 2.4);
-  const dial = ip(lt, tPB + 2.0, tPB + 3.2);
-  const dayU = clamp((lt - (tPB + 2.4)) / Math.max(1, dur - tPB - 3));
+  const dev = ip(lt, tPB + 1.3, tPB + 3.0);
+  const dial = ip(lt, tPB + 2.6, tPB + 3.8);
+  const dayU = clamp((lt - (tPB + 3.0)) / Math.max(1, dur - tPB - 3));
   const ang = -90 + 360 * inOut(dayU);
   const R = 360;
   const ax = CX + R * Math.cos((ang * Math.PI) / 180);
@@ -316,7 +316,7 @@ export const HolterScene: React.FC<SceneProps> = ({lt, s}) => {
         <Blur id="tb2" s={2} />
       </defs>
       {tunnelOn && (
-        <g opacity={1 - ip(lt, tPB + 0.6, tPB + L)} mask="url(#tm)">
+        <g opacity={ip(lt, -0.25, 2.2) * (1 - ip(lt, tPB + 0.3, tPB + L))} mask="url(#tm)">
           <g transform={`translate(${CX} ${CY}) scale(${lerp(1, 0.32, pb)}) translate(${-CX} ${-CY})`}>
             <rect x={-600} y={-600} width={W + 1200} height={H + 1200} fill="url(#tbg)" />
             <circle cx={CX} cy={CY} r={260} fill="url(#tcore)" />

@@ -15,5 +15,5 @@ echo "== 2/3 render video"
 npx remotion render monaco/index.ts Monaco $RAW --public-dir=monaco/public --crf=14 --browser-executable=$B --log=error
 
 echo "== 3/3 mux audio"
-ffmpeg -loglevel error -y -i $RAW -i monaco/public/voice.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -ar 48000 -shortest -movflags +faststart $OUT
+ffmpeg -loglevel error -y -i $RAW -i monaco/public/voice.wav -map 0:v -map 1:a -c:v libx264 -crf 15 -preset slow -pix_fmt yuv420p -color_range tv -c:a aac -b:a 192k -ar 48000 -shortest -movflags +faststart $OUT
 ffprobe -v error -show_entries format=duration,size:stream=codec_name,width,height,r_frame_rate -of compact $OUT
