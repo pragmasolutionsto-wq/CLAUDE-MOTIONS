@@ -1,3 +1,5 @@
 node_modules/
 out/
 .DS_Store
+stonesofa/public/cut/
+stonesofa/public/lay/
