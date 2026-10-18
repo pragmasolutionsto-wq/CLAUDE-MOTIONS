@@ -1,0 +1,40 @@
+{
+  "fps": 30,
+  "tail": 2.4,
+  "segs": [
+    {"clip": 1, "in": 0.08, "out": 6.17, "txt": "Dopo i 50 anni è facile che la pelle sia meno tonica, soprattutto sulle braccia, addome e cosce."},
+    {"clip": 1, "in": 6.56, "out": 9.80, "txt": "Con il tempo infatti il collagene e l'elastina si riducono"},
+    {"clip": 1, "in": 10.06, "out": 12.42, "txt": "e la pelle perde sostegno ed elasticità."},
+    {"clip": 2, "in": 3.36, "out": 7.88, "txt": "Capisco quindi che tu, come tante altre donne, possa sentirti a disagio."},
+    {"clip": 2, "in": 8.33, "out": 9.92, "txt": "Il punto non è come ti vedono gli altri,"},
+    {"clip": 2, "in": 10.38, "out": 12.36, "txt": "ma come ti senti tu."},
+    {"clip": 3, "in": 2.56, "out": 3.74, "txt": "Questa è Unika,"},
+    {"clip": 3, "in": 4.03, "out": 5.72, "txt": "una tecnologia innovativa"},
+    {"clip": 3, "in": 6.03, "out": 10.62, "txt": "che combina shock termico, LED ad alta potenza ed elettrostimolazione"},
+    {"clip": 3, "in": 10.92, "out": 13.72, "txt": "con risultati visibili sin dalla prima seduta."},
+    {"clip": 4, "in": 0.44, "out": 3.40, "txt": "I 192 LED contenuti in questo gioiellino"},
+    {"clip": 4, "in": 3.70, "out": 7.06, "txt": "stimolano il flusso sanguigno e la produzione di collagene."},
+    {"clip": 4, "in": 7.52, "out": 13.02, "txt": "L'elettrostimolazione ad onda quadra favorisce la tonificazione con effetto tensore della cute."},
+    {"clip": 5, "in": 0.70, "out": 2.60, "txt": "Tutto parte da una consulenza."},
+    {"clip": 6, "in": 1.05, "out": 4.76, "txt": "Nel mese di ottobre hai un motivo in più per prenderti cura di te"},
+    {"clip": 6, "in": 5.24, "out": 9.38, "txt": "su un percorso di 5 trattamenti con Unika, una seduta in omaggio."},
+    {"clip": 7, "in": 0.37, "out": 8.06, "txt": "Se vuoi saperne di più, chiamaci, scrivici o vieni a trovarci per prenotare la tua consulenza personalizzata gratuita."},
+    {"clip": 7, "in": 8.45, "out": 9.72, "txt": "Siamo qui per te!"}
+  ],
+  "cues": {
+    "braccia": [0, 4.35], "addome": [0, 5.0], "cosce": [0, 5.55],
+    "collagene": [1, 7.55], "elastina": [1, 8.35], "riducono": [1, 9.0],
+    "donne": [3, 4.95], "disagio": [3, 7.1],
+    "altri": [4, 8.33], "tu": [5, 10.45],
+    "unika": [6, 2.95], "innovativa": [7, 4.03],
+    "shock": [8, 6.55], "led": [8, 7.5], "elettro": [8, 8.75],
+    "seduta": [9, 10.95],
+    "n192": [10, 0.5],
+    "flusso": [11, 4.4], "collagene2": [11, 6.0],
+    "onda": [12, 7.6], "tensore": [12, 11.2],
+    "consulenza": [13, 0.7],
+    "ottobre": [14, 1.05], "percorso": [15, 5.24], "omaggio": [15, 7.6],
+    "chiamaci": [16, 1.65], "scrivici": [16, 2.35], "trovarci": [16, 3.05], "gratuita": [16, 7.25],
+    "end": [17, 9.72]
+  }
+}
