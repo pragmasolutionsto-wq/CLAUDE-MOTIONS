@@ -21,7 +21,9 @@ const inTake = (t: number) => Object.values(TAKE).some(([a, b]) => t >= a && t <
 /* ------------------------------------------------------------------ video base con punch-in */
 
 // zoom per segmento: alterna i piani per nascondere i jump cut
-const ZOOM = [1.0, 1.0, 1.14, 1.0, 1.16, 1.34, 1.0, 1.08, 1.0, 1.15, 1.0, 1.12, 1.0, 1.18, 1.06, 1.0, 1.0, 1.24];
+const ZOOM = [1.0, 1.0, 1.12, 1.0, 1.1, 1.15, 1.0, 1.08, 1.0, 1.12, 1.0, 1.1, 1.0, 1.1, 1.06, 1.0, 1.0, 1.12];
+// inquadratura abbassata (scala dall'alto) per liberare la fascia titoli sopra la testa
+const DROP = 1.12;
 const FACE: [number, number] = [548, 640];
 
 const Base: React.FC<{t: number}> = ({t}) => {
@@ -29,7 +31,7 @@ const Base: React.FC<{t: number}> = ({t}) => {
   const lt = t - SEG_START[k];
   let z = ZOOM[k] * (1 + 0.018 * lt);
   if (k === 0) z *= lerp(1.38, 1, eO5(prog(t, 0, 0.45)));
-  if (k === 5) z = lerp(1.16, 1.34, eO3(prog(lt, 0, 0.5))) * (1 + 0.02 * lt);
+  if (k === 5) z = lerp(1.08, 1.15, eO3(prog(lt, 0, 0.5))) * (1 + 0.01 * lt);
   // micro shake sugli accenti
   const sh = (a: number) => Math.exp(-Math.max(0, t - a) * 14) * (t >= a ? 1 : 0);
   const acc = ['tu', 'unika', 'n192', 'omaggio', 'gratuita'] as const;
@@ -37,11 +39,13 @@ const Base: React.FC<{t: number}> = ({t}) => {
   const jx = Math.sin(t * 91) * s, jy = Math.cos(t * 77) * s;
   return (
     <AbsoluteFill style={{overflow: 'hidden', background: INK}}>
+      <div style={{position: 'absolute', width: W, height: H, transformOrigin: `${W / 2}px 0px`, transform: `scale(${DROP})`}}>
       <OffthreadVideo
         src={staticFile('base.mp4')}
         muted
         style={{width: W, height: H, transformOrigin: `${FACE[0]}px ${FACE[1]}px`, transform: `translate(${jx}px, ${jy}px) scale(${z})`}}
       />
+      </div>
     </AbsoluteFill>
   );
 };
@@ -114,7 +118,7 @@ const Pill: React.FC<{t: number; a: number; b: number; text: string; icon: strin
   const out = eO3(prog(t, b - 0.2, b));
   return (
     <div style={{
-      position: 'absolute', left: x, top: y, display: 'flex', alignItems: 'center', gap: 16, padding: '16px 28px 16px 18px', borderRadius: 999,
+      position: 'absolute', ...(x < 0 ? {right: -x} : {left: x}), top: y, display: 'flex', alignItems: 'center', gap: 16, padding: '16px 28px 16px 18px', borderRadius: 999,
       background: bg, boxShadow: '0 14px 36px rgba(6,24,38,0.3)', fontFamily: MONT, fontWeight: 900, fontSize: size, color: fg, textTransform: 'uppercase',
       transform: `translateX(${(1 - s) * 420 * from + out * 300 * from}px) scale(${lerp(0.7, 1, s)})`, opacity: clamp(p * 5) * (1 - out), whiteSpace: 'nowrap',
     }}>
@@ -132,7 +136,7 @@ const Badge: React.FC<{t: number}> = ({t}) => {
   const v = eO3(prog(t, 0.3, 0.8)) * (1 - prog(t, SPEECH_END - 0.3, SPEECH_END));
   const hide = inTake(t) ? 0 : 1;
   return (
-    <div style={{position: 'absolute', left: 44, top: 120, display: 'flex', alignItems: 'center', gap: 14, padding: '12px 22px 12px 14px', background: 'rgba(255,255,255,0.94)', borderRadius: 999, boxShadow: '0 10px 30px rgba(6,24,38,0.18)', opacity: v * hide, transform: `translateX(${(1 - v) * -60}px)`}}>
+    <div style={{position: 'absolute', left: 44, top: 70, display: 'flex', alignItems: 'center', gap: 14, padding: '12px 22px 12px 14px', background: 'rgba(255,255,255,0.94)', borderRadius: 999, boxShadow: '0 10px 30px rgba(6,24,38,0.18)', opacity: v * hide, transform: `translateX(${(1 - v) * -60}px)`}}>
       <Img src={staticFile('logo/mark.png')} style={{width: 54, height: 57}} />
       <div style={{display: 'flex', flexDirection: 'column', gap: 4}}>
         <Img src={staticFile('logo/farmacia.png')} style={{width: 168, height: 25}} />
@@ -196,7 +200,7 @@ const Strike: React.FC<{t: number; a: number; at: number; b: number}> = ({t, a, 
   const dim = lerp(1, 0.75, sp);
   const out = prog(t, b - 0.2, b);
   return (
-    <div style={{position: 'absolute', left: 0, right: 0, top: 220, display: 'flex', justifyContent: 'center', opacity: (1 - out) * clamp(p * 4)}}>
+    <div style={{position: 'absolute', left: 0, right: 0, top: 175, display: 'flex', justifyContent: 'center', opacity: (1 - out) * clamp(p * 4)}}>
       <div style={{position: 'relative', transform: `scale(${lerp(0.6, 1, s) * dim}) translateY(${(1 - s) * 40 - sp * 30}px)`}}>
         <div style={{fontFamily: MONT, fontWeight: 900, fontSize: 60, textTransform: 'uppercase', color: WHITE, background: sp > 0 ? '#5d6f7c' : BLUE, padding: '14px 26px', borderRadius: 18}}>
           come ti vedono gli altri
@@ -222,7 +226,7 @@ const SquareWave: React.FC<{t: number; a: number; b: number}> = ({t, a, b}) => {
   const len = (w / per) * (per + 2 * h);
   const scroll = (t - a) * 160;
   return (
-    <div style={{position: 'absolute', left: 90, top: 400, width: w, height: h + 40, opacity: v, transform: `translateY(${(1 - eO3(clamp(v * 2))) * 40}px)`}}>
+    <div style={{position: 'absolute', left: 90, top: 960, width: w, height: h + 40, opacity: v, transform: `translateY(${(1 - eO3(clamp(v * 2))) * 40}px)`}}>
       <div style={{position: 'absolute', inset: -30, background: 'rgba(6,24,38,0.55)', borderRadius: 28, backdropFilter: 'blur(6px)'}} />
       <svg width={w} height={h + 40} viewBox={`0 -20 ${w} ${h + 40}`} style={{position: 'absolute', overflow: 'hidden'}}>
         <g transform={`translate(${-(scroll % per)} 0)`}>
@@ -356,53 +360,53 @@ export const Movie: React.FC = () => {
       <Base t={t} />
 
       {/* hook */}
-      <Headline t={t} a={0.12} b={segEnd(0)} y={220} lines={[{text: 'Dopo i 50 anni', size: 86}]} />
-      <Headline t={t} a={1.55} b={segEnd(0)} y={340} lines={[{text: 'la pelle cede?', bg: TEAL, size: 86}]} />
-      <Pill t={t} a={C('braccia') - 0.08} b={segEnd(0)} text="braccia" icon="arm" x={600} y={680} />
-      <Pill t={t} a={C('addome') - 0.08} b={segEnd(0)} text="addome" icon="belly" x={600} y={800} />
-      <Pill t={t} a={C('cosce') - 0.08} b={segEnd(0)} text="cosce" icon="leg" x={600} y={920} />
+      <Headline t={t} a={0.12} b={segEnd(0)} y={175} lines={[{text: 'Dopo i 50 anni', size: 76}]} />
+      <Headline t={t} a={1.55} b={segEnd(0)} y={285} lines={[{text: 'la pelle cede?', bg: TEAL, size: 76}]} />
+      <Pill t={t} a={C('braccia') - 0.08} b={segEnd(0)} text="braccia" icon="arm" x={-40} y={920} />
+      <Pill t={t} a={C('addome') - 0.08} b={segEnd(0)} text="addome" icon="belly" x={-40} y={1030} />
+      <Pill t={t} a={C('cosce') - 0.08} b={segEnd(0)} text="cosce" icon="leg" x={-40} y={1140} />
 
       {/* perde sostegno */}
-      <Headline t={t} a={segT(2) + 0.25} b={segEnd(2)} y={220} lines={[{text: '− sostegno'}, {text: '− elasticità', bg: TEAL}]} />
+      <Headline t={t} a={segT(2) + 0.25} b={segEnd(2)} y={175} lines={[{text: '− sostegno', size: 64}, {text: '− elasticità', bg: TEAL, size: 64}]} />
 
       {/* empatia */}
-      <Headline t={t} a={C('donne') - 0.15} b={segEnd(3)} y={220} lines={[{text: 'Non sei la sola', bg: WHITE, fg: BLUE}]} />
+      <Headline t={t} a={C('donne') - 0.15} b={segEnd(3)} y={190} lines={[{text: 'Non sei la sola', bg: WHITE, fg: BLUE, size: 70}]} />
       <Strike t={t} a={C('altri')} at={C('tu')} b={segEnd(5)} />
-      <Headline t={t} a={C('tu') + 0.02} b={segEnd(5)} y={345} lines={[{text: 'come ti senti tu', bg: TEAL, size: 88}]} />
+      <Headline t={t} a={C('tu') + 0.02} b={segEnd(5)} y={280} lines={[{text: 'come ti senti tu', bg: TEAL, size: 76}]} />
       <Flash t={t} at={C('tu')} c={TEAL_HI} d={0.3} />
 
       {/* UNIKA */}
       {unikaV > 0 && (
-        <div style={{position: 'absolute', left: 0, top: 90, width: W, height: 420, opacity: unikaV}}>
+        <div style={{position: 'absolute', left: 0, top: 20, width: W, height: 360, opacity: unikaV}}>
           <UnikaTitle lt={t - C('unika') + 0.1} w={W} h={420} />
         </div>
       )}
       <Flash t={t} at={C('unika')} d={0.25} />
-      <Headline t={t} a={C('innovativa')} b={segEnd(8)} y={440} lines={[{text: 'tecnologia innovativa', bg: WHITE, fg: BLUE, size: 46}]} />
-      <Pill t={t} a={C('shock') - 0.1} b={segEnd(8)} text="shock termico" icon="thermo" x={470} y={720} size={40} />
-      <Pill t={t} a={C('led') - 0.1} b={segEnd(8)} text="LED alta potenza" icon="led" x={470} y={830} size={40} />
-      <Pill t={t} a={C('elettro') - 0.1} b={segEnd(8)} text="elettrostimolazione" icon="bolt" x={400} y={940} size={40} />
-      <Headline t={t} a={C('seduta') + 0.1} b={segEnd(9)} y={440} lines={[{text: 'risultati visibili', bg: TEAL, size: 58}, {text: 'dalla 1ª seduta', bg: WHITE, fg: BLUE, size: 58}]} />
+      <Headline t={t} a={C('innovativa')} b={segEnd(8)} y={335} lines={[{text: 'tecnologia innovativa', bg: WHITE, fg: BLUE, size: 42}]} />
+      <Pill t={t} a={C('shock') - 0.1} b={segEnd(8)} text="shock termico" icon="thermo" x={-40} y={930} size={40} />
+      <Pill t={t} a={C('led') - 0.1} b={segEnd(8)} text="LED alta potenza" icon="led" x={-40} y={1035} size={40} />
+      <Pill t={t} a={C('elettro') - 0.1} b={segEnd(8)} text="elettrostimolazione" icon="bolt" x={-40} y={1140} size={40} />
+      <Headline t={t} a={C('seduta') + 0.1} b={segEnd(9)} y={335} lines={[{text: 'risultati dalla 1ª seduta', bg: TEAL, size: 42}]} />
 
       {/* dopo i LED */}
-      <Pill t={t} a={C('flusso') - 0.1} b={segEnd(11)} text="flusso sanguigno" icon="up" x={70} y={220} bg={BLUE} fg={WHITE} from={-1} />
-      <Pill t={t} a={C('collagene2') - 0.1} b={segEnd(11)} text="collagene" icon="up" x={70} y={340} bg={TEAL} fg={WHITE} from={-1} />
+      <Pill t={t} a={C('flusso') - 0.1} b={segEnd(11)} text="flusso sanguigno" icon="up" x={70} y={175} bg={BLUE} fg={WHITE} from={-1} />
+      <Pill t={t} a={C('collagene2') - 0.1} b={segEnd(11)} text="collagene" icon="up" x={70} y={285} bg={TEAL} fg={WHITE} from={-1} />
 
       {/* onda quadra */}
       <SquareWave t={t} a={C('onda') - 0.05} b={C('tensore') - 0.1} />
-      <Headline t={t} a={C('onda') + 0.1} b={C('tensore') - 0.1} y={220} lines={[{text: 'onda quadra', size: 64}]} />
-      <Headline t={t} a={C('tensore')} b={segEnd(12)} y={220} lines={[{text: 'tonifica', bg: TEAL, size: 80}, {text: 'effetto tensore', size: 80}]} />
+      <Headline t={t} a={C('onda') + 0.1} b={C('tensore') - 0.1} y={190} lines={[{text: 'onda quadra', size: 64}]} />
+      <Headline t={t} a={C('tensore')} b={segEnd(12)} y={175} lines={[{text: 'tonifica', bg: TEAL, size: 66}, {text: 'effetto tensore', size: 66}]} />
 
       {/* consulenza + ottobre */}
-      <Headline t={t} a={C('consulenza') + 0.05} b={segEnd(13)} y={220} lines={[{text: 'tutto parte da', bg: WHITE, fg: BLUE, size: 54}, {text: 'una consulenza', size: 76}]} />
-      <Pill t={t} a={C('ottobre') + 0.05} b={segEnd(14)} text="promo ottobre" icon="cal" x={220} y={220} bg={GOLD} fg={'#4a3208'} size={56} />
-      <Headline t={t} a={C('ottobre') + 0.9} b={segEnd(14)} y={350} lines={[{text: 'prenditi cura di te', bg: TEAL, size: 62}]} />
+      <Headline t={t} a={C('consulenza') + 0.05} b={segEnd(13)} y={175} lines={[{text: 'tutto parte da', bg: WHITE, fg: BLUE, size: 48}, {text: 'una consulenza', size: 66}]} />
+      <Pill t={t} a={C('ottobre') + 0.05} b={segEnd(14)} text="promo ottobre" icon="cal" x={220} y={175} bg={GOLD} fg={'#4a3208'} size={56} />
+      <Headline t={t} a={C('ottobre') + 0.9} b={segEnd(14)} y={300} lines={[{text: 'prenditi cura di te', bg: TEAL, size: 56}]} />
 
       {/* CTA */}
-      <Headline t={t} a={segT(16) + 0.1} b={segEnd(17)} y={220} lines={[{text: 'consulenza', size: 84}, {text: 'gratuita', bg: GOLD, fg: '#4a3208', size: 96}]} stag={0.0} />
-      <Pill t={t} a={C('chiamaci') - 0.1} b={segEnd(17)} text="chiamaci" icon="phone" x={600} y={720} />
-      <Pill t={t} a={C('scrivici') - 0.1} b={segEnd(17)} text="scrivici" icon="chat" x={600} y={840} />
-      <Pill t={t} a={C('trovarci') - 0.1} b={segEnd(17)} text="vieni in farmacia" icon="pin" x={410} y={960} />
+      <Headline t={t} a={segT(16) + 0.1} b={segEnd(17)} y={175} lines={[{text: 'consulenza', size: 70}, {text: 'gratuita', bg: GOLD, fg: '#4a3208', size: 78}]} stag={0.0} />
+      <Pill t={t} a={C('chiamaci') - 0.1} b={segEnd(17)} text="chiamaci" icon="phone" x={-40} y={920} />
+      <Pill t={t} a={C('scrivici') - 0.1} b={segEnd(17)} text="scrivici" icon="chat" x={-40} y={1030} />
+      <Pill t={t} a={C('trovarci') - 0.1} b={segEnd(17)} text="vieni in farmacia" icon="pin" x={-40} y={1140} />
 
       {/* finestre 3D */}
       <Window t={t} a={TAKE.collagen[0]} b={TAKE.collagen[1]} bg={ICE}>{(lt) => <CollagenWin lt={lt} />}</Window>
