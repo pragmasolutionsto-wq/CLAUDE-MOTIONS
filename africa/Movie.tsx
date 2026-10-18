@@ -1,6 +1,6 @@
 import React from 'react';
-import {AbsoluteFill, Img, OffthreadVideo, staticFile, useCurrentFrame} from 'remotion';
-import {Calendar, HairCycle, Leaves, Logo3D, Ring, Strand, Sun, Tips} from './three';
+import {AbsoluteFill, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame} from 'remotion';
+import {Logo3D} from './three';
 import {
   ANTON, AUTUMN, CREAM, DROP, DURATION, FPS, FOREST, H, LIFT, MINT, MINT_HI, MONT, PETROL, PETROL_D, SAGE, SPEECH_END, SUB_TOP, W, WARM, WHITE,
   ZO, clamp, eBack, eIO, eO3, eO5, faceAt, lerp, life, prog, rnd, safeTop, segEnd, segT, soft, w, zoomAt,
@@ -174,6 +174,20 @@ const Corner: React.FC = () => (
 
 /* ------------------------------------------------------------------ inserti */
 
+// clip fotorealistica a tutto schermo (già ritemporizzata sulla durata dell'inserto in prep_ai.py)
+const Clip: React.FC<{name: string; t: number; a: number}> = ({name, t, a}) => {
+  const lt = t - a;
+  // la clip parte mezza transizione prima dell'inserto (durate in inserts.json)
+  return (
+    <AbsoluteFill style={{overflow: 'hidden', background: CREAM}}>
+      <Sequence from={Math.round((a - CUBE / 2) * FPS)} layout="none">
+        <OffthreadVideo src={staticFile(`ai/${name}.mp4`)} muted style={{width: W, height: H, objectFit: 'cover', transform: `scale(${1.04 + lt * 0.006})`}} />
+      </Sequence>
+      <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(243,251,248,0.75) 0%, rgba(243,251,248,0) 22%, rgba(243,251,248,0) 60%, rgba(243,251,248,0.55) 100%)'}} />
+    </AbsoluteFill>
+  );
+};
+
 const Phase: React.FC<{on: number; text: string; c: string}> = ({on, text, c}) => (
   <div style={{fontFamily: ANTON, fontSize: 58, textTransform: 'uppercase', padding: '6px 22px 8px', borderRadius: 14, color: on > 0.5 ? WHITE : PETROL, background: on > 0.5 ? c : 'rgba(255,255,255,0.85)', boxShadow: on > 0.5 ? `0 12px 30px ${c}66` : 'none', transform: `scale(${1 + on * 0.08})`, transition: 'none'}}>
     {text}
@@ -187,10 +201,7 @@ const InsCycle: React.FC<{t: number}> = ({t}) => {
   const on = (x: number, y: number) => (t >= x && t < y ? 1 : 0);
   return (
     <>
-      <Stage t={t} />
-      <div style={{position: 'absolute', left: 0, top: 240, width: W, height: 960}}>
-        <HairCycle lt={lt} grow={g - a} stop={s - a} fall={f - a} w={W} h={960} />
-      </div>
+      <Clip name="cycle" t={t} a={a} />
       <Title t={t} a={a + 0.15} b={INS.cycle[1] + 1} y={150} lines={[{text: 'il ciclo del capello', size: 84}]} />
       <div style={{position: 'absolute', left: 330, right: 30, top: 1250, display: 'flex', gap: 14, justifyContent: 'center', opacity: eO3(prog(t, a + 0.6, a + 1.1))}}>
         <Phase on={on(g - 0.1, s - 0.1)} text="cresce" c={MINT} />
@@ -209,11 +220,13 @@ const InsCal: React.FC<{t: number}> = ({t}) => {
   const up = w('aumenta') - a;
   return (
     <>
-      <Stage t={t} />
+      <Clip name="autumn" t={t} a={a} />
       <Title t={t} a={a + 0.05} b={b + 1} y={150} lines={[{text: '2-3 mesi dopo', size: 84}]} />
-      <div style={{position: 'absolute', left: 0, top: 260, width: W, height: 900}}>
-        <Calendar lt={lt} at={at} up={up} w={W} h={900} />
-      </div>
+      <Row y={300} gap={14}>
+        {['settembre', 'ottobre', 'novembre'].map((m, i) => (
+          <Chip key={m} t={t} a={(i === 0 ? at[2] : i === 1 ? at[3] : at[4]) + a - 0.05} b={b + 1} text={m} icon="leaf" size={34} hi={i === 1} />
+        ))}
+      </Row>
       <div style={{position: 'absolute', left: 330, right: 30, top: 1230}}>
         <Title t={t} a={a + up - 0.1} b={b + 1} y={0} lines={[{text: 'la caduta aumenta', hi: true, size: 66}]} />
       </div>
@@ -227,10 +240,7 @@ const InsStrand: React.FC<{t: number}> = ({t}) => {
   const fr = w('fragilità'), br = w('rottura');
   return (
     <>
-      <Stage t={t} />
-      <div style={{position: 'absolute', left: 0, top: 300, width: W, height: 860}}>
-        <Strand lt={t - a} frag={fr - a} brk={br - a} w={W} h={860} />
-      </div>
+      <Clip name="strand" t={t} a={a} />
       <Title t={t} a={fr - 0.1} b={b + 1} y={160} lines={[{text: 'fragilità', size: 96}]} />
       <Title t={t} a={br - 0.05} b={b + 1} y={290} lines={[{text: 'e rottura', hi: true, size: 96}]} />
       <Corner />
@@ -242,24 +252,15 @@ const InsTips: React.FC<{t: number}> = ({t}) => {
   const [a, b] = INS.tips;
   const at = [w('detergenti'), w('meno'), w('termoprotettore'), w('sostegno')];
   const labels = [['detergenti', 'delicati'], ['meno calore', 'diretto'], ['sempre il', 'termoprotettore'], ['un sostegno', 'per i capelli']];
-  const pos: [number, number][] = [[268, 650], [812, 650], [268, 1100], [812, 1100]];
   return (
     <>
-      <Stage t={t} />
-      <div style={{position: 'absolute', left: 0, top: 240, width: W, height: 920}}>
-        <Tips lt={t - a} at={at.map((x) => x - a)} w={W} h={920} />
-      </div>
+      <Clip name="tips" t={t} a={a} />
       <Title t={t} a={a + 0.05} b={b + 1} y={150} lines={[{text: 'nel frattempo', size: 84}]} />
-      {labels.map((l, i) => {
-        const p = prog(t, at[i] + 0.15, at[i] + 0.6), s = soft(p * 1.6);
-        return (
-          <div key={i} style={{position: 'absolute', left: pos[i][0] - 200, width: 400, top: pos[i][1], textAlign: 'center', opacity: clamp(p * 3), transform: `translateY(${(1 - s) * 30}px)`}}>
-            <div style={{display: 'inline-block', fontFamily: MONT, fontWeight: 800, fontSize: 34, lineHeight: 1.15, color: PETROL, textTransform: 'uppercase', background: 'rgba(255,255,255,0.88)', padding: '8px 18px', borderRadius: 16}}>
-              {l[0]}<br />{l[1]}
-            </div>
-          </div>
-        );
-      })}
+      <div style={{position: 'absolute', left: 340, right: 40, top: 860, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 16}}>
+        {labels.map((l, i) => (
+          <Chip key={i} t={t} a={at[i] - 0.05} b={b + 1} text={l.join(' ')} icon={['drop', 'flame', 'check', 'leaf'][i]} size={30} hi={i === 2} />
+        ))}
+      </div>
       <Corner />
     </>
   );
@@ -293,42 +294,26 @@ const OnFace: React.FC<{t: number}> = ({t}) => {
   const L = (a: number, b: number) => safeTop(a, b);
   const y0 = L(0, segEnd(0)), y1 = L(segT(1), segEnd(1)), y4 = L(segT(4), segEnd(4)), y6 = L(segT(6), segEnd(6));
   const y7 = L(segT(7), INS.strand[0]), y8 = L(segT(8), segEnd(8)), y9 = L(segT(9), segEnd(10)), y11 = L(segT(11), INS.tips[0]), y12 = L(segT(12), SPEECH_END);
-  const ringP = eIO(prog(t, w('tende'), w('mesi', 2) + 0.3));
   return (
     <>
       {/* hook */}
       <Title t={t} a={w('perdendo') - 0.1} b={segEnd(0)} y={y0} lines={[{text: 'perdi più capelli', size: 78}, {text: 'del solito?', hi: true, size: 78}]} stag={0.55} />
 
       {/* caduta stagionale */}
-      {t >= segT(1) && t < segEnd(1) && (
-        <div style={{position: 'absolute', left: 0, top: y1 - 40, width: W, height: SUB_TOP - y1 + 40, opacity: life(t, segT(1), segEnd(1), 0.3, 0.3)}}>
-          <Leaves lt={t - segT(1)} w={W} h={SUB_TOP - y1 + 40} />
-        </div>
-      )}
       <Row y={y1}><Chip t={t} a={w('tranquilla') - 0.05} b={segEnd(1)} text="tranquilla" icon="leaf" hi /></Row>
       <Title t={t} a={w('normale') - 0.1} b={segEnd(1)} y={y1 + 96} lines={[{text: 'caduta stagionale', size: 78}]} />
 
       {/* riposo estivo */}
-      <Title t={t} a={w('riposo') - 0.15} b={segEnd(4)} y={y4} x={60} align="left" lines={[{text: 'follicoli', size: 70}, {text: 'a riposo', hi: true, size: 70}]} stag={0.2} />
-      {t >= w('stagione') - 0.2 && t < segEnd(4) && (
-        <div style={{position: 'absolute', left: 700, top: y4 - 30, width: 340, height: 300, opacity: life(t, w('stagione') - 0.2, segEnd(4), 0.3, 0.3)}}>
-          <Sun lt={t - w('stagione') + 0.2} w={340} h={300} />
-        </div>
-      )}
-      <Row y={y4 + 200} x={60} right={420}>
+      <Title t={t} a={w('riposo') - 0.15} b={segEnd(4)} y={y4} lines={[{text: 'follicoli', size: 70}, {text: 'a riposo', hi: true, size: 70}]} stag={0.2} />
+      <Row y={y4 + 200} x={60} right={60}>
         <Chip t={t} a={w('luglio') - 0.05} b={segEnd(4)} text="luglio" icon="sun" size={32} />
         <Chip t={t} a={w('agosto') - 0.05} b={segEnd(4)} text="agosto" icon="sun" size={32} />
       </Row>
 
       {/* UV e calore → stress ossidativo */}
-      <Title t={t} a={w("un'estate") - 0.1} b={w('stress') - 0.1} y={y6} x={60} align="left" lines={[{text: "dopo un'estate", size: 66}, {text: 'calda e intensa', hi: true, size: 66}]} stag={0.25} />
-      <Title t={t} a={w('stress') - 0.05} b={segEnd(6)} y={y6} x={60} align="left" lines={[{text: 'stress', size: 74}, {text: 'ossidativo', hi: true, size: 74}]} stag={0.2} />
-      {t >= w('uv') - 0.3 && t < segEnd(6) && (
-        <div style={{position: 'absolute', left: 680, top: y6 - 40, width: 380, height: 330, opacity: life(t, w('uv') - 0.3, segEnd(6), 0.3, 0.3)}}>
-          <Sun lt={t - w('uv') + 0.3} radicals={w('stress') - w('uv') + 0.3} w={380} h={330} />
-        </div>
-      )}
-      <Row y={y6 + 210} x={60} right={420}>
+      <Title t={t} a={w("un'estate") - 0.1} b={w('stress') - 0.1} y={y6} lines={[{text: "dopo un'estate", size: 66}, {text: 'calda e intensa', hi: true, size: 66}]} stag={0.25} />
+      <Title t={t} a={w('stress') - 0.05} b={segEnd(6)} y={y6} lines={[{text: 'stress', size: 74}, {text: 'ossidativo', hi: true, size: 74}]} stag={0.2} />
+      <Row y={y6 + 210} x={60} right={60}>
         <Chip t={t} a={w('uv') - 0.05} b={segEnd(6)} text="raggi UV" icon="sun" size={30} />
         <Chip t={t} a={w('calore') - 0.05} b={segEnd(6)} text="calore" icon="flame" size={30} />
       </Row>
@@ -344,17 +329,8 @@ const OnFace: React.FC<{t: number}> = ({t}) => {
       </Row>
 
       {/* temporanea */}
-      <Row y={y8} x={60} right={420}><Chip t={t} a={w('tranquilla', 2) - 0.1} b={segEnd(8)} text="sei tranquilla" icon="check" hi size={32} /></Row>
-      <Title t={t} a={w('temporanea') - 0.15} b={segEnd(8)} y={y8 + 92} x={60} align="left" lines={[{text: 'è temporanea', size: 80}]} />
-      {t >= w('temporanea') - 0.2 && t < segEnd(8) && (
-        <div style={{position: 'absolute', left: 720, top: y8 - 20, width: 320, height: 300, opacity: life(t, w('temporanea') - 0.2, segEnd(8), 0.3, 0.3)}}>
-          <Ring lt={t - w('temporanea') + 0.2} p={ringP} w={320} h={300} />
-          <div style={{position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', fontFamily: ANTON, color: PETROL, lineHeight: 0.95, opacity: eO3(prog(t, w('due', 2) - 0.1, w('due', 2) + 0.3))}}>
-            <div style={{fontSize: 64}}>2-3</div>
-            <div style={{fontSize: 30, fontFamily: MONT, fontWeight: 800}}>MESI</div>
-          </div>
-        </div>
-      )}
+      <Row y={y8} x={60} right={60}><Chip t={t} a={w('tranquilla', 2) - 0.1} b={segEnd(8)} text="sei tranquilla" icon="check" hi size={32} /></Row>
+      <Title t={t} a={w('temporanea') - 0.15} b={segEnd(8)} y={y8 + 92} lines={[{text: 'è temporanea', size: 80}]} />
 
       {/* quando approfondire */}
       <Title t={t} a={w('se') - 0.1} b={w('approfondire') - 0.1} y={y9} lines={[{text: 'quando approfondire', size: 64}]} />
