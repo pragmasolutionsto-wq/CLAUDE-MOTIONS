@@ -423,7 +423,7 @@ const ShScan: React.FC<{t: number}> = ({t}) => (
   <Clip name="scan" t={t} dz={0.02}>
     <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(4,18,31,0) 50%, rgba(4,18,31,0.7) 78%)'}} />
     <ScanText t={t} a={K.spesso - 0.15} text="spesso" y={1060} size={80} c={CYAN_HI} />
-    <ScanText t={t} a={K.spesso + 0.25} text="nessun sintomo" y={1160} size={104} />
+    <ScanText t={t} a={K.spesso + 0.25} text="nessun sintomo" y={1150} size={84} />
   </Clip>
 );
 
