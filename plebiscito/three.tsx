@@ -86,7 +86,7 @@ const textGeo = (font: Font, text: string, size: number, depth: number) => {
   const parts: THREE.BufferGeometry[] = [];
   // ≠ non c'è nel font: "=" + barra obliqua
   if (text === '≠') {
-    const eq = new TextGeometry('=', {font, size, depth, curveSegments: 10, bevelEnabled: true, bevelThickness: depth * 0.18, bevelSize: size * 0.02, bevelSegments: 4});
+    const eq = new TextGeometry('=', {font, size, depth, curveSegments: 6, bevelEnabled: true, bevelThickness: depth * 0.18, bevelSize: size * 0.02, bevelSegments: 3});
     eq.computeBoundingBox();
     const bb = eq.boundingBox!;
     const cx = (bb.min.x + bb.max.x) / 2, cy = (bb.min.y + bb.max.y) / 2;
@@ -98,7 +98,7 @@ const textGeo = (font: Font, text: string, size: number, depth: number) => {
     g.computeVertexNormals();
     return g;
   }
-  return new TextGeometry(text, {font, size, depth, curveSegments: 10, bevelEnabled: true, bevelThickness: depth * 0.18, bevelSize: size * 0.025, bevelSegments: 5});
+  return new TextGeometry(text, {font, size, depth, curveSegments: 6, bevelEnabled: true, bevelThickness: depth * 0.18, bevelSize: size * 0.025, bevelSegments: 3});
 };
 
 /* ------------------------------------------------------------------ testo 3D estruso, lucido, gradiente brand */
@@ -126,7 +126,7 @@ export const Text3D: React.FC<{
     <Canvas w={w} h={h}>
       <group position={[0, 0, z]} rotation={[rx, ry, 0]} scale={sc}>
         <mesh geometry={geo}>
-          <meshPhysicalMaterial vertexColors metalness={0.25} roughness={0.18} clearcoat={1} clearcoatRoughness={0.08} emissive={mode === 'white' ? '#0a3a50' : '#000000'} />
+          <meshStandardMaterial vertexColors metalness={0.3} roughness={0.2} emissive={mode === 'white' ? '#0a3a50' : '#000000'} />
         </mesh>
       </group>
     </Canvas>
