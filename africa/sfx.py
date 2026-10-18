@@ -63,7 +63,7 @@ for a in (SEG[1], SEG[7], SEG[9]):
     put(whoosh(0.55), a - 0.3, 0.4)
 put(whoosh(0.7), END - 0.35, 0.55); put(thud(), END, 0.35); put(shimmer(9, 10, 1320), END + 0.3, 0.4)
 # grafiche: un pop morbido per ogni entrata
-pops = [w('perdendo'), w('solito'), w('tranquilla'), w('normale'), w('riposo'), w('luglio'), w('agosto'), w('settembre'), w('ottobre'), w('novembre'), w('aumenta'),
+pops = [w('perdendo'), w('solito'), w('tranquilla'), w('normale'), w('riposo'), w('luglio'), w('agosto'), w('settembre'), w('settembre') + 0.3, w('novembre'), w('aumenta'),
         w("un'estate"), w('uv'), w('calore'), w('stress'), w('tinte'), w('schiariture'), w('phon'), w('spazzole'), w('piastra'), w('fragilità'),
         w('tranquilla', 2), w('temporanea'), w('se'), w('dura'), w('malattie'), w('diete'), w('stress', 2), w('approfondire'), w('consiglio'),
         w('detergenti'), w('meno'), w('termoprotettore'), w('sostegno'), w('vieni'), w('aspettiamo')]
