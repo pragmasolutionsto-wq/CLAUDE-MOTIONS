@@ -1,0 +1,41 @@
+{
+ "fps": 30,
+ "duration": 65.44,
+ "sents": [
+  {
+   "t": 0.25,
+   "end": 5.99,
+   "txt": "Parlare di prostata, per noi uomini, non è sempre facile. Ma alcune cose è importante saperle."
+  },
+  {
+   "t": 6.31,
+   "end": 16.01,
+   "txt": "Hai mai sentito parlare di PSA? È una proteina prodotta dalla prostata: un indicatore del suo stato di salute. Si misura con un semplice prelievo di sangue."
+  },
+  {
+   "t": 16.33,
+   "end": 29.95,
+   "txt": "Un valore alto può dipendere da cause diverse: una prostata ingrossata, un'infiammazione, un'infezione. A volte, anche da un tumore. Ma attenzione: PSA alto non vuol dire necessariamente tumore."
+  },
+  {
+   "t": 30.27,
+   "end": 39.83,
+   "txt": "Quando fare il test? In genere, dai 50 anni in su. Già dai 40-45 anni, se in famiglia ci sono stati casi, o fattori di rischio."
+  },
+  {
+   "t": 40.15,
+   "end": 47.08,
+   "txt": "Perché controllare? Perché un PSA alto, spesso, non dà sintomi. Per questo è importante il controllo."
+  },
+  {
+   "t": 47.4,
+   "end": 59.06,
+   "txt": "Nella nostra farmacia puoi fare il test con un prelievo capillare, rapido e discreto. Ti diciamo cosa fare prima del test, ti aiutiamo a leggere i valori, e ti seguiamo passo dopo passo."
+  },
+  {
+   "t": 59.38,
+   "end": 61.24,
+   "txt": "Ti aspettiamo nella nostra farmacia."
+  }
+ ]
+}
