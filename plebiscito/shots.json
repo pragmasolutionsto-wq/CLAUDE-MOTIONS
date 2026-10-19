@@ -1,0 +1,161 @@
+{
+ "shots": [
+  {
+   "name": "torso",
+   "kind": "clip",
+   "a": 0.0,
+   "b": 3.342,
+   "tr": "none"
+  },
+  {
+   "name": "know",
+   "kind": "mg",
+   "a": 3.342,
+   "b": 6.19,
+   "tr": "whip"
+  },
+  {
+   "name": "psa3d",
+   "kind": "mg",
+   "a": 6.19,
+   "b": 8.198,
+   "tr": "cube"
+  },
+  {
+   "name": "psa",
+   "kind": "clip",
+   "a": 8.198,
+   "b": 13.65,
+   "tr": "whip"
+  },
+  {
+   "name": "drop",
+   "kind": "clip",
+   "a": 13.65,
+   "b": 16.21,
+   "tr": "whip"
+  },
+  {
+   "name": "gauge",
+   "kind": "mg",
+   "a": 16.21,
+   "b": 19.09,
+   "tr": "cube"
+  },
+  {
+   "name": "inflamed",
+   "kind": "clip",
+   "a": 19.09,
+   "b": 24.83,
+   "tr": "whip"
+  },
+  {
+   "name": "neq",
+   "kind": "mg",
+   "a": 24.83,
+   "b": 30.15,
+   "tr": "whip"
+  },
+  {
+   "name": "when",
+   "kind": "mg",
+   "a": 30.15,
+   "b": 31.57,
+   "tr": "cube"
+  },
+  {
+   "name": "walk",
+   "kind": "clip",
+   "a": 31.57,
+   "b": 40.03,
+   "tr": "whip"
+  },
+  {
+   "name": "why",
+   "kind": "mg",
+   "a": 40.03,
+   "b": 41.58,
+   "tr": "cube"
+  },
+  {
+   "name": "scan",
+   "kind": "clip",
+   "a": 41.58,
+   "b": 44.538,
+   "tr": "whip"
+  },
+  {
+   "name": "control",
+   "kind": "mg",
+   "a": 44.538,
+   "b": 47.28,
+   "tr": "whip"
+  },
+  {
+   "name": "device",
+   "kind": "clip",
+   "a": 47.28,
+   "b": 52.303,
+   "tr": "cube"
+  },
+  {
+   "name": "steps",
+   "kind": "mg",
+   "a": 52.303,
+   "b": 59.26,
+   "tr": "whip"
+  },
+  {
+   "name": "cross",
+   "kind": "clip",
+   "a": 59.26,
+   "b": 61.39,
+   "tr": "cube"
+  },
+  {
+   "name": "end",
+   "kind": "mg",
+   "a": 61.39,
+   "b": 65.44,
+   "tr": "whip"
+  }
+ ],
+ "k": {
+  "proteina": 9.239,
+  "prodotta": 9.679,
+  "indicatore": 11.39,
+  "prelievo1": 15.069,
+  "alto1": 16.979,
+  "cause": 18.216,
+  "ingrossata": 20.022,
+  "infiammazione": 20.56,
+  "infezione": 21.7,
+  "tumore1": 24.185,
+  "attenzione": 25.263,
+  "psa_alto": 26.39,
+  "non_vuol": 27.61,
+  "necess": 28.498,
+  "tumore2": 29.426,
+  "test4": 31.111,
+  "cinquanta": 32.765,
+  "gia": 34.238,
+  "quaranta": 34.615,
+  "famiglia": 36.772,
+  "fattori": 38.83,
+  "spesso": 43.243,
+  "sintomi": 44.09,
+  "importante5": 45.632,
+  "controllo": 46.499,
+  "farmacia6": 48.089,
+  "capillare": 50.231,
+  "rapido": 51.25,
+  "discreto": 51.859,
+  "step1": 52.353,
+  "step2": 54.71,
+  "step3": 51.694,
+  "aspettiamo": 59.558,
+  "importante1": 4.831,
+  "saperle": 5.459,
+  "prostata0": 0.908
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "fps": 30,
+ "duration": 63.82,
+ "sents": [
+  {
+   "t": 0.25,
+   "end": 7.33,
+   "txt": "Quando ti prendi cura di te, è naturale voler capire cosa sta cambiando nel tuo corpo. Il peso, da solo, non racconta tutto."
+  },
+  {
+   "t": 7.65,
+   "end": 16.98,
+   "txt": "Per questo può aiutarti la bioimpedenziometria: un esame che stima la massa grassa, la massa magra, di cui fanno parte i muscoli, e l'acqua corporea."
+  },
+  {
+   "t": 17.3,
+   "end": 25.96,
+   "txt": "E non serve solo se vuoi dimagrire. Pensa ai muscoli: ti aiutano ad allenarti, ma anche a muoverti, e a mantenere la tua autonomia negli anni."
+  },
+  {
+   "t": 26.28,
+   "end": 37.99,
+   "txt": "L'esame dà anche informazioni sull'idratazione. Ripetendolo in condizioni simili, possiamo seguire i cambiamenti nel tempo. I risultati vanno sempre interpretati nel tuo percorso di salute."
+  },
+  {
+   "t": 38.31,
+   "end": 47.38,
+   "txt": "Nella nostra farmacia puoi fare questa valutazione in modo semplice e non invasivo. E noi ti spieghiamo con calma che cosa indicano i risultati."
+  },
+  {
+   "t": 47.7,
+   "end": 58.62,
+   "txt": "Vuoi capire se può esserti utile? Vieni a parlarne con noi: ascoltiamo le tue esigenze, ti spieghiamo come prepararti, e prenotiamo insieme il tuo appuntamento."
+  }
+ ]
+}
