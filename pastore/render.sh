@@ -6,7 +6,7 @@ mkdir -p out
 python3 pastore/voice.py
 python3 pastore/shots.py
 python3 pastore/prep_ai.py
-npx remotion render pastore/index.ts Pastore out/pastore_raw.mp4 --public-dir=pastore/public --gl=swangle --browser-executable=$B --concurrency=4 --crf=14 --muted --log=error
+bash pastore/render_chunks.sh
 python3 pastore/sfx.py out/pastore_sfx.wav
 ffmpeg -loglevel error -y -i out/pastore_raw.mp4 -i out/pastore_voice.wav -i out/pastore_sfx.wav -filter_complex \
   "[2:a]volume=0.45[fx];[1:a][fx]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1:LRA=9[a]" \
