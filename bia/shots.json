@@ -1,0 +1,149 @@
+{
+ "shots": [
+  {
+   "name": "body",
+   "kind": "clip",
+   "a": 0.0,
+   "b": 4.987,
+   "tr": "none"
+  },
+  {
+   "name": "weight",
+   "kind": "mg",
+   "a": 4.987,
+   "b": 7.53,
+   "tr": "whip"
+  },
+  {
+   "name": "bia3d",
+   "kind": "mg",
+   "a": 7.53,
+   "b": 10.126,
+   "tr": "cube"
+  },
+  {
+   "name": "signal",
+   "kind": "clip",
+   "a": 10.126,
+   "b": 11.873,
+   "tr": "whip"
+  },
+  {
+   "name": "comp",
+   "kind": "mg",
+   "a": 11.873,
+   "b": 17.18,
+   "tr": "whip"
+  },
+  {
+   "name": "notonly",
+   "kind": "mg",
+   "a": 17.18,
+   "b": 19.039,
+   "tr": "cube"
+  },
+  {
+   "name": "muscle",
+   "kind": "clip",
+   "a": 19.039,
+   "b": 22.168,
+   "tr": "whip"
+  },
+  {
+   "name": "walk",
+   "kind": "clip",
+   "a": 22.168,
+   "b": 26.16,
+   "tr": "whip"
+  },
+  {
+   "name": "water",
+   "kind": "clip",
+   "a": 26.16,
+   "b": 28.879,
+   "tr": "cube"
+  },
+  {
+   "name": "time",
+   "kind": "mg",
+   "a": 28.879,
+   "b": 34.18,
+   "tr": "whip"
+  },
+  {
+   "name": "scan",
+   "kind": "clip",
+   "a": 34.18,
+   "b": 38.19,
+   "tr": "whip"
+  },
+  {
+   "name": "service",
+   "kind": "mg",
+   "a": 38.19,
+   "b": 42.099,
+   "tr": "cube"
+  },
+  {
+   "name": "bubble",
+   "kind": "clip",
+   "a": 42.099,
+   "b": 47.58,
+   "tr": "whip"
+  },
+  {
+   "name": "ask",
+   "kind": "mg",
+   "a": 47.58,
+   "b": 49.76,
+   "tr": "cube"
+  },
+  {
+   "name": "steps",
+   "kind": "mg",
+   "a": 49.76,
+   "b": 58.77,
+   "tr": "whip"
+  },
+  {
+   "name": "end",
+   "kind": "mg",
+   "a": 58.77,
+   "b": 63.82,
+   "tr": "whip"
+  }
+ ],
+ "k": {
+  "corpo": 4.927,
+  "cambiando": 3.757,
+  "peso": 5.401,
+  "racconta": 6.35,
+  "bio": 9.106,
+  "stima": 11.388,
+  "grassa": 12.279,
+  "magra": 13.171,
+  "muscoli1": 15.015,
+  "acqua": 16.029,
+  "dimagrire": 18.503,
+  "muscoli2": 20.029,
+  "allenarti": 21.632,
+  "muoverti": 22.805,
+  "autonomia": 24.727,
+  "anni": 25.607,
+  "idratazione": 27.997,
+  "condizioni": 30.34,
+  "cambiamenti": 32.853,
+  "tempo": 33.629,
+  "interpretati": 35.757,
+  "percorso": 36.843,
+  "farmacia": 39.002,
+  "semplice": 41.652,
+  "invasivo": 42.48,
+  "calma": 44.822,
+  "risultati": 46.658,
+  "utile": 49.199,
+  "ascoltiamo": 51.952,
+  "spieghiamo": 54.071,
+  "prenotiamo": 56.094
+ }
+}
