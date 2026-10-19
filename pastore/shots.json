@@ -1,0 +1,257 @@
+{
+ "shots": [
+  {
+   "name": "brush",
+   "kind": "clip",
+   "a": 0.0,
+   "b": 1.483,
+   "tr": "none"
+  },
+  {
+   "name": "shoulder",
+   "kind": "clip",
+   "a": 1.483,
+   "b": 2.267,
+   "tr": "whip"
+  },
+  {
+   "name": "sink",
+   "kind": "clip",
+   "a": 2.267,
+   "b": 3.05,
+   "tr": "whip"
+  },
+  {
+   "name": "more",
+   "kind": "mg",
+   "a": 3.05,
+   "b": 8.21,
+   "tr": "cube"
+  },
+  {
+   "name": "follicle",
+   "kind": "clip",
+   "a": 8.21,
+   "b": 10.52,
+   "tr": "cube"
+  },
+  {
+   "name": "cycle",
+   "kind": "mg",
+   "a": 10.52,
+   "b": 13.22,
+   "tr": "whip"
+  },
+  {
+   "name": "summer",
+   "kind": "mg",
+   "a": 13.22,
+   "b": 18.51,
+   "tr": "cube"
+  },
+  {
+   "name": "months",
+   "kind": "mg",
+   "a": 18.51,
+   "b": 21.11,
+   "tr": "whip"
+  },
+  {
+   "name": "leaves",
+   "kind": "clip",
+   "a": 21.11,
+   "b": 25.369,
+   "tr": "whip"
+  },
+  {
+   "name": "sun",
+   "kind": "clip",
+   "a": 25.369,
+   "b": 28.009,
+   "tr": "cube"
+  },
+  {
+   "name": "stress",
+   "kind": "mg",
+   "a": 28.009,
+   "b": 33.879,
+   "tr": "whip"
+  },
+  {
+   "name": "radicals",
+   "kind": "clip",
+   "a": 33.879,
+   "b": 38.555,
+   "tr": "cube"
+  },
+  {
+   "name": "phase",
+   "kind": "mg",
+   "a": 38.555,
+   "b": 43.179,
+   "tr": "whip"
+  },
+  {
+   "name": "now",
+   "kind": "mg",
+   "a": 43.179,
+   "b": 46.962,
+   "tr": "whip"
+  },
+  {
+   "name": "aspect",
+   "kind": "mg",
+   "a": 46.962,
+   "b": 49.422,
+   "tr": "cube"
+  },
+  {
+   "name": "dyes",
+   "kind": "mg",
+   "a": 49.422,
+   "b": 53.592,
+   "tr": "whip"
+  },
+  {
+   "name": "tools",
+   "kind": "clip",
+   "a": 53.592,
+   "b": 56.493,
+   "tr": "whip"
+  },
+  {
+   "name": "break",
+   "kind": "clip",
+   "a": 56.493,
+   "b": 59.956,
+   "tr": "whip"
+  },
+  {
+   "name": "sum",
+   "kind": "mg",
+   "a": 59.956,
+   "b": 64.592,
+   "tr": "cube"
+  },
+  {
+   "name": "tips",
+   "kind": "mg",
+   "a": 64.592,
+   "b": 65.723,
+   "tr": "cube"
+  },
+  {
+   "name": "shampoo",
+   "kind": "clip",
+   "a": 65.723,
+   "b": 67.776,
+   "tr": "whip"
+  },
+  {
+   "name": "protect",
+   "kind": "clip",
+   "a": 67.776,
+   "b": 72.907,
+   "tr": "whip"
+  },
+  {
+   "name": "supplement",
+   "kind": "clip",
+   "a": 72.907,
+   "b": 76.864,
+   "tr": "whip"
+  },
+  {
+   "name": "talk",
+   "kind": "mg",
+   "a": 76.864,
+   "b": 80.715,
+   "tr": "cube"
+  },
+  {
+   "name": "healthy",
+   "kind": "clip",
+   "a": 80.715,
+   "b": 85.924,
+   "tr": "whip"
+  },
+  {
+   "name": "end",
+   "kind": "mg",
+   "a": 85.924,
+   "b": 92.264,
+   "tr": "cube"
+  }
+ ],
+ "k": {
+  "spazzola": 1.063,
+  "spalle": 1.847,
+  "lavandino": 2.473,
+  "ancora": 5.667,
+  "piu0": 6.293,
+  "spiego": 7.343,
+  "perche": 7.657,
+  "ciclo": 9.553,
+  "naturale": 9.894,
+  "cresce": 10.77,
+  "ferma": 11.677,
+  "cade": 12.639,
+  "luglio": 13.518,
+  "agosto": 13.962,
+  "follicoli": 15.82,
+  "riposo2": 17.447,
+  "dura": 19.639,
+  "due": 20.231,
+  "mesi": 20.675,
+  "caduta2": 21.479,
+  "evidente": 22.514,
+  "settembre": 23.55,
+  "ottobre": 23.99,
+  "novembre": 24.726,
+  "estate": 26.864,
+  "calda": 27.76,
+  "calore": 28.059,
+  "uv": 29.685,
+  "aumentato": 31.1,
+  "stress": 31.847,
+  "ossidativo": 31.996,
+  "cuoio": 32.892,
+  "radicali": 34.457,
+  "danneggiato": 36.359,
+  "cellule": 37.073,
+  "crescita": 41.173,
+  "riposo4": 42.322,
+  "risultato": 43.713,
+  "mese": 44.997,
+  "adesso": 46.351,
+  "importante": 48.408,
+  "tinte": 51.417,
+  "schiariture": 51.741,
+  "decolorazioni": 52.551,
+  "oppure": 53.642,
+  "stressati": 54.438,
+  "phon5": 55.41,
+  "spazzola5": 55.572,
+  "piastra5": 56.219,
+  "fragili": 58.279,
+  "spezzarsi": 59.247,
+  "sommano": 61.323,
+  "cause": 61.931,
+  "caduta6": 63.301,
+  "consiglio7": 65.331,
+  "shampoo": 66.942,
+  "delicato": 67.237,
+  "calore7": 68.885,
+  "termo": 71.042,
+  "nutrimento": 73.874,
+  "integratori": 75.347,
+  "vero": 77.286,
+  "venire": 78.977,
+  "parlarne": 79.521,
+  "noi": 80.655,
+  "situazione": 81.743,
+  "vigore": 84.038,
+  "forza": 84.582,
+  "aspettiamo": 86.26
+ }
+}
