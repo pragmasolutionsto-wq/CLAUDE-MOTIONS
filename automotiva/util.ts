@@ -4,7 +4,9 @@ export const H = 1920;
 
 // 150 BPM: un battito = 12 frame esatti, ogni taglio cade su un battito
 export const BF = 12;
-export const BEATS = 38;
+// 3 battiti di intro (avviamento motore) prima del primo taglio
+export const PRE_B = 3;
+export const BEATS = 38 + PRE_B;
 export const DURATION_F = BEATS * BF;
 
 export const GOLD = '#E2B13C';

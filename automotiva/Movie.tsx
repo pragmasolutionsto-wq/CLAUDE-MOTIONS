@@ -1,6 +1,6 @@
 import React from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame} from 'remotion';
-import {BF, clamp, DURATION_F, eIO, eO3, eO5, END_B, GOLD, GOLD_HI, H, INK, lerp, prog, rnd, Shot, SHOTS, W, WHITE} from './util';
+import {BF, clamp, DURATION_F, eIO, eO3, eO5, END_B, GOLD, GOLD_HI, H, INK, lerp, PRE_B, prog, rnd, Shot, SHOTS, W, WHITE} from './util';
 
 const ANTON = "'Anton', 'Impact', sans-serif";
 const MAN = "'Manrope', 'Helvetica Neue', sans-serif";
@@ -18,8 +18,9 @@ const ShotView: React.FC<{s: Shot; i: number}> = ({s, i}) => {
   // punch-in sul taglio, poi deriva lenta
   const punch = s.fx === 'dark' ? 0 : 1 - eO5(prog(f, 0, 7));
   const drift = s.fx === 'dark' ? lerp(1.02, 1.16, eIO(f / len)) : lerp(0, 0.05, f / len);
-  const sc = 1.04 + drift + punch * (s.fx === 'drop' ? 0.35 : s.fx === 'stutter' ? 0.22 : 0.16);
-  const amp = s.fx === 'drop' ? 26 * (1 - prog(f, 0, 10)) : s.fx === 'stutter' ? 14 * (1 - prog(f, 0, 6)) : 8 * (1 - prog(f, 0, 5));
+  const beat = s.fx === 'dark' ? 0 : 1 - eO3(prog(f % BF, 0, 7));
+  const sc = 1.04 + drift + beat * 0.03 + punch * (s.fx === 'drop' ? 0.35 : s.fx === 'stutter' ? 0.22 : 0.16);
+  const amp = s.fx === 'drop' ? 30 * (1 - prog(f, 0, 12)) : s.fx === 'stutter' ? 18 * (1 - prog(f, 0, 6)) : 10 * (1 - prog(f, 0, 5)) + 4 * beat;
   const [dx, dy] = shake(f, amp, i * 31);
   const rot = s.fx === 'stutter' ? (i % 2 ? -1.2 : 1.2) * punch : 0;
   const bright = s.fx === 'dark' ? 0.55 + 0.25 * prog(f, 0, len) : 0.92;
@@ -28,6 +29,7 @@ const ShotView: React.FC<{s: Shot; i: number}> = ({s, i}) => {
       <OffthreadVideo
         src={staticFile(`${s.clip}.mp4`)}
         startFrom={Math.round(s.at * 30)}
+        playbackRate={s.fx === 'hero' ? 0.6 : 1}
         muted
         style={{
           width: W, height: H, objectFit: 'cover',
@@ -151,11 +153,53 @@ const EndCard: React.FC = () => {
   );
 };
 
+/* ------------------------------------------------------------------ intro: avviamento */
+
+// il motorino gira (0-18), silenzio teso (18-33), il pulsante si accende e al battito 3 il motore parte col primo taglio
+const Ignition: React.FC = () => {
+  const f = useCurrentFrame();
+  const crank = f < 18 ? (Math.floor(f / 2) % 3 === 0 ? 1 : 0.35) : 0;
+  const armed = prog(f, 26, 35);
+  const ring = 0.25 + 0.75 * Math.max(crank * 0.6, armed);
+  const D = 300;
+  return (
+    <AbsoluteFill style={{background: '#000'}}>
+      <AbsoluteFill style={{opacity: crank * 0.22}}>
+        <OffthreadVideo src={staticFile('c9238.mp4')} startFrom={20} muted style={{width: W, height: H, objectFit: 'cover', filter: 'brightness(0.6) contrast(1.4) saturate(1.3)'}} />
+      </AbsoluteFill>
+      <AbsoluteFill style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 60, transform: `scale(${1 + armed * 0.08})`}}>
+        <div style={{
+          width: D, height: D, borderRadius: D, border: `6px solid rgba(226,177,60,${ring})`,
+          boxShadow: `0 0 ${80 * ring}px rgba(226,177,60,${0.7 * ring}), inset 0 0 ${50 * ring}px rgba(226,177,60,${0.45 * ring})`,
+          background: 'radial-gradient(circle, #15161b 0%, #050507 70%)',
+          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8,
+        }}>
+          {['Engine', 'Start', 'Stop'].map((w, i) => (
+            <div key={w} style={{fontFamily: MAN, fontWeight: 800, fontSize: i === 1 ? 54 : 34, letterSpacing: '0.24em', color: i === 1 ? GOLD_HI : WHITE, opacity: 0.4 + 0.6 * ring, textTransform: 'uppercase'}}>{w}</div>
+          ))}
+        </div>
+      </AbsoluteFill>
+      <AbsoluteFill style={{background: '#fff', opacity: prog(f, 33, 36) * 0.9}} />
+    </AbsoluteFill>
+  );
+};
+
 /* ------------------------------------------------------------------ montaggio */
 
 const at = (b: number) => b * BF;
 
 export const Movie: React.FC = () => (
+  <AbsoluteFill style={{background: INK}}>
+    <Sequence durationInFrames={at(PRE_B)}>
+      <Ignition />
+    </Sequence>
+    <Sequence from={at(PRE_B)}>
+      <Cut />
+    </Sequence>
+  </AbsoluteFill>
+);
+
+const Cut: React.FC = () => (
   <AbsoluteFill style={{background: INK}}>
     {SHOTS.map((s, i) => (
       <Sequence key={i} from={at(s.b)} durationInFrames={s.n * BF}>
@@ -168,7 +212,7 @@ export const Movie: React.FC = () => (
     {/* hook */}
     <Sequence from={at(0)} durationInFrames={at(3)}>
       <Stack y={-120}>
-        <Slam text="Non passa" at={2} size={190} />
+        <Slam text="Non passa" at={2} size={190} rgb />
         <Slam text="inosservata." at={18} size={150} color={GOLD} />
       </Stack>
     </Sequence>
@@ -180,7 +224,7 @@ export const Movie: React.FC = () => (
     </Sequence>
     <Sequence from={at(8)} durationInFrames={at(2)}>
       <Stack y={-160}>
-        <Slam text="Premium" at={1} size={200} />
+        <Slam text="Premium" at={1} size={200} rgb />
         <Slam text="Plus" at={10} size={200} color={GOLD} />
       </Stack>
     </Sequence>
@@ -206,7 +250,7 @@ export const Movie: React.FC = () => (
     {['Blu.', 'Sportiva.', 'Premium.', 'Tua.'].map((w, k) => (
       <Sequence key={w} from={at(21 + k)} durationInFrames={BF}>
         <Stack y={-120}>
-          <Slam text={w} at={0} size={k === 3 ? 330 : 230} color={k === 3 ? GOLD : WHITE} rgb={k === 3} />
+          <Slam text={w} at={0} size={k === 3 ? 330 : 230} color={k === 3 ? GOLD : WHITE} rgb />
         </Stack>
       </Sequence>
     ))}
@@ -222,7 +266,7 @@ export const Movie: React.FC = () => (
         <Small text="AMG Line · Premium Plus" at={22} color={GOLD_HI} size={42} />
       </Stack>
     </Sequence>
-    <Sequence from={at(END_B)} durationInFrames={DURATION_F - at(END_B)}>
+    <Sequence from={at(END_B)} durationInFrames={DURATION_F - at(END_B + PRE_B)}>
       <EndCard />
     </Sequence>
   </AbsoluteFill>
