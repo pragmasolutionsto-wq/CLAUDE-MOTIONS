@@ -1,12 +1,12 @@
 # Reel Leadership 1 — Pquattro
 
-Sorgente: 5 clip Drive (cartella "reel leadership 1"), unite in ordine 1→5.
-- `reel_leadership_1_completo.mp4` — 480×854, 30fps, 49,7s (video da trascrivere/montare)
+Sorgente: 10 clip Drive (cartella "reel leadership 1"), unite in ordine 1→10.
+- `reel_leadership_1_completo.mp4` — 1080×1920, 30fps, 99,0s (non in git, 93MB: si rigenera dalle clip)
 - `reel_leadership_1_audio.mp3` — solo voce, mono 16kHz (per la trascrizione)
 
-Tagli clip nel file unito: 0,0 · 8,4 · 25,7 · 30,2 · 40,2 · 49,7 s.
+Inizio clip nel file unito (s): 1→0,00 · 2→8,41 · 3→25,70 · 4→30,25 · 5→40,21 · 6→49,66 · 7→61,61 · 8→68,42 · 9→77,43 · 10→87,33 · fine 99,07.
 
-Girato: talking head selfie, verticale, ufficio chiaro con libreria. Sorgente a 480p: in 1080×1920 va upscalata,
+Girato: talking head selfie, verticale, ufficio chiaro con libreria. Clip 7, 9, 10 in HD; 1-6 e 8 a 480p upscalate,
 quindi niente zoom aggressivi; il grosso del valore va su sottotitoli e grafica.
 
 ## Brand
