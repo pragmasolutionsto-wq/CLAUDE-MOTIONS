@@ -12,6 +12,8 @@
     "@fontsource/archivo-black": "^5.3.0",
     "@fontsource/cormorant-garamond": "^5.3.0",
     "@fontsource/manrope": "^5.3.0",
+    "@fontsource/montserrat": "^5.3.0",
+    "@fontsource/playfair-display": "^5.3.0",
     "@remotion/cli": "^4.0.300",
     "@types/react": "^19.3.0",
     "react": "^18.3.1",
