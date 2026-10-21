@@ -1,4 +1,4 @@
-"""Scaletta: inquadrature sul farmacista (face) alternate a clip 3D Runway e schermate grafiche, dai tempi parola.
+"""Scaletta: blocchi di grafiche sul farmacista (solo il suo video, niente clip Runway), dai tempi parola.
 Scrive psa_live/shots.json   uso: python3 psa_live/shots.py"""
 import json, os, re
 
@@ -13,24 +13,23 @@ def s(k, word, n=1):
             if c == n: return t
     raise KeyError((k, word))
 END = SE[-1]['end']; DUR = END + T['tail']
-SH = [  # nome, tipo (face / clip / mg), inizio, transizione d'ingresso
+SH = [  # nome, tipo, inizio, transizione d'ingresso — solo il farmacista, niente clip Runway
     ('f_hook', 'face', 0.0, 'none'),
-    ('torso', 'clip', s(0, 'prostata') - 0.12, 'cube'),
-    ('f_psa', 'face', s(0, 'ma') + 0.1, 'cube'),
-    ('psa', 'clip', s(1, 'proteina') - 0.08, 'cube'),
-    ('drop', 'clip', SE[2]['t'] - 0.02, 'whip'),
-    ('f_cause', 'face', SE[3]['t'] - 0.04, 'cube'),
-    ('inflamed', 'clip', SE[5]['t'] - 0.04, 'cube'),
-    ('neq', 'mg', SE[6]['t'] - 0.04, 'whip'),
-    ('f_age', 'face', SE[7]['t'] - 0.04, 'cube'),
-    ('walk', 'clip', s(7, 'generalmente') - 0.08, 'whip'),
-    ('f_beyond', 'face', SE[8]['t'] + 0.02, 'cube'),
-    ('scan', 'clip', s(8, 'verificare') - 0.1, 'cube'),
-    ('f_why', 'face', s(8, 'ma') - 0.1, 'cube'),
-    ('f_help', 'face', SE[10]['t'] + 0.02, 'whip'),
-    ('device', 'clip', s(10, 'il') - 0.1, 'cube'),
-    ('steps', 'mg', s(10, 'ti') - 0.12, 'cube'),
-    ('f_step', 'face', s(10, 'in') - 0.1, 'whip'),
+    ('f_psa', 'face', s(0, 'ma') + 0.1, 'none'),
+    ('f_prot', 'face', s(1, 'proteina') - 0.08, 'none'),
+    ('f_prel', 'face', SE[2]['t'] - 0.02, 'none'),
+    ('f_cause', 'face', SE[3]['t'] - 0.04, 'none'),
+    ('f_list', 'face', SE[5]['t'] - 0.04, 'none'),
+    ('f_neq', 'face', SE[6]['t'] - 0.04, 'none'),
+    ('f_age', 'face', SE[7]['t'] - 0.04, 'none'),
+    ('f_when', 'face', s(7, 'generalmente') - 0.08, 'none'),
+    ('f_beyond', 'face', SE[8]['t'] + 0.02, 'none'),
+    ('f_verify', 'face', s(8, 'verificare') - 0.1, 'none'),
+    ('f_why', 'face', s(8, 'ma') - 0.1, 'none'),
+    ('f_help', 'face', SE[10]['t'] + 0.02, 'none'),
+    ('f_test', 'face', s(10, 'il') - 0.1, 'none'),
+    ('f_steps', 'face', s(10, 'ti') - 0.12, 'none'),
+    ('f_step', 'face', s(10, 'in') - 0.1, 'none'),
     ('end', 'mg', END + 0.1, 'cube'),
 ]
 out = []

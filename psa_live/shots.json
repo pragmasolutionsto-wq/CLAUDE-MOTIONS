@@ -4,120 +4,113 @@
    "name": "f_hook",
    "kind": "face",
    "a": 0.0,
-   "b": 1.401,
-   "tr": "none"
-  },
-  {
-   "name": "torso",
-   "kind": "clip",
-   "a": 1.401,
    "b": 2.985,
-   "tr": "cube"
+   "tr": "none"
   },
   {
    "name": "f_psa",
    "kind": "face",
    "a": 2.985,
    "b": 7.771,
-   "tr": "cube"
+   "tr": "none"
   },
   {
-   "name": "psa",
-   "kind": "clip",
+   "name": "f_prot",
+   "kind": "face",
    "a": 7.771,
    "b": 13.358,
-   "tr": "cube"
+   "tr": "none"
   },
   {
-   "name": "drop",
-   "kind": "clip",
+   "name": "f_prel",
+   "kind": "face",
    "a": 13.358,
    "b": 15.751,
-   "tr": "whip"
+   "tr": "none"
   },
   {
    "name": "f_cause",
    "kind": "face",
    "a": 15.751,
    "b": 20.668,
-   "tr": "cube"
+   "tr": "none"
   },
   {
-   "name": "inflamed",
-   "kind": "clip",
+   "name": "f_list",
+   "kind": "face",
    "a": 20.668,
    "b": 27.29,
-   "tr": "cube"
+   "tr": "none"
   },
   {
-   "name": "neq",
-   "kind": "mg",
+   "name": "f_neq",
+   "kind": "face",
    "a": 27.29,
    "b": 32.228,
-   "tr": "whip"
+   "tr": "none"
   },
   {
    "name": "f_age",
    "kind": "face",
    "a": 32.228,
    "b": 34.631,
-   "tr": "cube"
+   "tr": "none"
   },
   {
-   "name": "walk",
-   "kind": "clip",
+   "name": "f_when",
+   "kind": "face",
    "a": 34.631,
    "b": 42.861,
-   "tr": "whip"
+   "tr": "none"
   },
   {
    "name": "f_beyond",
    "kind": "face",
    "a": 42.861,
    "b": 45.029,
-   "tr": "cube"
+   "tr": "none"
   },
   {
-   "name": "scan",
-   "kind": "clip",
+   "name": "f_verify",
+   "kind": "face",
    "a": 45.029,
    "b": 49.905,
-   "tr": "cube"
+   "tr": "none"
   },
   {
    "name": "f_why",
    "kind": "face",
    "a": 49.905,
    "b": 56.385,
-   "tr": "cube"
+   "tr": "none"
   },
   {
    "name": "f_help",
    "kind": "face",
    "a": 56.385,
    "b": 59.822,
-   "tr": "whip"
+   "tr": "none"
   },
   {
-   "name": "device",
-   "kind": "clip",
+   "name": "f_test",
+   "kind": "face",
    "a": 59.822,
    "b": 62.687,
-   "tr": "cube"
+   "tr": "none"
   },
   {
-   "name": "steps",
-   "kind": "mg",
+   "name": "f_steps",
+   "kind": "face",
    "a": 62.687,
    "b": 70.691,
-   "tr": "cube"
+   "tr": "none"
   },
   {
    "name": "f_step",
    "kind": "face",
    "a": 70.691,
    "b": 72.75,
-   "tr": "whip"
+   "tr": "none"
   },
   {
    "name": "end",

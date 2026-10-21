@@ -8,7 +8,6 @@ python3 psa_live/cut.py
 python3 psa_live/prep.py
 python3 psa_live/facetrack.py
 python3 psa_live/shots.py
-python3 psa_live/prep_ai.py
 npx remotion render psa_live/index.ts PsaLive out/live_raw.mp4 --public-dir=psa_live/public --gl=swangle --browser-executable=$B --concurrency=4 --crf=14 --muted --log=error
 python3 psa_live/sfx.py out/live_sfx.wav
 ffmpeg -loglevel error -y -i out/live_raw.mp4 -i out/psa_live_voice.wav -i out/live_sfx.wav -filter_complex \

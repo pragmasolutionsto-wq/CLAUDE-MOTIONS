@@ -59,25 +59,23 @@ def heartbeat():
 # apertura
 put(boom(40, 1.2), 0.0, 0.6); put(pop(1.1), 0.02, 0.35); put(pop(1.25), 0.2, 0.35)
 # tagli
-for s in SJ['shots'][1:]:
-    a = s['a']
-    if s['tr'] == 'cube': put(whoosh(0.65, True), a - 0.42, 0.55, 0.35); put(boom(55, 0.5), a + 0.05, 0.3)
-    else: put(whoosh(0.32, True), a - 0.22, 0.5, 0.6); put(tick(), a, 0.55)
+for k in (1, 3, 7, 8, 10):
+    a = SE[k]['t']; put(whoosh(0.4, True), a - 0.3, 0.5, 0.6); put(tick(), a, 0.5)
+put(whoosh(0.65, True), SH['end']['a'] - 0.42, 0.55, 0.35); put(boom(55, 0.5), SH['end']['a'] + 0.05, 0.3)
 # testi 3D
-for at in (SH['torso']['a'] + 0.05, K['psa1'] - 0.35, K['due'] - 0.45, K['non6'] - 0.15, K['cinquanta'] - 0.3, K['quaranta'] - 0.3):
+for at in (K['prostata0'] - 0.15, K['psa1'] - 0.35, K['due'] - 0.45, K['non6'] - 0.15, K['cinquanta'] - 0.3, K['quaranta'] - 0.3):
     put(boom(46, 0.8), at + 0.25, 0.45); put(shimmer(int(at * 10), 7, 1568), at + 0.3, 0.28)
-pops = [SH['torso']['a'] + 0.45, K['importante0'] - 0.15, K['importante0'] + 0.6, K['psa1'] - 0.75, K['proteina'] - 0.1, K['prodotta'] - 0.1, K['marcatore'] - 0.25,
-        SH['drop']['a'] + 0.08, K['prelievo2'] - 0.15, K['prelievo2'] + 0.35, K['cause'] - 0.2, K['alto3'] - 0.2, K['due'] - 0.2,
-        K['ingrossata'] - 0.2, K['infiammazione'] - 0.15, K['infezione'] - 0.15, K['prostatiti'] - 0.15, SH['neq']['a'] + 0.05, K['psa6'] - 0.25, K['necess'] - 0.3, K['necess'] - 0.05,
+pops = [0.02, 0.2, K['prostata0'] + 0.35, K['importante0'] - 0.15, K['importante0'] + 0.6, K['psa1'] - 0.75, K['proteina'] - 0.1, K['prodotta'] - 0.1, K['marcatore'] - 0.25,
+        SH['f_prel']['a'] + 0.08, K['prelievo2'] - 0.15, K['cause'] - 0.2, K['alto3'] - 0.2, K['due'] - 0.2,
+        K['ingrossata'] - 0.2, K['infiammazione'] - 0.15, K['infezione'] - 0.15, K['prostatiti'] - 0.15, SH['f_neq']['a'] + 0.05, K['psa6'] - 0.25, K['necess'] - 0.3, K['necess'] - 0.05,
         K['eta'] - 0.25, K['test7'] - 0.3, K['familiarita'] - 0.2, K['fattori7'] - 0.2, SH['f_beyond']['a'] + 0.05, K['possibile'] - 0.2, K['esame8'] - 0.3,
         SH['f_why']['a'] + 0.1, K['sempre9'] - 0.25, K['sintomi'] - 0.5, K['fattori9'] - 0.7, SH['f_help']['a'] + 0.05, K['aiutarti'] - 0.2, K['area'] - 0.2,
-        SH['device']['a'] + 0.05, SH['device']['a'] + 0.25, K['capillare'] - 0.35, K['rapido'] - 0.1, SH['steps']['a'] + 0.05, SH['f_step']['a'] + 0.05, K['passo'] - 0.35]
+        SH['f_verify']['a'] + 0.05, K['salute8'] - 0.3, K['capillare'] - 0.35, K['rapido'] - 0.1, K['info'] - 0.3, K['lettura'] - 0.3, K['consigli'] - 0.4, SH['f_step']['a'] + 0.05, K['passo'] - 0.35]
 for i, t in enumerate(pops): put(pop(1 + 0.07 * (i % 5)), t - 0.02, 0.32, 0.35 + 0.1 * (i % 4))
 put(boom(60, 0.5), K['tumore5'] - 0.3, 0.35); put(glitch(0.25), K['tumore5'] - 0.3, 0.2)
 put(boom(38, 1.2), K['non6'] - 0.1, 0.45)
-put(whoosh(0.9, True), SH['scan']['a'] + 0.1, 0.3, 0.3); put(whoosh(0.9, True), K['salute8'] - 0.3, 0.3, 0.7)
 put(heartbeat(), K['sempre9'] - 0.2, 0.35)
-for at in (SH['device']['a'] + 0.5, SH['end']['a'] + 1.2): put(bell(1319, 1.2), at + 0.1, 0.32); put(bell(1760, 1.0), at + 0.18, 0.22)
+for at in (SH['f_test']['a'] + 0.4, SH['end']['a'] + 1.2): put(bell(1319, 1.2), at + 0.1, 0.32); put(bell(1760, 1.0), at + 0.18, 0.22)
 for k in ('info', 'lettura', 'consigli'): put(whoosh(0.4, True), K[k] - 0.6, 0.4); put(boom(70, 0.3), K[k] - 0.25, 0.28)
 e = SH['end']['a']; put(shimmer(9, 12, 1320), e + 0.1, 0.42); put(boom(44, 1.2), e + 0.6, 0.45); put(pop(1.2), e + 1.0, 0.3); put(pop(1.35), e + 1.2, 0.3)
 

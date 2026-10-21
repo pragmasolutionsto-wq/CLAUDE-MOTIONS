@@ -58,7 +58,7 @@ export const safeZone = (a: number, b: number, need = 260): {y: number; top: boo
     hi = Math.min(hi, f[1]);
   }
   if (SUB_TOP - lo - 30 >= need) return {y: Math.round(lo + 30), top: false};
-  return {y: Math.max(150, Math.round(hi - need - 30)), top: true};
+  return {y: 170, top: true};
 };
 
 // palette dal logo Plebiscito (gradiente giallo → lime → verde → ciano) + sfondi scientifici

@@ -118,12 +118,18 @@ const Chip: React.FC<{t: number; a: number; text: string; icon: string; size?: n
 };
 
 // testo 3D estruso in un riquadro
-const T3: React.FC<{t: number; a: number; text: string; y: number; h?: number; size?: number; mode?: 'grad' | 'white' | 'cyan'; out?: number; spin?: number; x?: number; w?: number}> = ({t, a, text, y, h = 520, size, mode, out = 99, spin, x = 0, w = W}) => {
+const T3: React.FC<{t: number; a: number; text: string; y: number; h?: number; size?: number; mode?: 'grad' | 'white' | 'cyan'; out?: number; spin?: number; x?: number; w?: number; plate?: number}> = ({t, a, text, y, h = 520, size, mode, out = 99, spin, x = 0, w = W, plate = 0}) => {
   if (t < a - 0.05 || t > out + 0.05) return null;
   return (
-    <div style={{position: 'absolute', left: x, top: y, width: w, height: h, filter: 'drop-shadow(0 24px 40px rgba(0,10,30,0.55))'}}>
+    <>
+      {plate > 0 && (() => {
+        const v = eBack(prog(t, a - 0.05, a + 0.35), 1.2) * (1 - eO3(prog(t, out - 0.25, out)));
+        return <div style={{position: 'absolute', left: (W - plate) / 2, top: y + h * 0.12, width: plate, height: h * 0.76, borderRadius: 44, background: 'rgba(4,18,31,0.86)', border: '2px solid rgba(63,208,240,0.55)', boxShadow: '0 20px 50px rgba(0,15,35,0.45)', transform: `scaleX(${v})`, opacity: clamp(v * 2)}} />;
+      })()}
+      <div style={{position: 'absolute', left: x, top: y, width: w, height: h, filter: 'drop-shadow(0 24px 40px rgba(0,10,30,0.55))'}}>
       <Text3D text={text} lt={t - a} w={w} h={h} size={size} mode={mode} spin={spin} out={prog(t, out - 0.3, out)} />
     </div>
+    </>
   );
 };
 
@@ -331,25 +337,23 @@ const Face: React.FC<{t: number; name: string; children: (z: {y: number; top: bo
 };
 const ZONES: Record<string, {y: number; top: boolean}> = {};
 
-/* ------------------------------------------------------------------ inquadrature */
+/* ------------------------------------------------------------------ inquadrature (solo il farmacista) */
 
-const FHook: React.FC<{t: number}> = ({t}) => (
-  <Face t={t} name="f_hook">{(z) => (
-    <Stack y={z.y}>
-      <Line t={t} a={0.02} text="per noi" size={72} />
-      <Line t={t} a={0.2} text="uomini" size={120} box="white" />
-    </Stack>
-  )}</Face>
-);
-
-const ShTorso: React.FC<{t: number}> = ({t}) => (
-  <Clip name="torso" t={t} z0={1.0} dz={0.05}>
-    <T3 t={t} a={sh('torso').a + 0.05} text="PROSTATA" y={170} h={400} size={1.25} mode="white" spin={0.6} />
-    <Stack y={560}><Line t={t} a={sh('torso').a + 0.45} text="non è sempre facile" size={52} box="grad" /></Stack>
-    <Target t={t} a={sh('torso').a + 0.3} x={540} y={1440} r={110} />
-    <Pip t={t} a={sh('torso').a} b={sh('torso').b} />
-  </Clip>
-);
+const FHook: React.FC<{t: number}> = ({t}) => {
+  const sw = K.prostata0 - 0.15;
+  return (
+    <Face t={t} name="f_hook">{(z) => (
+      <>
+        <Stack y={z.y}>
+          <Line t={t} a={0.02} text="per noi" size={64} box="navy" out={sw} />
+          <Line t={t} a={0.2} text="uomini" size={112} box="white" out={sw} />
+        </Stack>
+        <T3 t={t} a={sw} text="PROSTATA" y={z.y - 40} h={300} size={1.6} plate={660} />
+        <Stack y={z.y + 220}><Line t={t} a={K.prostata0 + 0.35} text="non è sempre facile" size={54} box="grad" /></Stack>
+      </>
+    )}</Face>
+  );
+};
 
 const FPsa: React.FC<{t: number}> = ({t}) => {
   const sw = K.psa1 - 0.75;
@@ -358,35 +362,34 @@ const FPsa: React.FC<{t: number}> = ({t}) => {
       <>
         <Stack y={z.y}>
           <Line t={t} a={K.importante0 - 0.15} text="è importante" size={66} box="white" out={sw} />
-          <Line t={t} a={K.importante0 + 0.6} text="sapere certe cose" size={78} box="grad" out={sw} />
+          <Line t={t} a={K.importante0 + 0.6} text="sapere certe cose" size={74} box="grad" out={sw} />
         </Stack>
-        <Stack y={z.y - 10}><Line t={t} a={sw} text="hai sentito parlare di" size={44} color={CYAN_HI} /></Stack>
-        <T3 t={t} a={K.psa1 - 0.35} text="PSA" y={z.y + 40} h={300} size={2.0} />
+        <Stack y={z.y - 10}><Line t={t} a={sw} text="hai sentito parlare di" size={44} box="navy" /></Stack>
+        <T3 t={t} a={K.psa1 - 0.35} text="PSA" y={z.y + 50} h={300} size={2.6} plate={460} />
       </>
     )}</Face>
   );
 };
 
-const ShPsa: React.FC<{t: number}> = ({t}) => (
-  <Clip name="psa" t={t} dz={0.02}>
-    <Stack y={150} align="flex-start" x={50}><Line t={t} a={K.proteina - 0.1} text="una proteina" size={84} box="white" /></Stack>
-    <Stack y={940} align="flex-end" x={400} right={40} gap={16}>
-      <Chip t={t} a={K.prodotta - 0.1} text="prodotta dalla prostata" icon="drop" size={30} from="right" />
-      <Chip t={t} a={K.marcatore - 0.25} text="marcatore di salute" icon="chart" size={30} hi from="right" />
-    </Stack>
-    <Pip t={t} a={sh('psa').a} b={sh('psa').b} />
-  </Clip>
+const FProt: React.FC<{t: number}> = ({t}) => (
+  <Face t={t} name="f_prot">{(z) => (
+    <>
+      <Stack y={z.y}><Line t={t} a={K.proteina - 0.1} text="una proteina" size={84} box="white" /></Stack>
+      <Stack y={z.y + 140} gap={14}>
+        <Chip t={t} a={K.prodotta - 0.1} text="prodotta dalla prostata" icon="drop" size={36} />
+        <Chip t={t} a={K.marcatore - 0.25} text="marcatore di salute" icon="chart" size={36} hi from="right" />
+      </Stack>
+    </>
+  )}</Face>
 );
 
-const ShDrop: React.FC<{t: number}> = ({t}) => (
-  <Clip name="drop" t={t} dz={0.03} dark={false}>
-    <Stack y={190}>
-      <Line t={t} a={sh('drop').a + 0.08} text="un semplice" size={74} />
-      <Line t={t} a={K.prelievo2 - 0.15} text="prelievo" size={120} box="white" />
-      <Line t={t} a={K.prelievo2 + 0.35} text="di sangue" size={64} box="grad" />
+const FPrel: React.FC<{t: number}> = ({t}) => (
+  <Face t={t} name="f_prel">{(z) => (
+    <Stack y={z.y}>
+      <Line t={t} a={sh('f_prel').a + 0.08} text="un semplice" size={60} box="navy" />
+      <Line t={t} a={K.prelievo2 - 0.15} text="prelievo di sangue" size={84} box="grad" />
     </Stack>
-    <Pip t={t} a={sh('drop').a - 0.3} b={sh('drop').b} />
-  </Clip>
+  )}</Face>
 );
 
 const FCause: React.FC<{t: number}> = ({t}) => {
@@ -395,45 +398,51 @@ const FCause: React.FC<{t: number}> = ({t}) => {
     <Face t={t} name="f_cause">{(z) => (
       <>
         <Stack y={z.y}>
-          <Line t={t} a={K.cause - 0.2} text="le cause di un" size={60} out={sw} />
+          <Line t={t} a={K.cause - 0.2} text="le cause di un" size={60} box="navy" out={sw} />
           <Line t={t} a={K.alto3 - 0.2} text="psa alto?" size={104} box="grad" out={sw} />
         </Stack>
-        <T3 t={t} a={sw} text="2" y={z.y - 30} h={300} size={2.2} />
-        <Stack y={z.y + 250}><Line t={t} a={sw + 0.25} text="cause principali" size={56} box="white" /></Stack>
+        <T3 t={t} a={sw} text="2" y={z.y - 30} h={280} size={2.6} plate={230} />
+        <Stack y={z.y + 240}><Line t={t} a={sw + 0.25} text="cause principali" size={56} box="white" /></Stack>
       </>
     )}</Face>
   );
 };
 
-const ShInflamed: React.FC<{t: number}> = ({t}) => (
-  <Clip name="inflamed" t={t} dz={0.025}>
-    <Target t={t} a={sh('inflamed').a + 0.15} x={540} y={960} r={170} c={HOT} />
-    <Stack y={130} align="flex-start" x={50} gap={14}>
-      <Chip t={t} a={K.ingrossata - 0.2} text="prostata ingrossata" icon="expand" size={38} />
-      <Chip t={t} a={K.infiammazione - 0.15} text="infiammazione" icon="flame" size={38} />
-      <Chip t={t} a={K.infezione - 0.15} text="infezione" icon="virus" size={38} />
-      <Chip t={t} a={K.prostatiti - 0.15} text="prostatiti" icon="alert" size={38} />
-    </Stack>
-    <Stack y={1180} align="flex-end" x={400} right={50}><Chip t={t} a={K.tumore5 - 0.3} text="oppure un tumore" icon="alert" size={36} hot from="right" /></Stack>
-    <Pip t={t} a={sh('inflamed').a} b={sh('inflamed').b} />
-  </Clip>
-);
+const FList: React.FC<{t: number}> = ({t}) => {
+  const sw = K.tumore5 - 0.35;
+  return (
+    <Face t={t} name="f_list">{(z) => (
+      <>
+        <div style={{position: 'absolute', left: 40, right: 40, top: z.y, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 14}}>
+          <Chip t={t} a={K.ingrossata - 0.2} text="prostata ingrossata" icon="expand" size={36} out={sw} />
+          <Chip t={t} a={K.infiammazione - 0.15} text="infiammazione" icon="flame" size={36} out={sw} />
+          <Chip t={t} a={K.infezione - 0.15} text="infezione" icon="virus" size={36} from="right" out={sw} />
+          <Chip t={t} a={K.prostatiti - 0.15} text="prostatiti" icon="alert" size={36} out={sw} />
+        </div>
+        <Stack y={z.y + 20}>
+          <Line t={t} a={sw} text="oppure" size={60} box="navy" />
+          <Chip t={t} a={sw + 0.2} text="un tumore alla prostata" icon="alert" size={42} hot />
+        </Stack>
+      </>
+    )}</Face>
+  );
+};
 
-const ShNeq: React.FC<{t: number}> = ({t}) => {
-  const a = sh('neq').a;
+const FNeq: React.FC<{t: number}> = ({t}) => {
+  const a = sh('f_neq').a;
+  const sw = K.non6 - 0.2;
   const flash = 1 - prog(t, K.non6 - 0.1, K.non6 + 0.3);
   return (
-    <>
-      <Sky t={t} />
-      <Stack y={170}><Chip t={t} a={a + 0.05} text="però aspetta" icon="alert" size={44} /></Stack>
-      <Stack y={330}><Line t={t} a={K.psa6 - 0.25} text="psa alto" size={140} /></Stack>
-      <T3 t={t} a={K.non6 - 0.15} text="≠" y={490} h={380} size={2.4} spin={-1} />
-      <Stack y={850}><Line t={t} a={K.necess - 0.3} text="tumore" size={140} box="white" /></Stack>
-      <Stack y={1060}><Line t={t} a={K.necess - 0.05} text="non necessariamente" size={46} box="navy" /></Stack>
-      {t > K.non6 - 0.1 && <AbsoluteFill style={{background: WHITE, opacity: flash * flash * 0.6}} />}
-      <Corner />
-      <Pip t={t} a={a} b={sh('neq').b} x={370} y={1150} />
-    </>
+    <Face t={t} name="f_neq">{(z) => (
+      <>
+        <Stack y={z.y}><Chip t={t} a={a + 0.05} text="però aspetta" icon="alert" size={44} out={sw} /></Stack>
+        <Stack y={z.y + 100}><Line t={t} a={K.psa6 - 0.25} text="psa alto" size={110} box="white" out={sw} /></Stack>
+        <Stack y={z.y - 10}><Line t={t} a={sw} text="psa alto" size={64} box="navy" /></Stack>
+        <T3 t={t} a={sw} text="≠" y={z.y + 40} h={260} size={2.8} spin={-1} plate={260} />
+        <Stack y={z.y + 300}><Line t={t} a={K.necess - 0.3} text="tumore" size={96} box="grad" /></Stack>
+        {t > K.non6 - 0.1 && <AbsoluteFill style={{background: WHITE, opacity: flash * flash * 0.5}} />}
+      </>
+    )}</Face>
   );
 };
 
@@ -441,50 +450,48 @@ const FAge: React.FC<{t: number}> = ({t}) => (
   <Face t={t} name="f_age">{(z) => (
     <Stack y={z.y}>
       <Line t={t} a={K.eta - 0.25} text="da quale età" size={80} box="grad" />
-      <Line t={t} a={K.test7 - 0.3} text="fare il test?" size={78} />
+      <Line t={t} a={K.test7 - 0.3} text="fare il test?" size={70} box="navy" />
     </Stack>
   )}</Face>
 );
 
-const ShWalk: React.FC<{t: number}> = ({t}) => {
-  const p40 = prog(t, K.prima7 - 0.1, K.prima7 + 0.6);
+const FWhen: React.FC<{t: number}> = ({t}) => {
+  const sw = K.prima7 - 0.1;
   return (
-    <Clip name="walk" t={t} z0={1.0} dz={0.008} y={230}>
-      <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(4,18,31,0.95) 0%, rgba(4,18,31,0.6) 26%, rgba(4,18,31,0) 40%)'}} />
-      <Stack y={150}><Line t={t} a={sh('walk').a + 0.05} text="generalmente dai" size={50} color={CYAN_HI} out={K.prima7 - 0.1} /></Stack>
-      <T3 t={t} a={K.cinquanta - 0.3} text="50+" y={190} h={380} size={2.0} out={K.prima7 - 0.1} spin={0.5} />
-      {p40 > 0 && (
-        <>
-          <Stack y={150}><Line t={t} a={K.prima7 - 0.1} text="ma anche prima, dai" size={50} color={LIME_HI} /></Stack>
-          <T3 t={t} a={K.quaranta - 0.3} text="40-45" y={190} h={380} size={1.7} mode="cyan" spin={0.5} />
-          <Stack y={1140} align="flex-end" x={400} right={40} gap={14}>
-            <Chip t={t} a={K.familiarita - 0.2} text="familiarità" icon="family" size={36} from="right" />
-            <Chip t={t} a={K.fattori7 - 0.2} text="fattori di rischio" icon="alert" size={36} hi from="right" />
-          </Stack>
-        </>
-      )}
-      <Pip t={t} a={sh('walk').a} b={sh('walk').b} />
-    </Clip>
+    <Face t={t} name="f_when">{(z) => (
+      <>
+        <Stack y={z.y}><Line t={t} a={sh('f_when').a + 0.05} text="generalmente dai" size={46} box="navy" out={sw} /></Stack>
+        <T3 t={t} a={K.cinquanta - 0.3} text="50+" y={z.y + 50} h={250} size={2.4} out={sw} spin={0.5} plate={400} />
+        <Stack y={z.y}><Line t={t} a={sw} text="ma anche prima, dai" size={46} box="navy" /></Stack>
+        <T3 t={t} a={K.quaranta - 0.3} text="40-45" y={z.y + 50} h={230} size={2.0} mode="cyan" spin={0.5} out={K.familiarita - 0.3} plate={480} />
+        <Stack y={z.y + 90} gap={14}>
+          <Chip t={t} a={K.familiarita - 0.2} text="familiarità" icon="family" size={40} />
+          <Chip t={t} a={K.fattori7 - 0.2} text="fattori di rischio" icon="alert" size={40} hi from="right" />
+        </Stack>
+      </>
+    )}</Face>
   );
 };
 
 const FBeyond: React.FC<{t: number}> = ({t}) => (
   <Face t={t} name="f_beyond">{(z) => (
     <Stack y={z.y}>
-      <Line t={t} a={sh('f_beyond').a + 0.05} text="al di là di un" size={62} />
+      <Line t={t} a={sh('f_beyond').a + 0.05} text="al di là di un" size={62} box="navy" />
       <Line t={t} a={K.possibile - 0.2} text="possibile tumore" size={84} box="white" />
     </Stack>
   )}</Face>
 );
 
-const ShScan: React.FC<{t: number}> = ({t}) => (
-  <Clip name="scan" t={t} dz={0.02}>
-    <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(4,18,31,0.6) 0%, rgba(4,18,31,0) 25%)'}} />
-    <ScanText t={t} a={sh('scan').a + 0.1} text="verifica lo stato" y={150} size={70} c={CYAN_HI} />
-    <ScanText t={t} a={K.salute8 - 0.3} text="di salute della prostata" y={240} size={62} />
-    <Stack y={1180} align="flex-end" x={400} right={40}><Chip t={t} a={K.esame8 - 0.3} text="con un esame del sangue" icon="drop" size={30} hi from="right" /></Stack>
-    <Pip t={t} a={sh('scan').a} b={sh('scan').b} />
-  </Clip>
+const FVerify: React.FC<{t: number}> = ({t}) => (
+  <Face t={t} name="f_verify">{(z) => (
+    <>
+      <Stack y={z.y}>
+        <Line t={t} a={sh('f_verify').a + 0.05} text="verifica lo stato" size={70} box="navy" />
+        <Line t={t} a={K.salute8 - 0.3} text="della prostata" size={92} box="grad" />
+      </Stack>
+      <Stack y={z.y + 270}><Chip t={t} a={K.esame8 - 0.3} text="con un esame del sangue" icon="drop" size={38} /></Stack>
+    </>
+  )}</Face>
 );
 
 const FWhy: React.FC<{t: number}> = ({t}) => {
@@ -496,9 +503,9 @@ const FWhy: React.FC<{t: number}> = ({t}) => {
         <Stack y={z.y}><Line t={t} a={s.a + 0.1} text="ma sai perché?" size={90} box="grad" out={sw} /></Stack>
         <Stack y={z.y}>
           <Line t={t} a={sw} text="psa alto" size={70} box="white" out={sw2} />
-          <Line t={t} a={K.sintomi - 0.5} text="spesso senza sintomi" size={70} out={sw2} />
+          <Line t={t} a={K.sintomi - 0.5} text="spesso senza sintomi" size={70} box="navy" out={sw2} />
         </Stack>
-        <Stack y={z.y + 20}><Chip t={t} a={sw2} text="conosci i fattori di rischio" icon="shield" size={38} hi /></Stack>
+        <Stack y={z.y + 20}><Chip t={t} a={sw2} text="conosci i fattori di rischio" icon="shield" size={40} hi /></Stack>
       </>
     )}</Face>
   );
@@ -508,44 +515,46 @@ const FHelp: React.FC<{t: number}> = ({t}) => (
   <Face t={t} name="f_help">{(z) => (
     <>
       <Stack y={z.y}>
-        <Line t={t} a={sh('f_help').a + 0.05} text="possiamo" size={60} />
+        <Line t={t} a={sh('f_help').a + 0.05} text="possiamo" size={60} box="navy" />
         <Line t={t} a={K.aiutarti - 0.2} text="aiutarti noi" size={92} box="grad" />
       </Stack>
-      <Stack y={z.y + 200}><Chip t={t} a={K.area - 0.2} text="area servizi" icon="check" size={40} /></Stack>
+      <Stack y={z.y + 230}><Chip t={t} a={K.area - 0.2} text="nella nostra area servizi" icon="check" size={40} /></Stack>
     </>
   )}</Face>
 );
 
-const ShDevice: React.FC<{t: number}> = ({t}) => {
-  const a = sh('device').a;
+const FTest: React.FC<{t: number}> = ({t}) => {
+  const a = sh('f_test').a;
   return (
-    <Clip name="device" t={t} dz={0.012} dark={false}>
-      <Stack y={180}>
-        <Line t={t} a={a + 0.05} text="il test" size={64} />
-        <Line t={t} a={a + 0.25} text="in farmacia" size={110} box="white" />
-      </Stack>
-      <Price t={t} a={a + 0.5} x={600} y={770} r={150} />
-      <Stack y={1130} align="flex-end" x={400} right={40} gap={14}>
-        <Chip t={t} a={K.capillare - 0.35} text="prelievo capillare" icon="drop" size={34} from="right" />
-        <Chip t={t} a={K.rapido - 0.1} text="rapido e discreto" icon="clock" size={34} hi from="right" />
-      </Stack>
-      <Pip t={t} a={a} b={sh('device').b} />
-    </Clip>
+    <Face t={t} name="f_test">{(z) => (
+      <>
+        <Stack y={z.y} align="flex-start" x={60} gap={14}>
+          <Chip t={t} a={K.capillare - 0.35} text="prelievo capillare" icon="drop" size={40} />
+          <Chip t={t} a={K.rapido - 0.1} text="rapido e discreto" icon="clock" size={40} hi />
+        </Stack>
+        <Price t={t} a={a + 0.4} x={880} y={z.y + 270} r={125} />
+      </>
+    )}</Face>
   );
 };
 
-const ShSteps: React.FC<{t: number}> = ({t}) => {
-  const a = sh('steps').a;
+// un passaggio alla volta: card che entra in profondità e lascia il posto alla successiva
+const FSteps: React.FC<{t: number}> = ({t}) => {
+  const S3 = [
+    {a: K.info - 0.3, n: 1, text: 'tutte le info prima del test', icon: 'list'},
+    {a: K.lettura - 0.3, n: 2, text: 'ti aiutiamo a leggere i valori', icon: 'eye'},
+    {a: K.consigli - 0.4, n: 3, text: 'i consigli giusti', icon: 'hand'},
+  ];
   return (
-    <>
-      <Sky t={t} />
-      <Stack y={150}><Line t={t} a={a + 0.05} text="ti affianchiamo noi" size={78} box="white" /></Stack>
-      <Step t={t} a={K.info - 0.3} n={1} text="tutte le info prima del test" icon="list" y={380} />
-      <Step t={t} a={K.lettura - 0.3} n={2} text="ti aiutiamo a leggere i valori" icon="eye" y={630} />
-      <Step t={t} a={K.consigli - 0.4} n={3} text="i consigli giusti" icon="hand" y={880} />
-      <Corner />
-      <Pip t={t} a={a} b={sh('steps').b} x={370} y={1130} />
-    </>
+    <Face t={t} name="f_steps">{(z) => (
+      <>
+        {S3.map((s, i) => {
+          const end = S3[i + 1]?.a ?? sh('f_steps').b;
+          if (t >= end) return null;
+          return <Step key={i} t={t} a={s.a} n={s.n} text={s.text} icon={s.icon} y={z.y} />;
+        })}
+      </>
+    )}</Face>
   );
 };
 
@@ -557,6 +566,7 @@ const FStep: React.FC<{t: number}> = ({t}) => (
     </Stack>
   )}</Face>
 );
+
 
 const ShEnd: React.FC<{t: number}> = ({t}) => {
   const a = sh('end').a;
@@ -591,11 +601,14 @@ const ShEnd: React.FC<{t: number}> = ({t}) => {
 };
 
 const RENDER: Record<string, React.FC<{t: number}>> = {
-  f_hook: FHook, torso: ShTorso, f_psa: FPsa, psa: ShPsa, drop: ShDrop, f_cause: FCause, inflamed: ShInflamed, neq: ShNeq, f_age: FAge,
-  walk: ShWalk, f_beyond: FBeyond, scan: ShScan, f_why: FWhy, f_help: FHelp, device: ShDevice, steps: ShSteps, f_step: FStep, end: ShEnd,
+  f_hook: FHook, f_psa: FPsa, f_prot: FProt, f_prel: FPrel, f_cause: FCause, f_list: FList, f_neq: FNeq, f_age: FAge, f_when: FWhen,
+  f_beyond: FBeyond, f_verify: FVerify, f_why: FWhy, f_help: FHelp, f_test: FTest, f_steps: FSteps, f_step: FStep, end: ShEnd,
 };
 
 /* ------------------------------------------------------------------ montaggio */
+
+// cambi di ripresa (clip diverse del farmacista)
+const TAKES = [1, 3, 7, 8, 10].map((k) => SENTS[k].t);
 
 export const Movie: React.FC = () => {
   const t = useCurrentFrame() / FPS;
@@ -614,7 +627,14 @@ export const Movie: React.FC = () => {
     const p = prog(t, nx.a - D2 / 2, nx.a + D2 / 2);
     view = nx.tr === 'cube' ? <Cube p={p} a={<C t={t} />} b={<N t={t} />} /> : <Whip p={p} a={<C t={t} />} b={<N t={t} />} />;
   } else view = <C t={t} />;
-  return <AbsoluteFill style={{background: NAVY}}>{view}</AbsoluteFill>;
+  let fx = 0;
+  for (const c of TAKES) fx = Math.max(fx, Math.sin(Math.PI * prog(t, c - 0.2, c + 0.2)));
+  return (
+    <AbsoluteFill style={{background: NAVY}}>
+      <AbsoluteFill style={{transform: `scale(${1 + fx * 0.14}) rotate(${fx * 1.5}deg)`, filter: fx > 0 ? `blur(${fx * 9}px) brightness(${1 + fx * 0.35})` : 'none'}}>{view}</AbsoluteFill>
+      {fx > 0 && <AbsoluteFill style={{background: 'radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(63,208,240,0.45) 45%, transparent 75%)', opacity: fx * fx * 0.75}} />}
+    </AbsoluteFill>
+  );
 };
 
 export {DURATION};
