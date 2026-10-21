@@ -37,3 +37,6 @@ bia/public/ai/scan.mp4
 bia/public/ai/bubble.mp4
 bia/public/ai/cross.mp4
 psa_live/raw/
+psa_live/public/base.mp4
+psa_live/public/ai/*.mp4
+!psa_live/public/ai/raw_*.mp4
