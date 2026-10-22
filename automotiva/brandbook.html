@@ -6,13 +6,13 @@
 <style>
 /* Layout: colonna editoriale scura, sezioni a banda; mockup 9:16 come "pagine" del sistema video */
 :root{
-  --asfalto:#050B20;      /* blu notte del sito: fondo */
-  --grafite:#0E1631;      /* superfici */
-  --linea:#1F2A4D;        /* bordi */
+  --asfalto:#0A0A0A;      /* nero: fondo */
+  --grafite:#161514;      /* superfici */
+  --linea:#2C2A26;        /* bordi */
   --oro:#D7B648;          /* primario sito */
   --oro-acceso:#DDB52B;   /* accento / CTA */
   --bianco:#F6F4EE;       /* testo */
-  --lamiera:#8E97AE;      /* testo secondario */
+  --lamiera:#A39E92;      /* testo secondario */
   --f-display:"Archivo",Impact,"Arial Narrow",sans-serif;
   --f-body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
@@ -59,9 +59,9 @@ li::marker{color:var(--oro)}
 .phones{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .phone{display:grid;gap:10px}
 .screen{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:18px;overflow:hidden;border:1px solid var(--linea);
-  background:radial-gradient(120% 70% at 70% 30%,#1b2a55 0%,var(--asfalto) 65%)}
+  background:radial-gradient(120% 70% at 70% 30%,#2a2620 0%,var(--asfalto) 65%)}
 .screen .car{position:absolute;left:8%;right:8%;top:30%;height:22%;border-radius:40% 45% 18% 18%/60% 60% 20% 20%;
-  background:linear-gradient(180deg,#2a3866,#0b1330);box-shadow:0 18px 30px rgba(0,0,0,.6),inset 0 2px 0 rgba(255,255,255,.12)}
+  background:linear-gradient(180deg,#3a3a3a,#0d0d0d);box-shadow:0 18px 30px rgba(0,0,0,.6),inset 0 2px 0 rgba(255,255,255,.12)}
 .screen .car::after{content:"";position:absolute;inset:0;border-radius:inherit;
   background:linear-gradient(105deg,transparent 35%,rgba(215,182,72,.55) 48%,transparent 60%)}
 .safe{position:absolute;left:0;right:0;border:1px dashed rgba(240,138,126,.55);background:rgba(240,138,126,.06)}
@@ -73,7 +73,7 @@ li::marker{color:var(--oro)}
 .l3 b{font-family:var(--f-display);font-stretch:125%;text-transform:uppercase;font-size:clamp(13px,1.7vw,17px);background:var(--oro);color:var(--asfalto);padding:3px 8px;justify-self:start}
 .l3 i{font-style:normal;font-family:var(--f-mono);font-size:10px;background:var(--asfalto);color:var(--bianco);padding:3px 8px;justify-self:start;border-left:2px solid var(--oro)}
 .spec{position:absolute;left:8%;right:8%;top:14%;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--oro);border:1px solid var(--oro)}
-.spec div{background:rgba(5,11,32,.92);padding:6px 8px;display:grid}
+.spec div{background:rgba(10,10,10,.92);padding:6px 8px;display:grid}
 .spec small{font-family:var(--f-mono);font-size:8px;letter-spacing:.12em;color:var(--oro);text-transform:uppercase}
 .spec strong{font-family:var(--f-display);font-stretch:125%;font-size:clamp(13px,1.6vw,16px)}
 .price{position:absolute;left:8%;right:8%;top:58%;text-align:center;display:grid;gap:4px}
@@ -93,7 +93,7 @@ li::marker{color:var(--oro)}
 .tl b{font-family:var(--f-display);font-stretch:112%;text-transform:uppercase;font-size:13px}
 .tl .t{font-family:var(--f-mono);font-size:11px;opacity:.75}
 .c-hook{background:var(--oro);color:var(--asfalto)}
-.c-car{background:#22325f}.c-pers{background:#16203f}.c-ai{background:#3a2f12;color:#F5E3A6}.c-end{background:var(--grafite);border:1px solid var(--oro)}
+.c-car{background:#2b2b2b}.c-pers{background:#1a1a1a}.c-ai{background:#3a2f12;color:#F5E3A6}.c-end{background:var(--grafite);border:1px solid var(--oro)}
 .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px}
 .legend span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;background:var(--c)}
 
@@ -127,17 +127,17 @@ th{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:
 </section>
 
 <section>
-  <header><div class="eyebrow">02 · Colore</div><h2>Palette</h2><p class="muted">Presa dal sito ufficiale. Il fondo è il blu notte e l'oro è la luce. Sul colore non si improvvisa.</p></header>
+  <header><div class="eyebrow">02 · Colore</div><h2>Palette</h2><p class="muted">Oro e nero, i colori AutoMotiva. Il nero è il fondo e l'oro è la luce. Sul colore non si improvvisa.</p></header>
   <div class="grid">
-    <div class="sw"><div class="chip" style="background:#050B20"></div><div class="meta"><b>Asfalto</b><span class="mono">#050B20</span><span class="muted">Fondi, card, end card</span></div></div>
+    <div class="sw"><div class="chip" style="background:#0A0A0A"></div><div class="meta"><b>Nero</b><span class="mono">#0A0A0A</span><span class="muted">Fondi, card, end card</span></div></div>
     <div class="sw"><div class="chip" style="background:#D7B648"></div><div class="meta"><b>Oro Motiva</b><span class="mono">#D7B648</span><span class="muted">Linee, cornici, lower third</span></div></div>
     <div class="sw"><div class="chip" style="background:#DDB52B"></div><div class="meta"><b>Oro acceso</b><span class="mono">#DDB52B</span><span class="muted">Keyword sottotitoli, prezzo, CTA</span></div></div>
     <div class="sw"><div class="chip" style="background:#F6F4EE"></div><div class="meta"><b>Bianco</b><span class="mono">#F6F4EE</span><span class="muted">Testo, sottotitoli</span></div></div>
-    <div class="sw"><div class="chip" style="background:#0E1631"></div><div class="meta"><b>Grafite</b><span class="mono">#0E1631</span><span class="muted">Superfici secondarie</span></div></div>
+    <div class="sw"><div class="chip" style="background:#161514"></div><div class="meta"><b>Grafite</b><span class="mono">#161514</span><span class="muted">Superfici secondarie</span></div></div>
   </div>
   <ul>
     <li>Oro su massimo il 10% del frame. Se c'è dappertutto non spinge più niente.</li>
-    <li>Color grading: neri profondi con dominante fredda, alte luci calde. La carrozzeria deve brillare.</li>
+    <li>Color grading: neri profondi e neutri, alte luci calde e dorate. La carrozzeria deve brillare.</li>
   </ul>
 </section>
 
@@ -205,7 +205,7 @@ th{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:
 <section>
   <header><div class="eyebrow">05 · Struttura</div><h2>Anatomia di un reel (30–45 s)</h2><p class="muted">L'auto occupa circa il 65% del tempo e la persona il 35%. Quando la persona parla di un dettaglio, il dettaglio va a tutto schermo e la voce continua sotto.</p></header>
   <div class="legend">
-    <span style="--c:var(--oro)">Hook</span><span style="--c:#22325f">Auto / dettaglio</span><span style="--c:#16203f">Persona in camera</span><span style="--c:#3a2f12">Clip AI Runway</span><span style="--c:var(--grafite)">End card</span>
+    <span style="--c:var(--oro)">Hook</span><span style="--c:#2b2b2b">Auto / dettaglio</span><span style="--c:#1a1a1a">Persona in camera</span><span style="--c:#3a2f12">Clip AI Runway</span><span style="--c:var(--grafite)">End card</span>
   </div>
   <div class="tl-wrap"><div class="tl">
     <div class="c-hook"><span class="t">0–2 s</span><b>Hook</b>Frase-shock e l'auto in movimento</div>
