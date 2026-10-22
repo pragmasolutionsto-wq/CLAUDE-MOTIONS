@@ -58,3 +58,7 @@ Fonte: ricerca Firecrawl, 22/10/2026. IG/FB non scrapabili: dati da snippet pubb
 - 0–0,8s: auto in movimento + cartiglio bugiardino "AVVERTENZA N°xx" (numero progressivo) + SFX chiave/avviamento
 - Chiusura fissa: "Ti abbiamo avvisato. AutoMotiva, Caselle Torinese."
 - Basato su: pattern interrupt + open loop entro 3s; firma già loro ("Guidare può avere effetti collaterali")
+
+## Regole video (decise)
+- Niente prezzo nei video.
+- Niente nome del venditore (nessun sottopancia).
