@@ -42,3 +42,13 @@ Fonte: ricerca Firecrawl, 22/10/2026. IG/FB non scrapabili: dati da snippet pubb
 - Musica: la mette Meme. SFX: li faccio io.
 - Runway: decido io quante clip. Solo image-to-video da frame reali, verifica fedeltà auto frame per frame.
 - Dati auto: link annuncio AutoScout24 per ogni video.
+
+## Reference: Autostar Srl (Barcellona Pozzo di Gotto, ME)
+- TikTok @autostarsrl ~7,5M like, IG @_autostarsrl_. Usato premium "full optional", garanzia 24 mesi, vendita a distanza (85% clienti).
+- Il motore è il personaggio: Anthony Gambino "Il Professore" presenta ogni auto in camera.
+- Tormentoni: "Si volaaa", "Solo per numeri uno", "Senza tettuccio non parliamo". Diventano brand (sito, recensioni).
+- Format: presentazione auto del venditore, dati in caption (anno, km, CV, colore), CTA telefono + WhatsApp.
+- Lezione per AutoMotiva: il montaggio non basta, serve un volto ricorrente con una firma verbale.
+
+## Musica
+- La genero io (Runway) sulla durata finale: tech house / phonk scura e minimale, 120–124 BPM, strumentale, senza voce, drop sul prezzo.
