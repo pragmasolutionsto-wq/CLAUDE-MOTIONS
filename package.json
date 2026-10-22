@@ -8,9 +8,13 @@
     "render": "remotion render Longevitas out/longevitas.mp4"
   },
   "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
     "@fontsource/anton": "^5.3.0",
+    "@fontsource/archivo": "^5.3.0",
     "@fontsource/archivo-black": "^5.3.0",
     "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/dm-sans": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
     "@fontsource/manrope": "^5.3.0",
     "@remotion/cli": "^4.0.300",
     "@types/react": "^19.3.0",
