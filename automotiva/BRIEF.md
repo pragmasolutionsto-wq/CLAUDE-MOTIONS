@@ -53,8 +53,8 @@ Fonte: ricerca Firecrawl, 22/10/2026. IG/FB non scrapabili: dati da snippet pubb
 ## Musica
 - La genero io (Runway) sulla durata finale: tech house / phonk scura e minimale, 120–124 BPM, strumentale, senza voce, drop sul prezzo.
 
-## Gancio fisso (deciso)
-- Frase: "Questa [modello] ha un effetto collaterale…" (detta in camera, si interrompe = open loop)
-- 0–0,8s: frame in movimento + cartiglio bugiardino "EFFETTO COLLATERALE N°xx" (numerato, serie) + SFX chiave/avviamento
-- Payoff a metà video sul dettaglio che lo prova. Chiusura: "Guidare può avere effetti collaterali."
+## Gancio fisso (deciso) — identico in tutti i video
+- Frase in camera, sempre uguale: "Attenzione: quest'auto può avere effetti collaterali."
+- 0–0,8s: auto in movimento + cartiglio bugiardino "AVVERTENZA N°xx" (numero progressivo) + SFX chiave/avviamento
+- Chiusura fissa: "Ti abbiamo avvisato. AutoMotiva, Caselle Torinese."
 - Basato su: pattern interrupt + open loop entro 3s; firma già loro ("Guidare può avere effetti collaterali")
