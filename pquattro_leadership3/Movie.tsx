@@ -14,6 +14,10 @@ const T_CARD = T_COVER + 0.35;
 // le quattro domande e i quattro ritornelli
 const Q = [at('come'), at('come', 3.5), at('come', 8), at('cosa', 12)];
 const R = [at('parla'), at('parla', 6), at('parla', 11), at('parla', 15)];
+// stacchi Runway sulle domande 3 e 4 (tornano su di lei al ritornello)
+const BR1 = {a: Q[2] - 0.05, b: R[2] - 0.08, src: 'br/br1.mp4', from: 0.4, rate: 1, z0: 1.04, z1: 1.1, ox: 540, oy: 800};
+const BR2 = {a: Q[3] - 0.05, b: R[3] - 0.08, src: 'br/br2.mp4', from: 2.0, rate: 1, z0: 1.04, z1: 1.1, ox: 540, oy: 800};
+const inBR = (t: number) => (t >= BR1.a && t < BR1.b) || (t >= BR2.a && t < BR2.b);
 const TOPICS: {icon: 'store' | 'people' | 'bag' | 'chat'; label: string}[] = [
   {icon: 'store', label: 'LA TUA FARMACIA'},
   {icon: 'people', label: 'I TUOI COLLABORATORI'},
@@ -61,9 +65,33 @@ const Footage: React.FC = () => (
   </>
 );
 
+/** stacco Runway: si apre a iride dalla lente (cerchio) con un anello magenta sul bordo */
+const BRoll: React.FC<{b: typeof BR1}> = ({b}) => {
+  const f = useCurrentFrame();
+  const lt = f / FPS;
+  const len = b.b - b.a;
+  const iris = eIO(clamp(lt / 0.42));
+  const R = iris * 1300;
+  const z = lerp(b.z0, b.z1, lt / len);
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{clipPath: `circle(${R}px at 540px 760px)`}}>
+        <AbsoluteFill style={{transform: `scale(${z})`, transformOrigin: `${b.ox}px ${b.oy}px`}}>
+          <OffthreadVideo src={staticFile(b.src)} startFrom={Math.round(b.from * FPS)} playbackRate={b.rate} muted style={{width: '100%', height: '100%', objectFit: 'cover', filter: 'contrast(1.04) saturate(1.04)'}} />
+        </AbsoluteFill>
+      </AbsoluteFill>
+      {iris < 1 && (
+        <svg width={1080} height={1920} style={{position: 'absolute', left: 0, top: 0}}>
+          <circle cx={540} cy={760} r={R} fill="none" stroke={MAG} strokeWidth={26 * (1 - iris) + 6} />
+        </svg>
+      )}
+    </AbsoluteFill>
+  );
+};
+
 /** velo scuro in basso: leggibilità dei sottotitoli (più forte sugli stacchi, dove ci sono camici bianchi) */
 const Washes: React.FC<{t: number}> = ({t}) => {
-  const k = 0;
+  const k = Math.max(inout(t, BR1.a, BR1.b - 0.2, 0.3, 0.2), inout(t, BR2.a, BR2.b - 0.2, 0.3, 0.2));
   return <Abs x={0} y={880} w={1080} h={1040} style={{background: `linear-gradient(180deg, rgba(10,8,18,0) 0%, rgba(10,8,18,${0.38 + 0.3 * k}) 30%, rgba(10,8,18,${0.55 + 0.25 * k}) 100%)`}} />;
 };
 const inout = (t: number, a: number, b: number, d = 0.45, d2 = 0.35) => eO3(prog(t, a, a + d)) * (1 - eIO(prog(t, b, b + d2)));
@@ -389,7 +417,7 @@ const CHUNKS: Chunk[] = (() => {
 })();
 
 // dove il testo grande sugli stacchi dice già le stesse parole, i sottotitoli tacciono
-const QUIET: [number, number][] = R.map((r, i) => [r - 0.08, i < 3 ? Q[i + 1] - 0.1 : T_COVER + 0.12]);
+const QUIET: [number, number][] = R.map((r, i) => [r - 0.25, i < 3 ? Q[i + 1] - 0.1 : T_COVER + 0.12]);
 const Captions: React.FC<{t: number}> = ({t}) => {
   if (t > T_LOGO - 0.25 || QUIET.some(([a, b]) => t >= a && t < b)) return null;
   const c = CHUNKS.find((x) => t >= x.t0 && t < x.t1);
@@ -417,7 +445,7 @@ const Captions: React.FC<{t: number}> = ({t}) => {
   );
 };
 
-const Debug: React.FC<{t: number}> = ({t}) => (t > T_COVER ? null : <Abs x={279} y={400} w={552} h={600} style={{border: '4px dashed lime'}} />);
+const Debug: React.FC<{t: number}> = ({t}) => (inBR(t) || t > T_COVER ? null : <Abs x={279} y={400} w={552} h={600} style={{border: '4px dashed lime'}} />);
 
 // ───────────────────────── composizione
 export const Movie: React.FC<{debug?: boolean}> = ({debug}) => {
@@ -427,6 +455,12 @@ export const Movie: React.FC<{debug?: boolean}> = ({debug}) => {
       {t < T_COVER + 0.8 && (
         <>
           <Footage />
+          <Sequence from={Math.round(BR1.a * FPS)} durationInFrames={Math.round((BR1.b - BR1.a) * FPS)} layout="none">
+            <BRoll b={BR1} />
+          </Sequence>
+          <Sequence from={Math.round(BR2.a * FPS)} durationInFrames={Math.round((BR2.b - BR2.a) * FPS)} layout="none">
+            <BRoll b={BR2} />
+          </Sequence>
           <Washes t={t} />
           {[0, 1, 2, 3].map((i) => (
             <React.Fragment key={i}>
