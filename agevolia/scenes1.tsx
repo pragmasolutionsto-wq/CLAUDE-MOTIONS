@@ -102,10 +102,10 @@ export const S2: React.FC<{lt: number}> = ({lt}) => {
 const SOURCES = ['Unione Europea', 'Ministeri', 'Regioni', 'Camere di commercio'];
 
 export const S3: React.FC<{lt: number}> = ({lt}) => {
-  const cx = 1310, cy = 560;
+  const cx = 1390, cy = 560;
   const open = eO4(prog(lt, 0.1, 1.2));
   const rot = lt * 0.32 + 0.4;
-  const tilt = (x: number, z: number, y = 0) => proj(x * 1.1, y + z * 0.5, z * 0.86, cx, cy, 1500);
+  const tilt = (x: number, z: number, y = 0) => proj(x, y + z * 0.5, z * 0.86, cx, cy, 1500);
   type Item = {z: number; el: React.ReactNode};
   const items: Item[] = [];
   const beams: React.ReactNode[] = [];
@@ -127,7 +127,7 @@ export const S3: React.FC<{lt: number}> = ({lt}) => {
   }
   // quattro fonti principali
   SOURCES.forEach((name, i) => {
-    const R = 400 * open, a = rot + (i * Math.PI) / 2;
+    const R = 380 * open, a = rot + (i * Math.PI) / 2;
     const pz = Math.sin(a) * R;
     const p = tilt(Math.cos(a) * R, pz, -10);
     const show = eBack(prog(lt, 0.5 + i * 0.15, 1.1 + i * 0.15));
@@ -173,14 +173,14 @@ export const S3: React.FC<{lt: number}> = ({lt}) => {
       </svg>
       {items.map((x) => x.el)}
       <Title eyebrow="MONITORAGGIO 24/7" l1="Agevolia legge tutto." l2="Ogni giorno, per te." lt={lt} delay={0.2} size={64} style={{left: 150, top: 230}} />
-      <div style={{position: 'absolute', left: 150, top: 610, display: 'flex', gap: 56}}>
+      <div style={{position: 'absolute', left: 150, top: 610, display: 'flex', gap: 44}}>
         {[
           {v: it(512 * eO3(prog(lt, 1.2, 3.2))), l: 'fonti ufficiali'},
           {v: `${Math.round(98 * eO3(prog(lt, 1.4, 3.2)))}%`, l: 'campi verificati'},
           {v: '24/7', l: 'monitoraggio'},
         ].map((s, i) => (
           <Fade key={i} lt={lt} a={1.2 + i * 0.18}>
-            <div style={{fontFamily: RAL, fontWeight: 300, fontSize: 84, color: WHITE, lineHeight: 1, ...NUM}}>{s.v}</div>
+            <div style={{fontFamily: RAL, fontWeight: 300, fontSize: 74, color: WHITE, lineHeight: 1, ...NUM}}>{s.v}</div>
             <div style={{fontFamily: MONO, fontSize: 18, letterSpacing: '0.18em', color: CYAN, marginTop: 10, textTransform: 'uppercase'}}>{s.l}</div>
           </Fade>
         ))}
