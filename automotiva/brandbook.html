@@ -1,0 +1,263 @@
+<title>AutoMotiva Brandbook Video</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,600..900&family=DM+Sans:opsz,wght@9..40,400..800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: colonna editoriale scura, sezioni a banda; mockup 9:16 come "pagine" del sistema video */
+:root{
+  --asfalto:#050B20;      /* blu notte del sito: fondo */
+  --grafite:#0E1631;      /* superfici */
+  --linea:#1F2A4D;        /* bordi */
+  --oro:#D7B648;          /* primario sito */
+  --oro-acceso:#DDB52B;   /* accento / CTA */
+  --bianco:#F6F4EE;       /* testo */
+  --lamiera:#8E97AE;      /* testo secondario */
+  --f-display:"Archivo",Impact,"Arial Narrow",sans-serif;
+  --f-body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+body{background:var(--asfalto);color:var(--bianco);font-family:var(--f-body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1080px;margin:0 auto;padding-block:48px 96px;display:grid;gap:72px}
+h1,h2,h3{font-family:var(--f-display);font-stretch:125%;text-transform:uppercase;line-height:.95;margin:0;text-wrap:balance}
+h1{font-size:clamp(44px,9vw,104px);font-weight:900;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--oro)}
+h2{font-size:clamp(26px,4vw,40px);font-weight:800}
+h3{font-size:15px;font-weight:700;letter-spacing:.06em}
+p{margin:0;max-width:65ch}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oro)}
+.muted{color:var(--lamiera)}
+section{display:grid;gap:24px}
+section>header{display:grid;gap:10px;border-top:1px solid var(--linea);padding-top:20px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid>*{min-width:0}
+.box{background:var(--grafite);border:1px solid var(--linea);border-radius:6px;padding:18px;display:grid;gap:8px;align-content:start}
+code,.mono{font-family:var(--f-mono);font-size:13px}
+ul{margin:0;padding-left:18px;display:grid;gap:6px}
+li::marker{color:var(--oro)}
+.do{color:#7FD49A}.dont{color:#F08A7E}
+
+/* hero */
+.hero{display:grid;gap:22px;padding-top:12px}
+.hero .claim{font-size:clamp(18px,2.4vw,22px);max-width:40ch}
+.streak{height:3px;background:linear-gradient(90deg,transparent,var(--oro) 30%,#fff3c4 50%,var(--oro) 70%,transparent);border-radius:2px;max-width:520px}
+
+/* palette */
+.sw{border-radius:6px;overflow:hidden;border:1px solid var(--linea);display:grid}
+.sw .chip{height:92px}
+.sw .meta{padding:12px;display:grid;gap:2px;background:var(--grafite)}
+.sw b{font-family:var(--f-display);font-stretch:112%;text-transform:uppercase;font-size:14px}
+
+/* type */
+.type-row{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--linea)}
+.type-row>*{min-width:0}
+@media (max-width:560px){.type-row{grid-template-columns:1fr}}
+
+/* phone mockups */
+.phones{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.phone{display:grid;gap:10px}
+.screen{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:18px;overflow:hidden;border:1px solid var(--linea);
+  background:radial-gradient(120% 70% at 70% 30%,#1b2a55 0%,var(--asfalto) 65%)}
+.screen .car{position:absolute;left:8%;right:8%;top:30%;height:22%;border-radius:40% 45% 18% 18%/60% 60% 20% 20%;
+  background:linear-gradient(180deg,#2a3866,#0b1330);box-shadow:0 18px 30px rgba(0,0,0,.6),inset 0 2px 0 rgba(255,255,255,.12)}
+.screen .car::after{content:"";position:absolute;inset:0;border-radius:inherit;
+  background:linear-gradient(105deg,transparent 35%,rgba(215,182,72,.55) 48%,transparent 60%)}
+.safe{position:absolute;left:0;right:0;border:1px dashed rgba(240,138,126,.55);background:rgba(240,138,126,.06)}
+.safe span{position:absolute;right:6px;font-family:var(--f-mono);font-size:9px;color:#F08A7E;top:4px}
+.sub{position:absolute;left:8%;right:8%;top:60%;text-align:center;font-family:var(--f-body);font-weight:800;font-size:clamp(14px,1.9vw,19px);
+  line-height:1.15;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.8)}
+.sub mark{background:none;color:var(--oro-acceso)}
+.l3{position:absolute;left:7%;bottom:24%;display:grid;gap:2px}
+.l3 b{font-family:var(--f-display);font-stretch:125%;text-transform:uppercase;font-size:clamp(13px,1.7vw,17px);background:var(--oro);color:var(--asfalto);padding:3px 8px;justify-self:start}
+.l3 i{font-style:normal;font-family:var(--f-mono);font-size:10px;background:var(--asfalto);color:var(--bianco);padding:3px 8px;justify-self:start;border-left:2px solid var(--oro)}
+.spec{position:absolute;left:8%;right:8%;top:14%;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--oro);border:1px solid var(--oro)}
+.spec div{background:rgba(5,11,32,.92);padding:6px 8px;display:grid}
+.spec small{font-family:var(--f-mono);font-size:8px;letter-spacing:.12em;color:var(--oro);text-transform:uppercase}
+.spec strong{font-family:var(--f-display);font-stretch:125%;font-size:clamp(13px,1.6vw,16px)}
+.price{position:absolute;left:8%;right:8%;top:58%;text-align:center;display:grid;gap:4px}
+.price small{font-family:var(--f-mono);font-size:9px;letter-spacing:.14em;color:var(--oro)}
+.price strong{font-family:var(--f-display);font-stretch:125%;font-weight:900;font-size:clamp(30px,4.4vw,42px);color:var(--oro-acceso)}
+.end{position:absolute;inset:0;display:grid;place-content:center;gap:10px;text-align:center;padding:12%}
+.logo-ph{font-family:var(--f-display);font-stretch:125%;font-weight:900;font-size:clamp(22px,3vw,30px);text-transform:uppercase;letter-spacing:.02em}
+.logo-ph span{color:var(--oro)}
+.wa{font-family:var(--f-mono);font-size:12px;border:1px solid var(--oro);padding:6px 10px;justify-self:center}
+.sig{font-size:11px;color:var(--lamiera);font-style:italic}
+.cap{font-size:13px;color:var(--lamiera)}
+
+/* timeline */
+.tl-wrap{overflow-x:auto}
+.tl{min-width:720px;display:grid;grid-template-columns:2fr 4fr 6fr 5fr 3fr 3fr;gap:3px}
+.tl div{padding:10px;display:grid;gap:4px;font-size:13px;min-height:96px;align-content:start}
+.tl b{font-family:var(--f-display);font-stretch:112%;text-transform:uppercase;font-size:13px}
+.tl .t{font-family:var(--f-mono);font-size:11px;opacity:.75}
+.c-hook{background:var(--oro);color:var(--asfalto)}
+.c-car{background:#22325f}.c-pers{background:#16203f}.c-ai{background:#3a2f12;color:#F5E3A6}.c-end{background:var(--grafite);border:1px solid var(--oro)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--linea);vertical-align:top}
+th{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--oro);font-weight:600}
+.tbl{overflow-x:auto}
+@media (prefers-reduced-motion:no-preference){
+  .screen .car::after{animation:sweep 3.2s ease-in-out infinite}
+  @keyframes sweep{0%{transform:translateX(-60%)}60%,100%{transform:translateX(60%)}}
+}
+</style>
+
+<div class="wrap">
+
+<div class="hero">
+  <div class="eyebrow">AutoMotiva by Lunica Motors · Caselle Torinese · brandbook video v1</div>
+  <h1>L'auto è la <em>protagonista</em>.<br>La persona è la garanzia.</h1>
+  <div class="streak" aria-hidden="true"></div>
+  <p class="claim muted">Regole fisse per ogni reel AutoMotiva: colori, caratteri, sottotitoli, grafiche, transizioni, suoni e uso dell'AI. Chiunque monti un video segue questa pagina.</p>
+</div>
+
+<section>
+  <header><div class="eyebrow">01 · Posizionamento</div><h2>Cosa diciamo</h2></header>
+  <div class="grid">
+    <div class="box"><h3>Promessa</h3><p>Auto selezionate, controllate e garantite 12/24 mesi. Le compri senza pressione e senza sorprese.</p></div>
+    <div class="box"><h3>Prova</h3><p>5.0 su 53 recensioni AutoScout24. Nelle recensioni tornano sempre "zero pressione", "trasparenza" e "ci mettono il cuore".</p></div>
+    <div class="box"><h3>Chi parla</h3><p>Davide ed Emanuele, i venditori, in camera. Sono quello che i concessionari della zona non hanno.</p></div>
+    <div class="box"><h3>Firma</h3><p><i>"Guidare può avere effetti collaterali."</i> La teniamo: è già loro e ha personalità.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><div class="eyebrow">02 · Colore</div><h2>Palette</h2><p class="muted">Presa dal sito ufficiale. Il fondo è il blu notte e l'oro è la luce. Sul colore non si improvvisa.</p></header>
+  <div class="grid">
+    <div class="sw"><div class="chip" style="background:#050B20"></div><div class="meta"><b>Asfalto</b><span class="mono">#050B20</span><span class="muted">Fondi, card, end card</span></div></div>
+    <div class="sw"><div class="chip" style="background:#D7B648"></div><div class="meta"><b>Oro Motiva</b><span class="mono">#D7B648</span><span class="muted">Linee, cornici, lower third</span></div></div>
+    <div class="sw"><div class="chip" style="background:#DDB52B"></div><div class="meta"><b>Oro acceso</b><span class="mono">#DDB52B</span><span class="muted">Keyword sottotitoli, prezzo, CTA</span></div></div>
+    <div class="sw"><div class="chip" style="background:#F6F4EE"></div><div class="meta"><b>Bianco</b><span class="mono">#F6F4EE</span><span class="muted">Testo, sottotitoli</span></div></div>
+    <div class="sw"><div class="chip" style="background:#0E1631"></div><div class="meta"><b>Grafite</b><span class="mono">#0E1631</span><span class="muted">Superfici secondarie</span></div></div>
+  </div>
+  <ul>
+    <li>Oro su massimo il 10% del frame. Se c'è dappertutto non spinge più niente.</li>
+    <li>Color grading: neri profondi con dominante fredda, alte luci calde. La carrozzeria deve brillare.</li>
+  </ul>
+</section>
+
+<section>
+  <header><div class="eyebrow">03 · Tipografia</div><h2>Caratteri</h2></header>
+  <div>
+    <div class="type-row"><span class="eyebrow">Display</span><div><div style="font-family:var(--f-display);font-stretch:125%;font-weight:900;font-size:clamp(28px,5vw,48px);text-transform:uppercase;line-height:1">252 CV. Zero scuse.</div><p class="muted">Archivo Expanded 800–900, sempre maiuscolo. Si usa per hook, titoli e numeri grandi.</p></div></div>
+    <div class="type-row"><span class="eyebrow">Sottotitoli</span><div><div style="font-weight:800;font-size:clamp(20px,3vw,28px)">Guarda che interni, <span style="color:var(--oro-acceso)">pelle traforata</span>.</div><p class="muted">DM Sans 800, il font del sito. Per sottotitoli e testi brevi.</p></div></div>
+    <div class="type-row"><span class="eyebrow">Dati</span><div><div class="mono" style="font-size:18px">KM 38.400 · 2022 · BENZINA · AUTOMATICO</div><p class="muted">IBM Plex Mono. Si usa solo per specifiche tecniche, targhette ed etichette.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <header><div class="eyebrow">04 · Sistema video</div><h2>Gli elementi a schermo</h2><p class="muted">Formato 1080×1920, 9:16, 30 fps. Le zone rosse sono coperte dall'interfaccia di Instagram: lì non va mai testo.</p></header>
+  <div class="phones">
+    <div class="phone">
+      <div class="screen">
+        <div class="safe" style="top:0;height:11%"><span>UI IG</span></div>
+        <div class="car"></div>
+        <div class="sub">La chiami solo Smart?<br><mark>Aspetta</mark> di vederla dentro.</div>
+        <div class="safe" style="bottom:0;height:20%"><span>UI IG</span></div>
+      </div>
+      <h3>Sottotitoli</h3>
+      <p class="cap">Massimo 2 righe e 6 parole a schermo, una keyword in oro a frase. Ogni parola entra con un pop di scala 90→100% in 4 frame. Posizione al 60% dell'altezza.</p>
+    </div>
+    <div class="phone">
+      <div class="screen">
+        <div class="car" style="top:46%"></div>
+        <div class="spec">
+          <div><small>Anno</small><strong>2022</strong></div>
+          <div><small>Km</small><strong>38.400</strong></div>
+          <div><small>Potenza</small><strong>252 CV</strong></div>
+          <div><small>Garanzia</small><strong>24 MESI</strong></div>
+        </div>
+        <div class="safe" style="bottom:0;height:20%"><span>UI IG</span></div>
+      </div>
+      <h3>Scheda tecnica</h3>
+      <p class="cap">Griglia con bordo oro che si apre in 3D (rotazione X da 70° a 0°). I numeri scorrono come un contachilometri. Va sempre sopra un dettaglio dell'auto, mai sopra la persona.</p>
+    </div>
+    <div class="phone">
+      <div class="screen">
+        <div class="car" style="top:20%"></div>
+        <div class="price"><small>Prezzo AutoMotiva</small><strong>24.900 €</strong></div>
+        <div class="l3"><b>Davide</b><i>AutoMotiva · Caselle T.se</i></div>
+        <div class="safe" style="bottom:0;height:20%"><span>UI IG</span></div>
+      </div>
+      <h3>Lower third e prezzo</h3>
+      <p class="cap">Il nome del venditore compare una volta sola, alla sua prima inquadratura. Il prezzo arriva con un bass hit e uno sweep di luce oro.</p>
+    </div>
+    <div class="phone">
+      <div class="screen">
+        <div class="end">
+          <div class="logo-ph">Auto<span>Motiva</span></div>
+          <div class="mono muted">Strada Torino 100 · Caselle Torinese</div>
+          <div class="wa">WhatsApp 388 355 7181</div>
+          <div class="sig">Guidare può avere effetti collaterali.</div>
+        </div>
+      </div>
+      <h3>End card</h3>
+      <p class="cap">Dura 2,5 secondi. Il logo ufficiale entra con il riflesso oro e sotto restano WhatsApp e firma. Il logo nel mockup è provvisorio finché non arriva quello vero.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header><div class="eyebrow">05 · Struttura</div><h2>Anatomia di un reel (30–45 s)</h2><p class="muted">L'auto occupa circa il 65% del tempo e la persona il 35%. Quando la persona parla di un dettaglio, il dettaglio va a tutto schermo e la voce continua sotto.</p></header>
+  <div class="legend">
+    <span style="--c:var(--oro)">Hook</span><span style="--c:#22325f">Auto / dettaglio</span><span style="--c:#16203f">Persona in camera</span><span style="--c:#3a2f12">Clip AI Runway</span><span style="--c:var(--grafite)">End card</span>
+  </div>
+  <div class="tl-wrap"><div class="tl">
+    <div class="c-hook"><span class="t">0–2 s</span><b>Hook</b>Frase-shock e l'auto in movimento</div>
+    <div class="c-pers"><span class="t">2–6 s</span><b>Persona</b>Si presenta e dice perché questa auto</div>
+    <div class="c-car"><span class="t">6–20 s</span><b>Dettagli</b>Clip in sovraimpressione sincronizzate con quello che dice. Taglio ogni 1,5–2,5 s</div>
+    <div class="c-ai"><span class="t">20–28 s</span><b>Enfasi AI</b>1–2 clip Runway sul punto forte (motore, guida, viaggio)</div>
+    <div class="c-pers"><span class="t">28–33 s</span><b>Prezzo + CTA</b>Prezzo, garanzia, "scrivi ___ in DM"</div>
+    <div class="c-end"><span class="t">33–35 s</span><b>End card</b>Logo, WhatsApp e firma</div>
+  </div></div>
+</section>
+
+<section>
+  <header><div class="eyebrow">06 · Movimento e suono</div><h2>Transizioni, 3D, sound design</h2></header>
+  <div class="tbl"><table>
+    <thead><tr><th>Momento</th><th>Visivo</th><th>Suono</th></tr></thead>
+    <tbody>
+      <tr><td>Hook</td><td>Speed ramp sull'auto, testo display che esplode a scatto</td><td>Avviamento o rombo motore, poi silenzio di un beat</td></tr>
+      <tr><td>Persona → dettaglio</td><td>Whip pan con motion blur, oppure taglio sul gesto della mano</td><td>Whoosh corto</td></tr>
+      <tr><td>Dettaglio → dettaglio</td><td>Sweep di luce oro che attraversa il frame (riflesso carrozzeria)</td><td>Shimmer metallico</td></tr>
+      <tr><td>Scheda tecnica</td><td>Card 3D che si apre e numeri a contachilometri</td><td>Tick meccanici, click del cambio</td></tr>
+      <tr><td>Prezzo</td><td>Zoom-in da 110 a 100% e lens flare oro</td><td>Bass hit, turbo blow-off</td></tr>
+      <tr><td>Clip Runway</td><td>Taglio netto, letterbox per 1 secondo come "momento cinema"</td><td>Riser, poi impatto</td></tr>
+      <tr><td>End card</td><td>Logo in light sweep</td><td>Chiusura portiera (thud)</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li>Musica: electro, phonk morbida o tech house tra 118 e 128 BPM. Ducking di −14 dB sotto la voce. I tagli cadono sul beat.</li>
+    <li>3D: solo elementi grafici (card, numeri estrusi, particelle oro, tachimetro). Sull'auto vera non si mette niente di finto.</li>
+    <li>Massimo 3 tipi di transizione per video. Più di così sembra un template di CapCut.</li>
+  </ul>
+</section>
+
+<section>
+  <header><div class="eyebrow">07 · AI</div><h2>Clip Runway</h2></header>
+  <div class="grid">
+    <div class="box"><h3>Quando</h3><p>Su quello che il girato non può mostrare: l'auto in curva al tramonto, il viaggio, la potenza, il "mood".</p></div>
+    <div class="box"><h3>Stile fisso</h3><p class="mono">cinematic, dark studio, deep navy shadows, warm gold rim light, anamorphic, 35mm, slow motion, photorealistic</p></div>
+    <div class="box"><h3>Regola</h3><p>Meglio partire da un frame vero dell'auto (image-to-video): deve essere quella macchina, stesso colore e stesso modello. Al massimo 2 clip AI e 6 secondi per video.</p></div>
+  </div>
+</section>
+
+<section>
+  <header><div class="eyebrow">08 · Voce</div><h2>Tono</h2></header>
+  <div class="grid">
+    <div class="box"><h3 class="do">Sì</h3><ul><li>Frasi corte, numeri veri</li><li>Ironia leggera ("effetti collaterali")</li><li>Sfida ("trovamene una così")</li><li>CTA con keyword in DM</li></ul></div>
+    <div class="box"><h3 class="dont">No</h3><ul><li>Caption da brochure, "eleganza e potenza"</li><li>Hashtag in inglese a raffica</li><li>Emoji ✨ in apertura</li><li>"Scopri di più"</li></ul></div>
+  </div>
+</section>
+
+<section>
+  <header><div class="eyebrow">Contatti</div><h2>AutoMotiva by Lunica Motors Srl</h2></header>
+  <p class="mono">Strada Torino 100, 10072 Caselle Torinese (TO) · WhatsApp 388 355 7181 · info@auto-motiva.it · @automotiva_by_lunicamotors_srl</p>
+</section>
+
+</div>
