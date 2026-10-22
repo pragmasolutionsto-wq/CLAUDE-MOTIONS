@@ -33,3 +33,12 @@ Fonte: ricerca Firecrawl, 22/10/2026. IG/FB non scrapabili: dati da snippet pubb
 - Struttura: hook → 3 dettagli che vendono (prezzo/km/garanzia) → CTA keyword DM
 - Chiusura fissa: logo + "Caselle Torinese" + WhatsApp
 - Format da testare: "Trovamene una così" (sfida prezzo), consegna cliente, "cosa controlliamo prima di venderla", recensione reale letta in video
+
+## Decisioni operative (22/10/2026)
+- Brand: oro e nero. Logo in `public/logo.png` (originale) e `public/logo_neg.png` (per fondo nero). Serve versione HD.
+- Girato: cartella Google Drive condivisa da Meme. Controllo clip: estraggo frame con ffmpeg e li guardo.
+- Sottotitoli: SRT fornito da Meme.
+- Formato: solo 9:16, durata libera (quella del girato).
+- Musica: la mette Meme. SFX: li faccio io.
+- Runway: decido io quante clip. Solo image-to-video da frame reali, verifica fedeltà auto frame per frame.
+- Dati auto: link annuncio AutoScout24 per ogni video.
