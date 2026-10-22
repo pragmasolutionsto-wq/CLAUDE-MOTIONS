@@ -10,5 +10,5 @@
     "resolveJsonModule": true,
     "noEmit": true
   },
-  "include": ["src", "film", "remotion.config.ts"]
+  "include": ["src", "film", "farmacia", "remotion.config.ts"]
 }
