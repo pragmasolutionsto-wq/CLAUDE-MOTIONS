@@ -181,7 +181,7 @@ const TIcon: React.FC<{name: (typeof TOPICS)[number]['icon']; size: number; colo
   </svg>
 );
 
-/** tema della domanda: icona + etichetta, nel pannello bianco */
+/** tema dell'affermazione: icona + etichetta, nel pannello bianco */
 const Topic: React.FC<{t: number; i: number}> = ({t, i}) => {
   const a = Q[i] - 0.15;
   const k = prog(t, a, a + 0.5);
@@ -193,8 +193,7 @@ const Topic: React.FC<{t: number; i: number}> = ({t, i}) => {
           <TIcon name={tp.icon} size={74} />
         </div>
         <div style={{opacity: clamp(k * 3 - 0.4), transform: `translateX(${(1 - eO5(clamp(k))) * 40}px)`}}>
-          <div style={{fontFamily: SANS, fontWeight: 700, fontSize: 26, letterSpacing: '0.3em', color: TEAL_D}}>DOMANDA {i + 1}/4</div>
-          <div style={{fontFamily: SANS, fontWeight: 800, fontSize: i === 1 ? 40 : 46, letterSpacing: '0.04em', color: NAVY, whiteSpace: 'nowrap', marginTop: 6}}>{tp.label}</div>
+          <div style={{fontFamily: SANS, fontWeight: 800, fontSize: 46, letterSpacing: '0.04em', color: NAVY, whiteSpace: 'nowrap'}}>{tp.label}</div>
         </div>
       </Abs>
     </Panel>
@@ -384,7 +383,7 @@ const EndCard: React.FC<{t: number}> = ({t}) => {
 // ───────────────────────── sottotitoli
 const FUNC = new Set(['a', 'e', 'o', 'di', 'da', 'la', 'le', 'il', 'i', 'un', 'una', 'che', 'in', 'per', 'ma', 'lo', 'ti', 'al', 'nel', 'non', 'hai', 'ciò', 'chi', 'sei']);
 const KEY = new Set(['collaboratori', 'clienti', 'dicono', 'titolare', 'leader', 'ispira', 'guida', 'aspetta', 'link', 'scopri']);
-const clean = (w: string) => w.replace(/[.,]/g, '');
+const clean = (w: string) => w.replace(/[.,?]/g, ''); // sono affermazioni, non domande: niente punti interrogativi
 const bare = (w: string) => w.toLowerCase().replace(/[^a-zàèéìòù0-9]/g, '');
 type Chunk = {words: Word[]; t0: number; t1: number};
 const CHUNKS: Chunk[] = (() => {

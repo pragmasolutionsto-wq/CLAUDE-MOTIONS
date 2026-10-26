@@ -2,8 +2,8 @@
 
 Reel verticale 1080×1920, 30fps, 33s → `pquattro_reel_leadership_3.mp4`. Stessa pipeline di `pquattro_leadership/`.
 
-- 2 clip Drive (576×1024): quattro domande, ognuna seguita da "Parla di te.", poi copertina e CTA.
-- Ritmo: ogni domanda e ogni ritornello ha la sua inquadratura. Domande larghe con un tema (icona + "DOMANDA n/4"),
+- 2 clip Drive (576×1024): quattro affermazioni (non domande: niente "?" nei sottotitoli), ognuna seguita da "Parla di te.", poi copertina e CTA.
+- Ritmo: ogni affermazione e ogni ritornello ha la sua inquadratura. Affermazioni larghe con un tema (icona + etichetta),
   ritornelli stretti sul viso con colpo d'entrata e pannello magenta "Parla di te." con contatore.
   Dopo il quarto: le quattro icone convergono su "te" → "TUTTO PARLA DI TE".
 - Stacchi Runway (Seedance 2, 9:16 1080p, 5s) in `public/br/`: titolare che serve una cliente al bancone
