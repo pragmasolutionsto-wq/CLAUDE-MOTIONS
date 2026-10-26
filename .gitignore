@@ -41,3 +41,4 @@ psa_live/public/base.mp4
 psa_live/public/ai/*.mp4
 !psa_live/public/ai/raw_*.mp4
 unifarco/raw/
+unifarco/zip/
