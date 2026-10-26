@@ -1,0 +1,133 @@
+{
+ "shots": [
+  {
+   "name": "f_hook",
+   "kind": "face",
+   "a": 0.0,
+   "b": 4.001,
+   "tr": "none"
+  },
+  {
+   "name": "f_wish",
+   "kind": "face",
+   "a": 4.001,
+   "b": 8.703,
+   "tr": "none"
+  },
+  {
+   "name": "f_change",
+   "kind": "face",
+   "a": 8.703,
+   "b": 12.622,
+   "tr": "none"
+  },
+  {
+   "name": "f_no",
+   "kind": "face",
+   "a": 12.622,
+   "b": 14.729,
+   "tr": "none"
+  },
+  {
+   "name": "f_look",
+   "kind": "face",
+   "a": 14.729,
+   "b": 16.169,
+   "tr": "none"
+  },
+  {
+   "name": "bottles",
+   "kind": "clip",
+   "a": 16.169,
+   "b": 20.283,
+   "tr": "cube"
+  },
+  {
+   "name": "f_ways",
+   "kind": "face",
+   "a": 20.283,
+   "b": 25.318,
+   "tr": "cube"
+  },
+  {
+   "name": "f_example",
+   "kind": "face",
+   "a": 25.318,
+   "b": 31.975,
+   "tr": "none"
+  },
+  {
+   "name": "vitc",
+   "kind": "clip",
+   "a": 31.975,
+   "b": 35.108,
+   "tr": "cube"
+  },
+  {
+   "name": "f_plus",
+   "kind": "face",
+   "a": 35.108,
+   "b": 40.504,
+   "tr": "cube"
+  },
+  {
+   "name": "f_visit",
+   "kind": "face",
+   "a": 40.504,
+   "b": 49.72,
+   "tr": "none"
+  },
+  {
+   "name": "f_wait",
+   "kind": "face",
+   "a": 49.72,
+   "b": 50.822,
+   "tr": "none"
+  },
+  {
+   "name": "end",
+   "kind": "mg",
+   "a": 50.822,
+   "b": 54.922,
+   "tr": "cube"
+  }
+ ],
+ "k": {
+  "desiderio0": 2.067,
+  "pelle0": 2.984,
+  "rughe1": 4.676,
+  "tono": 5.869,
+  "colorito": 6.301,
+  "luminosita1": 7.02,
+  "idratazione": 7.883,
+  "cambiare": 9.577,
+  "skincare": 10.352,
+  "no": 13.223,
+  "spiego": 13.96,
+  "boccettine": 15.459,
+  "attivi5": 16.915,
+  "concentrati": 17.385,
+  "bisogno": 19.107,
+  "modi": 21.38,
+  "direttamente": 22.007,
+  "mescolandoli": 23.264,
+  "crema6": 24.241,
+  "esempio": 25.984,
+  "antiaging": 27.729,
+  "spenta": 30.453,
+  "luminosa": 31.254,
+  "vitamina": 34.189,
+  "rughe9": 36.814,
+  "crema9": 37.412,
+  "piu": 38.01,
+  "luminosita9": 39.656,
+  "cura": 41.824,
+  "vieni": 42.631,
+  "farmacia": 43.698,
+  "partiamo": 44.436,
+  "pelle10": 45.808,
+  "attivo10": 47.943,
+  "giusto": 49.01,
+  "aspettiamo": 49.976
+ }
+}

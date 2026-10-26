@@ -42,3 +42,6 @@ psa_live/public/ai/*.mp4
 !psa_live/public/ai/raw_*.mp4
 unifarco/raw/
 unifarco/zip/
+unifarco/public/base.mp4
+unifarco/public/ai/vitc.mp4
+unifarco/public/ai/bottles.mp4
