@@ -466,8 +466,8 @@ const ShGesture: React.FC<{t: number}> = ({t}) => (
 // la data: pagina 13 NOV, badge prezzo, bottone prenota
 const ShBook: React.FC<{t: number}> = ({t}) => {
   const a = sh('book').a;
-  const pr = prog(t, K.euro - 0.45, K.euro + 0.1);
-  const burst = eO3(prog(t, K.euro - 0.3, K.euro + 0.5));
+  const pr = prog(t, K.novembre - 0.15, K.novembre + 0.4);
+  const burst = eO3(prog(t, K.novembre, K.novembre + 0.8));
   const pulse = 1 + 0.05 * Math.sin(t * 9) * clamp(t - K.prenota);
   return (
     <>

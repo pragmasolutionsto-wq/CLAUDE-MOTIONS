@@ -85,7 +85,7 @@ put(riser(0.6, 300, 900), K['norma'] - 0.4, 0.2); put(riser(0.6, 400, 1200), K['
 # paura barrata
 put(whoosh(0.3, True), K['paura'] + 0.05, 0.35)
 # prezzo
-put(boom(44, 0.9), K['euro'] - 0.3, 0.45); put(shimmer(33, 12, 1568), K['euro'] - 0.2, 0.4)
+put(boom(44, 0.9), K['novembre'] - 0.1, 0.45); put(shimmer(33, 12, 1568), K['novembre'], 0.4); put(bell(1319, 1.0), K['euro'], 0.3)
 # chiusura
 e = SH['end']['a']; put(shimmer(9, 12, 1320), e + 0.1, 0.35); put(pop(1.2), e + 1.1, 0.3); put(pop(1.35), e + 1.25, 0.3)
 

@@ -24,7 +24,7 @@ SH = [  # nome, tipo, inizio, transizione d'ingresso
     ('hands', 'clip', st(7), 'whip'),
     ('gesture', 'clip', st(8), 'whip'),
     ('book', 'mg', st(9), 'cube'),
-    ('end', 'mg', T['sents'][9]['end'] + 0.1, 'cube'),
+    ('end', 'mg', T['sents'][9]['end'] + 0.6, 'cube'),
 ]
 out = []
 for i, (name, kind, a, tr) in enumerate(SH):
