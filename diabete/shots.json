@@ -1,0 +1,119 @@
+{
+ "shots": [
+  {
+   "name": "calm",
+   "kind": "clip",
+   "a": 0.0,
+   "b": 2.39,
+   "tr": "none"
+  },
+  {
+   "name": "doubt",
+   "kind": "mg",
+   "a": 2.39,
+   "b": 4.02,
+   "tr": "whip"
+  },
+  {
+   "name": "hourglass",
+   "kind": "clip",
+   "a": 4.02,
+   "b": 7.072,
+   "tr": "cube"
+  },
+  {
+   "name": "blood",
+   "kind": "clip",
+   "a": 7.072,
+   "b": 11.511,
+   "tr": "whip"
+  },
+  {
+   "name": "meter",
+   "kind": "clip",
+   "a": 11.511,
+   "b": 14.793,
+   "tr": "cube"
+  },
+  {
+   "name": "range",
+   "kind": "mg",
+   "a": 14.793,
+   "b": 18.552,
+   "tr": "whip"
+  },
+  {
+   "name": "risk",
+   "kind": "mg",
+   "a": 18.552,
+   "b": 24.562,
+   "tr": "cube"
+  },
+  {
+   "name": "hands",
+   "kind": "clip",
+   "a": 24.562,
+   "b": 27.634,
+   "tr": "whip"
+  },
+  {
+   "name": "gesture",
+   "kind": "clip",
+   "a": 27.634,
+   "b": 30.632,
+   "tr": "whip"
+  },
+  {
+   "name": "book",
+   "kind": "mg",
+   "a": 30.632,
+   "b": 35.892,
+   "tr": "cube"
+  },
+  {
+   "name": "end",
+   "kind": "mg",
+   "a": 35.892,
+   "b": 41.792,
+   "tr": "cube"
+  }
+ ],
+ "k": {
+  "diabete0": 0.732,
+  "bene": 1.6,
+  "sai": 2.87,
+  "davvero": 3.035,
+  "tipo": 4.785,
+  "silenzioso": 5.863,
+  "anni": 6.632,
+  "sintomi": 7.843,
+  "tardi": 9.415,
+  "semplicita": 10.501,
+  "glicemia5": 12.368,
+  "farmacia": 12.942,
+  "controllo": 13.79,
+  "rapido": 14.22,
+  "capire": 15.499,
+  "norma": 16.473,
+  "fattore": 17.528,
+  "rischio": 18.085,
+  "familiarita": 19.581,
+  "sovrappeso": 20.522,
+  "pressione": 21.079,
+  "superato": 22.104,
+  "q45": 23.196,
+  "paura": 25.676,
+  "serve2": 26.362,
+  "informarsi": 26.759,
+  "prevenire": 27.784,
+  "piccolo": 29.633,
+  "gesto": 30.06,
+  "prenota": 30.782,
+  "misurazione": 31.387,
+  "venerdi": 33.051,
+  "tredici": 33.505,
+  "novembre": 33.959,
+  "soli": 34.824,
+  "euro": 35.429
+ }
+}

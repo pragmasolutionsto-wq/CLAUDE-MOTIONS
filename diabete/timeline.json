@@ -1,0 +1,56 @@
+{
+ "fps": 30,
+ "duration": 41.792,
+ "sents": [
+  {
+   "t": 0.2,
+   "end": 2.06,
+   "txt": "Non hai il diabete? Bene."
+  },
+  {
+   "t": 2.51,
+   "end": 3.59,
+   "txt": "Ma lo sai davvero?"
+  },
+  {
+   "t": 4.14,
+   "end": 6.942,
+   "txt": "Il diabete tipo 2 può restare silenzioso per anni."
+  },
+  {
+   "t": 7.192,
+   "end": 11.131,
+   "txt": "E quando dà sintomi, a volte è già tardi per agire con semplicità."
+  },
+  {
+   "t": 11.631,
+   "end": 14.663,
+   "txt": "Misurare la glicemia in farmacia è un controllo rapido."
+  },
+  {
+   "t": 14.913,
+   "end": 18.372,
+   "txt": "Ti aiuta a capire se sei nella norma, o se hai un fattore di rischio."
+  },
+  {
+   "t": 18.672,
+   "end": 24.232,
+   "txt": "Soprattutto se hai familiarità, sovrappeso, pressione alta, o hai superato i 45 anni."
+  },
+  {
+   "t": 24.682,
+   "end": 27.404,
+   "txt": "Non serve avere paura. Serve informarsi."
+  },
+  {
+   "t": 27.754,
+   "end": 30.352,
+   "txt": "Prevenire il diabete inizia da un piccolo gesto."
+  },
+  {
+   "t": 30.752,
+   "end": 35.792,
+   "txt": "Prenota la misurazione della glicemia per venerdì 13 novembre, a soli 5 euro!"
+  }
+ ]
+}
