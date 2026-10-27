@@ -1,0 +1,41 @@
+{
+ "fps": 30,
+ "duration": 37.465,
+ "sents": [
+  {
+   "t": 0.2,
+   "end": 3.852,
+   "txt": "Novembre: il mese dei buoni. Perché ogni euro conta."
+  },
+  {
+   "t": 4.202,
+   "end": 6.852,
+   "txt": "Per questo abbiamo pensato a un vantaggio che torna a te."
+  },
+  {
+   "t": 7.202,
+   "end": 15.287,
+   "txt": "Dal 2 al 30 novembre, con almeno 49 € di spesa su prodotti viso, corpo e capelli, ricevi un buono di 5 €."
+  },
+  {
+   "t": 15.737,
+   "end": 17.907,
+   "txt": "Quando e come puoi utilizzare il buono?"
+  },
+  {
+   "t": 18.157,
+   "end": 24.835,
+   "txt": "Dal 1° al 31 dicembre 2026, su una spesa minima di 25 € di prodotti Marchio Farmacia."
+  },
+  {
+   "t": 25.335,
+   "end": 28.135,
+   "txt": "Prendersi cura di sé è un bisogno, non un lusso."
+  },
+  {
+   "t": 28.485,
+   "end": 31.465,
+   "txt": "E noi ti aiutiamo a soddisfarlo. Ti aspettiamo!"
+  }
+ ]
+}

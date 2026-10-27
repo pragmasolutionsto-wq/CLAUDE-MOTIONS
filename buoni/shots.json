@@ -1,0 +1,127 @@
+{
+ "shots": [
+  {
+   "name": "voucher",
+   "kind": "clip",
+   "a": 0.0,
+   "b": 1.876,
+   "tr": "none"
+  },
+  {
+   "name": "coins",
+   "kind": "clip",
+   "a": 1.876,
+   "b": 4.082,
+   "tr": "whip"
+  },
+  {
+   "name": "returns",
+   "kind": "clip",
+   "a": 4.082,
+   "b": 7.082,
+   "tr": "cube"
+  },
+  {
+   "name": "mech",
+   "kind": "mg",
+   "a": 7.082,
+   "b": 11.106,
+   "tr": "cube"
+  },
+  {
+   "name": "products",
+   "kind": "clip",
+   "a": 11.106,
+   "b": 13.05,
+   "tr": "whip"
+  },
+  {
+   "name": "gift",
+   "kind": "mg",
+   "a": 13.05,
+   "b": 15.617,
+   "tr": "whip"
+  },
+  {
+   "name": "question",
+   "kind": "mg",
+   "a": 15.617,
+   "b": 18.037,
+   "tr": "cube"
+  },
+  {
+   "name": "dec",
+   "kind": "mg",
+   "a": 18.037,
+   "b": 20.997,
+   "tr": "whip"
+  },
+  {
+   "name": "bag",
+   "kind": "clip",
+   "a": 20.997,
+   "b": 25.215,
+   "tr": "whip"
+  },
+  {
+   "name": "care",
+   "kind": "clip",
+   "a": 25.215,
+   "b": 28.365,
+   "tr": "cube"
+  },
+  {
+   "name": "talk",
+   "kind": "mg",
+   "a": 28.365,
+   "b": 31.765,
+   "tr": "cube"
+  },
+  {
+   "name": "end",
+   "kind": "mg",
+   "a": 31.765,
+   "b": 37.465,
+   "tr": "cube"
+  }
+ ],
+ "k": {
+  "mese": 1.07,
+  "buoni": 1.581,
+  "ogni": 2.812,
+  "euro0": 3.158,
+  "conta": 3.504,
+  "vantaggio": 5.744,
+  "torna": 6.293,
+  "te": 6.705,
+  "d2": 7.374,
+  "d30": 7.698,
+  "novembre": 8.022,
+  "almeno": 8.67,
+  "e49": 9.536,
+  "spesa2": 10.832,
+  "viso": 11.804,
+  "corpo": 12.128,
+  "capelli": 12.614,
+  "ricevi": 13.1,
+  "buono2": 14.148,
+  "e5": 14.634,
+  "quando": 15.767,
+  "come": 16.212,
+  "utilizzare": 16.658,
+  "d1": 18.306,
+  "d31": 18.755,
+  "dicembre": 19.203,
+  "anno": 19.652,
+  "minima": 21.816,
+  "e25": 22.414,
+  "marchio": 24.059,
+  "cura": 25.873,
+  "bisogno": 26.889,
+  "lusso": 27.736,
+  "noi": 28.667,
+  "aiutiamo": 28.97,
+  "soddisfarlo": 29.578,
+  "aspettiamo": 30.797
+ }
+}
