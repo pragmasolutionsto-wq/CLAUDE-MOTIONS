@@ -1,0 +1,181 @@
+{
+ "shots": [
+  {
+   "name": "arm",
+   "kind": "clip",
+   "a": 0.0,
+   "b": 3.107,
+   "tr": "none"
+  },
+  {
+   "name": "hook",
+   "kind": "mg",
+   "a": 3.107,
+   "b": 6.383,
+   "tr": "whip"
+  },
+  {
+   "name": "layers",
+   "kind": "clip",
+   "a": 6.383,
+   "b": 8.878,
+   "tr": "cube"
+  },
+  {
+   "name": "nerves",
+   "kind": "mg",
+   "a": 8.878,
+   "b": 13.65,
+   "tr": "whip"
+  },
+  {
+   "name": "heel",
+   "kind": "clip",
+   "a": 13.65,
+   "b": 16.71,
+   "tr": "cube"
+  },
+  {
+   "name": "warn",
+   "kind": "mg",
+   "a": 16.71,
+   "b": 21.357,
+   "tr": "whip"
+  },
+  {
+   "name": "mirror",
+   "kind": "clip",
+   "a": 21.357,
+   "b": 24.198,
+   "tr": "cube"
+  },
+  {
+   "name": "cream",
+   "kind": "clip",
+   "a": 24.198,
+   "b": 29.14,
+   "tr": "whip"
+  },
+  {
+   "name": "eye",
+   "kind": "clip",
+   "a": 29.14,
+   "b": 32.123,
+   "tr": "cube"
+  },
+  {
+   "name": "eyecheck",
+   "kind": "mg",
+   "a": 32.123,
+   "b": 37.078,
+   "tr": "whip"
+  },
+  {
+   "name": "petal",
+   "kind": "clip",
+   "a": 37.078,
+   "b": 42.258,
+   "tr": "cube"
+  },
+  {
+   "name": "taboo",
+   "kind": "mg",
+   "a": 42.258,
+   "b": 44.268,
+   "tr": "whip"
+  },
+  {
+   "name": "helps",
+   "kind": "mg",
+   "a": 44.268,
+   "b": 45.708,
+   "tr": "cube"
+  },
+  {
+   "name": "flatlay",
+   "kind": "clip",
+   "a": 45.708,
+   "b": 52.038,
+   "tr": "whip"
+  },
+  {
+   "name": "water",
+   "kind": "mg",
+   "a": 52.038,
+   "b": 55.533,
+   "tr": "whip"
+  },
+  {
+   "name": "talk",
+   "kind": "mg",
+   "a": 55.533,
+   "b": 59.395,
+   "tr": "cube"
+  },
+  {
+   "name": "wound",
+   "kind": "mg",
+   "a": 59.395,
+   "b": 63.412,
+   "tr": "whip"
+  },
+  {
+   "name": "end",
+   "kind": "mg",
+   "a": 63.412,
+   "b": 69.112,
+   "tr": "cube"
+  }
+ ],
+ "k": {
+  "secca0": 0.527,
+  "occhi0": 1.26,
+  "intimi0": 2.666,
+  "diabete0": 4.137,
+  "piccoli0": 5.119,
+  "glicemia1": 6.821,
+  "disidrata": 8.332,
+  "nervi": 10.653,
+  "sudorazione": 11.774,
+  "gambe": 12.668,
+  "secca2": 14.237,
+  "prude": 14.53,
+  "screpola": 15.232,
+  "crepa": 18.09,
+  "ferita2": 19.431,
+  "notare": 20.623,
+  "controlla": 21.507,
+  "dita1": 23.932,
+  "asciuga": 24.248,
+  "idrata": 26.283,
+  "emolliente": 27.071,
+  "dita2": 28.541,
+  "bruciore4": 29.26,
+  "estraneo": 31.13,
+  "parlane4": 32.173,
+  "noi4": 33.359,
+  "attenzione": 36.194,
+  "donne": 37.668,
+  "secchezza": 38.258,
+  "intimi5": 39.286,
+  "tabu": 42.869,
+  "parla": 43.635,
+  "aiuta": 44.746,
+  "doccia": 45.758,
+  "detergenti": 46.858,
+  "emollienti": 48.448,
+  "occhi6": 50.518,
+  "acqua": 52.088,
+  "sorsi": 53.133,
+  "glicemia6": 53.935,
+  "controllo6": 54.756,
+  "aiutiamo": 55.948,
+  "prodotti": 57.046,
+  "ricordare": 58.347,
+  "controlli": 59.033,
+  "ferita7": 60.714,
+  "guarisce": 61.263,
+  "subito": 62.417,
+  "noi7": 62.966
+ }
+}
