@@ -56,20 +56,17 @@ def heartbeat():
         s = boom(42, 0.35) * g; st = int(at * SR); out[st:st + len(s)] += s
     return out
 
-# apertura
-put(shimmer(1, 8, 1320), 0.1, 0.3)
+# niente campanelli né scintillii (richiesta di Meme)
 # tagli
 for s_ in SJ['shots'][1:]:
     a = s_['a']
     if s_['tr'] == 'cube': put(whoosh(0.65, True), a - 0.42, 0.5, 0.35); put(boom(55, 0.5), a + 0.05, 0.28)
     else: put(whoosh(0.32, True), a - 0.22, 0.45, 0.6); put(tick(), a, 0.45)
-# "bene": ding positivo
-put(bell(1319, 1.2), K['bene'] - 0.05, 0.35); put(bell(1760, 1.0), K['bene'] + 0.05, 0.25)
 # il dubbio: colpo basso + glitch
 put(boom(38, 1.2), SH['doubt']['a'] + 0.05, 0.6); put(glitch(0.25), SH['doubt']['a'] + 0.05, 0.2)
-# testi 3D: impatto + scintillio
+# testi 3D: impatto
 for at in (K['davvero'] - 0.35, K['rapido'] - 0.3, K['gesto'] - 0.3):
-    put(boom(46, 0.8), at + 0.25, 0.45); put(shimmer(int(at * 10), 7, 1568), at + 0.3, 0.25)
+    put(boom(46, 0.8), at + 0.25, 0.45)
 # righe e chip
 pops = [K['tipo'] - 0.25, K['silenzioso'] - 0.3, K['anni'] - 0.25, K['sintomi'] - 0.3, K['tardi'] - 0.2, K['farmacia'] - 0.25, K['norma'] - 0.3, K['fattore'] - 0.25,
         K['familiarita'] - 0.25, K['sovrappeso'] - 0.2, K['pressione'] - 0.2, K['superato'] - 0.1, K['paura'] - 0.3, K['informarsi'] - 0.25, K['piccolo'] - 0.3,
@@ -79,15 +76,14 @@ for i, t in enumerate(pops): put(pop(1 + 0.07 * (i % 5)), t - 0.02, 0.3, 0.35 + 
 put(whoosh(1.0, False), K['silenzioso'] + 0.2, 0.3); put(boom(60, 0.5), K['tardi'] - 0.2, 0.35)
 # timer rapido
 for k in range(6): put(tick(), K['rapido'] - 0.6 + k * 0.13, 0.5)
-put(bell(1568, 1.0), K['rapido'] + 0.2, 0.3)
 # lancetta
 put(riser(0.6, 300, 900), K['norma'] - 0.4, 0.2); put(riser(0.6, 400, 1200), K['rischio'] - 0.6, 0.2)
 # paura barrata
 put(whoosh(0.3, True), K['paura'] + 0.05, 0.35)
 # prezzo
-put(boom(44, 0.9), K['novembre'] - 0.1, 0.45); put(shimmer(33, 12, 1568), K['novembre'], 0.4); put(bell(1319, 1.0), K['euro'], 0.3)
+put(boom(44, 0.9), K['novembre'] - 0.1, 0.45)
 # chiusura
-e = SH['end']['a']; put(shimmer(9, 12, 1320), e + 0.1, 0.35); put(pop(1.2), e + 1.1, 0.3); put(pop(1.35), e + 1.25, 0.3)
+e = SH['end']['a']; put(pop(1.2), e + 1.1, 0.3); put(pop(1.35), e + 1.25, 0.3)
 
 x = np.stack([L, R], 1); x = np.tanh(x * 0.9); x /= max(1e-9, np.abs(x).max()); x *= 0.85
 with wave.open(sys.argv[1], 'wb') as f:
