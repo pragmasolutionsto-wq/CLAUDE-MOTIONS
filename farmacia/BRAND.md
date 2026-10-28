@@ -46,3 +46,12 @@ Palette (campionata da logo e card pubblicate):
 - Output 1080×1920, 30fps, h264 CRF ~18, AAC. Safe area IG: testi tra y 250 e 1500, margini 80px.
 - Asset: `public/logo.png`, `public/mark.png`, foto staff in Drive `2026/foto`.
 - Limite: download Drive via connettore max 10 MB/file → i girati grandi vanno caricati in altro modo (vedi README chat).
+
+## Pipeline Runway (standard per tutti i video, come gli altri clienti farmacia)
+- **Voce**: `generate_speech`, modello `eleven_v4`, voce libreria **Andromeda – Expressive, Natural** (voiceId `Vij3nOd1u0L4xCy5U9Ws`), `languageCode: it`, `speed 1.05`, `stability 0.5`. Una traccia per scena (con previousText/nextText). In montaggio: silenzi tagliati + `atempo 1.08`.
+- **Personaggi 3D**: `generate_image` nano-banana-pro 9:16 con reference taggate (`@signora`, `@farmacista`), stile "3D animated feature-film", palette teal #015E56 + menta #5CC0A8, soggetto nei 2/3 alti, terzo basso libero per i testi, "no text".
+  - riferimenti metformina: signora task `29300267-feb3-4487-875e-9c3b7bc59f8e`, farmacista task `7fcec3e0-f6ba-469a-a219-1c8c1e80efb6`.
+- **Animazione**: `generate_video` seedance-2-mini 720p 9:16, prompt "Smooth natural 3D character animation with fluid, lifelike body motion… soft easing… slow smooth camera push-in". **Costo reale: ~90 crediti per clip da 6 s** (con o senza audio). Con budget stretto: clip solo sulle scene chiave, le altre keyframe con movimento camera in Remotion.
+- **Musica**: `generate_music` lyria-3-pro (8 crediti), strumentale caldo 96 BPM, "keep the mix light so a spoken voice stays clear".
+- **Montaggio**: Remotion (`farmacia/kit.tsx` + grafica card), voce+musica con ducking (`build_audio.py`), loudness finale -14 LUFS.
+- Costo indicativo reel 11 scene: 11 immagini (~220) + 3 clip (~270) + voce (~12) + musica (8) ≈ 510 crediti. Tutto animato: +~720.

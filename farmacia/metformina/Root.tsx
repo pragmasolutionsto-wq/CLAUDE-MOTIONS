@@ -7,6 +7,7 @@ import '@fontsource/montserrat/700.css';
 import '@fontsource/montserrat/800.css';
 import {H, W} from '../brand';
 import {DURATION, FPS, Movie} from './Movie';
+import {DURATION_VO, FPS_VO, MovieVO} from './MovieVO';
 
 const FontGate: React.FC<{children: React.ReactNode}> = ({children}) => {
   const [h] = useState(() => delayRender('fonts'));
@@ -30,6 +31,15 @@ const Wrapped: React.FC = () => (
   </FontGate>
 );
 
+const WrappedVO: React.FC = () => (
+  <FontGate>
+    <MovieVO />
+  </FontGate>
+);
+
 export const Root: React.FC = () => (
-  <Composition id="Metformina" component={Wrapped} durationInFrames={Math.round(DURATION * FPS)} fps={FPS} width={W} height={H} />
+  <>
+    <Composition id="Metformina" component={Wrapped} durationInFrames={Math.round(DURATION * FPS)} fps={FPS} width={W} height={H} />
+    <Composition id="MetforminaVO" component={WrappedVO} durationInFrames={Math.round(DURATION_VO * FPS_VO)} fps={FPS_VO} width={W} height={H} />
+  </>
 );

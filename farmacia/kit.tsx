@@ -135,13 +135,14 @@ export const Body: React.FC<{text: string; t: number; at: number; size?: number}
   );
 };
 
-export const Label: React.FC<{text: string; t: number; at: number}> = ({text, t, at}) => {
+export const Label: React.FC<{text: string; t: number; at: number; solid?: boolean}> = ({text, t, at, solid}) => {
   const p = eBack(prog(t, at, at + 0.45));
   return (
     <div
       style={{
         fontFamily: BODY, fontWeight: 800, fontSize: 34, letterSpacing: 5, color: TEAL,
-        background: 'rgba(92,192,168,0.22)', border: `2px solid rgba(92,192,168,0.6)`, borderRadius: 40,
+        background: solid ? WHITE : 'rgba(92,192,168,0.22)', border: `2px solid ${solid ? MINT : 'rgba(92,192,168,0.6)'}`, borderRadius: 40,
+        boxShadow: solid ? '0 8px 20px rgba(1,40,40,0.2)' : 'none',
         padding: '10px 30px', marginBottom: 14, opacity: clamp(p), transform: `scale(${lerp(0.6, 1, p)})`,
       }}
     >

@@ -1,6 +1,6 @@
 # Reel animato "Prendi la metformina?" — novembre 2026
 
-Formato 9:16, 47 s, senza voce. Pubblicazione consigliata vicino al 14 novembre (Giornata mondiale del diabete), con storia di rilancio.
+Formato 9:16, ~78 s, voce narrante + musica (Runway), personaggi 3D. Versione senza voce (47 s, solo grafica) disponibile come alternativa. Pubblicazione consigliata vicino al 14 novembre (Giornata mondiale del diabete), con storia di rilancio.
 Pillar: Salute & Prevenzione · rubrica "Consiglio del farmacista". Target: Maria (50–65) e Anna (over 70), anche tramite i figli.
 
 ## Facebook
@@ -43,4 +43,4 @@ Le informazioni non sostituiscono il parere del medico.
 #metformina #diabete #glicemia #giornatamondialedeldiabete #consiglidelfarmacista #salute #Brindisi #FarmaciaAfricaOrientale
 
 ## Storia di rilancio
-Testo: "Prendi la metformina? 7 consigli in 45 secondi 👆" + sticker link al reel.
+Testo: "Prendi la metformina? 7 consigli utili 👆" + sticker link al reel.
