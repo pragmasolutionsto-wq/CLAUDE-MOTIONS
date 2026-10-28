@@ -10,7 +10,8 @@ os.makedirs(OUT, exist_ok=True)
 IDS = ['hook', 'cosa', 'errore', 't1', 't2', 't3', 't4', 't5', 't6', 't7', 'end']
 TEMPO = 1.08      # voce leggermente più svelta, intonazione invariata
 PRE, POST = 0.12, 0.18
-END_HOLD = 2.4    # logo e payoff restano a schermo dopo l'ultima parola
+END_HOLD = 2.4
+MUSIC_DB = -15   # livello del letto musicale rispetto alla voce    # logo e payoff restano a schermo dopo l'ultima parola
 
 
 def sh(*a):
@@ -27,7 +28,8 @@ for i, sid in enumerate(IDS):
     dst = os.path.join(OUT, f'met_vo{i + 1:02d}.wav')
     sh('ffmpeg', '-loglevel', 'error', '-y', '-i', src, '-af',
        'silenceremove=start_periods=1:start_threshold=-45dB,areverse,'
-       f'silenceremove=start_periods=1:start_threshold=-45dB,areverse,atempo={TEMPO}', '-ar', '48000', '-ac', '1', dst)
+       f'silenceremove=start_periods=1:start_threshold=-45dB,areverse,atempo={TEMPO},loudnorm=I=-16:TP=-2:LRA=7',
+       '-ar', '48000', '-ac', '1', dst)
     d = dur(dst)
     length = PRE + d + POST + (END_HOLD if sid == 'end' else 0)
     scenes.append({'id': sid, 'from': round(t, 3), 'to': round(t + length, 3), 'vo': round(t + PRE, 3), 'voDur': round(d, 3), 'file': dst})
@@ -42,8 +44,9 @@ for k, s in enumerate(scenes):
 n = len(scenes)
 inputs += ['-i', os.path.join(VO, 'music.mp3')]
 filt.append(''.join(f'[v{k}]' for k in range(n)) + f'amix=inputs={n}:normalize=0,volume=1.0,asplit=2[vo][sc]')
-filt.append(f'[{n}:a]atrim=0:{total},volume=0.42,afade=t=in:d=0.4,afade=t=out:st={total - 2.2}:d=2.2[mu]')
-filt.append('[mu][sc]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=450[duck]')
+# voce a -16 LUFS, musica normalizzata e portata ~16 dB sotto (letto -32), il sidechain la abbassa ancora sotto le frasi
+filt.append(f'[{n}:a]atrim=0:{total},loudnorm=I=-16:TP=-2,volume={MUSIC_DB}dB,afade=t=in:d=0.4,afade=t=out:st={total - 2.2}:d=2.2[mu]')
+filt.append('[mu][sc]sidechaincompress=threshold=0.02:ratio=4:attack=60:release=600[duck]')
 filt.append('[vo][duck]amix=inputs=2:normalize=0,alimiter=limit=0.9,aresample=48000[out]')
 sh('ffmpeg', '-loglevel', 'error', '-y', *inputs, '-filter_complex', ';'.join(filt), '-map', '[out]', '-ac', '2', os.path.join(OUT, 'met_mix.wav'))
 
