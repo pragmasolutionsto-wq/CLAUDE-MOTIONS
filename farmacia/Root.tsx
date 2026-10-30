@@ -28,12 +28,12 @@ const FontGate: React.FC<{children: React.ReactNode}> = ({children}) => {
 
 const H: React.FC = () => (
   <FontGate>
-    <Movie vertical={false} width={1920} height={1080} audio />
+    <Movie vertical={false} width={1920} height={1080} />
   </FontGate>
 );
 const V: React.FC = () => (
   <FontGate>
-    <Movie vertical width={1080} height={1920} audio />
+    <Movie vertical width={1080} height={1920} />
   </FontGate>
 );
 
