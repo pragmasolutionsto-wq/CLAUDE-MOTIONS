@@ -84,10 +84,12 @@ for k in range(nb):
 # scene cuts: impatto + whoosh in ingresso
 for s in SC[1:6]:
     put(boom(0.75), s); put(whoosh(0.45, 0.6), s - 0.42)
-# costruzione croce (S1) e finale (S6)
-for j, d in enumerate([0, 0.1, 0.2, 0.3, 0.4]): put(tick(0.9), SC[0] + 0.05 + d); put(bell(79 + j * 2, 0.16), SC[0] + 0.05 + d, pan=0.2 + 0.15 * j)
-for j, d in enumerate([0.5, 0.6, 0.7, 0.8, 0.9]): put(tick(0.9), SC[5] + d); put(bell(72 + j * 3, 0.16), SC[5] + d, pan=0.2 + 0.15 * j)
-put(bell(84, 0.35), SC[5] + 1.0); put(bell(88, 0.25), SC[5] + 1.12, pan=0.7)
+# il logo si costruisce (S1 e S6): ticks sul disegno, accordo-sparkle al completamento
+for base in (SC[0], SC[5]):
+    for j, d in enumerate([0.25, 0.55, 0.85, 1.05, 1.25, 1.45, 1.65]):
+        put(tick(0.8), base + d, pan=0.2 + 0.1 * j); put(bell(72 + j * 2, 0.12), base + d + 0.02, pan=0.2 + 0.1 * j)
+    put(boom(0.9), base + 1.95); put(whoosh(0.5, 0.5), base + 1.55)
+    for j, m in enumerate([84, 88, 91, 96]): put(bell(m, 0.22), base + 1.97 + j * 0.06, pan=0.3 + 0.13 * j)
 put(pad([60, 64, 67, 72], 2.6, 1.1), SC[5] - 0.05)
 fi = np.minimum(1, np.arange(N) / SR / 0.3); fo = np.minimum(1, (N - np.arange(N)) / SR / 0.7)
 L *= fi * fo; R *= fi * fo
