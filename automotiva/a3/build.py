@@ -88,7 +88,7 @@ def main():
         (O(7, 3.85), O(7, 6.5667), '9309', 0.2),   # tetto apribile da fuori
         (O(8, 8.45), O(8, 9.2), '9352', 0.0),   # motore
         (O(10, 7.40), O(10, 11.2), '9352', 0.5, 0.85),  # benzina 150 cavalli
-        (O(12, 10.5333), O(12, 12.4), '9306', 1.6),  # è in vendita
+        (O(12, 10.5333), O(12, 11.8), '9306', 1.6),  # è in vendita
     ]
     broll = [dict(s=x[0], e=x[1], src=x[2], frm=x[3], rate=x[4] if len(x) > 4 else 1) for x in B]
     # niente inquadrature-lampo: aggancia inizi e fine dei dettagli ai tagli vicini (< 0.45s)
