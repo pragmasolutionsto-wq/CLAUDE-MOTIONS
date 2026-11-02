@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import T from './timeline.json';
-import {BIANCO, BODY, DISPLAY, MONO, NERO, ORO, ORO_ACCESO, eI3, eO3, eO5, lerp, prog} from '../a1/lib';
+import {BIANCO, BODY, DISPLAY, MONO, NERO, ORO, ORO_ACCESO, eBack, eI3, eO3, eO5, lerp, prog} from '../a1/lib';
 
 // Stile sobrio: tagli netti, leggero push-in, sottotitoli puliti, una card dati, chiusura.
 const FPS = T.fps;
@@ -27,12 +27,18 @@ const Subs: React.FC = () => {
   const t = useCurrentFrame() / FPS;
   const c = (T.subs as Any[]).find((x) => t >= x.t && t < x.e);
   if (!c || t >= T.total) return null;
+  // karaoke: la parola detta ora sta nel box oro, le altre bianche; ogni parola entra con un rimbalzo
+  const active = c.words.reduce((k: number, w: Any, i: number) => (t >= w.t - 0.02 ? i : k), -1);
+  const blockIn = eBack(prog(t, c.t - 0.02, c.t + 0.16));
   return (
-    <div style={{position: 'absolute', left: 60, right: 60, top: 1230, textAlign: 'center', fontFamily: BODY, fontWeight: 800, fontSize: 68, lineHeight: 1.15}}>
+    <div style={{position: 'absolute', left: 50, right: 50, top: 1210, textAlign: 'center', fontFamily: DISPLAY, fontStretch: '112%', fontWeight: 800, fontSize: 70, lineHeight: 1.25, textTransform: 'uppercase', transform: `scale(${lerp(0.85, 1, blockIn)})`}}>
       {c.words.map((w: Any, i: number) => {
-        const on = eO5(prog(t, w.t - 0.02, w.t + 0.08));
+        const p = prog(t, w.t - 0.02, w.t + 0.14);
+        const on = p > 0;
+        const pop = eBack(p, 2.4);
+        const hot = i === active;
         return (
-          <span key={i} style={{display: 'inline-block', margin: '0 10px', color: w.g ? ORO_ACCESO : BIANCO, opacity: on > 0 ? 1 : 0, transform: `translateY(${(1 - on) * 10}px)`, textShadow: '0 3px 0 rgba(0,0,0,.8), 0 0 18px rgba(0,0,0,.7), 2px 0 0 #000, -2px 0 0 #000, 0 -2px 0 #000'}}>
+          <span key={i} style={{display: 'inline-block', margin: '4px 6px', padding: '2px 14px 4px', borderRadius: 10, background: hot ? ORO : 'transparent', color: hot ? NERO : w.g ? ORO_ACCESO : BIANCO, opacity: on ? 1 : 0.0, transform: `scale(${on ? lerp(1.35, 1, pop) : 0.8}) rotate(${hot ? -2 : 0}deg)`, textShadow: hot ? 'none' : '0 4px 0 #000, 3px 0 0 #000, -3px 0 0 #000, 0 -3px 0 #000, 0 0 20px rgba(0,0,0,.7)', boxShadow: hot ? '0 8px 0 #6E5512, 0 12px 30px rgba(0,0,0,.5)' : 'none'}}>
             {w.w}
           </span>
         );

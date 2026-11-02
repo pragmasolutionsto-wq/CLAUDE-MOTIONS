@@ -4,7 +4,7 @@ SEGS = [
     ('9353', 0.50, 3.48),   # cosa ha di diverso
     ('9353', 5.95, 17.85),  # cerchi 19, full LED, identity black
     ('9355', 2.15, 3.85),   # scarico nero lucido
-    ('9329', 1.78, 13.80),  # A3 2024, 26.000 km, forse non dovevo dirlo
+    ('9329', 1.78, 12.10),  # A3 2024, 26.000 km
     ('9334', 2.88, 8.90),   # sedili riscaldati misto pelle
     ('9339', 2.50, 8.60),   # volante S line, palette
     ('9339', 9.60, 12.80),  # virtual cockpit
