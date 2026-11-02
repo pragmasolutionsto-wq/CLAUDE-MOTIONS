@@ -10,7 +10,7 @@ W = {k[4:]: v for k, v in json.load(open(os.path.join(R, '../work/v3/words.json'
 
 # testo corretto sull'SRT di Meme, per (clip, tempo parola) -> testo ('' = nascosta)
 FIX = {
-    ('9507', 4.0): 'Nicolò',
+    ('9507', 4.0): 'Nico', ('9507', 4.72): 'Loffreda,',
     ('9514', 0.0): "Quest'auto", ('9514', 1.12): 'vogliamo', ('9514', 1.44): 'regalare', ('9514', 3.28): 'bisogno.',
     ('9516', 0.4): 'Sappiamo che', ('9516', 6.48): '', ('9516', 6.56): 'colloquio', ('9516', 6.72): 'di',
     ('9516', 8.96): 'automunito?', ('9516', 9.28): '', ('9516', 13.52): 'i tuoi',

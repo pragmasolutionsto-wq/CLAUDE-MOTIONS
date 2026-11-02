@@ -8,7 +8,7 @@ dur = tl['dur']
 ins = ['-i', f'{V}/voice.wav', '-i', f'{A}/music.mp3']
 fl = [
     '[0:a]apad,asplit=2[vo][key]',
-    f"[1:a]atrim=0:{dur},volume=-19dB,afade=t=in:d=0.4,afade=t=out:st={dur - 1.6}:d=1.6[mu0]",
+    f"[1:a]atrim=0:{dur},volume=-16dB,afade=t=in:d=0.4,afade=t=out:st={dur - 1.6}:d=1.6[mu0]",
     '[mu0][key]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=450:makeup=1[mu]',
 ]
 names = []
