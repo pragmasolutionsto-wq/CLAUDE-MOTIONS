@@ -83,9 +83,45 @@ const End: React.FC = () => {
   );
 };
 
-export const Movie: React.FC = () => (
+// entrata del dettaglio: whip orizzontale con mosso, zoom-punch, o slide verticale tra due dettagli
+const In: React.FC<{tr: string; children: React.ReactNode}> = ({tr, children}) => {
+  const {lt} = useLT();
+  const p = eO5(prog(lt, 0, tr === 'zoom' ? 0.24 : 0.2));
+  let transform = 'none', blur = 0, flash = 0;
+  if (tr === 'whip' || tr === 'whipL') {
+    transform = `translateX(${(1 - p) * (tr === 'whip' ? 1080 : -1080)}px) skewX(${(1 - p) * (tr === 'whip' ? -8 : 8)}deg)`;
+    blur = (1 - p) * 34;
+  } else if (tr === 'zoom') {
+    transform = `scale(${lerp(1.45, 1, p)}) rotate(${(1 - p) * 3}deg)`;
+    blur = (1 - p) * 22;
+    flash = 1 - prog(lt, 0, 0.1);
+  } else if (tr === 'slide') {
+    transform = `translateY(${(1 - p) * 1920}px)`;
+    blur = (1 - p) * 26;
+  }
+  return (
+    <AbsoluteFill style={{overflow: 'hidden'}}>
+      <AbsoluteFill style={{transform, filter: blur > 0.3 ? `blur(${blur}px)` : 'none'}}>{children}</AbsoluteFill>
+      {flash > 0 ? <AbsoluteFill style={{background: '#FFF6DE', opacity: flash * 0.55}} /> : null}
+    </AbsoluteFill>
+  );
+};
+
+// ritorno sul parlato: punch-out veloce (da 1.18 a 1) con un filo di mosso
+const ret = (t: number) => {
+  for (const r of T.rets as number[]) {
+    const q = prog(t, r, r + 0.2);
+    if (q > 0 && q < 1) return 1 - eO5(q);
+  }
+  return 0;
+};
+
+export const Movie: React.FC = () => {
+  const t = useCurrentFrame() / FPS;
+  const k = ret(t);
+  return (
   <AbsoluteFill style={{background: NERO}}>
-    <AbsoluteFill style={{filter: 'contrast(1.06) saturate(0.95)'}}>
+    <AbsoluteFill style={{filter: `contrast(1.06) saturate(0.95)${k > 0.02 ? ` blur(${k * 14}px)` : ''}`, transform: `scale(${1 + k * 0.18})`}}>
       {(T.segs as Any[]).map((s, i) => (
         <Sequence key={`s${i}`} from={fr(s.at)} durationInFrames={fr(s.o - s.i)}>
           <Clip src={s.clip} from={s.i} z0={i % 2 ? 1.08 : 1.0} z1={i % 2 ? 1.1 : 1.03} />
@@ -93,7 +129,9 @@ export const Movie: React.FC = () => (
       ))}
       {(T.broll as Any[]).map((b, i) => (
         <Sequence key={`b${i}`} from={fr(b.s)} durationInFrames={Math.max(1, fr(b.e) - fr(b.s))}>
-          <Clip src={b.src} from={b.frm} rate={b.rate} z0={1.0} z1={1.06} />
+          <In tr={b.tr}>
+            <Clip src={b.src} from={b.frm} rate={b.rate} z0={1.0} z1={1.06} />
+          </In>
         </Sequence>
       ))}
     </AbsoluteFill>
@@ -103,7 +141,10 @@ export const Movie: React.FC = () => (
     </Sequence>
     <Subs />
     <Sequence from={fr(T.total)} durationInFrames={fr(T.dur - T.total)}>
-      <End />
+      <In tr="zoom">
+        <End />
+      </In>
     </Sequence>
   </AbsoluteFill>
-);
+  );
+};

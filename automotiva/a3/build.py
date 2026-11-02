@@ -74,7 +74,7 @@ def main():
         (O(2, 9.30), O(2, 11.05), '9296', 0.2),  # fari full LED
         (O(2, 11.05), O(2, 14.85), '9297', 0.0, 0.85), # identity black: griglia e anelli neri
         (O(2, 14.85), O(2, 17.85), '9300', 0.0, 0.75), # loghi in nero lucido
-        (O(3, 2.15), O(3, 3.85), '9312', 0.6),   # scarico
+        (O(3, 2.30), O(3, 3.85), '9312', 0.75),   # scarico
         (O(4, 4.80), O(4, 6.20), '9306', 0.4),   # identity black
         (O(4, 6.20), O(4, 7.55), '9308', 0.4),   # cerchi da 19
         (O(4, 7.55), O(4, 9.30), '9307', 0.3),   # S line
@@ -96,9 +96,21 @@ def main():
         prv = [x for x in bounds if x <= b['s'] + 1e-3 and x not in (b['s'],)]
         if prv and b['s'] - prv[-1] < 0.45:
             b['s'] = prv[-1]
+    # transizioni: da parlato -> dettaglio alterna whip (sx/dx) e zoom; dettaglio -> dettaglio = slide verticale
+    rets, k = [], 0
+    for i, b in enumerate(broll):
+        prev = broll[i - 1] if i else None
+        if prev and abs(prev['e'] - b['s']) < 0.05:
+            b['tr'] = 'slide'
+        else:
+            b['tr'] = ['whip', 'zoom', 'whipL', 'zoom'][k % 4]; k += 1
+        nxt = broll[i + 1] if i + 1 < len(broll) else None
+        if not (nxt and abs(nxt['s'] - b['e']) < 0.05) and b['e'] < total - 0.1:
+            rets.append(b['e'])
     card = dict(s=O(4, 10.30), e=O(4, 12.05))   # "26.000 km"
     sfx = [dict(t=O(9, 8.40), n='engine', db=-12), dict(t=total, n='door', db=-4)]
-    tl = dict(fps=FPS, total=total, dur=round(total + END, 4), segs=segs, broll=broll, card=card, subs=chunks(words), sfx=sfx)
+    sfx += [dict(t=round(b['s'] - 0.08, 3), n='whoosh', db=-15 if b['tr'] != 'slide' else -19) for b in broll]
+    tl = dict(fps=FPS, rets=rets, total=total, dur=round(total + END, 4), segs=segs, broll=broll, card=card, subs=chunks(words), sfx=sfx)
     json.dump(tl, open(os.path.join(R, 'timeline.json'), 'w'), ensure_ascii=False, indent=1)
     print(f'parlato {total:.2f}s, totale {total + END:.2f}s, {len(tl["subs"])} blocchi sottotitoli')
 
