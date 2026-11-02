@@ -12,6 +12,6 @@ SEGS = [
     ('9349', 1.9667, 9.2),    # dotata di un motore
     ('9351', 0.2, 2.9),       # 1.5 mhev
     ('9351', 7.4, 11.2),      # benzina 150 cavalli
-    ('9363', 0.0, 6.0),       # spero vi sia piaciuta, DM
+    ('9363', 0.7333, 6.0),    # spero vi sia piaciuta, DM (senza 'a parte' ripetuto)
     ('9363', 10.5333, 11.8),  # è in vendita (senza 'eh?')
 ]
