@@ -20,6 +20,8 @@ FIX = {
     ('9349', 'mi'): 'vi',
     ('9351', 'motor'): 'motore', ('9351', '1500'): '1.5', ('9351', 'mab,'): 'MHEV.', ('9351', 'E'): 'È',
 }
+# parole delle frasi tagliate che i timestamp in anticipo farebbero rientrare nei sottotitoli
+HIDE = {('9353', 3.52), ('9346', 6.48)}
 GOLD = re.compile(r'^(19|LED|Identity|Black|A3|2024|1\.5|MHEV|26\.000|150|cavalli|cockpit|motore)$', re.I)
 
 
@@ -37,6 +39,8 @@ def build():
             if not (a - 0.12 <= st < b - 0.05):
                 continue
             nxt = ws[j + 1][0] if j + 1 < len(ws) else st + 0.5
+            if (c, st) in HIDE:
+                continue
             txt = FIX.get((c, wd), wd)
             if txt:
                 words.append(dict(t=round(t + st - a, 3), e=round(t + min(nxt, st + 0.7, b) - a, 3), w=txt))
@@ -81,7 +85,7 @@ def main():
         (O(5, 3.0), O(5, 4.70), '9303', 1.0),   # interni S line
         (O(5, 4.70), O(5, 8.90), '9321', 0.4),   # sedili misto pelle
         (O(6, 9.60), O(6, 13.0333), '9315', 0.0), # virtual cockpit
-        (O(7, 3.85), O(7, 6.3333), '9309', 0.2),   # tetto apribile da fuori
+        (O(7, 3.85), O(7, 6.5667), '9309', 0.2),   # tetto apribile da fuori
         (O(8, 8.45), O(8, 9.2), '9352', 0.0),   # motore
         (O(10, 7.40), O(10, 11.2), '9352', 0.5, 0.85),  # benzina 150 cavalli
         (O(12, 10.5333), O(12, 12.4), '9306', 1.6),  # è in vendita
