@@ -11,9 +11,9 @@ W = {k[4:]: v for k, v in W.items()}
 
 # testo a schermo corretto sull'SRT di Meme ('' = parola nascosta)
 FIX = {
-    ('9353', 'lead'): 'LED', ('9353', 'identity'): 'Identity', ('9353', 'dire?'): 'dire', ('9353', 'Signi'): '',
+    ('9353', 'intanto'): 'Intanto', ('9353', 'lead'): 'LED', ('9353', 'identity'): 'Identity', ('9353', 'dire?'): 'dire', ('9353', 'Signi'): '',
     ('9353', '19.'): '19.',
-    ('9329', '3'): 'A3', ('9329', '1500'): '1.5', ('9329', 'Meb,'): 'MHEV,', ('9329', 'la'): 'da', ('9329', 'dirlo,'): 'dirlo.',
+    ('9329', 'Dicevamo'): 'Dicevamo,', ('9329', 'quindi'): 'quindi', ('9329', '3'): 'A3', ('9329', '1500'): '1.5', ('9329', 'Meb,'): 'MHEV,', ('9329', 'la'): 'da', ('9329', 'dirlo,'): 'dirlo.',
     ('9334', 'mistopelle'): 'misto pelle', ('9334', 'e'): 'S line',
     ('9339', 'e'): '', ('9339', 'selana.'): 'S line,', ('9339', 'pelle.'): 'pelle,', ('9339', 'Cockpic'): 'cockpit',
     ('9346', 'estate,'): "d'estate", ('9346', 'cames.'): 'cabeza,', ('9346', 'Petto'): 'tetto',
@@ -34,7 +34,7 @@ def build():
         segs.append(dict(clip=c, i=a, o=b, at=round(t, 4)))
         ws = W[c]
         for j, (st, wd) in enumerate(ws):
-            if not (a - 0.05 <= st < b - 0.05):
+            if not (a - 0.12 <= st < b - 0.05):
                 continue
             nxt = ws[j + 1][0] if j + 1 < len(ws) else st + 0.5
             txt = FIX.get((c, wd), wd)
