@@ -1,18 +1,17 @@
-# Audi A3 Identity Black: tagli del parlato (clip, in, out) in secondi sorgente
-# in/out agganciati ai minimi di energia tra una parola e l'altra (vad.py + analisi RMS)
+# Audi A3 Identity Black: tagli del parlato (clip, in, out) in secondi sorgente, allineati al frame (1/30 s)
+# bordi presi alla fine/inizio della pausa dalla parte della parola tenuta (refine.py), poi rivisti a mano
 SEGS = [
-    ('9322', 0.00, 3.75),   # aspetta un attimo, una come questa...
-    ('9353', 0.50, 3.52),   # cosa ha di diverso
-    ('9353', 6.04, 17.85),  # cerchi 19, full LED, identity black
-    ('9355', 2.30, 3.85),   # scarico nero lucido
-    ('9329', 1.92, 12.13),  # A3 2024, 26.000 km
-    ('9334', 2.99, 8.90),   # sedili riscaldati misto pelle S line
-    ('9339', 2.54, 9.51),   # volante S line, palette
-    ('9339', 9.86, 12.96),  # virtual cockpit
-    ('9346', 0.85, 6.52),   # tetto apribile
-    ('9349', 2.00, 9.35),   # dotata di un motore
-    ('9351', 0.20, 2.89),   # 1.5 mhev
-    ('9351', 7.55, 10.95),  # benzina 150 cavalli
-    ('9363', 0.00, 6.00),   # spero vi sia piaciuta, DM
-    ('9363', 10.55, 12.37), # è in vendita eh?
+    ('9322', 0.0, 3.8),       # aspetta un attimo, una come questa...
+    ('9353', 0.4667, 3.5),    # cosa ha di diverso
+    ('9353', 6.0667, 17.9),   # cerchi 19, full LED, identity black
+    ('9355', 2.3, 3.7667),    # scarico nero lucido
+    ('9329', 1.9333, 12.2),   # A3 2024, 26.000 km
+    ('9334', 3.0, 9.2667),    # sedili riscaldati misto pelle S line
+    ('9339', 2.5, 13.0333),   # volante S line, palette, virtual cockpit
+    ('9346', 0.8, 6.3333),    # tetto apribile
+    ('9349', 1.9667, 9.2),    # dotata di un motore
+    ('9351', 0.2, 2.9),       # 1.5 mhev
+    ('9351', 7.4, 11.2),      # benzina 150 cavalli
+    ('9363', 0.0, 6.0),       # spero vi sia piaciuta, DM
+    ('9363', 10.5333, 12.4),  # è in vendita eh?
 ]

@@ -70,21 +70,21 @@ def main():
 
     # dettagli a tutto schermo mentre lui ne parla: (inizio, fine, clip, da)
     B = [
-        (O(2, 6.04), O(2, 9.25), '9298', 0.0, 0.88),   # cerchi Audi Sport 19
+        (O(2, 6.0667), O(2, 9.25), '9298', 0.0, 0.85),   # cerchi Audi Sport 19
         (O(2, 9.30), O(2, 11.05), '9296', 0.2),  # fari full LED
         (O(2, 11.05), O(2, 14.85), '9297', 0.0, 0.85), # identity black: griglia e anelli neri
-        (O(2, 14.85), O(2, 17.85), '9300', 0.0, 0.75), # loghi in nero lucido
-        (O(3, 2.30), O(3, 3.85), '9312', 0.75),   # scarico
+        (O(2, 14.85), O(2, 17.85), '9300', 0.0, 0.72), # loghi in nero lucido
+        (O(3, 2.30), O(3, 3.7667), '9312', 0.75),   # scarico
         (O(4, 4.80), O(4, 6.20), '9306', 0.4),   # identity black
         (O(4, 6.20), O(4, 7.55), '9308', 0.4),   # cerchi da 19
         (O(4, 7.55), O(4, 9.30), '9307', 0.3),   # S line
-        (O(5, 2.99), O(5, 4.70), '9303', 1.0),   # interni S line
+        (O(5, 3.0), O(5, 4.70), '9303', 1.0),   # interni S line
         (O(5, 4.70), O(5, 8.90), '9321', 0.4),   # sedili misto pelle
-        (O(7, 9.86), O(7, 12.96), '9315', 0.0), # virtual cockpit
-        (O(8, 3.85), O(8, 6.40), '9309', 0.2),   # tetto apribile da fuori
-        (O(9, 8.45), O(9, 9.35), '9352', 0.0, 1, True),   # motore
-        (O(11, 7.55), O(11, 10.95), '9352', 0.5, 0.95),
-        (O(13, 10.55), O(13, 12.30), '9306', 1.6),  # è in vendita# benzina 150 cavalli
+        (O(6, 9.60), O(6, 13.0333), '9315', 0.0), # virtual cockpit
+        (O(7, 3.85), O(7, 6.3333), '9309', 0.2),   # tetto apribile da fuori
+        (O(8, 8.45), O(8, 9.2), '9352', 0.0),   # motore
+        (O(10, 7.40), O(10, 11.2), '9352', 0.5, 0.85),  # benzina 150 cavalli
+        (O(12, 10.5333), O(12, 12.4), '9306', 1.6),  # è in vendita
     ]
     broll = [dict(s=x[0], e=x[1], src=x[2], frm=x[3], rate=x[4] if len(x) > 4 else 1) for x in B]
     # niente inquadrature-lampo: aggancia inizi e fine dei dettagli ai tagli vicini (< 0.45s)
@@ -107,8 +107,10 @@ def main():
         nxt = broll[i + 1] if i + 1 < len(broll) else None
         if not (nxt and abs(nxt['s'] - b['e']) < 0.05) and b['e'] < total - 0.1:
             rets.append(b['e'])
+        # sotto lo slide del dettaglio successivo deve restare questo dettaglio, non il parlato
+        b['hold'] = 0.3 if (nxt and abs(nxt['s'] - b['e']) < 0.05) else 0
     card = dict(s=O(4, 10.30), e=O(4, 12.05))   # "26.000 km"
-    sfx = [dict(t=O(9, 8.40), n='engine', db=-12), dict(t=total, n='door', db=-4)]
+    sfx = [dict(t=O(8, 8.40), n='engine', db=-12), dict(t=total, n='door', db=-4)]
     sfx += [dict(t=round(b['s'] - 0.08, 3), n='whoosh', db=-15 if b['tr'] != 'slide' else -19) for b in broll]
     tl = dict(fps=FPS, rets=rets, total=total, dur=round(total + END, 4), segs=segs, broll=broll, card=card, subs=chunks(words), sfx=sfx)
     json.dump(tl, open(os.path.join(R, 'timeline.json'), 'w'), ensure_ascii=False, indent=1)

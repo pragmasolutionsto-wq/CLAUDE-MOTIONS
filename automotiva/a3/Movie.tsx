@@ -128,7 +128,7 @@ export const Movie: React.FC = () => {
         </Sequence>
       ))}
       {(T.broll as Any[]).map((b, i) => (
-        <Sequence key={`b${i}`} from={fr(b.s)} durationInFrames={Math.max(1, fr(b.e) - fr(b.s))}>
+        <Sequence key={`b${i}`} from={fr(b.s)} durationInFrames={Math.max(1, fr(b.e) - fr(b.s) + fr(b.hold || 0))}>
           <In tr={b.tr}>
             <Clip src={b.src} from={b.frm} rate={b.rate} z0={1.0} z1={1.06} />
           </In>
