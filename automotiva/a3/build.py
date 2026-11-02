@@ -14,7 +14,7 @@ FIX = {
     ('9353', 'lead'): 'LED', ('9353', 'identity'): 'Identity', ('9353', 'dire?'): 'dire', ('9353', 'Signi'): '',
     ('9353', '19.'): '19.',
     ('9329', '3'): 'A3', ('9329', '1500'): '1.5', ('9329', 'Meb,'): 'MHEV,', ('9329', 'la'): 'da', ('9329', 'dirlo,'): 'dirlo.',
-    ('9334', 'mistopelle'): 'misto pelle',
+    ('9334', 'mistopelle'): 'misto pelle', ('9334', 'e'): 'S line',
     ('9339', 'e'): '', ('9339', 'selana.'): 'S line,', ('9339', 'pelle.'): 'pelle,', ('9339', 'Cockpic'): 'cockpit',
     ('9346', 'estate,'): "d'estate", ('9346', 'cames.'): 'cabeza,', ('9346', 'Petto'): 'tetto',
     ('9349', 'mi'): 'vi',
@@ -70,7 +70,7 @@ def main():
 
     # dettagli a tutto schermo mentre lui ne parla: (inizio, fine, clip, da)
     B = [
-        (O(2, 5.95), O(2, 9.25), '9298', 0.0, 0.88),   # cerchi Audi Sport 19
+        (O(2, 6.04), O(2, 9.25), '9298', 0.0, 0.88),   # cerchi Audi Sport 19
         (O(2, 9.30), O(2, 11.05), '9296', 0.2),  # fari full LED
         (O(2, 11.05), O(2, 14.85), '9297', 0.0, 0.85), # identity black: griglia e anelli neri
         (O(2, 14.85), O(2, 17.85), '9300', 0.0, 0.75), # loghi in nero lucido
@@ -78,9 +78,9 @@ def main():
         (O(4, 4.80), O(4, 6.20), '9306', 0.4),   # identity black
         (O(4, 6.20), O(4, 7.55), '9308', 0.4),   # cerchi da 19
         (O(4, 7.55), O(4, 9.30), '9307', 0.3),   # S line
-        (O(5, 2.88), O(5, 4.70), '9303', 1.0),   # interni S line
+        (O(5, 2.99), O(5, 4.70), '9303', 1.0),   # interni S line
         (O(5, 4.70), O(5, 8.90), '9321', 0.4),   # sedili misto pelle
-        (O(7, 9.60), O(7, 12.80), '9315', 0.0), # virtual cockpit
+        (O(7, 9.86), O(7, 12.96), '9315', 0.0), # virtual cockpit
         (O(8, 3.85), O(8, 6.40), '9309', 0.2),   # tetto apribile da fuori
         (O(9, 8.45), O(9, 9.35), '9352', 0.0, 1, True),   # motore
         (O(11, 7.55), O(11, 10.95), '9352', 0.5, 0.95),
