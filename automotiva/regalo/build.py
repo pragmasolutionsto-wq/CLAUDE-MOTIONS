@@ -74,7 +74,7 @@ def main():
         (O(9, 24.70), O(9, 27.60), '9525', 0.4, 1),       # potevamo venderla 500-600
         (O(9, 27.60), O(9, 30.45), '9527', 0.1, 1),       # al privato 1.000-1.200
         (O(10, 13.20), O(10, 16.5667), '9524', 0.0, 0.6), # la possibilità di avere un'auto
-        (O(12, 12.20), O(12, 14.40), '9522', 1.6, 0.65),   # copre il taglio
+        (O(12, 12.2667), O(12, 14.40), '9522', 1.6, 0.65),   # copre il taglio
         (O(13, 17.6667), O(13, 19.2333), '9523', 1.6, 1), # tutto qui vi chiediamo
         (O(14, 0.00), O(14, 3.30), 'ai_keys', 0.3, 1.3),    # cambiamo la vita di una famiglia (AI)
     ]
