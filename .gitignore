@@ -5,3 +5,4 @@ stonesofa/public/cut/
 stonesofa/public/lay/
 farmacia/*/*.mp4
 farmacia/*/raw/
+farmacia/*/audio/*.wav
