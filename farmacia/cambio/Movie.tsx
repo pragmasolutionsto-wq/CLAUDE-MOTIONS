@@ -9,41 +9,29 @@ import E from './edit.json';
 export const FPS = E.fps;
 export const DURATION = E.total;
 const SEG = E.segments;
-const END_AT = SEG[SEG.length - 1].end + 0.05;
+const A = E.a;
+const fr = (x: number) => Math.round(x * FPS); // confronti sempre a fotogrammi interi
+const END_AT = A.endIn;
 
 /* ------------------------------------------------------------------ girato */
 
-// ogni segmento ha la sua inquadratura (zoom diverso) per mascherare i jump cut
+// video base unico già tagliato a fotogramma (build_edit.py): qui solo l'inquadratura per segmento,
+// che cambia di netto sul taglio per mascherare il jump cut
 const FRAMING: [number, number, number][] = [
-  [1.0, 1.06, 0], [1.08, 1.12, -40], [1.18, 1.2, -60], [1.0, 1.0, 0], [1.06, 1.1, -30], [1.0, 1.05, 0], [1.1, 1.14, -50],
+  [1.0, 1.05, 0], [1.1, 1.13, -40], [1.2, 1.22, -70], [1.0, 1.0, 0], [1.06, 1.09, -30], [1.0, 1.04, 0], [1.12, 1.15, -50],
 ];
 
-const Footage: React.FC = () => (
-  <>
-    {SEG.map((s, i) => {
-      const from = Math.round(s.start * FPS);
-      const dur = Math.round((s.end - s.start) * FPS) + 3;
-      return (
-        <Sequence key={i} from={from} durationInFrames={dur}>
-          <SegShot i={i} D={s.end - s.start} src={s.src} />
-        </Sequence>
-      );
-    })}
-  </>
-);
-
-const SegShot: React.FC<{i: number; D: number; src: number}> = ({i, D, src}) => {
-  const t = useCurrentFrame() / FPS;
+const Footage: React.FC<{T: number}> = ({T}) => {
+  const f = Math.round(T * FPS);
+  let i = SEG.findIndex((s) => f >= fr(s.start) && f < fr(s.end));
+  if (i < 0) i = SEG.length - 1;
+  const s = SEG[i];
   const [z0, z1, dy] = FRAMING[i];
-  const z = lerp(z0, z1, eIO(prog(t, 0, D)));
+  const z = lerp(z0, z1, eIO(prog(T, s.start, s.end)));
   return (
     <AbsoluteFill style={{background: '#000'}}>
-      <OffthreadVideo
-        src={staticFile('cambio/girato.mp4')}
-        startFrom={Math.round(src * FPS)}
-        muted
-        style={{width: '100%', height: '100%', objectFit: 'cover', transform: `translateY(${dy}px) scale(${z})`, transformOrigin: '50% 38%'}}
-      />
+      <OffthreadVideo src={staticFile('cambio/base.mp4')} muted
+        style={{width: '100%', height: '100%', objectFit: 'cover', transform: `translateY(${dy}px) scale(${z})`, transformOrigin: '50% 38%'}} />
     </AbsoluteFill>
   );
 };
@@ -55,13 +43,13 @@ const Captions: React.FC<{T: number; hide: boolean}> = ({T, hide}) => {
   if (!ph || hide) return null;
   const pin = eO5(prog(T, ph.s, ph.s + 0.18));
   return (
-    <div style={{position: 'absolute', left: 60, right: 60, top: 1400, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '6px 14px',
+    <div style={{position: 'absolute', left: 60, right: 60, top: 1440, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '6px 14px',
       transform: `translateY(${(1 - pin) * 24}px) scale(${lerp(0.94, 1, pin)})`, opacity: pin}}>
       {ph.words.map((k) => {
         const w = E.words[k];
         const next = E.words[k + 1];
-        const end = next && next.seg === w.seg ? Math.min(next.s, w.e + 0.25) : w.e + 0.25;
-        const now = T >= w.s - 0.04 && T < end - 0.04;
+        const end = next && next.seg === w.seg ? next.s : w.e + 0.3;
+        const now = T >= w.s - 0.03 && T < end - 0.03;
         const pop = eBack(prog(T, w.s - 0.04, w.s + 0.1), 2.4);
         const o = '#013F41';
         return (
@@ -110,9 +98,10 @@ const Chip: React.FC<{T: number; at: number; until: number; text: string; x?: nu
 
 // cartello a schermo pieno sopra il girato (entra e esce a tendina dal basso)
 const Panel: React.FC<{T: number; at: number; until: number; children: (t: number) => React.ReactNode}> = ({T, at, until, children}) => {
-  if (T < at - 0.01 || T > until + 0.01) return null;
+  const f = Math.round(T * FPS);
+  if (f < fr(at) || f >= fr(until)) return null;
   const pin = eO5(prog(T, at, at + 0.4));
-  const pout = eO3(prog(T, until - 0.3, until));
+  const pout = 0; // uscita netta sul taglio
   const y = (1 - pin) * 1920 - pout * 1920;
   return (
     <AbsoluteFill style={{transform: `translateY(${y}px)`, borderRadius: pin < 1 || pout > 0 ? 60 : 0, overflow: 'hidden'}}>
@@ -215,64 +204,70 @@ const RemediesGfx: React.FC<{t: number; at: number[]}> = ({t, at}) => (
 const EndCard: React.FC<{T: number}> = ({T}) => {
   const t = T - END_AT;
   if (t < 0) return null;
-  const r = eIO(prog(t, 0, 0.6)) * 1300;
-  const pm = eElastic(prog(t, 0.2, 1.3));
-  const pl = eO3(prog(t, 0.6, 1.1));
-  const pp = eO3(prog(t, 0.9, 1.4));
-  const mh = 300, mw = (mh * MARK.w) / MARK.h, lw = 600;
+  const r = eIO(prog(t, 0, 0.55)) * 1300;
+  const pm = eElastic(prog(t, 0.15, 1.2));
+  const pl = eO3(prog(t, 0.45, 0.95));
+  const pp = eO3(prog(t, 0.8, 1.25));
+  const pa = eO3(prog(t, 1.1, 1.55));
+  const mh = 290, mw = (mh * MARK.w) / MARK.h, lw = 620;
   return (
     <AbsoluteFill style={{clipPath: `circle(${r}px at 50% 50%)`}}>
       <Backdrop t={T} />
-      <Img src={staticFile(MARK.file)} style={{position: 'absolute', left: (W - mw) / 2, top: 390, width: mw, height: mh, transform: `scale(${pm})`}} />
-      <Img src={staticFile(LOGO.file)} style={{position: 'absolute', left: (W - lw) / 2, top: 760, width: lw, height: (lw * LOGO.h) / LOGO.w,
+      <div style={{position: 'absolute', left: W / 2 - 230, top: 300, width: 460, height: 460, borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(92,192,168,0.32) 0%, rgba(92,192,168,0) 70%)', opacity: clamp(pm)}} />
+      <Img src={staticFile(MARK.file)} style={{position: 'absolute', left: (W - mw) / 2, top: 380, width: mw, height: mh, transform: `scale(${pm})`}} />
+      <Img src={staticFile(LOGO.file)} style={{position: 'absolute', left: (W - lw) / 2, top: 730, width: lw, height: (lw * LOGO.h) / LOGO.w,
         opacity: pl, transform: `translateY(${(1 - pl) * 30}px)`}} />
-      <div style={{position: 'absolute', left: 0, top: 1040, width: W, display: 'flex', justifyContent: 'center', opacity: pp}}>
-        <div style={{fontFamily: BODY, fontWeight: 800, fontSize: 40, color: WHITE, background: TEAL, borderRadius: 40, padding: '16px 40px'}}>{PAYOFF}</div>
+      <div style={{position: 'absolute', left: 0, top: 1020, width: W, display: 'flex', justifyContent: 'center', opacity: pp,
+        transform: `scale(${lerp(0.85, 1, eBack(pp))})`}}>
+        <div style={{fontFamily: BODY, fontWeight: 800, fontSize: 42, color: WHITE, background: TEAL, borderRadius: 44, padding: '18px 44px',
+          boxShadow: '0 14px 30px rgba(1,63,65,0.25)'}}>{PAYOFF}</div>
       </div>
-      <div style={{position: 'absolute', left: 0, top: 1150, width: W, textAlign: 'center', fontFamily: BODY, fontWeight: 600, fontSize: 32,
-        color: TEAL_DEEP, opacity: pp}}>Corso Garibaldi 49 · Brindisi</div>
+      <div style={{position: 'absolute', left: 0, top: 1150, width: W, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14,
+        opacity: pa, transform: `translateY(${(1 - pa) * 20}px)`, fontFamily: BODY, color: TEAL_DEEP}}>
+        <div style={{fontWeight: 700, fontSize: 38}}>Corso Garibaldi 49 · Brindisi</div>
+        <div style={{fontWeight: 800, fontSize: 38, color: TEAL, background: WHITE, border: `3px solid ${MINT}`, borderRadius: 34, padding: '10px 32px'}}>
+          WhatsApp 328 837 3357
+        </div>
+      </div>
     </AbsoluteFill>
   );
 };
 
 /* ------------------------------------------------------------------ montaggio */
 
-const CLOCK = [4.15, 8.75];
-const YAWN = [SEG[3].start, SEG[3].end];
-const REMEDIES = [34.6, 41.65];
-
 export const Movie: React.FC = () => {
   const f = useCurrentFrame();
   const T = f / FPS;
-  const inYawn = T >= YAWN[0] && T < YAWN[1];
+  const inYawn = f >= fr(A.yawnIn) && f < fr(A.yawnOut);
   const logoO = 1 - prog(T, END_AT, END_AT + 0.3);
+  const yawnRate = 6.08 / (A.yawnOut - A.yawnIn);
   return (
     <AbsoluteFill style={{background: '#000'}}>
-      <Footage />
+      <Footage T={T} />
 
-      {/* clip Runway: sonnolenza */}
-      <Sequence from={Math.round(YAWN[0] * FPS)} durationInFrames={Math.round((YAWN[1] - YAWN[0]) * FPS)}>
+      {/* clip Runway: sonnolenza (copre esattamente il segmento, taglio netto in entrata e in uscita) */}
+      <Sequence from={fr(A.yawnIn)} durationInFrames={fr(A.yawnOut) - fr(A.yawnIn)}>
         <AbsoluteFill>
-          <OffthreadVideo src={staticFile('cambio/yawn.mp4')} muted playbackRate={6.08 / (YAWN[1] - YAWN[0])}
-            style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+          <OffthreadVideo src={staticFile('cambio/yawn.mp4')} muted playbackRate={yawnRate} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
         </AbsoluteFill>
       </Sequence>
-      {inYawn && <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(1,40,40,0) 55%, rgba(1,40,40,0.45) 100%)'}} />}
+      {inYawn && <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(1,40,40,0) 50%, rgba(1,40,40,0.5) 100%)'}} />}
 
-      <Panel T={T} at={CLOCK[0]} until={CLOCK[1]}>{(t) => <ClockGfx t={t} />}</Panel>
-      <Panel T={T} at={REMEDIES[0]} until={REMEDIES[1]}>{(t) => <RemediesGfx t={t} at={[38.9 - REMEDIES[0], 39.45 - REMEDIES[0], 40.2 - REMEDIES[0]]} />}</Panel>
+      <Panel T={T} at={A.clockIn} until={A.clockOut}>{(t) => <ClockGfx t={t} />}</Panel>
+      <Panel T={T} at={A.remIn} until={A.remOut}>{(t) => <RemediesGfx t={t} at={[A.sonno - A.remIn, A.digestione - A.remIn, A.tono - A.remIn]} />}</Panel>
 
-      {/* titoli e chip sul girato */}
-      <Title T={T} at={0.1} until={2.7} lines={[{text: 'TI SENTI', box: 'mint'}, {text: 'SCARICO?', box: 'teal'}]} />
-      <Chip T={T} at={9.2} until={12.9} text="CAMBIO DI STAGIONE" y={1040} />
-      <Chip T={T} at={13.9} until={17.3} text="FUORI FASE" y={1040} wobble />
-      <Title T={T} at={19.6} until={21.6} top={380} lines={[{text: 'SONNOLENZA!', box: 'teal', size: 150}]} />
-      <Chip T={T} at={20.15} until={26.4} text="UMORE SU E GIÙ" y={600} wobble />
-      <Chip T={T} at={22.6} until={26.4} text="POCA CONCENTRAZIONE" y={730} />
-      <Title T={T} at={27.05} until={30.6} lines={[{text: 'LA BUONA', box: 'mint'}, {text: 'NOTIZIA', box: 'teal'}]} />
-      <Chip T={T} at={32.2} until={34.5} text="SANE ABITUDINI" y={1040} />
-      <Chip T={T} at={44.2} until={46.6} text="FUORI FASE?" y={1040} wobble />
-      <Title T={T} at={46.75} until={51.3} lines={[{text: 'VIENICI', box: 'mint'}, {text: 'A TROVARE', box: 'teal'}]} />
+      {/* titoli e chip: sempre sotto il viso, mai sopra */}
+      <Title T={T} at={0.1} until={SEG[0].start + 2.4} lines={[{text: 'TI SENTI', box: 'mint'}, {text: 'SCARICO?', box: 'teal'}]} />
+      <Chip T={T} at={A.cambio} until={A.fuoriFase1 - 0.4} text="CAMBIO DI STAGIONE" y={1060} />
+      <Chip T={T} at={A.fuoriFase1} until={SEG[1].end - 0.35} text="FUORI FASE" y={1060} wobble />
+      <Title T={T} at={A.yawnIn + 0.02} until={A.yawnOut - 0.35} top={1030} lines={[{text: 'SONNOLENZA!', box: 'teal', size: 140}]} />
+      <Chip T={T} at={A.umore} until={A.concentr - 0.3} text="UMORE SU E GIÙ" y={1250} wobble />
+      <Chip T={T} at={A.concentr} until={A.yawnOut - 0.35} text="POCA CONCENTRAZIONE" y={1250} />
+      <Title T={T} at={A.buona - 0.05} until={SEG[4].end - 0.35} lines={[{text: 'LA BUONA', box: 'mint'}, {text: 'NOTIZIA', box: 'teal'}]} />
+      <Chip T={T} at={A.abitudini} until={A.remIn - 0.3} text="SANE ABITUDINI" y={1060} />
+      <Chip T={T} at={A.fuoriFase2} until={A.vienici - 0.35} text="FUORI FASE?" y={1060} wobble />
+      <Title T={T} at={A.vienici - 0.05} until={END_AT - 0.1} lines={[{text: 'VIENICI', box: 'mint'}, {text: 'A TROVARE', box: 'teal'}]} />
 
       <Captions T={T} hide={T >= END_AT} />
 
