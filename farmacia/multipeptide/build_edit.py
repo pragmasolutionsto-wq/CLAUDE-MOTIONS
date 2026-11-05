@@ -25,15 +25,16 @@ MUSIC_LUFS = -25
 RANGES = [
     (6.38, 11.96, "Ti capita di guardarti allo specchio e vedere la pelle un po' meno distesa rispetto a prima?"),
     (12.60, 18.04, "Magari noti più facilmente delle linee intorno agli occhi, alle labbra o sulla fronte?"),
-    (18.66, 24.44, "È normale, non ti allarmare! Il nostro viso cambia con le espressioni, con il tempo."),
+    (18.66, 29.96, "È normale, non ti allarmare! Il nostro viso cambia con le espressioni, con il tempo, e anche la stanchezza e i periodi più intensi possono modificarlo e condizionarlo."),
+    (42.82, 47.54, "E stai tranquilla, ricordati che quelle linee non sono da cancellare a tutti i costi."),
     (47.88, 58.78, "Se però senti il bisogno di una pelle più tonica, elastica e levigata, puoi scegliere un trattamento cosmetico più mirato, senza però stravolgere il tuo viso."),
     (66.64, 73.70, "Tra le novità di Farmacisti Preparatori c'è Attivo Multipeptide BTX 13%."),
-    (75.50, 85.88, "Questo è un concentrato formulato con un mix avanzato di peptidi multi-azione, studiato sia per le rughe d'espressione, sia sulle linee sottili."),
+    (75.50, 89.20, "Questo è un concentrato formulato con un mix avanzato di peptidi multi-azione, studiato sia per le rughe d'espressione, sia sulle linee sottili, cioè sia sulle linee statiche che dinamiche."),
     (110.84, 124.52, "In parole povere, questo concentrato lavora su più livelli: aiuta a distendere visibilmente la pelle, sostenendo tono ed elasticità, e offre inoltre un effetto tensore percepibile anche rapidamente, fin dalla prima applicazione."),
     (135.88, 156.92, "I test strumentali condotti su venti soggetti hanno rilevato una riduzione della profondità e del volume delle rughe già dopo 15 minuti dall'applicazione sul contorno occhi. Parliamo perciò di un effetto botox-like. Non è un trattamento medico e il risultato ovviamente può cambiare da persona a persona."),
-    (168.68, 179.52, "Come si usa? Molto semplice. O lo puoi applicare direttamente sul viso deterso e pulito, due o tre gocce mattina e sera, oppure puoi anche utilizzarlo insieme alla tua crema."),
-    (194.66, 198.12, "Vieni a parlarne con noi e sicuramente sapremo capire le tue esigenze"),
-    (202.48, 207.56, "e soprattutto potremo consigliarti come inserirlo correttamente nella routine quotidiana."),
+    (157.68, 167.16, "Stai tranquilla però: come sempre, la costanza del trattamento nel tempo aiuta a migliorare l'aspetto delle rughe e soprattutto il tono e l'elasticità della pelle."),
+    (168.68, 185.02, "Come si usa? Molto semplice. O lo puoi applicare direttamente sul viso deterso e pulito, due o tre gocce mattina e sera, oppure puoi anche utilizzarlo insieme alla tua crema, mischiando sulla tua mano la crema che utilizzi quotidianamente insieme a 3-4 gocce del multiattivo."),
+    (185.92, 207.56, "La scelta dipende dalla tua pelle, ma soprattutto dalla routine che segui già e dal risultato che vuoi ottenere. È per questo che non devi fare tutto da solo. Vieni a parlarne con noi e sicuramente sapremo capire le tue esigenze, riusciremo ad aiutarti se è utile utilizzare il Multipeptide e soprattutto potremo consigliarti come inserirlo correttamente nella routine quotidiana."),
 ]
 TEXT = ' '.join(r[2] for r in RANGES)
 
@@ -242,22 +243,25 @@ def at(word, occ=1):
 # ---------------------------------------------------------------- ancore per grafiche ed effetti
 A = {
     'hook': 0.1, 'mirrorIn': round(at('Magari') - 0.08, 3), 'occhi': at('occhi,'), 'labbra': at('labbra'), 'fronte': at('fronte?'),
-    'normale': at('normale,'), 'tonica': at('tonica,'), 'elastica': at('elastica'), 'levigata': at('levigata,'), 'stravolgere': at('stravolgere'),
+    'normale': at('normale,'), 'stanchezza': at('stanchezza'), 'cancellare': at('cancellare'),
+    'tonica': at('tonica,'), 'elastica': at('elastica'), 'levigata': at('levigata,'), 'stravolgere': at('stravolgere'),
     'prodIn': round(at('Tra') - 0.1, 3), 'btx': at('Multipeptide'),
-    'peptIn': round(at('Questo') - 0.1, 3), 'peptidi': at('peptidi'), 'rughe': at("d'espressione,"), 'sottili': at('sottili.'),
+    'peptIn': round(at('Questo') - 0.1, 3), 'peptidi': at('peptidi'), 'rughe': at("d'espressione,"), 'sottili': at('sottili,'),
+    'statiche': at('statiche'),
     'layIn': round(at('In') - 0.1, 3), 'distendere': at('distendere'), 'tono': at('tono', 1), 'tensore': at('tensore'),
-    'testIn': round(at('I') - 0.1, 3), 'venti': at('venti'), 'minuti': at('minuti'), 'parliamo': at('Parliamo'),
-    'botox': at('botox-like.'), 'medico': at('medico'),
-    'come': at('Come'), 'careIn': round(at('applicare') - 0.15, 3), 'gocce': at('gocce'), 'mattina': at('mattina'), 'crema': at('crema.'),
-    'vieni': at('Vieni'), 'endIn': round(words[-1]['e'] + 0.35, 3),
+    'testIn': round(at('test') - 0.25, 3), 'venti': at('venti'), 'minuti': at('minuti'), 'parliamo': at('Parliamo'),
+    'botox': at('botox-like.'), 'medico': at('medico'), 'costanza': at('costanza'),
+    'come': at('Come', 2), 'careIn': round(at('applicare') - 0.15, 3), 'gocce': at('gocce', 1), 'mattina': at('mattina'),
+    'oppure': at('oppure'), 'crema': at('crema,'), 'scelta': at('scelta'), 'vieni': at('Vieni'),
+    'endIn': round(words[-1]['e'] + 0.35, 3),
 }
 seg_of = lambda t: next(i for i, s in enumerate(segments) if s['start'] <= t < s['end'] + 1e-6)
-A['mirrorOut'] = round(min(A['mirrorIn'] + 6.0, segments[seg_of(A['normale'])]['start']), 3)
+A['mirrorOut'] = round(min(A['mirrorIn'] + 4.0, segments[seg_of(A['normale'])]['start']), 3)
 A['prodOut'] = A['peptIn']
-A['peptOut'] = round(at('In') - 0.1, 3)
-A['layOut'] = round(at('I') - 0.1, 3)
+A['peptOut'] = A['layIn']
+A['layOut'] = A['testIn']
 A['testOut'] = round(A['parliamo'] - 0.08, 3)
-A['careOut'] = round(min(A['careIn'] + 6.0, at('oppure') - 0.05), 3)
+A['careOut'] = round(min(A['careIn'] + 4.0, A['oppure'] - 0.05), 3)
 
 # ---------------------------------------------------------------- audio
 def lufs(path, a=None, b=None):
@@ -286,15 +290,15 @@ sh('ffmpeg', '-loglevel', 'error', '-y', '-i', os.path.join(HERE, 'music.mp3'), 
 EV = [  # (tempo, file, guadagno dB)
     (0.12, 'pop', 6), (0.26, 'pop', 3),
     (A['mirrorIn'] - 0.15, 'whoosh', -8), (A['occhi'] - 0.05, 'pop', 4), (A['labbra'] - 0.05, 'pop', 4), (A['fronte'] - 0.05, 'pop', 4),
-    (A['normale'] - 0.05, 'pop', 4), (A['tonica'] - 0.05, 'pop', 3), (A['elastica'] - 0.05, 'pop', 3), (A['levigata'] - 0.05, 'pop', 3),
+    (A['normale'] - 0.05, 'pop', 4), (A['cancellare'] - 0.05, 'pop', 3), (A['tonica'] - 0.05, 'pop', 3), (A['elastica'] - 0.05, 'pop', 3), (A['levigata'] - 0.05, 'pop', 3),
     (A['stravolgere'] - 0.05, 'pop', 5),
     (A['prodIn'] - 0.05, 'whoosh', -6), (A['btx'] - 0.05, 'logo', -8),
     (A['peptIn'] - 0.05, 'whoosh', -8), (A['peptidi'] - 0.05, 'pop', 4), (A['rughe'] - 0.05, 'pop', 4), (A['sottili'] - 0.05, 'pop', 4),
     (A['layIn'] - 0.05, 'whoosh', -8), (A['distendere'] - 0.05, 'pop', 4), (A['tono'] - 0.05, 'pop', 4), (A['tensore'] - 0.05, 'pop', 5),
     (A['testIn'] - 0.05, 'whoosh', -8), (A['venti'] - 0.05, 'pop', 4), (A['minuti'] - 0.05, 'clock', -12),
-    (A['botox'] - 0.05, 'chime', -9), (A['medico'] - 0.05, 'pop', 3),
+    (A['botox'] - 0.05, 'chime', -9), (A['medico'] - 0.05, 'pop', 3), (A['costanza'] - 0.05, 'pop', 3),
     (A['come'] - 0.05, 'pop', 5), (A['careIn'] - 0.15, 'whoosh', -8), (A['gocce'] - 0.05, 'pop', 3), (A['mattina'] - 0.05, 'pop', 3),
-    (A['crema'] - 0.05, 'pop', 3), (A['vieni'] - 0.05, 'pop', 5),
+    (A['oppure'] - 0.05, 'pop', 3), (A['scelta'] - 0.05, 'pop', 3), (A['vieni'] - 0.05, 'pop', 5),
     (A['endIn'] - 0.1, 'whoosh', -7), (A['endIn'] + 0.2, 'logo', -6),
 ]
 ins, fl = [], []

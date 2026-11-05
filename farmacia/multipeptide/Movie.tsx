@@ -110,10 +110,35 @@ const Panel: React.FC<{T: number; at: number; until: number; children: (t: numbe
   );
 };
 
-/* ------------------------------------------------------------------ grafica: il prodotto */
+/* ------------------------------------------------------------------ schede sopra il girato (lei resta sempre visibile) */
 
+// scheda bianca nella metà bassa: entra dal basso, esce sfumando; il viso sopra resta libero
+const CARD_BOTTOM = 1490;
+const Card: React.FC<{T: number; at: number; until: number; h: number; children: (t: number) => React.ReactNode}> = ({T, at, until, h, children}) => {
+  const f = Math.round(T * FPS);
+  if (f < fr(at) || f >= fr(until)) return null;
+  const t = T - at;
+  const pin = eO5(prog(T, at, at + 0.45));
+  const pout = eO3(prog(T, until - 0.3, until));
+  return (
+    <div style={{position: 'absolute', left: 50, width: W - 100, top: CARD_BOTTOM - h, height: h, borderRadius: 40, overflow: 'hidden',
+      background: 'rgba(255,255,255,0.95)', boxShadow: '0 24px 60px rgba(1,40,40,0.35)', border: `4px solid ${MINT}`,
+      opacity: 1 - pout, transform: `translateY(${(1 - pin) * 520 + pout * 30}px) scale(${lerp(0.94, 1, pin)})`}}>
+      {children(t)}
+    </div>
+  );
+};
+
+const CardTitle: React.FC<{text: string; p: number}> = ({text, p}) => (
+  <div style={{position: 'absolute', left: 0, right: 0, top: 18, display: 'flex', justifyContent: 'center'}}>
+    <div style={{fontFamily: HEAD, fontSize: 52, color: WHITE, background: TEAL, borderRadius: 20, padding: '3px 26px 0',
+      transform: `scale(${lerp(0.7, 1, eBack(clamp(p), 2))})`, opacity: clamp(p * 3)}}>{text}</div>
+  </div>
+);
+
+/* prodotto */
 const Dropper: React.FC<{p: number}> = ({p}) => (
-  <svg viewBox="0 0 120 220" width={190} height={348} style={{transform: `translateY(${(1 - eBack(p, 1.8)) * 80}px)`, opacity: clamp(p * 3)}}>
+  <svg viewBox="0 0 120 220" width={150} height={275} style={{transform: `translateY(${(1 - eBack(p, 1.8)) * 60}px)`, opacity: clamp(p * 3)}}>
     <rect x={44} y={6} width={32} height={46} rx={12} fill={TEAL_DEEP} />
     <rect x={38} y={48} width={44} height={22} rx={6} fill={TEAL} />
     <rect x={18} y={68} width={84} height={140} rx={26} fill="#B4642A" />
@@ -123,79 +148,68 @@ const Dropper: React.FC<{p: number}> = ({p}) => (
   </svg>
 );
 
-const ProductGfx: React.FC<{t: number; btx: number}> = ({t, btx}) => {
+const ProductCard: React.FC<{t: number; btx: number}> = ({t, btx}) => {
   const pc = eO3(prog(t, btx, btx + 1.2));
   const pb = eBack(prog(t, btx, btx + 0.5), 2);
   return (
-    <>
-      <div style={{position: 'absolute', left: 0, top: 330, width: W, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        <TitleLine line={{text: 'NOVITÀ', box: 'mint'}} p={prog(t, 0.1, 0.7)} />
-        <div style={{fontFamily: BODY, fontWeight: 800, fontSize: 38, letterSpacing: 4, color: TEAL, marginTop: 10, opacity: prog(t, 0.4, 0.9)}}>FARMACISTI PREPARATORI</div>
+    <div style={{position: 'absolute', left: 30, right: 30, top: 0, bottom: 0, display: 'flex', alignItems: 'center', gap: 26}}>
+      <div style={{display: 'flex', flexDirection: 'column'}}>
+        <div style={{fontFamily: BODY, fontWeight: 800, fontSize: 26, letterSpacing: 3, color: MINT, opacity: prog(t, 0.2, 0.7)}}>NOVITÀ · FARMACISTI PREPARATORI</div>
+        <div style={{fontFamily: HEAD, fontSize: 70, color: TEAL, lineHeight: 1.1, opacity: prog(t, 0.3, 0.8)}}>ATTIVO MULTIPEPTIDE</div>
       </div>
-      <div style={{position: 'absolute', left: 0, top: 560, width: W, display: 'flex', justifyContent: 'center'}}><Dropper p={prog(t, 0.5, 1.3)} /></div>
-      <div style={{position: 'absolute', left: 0, top: 960, width: W, display: 'flex', flexDirection: 'column', alignItems: 'center', opacity: clamp(pb),
-        transform: `scale(${lerp(0.8, 1, pb)})`}}>
-        <div style={{fontFamily: HEAD, fontSize: 92, color: TEAL, lineHeight: 1.05}}>ATTIVO MULTIPEPTIDE</div>
-        <div style={{marginTop: 18, display: 'flex', alignItems: 'baseline', gap: 22, background: TEAL, borderRadius: 30, padding: '8px 40px 2px'}}>
-          <span style={{fontFamily: HEAD, fontSize: 110, color: WHITE}}>BTX</span>
-          <span style={{fontFamily: HEAD, fontSize: 150, color: MINT}}>{Math.round(13 * pc)}%</span>
-        </div>
+      <div style={{display: 'flex', alignItems: 'baseline', gap: 12, background: TEAL, borderRadius: 24, padding: '4px 24px 0', opacity: clamp(pb * 2),
+        transform: `scale(${lerp(0.7, 1, clamp(pb, 0, 1.2))})`}}>
+        <span style={{fontFamily: HEAD, fontSize: 60, color: WHITE}}>BTX</span>
+        <span style={{fontFamily: HEAD, fontSize: 86, color: MINT}}>{Math.round(13 * pc)}%</span>
       </div>
-    </>
+    </div>
   );
 };
 
-/* ------------------------------------------------------------------ grafica: peptidi */
-
-const PeptGfx: React.FC<{t: number; at: number[]}> = ({t, at}) => {
-  const nodes = [[160, 260], [300, 170], [440, 250], [580, 160], [720, 240], [860, 150]];
+/* peptidi */
+const PeptCard: React.FC<{t: number; at: number[]}> = ({t, at}) => {
+  const nodes = [[110, 120], [250, 60], [390, 120], [530, 55], [670, 115], [810, 50]];
   const draw = eIO(prog(t, at[0] - 0.2, at[0] + 1.4));
+  const chips = ["RUGHE D'ESPRESSIONE", 'LINEE SOTTILI', 'STATICHE E DINAMICHE'];
   return (
     <>
-      <div style={{position: 'absolute', left: 0, top: 330, width: W, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        <TitleLine line={{text: 'PEPTIDI', box: 'mint'}} p={prog(t, 0.1, 0.7)} />
-        <TitleLine line={{text: 'MULTI-AZIONE', box: 'teal'}} p={prog(t, 0.25, 0.85)} />
-      </div>
-      <svg width={W} height={420} style={{position: 'absolute', left: 0, top: 640}}>
-        <polyline points={nodes.map((n) => n.join(',')).join(' ')} fill="none" stroke={SAGE} strokeWidth={14} strokeLinecap="round" strokeLinejoin="round"
+      <CardTitle text="PEPTIDI MULTI-AZIONE" p={prog(t, 0.15, 0.6)} />
+      <svg width={W - 100} height={170} viewBox="0 0 980 170" style={{position: 'absolute', left: 25, top: 78, transform: 'scale(0.75)', transformOrigin: 'center top'}}>
+        <polyline points={nodes.map((n) => n.join(',')).join(' ')} fill="none" stroke={SAGE} strokeWidth={12} strokeLinecap="round" strokeLinejoin="round"
           pathLength={1} strokeDasharray={1} strokeDashoffset={1 - draw} />
         {nodes.map(([x, y], i) => {
           const p = eBack(prog(draw, i / nodes.length, i / nodes.length + 0.2), 2.4);
-          return <circle key={i} cx={x} cy={y + Math.sin(t * 2 + i) * 6} r={38 * clamp(p, 0, 1.2)} fill={i % 2 ? TEAL : MINT} stroke={WHITE} strokeWidth={8} />;
+          return <circle key={i} cx={x} cy={y + Math.sin(t * 2 + i) * 5} r={30 * clamp(p, 0, 1.2)} fill={i % 2 ? TEAL : MINT} stroke={WHITE} strokeWidth={7} />;
         })}
       </svg>
-      {['RUGHE D\'ESPRESSIONE', 'LINEE SOTTILI'].map((l, i) => {
-        const p = eBack(prog(t, at[i + 1], at[i + 1] + 0.45), 2.4);
-        return (
-          <div key={l} style={{position: 'absolute', left: 0, top: 1080 + i * 130, width: W, display: 'flex', justifyContent: 'center', opacity: clamp(p * 2)}}>
-            <div style={{transform: `scale(${p})`, fontFamily: HEAD, fontSize: 66, color: i ? TEAL : WHITE, background: i ? WHITE : TEAL, border: `4px solid ${MINT}`,
-              borderRadius: 26, padding: '6px 34px 0', boxShadow: '0 12px 30px rgba(1,63,65,0.2)'}}>{l}</div>
-          </div>
-        );
-      })}
+      <div style={{position: 'absolute', left: 20, right: 20, top: 210, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12}}>
+        {chips.map((l, i) => {
+          const p = eBack(prog(t, at[i + 1], at[i + 1] + 0.45), 2.4);
+          return (
+            <div key={l} style={{transform: `scale(${clamp(p, 0, 1.2)})`, opacity: clamp(p * 2), fontFamily: HEAD, fontSize: 40, color: i === 0 ? WHITE : TEAL,
+              background: i === 0 ? TEAL : WHITE, border: `3px solid ${MINT}`, borderRadius: 20, padding: '4px 22px 0'}}>{l}</div>
+          );
+        })}
+      </div>
     </>
   );
 };
 
-/* ------------------------------------------------------------------ grafica: più livelli */
-
-const LayersGfx: React.FC<{t: number; at: number[]}> = ({t, at}) => {
+/* più livelli */
+const LayersCard: React.FC<{t: number; at: number[]}> = ({t, at}) => {
   const items = ['DISTENDE LA PELLE', 'TONO ED ELASTICITÀ', 'EFFETTO TENSORE'];
   return (
     <>
-      <div style={{position: 'absolute', left: 0, top: 330, width: W, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        <TitleLine line={{text: 'AGISCE SU', box: 'mint'}} p={prog(t, 0.1, 0.7)} />
-        <TitleLine line={{text: 'PIÙ LIVELLI', box: 'teal'}} p={prog(t, 0.25, 0.85)} />
-      </div>
+      <CardTitle text="AGISCE SU PIÙ LIVELLI" p={prog(t, 0.15, 0.6)} />
       {items.map((l, i) => {
-        const p = prog(t, at[i], at[i] + 0.5);
+        const p = prog(t, at[i], at[i] + 0.45);
         return (
-          <div key={l} style={{position: 'absolute', left: 120 + i * 30, top: 690 + i * 190, width: W - 240 - i * 60, height: 160, borderRadius: 36,
-            background: i === 2 ? TEAL : WHITE, boxShadow: '0 16px 36px rgba(1,63,65,0.18)', display: 'flex', alignItems: 'center', gap: 26, padding: '0 36px',
-            opacity: clamp(p * 3), transform: `translateY(${(1 - eBack(p, 1.8)) * 80}px)`}}>
-            <div style={{width: 76, height: 76, borderRadius: 38, background: i === 2 ? MINT : TEAL, color: WHITE, fontFamily: HEAD, fontSize: 46,
+          <div key={l} style={{position: 'absolute', left: 40, right: 40, top: 92 + i * 80, height: 70, borderRadius: 22,
+            background: i === 2 ? TEAL : 'rgba(92,192,168,0.16)', display: 'flex', alignItems: 'center', gap: 22, padding: '0 26px',
+            opacity: clamp(p * 3), transform: `translateX(${(1 - eO5(p)) * -120}px)`}}>
+            <div style={{width: 50, height: 50, borderRadius: 25, background: i === 2 ? MINT : TEAL, color: WHITE, fontFamily: HEAD, fontSize: 32,
               display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{i + 1}</div>
-            <div style={{fontFamily: HEAD, fontSize: 58, color: i === 2 ? WHITE : TEAL}}>{l}</div>
+            <div style={{fontFamily: HEAD, fontSize: 44, color: i === 2 ? WHITE : TEAL}}>{l}</div>
           </div>
         );
       })}
@@ -203,33 +217,26 @@ const LayersGfx: React.FC<{t: number; at: number[]}> = ({t, at}) => {
   );
 };
 
-/* ------------------------------------------------------------------ grafica: test strumentali */
-
-const Stat: React.FC<{p: number; n: number; label: string}> = ({p, n, label}) => (
-  <div style={{width: 400, height: 330, borderRadius: 40, background: WHITE, boxShadow: '0 18px 40px rgba(1,63,65,0.16)', display: 'flex', flexDirection: 'column',
-    alignItems: 'center', justifyContent: 'center', opacity: clamp(p * 3), transform: `scale(${lerp(0.7, 1, eBack(clamp(p), 2))})`}}>
-    <div style={{fontFamily: HEAD, fontSize: 170, color: TEAL, lineHeight: 1}}>{Math.round(n * eO3(clamp(p)))}</div>
-    <div style={{fontFamily: HEAD, fontSize: 56, color: MINT, marginTop: 6}}>{label}</div>
-  </div>
-);
-
-const TestGfx: React.FC<{t: number; at: number[]}> = ({t, at}) => {
+/* test strumentali */
+const TestCard: React.FC<{t: number; at: number[]}> = ({t, at}) => {
   const pr = eO3(prog(t, at[1] + 0.6, at[1] + 1.2));
+  const stat = (p: number, n: number, label: string) => (
+    <div style={{width: 280, height: 140, borderRadius: 26, background: 'rgba(92,192,168,0.16)', display: 'flex', flexDirection: 'column',
+      alignItems: 'center', justifyContent: 'center', opacity: clamp(p * 3), transform: `scale(${lerp(0.7, 1, eBack(clamp(p), 2))})`}}>
+      <div style={{fontFamily: HEAD, fontSize: 86, color: TEAL, lineHeight: 1}}>{Math.round(n * eO3(clamp(p)))}</div>
+      <div style={{fontFamily: HEAD, fontSize: 36, color: MINT}}>{label}</div>
+    </div>
+  );
   return (
     <>
-      <div style={{position: 'absolute', left: 0, top: 330, width: W, display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-        <TitleLine line={{text: 'TEST', box: 'mint'}} p={prog(t, 0.1, 0.7)} />
-        <TitleLine line={{text: 'STRUMENTALI', box: 'teal'}} p={prog(t, 0.25, 0.85)} />
+      <CardTitle text="TEST STRUMENTALI" p={prog(t, 0.15, 0.6)} />
+      <div style={{position: 'absolute', left: 0, right: 0, top: 90, display: 'flex', justifyContent: 'center', gap: 36}}>
+        {stat(prog(t, at[0], at[0] + 1.0), 20, 'SOGGETTI')}
+        {stat(prog(t, at[1], at[1] + 1.0), 15, 'MINUTI')}
       </div>
-      <div style={{position: 'absolute', left: 0, top: 690, width: W, display: 'flex', justifyContent: 'center', gap: 40}}>
-        <Stat p={prog(t, at[0], at[0] + 1.0)} n={20} label="SOGGETTI" />
-        <Stat p={prog(t, at[1], at[1] + 1.0)} n={15} label="MINUTI" />
-      </div>
-      <div style={{position: 'absolute', left: 90, right: 90, top: 1070, textAlign: 'center', fontFamily: BODY, fontWeight: 800, fontSize: 44, color: TEAL_DEEP,
-        opacity: pr, transform: `translateY(${(1 - pr) * 20}px)`}}>
-        ↓ volume e profondità delle rughe del contorno occhi
-      </div>
-      <div style={{position: 'absolute', left: 90, right: 90, top: 1200, textAlign: 'center', fontFamily: BODY, fontWeight: 600, fontSize: 28, color: TEAL_DEEP,
+      <div style={{position: 'absolute', left: 30, right: 30, top: 245, textAlign: 'center', fontFamily: BODY, fontWeight: 800, fontSize: 30, color: TEAL_DEEP,
+        opacity: pr}}>↓ volume e profondità delle rughe del contorno occhi</div>
+      <div style={{position: 'absolute', left: 30, right: 30, top: 292, textAlign: 'center', fontFamily: BODY, fontWeight: 600, fontSize: 22, color: TEAL_DEEP,
         opacity: pr * 0.8}}>Dati dichiarati dal produttore. Effetto cosmetico, risultati variabili.</div>
     </>
   );
@@ -295,27 +302,31 @@ export const Movie: React.FC = () => {
       <Clip src="multipeptide/mirror.mp4" a={A.mirrorIn} b={A.mirrorOut} />
       <Clip src="multipeptide/serum.mp4" a={A.careIn} b={A.careOut} />
 
-      <Panel T={T} at={A.prodIn} until={A.prodOut}>{(t) => <ProductGfx t={t} btx={A.btx - A.prodIn} />}</Panel>
-      <Panel T={T} at={A.peptIn} until={A.peptOut}>{(t) => <PeptGfx t={t} at={[A.peptidi, A.rughe, A.sottili].map((x) => x - A.peptIn)} />}</Panel>
-      <Panel T={T} at={A.layIn} until={A.layOut}>{(t) => <LayersGfx t={t} at={[A.distendere, A.tono, A.tensore].map((x) => x - A.layIn)} />}</Panel>
-      <Panel T={T} at={A.testIn} until={A.testOut}>{(t) => <TestGfx t={t} at={[A.venti, A.minuti].map((x) => x - A.testIn)} />}</Panel>
+      <Card T={T} at={A.prodIn} until={A.prodOut} h={190}>{(t) => <ProductCard t={t} btx={A.btx - A.prodIn} />}</Card>
+      <Card T={T} at={A.peptIn} until={A.peptOut} h={290}>{(t) => <PeptCard t={t} at={[A.peptidi, A.rughe, A.sottili, A.statiche].map((x) => x - A.peptIn)} />}</Card>
+      <Card T={T} at={A.layIn} until={A.layOut} h={340}>{(t) => <LayersCard t={t} at={[A.distendere, A.tono, A.tensore].map((x) => x - A.layIn)} />}</Card>
+      <Card T={T} at={A.testIn} until={A.testOut} h={335}>{(t) => <TestCard t={t} at={[A.venti, A.minuti].map((x) => x - A.testIn)} />}</Card>
 
-      {/* titoli e chip: sotto il viso */}
+      {/* titoli e chip: sotto il viso, mai insieme alle schede */}
       <Title T={T} at={0.1} until={A.mirrorIn - 0.3} lines={[t112('PELLE MENO'), T112('DISTESA?')]} />
       <Chip T={T} at={A.occhi} until={A.labbra - 0.15} text="INTORNO AGLI OCCHI" y={1250} />
       <Chip T={T} at={A.labbra} until={A.fronte - 0.15} text="LABBRA" y={1250} />
       <Chip T={T} at={A.fronte} until={A.mirrorOut - 0.3} text="FRONTE" y={1250} />
-      <Chip T={T} at={A.normale} until={A.tonica - 1.5} text="È NORMALE" y={1230} />
+      <Chip T={T} at={A.normale} until={A.stanchezza - 0.3} text="È NORMALE" y={1230} />
+      <Chip T={T} at={A.stanchezza} until={A.cancellare - 1.2} text="STANCHEZZA E PERIODI INTENSI" y={1230} />
+      <Chip T={T} at={A.cancellare} until={A.tonica - 0.3} text="NON SONO DA CANCELLARE" y={1230} />
       <Chip T={T} at={A.tonica} until={A.elastica - 0.15} text="PIÙ TONICA" y={1230} />
       <Chip T={T} at={A.elastica} until={A.levigata - 0.15} text="PIÙ ELASTICA" y={1230} />
       <Chip T={T} at={A.levigata} until={A.stravolgere - 0.4} text="PIÙ LEVIGATA" y={1230} />
       <Title T={T} at={A.stravolgere - 0.1} until={A.prodIn - 0.3} lines={[t112('SENZA STRAVOLGERE'), T112('IL TUO VISO')]} />
       <Chip T={T} at={A.botox} until={A.medico - 0.25} text="EFFETTO BOTOX-LIKE" y={1230} />
-      <Chip T={T} at={A.medico} until={A.come - 0.3} text="NON È UN TRATTAMENTO MEDICO" y={1230} />
+      <Chip T={T} at={A.medico} until={A.costanza - 0.6} text="NON È UN TRATTAMENTO MEDICO" y={1230} />
+      <Chip T={T} at={A.costanza} until={A.come - 0.3} text="COSTANZA NEL TEMPO" y={1230} />
       <Title T={T} at={A.come - 0.05} until={A.careIn - 0.3} lines={[t112('COME'), T112('SI USA')]} />
       <Chip T={T} at={A.gocce} until={A.mattina - 0.15} text="2-3 GOCCE · PELLE PULITA" y={1250} />
       <Chip T={T} at={A.mattina} until={A.careOut - 0.3} text="MATTINA E SERA" y={1250} />
-      <Chip T={T} at={A.careOut} until={A.vieni - 0.3} text="OPPURE NELLA TUA CREMA" y={1230} />
+      <Chip T={T} at={A.oppure} until={A.scelta - 0.4} text="OPPURE INSIEME ALLA CREMA" y={1230} />
+      <Chip T={T} at={A.scelta} until={A.vieni - 0.3} text="DIPENDE DALLA TUA PELLE" y={1230} />
       <Title T={T} at={A.vieni - 0.05} until={END_AT - 0.1} lines={[t112('PARLANE'), T112('CON NOI')]} />
 
       <Captions T={T} hide={T >= END_AT} />
