@@ -1,0 +1,41 @@
+{
+ "fps": 30,
+ "duration": 80.66,
+ "sents": [
+  {
+   "t": 0.2,
+   "end": 8.42,
+   "txt": "Ti faccio qualche domanda… Durante la notte russi? Ti svegli già stanco? Durante il giorno avverti sonnolenza, e ancora stanchezza?"
+  },
+  {
+   "t": 8.87,
+   "end": 19.89,
+   "txt": "Se la risposta a queste domande è sì, ti consiglio di non sottovalutare questi sintomi, perché possono parlarci di disturbi respiratori durante la notte. Hai mai sentito parlare di apnea notturna?"
+  },
+  {
+   "t": 20.29,
+   "end": 35.93,
+   "txt": "Quando, durante la notte, il respiro si interrompe più volte, non solo non riposi bene, ma può succedere che la quantità di ossigeno presente nel sangue diminuisca, e aumenti quella di anidride carbonica. Questo, nel tempo, mette a rischio la tua salute."
+  },
+  {
+   "t": 36.38,
+   "end": 43.58,
+   "txt": "Ma come puoi sapere se soffri di disturbi respiratori durante la notte? Un primo controllo utile può essere la saturimetria notturna."
+  },
+  {
+   "t": 43.98,
+   "end": 54.21,
+   "txt": "Si effettua mentre dormi, indossando al dito un piccolo sensore. Il dispositivo registra, nel corso della notte, l'andamento della saturazione dell'ossigeno e della frequenza cardiaca."
+  },
+  {
+   "t": 54.61,
+   "end": 61.07,
+   "txt": "I dati raccolti ci aiutano a capire se ci sono variazioni sospette, e se è necessario approfondire ulteriormente."
+  },
+  {
+   "t": 61.47,
+   "end": 74.66,
+   "txt": "Quindi, se russi, ti senti stanco già da quando ti svegli, e durante il giorno avverti sonnolenza, vieni a parlarne con noi: approfondiremo la tua situazione, e capiremo se è il caso di fare la saturimetria. Ti aspettiamo!"
+  }
+ ]
+}
