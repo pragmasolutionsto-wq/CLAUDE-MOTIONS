@@ -284,7 +284,8 @@ const RBox: React.FC<{args: [number, number, number]; r?: number; color: string;
     const g = new THREE.ExtrudeGeometry(s, {depth: d - 2 * rr * 0.6, bevelEnabled: true, bevelThickness: rr * 0.6, bevelSize: rr * 0.6, bevelSegments: 5, curveSegments: 10});
     g.center();
     return g;
-  }, [args, r]);
+  }, [args[0], args[1], args[2], r]);
+  useEffect(() => () => geo.dispose(), [geo]);
   return (
     <mesh geometry={geo} position={position} rotation={rotation}>
       <meshStandardMaterial color={color} roughness={rough} />
