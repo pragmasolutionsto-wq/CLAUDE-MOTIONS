@@ -494,7 +494,7 @@ const ShBreath: React.FC<{t: number}> = ({t}) => {
   return (
     <>
       <Night t={t} />
-      <div style={{position: 'absolute', left: 0, top: 840, width: W, height: 760, opacity: 0.95}}><Bed3D lt={t - a + 3} w={W} h={760} breath={() => (holding ? 0 : Math.sin(t * 2.6) * 0.5 + 0.5)} mood={holding ? 0.4 : 0} /></div>
+      <Img src={staticFile('bed.png')} style={{position: 'absolute', left: 0, top: 840, width: W, height: 760, transform: `scale(${1 + (holding ? 0 : 0.012 * Math.sin(t * 2.6))})`, transformOrigin: '50% 70%'}} />
       <BreathLine t={t} y={600} stops={stops} />
       <Stack y={190} gap={4}>
         <Line t={t} a={K.respiro - 0.3} text="il respiro" size={84} serif color={CREAM} />
@@ -567,7 +567,7 @@ const ShSatur: React.FC<{t: number}> = ({t}) => {
   return (
     <>
       <Cream t={t} strands={0} />
-      <div style={{position: 'absolute', left: 0, top: 660, width: W, height: 640}}><Oximeter3D lt={t - a} w={W} h={640} /></div>
+      <Img src={staticFile('oxi.png')} style={{position: 'absolute', left: 0, top: 660, width: W, height: 640, transform: `scale(${spring(prog(t, a, a + 0.9) * 1.8)}) rotate(${Math.sin((t - a) * 0.8) * 3}deg)`, filter: `drop-shadow(0 0 ${20 + 18 * Math.pow(Math.max(0, Math.sin(t * 7)), 6)}px rgba(255,143,143,0.55))`}} />
       <Stack y={180}><Line t={t} a={a + 0.02} text="un primo controllo utile" size={56} /></Stack>
       <Stack y={280}><Line t={t} a={K.saturimetria3 - 0.35} text="saturimetria" size={116} box="green" /></Stack>
       <Stack y={450}><Line t={t} a={K.notturna3 - 0.3} text="notturna" size={110} serif color={ROSE} /></Stack>

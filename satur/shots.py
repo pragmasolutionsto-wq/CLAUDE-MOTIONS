@@ -23,7 +23,7 @@ SH = [  # nome, tipo, inizio, transizione d'ingresso
     ('signals', 'mg', st(1), 'cube'),
     ('resp', 'mg', s(1, 'perché') - P, 'whip'),
     ('apnea', 'mg', s(1, 'hai') - P, 'whip'),
-    ('breath', 'mg', st(2), 'cube'),
+    ('breath', 'mg', st(2), 'whip'),
     ('oxygen', 'mg', s(2, 'ma') - P, 'whip'),
     ('risk', 'mg', s(2, 'questo') - P, 'whip'),
     ('how', 'mg', st(3), 'cube'),

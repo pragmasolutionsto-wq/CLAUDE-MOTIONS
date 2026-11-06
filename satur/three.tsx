@@ -10,6 +10,16 @@ import {CREAM, GREEN, GREEN_D, MAUVE, PINK, PINK_HI, SAGE, clamp, eBack, eIO, eO
 
 /* ------------------------------------------------------------------ comuni */
 
+// libera subito il contesto WebGL quando la scena esce (altrimenti dopo molte transizioni il browser non ne crea più)
+const Release: React.FC = () => {
+  const {gl} = useThree();
+  useEffect(() => () => {
+    gl.dispose();
+    gl.forceContextLoss();
+  }, [gl]);
+  return null;
+};
+
 const Env: React.FC<{i?: number}> = ({i = 1}) => {
   const {gl, scene} = useThree();
   useMemo(() => {
@@ -24,6 +34,7 @@ const Env: React.FC<{i?: number}> = ({i = 1}) => {
 const Canvas: React.FC<{w: number; h: number; fov?: number; z?: number; env?: number; children: React.ReactNode}> = ({w, h, fov = 30, z = 12, env = 1, children}) => (
   <ThreeCanvas width={w} height={h} camera={{fov, position: [0, 0, z]}} gl={{antialias: true, alpha: true, toneMapping: THREE.ACESFilmicToneMapping}}>
     <Env i={env} />
+    <Release />
     <ambientLight intensity={0.35} />
     <directionalLight position={[4, 6, 7]} intensity={2.3} color={'#fff1e2'} />
     <directionalLight position={[-6, -1, 3]} intensity={1.0} color={'#ffc9bd'} />
@@ -130,6 +141,7 @@ export const Logo3D: React.FC<{lt: number; w: number; h: number; scale?: number}
   const ar = img.height / img.width;
   return (
     <ThreeCanvas width={w} height={h} camera={{fov: 30, position: [0, 0, 8]}} gl={{antialias: true, alpha: true}}>
+      <Release />
       <group rotation={[0, ry, 0]} scale={lerp(0.3, 1, eBack(clamp(p * 1.3), 1.3)) * scale} position={[0, Math.sin(lt * 1.6) * 0.05, 0]}>
         {Array.from({length: layers}, (_, i) => {
           const front = i === layers - 1;
@@ -269,6 +281,7 @@ const NightLights: React.FC<{dim?: number}> = ({dim = 1}) => (
 const NightCanvas: React.FC<{w: number; h: number; z?: number; fov?: number; children: React.ReactNode}> = ({w, h, z = 12, fov = 32, children}) => (
   <ThreeCanvas width={w} height={h} camera={{fov, position: [0, 2.2, z]}} gl={{antialias: true, alpha: true, toneMapping: THREE.ACESFilmicToneMapping}}>
     <Env i={0.35} />
+    <Release />
     <NightLights />
     {children}
   </ThreeCanvas>
@@ -285,7 +298,6 @@ const RBox: React.FC<{args: [number, number, number]; r?: number; color: string;
     g.center();
     return g;
   }, [args[0], args[1], args[2], r]);
-  useEffect(() => () => geo.dispose(), [geo]);
   return (
     <mesh geometry={geo} position={position} rotation={rotation}>
       <meshStandardMaterial color={color} roughness={rough} />
