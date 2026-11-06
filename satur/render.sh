@@ -4,7 +4,7 @@ set -e
 mkdir -p out
 python3 satur/voice.py
 python3 satur/shots.py
-bash satur/render_chunks.sh
+bash satur/render_retry.sh
 python3 satur/sfx.py out/satur_sfx.wav
 D=$(python3 -c "import json;print(json.load(open('satur/timeline.json'))['duration'])")
 ffmpeg -loglevel error -y -i satur/public/music.mp3 -af "apad,atrim=0:$D,afade=t=out:st=$(python3 -c "print($D-1.5)"):d=1.5,aresample=48000" -ac 2 out/satur_music.wav
