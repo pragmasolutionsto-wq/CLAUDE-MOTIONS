@@ -597,7 +597,7 @@ const ShGraph: React.FC<{t: number}> = ({t}) => {
     <>
       <Night t={t} moon={false} />
       <Stack y={190}><Line t={t} a={K.registra - 0.3} text="registra tutta la notte" size={54} box="white" /></Stack>
-      <NightChart t={t} a={K.registra} b={sh('graph').b - 0.3} y={520} />
+      <NightChart t={t} a={sh('graph').a + 0.2} b={K.registra + 2.2} y={520} />
       <Stack y={1130} gap={16}>
         <Chip t={t} a={K.saturazione - 0.3} text="saturazione dell'ossigeno" icon="drop" size={42} />
         <Chip t={t} a={K.frequenza - 0.3} text="frequenza cardiaca" icon="heart" size={42} tone="pink" from="right" />

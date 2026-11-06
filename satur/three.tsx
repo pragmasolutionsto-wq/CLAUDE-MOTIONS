@@ -489,7 +489,7 @@ export const Heart3D: React.FC<{lt: number; w: number; h: number; warn?: number}
   }, []);
   const p = spring(prog(lt, 0, 0.8) * 1.8);
   const beat = 1 + 0.07 * Math.pow(Math.max(0, Math.sin(lt * 6)), 8);
-  const col = new THREE.Color(PINK).lerp(new THREE.Color('#d9534f'), warn);
+  const col = new THREE.Color('#e08b80').lerp(new THREE.Color('#d9534f'), warn);
   return (
     <Canvas w={w} h={h} z={11}>
       <group scale={p * beat} rotation={[0.1, Math.sin(lt * 0.9) * 0.4, 0]}>
