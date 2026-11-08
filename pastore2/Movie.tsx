@@ -407,7 +407,7 @@ const ShLeaves: React.FC<{t: number}> = ({t}) => (
 
 const ShSun: React.FC<{t: number}> = ({t}) => (
   <Clip name="sun" t={t} dz={0.03} shade={0.5}>
-    <Stack y={560}><Line t={t} a={sh('sun').a + 0.15} text="un'estate" size={84} serif color={WHITE} /></Stack>
+    <Stack y={560}><Line t={t} a={sh('sun').a + 0.15} text="un'estate" size={72} serif box="white" /></Stack>
     <T3 t={t} a={K.estate - 0.05} text="TANTO" y={640} h={300} size={1.4} mode="green" />
     <Stack y={930}><Line t={t} a={K.calda - 0.25} text="calda" size={150} box="pink" /></Stack>
   </Clip>
@@ -573,7 +573,7 @@ const ShSupplement: React.FC<{t: number}> = ({t}) => (
 const ShTalk: React.FC<{t: number}> = ({t}) => (
   <Clip name="talk" t={t} z0={1.02} dz={0.03} shade={0.55}>
     <Stack y={180} gap={4}>
-      <Line t={t} a={K.vero - 0.25} text="il vero consiglio?" size={80} serif color={GREEN_D} />
+      <Line t={t} a={K.vero - 0.25} text="il vero consiglio?" size={66} serif box="white" />
       <Line t={t} a={K.venire - 0.2} text="vieni a parlarne" size={76} box="white" />
     </Stack>
     <T3 t={t} a={K.noi - 0.3} text="CON NOI" y={1040} h={260} size={1.8} />
@@ -602,7 +602,7 @@ const ShEnd: React.FC<{t: number}> = ({t}) => {
   return (
     <Clip name="end" t={t} z0={1.0} dz={0.0} shade={0}>
       <Stack y={150} gap={4}>
-        <Line t={t} a={a + 0.15} text="ti aspettiamo" size={92} serif color={ROSE} />
+        <Line t={t} a={a + 0.15} text="ti aspettiamo" size={76} serif box="white" />
         <Line t={t} a={a + 0.55} text="nella nostra farmacia" size={62} box="green" />
       </Stack>
       <div style={{position: 'absolute', left: W / 2 - 260, top: 760, width: 520, height: 580, display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
