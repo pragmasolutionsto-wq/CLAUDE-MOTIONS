@@ -1,6 +1,27 @@
 {
-  "note": "Asset Runway generati per il reel diabete Farmacia Michelangelo (palette teal/lime/crema). Costi reali: immagine nano-banana-pro 20 crediti, clip seedance-2-mini 5 s 75 crediti, musica lyria-3-pro 8 crediti. Totale 1002 -> 439 residui (563 spesi).",
-  "images": {"blood": "4757a703-8d49-4a7e-8964-963679b7bca5", "layers": "e4154346-cd8d-4e5b-a36c-2cab8df3f9ec", "heel": "aecb2960-9a56-49ea-bda6-8296ac06cb2f", "eye": "1238d928-5fb6-49ab-afee-0c65aff7361d", "petal": "9b201aa1-d1f6-4439-be77-4bff24fe7276", "arm": "a9d0a8ec-b8f6-4ba5-b687-5e6350741cd3", "flatlay": "f692ddf6-99a7-4c6b-84ac-82f87d7cc98f", "mirror": "44aa2f55-d5fa-4976-a2af-a2e94277c67e", "hands": "8e589523-3de3-4bb9-bf22-0bbac7c17a6b"},
-  "clips": {"blood": "8832f911-ec80-4bb7-bdba-12c8b0fd1aaa", "heel": "c16c02dd-5de2-473c-bca4-46dc3fcf8856", "eye": "1878adac-cc05-4034-9413-1db725bb457d", "mirror": "14db56c6-f451-407c-a155-beaef510e3dc", "hands": "f1ccb5be-4fb8-46e9-9281-7f53ef695959"},
-  "music": {"lyria-3-pro": "5bf86ce8-c591-4ae8-9e1e-8bd198a950e0", "note": "traccia da 57 s, estesa a 95 s con due crossfade da 5 s su punti allineati sul ritmo (public/music.wav, vedi mix.sh)"}
+  "note": "Asset Runway del reel diabete Farmacia Michelangelo (palette teal/lime/crema). Costi reali: immagine nano-banana-pro 20 crediti, clip seedance-2-mini 5 s 75 crediti, musica lyria-3-pro 8 crediti. Speso: 9 immagini (180) + 7 clip (525) + musica (8) = 713 crediti.",
+  "images": {
+    "blood": "4757a703-8d49-4a7e-8964-963679b7bca5",
+    "layers": "e4154346-cd8d-4e5b-a36c-2cab8df3f9ec",
+    "heel": "aecb2960-9a56-49ea-bda6-8296ac06cb2f",
+    "eye": "1238d928-5fb6-49ab-afee-0c65aff7361d",
+    "petal": "9b201aa1-d1f6-4439-be77-4bff24fe7276",
+    "arm": "a9d0a8ec-b8f6-4ba5-b687-5e6350741cd3",
+    "flatlay": "f692ddf6-99a7-4c6b-84ac-82f87d7cc98f",
+    "mirror": "44aa2f55-d5fa-4976-a2af-a2e94277c67e",
+    "hands": "8e589523-3de3-4bb9-bf22-0bbac7c17a6b"
+  },
+  "clips": {
+    "blood": "8832f911-ec80-4bb7-bdba-12c8b0fd1aaa",
+    "heel": "c16c02dd-5de2-473c-bca4-46dc3fcf8856",
+    "eye": "1878adac-cc05-4034-9413-1db725bb457d",
+    "mirror": "14db56c6-f451-407c-a155-beaef510e3dc",
+    "hands": "f1ccb5be-4fb8-46e9-9281-7f53ef695959",
+    "petal": "266896b5-2975-442b-8822-2de07f3ba043",
+    "flatlay": "acc08ce6-fb5a-45e2-b715-a5d661e0396b"
+  },
+  "music": {
+    "lyria-3-pro": "5bf86ce8-c591-4ae8-9e1e-8bd198a950e0",
+    "note": "traccia da 57 s, estesa a 95 s con due crossfade da 5 s su punti allineati sul ritmo (public/music.wav, vedi mix.sh)"
+  }
 }

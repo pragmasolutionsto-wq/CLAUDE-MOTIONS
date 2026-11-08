@@ -1,8 +1,9 @@
 import React from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame} from 'remotion';
 import {Logo3D} from './three';
+import WORDS from './words.json';
 import {
-  ANTON, CREAM, DROP, DURATION, FOREST, FPS, H, LIFT, LIME, LIME_HI, MONT, SAGE, SPEECH_END, TEAL, TEAL_D, UNDER, W, WHITE, FACE_OUT,
+  ANTON, CREAM, DROP, DURATION, FOREST, FPS, H, LIFT, LIME, LIME_HI, MONT, SAGE, SPEECH_END, SUB_TOP, TEAL, TEAL_D, UNDER, W, WHITE, FACE_OUT,
   clamp, eBack, eIO, eO3, eO5, lerp, life, prog, segEnd, segT, soft, w,
 } from './util';
 
@@ -182,18 +183,24 @@ const Corner: React.FC = () => (
 
 /* ------------------------------------------------------------------ media degli inserti (clip Runway o immagine in movimento) */
 
-const Veil: React.FC = () => (
-  <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(244,241,236,0.78) 0%, rgba(244,241,236,0) 22%, rgba(244,241,236,0) 62%, rgba(244,241,236,0.55) 100%)'}} />
+const BAND = 230; // fascia in alto per i titoli: il personaggio parte sotto, i titoli non lo coprono
+
+// cornice: il media scende di BAND px (il fondo vuoto resta fuori quadro), in alto sfuma nel crema
+const Framed: React.FC<{children: React.ReactNode}> = ({children}) => (
+  <AbsoluteFill style={{background: CREAM, overflow: 'hidden'}}>
+    <div style={{position: 'absolute', left: 0, top: BAND, width: W, height: H}}>{children}</div>
+    <AbsoluteFill style={{background: `linear-gradient(180deg, ${CREAM} 0px, ${CREAM} ${BAND + 50}px, rgba(244,241,236,0) ${BAND + 200}px)`}} />
+    <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(244,241,236,0) 80%, rgba(244,241,236,0.7) 100%)'}} />
+  </AbsoluteFill>
 );
 
 // immagine con lento movimento di camera
 const Still: React.FC<{name: string; t: number; a: number; b: number; dir?: 1 | -1}> = ({name, t, a, b, dir = 1}) => {
   const p = prog(t, a - CUBE / 2, b + CUBE / 2);
   return (
-    <AbsoluteFill style={{overflow: 'hidden', background: CREAM}}>
-      <Img src={staticFile(`ai/${name}.jpg`)} style={{width: W, height: H, objectFit: 'cover', transform: `scale(${1.06 + p * 0.14}) translate(${dir * (p - 0.5) * 40}px, ${-p * 30}px)`}} />
-      <Veil />
-    </AbsoluteFill>
+    <Framed>
+      <Img src={staticFile(`ai/${name}.jpg`)} style={{position: 'absolute', left: 0, top: 0, width: W, height: H, objectFit: 'cover', transform: `scale(${1.04 + p * 0.14}) translate(${dir * (p - 0.5) * 40}px, ${-p * 30}px)`}} />
+    </Framed>
   );
 };
 
@@ -201,15 +208,13 @@ const Still: React.FC<{name: string; t: number; a: number; b: number; dir?: 1 | 
 const Clip: React.FC<{name: string; t: number; a: number; b: number; rate?: number}> = ({name, t, a, b, rate}) => {
   const len = 5.04;
   const r = rate ?? clamp(len / (b - a + CUBE), 0.5, 1.25);
-  const lt = t - a;
   return (
-    <AbsoluteFill style={{overflow: 'hidden', background: CREAM}}>
-      <Img src={staticFile(`ai/${name}.jpg`)} style={{width: W, height: H, objectFit: 'cover', transform: `scale(${1.12})`}} />
+    <Framed>
+      <Img src={staticFile(`ai/${name}.jpg`)} style={{position: 'absolute', left: 0, top: 0, width: W, height: H, objectFit: 'cover'}} />
       <Sequence from={Math.round((a - CUBE / 2) * FPS)} layout="none">
-        <OffthreadVideo src={staticFile(`ai/${name}.mp4`)} muted playbackRate={r} style={{width: W, height: H, objectFit: 'cover', transform: `scale(${1.03 + lt * 0.004})`}} />
+        <OffthreadVideo src={staticFile(`ai/${name}.mp4`)} muted playbackRate={r} style={{position: 'absolute', left: 0, top: 0, width: W, height: H, objectFit: 'cover'}} />
       </Sequence>
-      <Veil />
-    </AbsoluteFill>
+    </Framed>
   );
 };
 
@@ -266,7 +271,7 @@ const InsDon: React.FC<{t: number}> = ({t}) => {
   const [a, b] = INS.don;
   return (
     <>
-      <Still name="petal" t={t} a={a} b={b} />
+      <Clip name="petal" t={t} a={a} b={b} />
       <Title t={t} a={a + 0.05} b={b + 1} y={150} lines={[{text: 'nelle donne', size: 90}]} />
       <Title t={t} a={a + 0.4} b={b + 1} y={282} lines={[{text: 'benessere intimo', hi: true, size: 76}]} />
       <Col y={900}>
@@ -284,7 +289,7 @@ const InsPel: React.FC<{t: number}> = ({t}) => {
   const tc = w('cosmetici') - 0.2;
   return (
     <>
-      <Xf t={t} at={tc} a={<Still name="arm" t={t} a={a} b={tc} dir={-1} />} b={<Still name="flatlay" t={t} a={tc} b={b} />} />
+      <Xf t={t} at={tc} a={<Still name="arm" t={t} a={a} b={tc} dir={-1} />} b={<Clip name="flatlay" t={t} a={tc} b={b} />} />
       <Title t={t} a={a + 0.05} b={tc} y={150} lines={[{text: 'pelle secca', size: 96}]} />
       <Title t={t} a={tc + 0.05} b={b + 1} y={150} lines={[{text: 'cosmetici specifici', size: 72}]} />
       <Title t={t} a={w('viso') - 0.1} b={b + 1} y={270} lines={[{text: 'viso e corpo', hi: true, size: 92}]} />
@@ -447,10 +452,68 @@ const pushAt = (t: number) => {
   return m;
 };
 
+/* ------------------------------------------------------------------ sottotitoli parola per parola */
+
+type SW = {t: number; w: string; k: number};
+const SUBW: SW[] = (() => {
+  const a = (WORDS as [number, string, number][]).map(([t, w, k]) => ({t, w, k}));
+  const out: SW[] = [];
+  for (let i = 0; i < a.length; i++) {
+    out.push(a[i]);
+    if (a[i].k === 0 && a[i].w === 'hai' && a[i + 1]?.w === 'diabete') out.push({t: (a[i].t + a[i + 1].t) / 2, w: 'il', k: 0}); // "se hai il diabete"
+  }
+  return out;
+})();
+type Chunk = {a: number; b: number; words: SW[]};
+const CHUNKS: Chunk[] = (() => {
+  const res: Chunk[] = [];
+  let cur: SW[] = [];
+  const flush = () => {
+    if (!cur.length) return;
+    res.push({a: cur[0].t - 0.05, b: 0, words: cur});
+    cur = [];
+  };
+  SUBW.forEach((x, i) => {
+    const prev = cur[cur.length - 1];
+    const len = cur.reduce((n, y) => n + y.w.length + 1, 0);
+    if (prev && (cur.length >= 4 || len + x.w.length > 22 || x.k !== prev.k || x.t - prev.t > 0.9)) flush();
+    cur.push(x);
+  });
+  flush();
+  res.forEach((c, i) => {
+    const last = c.words[c.words.length - 1];
+    const next = res[i + 1];
+    c.b = Math.min(last.t + 0.6, next ? next.a + 0.02 : 1e9) + 0.08;
+  });
+  return res;
+})();
+
+const Subs: React.FC<{t: number}> = ({t}) => {
+  const c = CHUNKS.find((x) => t >= x.a && t < x.b);
+  if (!c) return null;
+  const p = eO3(prog(t, c.a, c.a + 0.1));
+  return (
+    <div style={{position: 'absolute', left: 30, right: 30, top: SUB_TOP + 36, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px 10px', opacity: p, transform: `translateY(${(1 - p) * 14}px)`}}>
+      {c.words.map((x, i) => {
+        const nxt = c.words[i + 1];
+        const on = t >= x.t - 0.02 && (!nxt || t < nxt.t - 0.02);
+        return (
+          <div key={i} style={{
+            fontFamily: ANTON, fontSize: 70, lineHeight: 1.05, textTransform: 'uppercase', letterSpacing: '0.01em', padding: '6px 20px 9px', borderRadius: 16,
+            background: on ? LIME : 'rgba(20,56,46,0.88)', color: on ? FOREST : WHITE, boxShadow: '0 8px 22px rgba(20,56,46,0.28)',
+            transform: `scale(${on ? 1.07 : 1})`,
+          }}>
+            {x.w}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 /* ------------------------------------------------------------------ montaggio */
 
-export const Movie: React.FC = () => {
-  const t = useCurrentFrame() / FPS;
+const Scene: React.FC<{t: number}> = ({t}) => {
   const inside = KEYS.find((k) => t >= INS[k][0] && t < INS[k][1]);
   for (const k of KEYS) {
     const [a, b] = INS[k];
@@ -481,6 +544,16 @@ export const Movie: React.FC = () => {
           <OnFace t={t} />
         </AbsoluteFill>
       </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+export const Movie: React.FC = () => {
+  const t = useCurrentFrame() / FPS;
+  return (
+    <AbsoluteFill>
+      <Scene t={t} />
+      <Subs t={t} />
     </AbsoluteFill>
   );
 };

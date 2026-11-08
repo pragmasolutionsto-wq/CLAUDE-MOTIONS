@@ -51,8 +51,10 @@ SFX (`generate_sound_effect`): whoosh morbido (transizione a cubo), pop leggero 
 - **Piano base ≈ 700 crediti, piano completo ≈ 970 crediti.**
 
 ## Come è stato fatto (v2, in risparmio)
-- 9 immagini nano-banana-pro (20 crediti l'una) in palette Michelangelo; solo 5 animate con seedance-2-mini 5 s (75 crediti l'una): `blood`, `heel`, `eye`, `mirror`, `hands`. Le altre 4 (`layers`, `petal`, `arm`, `flatlay`) restano immagini con movimento di camera in Remotion. `heel` e `eye` sono riusate in più scene.
+- 9 immagini nano-banana-pro (20 crediti l'una) in palette Michelangelo; 7 animate con seedance-2-mini 5 s (75 crediti l'una): `blood`, `heel`, `eye`, `mirror`, `hands`, `petal`, `flatlay`. Le altre 2 (`layers`, `arm`) restano immagini con movimento di camera in Remotion. `heel` e `eye` sono riusate in più scene.
 - Musica: lyria-3-pro (8 crediti), 57 s estesi a 95 s con due crossfade da 5 s su punti allineati al ritmo. Effetti sonori sintetizzati in locale (0 crediti).
-- Totale 563 crediti spesi su 1002 (439 residui). ID dei task in `runway_tasks.json`.
+- 713 crediti spesi in totale. ID dei task in `runway_tasks.json`.
 - Consegna: `mix.sh` produce il master senza musica e senza sottotitoli (voce + sfx) e la versione con musica a -14 LUFS.
 - Cerchio con il volto durante gli inserti: 350 px, inquadra tutta la faccia (attaccatura dei capelli → mento).
+- v3: sottotitoli parola per parola in Remotion (box scuro, parola attiva in lime, fascia y 1526+); media sotto una fascia titoli di 230 px così i titoli non coprono i personaggi e il fondo vuoto delle immagini resta fuori quadro; bug corretto: le clip erano fuori dal quadro (posizionamento) e restavano ferme.
+- Musica nel mix: loudnorm -21 LUFS, ducking leggero (ratio 3), bed circa 7 dB sotto la voce.
