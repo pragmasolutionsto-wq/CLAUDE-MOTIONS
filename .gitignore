@@ -69,3 +69,5 @@ compl/public/ai/cream.mp4
 compl/public/ai/eye.mp4
 compl/public/ai/petal.mp4
 compl/public/ai/flatlay.mp4
+pastore2/public/ai/*.mp4
+!pastore2/public/ai/raw_*.mp4
