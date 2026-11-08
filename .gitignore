@@ -3,3 +3,14 @@ out/
 .DS_Store
 stonesofa/public/cut/
 stonesofa/public/lay/
+node_modules/
+out/
+michelangelo/diabete/tmp/
+michelangelo/diabete/public/raw/
+michelangelo/diabete/public/base.mp4
+michelangelo/diabete/public/voice.wav
+michelangelo/diabete/public/ai/*.mp4
+!michelangelo/diabete/public/ai/raw/*.mp4
+montaggi/**/*.mp4
+!montaggi/michelangelo-nov26/*.mp4
+!montaggi/diabete-nov26/Michelangelo_Reel_Diabete_Complicanze_v1.mp4

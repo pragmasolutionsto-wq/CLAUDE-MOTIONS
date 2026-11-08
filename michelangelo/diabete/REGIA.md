@@ -1,6 +1,6 @@
 # REGIA — Reel "Diabete: complicanze e piccole attenzioni quotidiane" · Farmacia Michelangelo
 
-Formato 1080×1920 · 30fps · ~95 s · voce reale della farmacista (12 clip girate) · inserti 3D Runway con brand identity Michelangelo · musica Runway · versione master senza musica e senza sottotitoli.
+Formato 1080×1920 · 30fps · 95 s · versione v2 (Remotion + asset Runway Michelangelo) · voce reale della farmacista (12 clip girate) · inserti 3D Runway con brand identity Michelangelo · musica Runway · versione master senza musica e senza sottotitoli.
 
 Tempi: parola per parola da Whisper (`whisper_med.json`), tagli in `cuts.json`.
 
@@ -49,3 +49,10 @@ SFX (`generate_sound_effect`): whoosh morbido (transizione a cubo), pop leggero 
 ## Crediti Runway (stima)
 - 10 immagini ≈ 200 · 5 clip ≈ 450 (8 clip ≈ 720) · musica 95 s ≈ 32 (lyria-3-pro 8) · 3 SFX ≈ 15.
 - **Piano base ≈ 700 crediti, piano completo ≈ 970 crediti.**
+
+## Come è stato fatto (v2, in risparmio)
+- 9 immagini nano-banana-pro (20 crediti l'una) in palette Michelangelo; solo 5 animate con seedance-2-mini 5 s (75 crediti l'una): `blood`, `heel`, `eye`, `mirror`, `hands`. Le altre 4 (`layers`, `petal`, `arm`, `flatlay`) restano immagini con movimento di camera in Remotion. `heel` e `eye` sono riusate in più scene.
+- Musica: lyria-3-pro (8 crediti), 57 s estesi a 95 s con due crossfade da 5 s su punti allineati al ritmo. Effetti sonori sintetizzati in locale (0 crediti).
+- Totale 563 crediti spesi su 1002 (439 residui). ID dei task in `runway_tasks.json`.
+- Consegna: `mix.sh` produce il master senza musica e senza sottotitoli (voce + sfx) e la versione con musica a -14 LUFS.
+- Cerchio con il volto durante gli inserti: 350 px, inquadra tutta la faccia (attaccatura dei capelli → mento).

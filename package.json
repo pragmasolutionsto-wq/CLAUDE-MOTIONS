@@ -19,7 +19,11 @@
     "@types/react": "^19.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "remotion": "^4.0.300"
+    "remotion": "^4.0.300",
+    "@react-three/fiber": "^8.17.10",
+    "@remotion/three": "^4.0.300",
+    "@types/three": "^0.170.0",
+    "three": "^0.170.0"
   },
   "devDependencies": {
     "typescript": "^5.8.3"
