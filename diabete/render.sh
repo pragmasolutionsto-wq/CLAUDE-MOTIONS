@@ -21,3 +21,10 @@ ffprobe -v error -show_entries format=duration,size -of compact out/plebiscito_d
 ffmpeg -loglevel error -y -i out/diab_raw.mp4 -i out/diabete_voice.wav -i out/diab_sfx.wav -filter_complex \
   "[0:v]ass=out/diabete_subs.ass:fontsdir=diabete/fonts[v];[2:a]volume=0.4[fx];[1:a][fx]amix=inputs=2:normalize=0,loudnorm=I=-14:TP=-1:LRA=9[a]" \
   -map "[v]" -map "[a]" -c:v libx264 -crf 17 -preset slow -pix_fmt yuv420p -c:a aac -b:a 256k -ar 48000 -movflags +faststart -shortest out/plebiscito_diabete_reel_sottotitoli.mp4
+# versioni con musica di sottofondo (lieve, si abbassa sotto la voce)
+D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 out/diab_raw.mp4)
+MIX="[1:a]asplit=2[v1][vkey];[3:a]aresample=48000,volume=0.16,afade=t=in:d=1.5,afade=t=out:st=$(echo "$D-3"|bc):d=3[m];[m][vkey]sidechaincompress=threshold=0.03:ratio=4:attack=30:release=400[md];[2:a]volume=0.4[fx];[v1][fx][md]amix=inputs=3:normalize=0,loudnorm=I=-14:TP=-1:LRA=9[a]"
+for v in reel reel_sottotitoli; do
+  ffmpeg -loglevel error -y -i out/plebiscito_diabete_$v.mp4 -i out/diabete_voice.wav -i out/diab_sfx.wav -i diabete/public/music/sottofondo.mp3 -filter_complex "$MIX" \
+    -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 256k -ar 48000 -movflags +faststart -shortest out/plebiscito_diabete_${v}_musica.mp4
+done
