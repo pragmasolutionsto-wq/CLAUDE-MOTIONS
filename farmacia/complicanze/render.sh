@@ -1,5 +1,5 @@
 #!/bin/bash
-# reel farmacista "Complicanze del diabete": girato pulito -> base tagliata a fotogramma, grafiche Remotion, musica+effetti Runway, -14 LUFS
+# reel farmacista "Complicanze del diabete": girato pulito -> base tagliata a fotogramma, grafiche Remotion, clip+musica+effetti Runway, -14 LUFS
 set -e
 B=${CHROME:-/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell}
 mkdir -p out

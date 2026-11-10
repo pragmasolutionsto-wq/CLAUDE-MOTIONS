@@ -210,6 +210,16 @@ const EndCard: React.FC<{T: number}> = ({T}) => {
 
 /* ------------------------------------------------------------------ montaggio */
 
+// clip Runway della signora a tutto schermo, tagli netti a fotogramma; sottotitoli e schede restano sopra
+const Clip: React.FC<{src: string; a: number; b: number; len?: number}> = ({src, a, b, len = 5.0}) => (
+  <Sequence from={fr(a)} durationInFrames={fr(b) - fr(a)}>
+    <AbsoluteFill>
+      <OffthreadVideo src={staticFile(src)} muted playbackRate={Math.min(1, len / (b - a))} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+      <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(1,40,40,0) 50%, rgba(1,40,40,0.5) 100%)'}} />
+    </AbsoluteFill>
+  </Sequence>
+);
+
 export const Movie: React.FC = () => {
   const f = useCurrentFrame();
   const T = f / FPS;
@@ -220,6 +230,11 @@ export const Movie: React.FC = () => {
   return (
     <AbsoluteFill style={{background: '#000'}}>
       <Footage T={T} />
+
+      <Clip src="complicanze/piedi.mp4" a={A.crepa - 0.1} b={A.footIn - 0.05} />
+      <Clip src="complicanze/occhi.mp4" a={A.eyeIn} b={A.eyeOut} />
+      <Clip src="complicanze/acqua.mp4" a={A.bevi - 0.1} b={A.helpIn} />
+      <Clip src="complicanze/farmacia.mp4" a={A.helpIn} b={A.helpIn + 5.0} />
 
       {/* schede nella metà bassa: lei resta sempre visibile sopra */}
       <Card T={T} at={A.pelle - 0.15} until={A.puglia - 0.1} h={200}>
@@ -249,13 +264,9 @@ export const Movie: React.FC = () => {
         {(t) => <Rows t={t} title="OGNI GIORNO" items={['DOCCIA TIEPIDA', 'DETERGENTE DELICATO', 'PIEGHE BEN ASCIUGATE']}
           at={rel(A.doccia - 0.1, [A.doccia, A.delicato, A.pieghe])} size={44} />}
       </Card>
-      <Card T={T} at={A.bevi - 0.1} until={A.helpIn - 0.1} h={260}>
-        {(t) => <Rows t={t} title="E POI" items={["1,5–2 L D'ACQUA A PICCOLI SORSI", 'GLICEMIA STABILE']}
-          at={rel(A.bevi - 0.1, [A.bevi, A.stabile])} accent={1} size={40} />}
-      </Card>
-      <Card T={T} at={A.helpIn} until={A.helpOut} h={290}>
+      <Card T={T} at={A.helpIn + 4.9} until={A.helpOut} h={290}>
         {(t) => <Pills t={t} title="TI AIUTIAMO A SCEGLIERE" items={['DETERGENTI', 'EMOLLIENTI', 'OCCHI E INTIMITÀ', 'PROMEMORIA CONTROLLI']}
-          at={rel(A.helpIn, [A.det2, A.emollienti, A.intimita, A.ricordarti])} size={50} />}
+          at={rel(A.helpIn + 4.9, [A.helpIn + 5.1, A.helpIn + 5.3, A.helpIn + 5.5, Math.max(A.ricordarti, A.helpIn + 5.7)])} size={50} />}
       </Card>
       <Card T={T} at={A.warnIn} until={A.warnOut} h={290}>
         {(t) => <Pills t={t} title="SE NOTI" items={['UNA FERITA', 'UN ARROSSAMENTO', 'UN GONFIORE', 'UNA CREPA CHE NON GUARISCE']}
@@ -266,11 +277,14 @@ export const Movie: React.FC = () => {
       <Title T={T} at={0.1} until={A.pelle - 0.3} lines={[t112('DIABETE?', 120), T112('PELLE, OCCHI, INTIMITÀ', 84)]} />
       <Chip T={T} at={A.puglia - 0.05} until={A.whyIn - 0.3} text="IN PUGLIA SONO TANTI" y={1250} />
       <Chip T={T} at={A.secca} until={A.crepa - 0.3} text="SECCA · PRURIGINOSA · SCREPOLATA" y={1250} />
-      <Chip T={T} at={A.crepa} until={A.footIn - 0.3} text="UNA CREPA PUÒ DIVENTARE FERITA" y={1250} wobble />
+      <Chip T={T} at={A.crepa} until={A.footIn - 0.3} text="UNA CREPA PUÒ DIVENTARE FERITA" y={260} wobble />
       <Title T={T} at={A.cura - 0.05} until={A.asciuga - 0.35} lines={[t112('CURA'), T112('DETTAGLIATA')]} />
       <Chip T={T} at={A.oculista} until={A.controlli - 0.3} text="OCULISTA O MEDICO" y={1250} />
       <Chip T={T} at={A.controlli} until={A.intimo - 0.4} text="CONTROLLI REGOLARI" y={1250} />
       <Title T={T} at={A.dayIn} until={A.doccia - 0.35} lines={[t112('COSA FARE'), T112('OGNI GIORNO')]} />
+      <Chip T={T} at={A.bevi} until={A.stabile - 0.25} text="1,5–2 L D'ACQUA A PICCOLI SORSI" y={260} />
+      <Chip T={T} at={A.stabile} until={A.helpIn - 0.3} text="GLICEMIA STABILE" y={260} />
+      <Chip T={T} at={A.helpIn + 0.2} until={A.helpIn + 4.7} text="TI AIUTIAMO A SCEGLIERE" y={260} />
       <Title T={T} at={A.parlane - 0.05} until={END_AT - 0.1} lines={[t112('PARLANE'), T112('CON NOI')]} />
 
       <Captions T={T} hide={T >= END_AT} />
