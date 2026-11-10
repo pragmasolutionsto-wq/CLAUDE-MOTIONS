@@ -432,7 +432,7 @@ const FTogether: React.FC<{t: number}> = ({t}) => {
       <>
         <Stack y={z.y}>
           <Line t={t} a={sh('f_together').a + 0.05} text="insieme" size={64} box="navy" out={sw} />
-          <Line t={t} a={K.completo - 0.3} text="quadro completo" size={84} box="white" out={sw} />
+          <Line t={t} a={K.completo - 0.3} text="quadro completo" size={66} box="white" out={sw} />
         </Stack>
         <Stack y={z.y}><Line t={t} a={sw} text="prediabete" size={110} box="grad" /></Stack>
         <Stack y={z.y + 160} gap={14}>
