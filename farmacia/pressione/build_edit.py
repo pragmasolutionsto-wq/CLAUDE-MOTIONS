@@ -24,11 +24,12 @@ MUSIC_LUFS = -26
 # poi le pause interne oltre 0,45 s sono asciugate
 RANGES = [
     (0.00, 6.12, "Quando le prime mattine fredde tiri fuori il giubbotto, ma attenzione: c'è un'altra cosa da controllare."),
-    (7.50, 57.66, "Quando le temperature scendono, infatti, la pressione tende a salire. E per questo, sia che tu non l'abbia mai controllata o che sei già in terapia, conviene fare qualche controllo di più. Ti consigliamo pertanto di misurarla un po' più spesso: due volte la mattina e due volte la sera. Annotali su un diario, così da tenere traccia per una settimana dei tuoi valori. Poi, volendo, li guarderemo insieme e ti diremo se è il caso di andare dal medico oppure no. Per avere valori affidabili, però, è indispensabile utilizzare uno strumento serio, che sia certificato, che possa misurare e tenere memoria dei valori della pressione e che abbia un bracciale della giusta misura per il tuo braccio."),
-    (83.30, 96.12, "Se il tuo apparecchio è datato o difficile da usare, o il bracciale non va bene, potrebbe darti dei risultati poco affidabili. E tu meriti dei numeri di cui ti puoi fidare."),
+    (7.50, 34.30, "Quando le temperature scendono, infatti, la pressione tende a salire. E per questo, sia che tu non l'abbia mai controllata o che sei già in terapia, conviene fare qualche controllo di più. Ti consigliamo pertanto di misurarla un po' più spesso: due volte la mattina e due volte la sera. Annotali su un diario, così da tenere traccia per una settimana dei tuoi valori."),
+    (35.12, 57.66, "Poi, volendo, li guarderemo insieme e ti diremo se è il caso di andare dal medico oppure no. Per avere valori affidabili, però, è indispensabile utilizzare uno strumento serio, che sia certificato, che possa misurare e tenere memoria dei valori della pressione e che abbia un bracciale della giusta misura per il tuo braccio."),
+    (85.60, 96.12, "Se il tuo apparecchio è datato o difficile da usare, o il bracciale non va bene, potrebbe darti dei risultati poco affidabili. E tu meriti dei numeri di cui ti puoi fidare."),
     (97.08, 104.82, "Vieni in farmacia: ti aiuteremo a scegliere l'apparecchio più adatto a te e ti aiuteremo a capire come misurare bene la pressione."),
-    (105.48, 109.82, "Se ne hai già uno, portalo: lo vedremo insieme."),
-    (109.90, 122.26, "E ricorda una cosa importantissima: non modificare mai da solo la terapia. Vieni da noi, parliamone insieme e ti diremo noi se è il caso di sentire il medico. Ti aspettiamo!"),
+    (105.48, 109.92, "Se ne hai già uno, portalo: lo vedremo insieme."),
+    (111.18, 122.26, "E ricorda una cosa importantissima: non modificare mai da solo la terapia. Vieni da noi, parliamone insieme e ti diremo noi se è il caso di sentire il medico. Ti aspettiamo!"),
 ]
 TEXT = ' '.join(r[2] for r in RANGES)
 
@@ -49,7 +50,7 @@ def snap(t, before):
 
 
 _thr = np.percentile(_db0, 90) - 24
-EXACT = set()   # tagli dentro il parlato continuo (verificati a orecchio con Whisper)
+EXACT = {35.12, 85.60, 109.92, 111.18}   # tagli sui "via" e sulla falsa partenza, verificati con energia + Whisper
 SEGS = []
 for a, b, _ in RANGES:
     a = a if a in EXACT else snap(a, True)
@@ -241,7 +242,7 @@ def at(word, occ=1):
 A = {
     'tempIn': round(at('Quando', 2) - 0.1, 3), 'salire': at('salire.'), 'mai': at('mai', 1), 'terapia': at('terapia,'), 'controllo': at('controllo'),
     'measIn': round(at('consigliamo') - 0.35, 3), 'due': at('due', 1), 'sera': at('sera.'), 'diario': at('diario,'), 'settimana': at('settimana'),
-    'guarderemo': at('guarderemo'),
+    'guarderemo': at('guarderemo'), 
     'toolIn': round(at('avere') - 0.35, 3), 'certificato': at('certificato,'), 'memoria': at('memoria'), 'bracciale1': at('bracciale', 1),
     'oldIn': round(at('Se', 2) - 0.1, 3), 'datato': at('datato'), 'difficile': at('difficile'), 'bracciale2': at('bracciale', 2), 'meriti': at('meriti'),
     'vieni1': round(at('Vieni', 1) - 0.1, 3), 'capire': at('capire'),
@@ -273,18 +274,15 @@ sh('ffmpeg', '-loglevel', 'error', '-y', '-i', os.path.join(HERE, 'music.mp3'), 
    f"atrim=0:{total},loudnorm=I={MUSIC_LUFS}:TP=-4:LRA=11,afade=t=in:d=0.25,afade=t=out:st={total - 1.8}:d=1.8",
    '-ar', '48000', '-ac', '2', music)
 
-EV = [  # (tempo, file, guadagno dB)
-    (0.12, 'pop', 6), (A['tempIn'] - 0.1, 'whoosh', -8), (A['salire'] - 0.05, 'pop', 4),
-    (A['mai'] - 0.05, 'pop', 3), (A['terapia'] - 0.05, 'pop', 3), (A['controllo'] - 0.05, 'pop', 4),
-    (A['measIn'] - 0.1, 'whoosh', -8), (A['due'] - 0.05, 'pop', 4), (A['diario'] - 0.05, 'pop', 4), (A['settimana'] - 0.05, 'clock', -12),
-    (A['guarderemo'] - 0.05, 'pop', 4),
-    (A['toolIn'] - 0.05, 'whoosh', -8), (A['certificato'] - 0.05, 'pop', 3), (A['memoria'] - 0.05, 'pop', 3), (A['bracciale1'] - 0.05, 'pop', 3),
-    (A['oldIn'] - 0.05, 'whoosh', -8), (A['datato'] - 0.05, 'pop', 3), (A['difficile'] - 0.05, 'pop', 3), (A['bracciale2'] - 0.05, 'pop', 3),
-    (A['meriti'] - 0.05, 'chime', -10),
-    (A['vieni1'] - 0.1, 'whoosh', -8), (A['capire'] - 0.05, 'pop', 3), (A['portalo'] - 0.05, 'pop', 4),
-    (A['modificare'] - 0.05, 'pop', 5), (A['vieni2'] - 0.05, 'pop', 4),
-    (A['endIn'] - 0.1, 'whoosh', -7), (A['endIn'] + 0.2, 'logo', -6),
-]
+# transizioni: whoosh solo sui tagli clip (entrata e uscita), picco sul fotogramma del taglio; pop morbido su schede e chip
+WPEAK = 0.10   # picco del whoosh2 nel file
+CUTS = [A['tempIn'], A['mai'] - 0.4, A['due'] - 0.3, A['settimana'] + 0.6, A['vieni1'], A['seNe'], A['endIn']]
+EV = [(c - WPEAK, 'whoosh2', -9) for c in CUTS]
+EV += [(t, 'pop2', -8) for t in [0.15, A['salire'] - 0.3, A['mai'] - 0.3, A['terapia'], A['controllo'], A['measIn'] + 0.4, A['due'], A['diario'],
+                                 A['settimana'], A['guarderemo'], A['toolIn'], A['certificato'], A['memoria'], A['bracciale1'], A['oldIn'],
+                                 A['datato'], A['difficile'], A['bracciale2'], A['meriti'], A['vieni1'] + 0.3, A['capire'], A['seNe'] + 0.1,
+                                 A['modificare'] - 0.1, A['vieni2'] - 0.05]]
+EV += [(A['endIn'] + 0.2, 'logo', -6)]
 ins, fl = [], []
 for k, (t, name, g) in enumerate(EV):
     ins += ['-i', os.path.join(SFX, f'{name}.mp3')]

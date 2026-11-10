@@ -121,7 +121,7 @@ const Card: React.FC<{T: number; at: number; until: number; h: number; children:
   const pin = eO5(prog(T, at, at + 0.45));
   const pout = eO3(prog(T, until - 0.3, until));
   return (
-    <div style={{position: 'absolute', left: 36, width: 650, top: CARD_BOTTOM - h, height: h, borderRadius: 40, overflow: 'hidden',
+    <div style={{position: 'absolute', left: 50, width: W - 100, top: CARD_BOTTOM - h, height: h, borderRadius: 40, overflow: 'hidden',
       background: 'rgba(255,255,255,0.95)', boxShadow: '0 24px 60px rgba(1,40,40,0.35)', border: `4px solid ${MINT}`,
       opacity: 1 - pout, transform: `translateY(${(1 - pin) * 520 + pout * 30}px) scale(${lerp(0.94, 1, pin)})`}}>
       {children(t)}
@@ -253,15 +253,15 @@ export const Movie: React.FC = () => {
       {/* titoli e chip */}
       <Title T={T} at={0.1} until={A.tempIn - 0.3} lines={[t112('PRESSIONE', 124), T112('E PRIMI FREDDI', 108)]} />
       <Chip T={T} at={A.salire - 0.3} until={A.mai - 0.6} text="COL FREDDO LA PRESSIONE SALE" y={260} />
-      <Chip T={T} at={A.measIn + 0.4} until={A.due - 0.5} text="MISURALA PIÙ SPESSO" x={36} y={1250} />
+      <Chip T={T} at={A.measIn + 0.4} until={A.due - 0.5} text="MISURALA PIÙ SPESSO" y={1250} />
       <Chip T={T} at={A.due} until={A.diario - 0.2} text="2 VOLTE AL MATTINO · 2 LA SERA" y={260} />
       <Chip T={T} at={A.diario} until={A.settimana - 0.2} text="ANNOTALI SU UN DIARIO" y={260} />
       <Chip T={T} at={A.settimana} until={A.settimana + 0.5} text="PER UNA SETTIMANA" y={260} />
-      <Chip T={T} at={A.guarderemo} until={A.toolIn - 0.3} text="LI GUARDIAMO INSIEME" x={36} y={1250} />
-      <Chip T={T} at={A.meriti} until={A.vieni1 - 0.3} text="MERITI NUMERI AFFIDABILI" x={36} y={1250} />
+      <Chip T={T} at={A.guarderemo} until={A.toolIn - 0.3} text="LI GUARDIAMO INSIEME" y={1250} />
+      <Chip T={T} at={A.meriti} until={A.vieni1 - 0.3} text="MERITI NUMERI AFFIDABILI" y={1250} />
       <Chip T={T} at={A.vieni1 + 0.3} until={A.capire - 0.2} text="TI AIUTIAMO A SCEGLIERE" y={260} />
       <Chip T={T} at={A.capire} until={A.seNe - 0.3} text="E A MISURARTI BENE" y={260} />
-      <Chip T={T} at={A.seNe + 0.1} until={A.ricorda - 0.3} text="HAI GIÀ UN MISURATORE? PORTALO" x={36} y={1250} />
+      <Chip T={T} at={A.seNe + 0.1} until={A.ricorda - 0.3} text="HAI GIÀ UN MISURATORE? PORTALO" y={1250} />
       <Title T={T} at={A.modificare - 0.1} until={A.vieni2 - 0.3} lines={[t112('NON MODIFICARE MAI', 96), T112('LA TERAPIA DA SOLO', 96)]} />
       <Title T={T} at={A.vieni2 - 0.05} until={END_AT - 0.1} lines={[t112('PARLIAMONE'), T112('INSIEME')]} />
 
