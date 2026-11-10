@@ -1,0 +1,160 @@
+{
+ "shots": [
+  {
+   "name": "f_hook",
+   "kind": "face",
+   "a": 0.0,
+   "b": 7.625,
+   "tr": "none"
+  },
+  {
+   "name": "glucose",
+   "kind": "clip",
+   "a": 7.625,
+   "b": 11.992,
+   "tr": "cube"
+  },
+  {
+   "name": "f_silent",
+   "kind": "face",
+   "a": 11.992,
+   "b": 18.144,
+   "tr": "cube"
+  },
+  {
+   "name": "f_two",
+   "kind": "face",
+   "a": 18.144,
+   "b": 20.327,
+   "tr": "none"
+  },
+  {
+   "name": "drop",
+   "kind": "clip",
+   "a": 20.327,
+   "b": 25.782,
+   "tr": "cube"
+  },
+  {
+   "name": "f_hba1c",
+   "kind": "face",
+   "a": 25.782,
+   "b": 31.952,
+   "tr": "cube"
+  },
+  {
+   "name": "f_together",
+   "kind": "face",
+   "a": 31.952,
+   "b": 40.806,
+   "tr": "none"
+  },
+  {
+   "name": "life",
+   "kind": "clip",
+   "a": 40.806,
+   "b": 46.455,
+   "tr": "cube"
+  },
+  {
+   "name": "f_who",
+   "kind": "face",
+   "a": 46.455,
+   "b": 53.487,
+   "tr": "cube"
+  },
+  {
+   "name": "f_risk",
+   "kind": "face",
+   "a": 53.487,
+   "b": 62.497,
+   "tr": "none"
+  },
+  {
+   "name": "f_woman",
+   "kind": "face",
+   "a": 62.497,
+   "b": 72.691,
+   "tr": "none"
+  },
+  {
+   "name": "f_promo",
+   "kind": "face",
+   "a": 72.691,
+   "b": 79.668,
+   "tr": "none"
+  },
+  {
+   "name": "f_area",
+   "kind": "face",
+   "a": 79.668,
+   "b": 84.923,
+   "tr": "none"
+  },
+  {
+   "name": "f_wait",
+   "kind": "face",
+   "a": 84.923,
+   "b": 88.062,
+   "tr": "none"
+  },
+  {
+   "name": "end",
+   "kind": "mg",
+   "a": 88.062,
+   "b": 92.162,
+   "tr": "cube"
+  }
+ ],
+ "k": {
+  "mese": 0.865,
+  "riguarda": 3.656,
+  "diabete0b": 5.068,
+  "pensa": 6.447,
+  "tipo": 8.576,
+  "diffuso": 9.573,
+  "silenzio": 11.413,
+  "sintomi": 13.433,
+  "glicemia2": 15.695,
+  "muoverti": 17.218,
+  "esami": 19.371,
+  "glicemia3": 20.762,
+  "glucosio": 21.947,
+  "prelievo": 23.81,
+  "fotografia": 25.165,
+  "emoglobina3": 25.842,
+  "media": 28.25,
+  "mesi": 30.113,
+  "filmato": 31.344,
+  "completo": 33.683,
+  "prediabete": 36.402,
+  "ancora": 37.636,
+  "segnale": 39.026,
+  "alimentazione": 41.114,
+  "movimento": 42.243,
+  "peso": 43.178,
+  "sonno": 43.742,
+  "ridurre": 44.494,
+  "consigliamo": 46.88,
+  "tutti": 50.45,
+  "quaranta": 51.659,
+  "familiari": 55.219,
+  "sovrappeso": 57.176,
+  "muove": 58.155,
+  "pressione": 59.297,
+  "colesterolo": 59.95,
+  "donna": 63.068,
+  "gravidanza": 65.221,
+  "bambino": 67.18,
+  "policistico": 69.292,
+  "condizioni": 70.549,
+  "novembre11": 73.318,
+  "pacchetto": 75.154,
+  "prezzo": 78.339,
+  "controllo": 79.942,
+  "area": 83.09,
+  "tranquillita": 84.13,
+  "aspettiamo": 85.192,
+  "sempre13": 86.482
+ }
+}
