@@ -1,0 +1,156 @@
+{
+ "shots": [
+  {
+   "name": "f_hook",
+   "kind": "face",
+   "a": 0.0,
+   "b": 3.724,
+   "tr": "none"
+  },
+  {
+   "name": "glucose",
+   "kind": "clip",
+   "a": 3.724,
+   "b": 9.82,
+   "tr": "cube"
+  },
+  {
+   "name": "f_checks",
+   "kind": "face",
+   "a": 9.82,
+   "b": 13.128,
+   "tr": "cube"
+  },
+  {
+   "name": "f_skin",
+   "kind": "face",
+   "a": 13.128,
+   "b": 17.989,
+   "tr": "none"
+  },
+  {
+   "name": "feet",
+   "kind": "clip",
+   "a": 17.989,
+   "b": 22.84,
+   "tr": "cube"
+  },
+  {
+   "name": "eye",
+   "kind": "clip",
+   "a": 22.84,
+   "b": 24.988,
+   "tr": "whip"
+  },
+  {
+   "name": "f_eyes",
+   "kind": "face",
+   "a": 24.988,
+   "b": 29.324,
+   "tr": "cube"
+  },
+  {
+   "name": "f_women",
+   "kind": "face",
+   "a": 29.324,
+   "b": 35.234,
+   "tr": "none"
+  },
+  {
+   "name": "f_foot",
+   "kind": "face",
+   "a": 35.234,
+   "b": 45.003,
+   "tr": "none"
+  },
+  {
+   "name": "f_what",
+   "kind": "face",
+   "a": 45.003,
+   "b": 46.814,
+   "tr": "none"
+  },
+  {
+   "name": "f_care",
+   "kind": "face",
+   "a": 46.814,
+   "b": 50.473,
+   "tr": "none"
+  },
+  {
+   "name": "f_help",
+   "kind": "face",
+   "a": 50.473,
+   "b": 60.358,
+   "tr": "none"
+  },
+  {
+   "name": "f_small",
+   "kind": "face",
+   "a": 60.358,
+   "b": 65.221,
+   "tr": "none"
+  },
+  {
+   "name": "f_here",
+   "kind": "face",
+   "a": 65.221,
+   "b": 67.945,
+   "tr": "none"
+  },
+  {
+   "name": "end",
+   "kind": "mg",
+   "a": 67.945,
+   "b": 72.045,
+   "tr": "cube"
+  }
+ ],
+ "k": {
+  "diabete0": 0.974,
+  "farmaci0": 3.357,
+  "glicemia0": 3.953,
+  "oscillare": 4.549,
+  "alimentazione": 6.878,
+  "movimento": 8.118,
+  "stress": 8.757,
+  "malattie": 9.077,
+  "oltre": 10.384,
+  "controlli2": 12.584,
+  "secca": 15.1,
+  "sensibilita": 16.661,
+  "piedi3": 17.597,
+  "controllali": 18.109,
+  "asciugali": 19.309,
+  "crema": 20.96,
+  "dita": 22.46,
+  "ma4": 21.86,
+  "secchezza5": 24.074,
+  "oculistici": 26.162,
+  "regolarmente": 28.528,
+  "donne": 29.696,
+  "secchezza6": 31.191,
+  "infezioni": 31.735,
+  "benessere": 34.183,
+  "importante7": 36.111,
+  "ferita": 37.663,
+  "rosso": 39.992,
+  "caldo": 40.488,
+  "gonfio": 40.954,
+  "senza7": 41.575,
+  "vai": 42.352,
+  "vieni": 43.661,
+  "pratica": 45.506,
+  "cura9": 47.433,
+  "consapevolezza": 48.298,
+  "stress9": 49.681,
+  "aiutarti": 51.166,
+  "proteggere": 53.689,
+  "mantenere": 55.807,
+  "donna10": 58.774,
+  "problemi": 61.144,
+  "piccoli": 63.475,
+  "bisogno": 65.665,
+  "siamo": 67.21
+ }
+}
