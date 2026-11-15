@@ -1,0 +1,17 @@
+---
+import { nomeCompleto, type Medico } from '../lib/medici';
+interface Props { m: Medico }
+const { m } = Astro.props;
+---
+<footer class="bg-deep pb-28 text-deep-ink/70 lg:pb-10">
+  <div class="mx-auto flex max-w-6xl flex-col gap-6 border-t border-deep-ink/15 px-5 pt-10 text-sm sm:flex-row sm:items-end sm:justify-between sm:px-8">
+    <div>
+      <p class="font-serif text-xl text-deep-ink">{nomeCompleto(m)}</p>
+      <p class="mt-1">{m.specialita} · {m.citta}</p>
+      <p class="mt-1"><a href={`mailto:${m.sedi.email}`} class="underline-offset-4 hover:underline">{m.sedi.email}</a></p>
+    </div>
+    <p class="max-w-sm text-xs leading-relaxed text-deep-ink/55 sm:text-right">
+      Anteprima non ufficiale a scopo dimostrativo, realizzata da Pragma Solutions, Torino. Le informazioni mediche hanno scopo divulgativo e non sostituiscono la visita.
+    </p>
+  </div>
+</footer>

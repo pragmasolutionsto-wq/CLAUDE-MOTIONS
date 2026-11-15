@@ -1,0 +1,23 @@
+---
+import Icona from './Icona.astro';
+import Arte from './Arte.astro';
+import { telHref, type Medico } from '../lib/medici';
+interface Props { m: Medico }
+const { m } = Astro.props;
+---
+<section data-cta-finale class="relative overflow-hidden bg-deep text-deep-ink">
+  <Arte motivo={m.tema.motivo} class="pointer-events-none absolute -right-24 -top-10 w-[420px] opacity-25 sm:w-[560px]" />
+  <div class="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+    <p class="eyebrow !text-warm" data-reveal>Prenota una visita</p>
+    <h2 class="mt-4 max-w-2xl font-serif text-4xl leading-[1.08] sm:text-6xl" data-reveal>{m.prenota.titolo}</h2>
+    <p class="mt-5 max-w-xl text-lg leading-relaxed text-deep-ink/80" data-reveal>{m.prenota.testo}</p>
+    <div class="mt-9 flex flex-col gap-3 sm:flex-row" data-reveal>
+      <a href={telHref(m.prenota.telefono)} class="btn btn-primary !bg-deep-ink !text-deep">
+        <Icona nome="tel" /> Chiama {m.prenota.telefonoLabel}
+      </a>
+      <a href={`mailto:${m.sedi.email}`} class="btn border border-deep-ink/30 text-deep-ink hover:border-deep-ink">
+        <Icona nome="mail" /> Scrivi una mail
+      </a>
+    </div>
+  </div>
+</section>

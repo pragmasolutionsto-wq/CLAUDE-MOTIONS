@@ -1,0 +1,4 @@
+# Niente blocchi qui: il noindex arriva da meta tag e header X-Robots-Tag.
+# Se bloccassimo il crawl, Google non vedrebbe il noindex.
+User-agent: *
+Allow: /

@@ -1,0 +1,10 @@
+---
+import HomeMedico from '../../layouts/HomeMedico.astro';
+import { medici, type Medico } from '../../lib/medici';
+
+export function getStaticPaths() {
+  return medici.map((m) => ({ params: { slug: m.slug }, props: { m } }));
+}
+const { m } = Astro.props as { m: Medico };
+---
+<HomeMedico m={m} />

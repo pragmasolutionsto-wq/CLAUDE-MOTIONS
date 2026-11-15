@@ -1,0 +1,39 @@
+---
+// Grafica astratta, niente foto. "motivo" nel JSON sceglie la composizione.
+// articolazione: testa sferica + cavità (ortopedia) · onde: ritmo (cardio) · default: orbite.
+interface Props { motivo?: string; class?: string }
+const { motivo = 'orbite', class: cls = '' } = Astro.props;
+---
+<svg viewBox="0 0 480 480" class={cls} aria-hidden="true" fill="none">
+  {motivo === 'articolazione' ? (
+    <g>
+      <circle cx="250" cy="240" r="200" stroke="var(--c-line)" stroke-width="1" />
+      <circle cx="250" cy="240" r="150" stroke="var(--c-line)" stroke-width="1" stroke-dasharray="2 6" />
+      <circle cx="270" cy="250" r="118" fill="var(--c-accent)" opacity="0.92" />
+      <circle cx="270" cy="250" r="118" stroke="var(--c-deep)" stroke-width="1" opacity=".25" />
+      <path d="M150 116 A 150 150 0 0 0 150 384" stroke="var(--c-warm)" stroke-width="10" stroke-linecap="round" />
+      <path d="M126 138 A 132 132 0 0 0 126 362" stroke="var(--c-ink)" stroke-width="1.2" opacity=".5" />
+      <path d="M388 250 C 430 250, 450 300, 470 360" stroke="var(--c-ink)" stroke-width="1.2" opacity=".35" />
+      <path d="M380 300 C 420 320, 430 380, 440 460" stroke="var(--c-ink)" stroke-width="1.2" opacity=".25" />
+      <circle cx="230" cy="210" r="34" fill="var(--c-surface)" opacity=".16" />
+      <circle cx="150" cy="116" r="5" fill="var(--c-warm)" />
+      <circle cx="150" cy="384" r="5" fill="var(--c-warm)" />
+      <g stroke="var(--c-accent-ink)" stroke-width="1" opacity=".35">
+        <path d="M200 250 H340" /><path d="M270 180 V320" />
+      </g>
+    </g>
+  ) : motivo === 'onde' ? (
+    <g>
+      <circle cx="240" cy="240" r="200" stroke="var(--c-line)" />
+      <circle cx="240" cy="240" r="140" fill="var(--c-accent)" opacity=".92" />
+      <path d="M40 260 H170 L195 200 L225 320 L255 160 L285 260 H440" stroke="var(--c-warm)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  ) : (
+    <g>
+      <circle cx="240" cy="240" r="200" stroke="var(--c-line)" />
+      <circle cx="240" cy="240" r="150" stroke="var(--c-line)" stroke-dasharray="2 6" />
+      <circle cx="260" cy="250" r="110" fill="var(--c-accent)" opacity=".92" />
+      <circle cx="120" cy="140" r="16" fill="var(--c-warm)" />
+    </g>
+  )}
+</svg>

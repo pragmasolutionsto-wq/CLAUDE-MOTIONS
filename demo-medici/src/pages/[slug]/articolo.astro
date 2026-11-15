@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Arte from '../../components/Arte.astro';
+import Icona from '../../components/Icona.astro';
+import CtaFinale from '../../components/CtaFinale.astro';
+import CtaMobile from '../../components/CtaMobile.astro';
+import Footer from '../../components/Footer.astro';
+import { medici, nomeCompleto, type Medico } from '../../lib/medici';
+
+export function getStaticPaths() {
+  return medici.map((m) => ({ params: { slug: m.slug }, props: { m } }));
+}
+const { m } = Astro.props as { m: Medico };
+const a = m.articolo;
+---
+<Base title={`${a.titolo} · ${nomeCompleto(m)}`} description={a.intro} tema={m.tema}>
+  <Header m={m} home={false} />
+  <main>
+    <section data-hero-section class="relative overflow-hidden border-b border-line/70">
+      <Arte motivo={m.tema.motivo} class="pointer-events-none absolute -right-28 -top-16 hidden w-[520px] opacity-40 sm:block" />
+      <div data-hero class="relative mx-auto max-w-3xl px-5 pb-14 pt-10 sm:px-8 sm:pt-16">
+        <a href={`/${m.slug}#articoli`} class="inline-flex items-center gap-2 text-sm text-muted hover:text-accent">
+          <Icona nome="freccia" class="h-4 w-4 rotate-180" /> Torna alla home
+        </a>
+        <p class="eyebrow mt-10">{a.categoria} · {a.tempoLettura} di lettura</p>
+        <h1 class="mt-4 font-serif text-[2.3rem] leading-[1.08] sm:text-[3.4rem]">{a.titolo}</h1>
+        <p class="mt-6 text-xl leading-relaxed text-ink/80">{a.intro}</p>
+        <div class="mt-8 flex items-center gap-3 text-sm">
+          <span class="grid h-10 w-10 place-items-center rounded-full bg-accent font-serif text-accent-ink">{m.iniziali}</span>
+          <span><span class="block font-semibold">{nomeCompleto(m)}</span><span class="text-muted">{m.specialita}</span></span>
+        </div>
+      </div>
+    </section>
+
+    <article class="prose-medico mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-16">
+      {a.sezioni.map((s) => (
+        <section data-reveal>
+          <h2>{s.titolo}</h2>
+          {s.paragrafi.map((p) => <p>{p}</p>)}
+          {s.elenco && <ul>{s.elenco.map((li) => <li>{li}</li>)}</ul>}
+          {s.chiusura && <p>{s.chiusura}</p>}
+        </section>
+      ))}
+      <aside class="mt-12 rounded-2xl border border-line bg-surface p-6 text-sm leading-relaxed text-muted" data-reveal>
+        {a.nota}
+      </aside>
+    </article>
+
+    <section class="mx-auto max-w-3xl px-5 pb-20 sm:px-8">
+      <p class="eyebrow">Prossimi articoli</p>
+      <div class="mt-5 grid gap-4 sm:grid-cols-2" data-stagger>
+        {m.articoliInArrivo.map((x) => (
+          <div class="rounded-2xl border border-dashed border-line p-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">{x.categoria} · In arrivo</p>
+            <p class="mt-3 font-serif text-xl leading-snug">{x.titolo}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <CtaFinale m={m} />
+  </main>
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>import '../../scripts/motion.ts';</script>
+</Base>
