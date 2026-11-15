@@ -3,9 +3,9 @@
 Demo di homepage per medici specialisti, una alla volta, per proporre sito, blog e social.
 Astro + Tailwind v4, statico. GSAP + ScrollTrigger + Lenis per le animazioni. Nessun backend, nessun database.
 
-**Dominio:** `DA_IMPOSTARE` (es. `demo-medici.pages.dev`) ← aggiornalo dopo il primo deploy. Il comando `/nuova-demo` lo usa per il link finale.
+**Dominio:** `pragma-anteprime.pages.dev` → link demo: `https://pragma-anteprime.pages.dev/<slug>`
 
-Hosting consigliato: **Cloudflare Pages** (gratis, uso commerciale ammesso). Il noindex via header sta in `public/_headers` (Cloudflare/Netlify) e in `vercel.json` (Vercel): tienili allineati.
+Hosting: **Cloudflare Pages**, progetto `pragma-anteprime` (gratis, uso commerciale ammesso). Si pubblica con `npm run deploy`.
 
 ## Struttura
 - `src/data/medici/<slug>.json` → tutti i contenuti di un medico. Lo schema è quello di `motta-m2zh.json`: stessi campi, sempre.
@@ -35,6 +35,9 @@ Hosting consigliato: **Cloudflare Pages** (gratis, uso commerciale ammesso). Il 
 - `npm run shot` fallisce (exit 2) se trova: errori console, richieste fallite, scroll orizzontale, meta robots sbagliato, fascia mancante, elementi rimasti invisibili, font titoli non caricato, link nella root.
 
 ## Deploy
-Progetto in sottocartella: **Root directory = `demo-medici`**, build `npm run build`, output `dist`. Ogni push sul branch collegato va online da solo.
-- Cloudflare Pages: Workers & Pages → Create → Pages → Connect to Git.
-- Vercel: solo con piano Pro (Hobby non ammette uso commerciale).
+`npm run deploy` = build + pubblicazione su Cloudflare Pages (`scripts/deploy.mjs`).
+- Il sito statico viene impacchettato in un `_worker.js` (Pages advanced mode) e caricato in **una sola richiesta** API. Il worker serve i file e mette `X-Robots-Tag: noindex, nofollow` su tutto.
+- **Non usare wrangler** nei container cloud: il suo upload usa un JWT nell'header Authorization che il proxy sovrascrive col token → deploy "riuscito" ma vuoto (500). E `wrangler pages project create` lancia un'autoconfig che converte il sito in SSR: da evitare.
+- Credenziale: token Cloudflare (permesso Pages → Edit) salvato nell'ambiente cloud "Pragma" per `api.cloudflare.com`, iniettato dal proxy. Account ID nello script (non è un segreto).
+- Il container non raggiunge `*.pages.dev`: verifica online con Firecrawl (status 200 + meta robots + screenshot).
+- `public/_headers` e `vercel.json` restano come riserva se si cambia hosting.

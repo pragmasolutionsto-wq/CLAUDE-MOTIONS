@@ -37,10 +37,12 @@ Tieni una lista di cosa hai preso e da quale pagina. Se un dato manca, NON inven
 3. Guarda TU gli screenshot in `shots/<slug>/` (home e articolo, desktop e mobile; i full-page tagliali a pezzi per leggerli). Controlla: gerarchia chiara, testi leggibili, niente sovrapposizioni, niente a capo brutti, card allineate, contrasto ok, nessuna sezione vuota o invisibile.
 4. Correggi e ripeti finché non è bella e pulita. Se correggi il template, verifica che le demo esistenti non si rompano (`npm run shot` anche su una di loro).
 
-## 6. Commit e push
-`git add` solo i file della demo (+ eventuali fix al template), commit con messaggio tipo `Demo: Dr. <Nome> (<specialità>)`, push sul branch di lavoro. Non committare `shots/`.
+## 6. Pubblica, commit e push
+1. `npm run deploy` → deve stampare "Deploy OK".
+2. Verifica online con Firecrawl (`firecrawl_scrape` con `maxAge: 0`) home e articolo: status 200, `robots: noindex, nofollow`, screenshot coerente con quello locale.
+3. `git add` solo i file della demo (+ eventuali fix al template), commit con messaggio tipo `Demo: Dr. <Nome> (<specialità>)`, push sul branch di lavoro. Non committare `shots/`.
 
 ## 7. Risposta finale (breve)
-- Link: `https://<dominio>/<slug>` (dominio da `CLAUDE.md`; se è ancora `DA_IMPOSTARE`, dillo).
-- Link articolo: `https://<dominio>/<slug>/articolo`
+- Link: `https://pragma-anteprime.pages.dev/<slug>` (verificato online)
+- Link articolo: `https://pragma-anteprime.pages.dev/<slug>/articolo`
 - Riepilogo in pochi punti: cosa hai preso dal sito (con le pagine), cosa hai scritto tu (articolo, post), cosa mancava e hai lasciato fuori, palette e font scelti.
