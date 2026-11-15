@@ -1,0 +1,106 @@
+{
+  "sito": "https://pieroraziomotta.com/",
+  "estratto_il": "2026-11-15",
+  "piattaforma": "Flazio (immagini su globaluserfiles.com)",
+  "logo": {
+    "trovato": true,
+    "file": {
+      "logo-chiaro.png": { "desc": "Logo header: marchio P turchese→blu + 'PIERORAZIO MOTTA / Specialista Ortopedico Chirurgia della spalla', testo bianco. 766×148, originale senza parametri CDN.", "fonte": "header di tutte le pagine" },
+      "logo-chiaro-variante.png": { "desc": "Logo footer: stesso marchio, sottotitolo 'Specialista in Chirurgia Ortopedica', testo bianco. 1008×189.", "fonte": "footer di tutte le pagine" },
+      "logo-scuro.png": { "desc": "DERIVATO da logo-chiaro.png: marchio intatto, solo il testo ricolorato #0C121E per l'uso su fondo bianco. Non esiste sul sito.", "fonte": "derivato" }
+    }
+  },
+  "foto": {
+    "tenute": [
+      { "file": "foto-01.jpg", "desc": "Dr. Motta seduto alla scrivania del suo studio: libreria, diplomi alle pareti, modello anatomico di spalla sul tavolo. 2000×1333, nitida.", "fonte": "https://pieroraziomotta.com/ (drpieroraziomottaspecialistachirurgopatologiespalla.webp) e /about (image-812.webp, stesso scatto)" }
+    ],
+    "scartate": [
+      { "nome": "physiotherapist-doing-healing-treatment-man-s-back-back-pain-patient", "motivo": "stock (fisioterapista generico)" },
+      { "nome": "physiotherapist-doing-healing-treatment-man-s-back-back-pain-patient-treatment", "motivo": "stock" },
+      { "nome": "male-physiotherapist-checking-woman-s-shoulder-pain", "motivo": "stock" },
+      { "nome": "man-getting-shoulder-massage-from-physiotherapist", "motivo": "stock" },
+      { "nome": "image-812.webp", "motivo": "duplicato di foto-01" },
+      { "nome": "tw-01, tw-08, tw-40", "motivo": "icone del template Flazio, non foto" }
+    ]
+  },
+  "colori": {
+    "blu": { "hex": "#0073B5", "fonte": "CSS sito (testi, link) + parte bassa del marchio (#1A76AD)" },
+    "turchese": { "hex": "#19B5BB", "fonte": "marchio P (sfumatura #18CEC3→#1A76AD) + CSS sito (#6EC2BC, bordi pulsanti)" },
+    "scuro": { "hex": "#0C121E", "fonte": "CSS sito (secondario, fondi footer)" }
+  },
+  "font": {
+    "sito": [
+      { "famiglia": "Open Sans", "ruolo": "testi", "giudizio": "buono, leggibile, molto diffuso" },
+      { "famiglia": "Barlow", "ruolo": "titoli", "giudizio": "buono, grotesk tecnico coerente con il logo" },
+      { "famiglia": "C-Gothica1", "ruolo": "display", "giudizio": "font di sistema del template, scadente: si scarta" }
+    ],
+    "scelta_demo": "Barlow (titoli) + Open Sans (testi): sono i suoi e sono di qualità."
+  },
+  "dati": {
+    "nome": { "v": "Dr. Pierorazio Motta", "fonte": "/about" },
+    "specialita": { "v": "Specialista ortopedico, chirurgia della spalla", "fonte": "home, logo" },
+    "citta": { "v": "Torino", "fonte": "contatti" },
+    "bio": {
+      "v": [
+        "Da oltre 35 anni si occupa di chirurgia della spalla, dalla diagnosi al trattamento conservativo o chirurgico (artroscopico o a cielo aperto).",
+        "L'esperienza ortopedico-traumatologica maturata al CTO di Torino gli ha permesso di acquisire conoscenze specifiche, manualità chirurgiche e casistiche difficilmente realizzabili al di fuori dei grandi centri di riferimento.",
+        "Compito dello specialista è informare il paziente sulla patologia che lo interessa, in maniera scientificamente corretta, con linguaggio chiaro e comprensibile."
+      ],
+      "fonte": "home, /about"
+    },
+    "incarichi": {
+      "v": [
+        "1985-2009: seconda divisione di ortopedia e traumatologia, CTO Torino, prevalentemente chirurgia della spalla",
+        "Fino a gennaio 2021: responsabile della chirurgia della spalla (Shoulder Unit), CTO Torino",
+        "Dal 2004: consulente medico specialista ortopedico in chirurgia della spalla, Casa di Cura Fornaca, Torino (Humanitas, convenzionata con le principali assicurazioni)",
+        "Da febbraio 2021: chirurgia della spalla alla Clinica Cellini, Torino, reparto di Ortopedia 2 (Humanitas, convenzionata SSN)"
+      ],
+      "fonte": "/about"
+    },
+    "societa": { "v": ["Società italiana di chirurgia della spalla (SICSeG)", "Società europea di chirurgia della spalla (SECEC)"], "fonte": "/about" },
+    "approccio": {
+      "v": [
+        "Prudente verso opzioni terapeutiche innovative non supportate da evidenze scientifiche.",
+        "Tratta in artroscopia le fratture di glena, le lussazioni acromion-claveari, le fratture del trochite omerale e la stabilizzazione di spalla secondo Latarjet.",
+        "Nella chirurgia protesica usa la realtà virtuale per un impianto più preciso e anatomico.",
+        "Usa fattori biologici (PRP, cellule mesenchimali da midollo osseo) quando serve incrementare la riparazione dei tessuti.",
+        "Ogni paziente riceve un protocollo riabilitativo con modalità e tempi del recupero."
+      ],
+      "fonte": "/servizi"
+    },
+    "strutture": { "v": ["Clinica Cellini, Torino (Humanitas) - Ortopedia 2, convenzionata SSN", "Casa di Cura Fornaca, Torino (Humanitas) - convenzionata con le principali assicurazioni"], "fonte": "/about, /servizi" },
+    "patologie": {
+      "v": [
+        "Instabilità della spalla (anteriori, posteriori, multidirezionali)",
+        "Rottura della cuffia dei rotatori",
+        "Artrosi di spalla (endoprotesi, protesi anatomiche, protesi inverse)",
+        "Conflitti subacromiali",
+        "Rigidità primitive di spalla",
+        "Fratture di omero, di clavicola, di scapola"
+      ],
+      "fonte": "/servizi"
+    },
+    "sedi": {
+      "v": [
+        { "nome": "Studio", "indirizzo": "Via Ettore de Sonnaz 13, Torino", "fonte": "/contatti, footer" },
+        { "nome": "Visite ambulatoriali", "indirizzo": "Via Vincenzo Gioberti 76, Torino", "telefoni": ["011 505089", "393 8760023"], "fonte": "/servizi" }
+      ]
+    },
+    "orari": { "v": null, "nota": "non indicati sul sito" },
+    "contatti": {
+      "v": { "cellulare": "+39 338 48 62 927", "segreteria_appuntamenti": "011 505089", "email": "pierorazio.motta@gmail.com", "whatsapp": "pulsante presente su /contatti" },
+      "fonte": "/contatti"
+    },
+    "recensioni": {
+      "nota": "Recensioni del widget Flazio sulla home: 4 visibili (pagina 1 di 7 del carosello, le altre non vengono caricate). Tutte 5 stelle. Riportate alla lettera.",
+      "v": [
+        { "nome": "Cervino M.G.", "titolo": "Molto contenta della visita", "testo": "Sono rimasta molto soddisfatta del modo in cui ha affrontato la mia problematica. Preciso, cordiale e molto professionale. Mi ha messa subito a mio agio e lo consiglio a tutti coloro che volessero avere un consulto nel campo dell'ortopedia.", "stelle": 5 },
+        { "nome": "Piero M.", "titolo": "Diagnosi chiara e precisa", "testo": "Ottimo trattamento, ottima visita, a cui sono seguite chiare indicazioni circa la diagnosi e la cura prescritta.\nNulla da recepire.", "stelle": 5 },
+        { "nome": "Palermo Giovanni", "titolo": "Semplice e veloce!", "testo": "Ottimo professionista . Sono bastate poche parole per capire il lavoro che ci sarà da fare. Eccellente", "stelle": 5 },
+        { "nome": "Aracelly", "titolo": "Ottima persona e professionalit", "testo": "Ottima persona e professionalità . Ha avuto chiarezza e pazienza al spigarmi bene il caso. Per una come che non sono italiana conta tantissimo. Grazie mille Dottore Motta", "stelle": 5 }
+      ],
+      "fonte": "home"
+    },
+    "instagram": { "v": null, "nota": "nessun profilo collegato al sito" }
+  }
+}
