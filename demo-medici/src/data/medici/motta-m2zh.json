@@ -1,0 +1,296 @@
+{
+  "slug": "motta-m2zh",
+  "sitoOrigine": "https://pieroraziomotta.com/",
+  "titolo": "Dr.",
+  "nome": "Pierorazio Motta",
+  "iniziali": "PM",
+  "specialita": "Ortopedico, chirurgia della spalla",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dr. Pierorazio Motta · Chirurgia della spalla · Torino",
+    "description": "Specialista ortopedico in chirurgia della spalla a Torino. Instabilità, cuffia dei rotatori, artrosi, fratture. Prenota una visita."
+  },
+  "hero": {
+    "eyebrow": "Chirurgia della spalla · Torino",
+    "frase": "Capire la tua spalla è il primo passo.",
+    "fraseAccento": "Poi si sceglie insieme la cura giusta.",
+    "sottotitolo": "Dalla diagnosi al trattamento conservativo o chirurgico, con spiegazioni chiare e un percorso costruito su di te.",
+    "cta": "Prenota una visita"
+  },
+  "bio": {
+    "titolo": "Una vita professionale dedicata alla spalla.",
+    "paragrafi": [
+      "Il Dr. Pierorazio Motta è specialista ortopedico e si occupa di chirurgia della spalla da oltre 35 anni: dalla diagnosi al trattamento conservativo o chirurgico, in artroscopia o a cielo aperto.",
+      "Per lui il primo compito dello specialista è informare il paziente sulla sua patologia, in modo scientificamente corretto e con un linguaggio chiaro."
+    ],
+    "tappe": [
+      {
+        "periodo": "1985 – 2009",
+        "testo": "Seconda divisione di Ortopedia e Traumatologia, CTO di Torino, con attività prevalente sulla chirurgia della spalla."
+      },
+      {
+        "periodo": "Fino al 2021",
+        "testo": "Responsabile della chirurgia della spalla (Shoulder Unit) al CTO di Torino."
+      },
+      {
+        "periodo": "Dal 2004",
+        "testo": "Consulente specialista ortopedico in chirurgia della spalla alla Casa di Cura Fornaca, Torino (Humanitas)."
+      },
+      {
+        "periodo": "Dal 2021",
+        "testo": "Chirurgia della spalla alla Clinica Cellini di Torino, reparto di Ortopedia 2, convenzionata con il SSN (Humanitas)."
+      }
+    ],
+    "societa": [
+      "Società Italiana di Chirurgia della Spalla (SICSeG)",
+      "Società Europea di Chirurgia della Spalla (SECEC)"
+    ],
+    "approccio": "Prudente verso le terapie innovative non ancora supportate da evidenze scientifiche. Ogni paziente riceve un protocollo di riabilitazione con modalità e tempi del recupero."
+  },
+  "aree": {
+    "titolo": "Di cosa si occupa",
+    "intro": "Le principali patologie della spalla, trattate con approccio conservativo o chirurgico in base al singolo caso.",
+    "voci": [
+      {
+        "titolo": "Instabilità della spalla",
+        "testo": "Lussazioni e sublussazioni anteriori, posteriori e multidirezionali. Tra le tecniche, la stabilizzazione secondo Latarjet."
+      },
+      {
+        "titolo": "Rottura della cuffia dei rotatori",
+        "testo": "Lesioni dei tendini che muovono e stabilizzano la spalla. Quando serve, si valuta l'uso di fattori biologici come il PRP."
+      },
+      {
+        "titolo": "Artrosi di spalla",
+        "testo": "Endoprotesi, protesi anatomiche e protesi inverse. Nell'impianto si avvale della realtà virtuale per una maggiore precisione."
+      },
+      {
+        "titolo": "Conflitto subacromiale",
+        "testo": "Dolore alla spalla quando si alza il braccio, legato allo spazio sotto l'acromion."
+      },
+      {
+        "titolo": "Rigidità primitive di spalla",
+        "testo": "Spalla che perde movimento in modo progressivo, spesso con dolore notturno."
+      },
+      {
+        "titolo": "Fratture di omero, clavicola e scapola",
+        "testo": "Incluse fratture di glena, del trochite omerale e lussazioni acromion-claveari, anche in artroscopia."
+      }
+    ]
+  },
+  "articolo": {
+    "categoria": "Cuffia dei rotatori",
+    "titolo": "Rottura della cuffia dei rotatori: sintomi, diagnosi e quando si valuta l'intervento",
+    "intro": "Dolore alla spalla quando alzi il braccio, fastidio di notte, debolezza nei gesti di ogni giorno. Sono segnali frequenti, e a volte dietro c'è una lesione della cuffia dei rotatori. Vediamo cos'è, come si riconosce e quali sono le strade di cura.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Cos'è la cuffia dei rotatori",
+        "paragrafi": [
+          "La cuffia dei rotatori è un gruppo di quattro muscoli con i loro tendini: sovraspinato, sottospinato, piccolo rotondo e sottoscapolare. Avvolgono la testa dell'omero come una cuffia, appunto, e la tengono centrata nella sua sede mentre il braccio si muove.",
+          "Senza una cuffia efficiente la spalla perde stabilità e forza. Per questo una lesione di questi tendini si sente soprattutto nei movimenti sopra la testa: pettinarsi, prendere un oggetto da uno scaffale, infilare una giacca."
+        ]
+      },
+      {
+        "titolo": "Perché si rompe",
+        "paragrafi": [
+          "Le cause sono di due tipi, che spesso si sommano.",
+          "La prima è degenerativa. Con il passare degli anni i tendini diventano meno elastici e meno irrorati. Piccoli stress ripetuti nel tempo possono assottigliarli fino a una lesione parziale o completa. È la causa più comune dopo i 50 anni, e a volte la rottura arriva senza un evento preciso.",
+          "La seconda è traumatica. Una caduta sul braccio teso, uno sforzo improvviso, una lussazione della spalla possono strappare un tendine anche in una persona giovane.",
+          "Ci sono poi fattori che aumentano il rischio: lavori o sport con il braccio spesso sopra la testa, il fumo, alcune condizioni come il diabete, e la conformazione dello spazio sotto l'acromion, che in alcune persone favorisce lo sfregamento del tendine."
+        ]
+      },
+      {
+        "titolo": "I sintomi da non sottovalutare",
+        "paragrafi": [
+          "I segnali più tipici sono questi:"
+        ],
+        "elenco": [
+          "dolore sulla parte esterna della spalla, che può scendere verso il braccio;",
+          "dolore notturno, soprattutto se ci si sdraia sul lato colpito;",
+          "dolore o difficoltà nell'alzare il braccio di lato o in avanti;",
+          "perdita di forza nei gesti quotidiani;",
+          "una sensazione di scatto o di attrito durante alcuni movimenti."
+        ],
+        "chiusura": "Non tutte le lesioni danno sintomi forti. Alcune rotture, soprattutto degenerative, sono scoperte per caso. Altre danno molto dolore anche se piccole. L'intensità del dolore non dice da sola quanto è grave la lesione: serve una valutazione specialistica."
+      },
+      {
+        "titolo": "Come si arriva alla diagnosi",
+        "paragrafi": [
+          "Il primo passo è la visita. Lo specialista raccoglie la storia del dolore, chiede quando è iniziato e quali movimenti lo peggiorano. Poi esamina la spalla con test specifici, che servono a capire quale tendine è coinvolto e quanta forza resta.",
+          "Gli esami di immagine completano il quadro. L'ecografia è utile e rapida per vedere i tendini. La risonanza magnetica mostra con più dettaglio la dimensione della lesione, la qualità del muscolo e lo stato delle altre strutture della spalla. Le radiografie aiutano a valutare l'osso e l'eventuale artrosi.",
+          "Sono le informazioni della visita e degli esami, insieme, a orientare la scelta del trattamento. Un referto letto da solo non basta."
+        ]
+      },
+      {
+        "titolo": "Le strade di cura: conservativa o chirurgica",
+        "paragrafi": [
+          "Non tutte le rotture della cuffia vanno operate. La scelta dipende da diversi fattori: l'età e le attività della persona, il tipo e la dimensione della lesione, da quanto tempo è presente, la qualità del tendine e del muscolo, il dolore e la perdita di funzione.",
+          "Il trattamento conservativo comprende riposo relativo, farmaci per il dolore quando indicati e soprattutto un programma di fisioterapia mirato. Lo scopo è ridurre l'infiammazione e rinforzare i muscoli che lavorano intorno alla lesione. In molte lesioni degenerative questo percorso dà un buon controllo dei sintomi.",
+          "Il trattamento chirurgico si valuta quando il dolore e la debolezza non migliorano con le cure conservative, oppure in alcune lesioni traumatiche, specie nei pazienti più giovani e attivi. Oggi la riparazione si esegue spesso in artroscopia, con piccole incisioni e una telecamera. In casi selezionati si può valutare anche l'uso di fattori biologici per sostenere la guarigione dei tessuti."
+        ]
+      },
+      {
+        "titolo": "Dopo l'intervento: la riabilitazione conta",
+        "paragrafi": [
+          "Il recupero dopo una riparazione della cuffia richiede tempo. Il tendine ha bisogno di settimane per guarire sull'osso, e in questa fase la spalla va protetta, spesso con un tutore.",
+          "Segue un percorso di fisioterapia graduale: prima il recupero del movimento, poi il rinforzo. La collaborazione del paziente è decisiva. Seguire il protocollo con costanza, senza forzare e senza saltare le tappe, fa la differenza sul risultato."
+        ]
+      },
+      {
+        "titolo": "Cosa puoi fare in attesa della visita",
+        "paragrafi": [
+          "Finché non hai una diagnosi, alcune attenzioni semplici aiutano a non peggiorare il fastidio."
+        ],
+        "elenco": [
+          "evita i movimenti che scatenano il dolore, soprattutto quelli con il braccio sopra la testa;",
+          "non sollevare pesi con il braccio teso;",
+          "di notte prova a dormire sul lato opposto, con un cuscino sotto il braccio dolente;",
+          "non immobilizzare del tutto la spalla per lunghi periodi: una spalla ferma tende a irrigidirsi;",
+          "non iniziare esercizi di rinforzo o farmaci di tua iniziativa: chiedi prima al medico."
+        ],
+        "chiusura": "Sono accorgimenti di buon senso, non una terapia. Servono solo a gestire il periodo che precede la valutazione specialistica, che resta il passaggio indispensabile per capire cosa sta succedendo davvero alla tua spalla."
+      },
+      {
+        "titolo": "Quando prenotare una visita",
+        "paragrafi": [
+          "Conviene sentire uno specialista se il dolore alla spalla dura da più di qualche settimana, se ti sveglia di notte, se fai fatica ad alzare il braccio o se hai perso forza dopo una caduta.",
+          "Una diagnosi precoce non serve a spaventarsi, ma a scegliere con calma la strada più adatta. In alcune lesioni, intervenire nei tempi giusti permette di avere più opzioni a disposizione."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica. Per una valutazione del tuo caso rivolgiti a uno specialista."
+  },
+  "articoliInArrivo": [
+    {
+      "categoria": "Instabilità",
+      "titolo": "Spalla lussata la prima volta: cosa fare e cosa evitare"
+    },
+    {
+      "categoria": "Artrosi",
+      "titolo": "Protesi di spalla anatomica o inversa: le differenze spiegate in modo semplice"
+    }
+  ],
+  "instagram": {
+    "handle": "dr.pierorazio.motta",
+    "nomeProfilo": "Dr. Pierorazio Motta",
+    "post": [
+      {
+        "stile": "titolo",
+        "occhiello": "Spalla",
+        "titolo": "Dolore alla spalla di notte?",
+        "sottotitolo": "3 cose che è utile sapere",
+        "didascalia": "Il dolore che sveglia di notte è uno dei motivi più frequenti di visita per la spalla. Può dipendere da un'infiammazione dei tendini, da una lesione della cuffia dei rotatori o da una rigidità della spalla. Dormire sul lato opposto e tenere un cuscino sotto il braccio può dare sollievo, ma se il dolore dura da settimane serve una valutazione. Ne parliamo nell'articolo sul sito.",
+        "hashtag": "#spalla #ortopedia #cuffiadeirotatori #torino"
+      },
+      {
+        "stile": "lista",
+        "occhiello": "Instabilità",
+        "titolo": "Prima lussazione di spalla",
+        "punti": [
+          "Non rimetterla a posto da soli",
+          "Pronto soccorso e radiografia",
+          "Visita specialistica dopo"
+        ],
+        "didascalia": "Dopo il primo episodio di lussazione, la spalla può restare più instabile. Non tentare manovre da solo: serve il pronto soccorso, una radiografia e poi una visita specialistica per valutare se ci sono lesioni associate e qual è il percorso più adatto.",
+        "hashtag": "#lussazionespalla #instabilità #ortopedia #sport"
+      },
+      {
+        "stile": "domanda",
+        "occhiello": "Domande frequenti",
+        "titolo": "Ogni rottura della cuffia va operata?",
+        "risposta": "No. Dipende dal caso.",
+        "didascalia": "Età, attività, tipo e dimensione della lesione, qualità del tendine: sono questi i fattori che orientano la scelta tra trattamento conservativo e chirurgico. Molte lesioni degenerative si gestiscono bene con la fisioterapia. La decisione si prende dopo visita ed esami, insieme al paziente.",
+        "hashtag": "#cuffiadeirotatori #chirurgiadellaspalla #fisioterapia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove riceve",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio Dr. Motta",
+        "indirizzo": "Via Ettore de Sonnaz 13",
+        "citta": "Torino",
+        "telefoni": [
+          {
+            "label": "Cellulare",
+            "numero": "+39 338 48 62 927"
+          },
+          {
+            "label": "Segreteria appuntamenti",
+            "numero": "011 505089"
+          }
+        ],
+        "mappa": true
+      },
+      {
+        "tipo": "Visite ambulatoriali",
+        "nome": "Ambulatorio",
+        "indirizzo": "Via Vincenzo Gioberti 76",
+        "citta": "Torino",
+        "telefoni": [
+          {
+            "label": "Telefono",
+            "numero": "011 505089"
+          },
+          {
+            "label": "Cellulare",
+            "numero": "393 876 0023"
+          }
+        ],
+        "mappa": true
+      },
+      {
+        "tipo": "Attività chirurgica",
+        "nome": "Clinica Cellini · Humanitas",
+        "indirizzo": "Reparto di Ortopedia 2",
+        "citta": "Torino · convenzionata SSN",
+        "telefoni": [],
+        "mappa": false
+      },
+      {
+        "tipo": "Attività chirurgica",
+        "nome": "Casa di Cura Fornaca · Humanitas",
+        "indirizzo": "Convenzionata con le principali assicurazioni",
+        "citta": "Torino",
+        "telefoni": [],
+        "mappa": false
+      }
+    ],
+    "email": "pierorazio.motta@gmail.com"
+  },
+  "prenota": {
+    "telefono": "011505089",
+    "telefonoLabel": "011 505089",
+    "testo": "Chiama la segreteria per fissare un appuntamento. Puoi anche scrivere una mail con una breve descrizione del problema.",
+    "titolo": "Parliamo della tua spalla."
+  },
+  "tema": {
+    "palette": {
+      "bg": "#F3EFE7",
+      "surface": "#FBF9F5",
+      "ink": "#16292C",
+      "muted": "#5A6A6B",
+      "accent": "#1E5B5C",
+      "accent-ink": "#F6F3EC",
+      "warm": "#B8693C",
+      "line": "#DCD4C6",
+      "deep": "#122427",
+      "deep-ink": "#E9E3D7"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap",
+    "fontTitoli": "Newsreader",
+    "fontTesti": "Hanken Grotesk",
+    "motivo": "articolazione"
+  },
+  "fonti": {
+    "pagine": [
+      "https://pieroraziomotta.com/",
+      "https://pieroraziomotta.com/about",
+      "https://pieroraziomotta.com/servizi",
+      "https://pieroraziomotta.com/contatti"
+    ],
+    "nonUsato": "Recensioni presenti sul sito non riportate nella demo. Profilo Instagram non trovato: handle e post sono proposte."
+  }
+}
