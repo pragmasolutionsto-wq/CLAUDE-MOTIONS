@@ -22,6 +22,7 @@ const files = {};
 for (const f of walk(dist)) {
   const rel = '/' + relative(dist, f);
   if (rel === '/_headers') continue; // gli header li mette il worker
+  if (rel.includes('/brand/')) continue; // originali estratti dal sito: restano in repo, non online
   const ext = extname(f).toLowerCase();
   const buf = readFileSync(f);
   files[rel] = TESTO.has(ext) ? { t: TIPI[ext], s: buf.toString('utf8') } : { t: TIPI[ext] || 'application/octet-stream', b: buf.toString('base64') };
@@ -45,6 +46,10 @@ export default {
 };
 `;
 console.log(`Worker: ${Object.keys(files).length} file, ${(worker.length / 1024).toFixed(0)} KB`);
+if (worker.length > 2.8 * 1024 * 1024) {
+  console.error('Worker oltre 2,8 MB: limite Cloudflare vicino. Riduci le immagini in img/ o passa a un progetto per medico (vedi CLAUDE.md).');
+  process.exit(1);
+}
 
 // Crea il progetto se non esiste
 const ex = await (await fetch(`${API}/${PROJECT}`, { headers: H })).json();
