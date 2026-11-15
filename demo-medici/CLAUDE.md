@@ -3,7 +3,9 @@
 Demo di homepage per medici specialisti, una alla volta, per proporre sito, blog e social.
 Astro + Tailwind v4, statico. GSAP + ScrollTrigger + Lenis per le animazioni. Nessun backend, nessun database.
 
-**Dominio Vercel:** `DA_IMPOSTARE.vercel.app` ← aggiornalo dopo il primo deploy. Il comando `/nuova-demo` lo usa per il link finale.
+**Dominio:** `DA_IMPOSTARE` (es. `demo-medici.pages.dev`) ← aggiornalo dopo il primo deploy. Il comando `/nuova-demo` lo usa per il link finale.
+
+Hosting consigliato: **Cloudflare Pages** (gratis, uso commerciale ammesso). Il noindex via header sta in `public/_headers` (Cloudflare/Netlify) e in `vercel.json` (Vercel): tienili allineati.
 
 ## Struttura
 - `src/data/medici/<slug>.json` → tutti i contenuti di un medico. Lo schema è quello di `motta-m2zh.json`: stessi campi, sempre.
@@ -32,5 +34,7 @@ Astro + Tailwind v4, statico. GSAP + ScrollTrigger + Lenis per le animazioni. Ne
 - `line-clamp` va su un `<p>` senza padding, altrimenti la riga tagliata si vede nel padding.
 - `npm run shot` fallisce (exit 2) se trova: errori console, richieste fallite, scroll orizzontale, meta robots sbagliato, fascia mancante, elementi rimasti invisibili, font titoli non caricato, link nella root.
 
-## Vercel
-Progetto in sottocartella: su Vercel **Root Directory = `demo-medici`**. Framework Astro, output `dist`. Ogni push sul branch collegato va online da solo.
+## Deploy
+Progetto in sottocartella: **Root directory = `demo-medici`**, build `npm run build`, output `dist`. Ogni push sul branch collegato va online da solo.
+- Cloudflare Pages: Workers & Pages → Create → Pages → Connect to Git.
+- Vercel: solo con piano Pro (Hobby non ammette uso commerciale).

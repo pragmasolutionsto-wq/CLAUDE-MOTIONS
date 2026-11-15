@@ -41,6 +41,6 @@ Tieni una lista di cosa hai preso e da quale pagina. Se un dato manca, NON inven
 `git add` solo i file della demo (+ eventuali fix al template), commit con messaggio tipo `Demo: Dr. <Nome> (<specialità>)`, push sul branch di lavoro. Non committare `shots/`.
 
 ## 7. Risposta finale (breve)
-- Link: `https://<dominio-vercel>/<slug>` (dominio da `CLAUDE.md`; se è ancora `DA_IMPOSTARE`, dillo).
-- Link articolo: `https://<dominio-vercel>/<slug>/articolo`
+- Link: `https://<dominio>/<slug>` (dominio da `CLAUDE.md`; se è ancora `DA_IMPOSTARE`, dillo).
+- Link articolo: `https://<dominio>/<slug>/articolo`
 - Riepilogo in pochi punti: cosa hai preso dal sito (con le pagine), cosa hai scritto tu (articolo, post), cosa mancava e hai lasciato fuori, palette e font scelti.
