@@ -34,6 +34,12 @@ body { padding-top: var(--banner-h); }
 html { scroll-behavior: smooth; }
 
 @layer components {
+.card { background: #fff; border-radius: 14px; box-shadow: 0 1px 2px rgba(12,18,30,.06), 0 6px 20px -6px rgba(12,18,30,.12); }
+.card-hover { transition: box-shadow .25s ease, translate .25s ease; }
+.card-hover:hover { box-shadow: 0 2px 4px rgba(12,18,30,.06), 0 14px 32px -8px rgba(12,18,30,.22); translate: 0 -2px; }
+.chip { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; border: 1px solid var(--c-line); background: #fff; padding: .45rem .9rem; font-size: .875rem; font-weight: 500; color: var(--c-ink); transition: border-color .2s, background-color .2s, color .2s; }
+.chip[aria-pressed="true"] { border-color: var(--c-brand); background: color-mix(in srgb, var(--c-brand) 9%, white); color: var(--c-brand); }
+.titolo-sez { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.9rem, 1.4rem + 2vw, 2.75rem); line-height: 1.12; }
 .label {
   font-family: var(--f-head);
   font-weight: 600;

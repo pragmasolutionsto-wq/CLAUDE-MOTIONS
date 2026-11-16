@@ -4,16 +4,19 @@ import { telHref, type Medico } from '../lib/medici';
 interface Props { m: Medico }
 const { m } = Astro.props;
 ---
-<section id="contatti" data-cta-finale class="border-t border-line bg-surface">
-  <div class="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:items-end lg:py-24">
-    <div class="lg:col-span-7" data-reveal>
-      <p class="label">Appuntamenti</p>
-      <h2 class="mt-4 text-4xl font-semibold leading-[1.1] sm:text-5xl">{m.prenota.titolo}</h2>
-      <p class="mt-5 max-w-xl text-lg leading-relaxed text-muted">{m.prenota.testo}</p>
-    </div>
-    <div class="flex flex-col gap-3 lg:col-span-5" data-reveal>
-      <a href={telHref(m.prenota.telefono)} class="btn btn-primary w-full !min-h-[56px] text-lg"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
-      <a href={`mailto:${m.sedi.email}`} class="btn btn-ghost w-full !min-h-[56px]"><Icona nome="mail" /> {m.sedi.email}</a>
+<section id="contatti" data-cta-finale class="px-4 py-14 sm:px-8 sm:py-20">
+  <div class="relative mx-auto max-w-7xl overflow-hidden rounded-2xl bg-brand px-6 py-12 text-white sm:px-12 sm:py-16" data-reveal>
+    <div class="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full border-[28px] border-white/10"></div>
+    <div class="pointer-events-none absolute -bottom-20 right-40 h-40 w-40 rounded-full bg-brand2/40"></div>
+    <div class="relative grid gap-8 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <h2 class="text-3xl font-semibold leading-tight sm:text-5xl">{m.prenota.titolo}</h2>
+        <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/85">{m.prenota.testo}</p>
+      </div>
+      <div class="flex flex-col gap-3 lg:col-span-5">
+        <a href={telHref(m.prenota.telefono)} class="btn !min-h-[56px] bg-white text-lg !text-brand hover:bg-white/90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+        <a href={`mailto:${m.sedi.email}`} class="btn !min-h-[56px] border border-white/40 text-white hover:bg-white/10"><Icona nome="mail" /> Mi scriva una mail</a>
+      </div>
     </div>
   </div>
 </section>

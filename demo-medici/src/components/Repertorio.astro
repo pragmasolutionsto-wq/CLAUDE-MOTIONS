@@ -1,0 +1,9 @@
+---
+// Badge obbligatorio sulle foto di repertorio (riempitive, non del medico).
+interface Props { class?: string }
+const { class: cls = 'left-3 bottom-3' } = Astro.props;
+---
+<span class={`pointer-events-none absolute z-10 inline-flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-medium leading-none text-white backdrop-blur-sm ${cls}`}>
+  <svg viewBox="0 0 24 24" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h3l1.5-2h7L17 7h3v12H4z M12 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" /></svg>
+  Foto di repertorio
+</span>

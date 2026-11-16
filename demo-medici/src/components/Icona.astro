@@ -1,18 +1,29 @@
 ---
-// Icone lineari minime (niente emoji).
-interface Props { nome: 'tel' | 'mail' | 'pin' | 'freccia' | 'cuore' | 'commento' | 'invia' | 'salva' | 'puntini' | 'stella'; class?: string }
+// Icone lineari (niente emoji).
+interface Props { nome: string; class?: string }
 const { nome, class: cls = 'h-5 w-5' } = Astro.props;
 const p: Record<string, string> = {
   tel: 'M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2',
   mail: 'M4 6h16v12H4z M4 7l8 6 8-6',
   pin: 'M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z M12 12.2a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2',
   freccia: 'M5 12h14 M13 6l6 6-6 6',
+  sx: 'M15 6l-6 6 6 6',
+  dx: 'M9 6l6 6-6 6',
+  check: 'M5 12.5l4.5 4.5L19 7.5',
   cuore: 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z',
   commento: 'M20 12a8 8 0 0 1-11.6 7.1L4 20l1-4.2A8 8 0 1 1 20 12z',
   invia: 'M21 3L3 10.5l7 2.5 2.5 7z M10 13l11-10',
   salva: 'M6 3h12v18l-6-4-6 4z',
   puntini: 'M5 12h.01 M12 12h.01 M19 12h.01',
   stella: 'M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z',
+  medaglia: 'M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10z M9 14l-1.5 7L12 19l4.5 2L15 14',
+  ospedale: 'M4 21V7l8-4 8 4v14 M4 21h16 M12 8v6 M9 11h6 M10 21v-4h4v4',
+  edificio: 'M5 21V4h9v17 M14 9h5v12 M3 21h18 M8 8h3 M8 12h3 M8 16h3 M16.5 13h.01 M16.5 17h.01',
+  persone: 'M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z M2.5 20a6.5 6.5 0 0 1 13 0 M16 4.5a3.5 3.5 0 0 1 0 6.5 M18 14a5.5 5.5 0 0 1 3.5 6',
+  goccia: 'M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z',
+  scudo: 'M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z M9 12l2 2 4-4',
+  calendario: 'M4 6h16v14H4z M4 10h16 M8 3v4 M16 3v4',
+  foto: 'M4 7h3l1.5-2h7L17 7h3v12H4z M12 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z',
 };
 ---
-<svg viewBox="0 0 24 24" class={cls} fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={p[nome]} /></svg>
+<svg viewBox="0 0 24 24" class={cls} fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={p[nome] ?? ''} /></svg>

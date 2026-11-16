@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Icona from '../../components/Icona.astro';
+import Repertorio from '../../components/Repertorio.astro';
 import CtaFinale from '../../components/CtaFinale.astro';
 import CtaMobile from '../../components/CtaMobile.astro';
 import Footer from '../../components/Footer.astro';
@@ -30,6 +31,13 @@ const a = m.articolo;
         </div>
       </div>
     </section>
+
+    <div class="mx-auto max-w-4xl px-5 pt-10 sm:px-8">
+      <div class="relative overflow-hidden rounded-2xl">
+        <img src={a.img} alt="" width="1600" height="900" class="aspect-[16/9] w-full object-cover object-[50%_35%]" />
+        <Repertorio />
+      </div>
+    </div>
 
     <article class="prose-medico mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-16">
       {a.sezioni.map((s) => (

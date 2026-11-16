@@ -26,7 +26,8 @@ Lavora nella cartella del progetto demo-medici (dove c'è `astro.config.mjs`). P
 7. Scrivi tutto in `public/<slug>/brand/brand.json` con, per ogni dato, la pagina da cui viene.
 8. Se manca il logo → logotipo tipografico sobrio (nome + specialità), non un'icona inventata.
 9. **STOP 1 – Riepilogo a Meme prima di disegnare.** Mostra: logo trovato (o "assente, farò logotipo"), foto tenute e scartate (con motivo), colori, font, dati principali, recensioni. Aspetta la sua risposta prima di passare alla Fase 2.
-10. **Se non ci sono foto utilizzabili del medico: fermati qui e diglielo.** Niente segnaposto, niente avatar, niente stock. Non creare JSON né pagine.
+10. **Foto di repertorio**: scegline 10-14 pertinenti alla specialità (prima le stock del suo sito, poi Unsplash gratuito: pagina `unsplash.com/s/photos/<tema>?license=free`, solo URL `images.unsplash.com/photo-…`, mai `plus.unsplash.com`). Guardale in griglia, scarta nudi, volti in primo piano non pertinenti, immagini cupe. Originali in `public/<slug>/brand/repertorio/`. Ritagli in `img/rep-*.webp` con punto focale scelto a mano e verificati a occhio.
+11. **Se non ci sono foto utilizzabili del medico: fermati qui e diglielo.** Niente segnaposto, niente avatar, niente stock. Non creare JSON né pagine.
 
 ## FASE 2 – Principio guida
 Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito, ma fatto bene": quale logo, quali colori, quale foto in hero, quali sue parole.
@@ -35,7 +36,8 @@ Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito,
 1. Prepara le versioni web delle foto in `public/<slug>/img/` (webp, lato lungo max 2000px, qualità ~80; hero max ~2400px). Le pagine usano SOLO queste, mai i file di `brand/`.
 2. Crea/aggiorna `src/data/medici/<slug>.json` e adegua il template alle regole del METODO:
    - hero: sua foto vera e grande, nome, specialità, una riga di fatti, due pulsanti (Prenota / Contatta);
-   - fondo bianco o quasi bianco; colore del brand con misura (pulsanti, dettagli, una sezione forte);
+   - stile AutoScout24 con i colori del medico (card con ombra, box prenotazione in hero, chip, icone, caroselli, fascia immagine, CTA colorata, footer a colonne); fondo bianco/grigio chiaro freddo;
+   - badge "Foto di repertorio" su OGNI foto non del medico + nota nel footer;
    - max 2 font, niente corsivi nei titoli, niente card numerate, niente iniziali/avatar, niente gradienti, niente slogan, niente grafica astratta;
    - sezioni con ritmo vario: foto e testo alternati, griglia ordinata, molto spazio bianco;
    - animazioni: solo comparsa morbida allo scroll.
@@ -44,6 +46,7 @@ Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito,
 4. Fascia "Anteprima non ufficiale realizzata da Pragma Solutions" e noindex: sempre (vedi Regole fisse).
 
 ## FASE 4 – Testi
+- Il medico parla in **prima persona** in tutto il sito (mai "il Dr. X è...").
 - **Lei** al paziente, sempre, ovunque (home, articolo, post, pulsanti).
 - Fatti concreti dal suo sito, riscritti chiari e brevi. Niente frasi ad effetto.
 - Mai inventare recensioni, numeri, premi, titoli, anni. Dato mancante = omesso.

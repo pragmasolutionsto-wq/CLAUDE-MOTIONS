@@ -7,7 +7,7 @@
   "citta": "Torino",
   "meta": {
     "title": "Dr. Pierorazio Motta · Chirurgia della spalla · Torino",
-    "description": "Specialista ortopedico in chirurgia della spalla a Torino. Instabilità, cuffia dei rotatori, artrosi, fratture. Studio in via Ettore de Sonnaz 13."
+    "description": "Sono specialista ortopedico in chirurgia della spalla a Torino. Instabilità, cuffia dei rotatori, artrosi, fratture. Studio in via Ettore de Sonnaz 13."
   },
   "brand": {
     "logoScuro": "/motta-m2zh/img/logo-scuro.png",
@@ -31,18 +31,30 @@
     "eyebrow": "Chirurgia della spalla · Torino",
     "fatti": [
       "Oltre 35 anni di chirurgia della spalla",
-      "Già responsabile della Shoulder Unit del CTO di Torino",
-      "Clinica Cellini e Casa di Cura Fornaca, Humanitas"
+      "Già responsabile Shoulder Unit, CTO Torino",
+      "Humanitas Cellini e Fornaca"
     ],
     "ctaPrenota": "Prenoti una visita",
-    "ctaContatta": "Contatti lo studio"
+    "ctaContatta": "Contatti lo studio",
+    "box": {
+      "titolo": "Prenoti la Sua visita",
+      "motivoLabel": "Motivo della visita",
+      "motivi": [
+        "Dolore alla spalla",
+        "Instabilità o lussazione",
+        "Cuffia dei rotatori",
+        "Artrosi",
+        "Frattura"
+      ],
+      "sedeLabel": "Dove preferisce essere visitato"
+    }
   },
   "bio": {
-    "titolo": "Chi è",
+    "titolo": "Chi sono",
     "paragrafi": [
-      "Il Dr. Pierorazio Motta è specialista ortopedico e si occupa di chirurgia della spalla da oltre 35 anni: dalla diagnosi al trattamento conservativo o chirurgico, in artroscopia o a cielo aperto.",
-      "Ha maturato la sua esperienza al CTO di Torino, dove fino al 2021 è stato responsabile della chirurgia della spalla.",
-      "Per il Dr. Motta il primo compito dello specialista è informare il paziente sulla sua patologia, in modo scientificamente corretto e con un linguaggio chiaro."
+      "Da oltre 35 anni mi occupo di chirurgia della spalla: dalla diagnosi al trattamento conservativo o chirurgico, in artroscopia o a cielo aperto.",
+      "Ho maturato la mia esperienza al CTO di Torino, dove fino al 2021 sono stato responsabile della chirurgia della spalla.",
+      "Credo che il primo compito dello specialista sia informare il paziente sulla sua patologia, in modo scientificamente corretto e con un linguaggio chiaro."
     ],
     "tappe": [
       {
@@ -65,66 +77,81 @@
     "societa": [
       "Società Italiana di Chirurgia della Spalla (SICSeG)",
       "Società Europea di Chirurgia della Spalla (SECEC)"
-    ]
+    ],
+    "societaLabel": "Sono membro di"
   },
   "aree": {
-    "titolo": "Di cosa si occupa",
-    "intro": "Le principali patologie della spalla. Il trattamento, conservativo o chirurgico, si decide dopo la visita e gli esami.",
+    "titolo": "Di cosa mi occupo",
+    "intro": "Le principali patologie della spalla. Il trattamento, conservativo o chirurgico, lo decidiamo insieme dopo la visita e gli esami.",
     "voci": [
       {
         "titolo": "Instabilità della spalla",
-        "testo": "Lussazioni e sublussazioni anteriori, posteriori e multidirezionali."
+        "testo": "Lussazioni e sublussazioni anteriori, posteriori e multidirezionali.",
+        "img": "/motta-m2zh/img/rep-instabilita.webp"
       },
       {
         "titolo": "Rottura della cuffia dei rotatori",
-        "testo": "Lesioni dei tendini che muovono e stabilizzano la spalla."
+        "testo": "Lesioni dei tendini che muovono e stabilizzano la spalla.",
+        "img": "/motta-m2zh/img/rep-cuffia.webp"
       },
       {
         "titolo": "Artrosi di spalla",
-        "testo": "Quando indicato, endoprotesi, protesi anatomiche o protesi inverse."
+        "testo": "Quando indicato, endoprotesi, protesi anatomiche o protesi inverse.",
+        "img": "/motta-m2zh/img/rep-artrosi.webp"
       },
       {
         "titolo": "Conflitto subacromiale",
-        "testo": "Dolore nell'alzare il braccio, legato allo spazio sotto l'acromion."
+        "testo": "Dolore nell'alzare il braccio, legato allo spazio sotto l'acromion.",
+        "img": "/motta-m2zh/img/rep-conflitto.webp"
       },
       {
         "titolo": "Rigidità primitive di spalla",
-        "testo": "La spalla perde movimento in modo progressivo."
+        "testo": "La spalla perde movimento in modo progressivo.",
+        "img": "/motta-m2zh/img/rep-rigidita.webp"
       },
       {
         "titolo": "Fratture di omero, clavicola e scapola",
-        "testo": "Valutazione e trattamento, conservativo o chirurgico."
+        "testo": "Valutazione e trattamento, conservativo o chirurgico.",
+        "img": "/motta-m2zh/img/rep-fratture.webp"
       }
     ]
   },
   "metodo": {
-    "titolo": "Come lavora",
+    "titolo": "Come lavoro",
+    "intro": "Dalla diagnosi al trattamento, con tecniche scelte caso per caso.",
     "punti": [
       {
         "titolo": "Chirurgia artroscopica",
-        "testo": "Tratta in artroscopia le fratture di glena, le lussazioni acromion-claveari, le fratture del trochite omerale e la stabilizzazione di spalla secondo Latarjet."
+        "testo": "Tratto in artroscopia le fratture di glena, le lussazioni acromion-claveari, le fratture del trochite omerale e la stabilizzazione di spalla secondo Latarjet.",
+        "img": "/motta-m2zh/img/post-sala.webp",
+        "vera": true,
+        "imgAlt": "In sala operatoria"
       },
       {
         "titolo": "Protesi e realtà virtuale",
-        "testo": "Nella chirurgia protesica si avvale della realtà virtuale per un impianto più preciso e anatomico."
-      },
-      {
-        "titolo": "Fattori biologici",
-        "testo": "Quando è necessario sostenere la riparazione dei tessuti, utilizza PRP e cellule mesenchimali da midollo osseo."
+        "testo": "Nella chirurgia protesica mi avvalgo della realtà virtuale per un impianto più preciso e anatomico.",
+        "img": "/motta-m2zh/img/rep-realta.webp"
       },
       {
         "titolo": "Riabilitazione",
-        "testo": "Ogni paziente riceve un protocollo riabilitativo con le modalità e i tempi del recupero."
+        "testo": "Ogni paziente riceve da me un protocollo riabilitativo, con le modalità e i tempi del recupero.",
+        "img": "/motta-m2zh/img/rep-fisio.webp"
+      },
+      {
+        "titolo": "Fattori biologici",
+        "testo": "Quando è necessario sostenere la riparazione dei tessuti, utilizzo PRP e cellule mesenchimali da midollo osseo.",
+        "icona": "goccia"
       },
       {
         "titolo": "Evidenze scientifiche",
-        "testo": "È prudente verso le opzioni terapeutiche innovative non supportate da evidenze scientifiche."
+        "testo": "Sono prudente verso le opzioni terapeutiche innovative non supportate da evidenze scientifiche.",
+        "icona": "scudo"
       }
     ]
   },
   "recensioni": {
-    "titolo": "Cosa scrivono i pazienti",
-    "nota": "Recensioni pubblicate sul sito del Dr. Motta, riportate senza modifiche.",
+    "titolo": "Cosa scrivono i miei pazienti",
+    "nota": "Recensioni pubblicate sul mio sito, riportate senza modifiche.",
     "voci": [
       {
         "nome": "Cervino M.G.",
@@ -225,21 +252,24 @@
         ]
       }
     ],
-    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica. Per una valutazione del Suo caso si rivolga a uno specialista."
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica. Per una valutazione del Suo caso si rivolga a uno specialista.",
+    "img": "/motta-m2zh/img/rep-articolo.webp"
   },
   "articoliInArrivo": [
     {
       "categoria": "Instabilità",
-      "titolo": "Spalla lussata la prima volta: cosa fare e cosa evitare"
+      "titolo": "Spalla lussata la prima volta: cosa fare e cosa evitare",
+      "img": "/motta-m2zh/img/rep-consulto.webp"
     },
     {
       "categoria": "Artrosi",
-      "titolo": "Protesi di spalla anatomica o inversa: le differenze"
+      "titolo": "Protesi di spalla anatomica o inversa: le differenze",
+      "img": "/motta-m2zh/img/rep-consulto2.webp"
     }
   ],
   "instagram": {
     "handle": "dr.pierorazio.motta",
-    "nota": "Proposta di contenuti per un profilo Instagram dello studio. Il profilo oggi non esiste.",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
     "post": [
       {
         "stile": "foto",
@@ -270,7 +300,7 @@
     ]
   },
   "sedi": {
-    "titolo": "Dove riceve",
+    "titolo": "Dove ricevo",
     "luoghi": [
       {
         "tipo": "Studio",
@@ -323,18 +353,19 @@
         "logoH": 260
       }
     ],
-    "email": "pierorazio.motta@gmail.com"
+    "email": "pierorazio.motta@gmail.com",
+    "struttureLabel": "Dove opero"
   },
   "prenota": {
     "titolo": "Prenoti una visita",
-    "testo": "Può chiamare la segreteria oppure scrivere una mail con una breve descrizione del problema.",
+    "testo": "Può chiamare la segreteria oppure scrivermi una mail con una breve descrizione del problema.",
     "telefono": "011505089",
     "telefonoLabel": "011 505089"
   },
   "tema": {
     "palette": {
       "bg": "#FFFFFF",
-      "surface": "#F4F6F8",
+      "surface": "#F2F5F8",
       "ink": "#0C121E",
       "muted": "#566070",
       "line": "#E1E6EB",
@@ -357,5 +388,33 @@
       "https://pieroraziomotta.com/servizi",
       "https://pieroraziomotta.com/contatti"
     ]
-  }
+  },
+  "fiducia": [
+    {
+      "icona": "medaglia",
+      "titolo": "Oltre 35 anni",
+      "testo": "di chirurgia della spalla"
+    },
+    {
+      "icona": "ospedale",
+      "titolo": "Shoulder Unit",
+      "testo": "responsabile al CTO di Torino fino al 2021"
+    },
+    {
+      "icona": "edificio",
+      "titolo": "Humanitas",
+      "testo": "Clinica Cellini e Casa di Cura Fornaca"
+    },
+    {
+      "icona": "persone",
+      "titolo": "SICSeG · SECEC",
+      "testo": "società italiana ed europea di chirurgia della spalla"
+    }
+  ],
+  "banda": {
+    "img": "/motta-m2zh/img/rep-banda.webp",
+    "titolo": "Il dolore alla spalla dura da settimane?",
+    "testo": "Una visita serve a capire da dove nasce il problema e quali sono le possibilità di cura."
+  },
+  "repertorio": "Le immagini contrassegnate come «Foto di repertorio» sono segnaposto inseriti da Pragma Solutions per questa anteprima: non ritraggono il Dr. Motta, il suo studio o i suoi pazienti."
 }

@@ -23,3 +23,18 @@ if (bar && hero) {
   new IntersectionObserver(([e]) => { dopo = !e.isIntersecting; upd(); }).observe(hero);
   if (finale) new IntersectionObserver(([e]) => { fine = e.isIntersecting; upd(); }).observe(finale);
 }
+
+// Chip selezionabili (box prenotazione): uno attivo per gruppo
+document.querySelectorAll<HTMLElement>('[data-chip]').forEach((b) => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll<HTMLElement>(`[data-chip="${b.dataset.chip}"]`).forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  });
+});
+
+// Caroselli con frecce
+document.querySelectorAll<HTMLElement>('[data-carosello]').forEach((c) => {
+  const t = c.querySelector<HTMLElement>('[data-traccia]');
+  c.querySelectorAll<HTMLElement>('[data-scorri]').forEach((b) => b.addEventListener('click', () => {
+    if (t) t.scrollBy({ left: Number(b.dataset.scorri) * t.clientWidth * 0.8, behavior: 'smooth' });
+  }));
+});
