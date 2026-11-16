@@ -45,8 +45,8 @@ for (const [vNome, ctxOpt] of viste) {
     // Scorre tutta la pagina per far partire i reveal
     await page.evaluate(async () => {
       const h = document.documentElement.scrollHeight;
-      for (let y = 0; y < h; y += 400) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 70)); }
-      window.scrollTo(0, 0);
+      for (let y = 0; y < h; y += 400) { window.scrollTo({ top: y, behavior: 'instant' }); await new Promise((r) => setTimeout(r, 70)); }
+      window.scrollTo({ top: 0, behavior: 'instant' });
     });
     await page.waitForTimeout(1300);
 
@@ -55,7 +55,7 @@ for (const [vNome, ctxOpt] of viste) {
       robots: document.querySelector('meta[name="robots"]')?.getAttribute('content'),
       banner: document.body.innerText.includes('Anteprima non ufficiale realizzata da Pragma Solutions'),
       nascosti: [...document.querySelectorAll('[data-reveal], [data-stagger] > *')].filter((e) => getComputedStyle(e).opacity < 0.5).length,
-      font: document.fonts.check(`16px "${getComputedStyle(document.documentElement).getPropertyValue('--f-serif').split(',')[0].replace(/'/g, '').trim()}"`),
+      font: document.fonts.check(`600 16px "${getComputedStyle(document.documentElement).getPropertyValue('--f-head').split(',')[0].replace(/'/g, '').trim()}"`),
     }));
     if (check.overflow > 1) problemi.push(`[${tag}] scroll orizzontale di ${check.overflow}px`);
     if (check.robots !== 'noindex, nofollow') problemi.push(`[${tag}] meta robots: ${check.robots}`);

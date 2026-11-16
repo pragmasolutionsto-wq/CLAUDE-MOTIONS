@@ -12,12 +12,14 @@ Lavora nella cartella del progetto demo-medici (dove c'è `astro.config.mjs`). P
 `npm run slug -- <cognome>` → usa lo slug che esce per tutte le cartelle e i file.
 
 ## FASE 1 – Estrazione brand → `public/<slug>/brand/`
-1. Scarica home e pagine principali (chi sono, servizi/patologie, contatti, sedi, eventuali pagine con foto). Firecrawl con `formats: ["markdown","links","images","rawHtml"]` (+ `branding` se disponibile), altrimenti WebFetch.
+1. Scarica home e pagine principali (chi sono, servizi/patologie, contatti, sedi, eventuali pagine con foto). Firecrawl con `formats: ["markdown","links","images","branding"]`. **Poi leggi anche l'HTML grezzo** (curl, aggiungendo il dominio del sito e quello del CDN immagini ai domini consentiti se bloccati) e cerca TUTTI gli URL immagine: foto e loghi messi come sfondo CSS non compaiono in `images`.
 2. **Logo**: cerca in header, footer, favicon/apple-touch-icon, `og:image`, nomi file con logo/marchio/brand/nome del medico. Scarica la versione più grande; se esistono, chiara e scura. Salva come `logo.<ext>` (`logo-chiaro`, `logo-scuro`).
 3. **Foto**: tutte le foto reali del medico, dello studio, dell'attività.
    - Togli dall'URL i parametri di ridimensionamento del CDN (es. `/v1/x_..,w_..,h_..`, `?w=`, `&q=`, `-300x200`, `=s400`, `/resize/`) per avere l'ORIGINALE. Scarica sia la variante "piena" sia, se non esiste, la migliore disponibile e confronta le dimensioni.
    - Scarta: foto stock (nomi tipo `physiotherapist-doing...`, `woman-s-shoulder...`, freepik/shutterstock/istock/unsplash, soggetti generici senza il medico o il suo studio), foto sotto ~800px di lato lungo, foto sgranate o rovinate. Guarda TU ogni foto prima di tenerla.
    - Salva gli originali come `foto-01.<ext>`, `foto-02.<ext>`... con una descrizione in `brand.json`.
+   - Foto vere ma piccole: tienile, annotate, solo per usi piccoli (post, avatar).
+   - Controlla che nessun dettaglio ingrandito mostri dati personali leggibili (date di nascita su diplomi, documenti, schermi): se sì, sfoca solo quella zona nella versione web.
 4. **Colori**: 2-3 colori dal logo (campiona i pixel) e dal CSS (variabili, colori dei pulsanti e dei titoli). Esadecimali.
 5. **Font**: famiglie usate dal sito (CSS `font-family`, link Google Fonts/Typekit). Giudica la qualità.
 6. **Dati**: nome, titoli, specialità, bio, incarichi, strutture, patologie, sedi, orari, contatti, recensioni reali (alla lettera, con nome come pubblicato).

@@ -73,13 +73,19 @@ Hosting: **Cloudflare Pages**, progetto `pragma-anteprime` (gratis, uso commerci
 9. **Linguaggio semplice**, frasi corte, italiano corretto.
 10. Post Instagram: sono proposte. Se il medico non ha un profilo, l'handle è inventato in modo plausibile e la sezione dice "Esempi di post realizzati per questa anteprima".
 
-## Stato del template (da sapere)
-Il template v1 (`HomeMedico.astro`, `articolo.astro`, `motta-m2zh.json`) è stato fatto PRIMA del METODO e lo viola: fondo crema, hero con slogan e corsivo, card numerate 01-06, iniziali "PM" al posto della foto, grafica astratta, parallax, "tu" invece di "Lei". Alla prima `/nuova-demo` il template va rifatto conforme al METODO (e la demo Motta rifatta o ritirata). Da lì in poi resta un template unico, ma ogni demo può variare l'ordine e il ritmo delle sezioni.
+## Stato del template
+Template v2 (`HomeMedico.astro`, `articolo.astro`) conforme al METODO, prima demo: `motta-m2zh`. Schema dati di riferimento: `src/data/medici/motta-m2zh.json` (campi `brand`, `foto`, `hero.fatti`, `metodo`, `recensioni`, `sedi.strutture` con loghi). Sezioni: Hero (foto) · Chi è (foto sx) · Di cosa si occupa (elenco) · Come lavora (unica sezione scura) · Recensioni reali · Articoli · Instagram · Dove riceve (foto dx) · Contatti · footer con logo chiaro. Ogni demo può cambiare ordine/ritmo se le foto lo suggeriscono.
 
 ## Note tecniche (imparate sul campo)
 - **Mai `transition-all` (o transition su opacity/transform) su elementi animati da GSAP** (`data-reveal`, figli di `data-stagger`): la transizione CSS combatte con GSAP e l'elemento resta invisibile. Usa `transition-[translate,border-color]` ecc.
 - Animazioni (METODO: solo comparsa morbida allo scroll): `data-reveal` (singolo), `data-stagger` (figli in sequenza). Niente parallax, niente effetti. Rispettano `prefers-reduced-motion`.
 - `line-clamp` va su un `<p>` senza padding, altrimenti la riga tagliata si vede nel padding.
+- Classi custom (`.btn`, `.label`) stanno in `@layer components`: fuori dai layer scavalcano le utility Tailwind (es. `hidden`).
+- Lo scroll morbido è CSS (`scroll-behavior: smooth`): nello script screenshot lo scroll va forzato `behavior: 'instant'`.
+- **Fase 1 – foto nascoste:** i siti (es. Flazio) mettono foto e loghi come sfondi CSS, che lo scrape "images" non vede. Leggi SEMPRE l'HTML grezzo (curl o rawHtml) e cerca tutti gli URL immagine. Su Motta così sono emerse la foto in sala operatoria e il marchio in alta risoluzione.
+- **Privacy nelle foto:** ingrandendo dettagli (diplomi, documenti, schermi) controlla che non si leggano dati personali (data di nascita, codici, pazienti). Se sì, sfoca solo quella parte.
+- Foto vere ma piccole (<800px): non in grande; vanno bene in formati piccoli (post Instagram, avatar).
+- Confronto Fase 5: `shots/<slug>/confronto.png` (sito attuale vs demo, desktop + mobile).
 - `npm run shot` fallisce (exit 2) se trova: errori console, richieste fallite, scroll orizzontale, meta robots sbagliato, fascia mancante, elementi rimasti invisibili, font titoli non caricato, link nella root.
 
 ## Deploy

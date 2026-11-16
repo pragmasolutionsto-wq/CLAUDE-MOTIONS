@@ -1,8 +1,8 @@
 ---
+// Template home v2 — conforme al METODO DEMO MEDICI (CLAUDE.md).
+// Fondo bianco, foto vere del medico, suo logo e suoi colori, niente numerazioni/avatar/slogan/corsivi.
 import Base from './Base.astro';
 import Header from '../components/Header.astro';
-import Arte from '../components/Arte.astro';
-import FotoSegnaposto from '../components/FotoSegnaposto.astro';
 import Icona from '../components/Icona.astro';
 import CtaFinale from '../components/CtaFinale.astro';
 import CtaMobile from '../components/CtaMobile.astro';
@@ -11,122 +11,137 @@ import { nomeCompleto, telHref, mapsHref, type Medico } from '../lib/medici';
 
 interface Props { m: Medico }
 const { m } = Astro.props;
-const n2 = (i: number) => String(i + 1).padStart(2, '0');
 const ig = m.instagram;
 ---
 <Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
   <Header m={m} />
 
   <main>
-    <!-- 1. HERO -->
-    <section data-hero-section class="relative overflow-hidden">
-      <div class="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-10 sm:px-8 sm:pt-16 lg:grid-cols-12 lg:gap-6 lg:pb-24 lg:pt-20">
-        <div data-hero class="lg:col-span-7">
-          <p class="eyebrow">{m.hero.eyebrow}</p>
-          <p class="mt-6 font-serif text-xl text-ink sm:text-2xl">{nomeCompleto(m)}</p>
-          <h1 class="mt-3 font-serif text-[2.6rem] leading-[1.04] tracking-[-0.01em] sm:text-6xl lg:text-[4.4rem]">
-            {m.hero.frase} <em class="text-accent">{m.hero.fraseAccento}</em>
-          </h1>
-          <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">{m.hero.sottotitolo}</p>
-          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a href={telHref(m.prenota.telefono)} class="btn btn-primary"><Icona nome="tel" /> {m.hero.cta}</a>
-            <a href="#aree" class="btn btn-ghost">Di cosa si occupa <Icona nome="freccia" class="h-4 w-4" /></a>
-          </div>
+    <!-- HERO: foto vera e grande, nome, specialità, una riga di fatti, due pulsanti -->
+    <section data-hero-section class="border-b border-line">
+      <div class="mx-auto grid max-w-7xl lg:grid-cols-12 lg:items-center lg:gap-12 lg:px-8 lg:py-16">
+        <div class="lg:order-2 lg:col-span-7">
+          <picture>
+            <source media="(min-width: 1024px)" srcset={m.foto.hero} />
+            <img src={m.foto.heroMobile} alt={m.foto.heroAlt} width="1020" height="1275" fetchpriority="high"
+              class="h-[58svh] max-h-[560px] w-full object-cover object-[50%_25%] lg:aspect-[3/2] lg:h-auto lg:max-h-none lg:rounded-md" />
+          </picture>
         </div>
-        <div class="relative mx-auto w-full max-w-[300px] sm:max-w-[420px] lg:col-span-5 lg:max-w-none" data-hero-art>
-          <div data-parallax>
-            <Arte motivo={m.tema.motivo} class="w-full" />
+        <div class="px-5 pb-12 pt-8 sm:px-8 lg:order-1 lg:col-span-5 lg:px-0 lg:py-0">
+          <p class="label">{m.hero.eyebrow}</p>
+          <h1 class="mt-4 text-[2.6rem] font-semibold leading-[1.02] sm:text-6xl">{nomeCompleto(m)}</h1>
+          <p class="mt-3 text-xl text-muted sm:text-2xl">{m.specialita}</p>
+          <ul class="mt-7 space-y-2 border-l-2 border-brand2 pl-4 text-[15px] leading-snug text-ink/85">
+            {m.hero.fatti.map((f) => <li>{f}</li>)}
+          </ul>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href={telHref(m.prenota.telefono)} class="btn btn-primary"><Icona nome="tel" /> {m.hero.ctaPrenota}</a>
+            <a href="#contatti" class="btn btn-ghost">{m.hero.ctaContatta}</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. CHI È -->
-    <section id="chi-e" class="border-t border-line/70">
-      <div class="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:py-28">
+    <!-- CHI È: foto a sinistra, testo a destra -->
+    <section id="chi-e">
+      <div class="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:py-28">
         <div class="lg:col-span-5" data-reveal>
-          <FotoSegnaposto iniziali={m.iniziali} class="aspect-[4/5] w-full max-w-md lg:sticky lg:top-16" />
+          <img src={m.foto.dettaglio} alt={m.foto.dettaglioAlt} width="940" height="530" loading="lazy" class="w-full rounded-md object-cover lg:sticky lg:top-12" />
         </div>
         <div class="lg:col-span-7">
-          <p class="eyebrow" data-reveal>Chi è</p>
-          <h2 class="mt-4 font-serif text-4xl leading-[1.1] sm:text-5xl" data-reveal>{m.bio.titolo}</h2>
-          <div class="mt-6 space-y-4 text-lg leading-relaxed text-ink/85" data-reveal>
-            {m.bio.paragrafi.map((p) => <p>{p}</p>)}
+          <p class="label" data-reveal>{m.bio.titolo}</p>
+          <div class="mt-5 space-y-4 text-lg leading-relaxed text-ink/85" data-reveal>
+            {m.bio.paragrafi.map((p, i) => <p class={i === 0 ? 'text-xl leading-relaxed text-ink sm:text-[1.4rem]' : ''}>{p}</p>)}
           </div>
-
-          <ol class="mt-10 border-t border-line" data-stagger>
+          <dl class="mt-10 border-t border-line" data-stagger>
             {m.bio.tappe.map((t) => (
-              <li class="grid gap-1 border-b border-line py-5 sm:grid-cols-[150px_1fr] sm:gap-6">
-                <span class="text-sm font-semibold tracking-wide text-accent">{t.periodo}</span>
-                <span class="leading-relaxed">{t.testo}</span>
-              </li>
+              <div class="grid gap-1 border-b border-line py-4 sm:grid-cols-[140px_1fr] sm:gap-6">
+                <dt class="font-head text-[15px] font-semibold text-brand">{t.periodo}</dt>
+                <dd class="leading-relaxed">{t.testo}</dd>
+              </div>
             ))}
-          </ol>
-
-          <div class="mt-10 grid gap-5 sm:grid-cols-2" data-stagger>
-            <div class="rounded-2xl bg-surface p-6">
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Società scientifiche</p>
-              <ul class="mt-3 space-y-2 text-[15px] leading-snug">{m.bio.societa.map((s) => <li>{s}</li>)}</ul>
-            </div>
-            <div class="rounded-2xl border border-line p-6">
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">Approccio</p>
-              <p class="mt-3 text-[15px] leading-relaxed">{m.bio.approccio}</p>
-            </div>
-          </div>
+          </dl>
+          <p class="mt-6 text-sm leading-relaxed text-muted" data-reveal>Membro di: {m.bio.societa.join(' · ')}</p>
         </div>
       </div>
     </section>
 
-    <!-- 3. DI COSA SI OCCUPA -->
-    <section id="aree" class="bg-surface">
-      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
-        <div class="max-w-2xl">
-          <p class="eyebrow" data-reveal>Patologie e trattamenti</p>
-          <h2 class="mt-4 font-serif text-4xl leading-[1.1] sm:text-5xl" data-reveal>{m.aree.titolo}</h2>
-          <p class="mt-5 text-lg leading-relaxed text-muted" data-reveal>{m.aree.intro}</p>
+    <!-- DI COSA SI OCCUPA: elenco pulito a due/tre colonne -->
+    <section id="aree" class="border-t border-line">
+      <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <div class="grid gap-6 lg:grid-cols-12">
+          <h2 class="text-4xl font-semibold leading-tight sm:text-5xl lg:col-span-5" data-reveal>{m.aree.titolo}</h2>
+          <p class="text-lg leading-relaxed text-muted lg:col-span-6 lg:col-start-7 lg:pt-2" data-reveal>{m.aree.intro}</p>
         </div>
-        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
-          {m.aree.voci.map((v, i) => (
-            <article class="group flex flex-col rounded-3xl border border-line bg-bg p-7 transition-[translate,border-color] duration-300 hover:-translate-y-1 hover:border-accent/50">
-              <span class="font-serif text-sm italic text-warm">{n2(i)}</span>
-              <h3 class="mt-6 font-serif text-2xl leading-tight">{v.titolo}</h3>
-              <p class="mt-3 leading-relaxed text-muted">{v.testo}</p>
-              <span class="mt-auto block h-px w-10 bg-accent pt-0 transition-all duration-300 group-hover:w-20" style="margin-top:1.75rem"></span>
-            </article>
+        <div class="mt-12 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
+          {m.aree.voci.map((v) => (
+            <div class="border-t border-line py-6">
+              <h3 class="text-xl font-semibold leading-snug">{v.titolo}</h3>
+              <p class="mt-2 leading-relaxed text-muted">{v.testo}</p>
+            </div>
           ))}
         </div>
       </div>
     </section>
 
-    <!-- 4. ARTICOLI -->
-    <section id="articoli">
-      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p class="eyebrow" data-reveal>Articoli</p>
-            <h2 class="mt-4 font-serif text-4xl leading-[1.1] sm:text-5xl" data-reveal>Informarsi bene, prima di tutto.</h2>
-          </div>
+    <!-- COME LAVORA: l'unica sezione forte, colore scuro del brand -->
+    <section class="bg-deep text-deep-ink">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:py-28">
+        <div class="lg:col-span-4" data-reveal>
+          <h2 class="text-4xl font-semibold leading-tight text-white sm:text-5xl">{m.metodo.titolo}</h2>
+          <div class="mt-6 h-[3px] w-12 bg-brand2"></div>
         </div>
-        <div class="mt-12 grid gap-5 lg:grid-cols-12">
-          <a href={`/${m.slug}/articolo`} class="group relative overflow-hidden rounded-3xl bg-accent p-7 text-accent-ink sm:p-10 lg:col-span-8" data-reveal>
-            <Arte motivo={m.tema.motivo} class="pointer-events-none absolute -bottom-24 -right-20 w-72 opacity-20 mix-blend-luminosity sm:w-96" />
-            <div class="relative">
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-accent-ink/70">{m.articolo.categoria} · {m.articolo.tempoLettura} di lettura</p>
-              <h3 class="mt-5 max-w-xl font-serif text-3xl leading-[1.12] sm:text-[2.6rem]">{m.articolo.titolo}</h3>
-              <p class="mt-5 max-w-xl leading-relaxed text-accent-ink/85">{m.articolo.intro}</p>
-              <span class="mt-8 inline-flex items-center gap-2 border-b border-accent-ink/40 pb-1 font-semibold">
-                Leggi l'articolo <Icona nome="freccia" class="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
+        <div class="grid gap-x-10 gap-y-9 sm:grid-cols-2 lg:col-span-8" data-stagger>
+          {m.metodo.punti.map((p) => (
+            <div>
+              <h3 class="text-lg font-semibold text-white">{p.titolo}</h3>
+              <p class="mt-2 leading-relaxed text-deep-ink/75">{p.testo}</p>
             </div>
-          </a>
-          <div class="grid gap-5 lg:col-span-4" data-stagger>
-            {m.articoliInArrivo.map((a) => (
-              <div class="flex flex-col justify-between rounded-3xl border border-dashed border-line p-7">
-                <div>
-                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted">{a.categoria}</p>
-                  <h3 class="mt-4 font-serif text-xl leading-snug">{a.titolo}</h3>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENSIONI REALI dal suo sito, alla lettera -->
+    {m.recensioni.voci.length > 0 && (
+      <section class="border-b border-line">
+        <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+          <h2 class="text-4xl font-semibold leading-tight sm:text-5xl" data-reveal>{m.recensioni.titolo}</h2>
+          <div class="mt-12 grid gap-x-12 gap-y-10 md:grid-cols-2" data-stagger>
+            {m.recensioni.voci.map((r) => (
+              <figure class="border-t border-line pt-6">
+                <div class="flex gap-0.5 text-brand2" aria-label="5 stelle su 5">
+                  {[0, 1, 2, 3, 4].map(() => <Icona nome="stella" class="h-4 w-4 fill-current" />)}
                 </div>
-                <span class="mt-6 inline-flex w-fit rounded-full bg-surface px-3 py-1 text-xs font-medium text-muted">In arrivo</span>
+                <blockquote class="mt-4 text-[17px] leading-relaxed text-ink/90">{r.testo}</blockquote>
+                <figcaption class="mt-4 font-head text-[15px] font-semibold">{r.nome}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <p class="mt-10 text-sm text-muted" data-reveal>{m.recensioni.nota}</p>
+        </div>
+      </section>
+    )}
+
+    <!-- ARTICOLI -->
+    <section id="articoli">
+      <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <h2 class="text-4xl font-semibold leading-tight sm:text-5xl" data-reveal>Articoli</h2>
+        <div class="mt-12 grid gap-10 lg:grid-cols-12">
+          <a href={`/${m.slug}/articolo`} class="group block rounded-md bg-surface p-7 sm:p-10 lg:col-span-7" data-reveal>
+            <p class="label">{m.articolo.categoria} · {m.articolo.tempoLettura} di lettura</p>
+            <h3 class="mt-4 text-3xl font-semibold leading-[1.15] group-hover:text-brand sm:text-[2.2rem]">{m.articolo.titolo}</h3>
+            <p class="mt-5 leading-relaxed text-muted">{m.articolo.intro}</p>
+            <span class="mt-8 inline-flex items-center gap-2 font-head font-semibold text-brand">
+              Legga l'articolo <Icona nome="freccia" class="h-4 w-4" />
+            </span>
+          </a>
+          <div class="lg:col-span-5" data-stagger>
+            <p class="label !text-muted">In arrivo</p>
+            {m.articoliInArrivo.map((a) => (
+              <div class="mt-5 border-t border-line pt-5">
+                <p class="text-sm text-muted">{a.categoria}</p>
+                <h3 class="mt-1 text-xl font-semibold leading-snug">{a.titolo}</h3>
               </div>
             ))}
           </div>
@@ -134,56 +149,53 @@ const ig = m.instagram;
       </div>
     </section>
 
-    <!-- 5. INSTAGRAM -->
-    <section class="bg-deep text-deep-ink">
-      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
-        <div class="max-w-2xl">
-          <p class="eyebrow !text-warm" data-reveal>Dal profilo Instagram</p>
-          <h2 class="mt-4 font-serif text-4xl leading-[1.1] sm:text-5xl" data-reveal>Contenuti chiari, anche sui social.</h2>
-          <p class="mt-5 text-lg leading-relaxed text-deep-ink/70" data-reveal>@{ig.handle}</p>
+    <!-- INSTAGRAM: grafiche con suo logo, suoi colori, sua foto -->
+    <section class="border-t border-line bg-surface">
+      <div class="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
+        <div class="grid gap-6 lg:grid-cols-12">
+          <h2 class="text-4xl font-semibold leading-tight sm:text-5xl lg:col-span-6" data-reveal>Dal profilo Instagram</h2>
+          <p class="leading-relaxed text-muted lg:col-span-5 lg:col-start-8 lg:pt-3" data-reveal>{ig.nota}</p>
         </div>
-        <div class="-mx-5 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+        <div class="-mx-5 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible" data-stagger>
           {ig.post.map((p) => (
-            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-2xl bg-surface text-ink shadow-xl sm:w-[60%] lg:w-auto">
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-md border border-line bg-bg sm:w-[60%] lg:w-auto">
               <header class="flex items-center gap-3 px-4 py-3">
-                <span class="grid h-8 w-8 place-items-center rounded-full bg-accent font-serif text-xs text-accent-ink ring-2 ring-warm/60 ring-offset-2 ring-offset-surface">{m.iniziali}</span>
+                <img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full border border-line bg-white" />
                 <span class="text-sm font-semibold">{ig.handle}</span>
                 <Icona nome="puntini" class="ml-auto h-5 w-5 text-muted" />
               </header>
 
-              {p.stile === 'titolo' && (
-                <div class="relative flex aspect-square flex-col justify-between overflow-hidden bg-accent p-6 text-accent-ink">
-                  <Arte motivo={m.tema.motivo} class="absolute -bottom-16 -right-16 w-64 opacity-30" />
-                  <span class="relative text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-ink/70">{p.occhiello}</span>
-                  <div class="relative">
-                    <p class="font-serif text-[2rem] leading-[1.05]">{p.titolo}</p>
-                    <p class="mt-3 text-sm text-accent-ink/80">{p.sottotitolo}</p>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden">
+                  <img src={(m.foto as Record<string, string>)[p.immagine ?? 'postRitratto']} alt="" width="530" height="530" loading="lazy" class="absolute inset-0 h-full w-full object-cover object-top" />
+                  <div class="absolute inset-x-0 bottom-0 bg-white px-5 py-4">
+                    <p class="font-head text-2xl font-semibold leading-tight text-ink">{p.titolo}</p>
+                    <p class="mt-1 text-sm text-brand">{p.sottotitolo}</p>
                   </div>
-                  <span class="relative text-[11px] tracking-wide text-accent-ink/60">{nomeCompleto(m)}</span>
                 </div>
               )}
               {p.stile === 'lista' && (
-                <div class="flex aspect-square flex-col justify-between bg-bg p-6">
-                  <span class="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">{p.occhiello}</span>
+                <div class="flex aspect-square flex-col justify-between bg-white p-6">
+                  <img src={m.brand.marchio} alt="" width="28" height="28" class="h-7 w-7" />
                   <div>
-                    <p class="font-serif text-[1.7rem] leading-[1.08]">{p.titolo}</p>
-                    <ol class="mt-4 space-y-2">
-                      {p.punti?.map((x, i) => (
-                        <li class="flex items-baseline gap-3 border-t border-line pt-2 text-sm"><span class="font-serif italic text-warm">{n2(i)}</span>{x}</li>
+                    <p class="font-head text-[1.7rem] font-semibold leading-[1.1]">{p.titolo}</p>
+                    <ul class="mt-4 space-y-2.5">
+                      {p.punti?.map((x) => (
+                        <li class="flex items-start gap-3 text-[15px] leading-snug"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-brand2"></span>{x}</li>
                       ))}
-                    </ol>
+                    </ul>
                   </div>
-                  <span class="text-[11px] tracking-wide text-muted">{nomeCompleto(m)}</span>
+                  <p class="text-xs text-muted">{nomeCompleto(m)} · Chirurgia della spalla</p>
                 </div>
               )}
               {p.stile === 'domanda' && (
-                <div class="flex aspect-square flex-col justify-between bg-warm p-6 text-white">
-                  <span class="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/75">{p.occhiello}</span>
+                <div class="flex aspect-square flex-col justify-between bg-brand p-6 text-white">
+                  <p class="text-xs font-semibold uppercase tracking-[0.14em] text-white/75">Domande frequenti</p>
                   <div>
-                    <p class="font-serif text-[1.9rem] leading-[1.06]">{p.titolo}</p>
-                    <p class="mt-4 font-serif text-xl italic text-white/90">{p.risposta}</p>
+                    <p class="font-head text-[1.9rem] font-semibold leading-[1.08]">{p.titolo}</p>
+                    <p class="mt-4 text-lg text-white/90">{p.risposta}</p>
                   </div>
-                  <span class="text-[11px] tracking-wide text-white/70">{nomeCompleto(m)}</span>
+                  <p class="text-xs text-white/70">{nomeCompleto(m)} · Chirurgia della spalla</p>
                 </div>
               )}
 
@@ -192,55 +204,56 @@ const ig = m.instagram;
               </div>
               <div class="px-4 pb-5 pt-2">
                 <p class="line-clamp-4 text-[13.5px] leading-relaxed">
-                  <span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-accent">{p.hashtag}</span>
+                  <span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span>
                 </p>
               </div>
             </article>
           ))}
         </div>
-        <p class="mt-6 text-xs text-deep-ink/50">Esempi di post realizzati per questa anteprima.</p>
       </div>
     </section>
 
-    <!-- 6. DOVE RICEVE -->
-    <section id="sedi">
-      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
-        <p class="eyebrow" data-reveal>Sedi e contatti</p>
-        <h2 class="mt-4 font-serif text-4xl leading-[1.1] sm:text-5xl" data-reveal>{m.sedi.titolo}</h2>
-        <div class="mt-12 grid gap-4 sm:grid-cols-2" data-stagger>
-          {m.sedi.luoghi.map((l) => (
-            <div class="flex flex-col rounded-3xl border border-line bg-surface p-7">
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-accent">{l.tipo}</p>
-              <h3 class="mt-3 font-serif text-2xl leading-tight">{l.nome}</h3>
-              <p class="mt-3 flex items-start gap-2 leading-relaxed text-muted">
-                <Icona nome="pin" class="mt-1 h-4 w-4 shrink-0" /><span>{l.indirizzo}<br />{l.citta}</span>
-              </p>
-              {l.telefoni.length > 0 && (
-                <ul class="mt-5 space-y-2 border-t border-line pt-5">
+    <!-- DOVE RICEVE: testo a sinistra, foto a destra -->
+    <section id="sedi" class="border-t border-line">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:py-28">
+        <div class="lg:col-span-7">
+          <h2 class="text-4xl font-semibold leading-tight sm:text-5xl" data-reveal>{m.sedi.titolo}</h2>
+          <div class="mt-10 grid gap-10 sm:grid-cols-2" data-stagger>
+            {m.sedi.luoghi.map((l) => (
+              <div>
+                <p class="label">{l.tipo}</p>
+                <p class="mt-3 text-lg leading-snug"><span class="font-semibold">{l.indirizzo}</span><br />{l.citta}</p>
+                <ul class="mt-4 space-y-1.5">
                   {l.telefoni.map((t) => (
-                    <li class="flex flex-wrap items-baseline justify-between gap-x-4">
-                      <span class="text-sm text-muted">{t.label}</span>
-                      <a href={telHref(t.numero)} class="font-semibold text-ink underline-offset-4 hover:text-accent hover:underline">{t.numero}</a>
-                    </li>
+                    <li class="text-[15px]"><span class="text-muted">{t.label}: </span><a href={telHref(t.numero)} class="font-semibold text-ink hover:text-brand">{t.numero}</a></li>
                   ))}
                 </ul>
-              )}
-              {l.mappa && (
-                <a href={mapsHref(l.indirizzo, l.citta)} target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent">
-                  Apri in Maps <Icona nome="freccia" class="h-4 w-4" />
-                </a>
-              )}
-            </div>
-          ))}
+                {l.mappa && (
+                  <a href={mapsHref(l.indirizzo, l.citta)} target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-[15px] font-semibold text-brand">
+                    <Icona nome="pin" class="h-4 w-4" /> Apra in Google Maps
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+          <div class="mt-12 border-t border-line pt-8" data-reveal>
+            <p class="label !text-muted">Attività chirurgica</p>
+            <ul class="mt-5 grid gap-6 sm:grid-cols-2">
+              {m.sedi.strutture.map((s) => (
+                <li class="flex items-center gap-4">
+                  <span class="flex h-14 w-24 shrink-0 items-center justify-center"><img src={s.logo} alt={s.nome} width={s.logoW} height={s.logoH} loading="lazy" class="max-h-14 w-auto max-w-full object-contain" /></span>
+                  <span><span class="block font-head text-lg font-semibold leading-tight">{s.nome}</span><span class="block text-sm leading-snug text-muted">{s.testo}</span></span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <p class="mt-8 flex items-center gap-2 text-muted" data-reveal>
-          <Icona nome="mail" class="h-4 w-4" />
-          <a href={`mailto:${m.sedi.email}`} class="font-medium text-ink underline-offset-4 hover:underline">{m.sedi.email}</a>
-        </p>
+        <div class="lg:col-span-5" data-reveal>
+          <img src={m.foto.diplomi} alt={m.foto.diplomiAlt} width="680" height="520" loading="lazy" class="w-full rounded-md object-cover" />
+        </div>
       </div>
     </section>
 
-    <!-- 7. CTA FINALE -->
     <CtaFinale m={m} />
   </main>
 

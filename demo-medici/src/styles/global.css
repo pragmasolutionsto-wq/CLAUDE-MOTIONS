@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
-/* La palette arriva dal JSON del medico come variabili --c-* sul <html>. */
+/* Palette e font arrivano dal JSON del medico come variabili --c-* / --f-* sul <html>. */
 @theme inline {
   --color-bg: var(--c-bg);
   --color-surface: var(--c-surface);
   --color-ink: var(--c-ink);
   --color-muted: var(--c-muted);
-  --color-accent: var(--c-accent);
-  --color-accent-ink: var(--c-accent-ink);
-  --color-warm: var(--c-warm);
   --color-line: var(--c-line);
+  --color-brand: var(--c-brand);
+  --color-brand-ink: var(--c-brand-ink);
+  --color-brand2: var(--c-brand2);
   --color-deep: var(--c-deep);
   --color-deep-ink: var(--c-deep-ink);
-  --font-serif: var(--f-serif);
+  --font-head: var(--f-head);
   --font-sans: var(--f-sans);
 }
 
@@ -24,50 +24,47 @@ html {
   text-rendering: optimizeLegibility;
 }
 body { overflow-x: hidden; }
-
-/* Lenis */
-html.lenis, html.lenis body { height: auto; }
-.lenis.lenis-smooth { scroll-behavior: auto !important; }
-.lenis.lenis-stopped { overflow: hidden; }
-
-.font-serif { font-feature-settings: "liga", "kern"; }
-h1, h2, h3 { text-wrap: balance; }
+h1, h2, h3 { font-family: var(--f-head); font-style: normal; text-wrap: balance; letter-spacing: -0.005em; }
 p { text-wrap: pretty; }
 
 /* Spazio per la fascia "Anteprima" fissa */
 :root { --banner-h: 30px; }
 body { padding-top: var(--banner-h); }
 [id] { scroll-margin-top: calc(var(--banner-h) + 16px); }
+html { scroll-behavior: smooth; }
 
-.eyebrow {
-  font-family: var(--f-sans);
-  font-size: 0.75rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--c-accent);
+@layer components {
+.label {
+  font-family: var(--f-head);
   font-weight: 600;
+  font-size: .8rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c-brand);
 }
 
 .btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
-  min-height: 52px; padding: 0 1.6rem; border-radius: 999px;
-  font-weight: 600; font-size: 1rem; letter-spacing: .01em;
-  transition: transform .25s ease, background-color .25s ease, color .25s ease, box-shadow .25s ease;
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  min-height: 50px; padding: 0 1.5rem; border-radius: 6px;
+  font-family: var(--f-head); font-weight: 600; font-size: 1.02rem; letter-spacing: .01em;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
 }
-.btn-primary { background: var(--c-accent); color: var(--c-accent-ink); box-shadow: 0 10px 30px -12px color-mix(in srgb, var(--c-accent) 70%, transparent); }
-.btn-primary:hover { transform: translateY(-2px); }
-.btn-ghost { border: 1px solid var(--c-line); color: var(--c-ink); }
+.btn-primary { background: var(--c-brand); color: var(--c-brand-ink); }
+.btn-primary:hover { background: color-mix(in srgb, var(--c-brand) 86%, black); }
+.btn-ghost { border: 1px solid var(--c-line); color: var(--c-ink); background: var(--c-bg); }
 .btn-ghost:hover { border-color: var(--c-ink); }
-.btn:focus-visible, a:focus-visible { outline: 2px solid var(--c-warm); outline-offset: 3px; }
+.btn:focus-visible, a:focus-visible { outline: 2px solid var(--c-brand2); outline-offset: 3px; }
+}
 
 /* Testo articolo */
-.prose-medico h2 { font-family: var(--f-serif); font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
-.prose-medico p { margin: 0 0 1.1rem; line-height: 1.75; font-size: 1.075rem; color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
+.prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
+.prose-medico > section:first-child h2 { margin-top: 0; }
+.prose-medico p { margin: 0 0 1.1rem; line-height: 1.75; font-size: 1.06rem; color: color-mix(in srgb, var(--c-ink) 88%, transparent); }
 .prose-medico ul { margin: 0 0 1.3rem; padding: 0; list-style: none; }
-.prose-medico li { position: relative; padding-left: 1.5rem; margin-bottom: .6rem; line-height: 1.7; font-size: 1.05rem; }
-.prose-medico li::before { content: ""; position: absolute; left: 0; top: .72em; width: .55rem; height: 1px; background: var(--c-accent); }
+.prose-medico li { position: relative; padding-left: 1.4rem; margin-bottom: .55rem; line-height: 1.7; font-size: 1.04rem; }
+.prose-medico li::before { content: ""; position: absolute; left: 0; top: .7em; width: 6px; height: 6px; border-radius: 50%; background: var(--c-brand2); }
 
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
 }
-.prose-medico > section:first-child h2 { margin-top: 0; }

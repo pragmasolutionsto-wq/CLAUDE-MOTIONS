@@ -1,6 +1,6 @@
 ---
 // Icone lineari minime (niente emoji).
-interface Props { nome: 'tel' | 'mail' | 'pin' | 'freccia' | 'cuore' | 'commento' | 'invia' | 'salva' | 'puntini'; class?: string }
+interface Props { nome: 'tel' | 'mail' | 'pin' | 'freccia' | 'cuore' | 'commento' | 'invia' | 'salva' | 'puntini' | 'stella'; class?: string }
 const { nome, class: cls = 'h-5 w-5' } = Astro.props;
 const p: Record<string, string> = {
   tel: 'M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2',
@@ -12,6 +12,7 @@ const p: Record<string, string> = {
   invia: 'M21 3L3 10.5l7 2.5 2.5 7z M10 13l11-10',
   salva: 'M6 3h12v18l-6-4-6 4z',
   puntini: 'M5 12h.01 M12 12h.01 M19 12h.01',
+  stella: 'M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z',
 };
 ---
 <svg viewBox="0 0 24 24" class={cls} fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={p[nome]} /></svg>
