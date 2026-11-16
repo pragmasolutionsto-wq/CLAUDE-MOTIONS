@@ -37,11 +37,12 @@ Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito,
 2. Crea/aggiorna `src/data/medici/<slug>.json` e adegua il template alle regole del METODO:
    - hero: sua foto vera e grande, nome, specialità, una riga di fatti, due pulsanti (Prenota / Contatta);
    - stile AutoScout24 con i colori del medico (card con ombra, box prenotazione in hero, chip, icone, caroselli, fascia immagine, CTA colorata, footer a colonne); fondo bianco/grigio chiaro freddo;
-   - badge "Foto di repertorio" su OGNI foto non del medico + nota nel footer;
+   - nessuna didascalia sulle foto di repertorio: solo la nota nel footer "Alcune immagini sono foto di repertorio inserite per questa anteprima.";
+   - box prenotazione funzionante (WhatsApp se c'è un numero WhatsApp verificato sul sito, altrimenti mail precompilata), testato con Playwright su ogni combinazione;
    - max 2 font, niente corsivi nei titoli, niente card numerate, niente iniziali/avatar, niente gradienti, niente slogan, niente grafica astratta;
    - sezioni con ritmo vario: foto e testo alternati, griglia ordinata, molto spazio bianco;
    - animazioni: solo comparsa morbida allo scroll.
-3. Sezioni (in quest'ordine, salvo motivo forte): Hero · Chi è · Di cosa si occupa · Articoli (1 completo + 2 in arrivo) · Dal profilo Instagram (3 post) · Dove riceve · CTA finale + footer. Pagina `/<slug>/articolo`.
+3. Sezioni (in quest'ordine, salvo motivo forte): Hero · Chi è · Di cosa si occupa · Articoli (solo articoli completi) · Dal profilo Instagram (3 post) · Dove riceve · CTA finale + footer. Pagina `/<slug>/articolo`.
    - Instagram: grafiche dei post con il suo logo, i suoi colori e le sue foto; mai iniziali come avatar (usa il logo).
 4. Fascia "Anteprima non ufficiale realizzata da Pragma Solutions" e noindex: sempre (vedi Regole fisse).
 
@@ -51,7 +52,8 @@ Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito,
 - Fatti concreti dal suo sito, riscritti chiari e brevi. Niente frasi ad effetto.
 - Mai inventare recensioni, numeri, premi, titoli, anni. Dato mancante = omesso.
 - Pubblicità sanitaria: nessuna promessa di risultato.
-- Articolo SEO 800-1000 parole (contale con uno script) su un tema cercato dai pazienti, prudente, nota finale "non sostituisce la visita". 2 titoli "in arrivo". 3 post Instagram con didascalia utile e prudente.
+- Niente card "In arrivo" né contenuti incompleti.
+- Articolo SEO 800-1000 parole (contale con uno script) su un tema cercato dai pazienti, prudente, nota finale "non sostituisce la visita". 3 post Instagram con didascalia utile e prudente.
 
 ## FASE 5 – Controllo
 1. `npm run build` e `npm run shot -- <slug>` → deve finire con "OK: nessun problema rilevato."
@@ -60,7 +62,8 @@ Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito,
    1. Il medico si riconosce?
    2. È chiaramente più bello del suo sito attuale?
    3. Sembra fatto dall'AI?
-4. Si pubblica **solo con: sì, sì, no.** Altrimenti correggi e ricontrolla (torna al punto 1). Controlla anche i divieti della Fase 3 uno per uno.
+4. Controllo finale di tutto il testo (doppioni, refusi, ripetizioni come "Studio Studio") e verifica che ogni elemento interattivo funzioni.
+5. Si pubblica **solo con: sì, sì, no.** Altrimenti correggi e ricontrolla (torna al punto 1). Controlla anche i divieti della Fase 3 uno per uno.
 
 ## Pubblicazione
 1. `npm run deploy` → "Deploy OK".

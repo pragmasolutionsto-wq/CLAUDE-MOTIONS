@@ -2,7 +2,6 @@
 import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Icona from '../../components/Icona.astro';
-import Repertorio from '../../components/Repertorio.astro';
 import CtaFinale from '../../components/CtaFinale.astro';
 import CtaMobile from '../../components/CtaMobile.astro';
 import Footer from '../../components/Footer.astro';
@@ -35,7 +34,6 @@ const a = m.articolo;
     <div class="mx-auto max-w-4xl px-5 pt-10 sm:px-8">
       <div class="relative overflow-hidden rounded-2xl">
         <img src={a.img} alt="" width="1600" height="900" class="aspect-[16/9] w-full object-cover object-[50%_35%]" />
-        <Repertorio />
       </div>
     </div>
 
@@ -51,17 +49,6 @@ const a = m.articolo;
       <aside class="mt-12 rounded-md bg-surface p-6 text-sm leading-relaxed text-muted" data-reveal>{a.nota}</aside>
     </article>
 
-    <section class="mx-auto max-w-3xl px-5 pb-20 sm:px-8">
-      <p class="label !text-muted">Prossimi articoli</p>
-      <div class="mt-2 grid gap-x-8 sm:grid-cols-2" data-stagger>
-        {m.articoliInArrivo.map((x) => (
-          <div class="mt-4 border-t border-line pt-4">
-            <p class="text-sm text-muted">{x.categoria} · In arrivo</p>
-            <p class="mt-1 font-head text-xl font-semibold leading-snug">{x.titolo}</p>
-          </div>
-        ))}
-      </div>
-    </section>
 
     <CtaFinale m={m} />
   </main>

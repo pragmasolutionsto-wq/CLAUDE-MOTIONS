@@ -17,7 +17,7 @@ Dal sito del medico ricava e salva in /public/<slug>/brand/:
 Scrivi tutto in /public/<slug>/brand/brand.json e mostrami un riepilogo prima di disegnare.
 Se manca il logo, crea un logotipo tipografico sobrio con nome e specialità.
 Se mancano foto utilizzabili del medico, fermati e dimmelo: non procedere con segnaposto.
-- FOTO DI REPERTORIO (aggiornamento di Meme): oltre alle foto vere, servono MOLTE foto generiche di riempimento, pertinenti alla specialità. Ordine di scelta: prima le foto stock già presenti sul sito del medico, poi Unsplash con licenza gratuita (mai Unsplash+ / premium, mai siti con licenza incerta). Originali in /public/<slug>/brand/repertorio/. Ogni foto di repertorio porta SEMPRE il badge "Foto di repertorio" (componente Repertorio.astro) e nel footer c'è la nota che sono segnaposto Pragma. Mai usarle in modo che sembrino il medico, il suo studio o i suoi pazienti. La foto principale (hero) è sempre una foto vera del medico.
+- FOTO DI REPERTORIO (aggiornamento di Meme): oltre alle foto vere, servono MOLTE foto generiche di riempimento, pertinenti alla specialità. Ordine di scelta: prima le foto stock già presenti sul sito del medico, poi Unsplash con licenza gratuita (mai Unsplash+ / premium, mai siti con licenza incerta). Originali in /public/<slug>/brand/repertorio/. Nessuna didascalia sulle immagini: una sola nota nel footer ("Alcune immagini sono foto di repertorio inserite per questa anteprima."). Mai usarle in modo che sembrino il medico, il suo studio o i suoi pazienti. La foto principale (hero) è sempre una foto vera del medico.
 
 ## Fase 2 – Principio guida
 La demo deve sembrare "il suo sito, ma fatto bene". Il medico deve riconoscersi al primo sguardo: suo logo, suoi colori, sue foto, sue parole.
@@ -31,7 +31,7 @@ La demo deve sembrare "il suo sito, ma fatto bene". Il medico deve riconoscersi 
 - Molto spazio bianco, griglia ordinata, sezioni con ritmo vario (foto e testo alternati, non card tutte uguali).
 - Animazioni minime: solo comparsa morbida allo scroll.
 - Tagli delle foto: mai volti tagliati a metà, mai teste o mani mozzate sul soggetto principale. Ogni ritaglio si fa con un punto focale scelto a mano e si controlla a occhio prima di usarlo.
-- VIETATI: fondo crema/beige, titoli serif in corsivo, card numerate 01-02-03, iniziali o avatar al posto delle foto, foto stock SENZA badge di repertorio, gradienti, effetti vistosi, frasi slogan.
+- VIETATI: fondo crema/beige, titoli serif in corsivo, card numerate 01-02-03, iniziali o avatar al posto delle foto, didascalie "foto di repertorio" sulle immagini, pulsanti o form finti, card "In arrivo", gradienti, effetti vistosi, frasi slogan.
 
 ## Fase 4 – Testi
 - Il sito è del medico: il medico parla in PRIMA PERSONA ("mi occupo", "Chi sono", "Dove ricevo", "Come lavoro"). Mai la terza persona ("il Dr. Motta è...") nei testi del sito. Le note di Pragma (repertorio, proposte) sono a parte, piccole e marcate col logo Pragma.
@@ -39,6 +39,12 @@ La demo deve sembrare "il suo sito, ma fatto bene". Il medico deve riconoscersi 
 - Fatti concreti presi dal suo sito, riscritti in modo chiaro e breve. Niente frasi ad effetto.
 - Mai inventare recensioni, numeri, premi, titoli o anni. Dove manca un dato, si omette.
 - Rispetto delle regole sulla pubblicità sanitaria: nessuna promessa di risultato.
+
+## Regole fisse aggiuntive (aggiornamento di Meme)
+- Mai didascalie "foto di repertorio" sulle immagini: una sola nota nel footer.
+- Ogni elemento interattivo deve funzionare davvero. Niente pulsanti o form finti. (Es. box prenotazione: motivo + sede compongono un messaggio "Buongiorno Dottore, vorrei prenotare una visita per [motivo] presso [sede]." che apre WhatsApp se c'è un numero WhatsApp verificato sul sito, altrimenti una mail già compilata. Si testa con Playwright ogni combinazione.)
+- Mai card "In arrivo" o contenuti incompleti.
+- Controllo finale di tutto il testo per doppioni e refusi (le recensioni citate alla lettera restano come sono).
 
 ## Fase 5 – Controllo
 - Screenshot desktop e mobile con Playwright, affiancati a quelli del sito attuale del medico.
@@ -71,14 +77,14 @@ Hosting: **Cloudflare Pages**, progetto `pragma-anteprime` (gratis, uso commerci
 3. **Fascia fissa in alto**, discreta, con il loghino Pragma (`public/pragma-logo-sm.png`): "Anteprima non ufficiale realizzata da Pragma Solutions".
 4. **Solo informazioni vere** prese dal sito del medico. **Mai inventare** recensioni, numeri, premi, titoli, anni, citazioni, indirizzi, CAP. Se un dato non c'è, si omette. Recensioni: solo quelle reali pubblicate sul suo sito, riportate alla lettera, senza ritocchi.
 5. **Testi medici prudenti**: niente promesse di risultato, niente diagnosi, niente "risolvi", "elimina il dolore". Si dà del **Lei** al paziente. L'articolo chiude sempre con la nota "non sostituisce la visita".
-6. **Foto:** quelle vere del medico prese dal SUO sito + foto di repertorio con badge (METODO Fase 1). Mai segnaposto grafici, iniziali o avatar. Senza almeno una foto vera del medico ci si ferma.
+6. **Foto:** quelle vere del medico prese dal SUO sito + foto di repertorio, segnalate solo dalla nota nel footer (METODO Fase 1). Mai segnaposto grafici, iniziali o avatar. Senza almeno una foto vera del medico ci si ferma.
 7. **Niente gradienti, niente emoji come icone** (usa `Icona.astro`), niente layout da template, niente card numerate.
 8. **Colori e font del brand del medico** (METODO Fase 1 e 3). Fondo bianco o quasi bianco, mai crema/beige. Massimo 2 font, niente titoli in corsivo. Se il font del sito è scadente, uno simile ma migliore. **Mai Inter, Roboto, Arial.** Font da Google Fonts o self-hosted in `public/` (Fontshare è bloccato dal proxy del container).
 9. **Linguaggio semplice**, frasi corte, italiano corretto.
 10. Post Instagram: sono proposte. Se il medico non ha un profilo, l'handle è inventato in modo plausibile e la sezione dice "Esempi di post realizzati per questa anteprima".
 
 ## Stato del template
-Template v3 (`HomeMedico.astro`, `articolo.astro`): stile AutoScout con i colori del medico, prima persona, foto di repertorio con badge. Prima demo: `motta-m2zh`. Schema dati di riferimento: `src/data/medici/motta-m2zh.json` (campi `brand`, `foto`, `hero.fatti`, `metodo`, `recensioni`, `sedi.strutture` con loghi). Sezioni: Hero (foto) · Chi è (foto sx) · Di cosa si occupa (elenco) · Come lavora (unica sezione scura) · Recensioni reali · Articoli · Instagram · Dove riceve (foto dx) · Contatti · footer con logo chiaro. Ogni demo può cambiare ordine/ritmo se le foto lo suggeriscono.
+Template v3 (`HomeMedico.astro`, `articolo.astro`): stile AutoScout con i colori del medico, prima persona, foto di repertorio con una sola nota nel footer, box prenotazione funzionante (WhatsApp o mail). Prima demo: `motta-m2zh`. Schema dati di riferimento: `src/data/medici/motta-m2zh.json` (campi `brand`, `foto`, `hero.fatti`, `metodo`, `recensioni`, `sedi.strutture` con loghi). Sezioni: Hero (foto) · Chi è (foto sx) · Di cosa si occupa (elenco) · Come lavora (unica sezione scura) · Recensioni reali · Articoli · Instagram · Dove riceve (foto dx) · Contatti · footer con logo chiaro. Ogni demo può cambiare ordine/ritmo se le foto lo suggeriscono.
 
 ## Note tecniche (imparate sul campo)
 - **Mai `transition-all` (o transition su opacity/transform) su elementi animati da GSAP** (`data-reveal`, figli di `data-stagger`): la transizione CSS combatte con GSAP e l'elemento resta invisibile. Usa `transition-[translate,border-color]` ecc.

@@ -1,11 +1,10 @@
 ---
 // Template home v3 — METODO DEMO MEDICI + riferimento visivo AutoScout24 (card, chip, box prenotazione, caroselli)
 // con i colori del medico. Il medico parla in prima persona, al paziente si dà del Lei.
-// Ogni foto di repertorio porta il badge <Repertorio />.
+// Foto di repertorio: nessuna didascalia sulle immagini, una sola nota nel footer.
 import Base from './Base.astro';
 import Header from '../components/Header.astro';
 import Icona from '../components/Icona.astro';
-import Repertorio from '../components/Repertorio.astro';
 import CtaFinale from '../components/CtaFinale.astro';
 import CtaMobile from '../components/CtaMobile.astro';
 import Footer from '../components/Footer.astro';
@@ -15,6 +14,13 @@ interface Props { m: Medico }
 const { m } = Astro.props;
 const ig = m.instagram;
 const tel = telHref(m.prenota.telefono);
+// Box prenotazione: link WhatsApp (se c'è un numero verificato) o mail, già compilato.
+const msg = (motivo: string, sede: string) => `Buongiorno Dottore, vorrei prenotare una visita per ${motivo} presso ${sede}.`;
+const wa = m.prenota.whatsapp ? String(m.prenota.whatsapp).replace(/\D/g, '') : '';
+const prenotaHref = (motivo: string, sede: string) => wa
+  ? `https://wa.me/${wa}?text=${encodeURIComponent(msg(motivo, sede))}`
+  : `mailto:${m.sedi.email}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(msg(motivo, sede))}`;
+const box = m.hero.box;
 ---
 <Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
   <Header m={m} />
@@ -35,23 +41,24 @@ const tel = telHref(m.prenota.telefono);
           <h1 class="mt-2 text-[2.1rem] font-semibold leading-[1.05] sm:text-[2.6rem]">{nomeCompleto(m)}</h1>
           <p class="mt-1.5 text-[17px] text-muted">{m.specialita}</p>
 
-          <div class="mt-4 border-t border-line pt-4" data-booking>
+          <div class="mt-4 border-t border-line pt-4" data-booking data-wa={wa} data-email={m.sedi.email} data-oggetto={m.prenota.oggettoMail}>
             <p class="font-head text-lg font-semibold">{m.hero.box.titolo}</p>
             <p class="mt-3 text-[13px] font-semibold uppercase tracking-wide text-muted">{m.hero.box.motivoLabel}</p>
             <div class="mt-2 flex flex-wrap gap-2" role="group">
-              {m.hero.box.motivi.map((x, i) => <button type="button" class="chip" aria-pressed={i === 0 ? 'true' : 'false'} data-chip="motivo">{x}</button>)}
+              {box.motivi.map((x, i) => <button type="button" class="chip" aria-pressed={i === 0 ? 'true' : 'false'} data-chip="motivo" data-frase={box.motiviFrase[i]}>{x}</button>)}
             </div>
             <p class="mt-4 text-[13px] font-semibold uppercase tracking-wide text-muted">{m.hero.box.sedeLabel}</p>
             <div class="mt-2 grid grid-cols-2 gap-1 rounded-xl bg-surface p-1" role="group">
               {m.sedi.luoghi.map((l, i) => (
-                <button type="button" data-chip="sede" aria-pressed={i === 0 ? 'true' : 'false'}
+                <button type="button" data-chip="sede" aria-pressed={i === 0 ? 'true' : 'false'} data-frase={l.frase}
                   class="rounded-lg px-3 py-2 text-left text-[13px] leading-tight text-muted aria-pressed:bg-white aria-pressed:text-ink aria-pressed:shadow-sm">
                   <span class="block font-semibold">{l.tipo}</span><span class="hidden sm:inline">{l.indirizzo}</span>
                 </button>
               ))}
             </div>
-            <a href={tel} class="btn btn-primary mt-5 w-full !min-h-[54px] text-lg"><Icona nome="tel" /> Chiami lo studio</a>
-            <a href="#contatti" class="mt-3 block text-center text-sm font-semibold text-brand hover:underline">Oppure mi scriva una mail</a>
+            <a href={prenotaHref(box.motiviFrase[0], m.sedi.luoghi[0].frase)} data-prenota target={wa ? '_blank' : undefined} rel={wa ? 'noopener' : undefined}
+              class="btn btn-primary mt-5 w-full !min-h-[54px] text-lg"><Icona nome={wa ? 'commento' : 'mail'} /> {wa ? 'Invii la richiesta su WhatsApp' : 'Invii la richiesta via mail'}</a>
+            <a href={tel} class="mt-3 block text-center text-sm font-semibold text-brand hover:underline">Oppure chiami la segreteria: {m.prenota.telefonoLabel}</a>
           </div>
         </div>
       </div>
@@ -81,7 +88,6 @@ const tel = telHref(m.prenota.telefono);
             <article class="card card-hover group flex flex-col overflow-hidden">
               <div class="relative aspect-[4/3] overflow-hidden">
                 <img src={v.img} alt="" width="1200" height="900" loading="lazy" class="h-full w-full object-cover transition-[scale] duration-500 group-hover:scale-[1.03]" />
-                <Repertorio />
               </div>
               <div class="flex flex-1 flex-col p-5">
                 <h3 class="text-xl font-semibold leading-snug">{v.titolo}</h3>
@@ -140,7 +146,6 @@ const tel = telHref(m.prenota.telefono);
             <article class={`card flex flex-col overflow-hidden ${i === 0 ? 'lg:row-span-2' : ''}`}>
               <div class={`relative overflow-hidden ${i === 0 ? 'aspect-square lg:aspect-auto lg:flex-1' : 'aspect-[16/9]'}`}>
                 <img src={p.img} alt={p.imgAlt ?? ''} width="800" height="600" loading="lazy" class="h-full w-full object-cover object-top" />
-                {!p.vera && <Repertorio />}
               </div>
               <div class="p-5">
                 <h3 class="text-xl font-semibold">{p.titolo}</h3>
@@ -164,7 +169,6 @@ const tel = telHref(m.prenota.telefono);
     <section class="mx-auto max-w-7xl px-4 sm:px-8">
       <div class="relative sm:overflow-hidden sm:rounded-2xl" data-reveal>
         <img src={m.banda.img} alt="" width="2000" height="857" loading="lazy" class="h-[220px] w-full rounded-2xl object-cover object-[60%_50%] sm:h-[400px]" />
-        <Repertorio class="right-3 top-3" />
         <div class="relative -mt-12 px-3 pb-1 sm:absolute sm:inset-x-auto sm:bottom-8 sm:left-8 sm:mt-0 sm:max-w-md sm:px-0 sm:pb-0">
           <div class="card p-5 sm:p-6">
             <h2 class="font-head text-2xl font-semibold leading-tight">{m.banda.titolo}</h2>
@@ -210,11 +214,10 @@ const tel = telHref(m.prenota.telefono);
     <section id="articoli" class="bg-white py-16 sm:py-24">
       <div class="mx-auto max-w-7xl px-4 sm:px-8">
         <h2 class="titolo-sez" data-reveal>Articoli</h2>
-        <div class="mt-8 grid gap-5 lg:grid-cols-3" data-stagger>
-          <a href={`/${m.slug}/articolo`} class="card card-hover group flex flex-col overflow-hidden lg:col-span-2 lg:flex-row">
+        <div class="mt-8" data-reveal>
+          <a href={`/${m.slug}/articolo`} class="card card-hover group flex flex-col overflow-hidden lg:flex-row">
             <div class="relative aspect-[16/9] overflow-hidden lg:aspect-auto lg:w-1/2">
               <img src={m.articolo.img} alt="" width="1600" height="900" loading="lazy" class="h-full w-full object-cover object-[50%_35%]" />
-              <Repertorio />
               <span class="absolute left-3 top-3 rounded-full bg-brand px-3 py-1 text-xs font-semibold text-white">Nuovo</span>
             </div>
             <div class="flex flex-1 flex-col p-6">
@@ -224,20 +227,6 @@ const tel = telHref(m.prenota.telefono);
               <span class="mt-5 inline-flex items-center gap-2 font-semibold text-brand">Legga l'articolo <Icona nome="freccia" class="h-4 w-4" /></span>
             </div>
           </a>
-          <div class="grid gap-5">
-            {m.articoliInArrivo.map((a) => (
-              <div class="card flex overflow-hidden">
-                <div class="relative w-[38%] shrink-0 overflow-hidden">
-                  <img src={a.img} alt="" width="800" height="600" loading="lazy" class="h-full w-full object-cover" />
-                </div>
-                <div class="p-4">
-                  <span class="rounded-full bg-surface px-2.5 py-1 text-[11px] font-semibold text-muted">In arrivo · {a.categoria}</span>
-                  <h3 class="mt-2 font-head text-[17px] font-semibold leading-snug">{a.titolo}</h3>
-                </div>
-              </div>
-            ))}
-            <p class="text-xs text-muted">Le immagini degli articoli sono foto di repertorio.</p>
-          </div>
         </div>
       </div>
     </section>

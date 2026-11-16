@@ -46,7 +46,14 @@
         "Artrosi",
         "Frattura"
       ],
-      "sedeLabel": "Dove preferisce essere visitato"
+      "sedeLabel": "Dove preferisce essere visitato",
+      "motiviFrase": [
+        "dolore alla spalla",
+        "instabilità o lussazione della spalla",
+        "un problema alla cuffia dei rotatori",
+        "artrosi della spalla",
+        "una frattura"
+      ]
     }
   },
   "bio": {
@@ -255,18 +262,6 @@
     "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica. Per una valutazione del Suo caso si rivolga a uno specialista.",
     "img": "/motta-m2zh/img/rep-articolo.webp"
   },
-  "articoliInArrivo": [
-    {
-      "categoria": "Instabilità",
-      "titolo": "Spalla lussata la prima volta: cosa fare e cosa evitare",
-      "img": "/motta-m2zh/img/rep-consulto.webp"
-    },
-    {
-      "categoria": "Artrosi",
-      "titolo": "Protesi di spalla anatomica o inversa: le differenze",
-      "img": "/motta-m2zh/img/rep-consulto2.webp"
-    }
-  ],
   "instagram": {
     "handle": "dr.pierorazio.motta",
     "nota": "Proposta di contenuti per il mio profilo Instagram.",
@@ -317,7 +312,8 @@
             "label": "Cellulare",
             "numero": "+39 338 48 62 927"
           }
-        ]
+        ],
+        "frase": "lo studio di via Ettore de Sonnaz 13"
       },
       {
         "tipo": "Visite ambulatoriali",
@@ -334,7 +330,8 @@
             "label": "Cellulare",
             "numero": "393 876 0023"
           }
-        ]
+        ],
+        "frase": "l'ambulatorio di via Vincenzo Gioberti 76"
       }
     ],
     "strutture": [
@@ -360,7 +357,9 @@
     "titolo": "Prenoti una visita",
     "testo": "Può chiamare la segreteria oppure scrivermi una mail con una breve descrizione del problema.",
     "telefono": "011505089",
-    "telefonoLabel": "011 505089"
+    "telefonoLabel": "011 505089",
+    "whatsapp": null,
+    "oggettoMail": "Richiesta di visita"
   },
   "tema": {
     "palette": {
@@ -416,5 +415,5 @@
     "titolo": "Il dolore alla spalla dura da settimane?",
     "testo": "Una visita serve a capire da dove nasce il problema e quali sono le possibilità di cura."
   },
-  "repertorio": "Le immagini contrassegnate come «Foto di repertorio» sono segnaposto inseriti da Pragma Solutions per questa anteprima: non ritraggono il Dr. Motta, il suo studio o i suoi pazienti."
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima."
 }

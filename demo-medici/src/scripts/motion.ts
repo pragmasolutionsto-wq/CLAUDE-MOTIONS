@@ -24,12 +24,27 @@ if (bar && hero) {
   if (finale) new IntersectionObserver(([e]) => { fine = e.isIntersecting; upd(); }).observe(finale);
 }
 
-// Chip selezionabili (box prenotazione): uno attivo per gruppo
+// Box prenotazione: chip selezionabili (uno per gruppo) + link WhatsApp/mail ricomposto a ogni scelta
+const boxPren = document.querySelector<HTMLElement>('[data-booking]');
+const aggiornaPrenota = () => {
+  if (!boxPren) return;
+  const link = boxPren.querySelector<HTMLAnchorElement>('[data-prenota]');
+  const motivo = boxPren.querySelector<HTMLElement>('[data-chip="motivo"][aria-pressed="true"]')?.dataset.frase;
+  const sede = boxPren.querySelector<HTMLElement>('[data-chip="sede"][aria-pressed="true"]')?.dataset.frase;
+  if (!link || !motivo || !sede) return;
+  const testo = `Buongiorno Dottore, vorrei prenotare una visita per ${motivo} presso ${sede}.`;
+  const { wa, email, oggetto } = boxPren.dataset;
+  link.href = wa
+    ? `https://wa.me/${wa}?text=${encodeURIComponent(testo)}`
+    : `mailto:${email}?subject=${encodeURIComponent(oggetto ?? '')}&body=${encodeURIComponent(testo)}`;
+};
 document.querySelectorAll<HTMLElement>('[data-chip]').forEach((b) => {
   b.addEventListener('click', () => {
     document.querySelectorAll<HTMLElement>(`[data-chip="${b.dataset.chip}"]`).forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    aggiornaPrenota();
   });
 });
+aggiornaPrenota();
 
 // Caroselli con frecce
 document.querySelectorAll<HTMLElement>('[data-carosello]').forEach((c) => {

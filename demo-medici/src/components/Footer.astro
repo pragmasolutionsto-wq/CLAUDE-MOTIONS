@@ -12,15 +12,15 @@ const base = `/${m.slug}`;
       <p class="mt-5 max-w-xs leading-relaxed">{m.specialita}, {m.citta}.</p>
     </div>
     <div class="md:col-span-3">
-      <p class="font-head text-[15px] font-semibold text-white">Studio</p>
+      <p class="font-head text-[15px] font-semibold text-white">Dove ricevo</p>
       {m.sedi.luoghi.map((l) => <p class="mt-3 leading-relaxed">{l.tipo}<br /><span class="text-deep-ink/90">{l.indirizzo}, {l.citta}</span></p>)}
     </div>
-    <div class="md:col-span-2">
+    <div class="md:col-span-3">
       <p class="font-head text-[15px] font-semibold text-white">Contatti</p>
       <p class="mt-3"><a href={telHref(m.prenota.telefono)} class="inline-flex items-center gap-2 hover:text-white"><Icona nome="tel" class="h-4 w-4" />{m.prenota.telefonoLabel}</a></p>
-      <p class="mt-2"><a href={`mailto:${m.sedi.email}`} class="inline-flex items-center gap-2 break-all hover:text-white"><Icona nome="mail" class="h-4 w-4 shrink-0" />{m.sedi.email}</a></p>
+      <p class="mt-2"><a href={`mailto:${m.sedi.email}`} class="inline-flex items-center gap-2 hover:text-white"><Icona nome="mail" class="h-4 w-4 shrink-0" />{m.sedi.email}</a></p>
     </div>
-    <div class="md:col-span-3">
+    <div class="md:col-span-2">
       <p class="font-head text-[15px] font-semibold text-white">Pagine</p>
       <ul class="mt-3 space-y-2">
         <li><a href={`${base}#chi-sono`} class="hover:text-white">Chi sono</a></li>
