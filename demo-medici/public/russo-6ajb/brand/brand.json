@@ -1,0 +1,63 @@
+{
+  "sito": "https://www.russoortopedico.it/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "HTML statico (Bootstrap), 5 pagine + privacy",
+  "trello": "https://trello.com/c/xXg3phdf/2-dott-antonio-russo-ortopedia-protesi-anca-e-ginocchio-a9",
+  "logo": {
+    "trovato": true,
+    "file": { "logo.png": { "desc": "Marchio circolare con anca e ginocchio stilizzati + 'DOTT. ANTONIO RUSSO / Specialista in Ortopedia e Traumatologia / Chirurgia Protesica Anca e Ginocchio'. Blu #2C4767, fondo trasparente, 275×160 (piccolo ma nitido).", "fonte": "header (images/logo.png)" } },
+    "versione_chiara": "assente: per il footer scuro si ricava invertendo il colore (derivata)"
+  },
+  "foto": {
+    "tenute": [ { "file": "foto-01.jpg", "desc": "Ritratto del Dott. Russo in camice, braccia conserte, fondo grigio chiaro uniforme. 900×1100.", "fonte": "home (images/antonio-russo.jpg), anche og:image" } ],
+    "scartate": [],
+    "nota": "Il sito ha una sola immagine fotografica. HTML e style.css controllati: nessuna immagine di sfondo CSS."
+  },
+  "colori": {
+    "inchiostro": { "hex": "#15213A", "fonte": "CSS --ink, pulsanti" },
+    "blu_logo": { "hex": "#2C4767", "fonte": "logo" },
+    "salvia": { "hex": "#3E6B5C", "fonte": "CSS --accent" },
+    "crema": { "hex": "#F6F2EA", "fonte": "CSS --bone (sfondo): NON usabile come fondo per METODO" }
+  },
+  "font": {
+    "sito": [ { "famiglia": "Newsreader", "ruolo": "titoli", "giudizio": "buono, si tiene (mai corsivo)" }, { "famiglia": "Inter", "ruolo": "testi", "giudizio": "vietato dalle regole Pragma: si sostituisce con un sans simile" } ]
+  },
+  "dati": {
+    "nome": { "v": "Dott. Antonio Russo", "fonte": "home" },
+    "specialita": { "v": "Medico Chirurgo, Specialista in Ortopedia e Traumatologia · Chirurgia protesica di anca e ginocchio", "fonte": "home, logo" },
+    "ordine": { "v": "Iscrizione all'Ordine dei Medici di Cuneo n. 04738 · P.IVA 03753850043", "fonte": "footer" },
+    "formazione": { "v": [
+      "Laurea con lode in Medicina e Chirurgia, Università di Genova (tesi sulla ricostruzione del LCA nel calciatore professionista)",
+      "Diploma supplement di ricerca in Ortopedia e Traumatologia, Istituto di Studi Superiori, Università di Genova",
+      "Specializzazione con lode in Ortopedia e Traumatologia, Università di Torino (tesi sulla protesi d'anca nel paziente con artrodesi vertebrale)"
+    ], "fonte": "/chi-sono" },
+    "fellowship": { "v": [
+      "Apr 2019 – Ott 2021: Chirurgia Protesica, Ospedale Santa Corona di Pietra Ligure / MIOA Malattie Infettive Osteo-Articolari, Albenga",
+      "Nov – Dic 2021: Centro di Chirurgia Protesica, Istituto Ortopedico Galeazzi, Milano",
+      "Nov 2022 – Giu 2023: Chirurgia dell'anca, Humanitas Cellini, Torino",
+      "Lug – Ago 2023: Helios ENDO-Klinik, Amburgo"
+    ], "fonte": "/chi-sono" },
+    "incarichi": { "v": ["Delegato italiano al terzo International Consensus Meeting on Musculoskeletal Infections – Hip and Knee working group"], "fonte": "/chi-sono" },
+    "pubblicazioni": { "v": "27 articoli su riviste internazionali (2018-2026, es. J Arthroplasty, JBJS, Arch Orthop Trauma Surg), 1 capitolo di libro (2024), 10 relazioni a congressi (SIOT, EFORT, SIAGASCOT, SIDA...)", "fonte": "/chi-sono (contati)" },
+    "patologie": { "v": ["Artrosi dell'anca", "Artrosi del ginocchio", "Conflitto femoroacetabolare (FAI)", "Complicanze delle protesi d'anca", "Complicanze delle protesi di ginocchio"], "fonte": "/patologie" },
+    "trattamenti": { "v": ["Protesi totale d'anca", "Protesi totale di ginocchio", "Protesi monocompartimentale di ginocchio", "Chirurgia di revisione protesica", "Artroscopia d'anca", "Infiltrazioni eco-guidate d'anca", "Infiltrazioni di ginocchio", "Infiltrazioni di spalla"], "fonte": "/trattamenti" },
+    "sedi_visita": { "v": [
+      {"nome":"Studio Privato","indirizzo":"Via Curtatone 18, Torino","tel":"011 538 236"},
+      {"nome":"Humanitas Cellini","indirizzo":"Via Cellini 5, Torino","tel":"011 3027 3027"},
+      {"nome":"Poliambulatorio Statuto","indirizzo":"Piazza Statuto 3, Torino","tel":"011 548 944"},
+      {"nome":"IRM San Donato","indirizzo":"Via San Donato 58 bis A, Torino","tel":"011 966 2585"},
+      {"nome":"Clinica Aurea","indirizzo":"Via Palmieri 15, Torino","tel":"011 192 72886"},
+      {"nome":"Istituto Salus","indirizzo":"Corso Vercelli 50, Cigliano","tel":"0161 433 595"},
+      {"nome":"Istituto Salus","indirizzo":"Via Jacopo Durandi 12, Vercelli","tel":"0161 219 760"},
+      {"nome":"Centro Medico Carrucese","indirizzo":"Via Langhe 40, Carrù","tel":"0173 779 365"},
+      {"nome":"Cures Centro Medico","indirizzo":"Via XX Settembre 2, Villanova Mondovì","tel":"0174 699 018"}
+    ], "fonte": "/dove" },
+    "sedi_chirurgiche": { "v": ["Humanitas Cellini, Via Cellini 5, Torino", "Clinica Fornaca di Sessant, C.so Vittorio Emanuele II 91, Torino", "Humanitas San Pio X, Via Nava 31, Milano"], "fonte": "/dove" },
+    "orari": { "v": null, "nota": "non indicati" },
+    "email": { "v": null, "nota": "nessuna email sul sito, nemmeno nella privacy (titolare: solo indirizzo e telefono). Non trovata su fonti pubbliche." },
+    "whatsapp": { "v": null },
+    "recensioni": { "v": [], "nota": "nessuna recensione sul sito" },
+    "instagram": { "v": null, "nota": "nessun profilo proprio collegato" }
+  },
+  "fuori_dal_sito_non_usato": "Profilo MioDottore con prenotazione online e 29 recensioni (miodottore.it/profilo/antonio-russo-28): non è sul suo sito, non usato nella demo. Utile per la proposta commerciale."
+}
