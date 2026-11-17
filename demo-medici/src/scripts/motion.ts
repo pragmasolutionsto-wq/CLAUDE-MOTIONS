@@ -31,7 +31,7 @@ const boxPren = document.querySelector<HTMLElement>('[data-booking]');
 const aggiornaPrenota = () => {
   if (!boxPren) return;
   const link = boxPren.querySelector<HTMLAnchorElement>('[data-prenota]');
-  const motivo = boxPren.querySelector<HTMLElement>('[data-chip="motivo"][aria-pressed="true"]')?.dataset.frase;
+  const motivo = boxPren.querySelector<HTMLSelectElement>('[data-motivo-select]')?.value ?? boxPren.querySelector<HTMLElement>('[data-chip="motivo"][aria-pressed="true"]')?.dataset.frase;
   const sede = boxPren.querySelector<HTMLSelectElement>('[data-sede-select]')?.value ?? boxPren.querySelector<HTMLElement>('[data-chip="sede"][aria-pressed="true"]')?.dataset.frase;
   if (!link || !motivo || !sede) return;
   const testo = `Buongiorno Dottore, vorrei prenotare una visita per ${motivo} presso ${sede}.`;
@@ -47,6 +47,7 @@ document.querySelectorAll<HTMLElement>('[data-chip]').forEach((b) => {
   });
 });
 document.querySelector('[data-sede-select]')?.addEventListener('change', aggiornaPrenota);
+document.querySelector('[data-motivo-select]')?.addEventListener('change', aggiornaPrenota);
 aggiornaPrenota();
 
 // Caroselli con frecce

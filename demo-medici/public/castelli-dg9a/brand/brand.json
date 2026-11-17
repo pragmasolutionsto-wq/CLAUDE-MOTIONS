@@ -1,0 +1,42 @@
+{
+  "sito": "https://francocastelli.com/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "WordPress 4.9 su tema demo (Raleway/Open Sans), cookie banner standard",
+  "trello": "Prospect medici · Dott. Franco Castelli – Dermatologia · A·9",
+  "logo": {
+    "trovato": true,
+    "file": { "logo.png": { "desc": "'Dott. Franco Castelli' slab bold nero con 'Franco' blu + 'Dermatologo' Montserrat. 267×65: troppo piccolo.", "fonte": "header (uploads/2018/12/logo.png)" } },
+    "lavorazione": "ricomposto nitido con Bitter 700 + Montserrat 400, stessi colori (logo.png e logo-chiaro.png in img/)"
+  },
+  "foto": {
+    "tenute": [
+      { "file": "home2.png", "desc": "Ritratto in camice già scontornato (PNG trasparente) 1014×1413", "fonte": "home" },
+      { "file": "Castelli_dermatologia.jpg", "desc": "Il dottore alla scrivania dello studio, videodermatoscopio a sinistra. 2866×2026", "fonte": "home" },
+      { "file": "DSC0385.jpg", "desc": "Il dottore tra i libri, in piedi. 1333×2000", "fonte": "home" },
+      { "file": "DSC0398.jpg", "desc": "Videodermatoscopio con immagini di nei. 1333×2000", "fonte": "home" },
+      { "file": "DSC0425.jpg", "desc": "Apparecchio laser dello studio. 1333×2000", "fonte": "home" },
+      { "file": "libro_corticosteroidi.png", "desc": "Copertina del suo libro (Pippione, Castelli, Minerva Medica)", "fonte": "/pubblicazioni/" },
+      { "file": "yt-*.jpg", "desc": "Copertine delle sue 3 interviste YouTube", "fonte": "i.ytimg.com (video linkati dal suo sito)" }
+    ],
+    "scartate": ["Cover-Vidix-4-Pistola-2.jpg: foto pubblicitaria del produttore, non è lui", "pubblicazioni.jpg: sfondo grafico"],
+    "nota": "Una sola foto di repertorio (articolo)."
+  },
+  "colori": {
+    "blu": { "hex": "#1E73BE", "fonte": "logo ('Franco') e CSS tema" },
+    "nero": { "hex": "#222222", "fonte": "logo" }
+  },
+  "font": { "sito": [ { "famiglia": "Roboto Slab (logo)", "giudizio": "Roboto vietato: sostituito con Bitter (slab simile)" }, { "famiglia": "Montserrat (logo)", "giudizio": "si tiene per i testi" } ] },
+  "dati": {
+    "sedi": [
+      "Studio privato Torino, via Curtatone 18 (10131): 011 542522, 011 538236, 376 124 9920",
+      "Poliambulatorio Koelliker/D'Azeglio, corso Massimo d'Azeglio 43, Torino: 011 230 9811",
+      "Studio privato Chivasso, viale Platis 1/C, 1° piano: 376 124 9920 (dal 7/11/2026)"
+    ],
+    "ospedale": "Ospedale Koelliker, corso Galileo Ferraris 251: responsabile UOA Dermatologia dal 2018",
+    "email": "nessuna email dello studio sul sito (solo segreteria dell'ospedale)",
+    "privacy": "pagina Privacy Policy presente ma il modulo demo usa la nota interna",
+    "piva": "08822030014",
+    "youtube": ["NKQs5GbhlUA", "EYN3sEuVD8w", "FWGYQ3fGn2M"],
+    "social": "nessuno"
+  }
+}

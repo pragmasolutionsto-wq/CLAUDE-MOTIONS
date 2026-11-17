@@ -1,0 +1,329 @@
+---
+// Layout "clinica" (prima demo: Castelli). Diverso da HomeMedico per struttura, non solo per colori:
+// striscia contatti + header con logo, hero a due colonne con ritratto scontornato su blocco pieno
+// e barra di prenotazione orizzontale, fascia credenziali, aree a elenco, strumenti a zig-zag con foto vere,
+// interviste video, chi sono con libro, FAQ ad accordion. Angoli vivi, bordi sottili, poche ombre.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = m.hero.box;
+const luoghi = m.sedi.luoghi as any[];
+const email = emailRichieste(m);
+const wa = m.prenota.whatsapp ? String(m.prenota.whatsapp).replace(/\D/g, '') : '';
+const msg = `Buongiorno Dottore, vorrei prenotare una visita per ${box.motiviFrase[0]} presso ${luoghi[0].frase}.`;
+const href0 = wa ? `https://wa.me/${wa}?text=${encodeURIComponent(msg)}` : `mailto:${email}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(msg)}`;
+const nav = [['Di cosa mi occupo', '#aree'], ['Strumenti', '#come-lavoro'], ['Interviste', '#interviste'], ['Chi sono', '#chi-sono'], ['Domande', '#faq'], ['Dove ricevo', '#sedi']];
+const ig = m.instagram;
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <div class="stile-clinica">
+  <!-- striscia contatti -->
+  <div class="hidden bg-deep text-[13px] text-deep-ink/80 lg:block">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-8 py-2">
+      <p class="flex items-center gap-2"><Icona nome="pin" class="h-4 w-4" /> {luoghi.map((l) => `${l.indirizzo}, ${l.citta}`).join(' · ')}</p>
+      <a href={telHref(m.prenota.telefono)} class="flex items-center gap-2 font-semibold text-white hover:underline"><Icona nome="tel" class="h-4 w-4" /> {m.prenota.telefonoLabel}</a>
+    </div>
+  </div>
+
+  <header class="sticky z-30 border-b border-line bg-white" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} class="shrink-0"><img src={m.brand.logoScuro} alt={m.brand.logoAlt} width="700" height="220" class="h-11 w-auto sm:h-12" /></a>
+      <nav class="hidden items-center gap-7 text-[14px] font-semibold uppercase tracking-[0.04em] text-ink/70 xl:flex">
+        {nav.map(([t, h]) => <a href={h} class="border-b-2 border-transparent py-1 hover:border-brand hover:text-ink">{t}</a>)}
+      </nav>
+      <a href="#prenota" class="btn btn-primary shrink-0 !min-h-[44px] !rounded-[4px] !px-5 text-sm">Prenoti</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: testo e barra di prenotazione a sinistra, ritratto su blocco blu a destra -->
+    <section data-hero-section class="relative overflow-hidden bg-surface">
+      <div class="mx-auto grid max-w-7xl items-end gap-8 px-4 pt-10 sm:px-8 lg:grid-cols-12 lg:pt-16">
+        <div class="pb-10 lg:col-span-7 lg:pb-16">
+          <p class="label" data-reveal>{m.hero.eyebrow}</p>
+          <h1 class="mt-4 text-[2.6rem] font-bold leading-[1.02] sm:text-[3.6rem] lg:text-[4.2rem]" data-reveal>{nomeCompleto(m)}</h1>
+          <p class="mt-5 max-w-xl font-head text-xl font-medium leading-snug text-brand2 sm:text-2xl" data-reveal>{x.hero.titolo}</p>
+          <p class="mt-4 max-w-xl text-[17px] leading-relaxed text-muted" data-reveal>{x.hero.testo}</p>
+
+          <!-- barra di prenotazione orizzontale -->
+          <div class="mt-8 border border-line bg-white p-3 sm:p-4" data-booking data-wa={wa} data-email={email} data-oggetto={m.prenota.oggettoMail} data-reveal>
+            <div class="grid gap-3 sm:grid-cols-[1fr_1fr_auto] sm:items-end">
+              <label class="block text-[12px] font-semibold uppercase tracking-wide text-muted">{box.motivoLabel}
+                <select class="campo mt-1 !rounded-[4px] normal-case tracking-normal" data-motivo-select>
+                  {box.motivi.map((t: string, i: number) => <option value={box.motiviFrase[i]}>{t}</option>)}
+                </select>
+              </label>
+              <label class="block text-[12px] font-semibold uppercase tracking-wide text-muted">{box.sedeLabel}
+                <select class="campo mt-1 !rounded-[4px] normal-case tracking-normal" data-sede-select>
+                  {luoghi.map((l) => <option value={l.frase}>{l.indirizzo}{l.citta !== m.citta ? `, ${l.citta}` : ''}</option>)}
+                </select>
+              </label>
+              <a href={href0} data-prenota target={wa ? '_blank' : undefined} rel={wa ? 'noopener' : undefined} class="btn btn-primary !min-h-[50px] !rounded-[4px]">
+                <Icona nome={wa ? 'commento' : 'mail'} /> {wa ? 'Invii su WhatsApp' : 'Invii la richiesta'}
+              </a>
+            </div>
+            <p class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-muted">
+              <a href="#prenota" class="font-semibold text-brand hover:underline">Oppure scelga giorno e orario</a>
+              <a href={telHref(m.prenota.telefono)} class="hover:text-brand">o chiami {m.prenota.chiamaLabel}: <span class="font-semibold text-ink">{m.prenota.telefonoLabel}</span></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="relative flex justify-center lg:col-span-5 lg:justify-end">
+          <div class="absolute bottom-0 left-1/2 h-[78%] w-[80%] -translate-x-1/2 bg-brand lg:left-auto lg:right-0 lg:w-[86%] lg:translate-x-0" aria-hidden="true"></div>
+          <div class="absolute bottom-6 left-[6%] h-[62%] w-[70%] border-2 border-brand2/30 lg:left-[4%]" aria-hidden="true"></div>
+          <img src={foto.hero} alt={foto.heroAlt} width="884" height="1300" fetchpriority="high" class="relative h-[380px] w-auto sm:h-[480px] lg:h-[600px]" />
+          <p class="absolute bottom-5 right-3 max-w-[230px] bg-white px-4 py-3 text-[13px] font-semibold leading-snug text-ink shadow-lg sm:right-6">{x.hero.badge}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENZIALI: fascia blu piena -->
+    <section class="bg-brand text-white">
+      <dl class="mx-auto grid max-w-7xl grid-cols-2 divide-white/20 px-4 sm:px-8 lg:grid-cols-4 lg:divide-x" data-stagger>
+        {x.credenziali.map((c: any) => (
+          <div class="py-7 lg:px-8 lg:first:pl-0">
+            <dt class="font-head text-[2rem] font-bold leading-none sm:text-[2.4rem]">{c.valore}</dt>
+            <dd class="mt-2 pr-4 text-[14px] leading-snug text-white/85">{c.testo}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+
+    <!-- AREE: elenco a due colonne, con foto vera dello studio a fianco -->
+    <section id="aree" class="py-16 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-8 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <div class="lg:sticky lg:top-32">
+            <h2 class="titolo-sez" data-reveal>{m.aree.titolo}</h2>
+            <p class="mt-4 text-muted" data-reveal>{m.aree.intro}</p>
+            <img src={foto.studio} alt={foto.studioAlt} width="1800" height="1100" loading="lazy" class="mt-8 hidden aspect-[4/3] w-full object-cover lg:block" data-reveal />
+          </div>
+        </div>
+        <ul class="grid border-t border-line sm:grid-cols-2 lg:col-span-8" data-stagger>
+          {m.aree.voci.map((v: any) => (
+            <li class="flex gap-4 border-b border-line py-6 sm:odd:pr-6 sm:even:border-l sm:even:pl-6">
+              <span class="mt-0.5 grid h-10 w-10 shrink-0 place-items-center bg-brand/10 text-brand"><Icona nome={v.icona} class="h-5 w-5" /></span>
+              <div>
+                <h3 class="text-lg font-semibold leading-snug">{v.titolo}</h3>
+                <p class="mt-1.5 text-[15px] leading-relaxed text-muted">{v.testo}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <img src={foto.studio} alt={foto.studioAlt} width="1800" height="1100" loading="lazy" class="mx-4 mt-8 aspect-[4/3] w-[calc(100%-2rem)] object-cover sm:mx-8 sm:w-[calc(100%-4rem)] lg:hidden" />
+    </section>
+
+    <!-- STRUMENTI: righe a zig-zag con foto vere -->
+    <section id="come-lavoro" class="border-t border-line bg-surface py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl space-y-16 px-4 sm:px-8 lg:space-y-24">
+        {x.strumenti.map((s: any, i: number) => (
+          <div class="grid items-center gap-8 lg:grid-cols-12 lg:gap-14">
+            <div class={`relative lg:col-span-5 ${i % 2 ? 'lg:order-2' : ''}`} data-reveal>
+              <div class={`absolute -bottom-4 h-full w-full bg-brand ${i % 2 ? '-left-4' : '-right-4'}`} aria-hidden="true"></div>
+              <img src={s.img} alt={s.imgAlt} width="1000" height="1100" loading="lazy" class="relative aspect-[10/11] w-full object-cover" />
+            </div>
+            <div class="lg:col-span-7" data-reveal>
+              <p class="label">Strumenti</p>
+              <h2 class="mt-3 titolo-sez">{s.titolo}</h2>
+              <p class="mt-5 text-[17px] leading-relaxed text-ink/80">{s.testo}</p>
+              <ul class="mt-6 space-y-3">
+                {s.punti.map((p: string) => <li class="flex items-start gap-3 border-l-2 border-brand bg-white px-4 py-3 text-[15px]">{p}</li>)}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <PrenotaCalendario m={m} />
+
+    <!-- INTERVISTE -->
+    <section id="interviste" class="bg-deep py-16 text-white sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-8">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="titolo-sez" data-reveal>Interviste</h2>
+          <p class="max-w-md text-deep-ink/75" data-reveal>Parlo di prevenzione e di malattie della pelle anche in video.</p>
+        </div>
+        <div class="mt-8 grid gap-6 md:grid-cols-3" data-stagger>
+          {x.video.map((v: any) => (
+            <a href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noopener" class="group block">
+              <span class="relative block aspect-video overflow-hidden">
+                <img src={v.img} alt="" width="960" height="540" loading="lazy" class="h-full w-full object-cover transition-[scale] duration-500 group-hover:scale-[1.03]" />
+                <span class="absolute inset-0 grid place-items-center bg-black/15"><span class="grid h-14 w-14 place-items-center bg-brand text-white"><svg viewBox="0 0 24 24" class="ml-1 h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" /></svg></span></span>
+                <span class="absolute bottom-2 right-2 bg-black/75 px-2 py-0.5 text-xs font-semibold">{v.durata}</span>
+              </span>
+              <span class="mt-4 block font-head text-xl font-semibold leading-snug group-hover:underline">{v.titolo}</span>
+              <span class="mt-1 block text-sm text-deep-ink/60">{v.fonte} · YouTube</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="py-16 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-8 lg:grid-cols-12 lg:gap-14">
+        <div class="lg:col-span-4" data-reveal>
+          <img src={foto.biblioteca} alt={foto.bibliotecaAlt} width="900" height="1200" loading="lazy" class="aspect-[3/4] w-full object-cover" />
+          <div class="mt-6 flex gap-4 border border-line p-4">
+            <img src={foto.libro} alt="" width="469" height="665" loading="lazy" class="h-28 w-auto shadow-md" />
+            <div>
+              <p class="label">Il mio libro</p>
+              <p class="mt-2 font-head text-[17px] font-semibold leading-snug">{x.bio.libro.titolo}</p>
+              <p class="mt-1 text-[13px] text-muted">{x.bio.libro.autori} · {x.bio.libro.editore}</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-8">
+          <h2 class="titolo-sez" data-reveal>{m.bio.titolo}</h2>
+          <div class="mt-5 space-y-4 text-[17px] leading-relaxed text-ink/85" data-reveal>
+            {m.bio.paragrafi.map((p: string, i: number) => <p class={i === 0 ? 'text-xl text-ink' : ''}>{p}</p>)}
+          </div>
+          <ol class="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2" data-stagger>
+            {m.bio.tappe.map((t: any) => (
+              <li class="bg-white p-5 sm:[&:last-child:nth-child(odd)]:col-span-2"><p class="font-head text-lg font-bold text-brand">{t.periodo}</p><p class="mt-1 text-[15px] leading-relaxed text-ink/80">{t.testo}</p></li>
+            ))}
+          </ol>
+          <p class="mt-8 text-[13px] font-semibold uppercase tracking-wide text-muted">{m.bio.societaLabel}</p>
+          <p class="mt-2 text-[15px] text-ink/80">{m.bio.societa.join(' · ')}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ: accordion nativo -->
+    <section id="faq" class="border-t border-line bg-surface py-16 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-8 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <h2 class="titolo-sez" data-reveal>Le domande che mi fanno più spesso</h2>
+          <p class="mt-4 text-muted" data-reveal>Risposte brevi. Per il Suo caso, la visita resta indispensabile.</p>
+        </div>
+        <div class="divide-y divide-line border-y border-line bg-white lg:col-span-8" data-reveal>
+          {x.faq.map((f: any, i: number) => (
+            <details class="group px-5" open={i === 0}>
+              <summary class="flex cursor-pointer list-none items-start justify-between gap-4 py-5 font-head text-[17px] font-semibold leading-snug [&::-webkit-details-marker]:hidden">
+                {f.d}
+                <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center border border-line text-brand transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <p class="pb-6 pr-10 text-[15px] leading-relaxed text-ink/80">{f.r}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICOLO + INSTAGRAM -->
+    <section id="articoli" class="py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-8">
+        <h2 class="titolo-sez" data-reveal>Articoli</h2>
+        <a href={`/${m.slug}/articolo`} class="group mt-8 grid border border-line md:grid-cols-2" data-reveal>
+          <span class="relative block aspect-[16/9] overflow-hidden md:aspect-auto">
+            <img src={m.articolo.img} alt="" width="1500" height="843" loading="lazy" class="h-full w-full object-cover" />
+          </span>
+          <span class="flex flex-col p-6 sm:p-10">
+            <span class="label">{m.articolo.categoria} · {m.articolo.tempoLettura}</span>
+            <span class="mt-3 font-head text-2xl font-bold leading-tight group-hover:text-brand sm:text-3xl">{m.articolo.titolo}</span>
+            <span class="mt-4 text-muted">{m.articolo.intro}</span>
+            <span class="mt-6 inline-flex items-center gap-2 font-semibold text-brand">Legga l'articolo <Icona nome="freccia" class="h-4 w-4" /></span>
+          </span>
+        </a>
+
+        <div class="mt-16 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="titolo-sez" data-reveal>Dal mio profilo Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 border border-line px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: il profilo oggi non esiste</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3">
+                <img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full" />
+                <span class="text-sm font-semibold">{ig.handle}</span>
+              </header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine ?? 'postRitratto']} alt="" width="640" height="640" loading="lazy" class="absolute inset-0 h-full w-full object-cover object-top" />
+                  <div class="absolute inset-x-0 bottom-0 bg-brand px-5 py-4 text-white">
+                    <p class="font-head text-xl font-bold leading-tight">{p.titolo}</p>
+                    <p class="mt-0.5 text-sm text-white/85">{p.sottotitolo}</p>
+                  </div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-deep p-6 text-white">
+                  <p class="font-head text-[1.55rem] font-bold leading-[1.1]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-1.5">
+                    {p.punti.map((t: string) => <li class="border-l-2 border-brand bg-white/5 px-3 py-1.5 text-[14px]">{t}</li>)}
+                  </ul>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-surface p-6">
+                  <span class="font-head text-6xl font-bold leading-none text-brand">?</span>
+                  <div>
+                    <p class="font-head text-[1.7rem] font-bold leading-[1.1]">{p.titolo}</p>
+                    <p class="mt-4 inline-block bg-brand px-3 py-2 text-[15px] font-semibold text-white">{p.risposta}</p>
+                  </div>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="border-t border-line bg-surface py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-8">
+        <h2 class="titolo-sez" data-reveal>{m.sedi.titolo}</h2>
+        <div class="mt-8 grid gap-px border border-line bg-line md:grid-cols-3" data-stagger>
+          {luoghi.map((l) => (
+            <div class="flex flex-col bg-white p-6">
+              <p class="label">{l.tipo}</p>
+              <p class="mt-2 font-head text-xl font-bold leading-tight">{l.indirizzo}<br /><span class="font-medium text-muted">{l.citta}</span></p>
+              {l.nota && <p class="mt-2 text-sm text-muted">{l.nota}</p>}
+              <ul class="mt-5 space-y-2">
+                {l.telefoni.map((t: any) => (
+                  <li><a href={telHref(t.numero)} class="flex items-center justify-between gap-3 border border-line px-3 py-2.5 text-[15px] hover:border-brand hover:text-brand"><span class="text-muted">{t.label}</span><span class="font-semibold">{t.numero}</span></a></li>
+                ))}
+              </ul>
+              <a href={mapsHref(l.indirizzo, l.citta)} target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-brand hover:underline"><Icona nome="pin" class="h-4 w-4" /> Apra in Google Maps</a>
+            </div>
+          ))}
+        </div>
+        <p class="mt-10 text-[13px] font-semibold uppercase tracking-wide text-muted">{m.sedi.struttureLabel}</p>
+        <ul class="mt-3 grid gap-4 md:grid-cols-3">
+          {m.sedi.strutture.map((s: any) => <li class="border-l-4 border-brand bg-white px-5 py-4"><span class="block font-head text-lg font-bold">{s.nome}</span><span class="text-sm text-muted">{s.testo}</span></li>)}
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA FINALE -->
+    <section class="bg-brand text-white" data-cta-finale>
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-14 sm:px-8 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <h2 class="font-head text-3xl font-bold sm:text-4xl">{m.prenota.titolo}</h2>
+          <p class="mt-3 max-w-xl text-white/85">{m.prenota.testo}</p>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a href={telHref(m.prenota.telefono)} class="btn !rounded-[4px] bg-white text-brand hover:bg-white/90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-[4px] border border-white/60 text-white hover:bg-white/10"><Icona nome="calendario" /> Prenoti online</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  </div>
+  <script>import '../scripts/motion.ts';</script>
+</Base>

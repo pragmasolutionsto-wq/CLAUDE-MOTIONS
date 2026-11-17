@@ -76,6 +76,15 @@ html { scroll-behavior: smooth; }
 .btn:focus-visible, a:focus-visible { outline: 2px solid var(--c-brand2); outline-offset: 3px; }
 }
 
+/* Stile "clinica" (layout HomeClinica): angoli vivi, bordi sottili al posto delle ombre */
+@layer components {
+  .stile-clinica .card { border-radius: 4px; box-shadow: none; border: 1px solid var(--c-line); }
+  .stile-clinica .campo, .stile-clinica .btn, .stile-clinica .slot { border-radius: 4px; }
+  .stile-clinica .giorno { border-radius: 4px; }
+  .stile-clinica .chip { border-radius: 4px; }
+  .stile-clinica .titolo-sez { font-weight: 700; letter-spacing: -0.01em; }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }

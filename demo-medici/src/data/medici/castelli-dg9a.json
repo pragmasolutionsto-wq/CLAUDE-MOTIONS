@@ -1,0 +1,549 @@
+{
+  "slug": "castelli-dg9a",
+  "layout": "clinica",
+  "sitoOrigine": "https://francocastelli.com/",
+  "titolo": "Dott.",
+  "nome": "Franco Castelli",
+  "specialita": "Specialista in Dermatologia e Venereologia",
+  "firma": "Dermatologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Franco Castelli · Dermatologo a Torino e Chivasso",
+    "description": "Sono dermatologo a Torino e Chivasso: prevenzione dei tumori della pelle con videodermatoscopia, dermatiti, malattie sessualmente trasmesse, laser e dermochirurgia."
+  },
+  "brand": {
+    "header": "logo",
+    "logoScuro": "/castelli-dg9a/img/logo.png",
+    "logoChiaro": "/castelli-dg9a/img/logo-chiaro.png",
+    "marchio": "/castelli-dg9a/img/marchio.png",
+    "logoAlt": "Dott. Franco Castelli, Dermatologo"
+  },
+  "foto": {
+    "hero": "/castelli-dg9a/img/ritratto.webp",
+    "heroAlt": "Il Dott. Franco Castelli",
+    "volto": "/castelli-dg9a/img/volto.webp",
+    "postRitratto": "/castelli-dg9a/img/post-ritratto.webp",
+    "studio": "/castelli-dg9a/img/studio.webp",
+    "studioAlt": "Il Dott. Castelli nel suo studio, con il videodermatoscopio",
+    "biblioteca": "/castelli-dg9a/img/biblioteca.webp",
+    "bibliotecaAlt": "Il Dott. Castelli tra i libri dello studio",
+    "libro": "/castelli-dg9a/img/libro.webp"
+  },
+  "hero": {
+    "eyebrow": "Dermatologo · Torino e Chivasso",
+    "titolo": "Prevenzione dei tumori della pelle, dermatologia clinica e laser.",
+    "testo": "Visito ogni tipo di problema della pelle, con un'attenzione particolare al controllo dei nei con la videodermatoscopia.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami lo studio",
+    "badge": "Responsabile dell'Unità di Dermatologia, Ospedale Koelliker",
+    "box": {
+      "titolo": "Prenoti la Sua visita",
+      "motivoLabel": "Motivo",
+      "motivi": [
+        "Controllo dei nei",
+        "Visita dermatologica",
+        "Dermatite o allergia",
+        "Malattie sessualmente trasmesse",
+        "Trattamento laser"
+      ],
+      "motiviFrase": [
+        "un controllo dei nei",
+        "una visita dermatologica",
+        "una dermatite o un'allergia",
+        "un sospetto di malattia sessualmente trasmessa",
+        "valutare un trattamento laser"
+      ],
+      "sedeLabel": "Sede"
+    }
+  },
+  "credenziali": [
+    {
+      "valore": "1988",
+      "testo": "laurea a Torino, con tesi sui tumori annessiali cutanei"
+    },
+    {
+      "valore": "50+",
+      "testo": "pubblicazioni su riviste italiane e straniere"
+    },
+    {
+      "valore": "Dal 1994",
+      "testo": "dermatologia oncologica all'Ospedale Koelliker"
+    },
+    {
+      "valore": "3",
+      "testo": "squadre seguite: Juventus, Torino FC, Reale Mutua Basket"
+    }
+  ],
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Sono dermatologo e venereologo. Mi sono laureato e specializzato all'Università di Torino, dove dal 1986 al 1994 ho guidato il Progetto Regionale di Ricerca sulla prevenzione del melanoma cutaneo, alla Clinica Dermatologica diretta dal Prof. G. Zina.",
+      "Dal 1994 mi occupo di dermatologia oncologica e prevenzione dei tumori cutanei all'Ospedale Koelliker, dove dal 2018 sono responsabile dell'Unità Operativa Autonoma di Dermatologia. Dal 1998 pratico anche la laser chirurgia.",
+      "Nel 2026 ho assunto la direzione del CIMS, il Centro Integrato Malattie Sessuali del Poliambulatorio Koelliker/D'Azeglio. Sono consulente dermatologo di Juventus, Torino FC e Reale Mutua Torino Pallacanestro."
+    ],
+    "tappe": [
+      {
+        "periodo": "1988",
+        "testo": "Laurea in Medicina e Chirurgia all'Università di Torino, tesi sui tumori annessiali cutanei (relatore Prof. M. Pippione)."
+      },
+      {
+        "periodo": "1986 – 1994",
+        "testo": "Responsabile del Progetto Regionale di Ricerca per la prevenzione del melanoma cutaneo, Clinica Dermatologica dell'Università di Torino."
+      },
+      {
+        "periodo": "1992",
+        "testo": "Specializzazione in Dermatologia e Venereologia all'Università di Torino."
+      },
+      {
+        "periodo": "Dal 1994",
+        "testo": "Responsabile del Servizio di Dermatologia Oncologica e Prevenzione dei Tumori cutanei, Ospedale Koelliker."
+      },
+      {
+        "periodo": "Dal 2003",
+        "testo": "Consulente LILT (Lega Italiana per la Lotta contro i Tumori), delegazioni di Verolengo e Chivasso."
+      },
+      {
+        "periodo": "Dal 2018",
+        "testo": "Responsabile dell'Unità Operativa Autonoma di Dermatologia, Ospedale Koelliker."
+      },
+      {
+        "periodo": "2026",
+        "testo": "Direttore del CIMS, Centro Integrato Malattie Sessuali, Poliambulatorio Koelliker/D'Azeglio."
+      }
+    ],
+    "societaLabel": "Società scientifiche",
+    "societa": [
+      "SIDEMaST, dal 1992",
+      "ISPLAD, dal 1992",
+      "AIDNID, dal 2014"
+    ],
+    "libro": {
+      "titolo": "I corticosteroidi topici in associazione e loro uso in dermatologia",
+      "editore": "Edizioni Minerva Medica",
+      "autori": "M. Pippione, F. Castelli"
+    }
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "Ricevo su appuntamento per ogni tipo di visita dermatologica.",
+    "voci": [
+      {
+        "icona": "lente",
+        "titolo": "Prevenzione dei tumori della pelle",
+        "testo": "Controllo dei nei e diagnosi precoce di melanoma e degli altri tumori cutanei."
+      },
+      {
+        "icona": "foto",
+        "titolo": "Follow-up delle lesioni pigmentate",
+        "testo": "Con la videodermatoscopia confronto le immagini nel tempo e vedo anche i cambiamenti piccoli."
+      },
+      {
+        "icona": "goccia",
+        "titolo": "Dermatiti infiammatorie",
+        "testo": "Dermatite atopica, seborroica, da contatto, psoriasi."
+      },
+      {
+        "icona": "scudo",
+        "titolo": "Allergologia",
+        "testo": "Reazioni della pelle a sostanze, cosmetici, farmaci e materiali."
+      },
+      {
+        "icona": "persone",
+        "titolo": "Malattie sessualmente trasmesse",
+        "testo": "Diagnosi e cura, con riservatezza. Dirigo il Centro Integrato Malattie Sessuali del Koelliker/D'Azeglio."
+      },
+      {
+        "icona": "check",
+        "titolo": "Patologie infettive della pelle",
+        "testo": "Infezioni da funghi, batteri e virus, verruche comprese."
+      },
+      {
+        "icona": "stella",
+        "titolo": "Trattamenti laser",
+        "testo": "Lesioni superficiali, lesioni vascolari benigne, macchie iperpigmentate, tatuaggi colorati, capillari."
+      },
+      {
+        "icona": "siringa",
+        "titolo": "Dermochirurgia ambulatoriale",
+        "testo": "Asportazione di nei e neoformazioni cutanee, anche con il laser."
+      }
+    ]
+  },
+  "strumenti": [
+    {
+      "titolo": "Videodermatoscopia",
+      "img": "/castelli-dg9a/img/videodermatoscopia.webp",
+      "imgAlt": "Il videodermatoscopio dello studio, con le immagini di due nei sullo schermo",
+      "testo": "Il videodermatoscopio ingrandisce i nei e ne salva le immagini. Al controllo successivo le confronto con le nuove: così vedo se un neo è cambiato, anche di poco, e posso togliere solo quelli che servono.",
+      "punti": [
+        "Esame dermatoscopico in epiluminescenza",
+        "Mappatura e follow-up delle lesioni pigmentate",
+        "Diagnosi precoce di melanoma e di tumori non melanoma"
+      ]
+    },
+    {
+      "titolo": "Laser",
+      "img": "/castelli-dg9a/img/laser.webp",
+      "imgAlt": "Un apparecchio laser dello studio",
+      "testo": "Uso il laser dal 1998, all'Ospedale Koelliker e in studio. A seconda del problema scelgo la sorgente più adatta.",
+      "punti": [
+        "Chirurgia ablativa delle lesioni superficiali",
+        "Lesioni vascolari benigne e capillari (laser KTP 532 nm)",
+        "Macchie iperpigmentate",
+        "Rimozione di tatuaggi colorati (laser Q-Switched Nd:YAG 532/1064 nm e rubino 694 nm)"
+      ]
+    }
+  ],
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "video": [
+    {
+      "id": "NKQs5GbhlUA",
+      "titolo": "Proteggere la pelle contro il rischio di melanoma",
+      "fonte": "Revée News",
+      "durata": "7:36",
+      "img": "/castelli-dg9a/img/yt-melanoma.webp"
+    },
+    {
+      "id": "EYN3sEuVD8w",
+      "titolo": "Psoriasi e obesità",
+      "fonte": "Open Source in Medicine",
+      "durata": "4:38",
+      "img": "/castelli-dg9a/img/yt-psoriasi.webp"
+    },
+    {
+      "id": "FWGYQ3fGn2M",
+      "titolo": "Perché ho scelto di fare il medico",
+      "fonte": "Menthalia · About me",
+      "durata": "4:51",
+      "img": "/castelli-dg9a/img/yt-aboutme.webp"
+    }
+  ],
+  "faq": [
+    {
+      "d": "Mi è comparso un neo che prima non c'era: cosa devo fare?",
+      "r": "Dipende molto dall'età. In un bambino o in un adolescente può essere normale. In un adulto è meglio farlo controllare: circa il 70% dei melanomi compare «de novo», cioè su pelle sana e non da un neo già presente."
+    },
+    {
+      "d": "Quando un neo deve preoccupare?",
+      "r": "Tutti noi abbiamo nei spesso simili tra loro, quasi in fotocopia. Deve preoccupare il neo «diverso» dagli altri per simmetria, bordi, colori, dimensioni, e quello che cresce. In questi casi è meglio farlo vedere senza aspettare."
+    },
+    {
+      "d": "Ogni quanto vanno controllati i nei?",
+      "r": "È una buona abitudine fare una visita ogni 12 mesi, a meno che ci siano fattori di rischio che consigliano controlli più ravvicinati. Nei bambini, prima dell'adolescenza, in genere basta un controllo ogni 3-4 anni."
+    },
+    {
+      "d": "Ho un neo che prude. Può essere grave?",
+      "r": "Di solito il prurito su un neo dipende da un'infiammazione o da un piccolo trauma, non da un'evoluzione pericolosa del neo. Se però il neo cambia aspetto, lo faccia vedere."
+    },
+    {
+      "d": "Mi è comparsa una piccola macchia marrone sul viso. Cos'è?",
+      "r": "La causa più probabile è una lentigo solare, una pigmentazione legata al sole. Le macchie del viso però hanno molte varianti: è meglio esaminarla con la visita e con la dermatoscopia."
+    },
+    {
+      "d": "Ho chiazze rossastre con una crosticina che cade e si riforma, sul viso o sul cuoio capelluto.",
+      "r": "Potrebbero essere cheratosi attiniche, frequenti nelle zone esposte al sole. Oggi sono considerate veri tumori intraepiteliali: vanno trattate, insieme alla pelle intorno."
+    },
+    {
+      "d": "Perdo molti capelli: a cosa può essere dovuto?",
+      "r": "Le cause sono molte: un'alopecia (androgenetica, areata, cicatriziale), farmaci o malattie generali. Servono la visita, la tricoscopia e a volte esami del sangue per arrivare alla diagnosi."
+    },
+    {
+      "d": "Quali sono i sintomi di una malattia sessualmente trasmessa?",
+      "r": "I più comuni sono il prurito nelle infezioni da funghi e il bruciore o il dolore nelle infezioni da herpes. Molte malattie però non danno sintomi, come la sifilide primaria, ma lasciano segni sulla pelle: papule, piccole ulcere. Meglio una visita in più."
+    }
+  ],
+  "articolo": {
+    "categoria": "Prevenzione",
+    "titolo": "Lesioni pigmentate: quando un neo va controllato subito",
+    "img": "/castelli-dg9a/img/rep-articolo.webp",
+    "intro": "La maggior parte dei nei non dà mai problemi. Alcuni segnali, però, meritano una visita senza aspettare il controllo dell'anno successivo. Ecco quali sono, e come lavoro per distinguere ciò che va solo osservato da ciò che va tolto.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Nei, macchie e lesioni pigmentate",
+        "paragrafi": [
+          "«Lesione pigmentata» è il nome che usiamo per tutte le macchie scure della pelle: i nei, le lentigo dovute al sole, le cheratosi seborroiche, e anche il melanoma, che è il tumore della pelle più temuto.",
+          "A occhio nudo possono somigliarsi molto. Per questo la visita dermatologica si appoggia alla dermatoscopia, che ingrandisce la lesione e mostra strutture e colori che non si vedono a occhio nudo."
+        ]
+      },
+      {
+        "titolo": "Un dato che sorprende",
+        "paragrafi": [
+          "Molti pensano che il melanoma nasca sempre da un neo che si trasforma. In realtà circa il 70% dei melanomi compare «de novo», cioè su pelle sana, senza un neo precedente.",
+          "Ne derivano due cose pratiche. La prima: un neo nuovo in età adulta va fatto vedere. La seconda: il controllo non riguarda solo i nei che conosciamo, ma tutta la pelle."
+        ]
+      },
+      {
+        "titolo": "I segnali da non trascurare",
+        "paragrafi": [
+          "Prenoti una visita in tempi brevi se nota:"
+        ],
+        "elenco": [
+          "un neo nuovo comparso in età adulta;",
+          "un neo che cambia forma, dimensioni o colore;",
+          "un neo «diverso» da tutti gli altri, il cosiddetto brutto anatroccolo;",
+          "un neo con bordi irregolari o più colori nella stessa macchia;",
+          "una lesione che sanguina o forma una crosta senza un trauma evidente."
+        ],
+        "chiusura": "Il prurito da solo, invece, di solito dipende da un'infiammazione o da un piccolo trauma e non da un cambiamento pericoloso del neo."
+      },
+      {
+        "titolo": "Il brutto anatroccolo",
+        "paragrafi": [
+          "Ognuno di noi tende a «produrre» nei simili tra loro, quasi in fotocopia: stessa forma, stesso colore, stesso disegno. Il neo che non somiglia agli altri è quello che merita più attenzione.",
+          "È un criterio semplice, utile anche per l'autocontrollo a casa: guardando la propria pelle, non serve saper valutare ogni singolo neo, basta accorgersi di quello che stona.",
+          "Se ne trova uno, non si allarmi: nella grande maggioranza dei casi si tratta comunque di un neo benigno. Ma è proprio il tipo di lesione che conviene mostrare al dermatologo alla prima occasione, senza rimandare."
+        ]
+      },
+      {
+        "titolo": "Ogni quanto controllarsi",
+        "paragrafi": [
+          "Per un adulto è una buona abitudine una visita ogni 12 mesi. Possono servire controlli più ravvicinati se ci sono fattori di rischio: molti nei, nei atipici, pelle chiara, scottature importanti in passato, casi di melanoma in famiglia.",
+          "Nei bambini, prima dell'adolescenza, in genere non serve una frequenza così alta: un controllo ogni 3-4 anni è sufficiente, salvo indicazioni diverse."
+        ]
+      },
+      {
+        "titolo": "Come lavoro con la videodermatoscopia",
+        "paragrafi": [
+          "Durante la visita osservo tutta la pelle e, sui nei che lo richiedono, uso il videodermatoscopio. Le immagini vengono salvate: al controllo successivo le metto a confronto con quelle nuove.",
+          "Questo confronto nel tempo è prezioso soprattutto per chi ha molti nei. Permette di vedere anche cambiamenti piccoli e, allo stesso tempo, di evitare di togliere nei che non ne hanno bisogno."
+        ]
+      },
+      {
+        "titolo": "Quando un neo va tolto",
+        "paragrafi": [
+          "Si asporta un neo quando ha caratteristiche sospette o quando cambia nel tempo. L'intervento si fa in ambulatorio, in anestesia locale, e il tessuto viene sempre inviato all'esame istologico, l'unico che dà una diagnosi certa.",
+          "A volte si toglie un neo per ragioni pratiche: per esempio quando è rilevato, si irrita di continuo o si è staccato in parte dopo un trauma. Non perché il trauma lo renda pericoloso, ma per comodità e per evitare infezioni."
+        ]
+      },
+      {
+        "titolo": "Controllarsi a casa, nel modo giusto",
+        "paragrafi": [
+          "Tra una visita e l'altra è utile guardare la propria pelle, una volta ogni due o tre mesi. Non serve farlo tutti i giorni: i cambiamenti importanti si notano meglio a distanza di tempo.",
+          "Lo faccia con una buona luce, davanti a uno specchio grande, e usi uno specchio piccolo per le zone difficili. Per la schiena e il cuoio capelluto può farsi aiutare da una persona di fiducia."
+        ],
+        "elenco": [
+          "guardi tutta la pelle, comprese piante dei piedi, spazi tra le dita, unghie e genitali;",
+          "fotografi con il telefono i nei che Le sembrano particolari, così potrà confrontarli;",
+          "porti le foto alla visita: aiutano a capire se qualcosa è cambiato."
+        ]
+      },
+      {
+        "titolo": "Il sole, prima di tutto",
+        "paragrafi": [
+          "Le scottature, soprattutto in età giovane, sono uno dei principali fattori di rischio per il melanoma. Proteggere la pelle dei bambini è la forma di prevenzione più efficace che esista.",
+          "Per tutti valgono poche regole: evitare il sole nelle ore centrali, usare una protezione alta e rinnovarla spesso, non usare lampade e lettini abbronzanti."
+        ]
+      },
+      {
+        "titolo": "Non solo nei: le macchie del viso",
+        "paragrafi": [
+          "Una piccola macchia marrone comparsa sul viso è spesso una lentigo solare, legata all'esposizione al sole. Le macchie del viso, però, hanno molte varianti, ed è giusto esaminarle con la dermatoscopia.",
+          "Attenzione anche alle chiazze rossastre con una crosticina che cade e si riforma, sul viso o sul cuoio capelluto: possono essere cheratosi attiniche, che oggi consideriamo veri tumori intraepiteliali e che vanno trattate."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo dermatologo."
+  },
+  "instagram": {
+    "handle": "dott.francocastelli",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Neo che cambia: i segnali ABCDE",
+        "punti": [
+          "A · Asimmetria",
+          "B · Bordi irregolari",
+          "C · Colori diversi",
+          "D · Dimensioni che crescono",
+          "E · Evoluzione nel tempo"
+        ],
+        "didascalia": "Cinque lettere per ricordare cosa osservare nei propri nei. E una regola in più: il neo «diverso» da tutti gli altri è quello da far vedere per primo.",
+        "hashtag": "#nei #melanoma #prevenzione #dermatologo #torino"
+      },
+      {
+        "stile": "foto",
+        "immagine": "postRitratto",
+        "titolo": "Dermatite seborroica d'inverno",
+        "sottotitolo": "Perché peggiora con il freddo",
+        "didascalia": "Desquamazione e rossore su cuoio capelluto, sopracciglia, ai lati del naso: d'inverno la dermatite seborroica tende a peggiorare. Freddo, aria secca e riscaldamento non aiutano. Si controlla bene con la cura giusta: se torna spesso, ne parliamo in visita.",
+        "hashtag": "#dermatiteseborroica #inverno #pelle #dermatologia"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "MST: e se non ho sintomi?",
+        "risposta": "Molte non ne danno: meglio un controllo.",
+        "didascalia": "Prurito e bruciore sono i sintomi più noti, ma molte malattie sessualmente trasmesse non danno disturbi, come la sifilide primaria, e lasciano solo piccoli segni sulla pelle. Dopo un rapporto a rischio, una visita toglie i dubbi.",
+        "hashtag": "#mst #saluteSessuale #prevenzione #venereologia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": null,
+    "luoghi": [
+      {
+        "tipo": "Studio privato",
+        "nome": "Studio privato Torino",
+        "indirizzo": "Via Curtatone 18",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "lo studio di via Curtatone 18, Torino",
+        "telefoni": [
+          {
+            "label": "Studio",
+            "numero": "011 542522"
+          },
+          {
+            "label": "Studio",
+            "numero": "011 538236"
+          },
+          {
+            "label": "Cellulare",
+            "numero": "376 124 9920"
+          }
+        ]
+      },
+      {
+        "tipo": "Poliambulatorio",
+        "nome": "Koelliker/D'Azeglio",
+        "indirizzo": "Corso Massimo d'Azeglio 43",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "il Poliambulatorio Koelliker/D'Azeglio, corso Massimo d'Azeglio 43, Torino",
+        "telefoni": [
+          {
+            "label": "Poliambulatorio",
+            "numero": "011 230 9811"
+          }
+        ]
+      },
+      {
+        "tipo": "Studio privato",
+        "nome": "Studio privato Chivasso",
+        "indirizzo": "Viale Platis 1/C",
+        "citta": "Chivasso",
+        "mappa": true,
+        "frase": "lo studio di viale Platis 1/C, Chivasso",
+        "telefoni": [
+          {
+            "label": "Cellulare",
+            "numero": "376 124 9920"
+          }
+        ],
+        "nota": "Primo piano. Nuova sede dal 7 novembre 2026."
+      }
+    ],
+    "struttureLabel": "Ospedale e collaborazioni",
+    "strutture": [
+      {
+        "nome": "Ospedale Koelliker",
+        "testo": "Unità Operativa Autonoma di Dermatologia · corso Galileo Ferraris 251, Torino"
+      },
+      {
+        "nome": "J|medical",
+        "testo": "Consulente dermatologo dal 2016"
+      },
+      {
+        "nome": "Sport",
+        "testo": "Juventus F.C., Torino F.C., Reale Mutua Torino Pallacanestro"
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Può chiamare lo studio oppure scegliere giorno e orario online: La ricontatteremo per confermare l'appuntamento.",
+    "telefono": "011542522",
+    "telefonoLabel": "011 542522",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "emailRichieste": "pragmasolutions.to@gmail.com",
+    "notaRichieste": "Anteprima: le richieste inviate da questa demo arrivano a Pragma Solutions, non al medico.",
+    "oggettoMail": "Richiesta di visita dermatologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce venire e lasci i Suoi dati: lo studio La ricontatterà per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": null,
+      "privacyTesto": "Questo modulo non salva i Suoi dati: prepara soltanto un messaggio nella Sua app di posta, che decide Lei se inviare. I dati indicati servono unicamente a rispondere alla richiesta di appuntamento.",
+      "notePlaceholder": "Per esempio da quando ha notato il problema"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F3F6F9",
+      "ink": "#1D232B",
+      "muted": "#5B6672",
+      "line": "#DCE3EA",
+      "brand": "#1E73BE",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#0F3D66",
+      "deep": "#16212C",
+      "deep-ink": "#E3EAF1"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Bitter",
+    "fontTesti": "Montserrat",
+    "favicon": "/castelli-dg9a/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/castelli-dg9a/brand/brand.json",
+    "pagine": [
+      "https://francocastelli.com/",
+      "https://francocastelli.com/curriculum/",
+      "https://francocastelli.com/faq-2/",
+      "https://francocastelli.com/pubblicazioni/",
+      "https://francocastelli.com/contatti/"
+    ]
+  }
+}

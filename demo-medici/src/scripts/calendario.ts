@@ -113,6 +113,10 @@ if (sez) {
     if (sel && ch.dataset.frase) sel.value = ch.dataset.frase;
   }));
 
+  document.querySelector<HTMLSelectElement>('[data-motivo-select]')?.addEventListener('change', (e) => {
+    const sel = form.elements.namedItem('motivo') as HTMLSelectElement | null;
+    if (sel) sel.value = (e.target as HTMLSelectElement).value;
+  });
   document.querySelector<HTMLSelectElement>('[data-sede-select]')?.addEventListener('change', (e) => {
     const sel = form.elements.namedItem('sede') as HTMLSelectElement | null;
     if (sel) sel.value = (e.target as HTMLSelectElement).value;
