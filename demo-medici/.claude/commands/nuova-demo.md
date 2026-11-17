@@ -42,7 +42,7 @@ Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito,
    - max 2 font, niente corsivi nei titoli, niente card numerate, niente iniziali/avatar, niente gradienti, niente slogan, niente grafica astratta;
    - sezioni con ritmo vario: foto e testo alternati, griglia ordinata, molto spazio bianco;
    - animazioni: solo comparsa morbida allo scroll.
-3. Sezioni (in quest'ordine, salvo motivo forte): Hero · Chi è · Di cosa si occupa · Articoli (solo articoli completi) · Dal profilo Instagram (3 post) · Dove riceve · CTA finale + footer. Pagina `/<slug>/articolo`.
+3. Sezioni (in quest'ordine, salvo motivo forte): Hero · Di cosa si occupa · Prenoti online (calendario, orari indicativi dichiarati, link alla privacy del SUO sito) · Chi è · Articoli (solo articoli completi) · Dal profilo Instagram (3 post) · Dove riceve · CTA finale + footer. Pagina `/<slug>/articolo`.
    - Instagram: grafiche dei post con il suo logo, i suoi colori e le sue foto; mai iniziali come avatar (usa il logo).
 4. Fascia "Anteprima non ufficiale realizzata da Pragma Solutions" e noindex: sempre (vedi Regole fisse).
 

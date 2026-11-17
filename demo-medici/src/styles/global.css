@@ -34,6 +34,19 @@ body { padding-top: var(--banner-h); }
 html { scroll-behavior: smooth; }
 
 @layer components {
+.campo { display: block; width: 100%; min-height: 46px; border: 1px solid var(--c-line); border-radius: 10px; background: #fff; padding: .6rem .8rem; font-size: 16px; font-weight: 400; color: var(--c-ink); transition: border-color .2s, box-shadow .2s; }
+.campo:focus { outline: none; border-color: var(--c-brand); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-brand) 18%, transparent); }
+.campo[aria-invalid="true"] { border-color: #C23B3B; }
+.giorno { position: relative; display: grid; place-items: center; aspect-ratio: 1; max-height: 52px; width: 100%; border-radius: 12px; font-weight: 600; font-size: .95rem; transition: background-color .15s, color .15s; }
+.giorno:not(:disabled) { background: color-mix(in srgb, var(--c-brand) 7%, white); color: var(--c-brand); }
+.giorno:not(:disabled):hover { background: color-mix(in srgb, var(--c-brand) 16%, white); }
+.giorno:disabled { color: color-mix(in srgb, var(--c-ink) 28%, transparent); cursor: default; }
+.giorno[aria-pressed="true"] { background: var(--c-brand) !important; color: #fff !important; }
+.giorno[data-oggi]::after { content: ""; position: absolute; bottom: 6px; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+.slot { min-height: 42px; border-radius: 10px; border: 1px solid var(--c-line); background: #fff; font-weight: 600; font-size: .9rem; color: var(--c-ink); transition: border-color .15s, background-color .15s, color .15s; }
+.slot:hover:not(:disabled) { border-color: var(--c-brand); color: var(--c-brand); }
+.slot:disabled { color: color-mix(in srgb, var(--c-ink) 25%, transparent); background: var(--c-surface); text-decoration: line-through; cursor: default; }
+.slot[aria-pressed="true"], .slot[aria-pressed="true"]:hover { background: var(--c-brand); border-color: var(--c-brand); color: #fff !important; }
 .card { background: #fff; border-radius: 14px; box-shadow: 0 1px 2px rgba(12,18,30,.06), 0 6px 20px -6px rgba(12,18,30,.12); }
 .card-hover { transition: box-shadow .25s ease, translate .25s ease; }
 .card-hover:hover { box-shadow: 0 2px 4px rgba(12,18,30,.06), 0 14px 32px -8px rgba(12,18,30,.22); translate: 0 -2px; }

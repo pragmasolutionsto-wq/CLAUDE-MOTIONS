@@ -1,11 +1,11 @@
 ---
 import Icona from './Icona.astro';
-import { telHref, type Medico } from '../lib/medici';
+import type { Medico } from '../lib/medici';
 interface Props { m: Medico }
 const { m } = Astro.props;
 ---
 <div data-mobile-cta class="cta-mobile fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/95 p-3 backdrop-blur sm:hidden" style="padding-bottom:max(.75rem, env(safe-area-inset-bottom))">
-  <a href={telHref(m.prenota.telefono)} class="btn btn-primary w-full"><Icona nome="tel" /> {m.hero.ctaPrenota}</a>
+  <a href={`/${m.slug}#prenota`} class="btn btn-primary w-full"><Icona nome="calendario" /> {m.hero.ctaPrenota}</a>
 </div>
 <style>
   .cta-mobile { transform: translateY(120%); transition: transform .4s ease; }

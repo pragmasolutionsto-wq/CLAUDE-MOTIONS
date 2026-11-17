@@ -18,10 +18,12 @@ const bar = document.querySelector<HTMLElement>('[data-mobile-cta]');
 const hero = document.querySelector('[data-hero-section]');
 const finale = document.querySelector('[data-cta-finale]');
 if (bar && hero) {
-  let dopo = false; let fine = false;
-  const upd = () => bar.classList.toggle('is-on', dopo && !fine);
+  let dopo = false; let fine = false; let cal = false;
+  const upd = () => bar.classList.toggle('is-on', dopo && !fine && !cal);
   new IntersectionObserver(([e]) => { dopo = !e.isIntersecting; upd(); }).observe(hero);
   if (finale) new IntersectionObserver(([e]) => { fine = e.isIntersecting; upd(); }).observe(finale);
+  const calSez = document.querySelector('#prenota');
+  if (calSez) new IntersectionObserver(([e]) => { cal = e.isIntersecting; upd(); }).observe(calSez);
 }
 
 // Box prenotazione: chip selezionabili (uno per gruppo) + link WhatsApp/mail ricomposto a ogni scelta

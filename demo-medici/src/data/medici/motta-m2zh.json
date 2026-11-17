@@ -359,7 +359,43 @@
     "telefono": "011505089",
     "telefonoLabel": "011 505089",
     "whatsapp": null,
-    "oggettoMail": "Richiesta di visita"
+    "oggettoMail": "Richiesta di visita",
+    "calendario": {
+      "titolo": "Prenoti online la Sua visita",
+      "intro": "Scelga giorno e orario che preferisce e lasci i Suoi dati: la segreteria La ricontatterà per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dalla segreteria.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": "https://pieroraziomotta.com/privacy-policy"
+    }
   },
   "tema": {
     "palette": {

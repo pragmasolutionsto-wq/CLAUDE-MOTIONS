@@ -20,7 +20,7 @@ const link = [
       <a href={telHref(m.prenota.telefono)} class="hidden items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-semibold text-ink hover:border-brand hover:text-brand md:inline-flex">
         <Icona nome="tel" class="h-4 w-4" /> {m.prenota.telefonoLabel}
       </a>
-      <a href={telHref(m.prenota.telefono)} class="btn btn-primary !min-h-[42px] !px-4 text-sm">Prenoti</a>
+      <a href={home ? '#prenota' : `${base}#prenota`} class="btn btn-primary !min-h-[42px] !px-4 text-sm">Prenoti</a>
     </div>
   </div>
 </header>
