@@ -1,0 +1,546 @@
+{
+  "slug": "russo-6ajb",
+  "sitoOrigine": "https://www.russoortopedico.it/",
+  "titolo": "Dott.",
+  "nome": "Antonio Russo",
+  "specialita": "Specialista in Ortopedia e Traumatologia",
+  "firma": "Chirurgia protesica anca e ginocchio",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Antonio Russo · Chirurgia protesica di anca e ginocchio · Torino",
+    "description": "Sono chirurgo ortopedico a Torino: artrosi di anca e ginocchio, conflitto femoroacetabolare, protesi e chirurgia di revisione. Studio privato in via Curtatone 18."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/russo-6ajb/img/logo-scuro.png",
+    "logoChiaro": "/russo-6ajb/img/logo-chiaro.png",
+    "marchio": "/russo-6ajb/img/marchio.png",
+    "logoAlt": "Dott. Antonio Russo, Specialista in Ortopedia e Traumatologia, Chirurgia Protesica Anca e Ginocchio"
+  },
+  "foto": {
+    "heroTipo": "ritratto",
+    "hero": "/russo-6ajb/img/ritratto.webp",
+    "heroSfondo": "#DFE0E1",
+    "heroAlt": "Il Dott. Antonio Russo",
+    "volto": "/russo-6ajb/img/volto.webp",
+    "postRitratto": "/russo-6ajb/img/ritratto.webp"
+  },
+  "hero": {
+    "eyebrow": "Anca e ginocchio · Torino",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Contatti lo studio",
+    "box": {
+      "titolo": "Prenoti la Sua visita",
+      "motivoLabel": "Motivo della visita",
+      "motivi": [
+        "Dolore all'anca",
+        "Dolore al ginocchio",
+        "Protesi già impiantata",
+        "Conflitto femoroacetabolare",
+        "Infiltrazioni"
+      ],
+      "motiviFrase": [
+        "dolore all'anca",
+        "dolore al ginocchio",
+        "un controllo o un problema a una protesi già impiantata",
+        "un sospetto conflitto femoroacetabolare",
+        "valutare un trattamento infiltrativo"
+      ],
+      "sedeLabel": "Dove preferisce essere visitato"
+    }
+  },
+  "fiducia": [
+    {
+      "icona": "medaglia",
+      "titolo": "4 fellowship",
+      "testo": "in chirurgia protesica, in Italia e ad Amburgo"
+    },
+    {
+      "icona": "libro",
+      "titolo": "26 pubblicazioni",
+      "testo": "su riviste scientifiche internazionali"
+    },
+    {
+      "icona": "persone",
+      "titolo": "Delegato italiano",
+      "testo": "International Consensus Meeting sulle infezioni muscolo-scheletriche"
+    },
+    {
+      "icona": "pin",
+      "titolo": "9 sedi di visita",
+      "testo": "a Torino e in Piemonte"
+    }
+  ],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Sono medico chirurgo, specialista in Ortopedia e Traumatologia. Mi occupo soprattutto dell'artrosi di anca e ginocchio, del conflitto femoroacetabolare e delle complicanze della chirurgia protesica.",
+      "Mi sono laureato con lode in Medicina e Chirurgia all'Università di Genova e mi sono specializzato con lode in Ortopedia e Traumatologia all'Università di Torino.",
+      "Mi sono formato in centri dedicati alla chirurgia protesica, in Italia e all'estero."
+    ],
+    "tappe": [
+      {
+        "periodo": "2019 – 2021",
+        "testo": "Fellowship in chirurgia protesica, Ospedale Santa Corona di Pietra Ligure e MIOA (Malattie Infettive Osteo-Articolari), Albenga."
+      },
+      {
+        "periodo": "2021",
+        "testo": "Fellowship al Centro di Chirurgia Protesica dell'Istituto Ortopedico Galeazzi, Milano."
+      },
+      {
+        "periodo": "2022 – 2023",
+        "testo": "Fellowship in chirurgia dell'anca, Humanitas Cellini, Torino."
+      },
+      {
+        "periodo": "2023",
+        "testo": "Fellowship alla Helios ENDO-Klinik di Amburgo."
+      }
+    ],
+    "numeri": [
+      {
+        "valore": "4",
+        "testo": "fellowship in chirurgia protesica"
+      },
+      {
+        "valore": "26",
+        "testo": "pubblicazioni su riviste internazionali"
+      },
+      {
+        "valore": "10",
+        "testo": "relazioni a congressi"
+      },
+      {
+        "valore": "9",
+        "testo": "sedi di visita"
+      }
+    ],
+    "societaLabel": "Incarichi scientifici",
+    "societa": [
+      "Delegato italiano al terzo International Consensus Meeting on Musculoskeletal Infections (Hip and Knee)"
+    ]
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "Le patologie di anca e ginocchio che tratto più spesso. Il percorso di cura lo decidiamo insieme, dopo la visita e gli esami.",
+    "voci": [
+      {
+        "titolo": "Artrosi dell'anca",
+        "testo": "Usura della cartilagine dell'anca, con dolore all'inguine e movimenti sempre più limitati.",
+        "img": "/russo-6ajb/img/rep-anca.webp"
+      },
+      {
+        "titolo": "Artrosi del ginocchio",
+        "testo": "Usura della cartilagine del ginocchio, con dolore, gonfiore e difficoltà nella vita di tutti i giorni.",
+        "img": "/russo-6ajb/img/rep-ginocchio.webp"
+      },
+      {
+        "titolo": "Conflitto femoroacetabolare",
+        "testo": "Alterazioni della forma di anca e femore che, soprattutto in chi fa sport, causano dolore e possono favorire un'artrosi precoce.",
+        "img": "/russo-6ajb/img/rep-fai.webp"
+      },
+      {
+        "titolo": "Complicanze delle protesi d'anca",
+        "testo": "Mobilizzazione, usura, instabilità o infezione dopo una protesi d'anca.",
+        "img": "/russo-6ajb/img/rep-protesi-anca.webp"
+      },
+      {
+        "titolo": "Complicanze delle protesi di ginocchio",
+        "testo": "Rigidità, mobilizzazione, instabilità o infezione dopo una protesi di ginocchio.",
+        "img": "/russo-6ajb/img/rep-protesi-ginocchio.webp"
+      }
+    ]
+  },
+  "metodo": {
+    "titolo": "Come lavoro",
+    "intro": "Dai trattamenti infiltrativi eco-guidati alla chirurgia protesica primaria e di revisione.",
+    "punti": [
+      {
+        "titolo": "Protesi totale di anca e di ginocchio",
+        "testo": "Nell'artrosi avanzata sostituisco l'articolazione con una protesi, per ridurre il dolore e recuperare la funzione.",
+        "img": "/russo-6ajb/img/rep-visita.webp"
+      },
+      {
+        "titolo": "Protesi monocompartimentale",
+        "testo": "Quando è danneggiato un solo compartimento del ginocchio, sostituisco solo quello e risparmio osso e legamenti sani.",
+        "icona": "check"
+      },
+      {
+        "titolo": "Chirurgia di revisione",
+        "testo": "Tratto le complicanze di una protesi già impiantata: mobilizzazione, instabilità e infezione periprotesica.",
+        "icona": "scudo"
+      },
+      {
+        "titolo": "Artroscopia d'anca",
+        "testo": "Tecnica mininvasiva per diagnosticare e trattare alcune condizioni dell'anca, tra cui il conflitto femoroacetabolare.",
+        "icona": "ospedale"
+      },
+      {
+        "titolo": "Infiltrazioni eco-guidate",
+        "testo": "Infiltrazioni di anca, ginocchio e spalla, guidate dall'ecografia, per controllare dolore e infiammazione.",
+        "icona": "siringa"
+      }
+    ]
+  },
+  "banda": {
+    "img": "/russo-6ajb/img/rep-banda.webp",
+    "titolo": "Dolore all'anca o al ginocchio che non passa?",
+    "testo": "Una visita serve a capire da dove nasce il dolore e quali sono le possibilità di cura, dalle infiltrazioni alla chirurgia."
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "articolo": {
+    "categoria": "Protesi di ginocchio",
+    "titolo": "Protesi di ginocchio: il recupero settimana per settimana",
+    "img": "/russo-6ajb/img/rep-articolo.webp",
+    "intro": "Dopo una protesi di ginocchio la domanda più frequente è sempre la stessa: quanto ci vorrà per tornare alla vita di tutti i giorni? Ecco come si svolge di solito il recupero, tappa per tappa, sapendo che ogni percorso è diverso.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Una premessa: ogni recupero è diverso",
+        "paragrafi": [
+          "I tempi che trova in questo articolo sono indicativi. Dipendono dall'età, dalle condizioni generali, dalla forza muscolare prima dell'intervento, dal tipo di protesi e da come procede la guarigione.",
+          "Il riferimento resta sempre il programma che Le danno il chirurgo e il fisioterapista. Se qualcosa non va come previsto, è a loro che deve rivolgersi.",
+          "Qui trova una sintesi delle tappe più comuni, per sapere cosa aspettarsi e preparare con serenità le settimane dopo l'intervento."
+        ]
+      },
+      {
+        "titolo": "I primi giorni in ospedale",
+        "paragrafi": [
+          "In genere ci si alza dal letto già il giorno dopo l'intervento, con l'aiuto del fisioterapista e di un deambulatore o di due stampelle.",
+          "In questa fase gli obiettivi sono semplici: controllare il dolore, ridurre il gonfiore, iniziare a piegare e a stendere il ginocchio, imparare a camminare con gli ausili e a salire qualche gradino. La durata del ricovero varia da persona a persona."
+        ]
+      },
+      {
+        "titolo": "Settimane 1 e 2: a casa, con gli ausili",
+        "paragrafi": [
+          "Una volta a casa, il lavoro continua ogni giorno. Di solito si raccomanda di:"
+        ],
+        "elenco": [
+          "fare gli esercizi indicati, più volte al giorno;",
+          "camminare spesso, per tratti brevi, con le stampelle;",
+          "applicare il ghiaccio e tenere la gamba sollevata per ridurre il gonfiore;",
+          "seguire con attenzione la terapia prescritta, compresa quella per prevenire i trombi;",
+          "tenere pulita e asciutta la ferita fino alla rimozione dei punti o delle graffette."
+        ],
+        "chiusura": "È normale avere dolore, gonfiore e un ginocchio caldo. Il miglioramento è graduale, non lineare: ci sono giorni migliori e giorni più faticosi."
+      },
+      {
+        "titolo": "Il dolore: cosa è normale aspettarsi",
+        "paragrafi": [
+          "Nelle prime settimane il dolore fa parte del percorso. È più intenso dopo gli esercizi e la sera, e tende a ridursi con il passare dei giorni.",
+          "Prendere gli antidolorifici prescritti con regolarità, e non solo quando il dolore è già forte, aiuta a fare gli esercizi con meno fatica. Anche il ghiaccio, applicato per brevi periodi e mai direttamente sulla pelle, è un alleato utile.",
+          "Il ginocchio può restare un po' gonfio e caldo per diverse settimane, a volte per qualche mese. Se però il dolore cambia all'improvviso o peggiora invece di migliorare, va segnalato al chirurgo."
+        ]
+      },
+      {
+        "titolo": "Settimane 3-6: più movimento, meno ausili",
+        "paragrafi": [
+          "In questa fase si lavora soprattutto sul recupero della piegatura e sulla capacità di stendere completamente il ginocchio, due obiettivi importanti per camminare bene.",
+          "Molte persone passano da due stampelle a una e poi a nessuna, quando il fisioterapista lo ritiene sicuro. Si iniziano esercizi di forza per il quadricipite e di equilibrio.",
+          "Anche la vita quotidiana diventa più semplice: vestirsi, fare le scale, stare in piedi più a lungo. Guidare l'auto è possibile solo quando il chirurgo lo autorizza."
+        ]
+      },
+      {
+        "titolo": "Gli esercizi più comuni",
+        "paragrafi": [
+          "Il programma lo stabilisce il fisioterapista, ma alcuni esercizi tornano quasi sempre:"
+        ],
+        "elenco": [
+          "contrazioni del quadricipite con la gamba distesa, per riattivare il muscolo;",
+          "flessione ed estensione del ginocchio da seduti o da sdraiati, per recuperare il movimento;",
+          "sollevamento della gamba tesa, per la forza;",
+          "esercizi di equilibrio e di cammino, man mano che si riducono gli ausili."
+        ],
+        "chiusura": "La costanza conta più dell'intensità: meglio poche ripetizioni fatte bene ogni giorno che sessioni lunghe e dolorose. Se un esercizio provoca un dolore forte o insolito, lo sospenda e ne parli con il fisioterapista."
+      },
+      {
+        "titolo": "Settimane 6-12: tornare alle attività",
+        "paragrafi": [
+          "Tra il secondo e il terzo mese molte persone tornano a gran parte delle attività quotidiane e, per chi ha un lavoro sedentario, spesso anche al lavoro.",
+          "Si possono introdurre attività a basso impatto, come la cyclette, il nuoto quando la ferita è guarita e le camminate più lunghe. La forza muscolare continua a migliorare con l'esercizio."
+        ]
+      },
+      {
+        "titolo": "Dopo i tre mesi",
+        "paragrafi": [
+          "Il miglioramento prosegue per diversi mesi: il gonfiore residuo si riduce lentamente e la sensazione di avere un ginocchio \"nuovo\" lascia spazio alla normalità. In molti casi i progressi continuano, più lentamente, anche fino a un anno dall'intervento.",
+          "Gli sport ad alto impatto vanno discussi con il chirurgo. I controlli periodici servono a seguire nel tempo la protesi e a verificare che tutto proceda come previsto."
+        ]
+      },
+      {
+        "titolo": "Quando contattare il chirurgo",
+        "paragrafi": [
+          "Durante tutto il recupero è importante non aspettare se compare uno di questi segnali:"
+        ],
+        "elenco": [
+          "febbre, o arrossamento, calore o secrezione dalla ferita;",
+          "dolore che aumenta invece di diminuire, soprattutto se improvviso;",
+          "gonfiore e dolore al polpaccio, o difficoltà a respirare;",
+          "sensazione di instabilità o un blocco del ginocchio."
+        ],
+        "chiusura": "In questi casi contatti subito il Suo chirurgo o, se i sintomi sono importanti, il pronto soccorso."
+      },
+      {
+        "titolo": "Il ruolo della preparazione",
+        "paragrafi": [
+          "Il recupero comincia prima dell'intervento. Arrivare con muscoli più allenati, sapere già come usare le stampelle e organizzare la casa, per esempio togliendo tappeti e ostacoli, aiuta a partire con il piede giusto.",
+          "Ne parliamo insieme durante la visita, per costruire un percorso adatto a Lei."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo chirurgo e del Suo fisioterapista."
+  },
+  "instagram": {
+    "handle": "dott.antoniorusso",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "postRitratto",
+        "titolo": "Protesi d'anca: quanto dura davvero",
+        "sottotitolo": "Cosa dicono gli studi, in breve",
+        "didascalia": "È una delle domande che sento più spesso in visita. La durata di una protesi d'anca dipende da molti fattori: il tipo di impianto, la qualità dell'osso, il peso, il livello di attività. Gli studi a lungo termine mostrano che le protesi moderne, nella gran parte dei casi, funzionano bene per molti anni. Per questo sono importanti i controlli periodici.",
+        "hashtag": "#protesianca #ortopedia #anca #torino"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Dolore dopo la protesi: quando preoccuparsi",
+        "punti": [
+          "Dolore che aumenta invece di diminuire",
+          "Febbre, arrossamento o secrezione dalla ferita",
+          "Sensazione di instabilità o di blocco"
+        ],
+        "didascalia": "Un po' di dolore e di gonfiore nelle settimane dopo l'intervento è normale. Ci sono però segnali che non vanno sottovalutati: in questi casi contatti il Suo chirurgo senza aspettare il controllo programmato.",
+        "hashtag": "#protesiginocchio #protesianca #ortopedia"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Conflitto femoro-acetabolare a 40 anni?",
+        "risposta": "Si valuta caso per caso.",
+        "didascalia": "Il conflitto femoroacetabolare è un'alterazione della forma di anca e femore che può causare dolore, soprattutto in chi fa sport. La visita e gli esami servono a capire se c'è già un danno alla cartilagine e quale percorso è più adatto.",
+        "hashtag": "#conflittofemoroacetabolare #anca #sport #ortopedia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "Visito anche presso",
+    "email": null,
+    "luoghi": [
+      {
+        "principale": true,
+        "tipo": "Studio privato",
+        "nome": "Studio privato",
+        "indirizzo": "Via Curtatone 18",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "lo studio privato di via Curtatone 18, Torino",
+        "telefoni": [
+          {
+            "label": "Telefono studio",
+            "numero": "011 538 236"
+          }
+        ]
+      },
+      {
+        "tipo": "Sede di visita",
+        "nome": "Humanitas Cellini",
+        "indirizzo": "Via Cellini 5",
+        "citta": "Torino",
+        "frase": "Humanitas Cellini, via Cellini 5, Torino",
+        "telefoni": [
+          {
+            "label": "Telefono",
+            "numero": "011 3027 3027"
+          }
+        ]
+      },
+      {
+        "tipo": "Sede di visita",
+        "nome": "Poliambulatorio Statuto",
+        "indirizzo": "Piazza Statuto 3",
+        "citta": "Torino",
+        "frase": "il Poliambulatorio Statuto, piazza Statuto 3, Torino",
+        "telefoni": [
+          {
+            "label": "Telefono",
+            "numero": "011 548 944"
+          }
+        ]
+      },
+      {
+        "tipo": "Sede di visita",
+        "nome": "IRM San Donato",
+        "indirizzo": "Via San Donato 58 bis A",
+        "citta": "Torino",
+        "frase": "IRM San Donato, via San Donato 58 bis A, Torino",
+        "telefoni": [
+          {
+            "label": "Telefono",
+            "numero": "011 966 2585"
+          }
+        ]
+      },
+      {
+        "tipo": "Sede di visita",
+        "nome": "Clinica Aurea",
+        "indirizzo": "Via Palmieri 15",
+        "citta": "Torino",
+        "frase": "la Clinica Aurea, via Palmieri 15, Torino",
+        "telefoni": [
+          {
+            "label": "Telefono",
+            "numero": "011 192 72886"
+          }
+        ]
+      },
+      {
+        "tipo": "Sede di visita",
+        "nome": "Istituto Salus",
+        "indirizzo": "Corso Vercelli 50",
+        "citta": "Cigliano",
+        "frase": "l'Istituto Salus di Cigliano, corso Vercelli 50",
+        "telefoni": [
+          {
+            "label": "Telefono",
+            "numero": "0161 433 595"
+          }
+        ]
+      },
+      {
+        "tipo": "Sede di visita",
+        "nome": "Istituto Salus",
+        "indirizzo": "Via Jacopo Durandi 12",
+        "citta": "Vercelli",
+        "frase": "l'Istituto Salus di Vercelli, via Jacopo Durandi 12",
+        "telefoni": [
+          {
+            "label": "Telefono",
+            "numero": "0161 219 760"
+          }
+        ]
+      },
+      {
+        "tipo": "Sede di visita",
+        "nome": "Centro Medico Carrucese",
+        "indirizzo": "Via Langhe 40",
+        "citta": "Carrù",
+        "frase": "il Centro Medico Carrucese, via Langhe 40, Carrù",
+        "telefoni": [
+          {
+            "label": "Telefono",
+            "numero": "0173 779 365"
+          }
+        ]
+      },
+      {
+        "tipo": "Sede di visita",
+        "nome": "Cures Centro Medico",
+        "indirizzo": "Via XX Settembre 2",
+        "citta": "Villanova Mondovì",
+        "frase": "Cures Centro Medico, via XX Settembre 2, Villanova Mondovì",
+        "telefoni": [
+          {
+            "label": "Telefono",
+            "numero": "0174 699 018"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "Dove opero",
+    "strutture": [
+      {
+        "nome": "Humanitas Cellini",
+        "testo": "Via Cellini 5, Torino"
+      },
+      {
+        "nome": "Clinica Fornaca di Sessant",
+        "testo": "Corso Vittorio Emanuele II 91, Torino"
+      },
+      {
+        "nome": "Humanitas San Pio X",
+        "testo": "Via Nava 31, Milano"
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Può chiamare lo studio oppure scegliere giorno e orario online: La ricontatteremo per confermare l'appuntamento.",
+    "telefono": "011538236",
+    "telefonoLabel": "011 538 236",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "emailRichieste": "pragmasolutions.to@gmail.com",
+    "notaRichieste": "Anteprima: le richieste inviate da questa demo arrivano a Pragma Solutions, non al medico.",
+    "oggettoMail": "Richiesta di visita",
+    "calendario": {
+      "titolo": "Prenoti online la Sua visita",
+      "intro": "Scelga giorno e orario che preferisce e lasci i Suoi dati: lo studio La ricontatterà per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": "https://www.russoortopedico.it/privacy.html"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F2F4F7",
+      "ink": "#15213A",
+      "muted": "#566176",
+      "line": "#DFE3EA",
+      "brand": "#2C4767",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#3E6B5C",
+      "deep": "#15213A",
+      "deep-ink": "#E6EAF1"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Newsreader",
+    "fontTesti": "Hanken Grotesk",
+    "fontUi": "Hanken Grotesk",
+    "favicon": "/russo-6ajb/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/russo-6ajb/brand/brand.json",
+    "pagine": [
+      "https://www.russoortopedico.it/",
+      "https://www.russoortopedico.it/chi-sono.html",
+      "https://www.russoortopedico.it/patologie.html",
+      "https://www.russoortopedico.it/trattamenti.html",
+      "https://www.russoortopedico.it/dove.html"
+    ]
+  }
+}

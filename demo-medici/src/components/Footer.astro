@@ -8,17 +8,17 @@ const base = `/${m.slug}`;
 <footer class="bg-deep pb-28 text-sm text-deep-ink/70 sm:pb-10">
   <div class="mx-auto grid max-w-7xl gap-10 px-5 pt-14 sm:px-8 md:grid-cols-12">
     <div class="md:col-span-4">
-      <img src={m.brand.logoChiaro} alt={m.brand.logoAlt} width="1008" height="189" loading="lazy" class="h-10 w-auto" />
+      <img src={m.brand.logoChiaro} alt={m.brand.logoAlt} width="1008" height="189" loading="lazy" class={(m.brand as any).header === 'marchio' ? 'h-24 w-auto' : 'h-10 w-auto'} />
       <p class="mt-5 max-w-xs leading-relaxed">{m.specialita}, {m.citta}.</p>
     </div>
     <div class="md:col-span-3">
       <p class="font-head text-[15px] font-semibold text-white">Dove ricevo</p>
-      {m.sedi.luoghi.map((l) => <p class="mt-3 leading-relaxed">{l.tipo}<br /><span class="text-deep-ink/90">{l.indirizzo}, {l.citta}</span></p>)}
+      {(m.sedi.luoghi as any[]).filter((l, i, a) => a.some((x) => x.principale) ? l.principale : true).map((l) => <p class="mt-3 leading-relaxed">{l.tipo}<br /><span class="text-deep-ink/90">{l.indirizzo}, {l.citta}</span></p>)}
     </div>
     <div class="md:col-span-3">
       <p class="font-head text-[15px] font-semibold text-white">Contatti</p>
       <p class="mt-3"><a href={telHref(m.prenota.telefono)} class="inline-flex items-center gap-2 hover:text-white"><Icona nome="tel" class="h-4 w-4" />{m.prenota.telefonoLabel}</a></p>
-      <p class="mt-2"><a href={`mailto:${m.sedi.email}`} class="inline-flex items-center gap-2 hover:text-white"><Icona nome="mail" class="h-4 w-4 shrink-0" />{m.sedi.email}</a></p>
+      {m.sedi.email && <p class="mt-2"><a href={`mailto:${m.sedi.email}`} class="inline-flex items-center gap-2 hover:text-white"><Icona nome="mail" class="h-4 w-4 shrink-0" />{m.sedi.email}</a></p>}
     </div>
     <div class="md:col-span-2">
       <p class="font-head text-[15px] font-semibold text-white">Pagine</p>

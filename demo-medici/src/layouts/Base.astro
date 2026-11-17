@@ -17,7 +17,7 @@ const { title, description = '', tema, banner = true } = Astro.props;
 
 const vars = tema
   ? Object.entries(tema.palette).map(([k, v]) => `--c-${k}:${v}`).join(';') +
-    `;--f-head:'${tema.fontTitoli}', system-ui, sans-serif;--f-sans:'${tema.fontTesti}', system-ui, sans-serif`
+    `;--f-head:'${tema.fontTitoli}', system-ui, sans-serif;--f-sans:'${tema.fontTesti}', system-ui, sans-serif` + ((tema as any).fontUi ? `;--f-ui:'${(tema as any).fontUi}', system-ui, sans-serif` : '')
   : '--c-bg:#F6F5F2;--c-ink:#0E1A2B;--c-muted:#5d6675;--c-brand:#0E1A2B;--c-line:#e3e1dc;--f-sans:system-ui,sans-serif;--f-head:system-ui,sans-serif';
 const style = banner ? vars : `${vars};--banner-h:0px`;
 ---

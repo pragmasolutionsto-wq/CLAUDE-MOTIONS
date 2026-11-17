@@ -16,3 +16,6 @@ export const nomeCompleto = (m: Medico) => `${m.titolo} ${m.nome}`;
 export const telHref = (n: string) => `tel:${n.replace(/[^\d+]/g, '')}`;
 export const mapsHref = (indirizzo: string, citta: string) =>
   `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${indirizzo}, ${citta}`)}`;
+
+// Dove arrivano le richieste di prenotazione: email dedicata (es. Pragma, provvisoria) o email del medico.
+export const emailRichieste = (m: Medico) => (m.prenota as { emailRichieste?: string }).emailRichieste || m.sedi.email || '';

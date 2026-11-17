@@ -3,7 +3,7 @@
 // Funziona davvero: l'invio apre WhatsApp (se c'è un numero verificato) o una mail già compilata.
 // Gli orari sono indicativi: la conferma la dà la segreteria (scritto in pagina).
 import Icona from './Icona.astro';
-import { telHref, type Medico } from '../lib/medici';
+import { telHref, emailRichieste, type Medico } from '../lib/medici';
 
 interface Props { m: Medico }
 const { m } = Astro.props;
@@ -12,7 +12,7 @@ const box = m.hero.box;
 const cfg = {
   giorni: c.giorni, mattina: c.mattina, pomeriggio: c.pomeriggio, settimane: c.settimane,
   wa: m.prenota.whatsapp ? String(m.prenota.whatsapp).replace(/\D/g, '') : '',
-  email: m.sedi.email, oggetto: m.prenota.oggettoMail,
+  email: emailRichieste(m), oggetto: m.prenota.oggettoMail,
 };
 ---
 <section id="prenota" class="py-16 sm:py-24" data-calendario={JSON.stringify(cfg)}>
@@ -118,9 +118,10 @@ const cfg = {
 
         <div class="mt-4 hidden rounded-xl border border-brand2/40 bg-brand2/10 p-4 text-sm leading-relaxed" data-fatto role="status">
           <p class="flex items-center gap-2 font-head text-base font-semibold text-ink"><Icona nome="check" class="h-5 w-5 text-brand" /> Richiesta pronta</p>
-          <p class="mt-1 text-ink/80">Si è aperta la Sua {cfg.wa ? 'app WhatsApp' : 'app di posta'} con il messaggio già compilato: le basta premere invia. Se non si apre, chiami la segreteria allo <a href={telHref(m.prenota.telefono)} class="font-semibold text-brand">{m.prenota.telefonoLabel}</a>.</p>
+          <p class="mt-1 text-ink/80">Si è aperta la Sua {cfg.wa ? 'app WhatsApp' : 'app di posta'} con il messaggio già compilato: le basta premere invia. Se non si apre, chiami {m.prenota.chiamaLabel ?? 'la segreteria'} allo <a href={telHref(m.prenota.telefono)} class="font-semibold text-brand">{m.prenota.telefonoLabel}</a>.</p>
         </div>
-        <p class="mt-3 text-center text-xs text-muted">* Campi obbligatori. La prenotazione è confermata solo dopo il contatto della segreteria.</p>
+        {(m.prenota as any).notaRichieste && <p class="mt-3 flex items-start justify-center gap-1.5 text-center text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="mt-px h-3.5 w-3.5" />{(m.prenota as any).notaRichieste}</p>}
+        <p class="mt-3 text-center text-xs text-muted">* Campi obbligatori. La prenotazione è confermata solo dopo il contatto {m.prenota.chiamaLabel === 'lo studio' ? 'dello studio' : 'della segreteria'}.</p>
       </form>
     </div>
   </div>

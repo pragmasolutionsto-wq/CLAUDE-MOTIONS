@@ -86,6 +86,15 @@ Hosting: **Cloudflare Pages**, progetto `pragma-anteprime` (gratis, uso commerci
 ## Stato del template
 Template v3 (`HomeMedico.astro`, `articolo.astro`): stile AutoScout con i colori del medico, prima persona, foto di repertorio con una sola nota nel footer, box prenotazione funzionante (WhatsApp o mail). Prima demo: `motta-m2zh`. Schema dati di riferimento: `src/data/medici/motta-m2zh.json` (campi `brand`, `foto`, `hero.fatti`, `metodo`, `recensioni`, `sedi.strutture` con loghi). Calendario di richiesta prenotazione (`PrenotaCalendario.astro` + `scripts/calendario.ts`, dati in `prenota.calendario`): mese, giorni feriali da domani per N settimane, festivi italiani esclusi, orari mattina/pomeriggio dichiarati "indicativi", form con privacy; l'invio apre WhatsApp o mail già compilati con data e ora. Test: `?oggi=AAAA-MM-GG` fissa la data. Sezioni: Hero (foto) · Chi è (foto sx) · Di cosa si occupa (elenco) · Come lavora (unica sezione scura) · Recensioni reali · Articoli · Instagram · Dove riceve (foto dx) · Contatti · footer con logo chiaro. Ogni demo può cambiare ordine/ritmo se le foto lo suggeriscono.
 
+### Varianti del template (dalla demo Russo)
+- `foto.heroTipo: "ritratto"` + `foto.heroSfondo`: hero con ritratto verticale a destra su fondo del colore della foto (bordi del ritratto sfumati in alpha per non vedere il rettangolo); senza heroTipo: foto orizzontale a tutta larghezza.
+- `brand.header: "marchio"`: header con marchio + nome nel font del sito (per loghi impilati illeggibili a 40px); logo completo nel footer.
+- `foto.dettaglio` assente → in "Chi sono" card con volto + `bio.numeri` (solo numeri veri contati dal sito).
+- Più di 2 sedi → nel box hero la sede è un menu a tendina; `sedi.luoghi[].principale` = card grande, le altre in elenco "Visito anche presso".
+- `sedi.email` null → niente link mail del medico; `prenota.emailRichieste` (es. Pragma, provvisoria) + `prenota.notaRichieste` dichiarata in pagina.
+- `firma` = specialità breve (header, card, post). `prenota.chiamaLabel` = "la segreteria" / "lo studio". `tema.fontUi` = font per etichette e pulsanti se il font dei titoli è un serif.
+- Test funzionali: `?oggi=AAAA-MM-GG` fissa la data del calendario.
+
 ## Note tecniche (imparate sul campo)
 - **Mai `transition-all` (o transition su opacity/transform) su elementi animati da GSAP** (`data-reveal`, figli di `data-stagger`): la transizione CSS combatte con GSAP e l'elemento resta invisibile. Usa `transition-[translate,border-color]` ecc.
 - Animazioni (METODO: solo comparsa morbida allo scroll): `data-reveal` (singolo), `data-stagger` (figli in sequenza). Niente parallax, niente effetti. Rispettano `prefers-reduced-motion`.
@@ -105,4 +114,4 @@ Template v3 (`HomeMedico.astro`, `articolo.astro`): stile AutoScout con i colori
 - Credenziale: token Cloudflare (permesso Pages → Edit) salvato nell'ambiente cloud "Pragma" per `api.cloudflare.com`, iniettato dal proxy. Account ID nello script (non è un segreto).
 - Il container non raggiunge `*.pages.dev`: verifica online con Firecrawl (status 200 + meta robots + screenshot).
 - `public/_headers` e `vercel.json` restano come riserva se si cambia hosting.
-- **Limite di peso:** tutto il sito finisce dentro un unico worker (max ~3 MB sul piano gratuito, e le immagini non si comprimono). Per questo `deploy.mjs` esclude `*/brand/*` (originali) e si blocca sopra 2,8 MB. Le pagine usano solo le versioni web in `img/`. Quando le demo saranno tante, si passa a un progetto Pages per medico o a R2 per le immagini.
+- **Limite di peso:** tutto il sito finisce dentro un unico worker (max ~3 MB sul piano gratuito, e le immagini non si comprimono). Per questo `deploy.mjs` esclude `*/brand/*` (originali) e si blocca sopra 2,8 MB. Le pagine usano solo le versioni web in `img/`. **Stato al 17/11/2026: 2 demo = 2,6 MB su 2,8. La terza demo NON ci sta**: prima di farla va cambiato il deploy (un progetto Pages per medico, oppure immagini su R2). Dopo un deploy l'indirizzo principale può impiegare qualche minuto ad aggiornarsi: verifica prima sull'URL del deploy (`https://<id>.pragma-anteprime.pages.dev`).

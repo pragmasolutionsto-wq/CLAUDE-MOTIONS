@@ -9,61 +9,49 @@ import CtaFinale from '../components/CtaFinale.astro';
 import CtaMobile from '../components/CtaMobile.astro';
 import Footer from '../components/Footer.astro';
 import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import HeroBox from '../components/HeroBox.astro';
 import { nomeCompleto, telHref, mapsHref, type Medico } from '../lib/medici';
 
 interface Props { m: Medico }
 const { m } = Astro.props;
 const ig = m.instagram;
-const tel = telHref(m.prenota.telefono);
-// Box prenotazione: link WhatsApp (se c'è un numero verificato) o mail, già compilato.
-const msg = (motivo: string, sede: string) => `Buongiorno Dottore, vorrei prenotare una visita per ${motivo} presso ${sede}.`;
-const wa = m.prenota.whatsapp ? String(m.prenota.whatsapp).replace(/\D/g, '') : '';
-const prenotaHref = (motivo: string, sede: string) => wa
-  ? `https://wa.me/${wa}?text=${encodeURIComponent(msg(motivo, sede))}`
-  : `mailto:${m.sedi.email}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(msg(motivo, sede))}`;
-const box = m.hero.box;
+const luoghi = m.sedi.luoghi as Array<any>;
+const principali = luoghi.some((l) => l.principale) ? luoghi.filter((l) => l.principale) : luoghi;
+const altri = luoghi.some((l) => l.principale) ? luoghi.filter((l) => !l.principale) : [];
+const foto = m.foto as Record<string, string | undefined>;
 ---
 <Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
   <Header m={m} />
 
   <main class="bg-surface">
-    <!-- HERO: foto vera a tutta larghezza + box prenotazione sovrapposto -->
-    <section data-hero-section class="relative bg-white">
-      <div class="relative h-[300px] overflow-hidden sm:h-[420px] lg:h-[600px]">
-        <picture>
-          <source media="(min-width: 1024px)" srcset={m.foto.hero} />
-          <img src={m.foto.heroMobile} alt={m.foto.heroAlt} width="1020" height="1275" fetchpriority="high"
-            class="h-full w-full object-cover object-[50%_28%] lg:object-[50%_30%]" />
-        </picture>
-      </div>
-      <div class="relative mx-auto max-w-7xl px-4 sm:px-8 lg:absolute lg:inset-x-0 lg:top-1/2 lg:-translate-y-1/2">
-        <div class="card relative -mt-16 p-5 sm:-mt-24 sm:p-7 lg:mt-0 lg:w-[480px]">
-          <p class="label">{m.hero.eyebrow}</p>
-          <h1 class="mt-2 text-[2.1rem] font-semibold leading-[1.05] sm:text-[2.6rem]">{nomeCompleto(m)}</h1>
-          <p class="mt-1.5 text-[17px] text-muted">{m.specialita}</p>
-
-          <div class="mt-4 border-t border-line pt-4" data-booking data-wa={wa} data-email={m.sedi.email} data-oggetto={m.prenota.oggettoMail}>
-            <p class="font-head text-lg font-semibold">{m.hero.box.titolo}</p>
-            <p class="mt-3 text-[13px] font-semibold uppercase tracking-wide text-muted">{m.hero.box.motivoLabel}</p>
-            <div class="mt-2 flex flex-wrap gap-2" role="group">
-              {box.motivi.map((x, i) => <button type="button" class="chip" aria-pressed={i === 0 ? 'true' : 'false'} data-chip="motivo" data-frase={box.motiviFrase[i]}>{x}</button>)}
-            </div>
-            <p class="mt-4 text-[13px] font-semibold uppercase tracking-wide text-muted">{m.hero.box.sedeLabel}</p>
-            <div class="mt-2 grid grid-cols-2 gap-1 rounded-xl bg-surface p-1" role="group">
-              {m.sedi.luoghi.map((l, i) => (
-                <button type="button" data-chip="sede" aria-pressed={i === 0 ? 'true' : 'false'} data-frase={l.frase}
-                  class="rounded-lg px-3 py-2 text-left text-[13px] leading-tight text-muted aria-pressed:bg-white aria-pressed:text-ink aria-pressed:shadow-sm">
-                  <span class="block font-semibold">{l.tipo}</span><span class="hidden sm:inline">{l.indirizzo}</span>
-                </button>
-              ))}
-            </div>
-            <a href={prenotaHref(box.motiviFrase[0], m.sedi.luoghi[0].frase)} data-prenota target={wa ? '_blank' : undefined} rel={wa ? 'noopener' : undefined}
-              class="btn btn-primary mt-5 w-full !min-h-[54px] text-lg"><Icona nome={wa ? 'commento' : 'mail'} /> {wa ? 'Invii la richiesta su WhatsApp' : 'Invii la richiesta via mail'}</a>
-            <a href={tel} class="mt-3 block text-center text-sm font-semibold text-brand hover:underline">Oppure chiami la segreteria: {m.prenota.telefonoLabel}</a>
+    {m.foto.heroTipo === 'ritratto' ? (
+      <!-- HERO (ritratto verticale): sfondo del colore della foto, ritratto a destra, box a sinistra -->
+      <section data-hero-section class="relative overflow-hidden" style={`background:${m.foto.heroSfondo}`}>
+        <div class="mx-auto grid max-w-7xl lg:grid-cols-12 lg:items-end lg:gap-8 lg:px-8">
+          <div class="flex justify-center lg:order-2 lg:col-span-6 lg:justify-end">
+            <img src={m.foto.hero} alt={m.foto.heroAlt} width="900" height="1100" fetchpriority="high"
+              class="h-[340px] w-auto object-contain object-bottom sm:h-[440px] lg:h-[620px]" />
+          </div>
+          <div class="relative px-4 pb-8 sm:px-8 lg:order-1 lg:col-span-6 lg:self-center lg:px-0 lg:py-10">
+            <HeroBox m={m} class="-mt-14 sm:-mt-20 lg:mt-0 lg:max-w-[500px]" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    ) : (
+      <!-- HERO: foto vera a tutta larghezza + box prenotazione sovrapposto -->
+      <section data-hero-section class="relative bg-white">
+        <div class="relative h-[300px] overflow-hidden sm:h-[420px] lg:h-[600px]">
+          <picture>
+            <source media="(min-width: 1024px)" srcset={m.foto.hero} />
+            <img src={m.foto.heroMobile} alt={m.foto.heroAlt} width="1020" height="1275" fetchpriority="high"
+              class="h-full w-full object-cover object-[50%_28%] lg:object-[50%_30%]" />
+          </picture>
+        </div>
+        <div class="relative mx-auto max-w-7xl px-4 sm:px-8 lg:absolute lg:inset-x-0 lg:top-1/2 lg:-translate-y-1/2">
+          <HeroBox m={m} class="-mt-16 sm:-mt-24 lg:mt-0 lg:w-[480px]" />
+        </div>
+      </section>
+    )}
 
     <!-- FIDUCIA: fatti veri con icone -->
     <section class="bg-white pb-10 pt-8 lg:pt-12">
@@ -108,13 +96,27 @@ const box = m.hero.box;
     <section id="chi-sono" class="bg-white py-16 sm:py-24">
       <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-8 lg:grid-cols-12 lg:gap-14">
         <div class="lg:col-span-5" data-reveal>
+          {foto.dettaglio ? (
           <div class="relative">
             <img src={m.foto.dettaglio} alt={m.foto.dettaglioAlt} width="940" height="530" loading="lazy" class="w-full rounded-2xl object-cover shadow-lg" />
             <div class="card absolute -bottom-6 right-4 flex items-center gap-3 px-4 py-3 sm:right-6">
               <img src={m.foto.volto} alt="" width="48" height="48" class="h-12 w-12 rounded-full object-cover" />
-              <div><p class="font-head font-semibold leading-tight">{nomeCompleto(m)}</p><p class="text-xs text-muted">Chirurgia della spalla</p></div>
+              <div><p class="font-head font-semibold leading-tight">{nomeCompleto(m)}</p><p class="text-xs text-muted">{m.firma}</p></div>
             </div>
           </div>
+          ) : (
+            <div class="card overflow-hidden lg:sticky lg:top-28">
+              <div class="flex items-center gap-4 bg-deep p-5 text-white">
+                <img src={m.foto.volto} alt={nomeCompleto(m)} width="64" height="64" class="h-16 w-16 rounded-full object-cover ring-2 ring-white/30" />
+                <div><p class="font-head text-xl font-semibold leading-tight">{nomeCompleto(m)}</p><p class="text-sm text-white/70">{m.firma}</p></div>
+              </div>
+              <dl class="grid grid-cols-2 gap-px bg-line">
+                {(m.bio as any).numeri?.map((n: any) => (
+                  <div class="bg-white p-5"><dt class="font-head text-3xl font-semibold text-brand">{n.valore}</dt><dd class="mt-1 text-[13px] leading-snug text-muted">{n.testo}</dd></div>
+                ))}
+              </dl>
+            </div>
+          )}
         </div>
         <div class="lg:col-span-7">
           <h2 class="titolo-sez" data-reveal>{m.bio.titolo}</h2>
@@ -252,7 +254,7 @@ const box = m.hero.box;
               </header>
               {p.stile === 'foto' && (
                 <div class="relative aspect-square overflow-hidden">
-                  <img src={(m.foto as Record<string, string>)[p.immagine ?? 'postRitratto']} alt="" width="530" height="530" loading="lazy" class="absolute inset-0 h-full w-full object-cover object-top" />
+                  <img src={foto[p.immagine ?? 'postRitratto']} alt="" width="530" height="530" loading="lazy" class="absolute inset-0 h-full w-full object-cover object-top" />
                   <div class="absolute inset-x-3 bottom-3 rounded-xl bg-white px-4 py-3 shadow">
                     <p class="font-head text-xl font-semibold leading-tight text-ink">{p.titolo}</p>
                     <p class="mt-0.5 text-sm text-brand">{p.sottotitolo}</p>
@@ -268,7 +270,7 @@ const box = m.hero.box;
                       {p.punti?.map((x) => <li class="flex items-start gap-2.5 rounded-lg bg-surface px-3 py-2 text-[14px] leading-snug"><Icona nome="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand2" />{x}</li>)}
                     </ul>
                   </div>
-                  <p class="text-xs text-muted">{nomeCompleto(m)} · Chirurgia della spalla</p>
+                  <p class="text-xs text-muted">{nomeCompleto(m)} · {m.firma}</p>
                 </div>
               )}
               {p.stile === 'domanda' && (
@@ -279,7 +281,7 @@ const box = m.hero.box;
                     <p class="font-head text-[1.8rem] font-semibold leading-[1.08]">{p.titolo}</p>
                     <p class="mt-3 inline-block rounded-lg bg-white px-3 py-1.5 font-semibold text-brand">{p.risposta}</p>
                   </div>
-                  <p class="text-xs text-white/70">{nomeCompleto(m)} · Chirurgia della spalla</p>
+                  <p class="text-xs text-white/70">{nomeCompleto(m)} · {m.firma}</p>
                 </div>
               )}
               <div class="flex items-center gap-4 px-4 pt-3 text-ink">
@@ -299,7 +301,7 @@ const box = m.hero.box;
       <div class="mx-auto max-w-7xl px-4 sm:px-8">
         <h2 class="titolo-sez" data-reveal>{m.sedi.titolo}</h2>
         <div class="mt-8 grid gap-5 lg:grid-cols-3" data-stagger>
-          {m.sedi.luoghi.map((l) => (
+          {principali.map((l) => (
             <div class="card flex flex-col p-6">
               <div class="flex items-center gap-3">
                 <span class="grid h-11 w-11 place-items-center rounded-xl bg-brand/10 text-brand"><Icona nome="pin" class="h-6 w-6" /></span>
@@ -315,15 +317,32 @@ const box = m.hero.box;
               {l.mappa && <a href={mapsHref(l.indirizzo, l.citta)} target="_blank" rel="noopener" class="btn btn-ghost mt-4 w-full !min-h-[46px] text-[15px]"><Icona nome="pin" class="h-4 w-4" /> Apra in Google Maps</a>}
             </div>
           ))}
-          <div class="card relative overflow-hidden">
-            <img src={m.foto.diplomi} alt={m.foto.diplomiAlt} width="680" height="520" loading="lazy" class="h-full min-h-[240px] w-full object-cover" />
-          </div>
+          {foto.diplomi && (
+            <div class="card relative overflow-hidden">
+              <img src={foto.diplomi} alt={foto.diplomiAlt} width="680" height="520" loading="lazy" class="h-full min-h-[240px] w-full object-cover" />
+            </div>
+          )}
+          {altri.length > 0 && (
+            <div class="card p-6 lg:col-span-2">
+              <p class="font-head text-xl font-semibold">{(m.sedi as any).altreLabel}</p>
+              <ul class="mt-4 grid gap-x-8 gap-y-1 sm:grid-cols-2">
+                {altri.map((l) => (
+                  <li class="flex items-start justify-between gap-3 border-b border-line py-3">
+                    <span><span class="block font-semibold leading-tight">{l.nome}</span><span class="text-sm text-muted">{l.indirizzo}, {l.citta}</span></span>
+                    {l.telefoni[0] && <a href={telHref(l.telefoni[0].numero)} class="shrink-0 whitespace-nowrap rounded-full bg-surface px-3 py-1.5 text-sm font-semibold hover:bg-brand/10 hover:text-brand">{l.telefoni[0].numero}</a>}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
         <p class="mt-10 text-[13px] font-semibold uppercase tracking-wide text-muted">{m.sedi.struttureLabel}</p>
-        <div class="mt-3 grid gap-4 sm:grid-cols-2" data-stagger>
+        <div class={`mt-3 grid gap-4 sm:grid-cols-2 ${m.sedi.strutture.length === 3 ? 'lg:grid-cols-3' : ''}`} data-stagger>
           {m.sedi.strutture.map((s) => (
             <div class="card flex items-center gap-5 p-5">
-              <span class="flex h-14 w-28 shrink-0 items-center justify-center"><img src={s.logo} alt={s.nome} width={s.logoW} height={s.logoH} loading="lazy" class="max-h-14 w-auto max-w-full object-contain" /></span>
+              {s.logo
+                ? <span class="flex h-14 w-28 shrink-0 items-center justify-center"><img src={s.logo} alt={s.nome} width={s.logoW} height={s.logoH} loading="lazy" class="max-h-14 w-auto max-w-full object-contain" /></span>
+                : <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand/10 text-brand"><Icona nome="ospedale" class="h-6 w-6" /></span>}
               <span><span class="block font-head text-lg font-semibold leading-tight">{s.nome}</span><span class="block text-sm leading-snug text-muted">{s.testo}</span></span>
             </div>
           ))}

@@ -54,7 +54,7 @@ html { scroll-behavior: smooth; }
 .chip[aria-pressed="true"] { border-color: var(--c-brand); background: color-mix(in srgb, var(--c-brand) 9%, white); color: var(--c-brand); }
 .titolo-sez { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.9rem, 1.4rem + 2vw, 2.75rem); line-height: 1.12; }
 .label {
-  font-family: var(--f-head);
+  font-family: var(--f-ui, var(--f-head));
   font-weight: 600;
   font-size: .8rem;
   letter-spacing: .14em;
@@ -65,7 +65,7 @@ html { scroll-behavior: smooth; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
   min-height: 50px; padding: 0 1.5rem; border-radius: 6px;
-  font-family: var(--f-head); font-weight: 600; font-size: 1.02rem; letter-spacing: .01em;
+  font-family: var(--f-ui, var(--f-head)); font-weight: 600; font-size: 1.02rem; letter-spacing: .01em;
   transition: background-color .2s ease, color .2s ease, border-color .2s ease;
 }
 .btn-primary { background: var(--c-brand); color: var(--c-brand-ink); }
