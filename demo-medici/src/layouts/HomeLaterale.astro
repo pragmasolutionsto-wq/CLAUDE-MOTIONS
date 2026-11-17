@@ -1,0 +1,257 @@
+---
+// Layout "laterale" (prima demo: Zaccagna). Barra laterale scura fissa con ritratto, menu e contatti (desktop),
+// hero fotografica a tutta larghezza con pannello pieno, prenotazione a tessere sotto la hero,
+// percorso del paziente con foto e icone, prestazioni su fondo scuro, chi sono con timeline orizzontale.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = x.hero.box;
+const luoghi = m.sedi.luoghi as any[];
+const sede = luoghi[0];
+const email = emailRichieste(m);
+const wa = m.prenota.whatsapp ? String(m.prenota.whatsapp).replace(/\D/g, '') : '';
+const msg = `Buongiorno Dottore, vorrei prenotare una visita per ${box.motiviFrase[0]} presso ${sede.frase}.`;
+const href0 = wa ? `https://wa.me/${wa}?text=${encodeURIComponent(msg)}` : `mailto:${email}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(msg)}`;
+const nav = [['Prenoti', '#prenota-rapida', 'calendario'], ['Il percorso', '#percorso', 'freccia'], ['Prestazioni', '#aree', 'check'], ['Chi sono', '#chi-sono', 'persone'], ['Articoli', '#articoli', 'libro'], ['Dove ricevo', '#sedi', 'pin']];
+const ig = m.instagram;
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <!-- BARRA LATERALE (desktop) -->
+  <aside class="fixed bottom-0 left-0 z-30 hidden w-[290px] flex-col overflow-y-auto bg-deep px-7 pb-8 pt-10 text-deep-ink lg:flex" style="top: var(--banner-h)">
+    <img src={foto.volto} alt={nomeCompleto(m)} width="256" height="256" class="mx-auto h-32 w-32 rounded-full border-[6px] border-white/10 object-cover" />
+    <p class="mt-5 text-center font-head text-[1.35rem] font-semibold leading-tight text-white">{nomeCompleto(m)}</p>
+    <p class="mt-1 text-center text-[13px] text-deep-ink/60">{m.firma}</p>
+    <nav class="mt-9 space-y-1 text-[15px]">
+      {nav.map(([t, h, i]) => <a href={h} class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-deep-ink/75 transition-colors hover:bg-white/5 hover:text-white"><Icona nome={i} class="h-[18px] w-[18px] text-brand2" />{t}</a>)}
+    </nav>
+    <div class="mt-auto space-y-2 pt-8 text-[14px]">
+      {sede.telefoni.map((t: any) => <a href={telHref(t.numero)} class="flex items-center gap-3 rounded-lg border border-white/10 px-3 py-2.5 hover:border-brand2"><Icona nome="tel" class="h-4 w-4 text-brand2" /><span class="font-semibold text-white">{t.numero}</span></a>)}
+      {m.sedi.email && <a href={`mailto:${m.sedi.email}`} class="flex items-center gap-3 rounded-lg border border-white/10 px-3 py-2.5 hover:border-brand2"><Icona nome="mail" class="h-4 w-4 text-brand2" /><span class="truncate">{m.sedi.email}</span></a>}
+      <p class="flex items-start gap-3 px-3 pt-2 text-deep-ink/60"><Icona nome="pin" class="mt-0.5 h-4 w-4 shrink-0 text-brand2" />{sede.indirizzo}, {sede.citta}</p>
+    </div>
+  </aside>
+
+  <div class="lg:pl-[290px]">
+    <!-- barra in alto (mobile e tablet) -->
+    <header class="sticky z-30 flex items-center justify-between gap-3 bg-deep px-4 py-3 text-white lg:hidden" style="top: var(--banner-h)">
+      <a href={`/${m.slug}`} class="flex min-w-0 items-center gap-3">
+        <img src={foto.volto} alt="" width="40" height="40" class="h-10 w-10 rounded-full object-cover" />
+        <span class="min-w-0"><span class="block truncate font-head text-[16px] font-semibold">{nomeCompleto(m)}</span><span class="block truncate text-xs text-deep-ink/60">{m.firma}</span></span>
+      </a>
+      <a href="#prenota-rapida" class="btn btn-primary shrink-0 !min-h-[40px] !rounded-full !px-4 text-sm">Prenoti</a>
+    </header>
+
+    <main>
+      <!-- HERO fotografica con pannello pieno -->
+      <section data-hero-section class="relative">
+        <picture>
+          <source media="(min-width: 768px)" srcset={foto.hero} />
+          <img src={foto.heroMobile} alt={foto.heroAlt} width="1920" height="1100" fetchpriority="high" class="h-[440px] w-full object-cover object-[50%_30%] sm:h-[520px] md:h-[640px]" />
+        </picture>
+        <div class="relative -mt-24 px-4 sm:px-8 md:absolute md:bottom-12 md:left-0 md:mt-0 md:max-w-[620px]">
+          <div class="rounded-2xl bg-deep/95 p-6 text-white sm:p-8">
+            <p class="text-[13px] font-semibold uppercase tracking-[0.12em] text-brand2">{x.hero.eyebrow}</p>
+            <h1 class="mt-3 text-[2.2rem] font-semibold leading-[1.08] sm:text-[3rem]">{x.hero.titolo}</h1>
+            <p class="mt-4 text-[16px] leading-relaxed text-deep-ink/80">{x.hero.testo}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRENOTAZIONE RAPIDA a tessere -->
+      <section id="prenota-rapida" class="px-4 pt-10 sm:px-8 lg:pt-14">
+        <div class="mx-auto max-w-6xl rounded-2xl border border-line bg-white p-5 shadow-[0_20px_50px_-30px_rgba(6,17,31,.35)] sm:p-8" data-booking data-wa={wa} data-email={email} data-oggetto={m.prenota.oggettoMail}>
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <h2 class="font-head text-2xl font-semibold sm:text-[1.75rem]">{box.titolo}</h2>
+            <p class="text-sm text-muted">Scelga il motivo: Le preparo una mail già scritta.</p>
+          </div>
+          <div class="mt-5 grid grid-cols-2 gap-3 md:grid-cols-3" role="group" aria-label={box.motivoLabel}>
+            {box.motivi.map((t: string, i: number) => (
+              <button type="button" data-chip="motivo" data-frase={box.motiviFrase[i]} aria-pressed={i === 0 ? 'true' : 'false'}
+                class="tessera flex items-center gap-3 rounded-xl border border-line px-3 py-3.5 text-left sm:px-4 sm:py-4 text-[15px] font-semibold leading-snug transition-colors hover:border-brand">
+                <span class="hidden h-10 w-10 shrink-0 place-items-center rounded-lg bg-surface text-brand sm:grid"><Icona nome={box.motiviIcone[i]} class="h-5 w-5" /></span>{t}
+              </button>
+            ))}
+          </div>
+          <div class="mt-5 flex flex-col gap-4 border-t border-line pt-5 lg:flex-row lg:items-center lg:justify-between">
+            <button type="button" data-chip="sede" data-frase={sede.frase} aria-pressed="true" class="flex items-center gap-2 text-left text-[15px] text-muted">
+              <Icona nome="pin" class="h-5 w-5 text-brand" /><span>{box.sedeLabel}: <span class="font-semibold text-ink">{sede.nome}, {sede.indirizzo}, {sede.citta}</span></span>
+            </button>
+            <div class="flex flex-col gap-2 sm:flex-row">
+              <a href={telHref(m.prenota.telefono)} class="btn btn-ghost !rounded-full"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+              <a href={href0} data-prenota target={wa ? '_blank' : undefined} rel={wa ? 'noopener' : undefined} class="btn btn-primary !rounded-full"><Icona nome={wa ? 'commento' : 'mail'} /> {wa ? 'Invii su WhatsApp' : 'Invii la richiesta via mail'}</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FATTI -->
+      <section class="px-4 py-12 sm:px-8">
+        <dl class="mx-auto grid max-w-6xl gap-6 md:grid-cols-3" data-stagger>
+          {x.fatti.map((f: any) => (
+            <div class="border-l-4 border-brand2 pl-5"><dt class="font-head text-2xl font-semibold text-ink">{f.valore}</dt><dd class="mt-1 text-[15px] leading-snug text-muted">{f.testo}</dd></div>
+          ))}
+        </dl>
+      </section>
+
+      <!-- PERCORSO DEL PAZIENTE -->
+      <section id="percorso" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="titolo-sez max-w-2xl" data-reveal>{x.percorso.titolo}</h2>
+          <p class="mt-4 max-w-xl text-muted" data-reveal>{x.percorso.intro}</p>
+          <ol class="relative mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-stagger>
+            {x.percorso.passi.map((p: any) => (
+              <li class="overflow-hidden rounded-2xl bg-white">
+                <img src={p.img} alt="" width="1100" height="825" loading="lazy" class="aspect-[4/3] w-full object-cover" />
+                <div class="relative p-5 pt-8">
+                  <span class="absolute -top-6 left-5 grid h-12 w-12 place-items-center rounded-full border-4 border-white bg-brand text-white"><Icona nome={p.icona} class="h-5 w-5" /></span>
+                  <h3 class="text-lg font-semibold leading-snug">{p.titolo}</h3>
+                  <p class="mt-2 text-[15px] leading-relaxed text-muted">{p.testo}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <!-- PRESTAZIONI su fondo scuro -->
+      <section id="aree" class="bg-deep px-4 py-16 text-white sm:px-8 sm:py-24">
+        <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <h2 class="titolo-sez" data-reveal>{m.aree.titolo}</h2>
+            <p class="mt-4 text-deep-ink/70" data-reveal>{m.aree.intro}</p>
+            <img src={foto.guanti} alt="" width="1100" height="1300" loading="lazy" class="mt-8 hidden aspect-[11/13] w-full rounded-2xl object-cover lg:block" data-reveal />
+          </div>
+          <div class="grid gap-3 sm:grid-cols-2 lg:col-span-8" data-stagger>
+            {m.aree.voci.map((v: any) => (
+              <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                <Icona nome={v.icona} class="h-6 w-6 text-brand2" />
+                <h3 class="mt-4 text-lg font-semibold">{v.titolo}</h3>
+                <p class="mt-1.5 text-[15px] leading-relaxed text-deep-ink/70">{v.testo}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- CHI SONO -->
+      <section id="chi-sono" class="px-4 py-16 sm:px-8 sm:py-24">
+        <div class="mx-auto grid max-w-6xl items-start gap-10 lg:grid-cols-12">
+          <img src={foto.ritratto} alt={foto.ritrattoAlt} width="600" height="624" loading="lazy" class="w-full max-w-sm rounded-2xl object-cover lg:col-span-4" data-reveal />
+          <div class="lg:col-span-8">
+            <h2 class="titolo-sez" data-reveal>{m.bio.titolo}</h2>
+            <div class="mt-5 space-y-4 text-[17px] leading-relaxed text-ink/85" data-reveal>
+              {m.bio.paragrafi.map((p: string, i: number) => <p class={i === 0 ? 'text-lg text-ink' : ''}>{p}</p>)}
+            </div>
+          </div>
+        </div>
+        <ol class="mx-auto mt-12 grid max-w-6xl gap-6 border-t-2 border-line pt-8 sm:grid-cols-2 lg:grid-cols-4" data-stagger>
+          {m.bio.tappe.map((t: any) => (
+            <li class="relative"><span class="absolute -top-[41px] left-0 h-4 w-4 rounded-full border-4 border-white bg-brand2"></span><p class="font-head text-xl font-semibold text-brand">{t.periodo}</p><p class="mt-1 text-[15px] leading-relaxed text-muted">{t.testo}</p></li>
+          ))}
+        </ol>
+      </section>
+
+      <PrenotaCalendario m={m} />
+
+      <!-- ARTICOLO + INSTAGRAM -->
+      <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+        <div class="mx-auto max-w-6xl">
+          <h2 class="titolo-sez" data-reveal>Articoli</h2>
+          <a href={`/${m.slug}/articolo`} class="group relative mt-8 block overflow-hidden rounded-2xl" data-reveal>
+            <img src={m.articolo.img} alt="" width="1500" height="843" loading="lazy" class="aspect-[16/10] w-full object-cover sm:aspect-[16/7]" />
+            <span class="absolute inset-x-3 bottom-3 block rounded-xl bg-white p-5 sm:inset-x-auto sm:bottom-6 sm:left-6 sm:max-w-lg sm:p-7">
+              <span class="label">{m.articolo.categoria} · {m.articolo.tempoLettura}</span>
+              <span class="mt-2 block font-head text-xl font-semibold leading-snug group-hover:text-brand sm:text-2xl">{m.articolo.titolo}</span>
+              <span class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand">Legga l'articolo <Icona nome="freccia" class="h-4 w-4" /></span>
+            </span>
+          </a>
+
+          <div class="mt-16 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <h2 class="titolo-sez" data-reveal>Dal mio profilo Instagram</h2>
+            <p class="inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: oggi ha solo un profilo Facebook personale</p>
+          </div>
+          <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+            {ig.post.map((p: any) => (
+              <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-2xl border border-line bg-white sm:w-[60%] lg:w-auto">
+                <header class="flex items-center gap-3 px-4 py-3">
+                  <img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full" />
+                  <span class="text-sm font-semibold">{ig.handle}</span>
+                </header>
+                {p.stile === 'foto' && (
+                  <div class="relative aspect-square overflow-hidden">
+                    <img src={foto[p.immagine ?? 'postRitratto']} alt="" width="600" height="600" loading="lazy" class="absolute inset-0 h-full w-full object-cover object-top" />
+                    <div class="absolute inset-x-3 bottom-3 rounded-xl bg-deep/95 px-4 py-3 text-white">
+                      <p class="font-head text-lg font-semibold leading-tight">{p.titolo}</p>
+                      <p class="mt-0.5 text-[13px] text-brand2">{p.sottotitolo}</p>
+                    </div>
+                  </div>
+                )}
+                {p.stile === 'lista' && (
+                  <div class="flex aspect-square flex-col justify-center bg-brand p-6 text-white">
+                    <p class="font-head text-[1.5rem] font-semibold leading-[1.15]">{p.titolo}</p>
+                    <ul class="mt-5 space-y-2">
+                      {p.punti.map((t: string) => <li class="flex items-start gap-2.5 rounded-lg bg-white/10 px-3 py-2 text-[14px]"><Icona nome="check" class="mt-0.5 h-4 w-4 shrink-0" />{t}</li>)}
+                    </ul>
+                  </div>
+                )}
+                {p.stile === 'domanda' && (
+                  <div class="flex aspect-square flex-col justify-between bg-deep p-6 text-white">
+                    <img src={m.brand.marchio} alt="" width="44" height="44" class="h-11 w-11 rounded-full" />
+                    <div>
+                      <p class="font-head text-[1.6rem] font-semibold leading-[1.12]">{p.titolo}</p>
+                      <p class="mt-4 inline-block rounded-lg bg-brand2 px-3 py-2 text-[15px] font-semibold text-deep">{p.risposta}</p>
+                    </div>
+                  </div>
+                )}
+                <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- SEDI -->
+      <section id="sedi" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+        <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <h2 class="titolo-sez" data-reveal>{m.sedi.titolo}</h2>
+            <p class="mt-4 font-head text-2xl font-semibold">{sede.nome}</p>
+            <p class="mt-1 text-lg text-muted">{sede.indirizzo}, {sede.citta}</p>
+            <a href={mapsHref(sede.indirizzo, sede.citta)} target="_blank" rel="noopener" class="btn btn-ghost mt-6 !rounded-full"><Icona nome="pin" /> Apra in Google Maps</a>
+          </div>
+          <div class="grid gap-3 lg:col-span-7" data-stagger>
+            {sede.telefoni.map((t: any) => <a href={telHref(t.numero)} class="flex items-center justify-between rounded-2xl bg-white px-6 py-5 hover:text-brand"><span class="flex items-center gap-3 text-muted"><Icona nome="tel" class="h-5 w-5 text-brand" />{t.label}</span><span class="font-head text-xl font-semibold">{t.numero}</span></a>)}
+            {m.sedi.email && <a href={`mailto:${m.sedi.email}`} class="flex items-center justify-between rounded-2xl bg-white px-6 py-5 hover:text-brand"><span class="flex items-center gap-3 text-muted"><Icona nome="mail" class="h-5 w-5 text-brand" />Email</span><span class="font-head text-lg font-semibold">{m.sedi.email}</span></a>}
+            <p class="mt-4 text-[13px] font-semibold uppercase tracking-wide text-muted">{m.sedi.struttureLabel}</p>
+            <div class="grid gap-3 sm:grid-cols-2">
+              {m.sedi.strutture.map((s: any) => <div class="rounded-2xl border border-line bg-white px-5 py-4"><span class="flex items-center gap-2 font-semibold"><Icona nome="ospedale" class="h-5 w-5 text-brand" />{s.nome}</span><span class="mt-1 block text-sm text-muted">{s.testo}</span></div>)}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINALE -->
+      <section class="px-4 py-14 sm:px-8" data-cta-finale>
+        <div class="mx-auto flex max-w-6xl flex-col gap-6 rounded-2xl bg-brand px-6 py-10 text-white sm:px-10 lg:flex-row lg:items-center lg:justify-between">
+          <div><h2 class="font-head text-3xl font-semibold">{m.prenota.titolo}</h2><p class="mt-2 text-white/85">{m.prenota.testo}</p></div>
+          <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+            <a href={telHref(m.prenota.telefono)} class="btn !rounded-full bg-white text-brand hover:bg-white/90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+            <a href="#prenota" class="btn !rounded-full border border-white/60 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer m={m} />
+  </div>
+  <CtaMobile m={m} />
+  <script>import '../scripts/motion.ts';</script>
+</Base>

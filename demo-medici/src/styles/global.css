@@ -85,6 +85,11 @@ html { scroll-behavior: smooth; }
   .stile-clinica .titolo-sez { font-weight: 700; letter-spacing: -0.01em; }
 }
 
+/* Layout "laterale": tessere di scelta del motivo */
+@layer components {
+  .tessera[aria-pressed="true"] { border-color: var(--c-brand); background: color-mix(in srgb, var(--c-brand) 7%, white); color: var(--c-brand); box-shadow: inset 0 0 0 1px var(--c-brand); }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }

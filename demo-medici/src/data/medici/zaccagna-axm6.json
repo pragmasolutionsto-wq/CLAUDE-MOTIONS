@@ -1,0 +1,437 @@
+{
+  "slug": "zaccagna-axm6",
+  "layout": "laterale",
+  "sitoOrigine": "https://www.alessandrozaccagna.it/",
+  "titolo": "Dr.",
+  "nome": "Alessandro Zaccagna",
+  "specialita": "Specialista in Dermatologia e Venereologia",
+  "firma": "Dermochirurgia oncologica",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dr. Alessandro Zaccagna · Dermatologo e dermochirurgo a Torino",
+    "description": "Sono dermatologo e dermochirurgo a Torino: diagnosi con la dermatoscopia e asportazione di nei, tumori cutanei, cisti e lipomi. Ricevo in corso Massimo d'Azeglio 43."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/zaccagna-axm6/img/marchio.png",
+    "logoChiaro": "/zaccagna-axm6/img/marchio.png",
+    "marchio": "/zaccagna-axm6/img/marchio.png",
+    "logoAlt": "Dr. Alessandro Zaccagna"
+  },
+  "foto": {
+    "hero": "/zaccagna-axm6/img/hero.webp",
+    "heroMobile": "/zaccagna-axm6/img/hero-mobile.webp",
+    "heroAlt": "Il Dr. Zaccagna in ambulatorio, accanto al sistema di mappatura dei nei",
+    "ritratto": "/zaccagna-axm6/img/ritratto.webp",
+    "ritrattoAlt": "Il Dr. Alessandro Zaccagna",
+    "volto": "/zaccagna-axm6/img/volto.webp",
+    "postRitratto": "/zaccagna-axm6/img/post-ritratto.webp",
+    "guanti": "/zaccagna-axm6/img/rep-guanti.webp"
+  },
+  "hero": {
+    "eyebrow": "Dermatologia e dermochirurgia oncologica · Torino",
+    "titolo": "Diagnosi precisa, intervento accurato.",
+    "testo": "Mi occupo di tutti i tumori della pelle: li riconosco con la dermatoscopia, li tolgo con la chirurgia o il laser e, se serve, riparo la pelle con piccoli interventi plastici.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Per cosa vuole prenotare?",
+      "motivoLabel": "Motivo",
+      "motivi": [
+        "Controllo dei nei",
+        "Togliere un neo o una lesione",
+        "Cisti o lipoma",
+        "Cuoio capelluto",
+        "Pelle di un bambino",
+        "Altro problema della pelle"
+      ],
+      "motiviFrase": [
+        "un controllo dei nei",
+        "l'asportazione di un neo o di una lesione della pelle",
+        "una cisti o un lipoma",
+        "un problema del cuoio capelluto",
+        "un problema della pelle di mio figlio",
+        "un problema della pelle"
+      ],
+      "motiviIcone": [
+        "lente",
+        "scudo",
+        "goccia",
+        "persone",
+        "cuore",
+        "check"
+      ],
+      "sedeLabel": "Sede"
+    }
+  },
+  "fiducia": [],
+  "fatti": [
+    {
+      "valore": "70/70 e lode",
+      "testo": "specializzazione in Dermatologia e Venereologia, Torino 1999"
+    },
+    {
+      "valore": "Candiolo",
+      "testo": "responsabile della dermochirurgia oncologica all'IRCCS dal 2013"
+    },
+    {
+      "valore": "PubMed",
+      "testo": "autore e co-autore di lavori di dermo-oncologia"
+    }
+  ],
+  "percorso": {
+    "titolo": "Dal neo sospetto alla guarigione",
+    "intro": "Quando un neo o una lesione va tolto, Le spiego ogni passaggio prima di iniziare.",
+    "passi": [
+      {
+        "icona": "lente",
+        "titolo": "Visita e dermatoscopia",
+        "testo": "Osservo la lesione con la dermatoscopia in epiluminescenza e decido se va solo controllata o tolta.",
+        "img": "/zaccagna-axm6/img/rep-controllo.webp"
+      },
+      {
+        "icona": "siringa",
+        "titolo": "Anestesia locale",
+        "testo": "L'intervento si fa in ambulatorio. L'anestesia locale rende la procedura sopportabile.",
+        "img": "/zaccagna-axm6/img/rep-anestesia.webp"
+      },
+      {
+        "icona": "scudo",
+        "titolo": "Asportazione e sutura",
+        "testo": "Tolgo la lesione con la chirurgia o con il laser e chiudo con punti pensati per una cicatrice il più possibile discreta.",
+        "img": "/zaccagna-axm6/img/rep-chirurgia.webp"
+      },
+      {
+        "icona": "check",
+        "titolo": "Istologico e medicazioni",
+        "testo": "Il tessuto va sempre all'esame istologico. Le spiego come medicare la ferita e quando rivederci.",
+        "img": "/zaccagna-axm6/img/rep-medicazione.webp"
+      }
+    ]
+  },
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Ho sempre fatto il dermatologo con un interesse particolare per la dermochirurgia oncologica: mi occupo della diagnosi, con la dermatoscopia in epiluminescenza, e del trattamento chirurgico o laser di tutti i tumori cutanei, compresa l'eventuale riparazione plastica successiva.",
+      "Mi sono laureato in Medicina e Chirurgia a Torino nel 1994. Dopo il servizio militare come ufficiale medico mi sono specializzato in Dermatologia e Venereologia, sempre a Torino, nel 1999, con 70/70 e lode.",
+      "Ho lavorato come dermochirurgo all'Ospedale di Ivrea e all'Istituto di Candiolo, dove nel 2013 sono diventato responsabile dell'Unità operativa di dermochirurgia oncologica dell'IRCCS. Sono autore e co-autore di lavori scientifici di dermatologia e dermo-oncologia, consultabili su PubMed."
+    ],
+    "tappe": [
+      {
+        "periodo": "1994",
+        "testo": "Laurea in Medicina e Chirurgia, Università di Torino."
+      },
+      {
+        "periodo": "1999",
+        "testo": "Specializzazione in Dermatologia e Venereologia, Torino, 70/70 e lode."
+      },
+      {
+        "periodo": "2001",
+        "testo": "Diploma di Medicina di primo intervento 118, Università di Torino."
+      },
+      {
+        "periodo": "2013",
+        "testo": "Responsabile dell'Unità operativa di dermochirurgia oncologica, IRCCS di Candiolo."
+      }
+    ],
+    "societaLabel": "",
+    "societa": []
+  },
+  "aree": {
+    "titolo": "Prestazioni",
+    "intro": "Alcune delle prestazioni che eseguo.",
+    "voci": [
+      {
+        "icona": "scudo",
+        "titolo": "Chirurgia dermatologica",
+        "testo": "Lesioni cutanee benigne e maligne, lesioni vascolari, tumori cutanei, cicatrici, nevi."
+      },
+      {
+        "icona": "lente",
+        "titolo": "Dermatoscopia",
+        "testo": "Esame in epiluminescenza per distinguere i nei benigni dalle lesioni sospette."
+      },
+      {
+        "icona": "check",
+        "titolo": "Exeresi chirurgica",
+        "testo": "Rimozione completa di un'area di tessuto anomalo, con esame istologico."
+      },
+      {
+        "icona": "goccia",
+        "titolo": "Rimozione di cisti",
+        "testo": "Asportazione della cisti intera, con la sua capsula, per ridurre il rischio che si riformi."
+      },
+      {
+        "icona": "edificio",
+        "titolo": "Rimozione di lipomi",
+        "testo": "Asportazione dei lipomi, escrescenze benigne di tessuto adiposo."
+      },
+      {
+        "icona": "persone",
+        "titolo": "Analisi del cuoio capelluto",
+        "testo": "Valutazione della salute della cute e dei follicoli dei capelli."
+      },
+      {
+        "icona": "cuore",
+        "titolo": "Dermatologia pediatrica",
+        "testo": "Diagnosi e cura delle malattie della pelle di neonati, bambini e ragazzi."
+      },
+      {
+        "icona": "stella",
+        "titolo": "Laser",
+        "testo": "Trattamento laser dei tumori cutanei quando è l'opzione più adatta."
+      }
+    ]
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "articolo": {
+    "categoria": "Dermochirurgia",
+    "titolo": "Asportazione di un neo a Torino: come si fa",
+    "img": "/zaccagna-axm6/img/rep-articolo.webp",
+    "intro": "Togliere un neo è uno degli interventi più comuni in dermatologia. È breve, si fa in ambulatorio e in anestesia locale, ma è normale avere qualche domanda prima. Ecco come si svolge, passo per passo.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Quando un neo va tolto",
+        "paragrafi": [
+          "La maggior parte dei nei non va tolta: basta controllarli nel tempo. L'asportazione serve quando un neo ha caratteristiche sospette alla visita e alla dermatoscopia, quando è cambiato rispetto ai controlli precedenti, oppure quando dà fastidio perché si irrita di continuo, per esempio sotto la cintura o il reggiseno.",
+          "A volte si toglie una lesione per avere una diagnosi certa: solo l'esame istologico, fatto sul tessuto asportato, permette di dire con sicurezza di cosa si tratta."
+        ]
+      },
+      {
+        "titolo": "La visita prima dell'intervento",
+        "paragrafi": [
+          "Prima di decidere osservo la lesione con il dermatoscopio, uno strumento che ingrandisce e illumina la pelle e mostra dettagli invisibili a occhio nudo.",
+          "Se l'asportazione è indicata, Le spiego come si svolgerà, che tipo di cicatrice aspettarsi e quali sono i rischi, che per un intervento di questo tipo sono in genere contenuti. È anche il momento di dirmi se prende farmaci, in particolare anticoagulanti o antiaggreganti, se ha allergie, se ha avuto problemi di cicatrizzazione in passato."
+        ]
+      },
+      {
+        "titolo": "Il giorno dell'intervento",
+        "paragrafi": [
+          "L'intervento si svolge in ambulatorio e di solito dura pochi minuti, più il tempo per la preparazione e la medicazione. Non serve essere a digiuno.",
+          "Si inizia con l'anestesia locale: una piccola iniezione intorno al neo, che dà un breve bruciore e poi rende la zona insensibile. Da quel momento può sentire il contatto, ma non dolore."
+        ]
+      },
+      {
+        "titolo": "Come si toglie il neo",
+        "paragrafi": [
+          "Nella tecnica più usata, l'exeresi chirurgica, il neo viene tolto insieme a un piccolo margine di pelle sana, con un'incisione a forma di losanga. La forma allungata permette di chiudere la ferita in una linea sottile, seguendo per quanto possibile le pieghe naturali della pelle.",
+          "La ferita si chiude con alcuni punti di sutura. Per lesioni piccole e superficiali, in casi selezionati, si può usare il laser. La scelta della tecnica dipende dal tipo di lesione, dalla sede e dal sospetto clinico, e la decidiamo insieme."
+        ]
+      },
+      {
+        "titolo": "L'esame istologico",
+        "paragrafi": [
+          "Il tessuto asportato viene sempre inviato all'esame istologico. Il patologo lo analizza al microscopio e conferma la diagnosi. Il referto arriva in genere dopo alcune settimane.",
+          "Se l'esame mostra una lesione che richiede un margine più ampio, può essere necessario un secondo piccolo intervento, chiamato allargamento. Glielo spiego quando leggiamo insieme il referto.",
+          "Nella grande maggioranza dei casi, però, il referto conferma una lesione benigna e non serve altro che il normale controllo dei nei nel tempo."
+        ]
+      },
+      {
+        "titolo": "Dopo l'intervento",
+        "paragrafi": [
+          "Nei giorni successivi Le chiederò di:"
+        ],
+        "elenco": [
+          "tenere la medicazione pulita e asciutta e rinnovarla come indicato;",
+          "evitare sforzi e movimenti che tirano la ferita, soprattutto su schiena e spalle;",
+          "non fare il bagno in piscina o al mare fino alla rimozione dei punti;",
+          "contattarmi se compaiono arrossamento che si allarga, calore, secrezione o febbre."
+        ],
+        "chiusura": "I punti si tolgono di solito dopo una o due settimane, a seconda della zona del corpo."
+      },
+      {
+        "titolo": "Neo, cisti o lipoma: cosa cambia",
+        "paragrafi": [
+          "Con la stessa tecnica di base si tolgono anche altre formazioni benigne della pelle. Le cisti sono piccole sacche chiuse sotto la pelle, piene di materiale denso: per ridurre il rischio che si riformino vanno tolte intere, insieme alla loro parete. I lipomi sono noduli morbidi di tessuto adiposo, benigni, che si tolgono quando danno fastidio o crescono.",
+          "Cambiano la profondità dell'intervento e la lunghezza della cicatrice, non l'approccio: anestesia locale, asportazione completa, sutura e, quando indicato, esame istologico."
+        ]
+      },
+      {
+        "titolo": "Cosa portare il giorno dell'intervento",
+        "paragrafi": [
+          "Per arrivare preparato, porti con sé:"
+        ],
+        "elenco": [
+          "l'elenco dei farmaci che prende, con le dosi;",
+          "i referti di eventuali esami istologici o visite precedenti;",
+          "abiti comodi, che non sfreghino sulla zona da operare."
+        ],
+        "chiusura": "Se prende anticoagulanti, non li sospenda di Sua iniziativa: ne parliamo prima, insieme al medico che li ha prescritti."
+      },
+      {
+        "titolo": "La cicatrice",
+        "paragrafi": [
+          "Ogni asportazione lascia una cicatrice: l'obiettivo è che sia il più possibile sottile e poco visibile. Nei primi mesi è normale che sia rosata e un po' rilevata; con il tempo tende a schiarirsi e appiattirsi.",
+          "Per aiutarla, protegga la zona dal sole per almeno un anno, con filtri alti o con gli indumenti. Su indicazione del medico si possono usare gel o cerotti al silicone. Se la cicatrice diventa spessa o dà prurito, ne parliamo alla visita di controllo."
+        ]
+      },
+      {
+        "titolo": "Le domande più frequenti",
+        "paragrafi": [
+          "Fa male? L'anestesia locale dà un fastidio breve; dopo l'intervento il dolore è di solito lieve e si controlla con un comune antidolorifico.",
+          "Posso tornare al lavoro? In genere sì, anche lo stesso giorno, salvo lavori fisicamente pesanti o ferite in zone che si muovono molto. Se un neo va tolto, è meglio non rimandare: è un intervento semplice, che toglie un dubbio."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo dermatologo."
+  },
+  "instagram": {
+    "handle": "dr.alessandrozaccagna",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "domanda",
+        "titolo": "Neo da togliere: quando serve davvero?",
+        "risposta": "Meno spesso di quanto si pensa.",
+        "didascalia": "La maggior parte dei nei va solo controllata nel tempo. Si toglie quando è sospetto alla dermatoscopia, quando è cambiato o quando si irrita di continuo. In tutti i casi, il tessuto va all'esame istologico.",
+        "hashtag": "#nei #dermochirurgia #dermatologo #torino"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Cicatrice dopo l'asportazione",
+        "punti": [
+          "Medicazione pulita e asciutta",
+          "Niente sforzi che tirano la ferita",
+          "Sole: protezione per un anno",
+          "Gel o cerotti al silicone, se indicati"
+        ],
+        "didascalia": "Ogni asportazione lascia una cicatrice, ma ci sono attenzioni che la aiutano a diventare sottile e chiara. Nei primi mesi è normale che sia rosata: con il tempo migliora.",
+        "hashtag": "#cicatrice #neo #pelle #dermatologia"
+      },
+      {
+        "stile": "foto",
+        "immagine": "postRitratto",
+        "titolo": "Tumori della pelle: 3 segnali",
+        "sottotitolo": "Una lesione che cambia, sanguina o non guarisce",
+        "didascalia": "Tre segnali da non ignorare: una macchia o un neo che cambia forma, colore o dimensioni; una lesione che sanguina senza un trauma; una piccola ferita che non guarisce in qualche settimana. In questi casi una visita con la dermatoscopia chiarisce i dubbi.",
+        "hashtag": "#tumoridellapelle #melanoma #prevenzione #dermatologo"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "info@med-expert.it",
+    "luoghi": [
+      {
+        "principale": true,
+        "tipo": "MedExpert",
+        "nome": "MedExpert",
+        "indirizzo": "Corso Massimo d'Azeglio 43",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "MedExpert, corso Massimo d'Azeglio 43, Torino",
+        "telefoni": [
+          {
+            "label": "Cellulare",
+            "numero": "388 358 7658"
+          },
+          {
+            "label": "Cellulare",
+            "numero": "393 082 7031"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "Esperienza ospedaliera",
+    "strutture": [
+      {
+        "nome": "IRCCS di Candiolo",
+        "testo": "Dermochirurgia oncologica, responsabile dal 2013"
+      },
+      {
+        "nome": "Ospedale di Ivrea",
+        "testo": "Dermochirurgo"
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Può chiamarmi o scrivermi una mail, oppure scegliere giorno e orario online.",
+    "telefono": "3883587658",
+    "telefonoLabel": "388 358 7658",
+    "chiamaLabel": "il cellulare",
+    "whatsapp": null,
+    "emailRichieste": null,
+    "oggettoMail": "Richiesta di visita dermatologica",
+    "calendario": {
+      "titolo": "Scelga quando venire",
+      "intro": "Indichi giorno e orario che preferisce e lasci i Suoi dati: La ricontatterò per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate da me o dalla segreteria.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": null,
+      "privacyTesto": "Questo modulo non salva i Suoi dati: prepara soltanto un messaggio nella Sua app di posta, che decide Lei se inviare. I dati indicati servono unicamente a rispondere alla richiesta di appuntamento.",
+      "notePlaceholder": "Per esempio dove si trova la lesione"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F1F5F9",
+      "ink": "#0B1A2B",
+      "muted": "#5A6878",
+      "line": "#DCE4EC",
+      "brand": "#0F7DC2",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#149DDD",
+      "deep": "#06111F",
+      "deep-ink": "#E3ECF4"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Poppins",
+    "fontTesti": "Open Sans",
+    "favicon": "/zaccagna-axm6/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/zaccagna-axm6/brand/brand.json",
+    "pagine": [
+      "https://www.alessandrozaccagna.it/"
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "sito": "https://www.alessandrozaccagna.it/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "Template Bootstrap 'iPortfolio' one-page, lasciato con i dati di esempio del template",
+  "trello": "Prospect medici · Dr. Alessandro Zaccagna – Dermatologia, dermochirurgia · A·9",
+  "logo": { "trovato": false, "nota": "Solo il testo 'A. Zaccagna' del template. Marchio = suo volto tondo (come nella barra laterale del suo sito)." },
+  "foto": {
+    "tenute": [
+      { "file": "profile-img.jpg", "desc": "Ritratto in camice, sfondo chiaro. 600×624 (piccolo: usato in formati medi)", "fonte": "barra laterale" },
+      { "file": "hero-bg.jpg", "desc": "Il dottore in ambulatorio con mascherina, accanto al sistema FotoFinder di mappatura nei. 1920×1280", "fonte": "sfondo CSS della hero (assets/img/hero-bg.jpg)" }
+    ],
+    "scartate": [],
+    "nota": "Tutte le altre immagini della demo sono di repertorio (Unsplash), segnalate solo dalla nota nel footer."
+  },
+  "colori": {
+    "azzurro": { "hex": "#149DDD", "fonte": "style.css (colore del template)" },
+    "blu_notte": { "hex": "#040B14", "fonte": "style.css (barra laterale)" },
+    "nota": "Per i pulsanti si usa #0F7DC2, versione più scura dell'azzurro: con il bianco #149DDD non è leggibile."
+  },
+  "font": { "sito": [ { "famiglia": "Poppins", "ruolo": "titoli", "giudizio": "si tiene" }, { "famiglia": "Open Sans", "ruolo": "testi", "giudizio": "si tiene" } ] },
+  "dati": {
+    "sede": "MedExpert S.r.l.s, corso Massimo d'Azeglio 43, 10126 Torino",
+    "telefoni": ["+39 388 358 7658", "+39 393 082 7031"],
+    "email": "info@med-expert.it",
+    "facebook": "https://www.facebook.com/alessandro.zaccagna (profilo personale)",
+    "errori_del_sito": [
+      "Dati del template mai cambiati: 'Data di nascita: 1 May 1995', 'Età: 30', 'Freelance: Available'",
+      "Refusi: 'Facoltà di Medina e Chirurgia', 'Sono specialistà in', 'Dermochirugia', 'Messagio'",
+      "Biografia che passa dalla terza alla prima persona nello stesso paragrafo",
+      "Footer '© Copyright MedExpert Consulting', nessuna meta description"
+    ]
+  }
+}
