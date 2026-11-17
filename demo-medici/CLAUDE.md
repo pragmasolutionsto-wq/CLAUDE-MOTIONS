@@ -60,6 +60,14 @@ La demo deve sembrare "il suo sito, ma fatto bene". Il medico deve riconoscersi 
 
 Hosting: **Cloudflare Pages**, progetto `pragma-anteprime` (gratis, uso commerciale ammesso). Si pubblica con `npm run deploy`.
 
+## Trello: tenere SEMPRE la bacheca allineata (regola fissa di Meme)
+Bacheca "Prospect medici": https://trello.com/b/MqV9G8vV/prospect-medici (connettore Trello).
+Liste: 1. Da preparare (demo) → 2. Demo pronta (Loom da fare) → 3. Inviato → 4. Follow-up → 5. Call fissata → 6. Chiuso ✅ → 7. Perso / non ora · ⏸ Conflitto Parisotto (non contattare: mai fare demo per queste schede).
+- **Prima** di una demo: leggi la scheda del medico (contatti, aggancio, titoli di post e articolo già decisi) e usali.
+- **Dopo** ogni demo pubblicata (e dopo ogni modifica importante a una demo): aggiorna la descrizione della scheda con lo stesso formato di Motta (Link demo, Articolo demo, Sito attuale, Contatti, Problemi/aggancio, Demo, Prossimi passi, Note) e spostala in "2. Demo pronta (Loom da fare)".
+- Se dalla ricerca emergono dati che smentiscono la scheda (es. aggancio sbagliato), correggili nella scheda e segnalalo a Meme.
+- Non spostare schede oltre la lista 2 (Inviato, Follow-up, ecc.): quelle fasi le gestisce Meme.
+
 ## Struttura
 - `src/data/medici/<slug>.json` → tutti i contenuti di un medico. Lo schema è quello di `motta-m2zh.json`: stessi campi, sempre.
 - `src/layouts/HomeMedico.astro` → unico template della home `/<slug>`.

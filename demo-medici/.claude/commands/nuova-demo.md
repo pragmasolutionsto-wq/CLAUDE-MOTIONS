@@ -8,7 +8,8 @@ Crea una nuova demo per il medico con sito: $ARGUMENTS
 Lavora nella cartella del progetto demo-medici (dove c'è `astro.config.mjs`). Prima di tutto leggi `CLAUDE.md` per intero.
 **Applica il METODO DEMO MEDICI di `CLAUDE.md`, tutte e 5 le fasi, in ordine, senza eccezioni e senza saltarne nessuna.** Se qualcosa nel template, nei componenti o nel JSON di esempio contraddice il METODO, vince il METODO: correggi il template.
 
-## 0. Slug
+## 0. Trello e slug
+- Leggi la scheda del medico sulla bacheca Trello "Prospect medici" (vedi CLAUDE.md): contatti, aggancio, titoli di post e articolo da usare. Se è nella lista "⏸ Conflitto Parisotto", fermati.
 `npm run slug -- <cognome>` → usa lo slug che esce per tutte le cartelle e i file.
 
 ## FASE 1 – Estrazione brand → `public/<slug>/brand/`
@@ -69,6 +70,9 @@ Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito,
 1. `npm run deploy` → "Deploy OK".
 2. Verifica online con Firecrawl (`maxAge: 0`) home e articolo: status 200, `robots: noindex, nofollow`, screenshot coerente con quello locale.
 3. `git add` dei file della demo (`public/<slug>/`, JSON, eventuali fix al template), commit `Demo: Dr. <Nome> (<specialità>)`, push sul branch di lavoro. Non committare `shots/`.
+
+## Aggiorna Trello (sempre)
+- Descrizione della scheda nel formato di Motta (Link demo, Articolo demo, Sito attuale, Contatti, Problemi/aggancio, Demo, Prossimi passi, Note) e spostamento in "2. Demo pronta (Loom da fare)". Correggi nella scheda i dati che la ricerca ha smentito.
 
 ## Risposta finale a Meme (breve)
 - Link: `https://pragma-anteprime.pages.dev/<slug>` e `/<slug>/articolo` (verificati online)
