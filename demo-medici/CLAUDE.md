@@ -112,6 +112,8 @@ Template v3 (`HomeMedico.astro`, `articolo.astro`): stile AutoScout con i colori
 - **Fase 1 – foto nascoste:** i siti (es. Flazio) mettono foto e loghi come sfondi CSS, che lo scrape "images" non vede. Leggi SEMPRE l'HTML grezzo (curl o rawHtml) e cerca tutti gli URL immagine. Su Motta così sono emerse la foto in sala operatoria e il marchio in alta risoluzione.
 - **Privacy nelle foto:** ingrandendo dettagli (diplomi, documenti, schermi) controlla che non si leggano dati personali (data di nascita, codici, pazienti). Se sì, sfoca solo quella parte.
 - Foto vere ma piccole (<800px): non in grande; vanno bene in formati piccoli (post Instagram, avatar).
+- `prenota.calendario.privacy` null + `privacyTesto`: se il sito del medico non ha una pagina privacy, il link diventa una nota apribile nel form (mai link rotti). `notePlaceholder` cambia l'esempio nel campo note.
+- Foto con fondo a tinta unita di terzi (es. verde acqua J|medical): si può scontornare a chiave colore (script in scratchpad `gt-key.py`) e rimettere sul colore del tema. Foto da siti terzi solo con ok di Meme, annotate in brand.json.
 - Confronto Fase 5: `shots/<slug>/confronto.png` (sito attuale vs demo, desktop + mobile).
 - `npm run shot` fallisce (exit 2) se trova: errori console, richieste fallite, scroll orizzontale, meta robots sbagliato, fascia mancante, elementi rimasti invisibili, font titoli non caricato, link nella root.
 

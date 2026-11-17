@@ -159,5 +159,14 @@ if (sez) {
     passo(2);
   });
 
+  // Informativa privacy come nota apribile (quando il sito del medico non ne ha una pagina)
+  const apriPrivacy = sez.querySelector<HTMLButtonElement>('[data-privacy-apri]');
+  const notaPrivacy = sez.querySelector<HTMLElement>('[data-privacy-nota]');
+  apriPrivacy?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const aperta = notaPrivacy?.classList.toggle('hidden') === false;
+    apriPrivacy.setAttribute('aria-expanded', String(aperta));
+  });
+
   disegnaMese(); aggiornaRiep();
 }

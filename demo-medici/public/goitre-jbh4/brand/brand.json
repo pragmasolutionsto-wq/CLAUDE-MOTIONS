@@ -1,0 +1,36 @@
+{
+  "sito": "https://www.massimogoitre.com/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "HTML statico Bootstrap, one-page, © 2022 (Gariano Design)",
+  "trello": "Prospect medici · Prof. Massimo Goitre – Dermatologia e allergologia · A·9",
+  "logo": {
+    "trovato": false,
+    "nota": "Nessun logo: nell'header solo 'Prof. Massimo Goitre / specialista in dermatologia' in Oswald. Logotipo ricostruito con lo stesso font (logo-scuro.png, logo-chiaro.png). Marchio = suo volto tondo (come l'apple-touch-icon del sito)."
+  },
+  "foto": {
+    "tenute": [
+      { "file": "jmedical-goitre.jpg", "desc": "Ritratto in camice, braccia conserte, fondo verde acqua J|medical. 600×600.", "fonte": "https://jmedical.eu/member/prof-massimo-goitre/ (sito TERZO, scelta approvata da Meme il 17/11/2026: sul suo sito c'è solo un avatar 180 px)", "lavorazione": "sfondo verde acqua tolto con chiave colore (goitre-scontornato.png) e messo sull'azzurro chiaro del tema" },
+      { "file": "slide_slide-02.jpg", "desc": "Il Prof. ospite in uno studio di Juventus Channel (uomo a destra, barba bianca). 3544×1819.", "fonte": "slider home del suo sito" },
+      { "file": "img_goitre2.png", "desc": "Avatar tondo 160×160, stessa foto J|medical", "fonte": "home" }
+    ],
+    "repertorio_dal_sito": ["slide_slide-01.jpg (viso con lente su arrossamento)", "slide_slide-03.jpg (nei sulla schiena, mani guantate)", "img_urticaria.jpg (400×300)"],
+    "scartate": ["img_icon-dottore.jpeg: illustrazione generica", "img_google-reviews.gif: logo Google", "img_urtacaria-2.jpg: troppo crudo e piccolo"],
+    "nota": "Nessuna foto dello studio. Il sito pubblica la data di nascita: NON usata."
+  },
+  "colori": {
+    "blu": { "hex": "#000E99", "fonte": "custom.css" },
+    "azzurro": { "hex": "#7695DC", "fonte": "custom.css (il più usato)" },
+    "rosso": { "hex": "#EA2327", "fonte": "custom.css, non usato" }
+  },
+  "font": { "sito": [ { "famiglia": "Oswald", "ruolo": "titoli", "giudizio": "si tiene" }, { "famiglia": "Helvetica Neue", "ruolo": "testi", "giudizio": "sostituito con Source Sans 3" } ] },
+  "dati": {
+    "nome": "Prof. Massimo Goitre, specialista in dermatologia",
+    "studio": "Corso Stati Uniti 53, 10129 Torino (Crocetta), tel. 011 501607",
+    "jmedical": "Via Druento 153/56, Torino, centralino 011 013 0303 (dal sito J|medical)",
+    "email": "nessuna sul sito",
+    "privacy": "nessuna pagina: il link del banner cookie (/cookie.php) dà 404",
+    "curriculum": "dal suo sito; da J|medical solo: 200+ pubblicazioni, Presidente Centro Ricerche Cutanee Piemontesi, comitato Giornate Dermatologiche. Le date di J|medical diverse dal suo sito (Juventus 1982, Koelliker 1995) NON usate.",
+    "social": "nessuno",
+    "prenotazione_online": "profilo MioDottore esistente (non verificato in dettaglio)"
+  }
+}

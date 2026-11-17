@@ -1,0 +1,473 @@
+{
+  "slug": "goitre-jbh4",
+  "sitoOrigine": "https://www.massimogoitre.com/",
+  "titolo": "Prof.",
+  "nome": "Massimo Goitre",
+  "specialita": "Specialista in Dermatologia e Venereologia",
+  "firma": "Dermatologia clinica e allergologica",
+  "citta": "Torino",
+  "meta": {
+    "title": "Prof. Massimo Goitre · Dermatologo e allergologo a Torino",
+    "description": "Sono dermatologo a Torino dal 1975: dermatologia allergologica, dermatiti, orticaria, psoriasi, controllo dei nei con videoscopia. Studio in corso Stati Uniti 53, zona Crocetta."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/goitre-jbh4/img/logo-scuro.png",
+    "logoChiaro": "/goitre-jbh4/img/logo-chiaro.png",
+    "marchio": "/goitre-jbh4/img/marchio.png",
+    "logoAlt": "Prof. Massimo Goitre, specialista in dermatologia"
+  },
+  "foto": {
+    "heroTipo": "ritratto",
+    "hero": "/goitre-jbh4/img/ritratto.webp",
+    "heroSfondo": "#E8EDFA",
+    "heroAlt": "Il Prof. Massimo Goitre",
+    "volto": "/goitre-jbh4/img/volto.webp",
+    "postRitratto": "/goitre-jbh4/img/post-ritratto.webp",
+    "dettaglio": "/goitre-jbh4/img/dettaglio.webp",
+    "dettaglioAlt": "Il Prof. Goitre ospite in uno studio di Juventus Channel",
+    "diplomi": "/goitre-jbh4/img/rep-attesa.webp",
+    "diplomiAlt": "Una sala d'attesa luminosa"
+  },
+  "hero": {
+    "eyebrow": "Dermatologia · Torino",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami lo studio",
+    "box": {
+      "titolo": "Prenoti la Sua visita",
+      "motivoLabel": "Motivo della visita",
+      "motivi": [
+        "Dermatite o eczema",
+        "Orticaria",
+        "Psoriasi",
+        "Controllo dei nei",
+        "Visita dermatologica"
+      ],
+      "motiviFrase": [
+        "una dermatite o un eczema",
+        "un'orticaria",
+        "la psoriasi",
+        "un controllo dei nei con videoscopia",
+        "una visita dermatologica"
+      ],
+      "sedeLabel": "Dove preferisce essere visitato"
+    }
+  },
+  "fiducia": [
+    {
+      "icona": "medaglia",
+      "titolo": "Dal 1975 in dermatologia",
+      "testo": "alla Clinica Dermatologica dell'Università di Torino"
+    },
+    {
+      "icona": "libro",
+      "titolo": "Professore Associato",
+      "testo": "di Dermatologia Allergologica e Professionale, Università di Torino"
+    },
+    {
+      "icona": "ospedale",
+      "titolo": "22 anni alla guida",
+      "testo": "del Centro di Dermatologia dell'ospedale Koelliker"
+    },
+    {
+      "icona": "persone",
+      "titolo": "Consulente Juventus FC",
+      "testo": "dal 1993"
+    }
+  ],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Sono dermatologo a Torino dal 1975. Mi occupo di dermatologia clinica e allergologica: dermatiti, eczemi, orticaria, psoriasi, acne, e della prevenzione dei tumori della pelle con il controllo dei nei.",
+      "Ho insegnato all'Università di Torino come Professore Associato di Dermatologia Allergologica e Professionale e dal 1994 al 2016 ho diretto il Centro di Dermatologia dell'ospedale Koelliker. Dal 2016 sono responsabile del Centro di Dermatologia di J|medical.",
+      "Ricevo nel mio studio di corso Stati Uniti 53, alla Crocetta, e al J|medical."
+    ],
+    "tappe": [
+      {
+        "periodo": "1974",
+        "testo": "Laurea in Medicina e Chirurgia all'Università degli Studi di Torino."
+      },
+      {
+        "periodo": "Dal 1975",
+        "testo": "Assistente universitario alla Clinica Dermatologica dell'Università di Torino, diretta dal Prof. G. Zina."
+      },
+      {
+        "periodo": "1977",
+        "testo": "Specializzazione con lode in Clinica Dermosifilopatica."
+      },
+      {
+        "periodo": "Dal 1980",
+        "testo": "Consulente del poliambulatorio della Guardia di Finanza di Torino."
+      },
+      {
+        "periodo": "1980 – 1994",
+        "testo": "Titolare di corsi universitari: Dermatologia e Venereologia all'ospedale San Luigi, Dermatologia Allergologica e Professionale per il corso di laurea e le specializzazioni in Dermatologia e in Medicina del lavoro."
+      },
+      {
+        "periodo": "Dal 1986",
+        "testo": "Professore Associato di Dermatologia Allergologica e Professionale all'Università di Torino."
+      },
+      {
+        "periodo": "Dal 1993",
+        "testo": "Consulente della Juventus Football Club."
+      },
+      {
+        "periodo": "1994 – 2016",
+        "testo": "Direttore del Centro di Dermatologia dell'ospedale Koelliker di Torino."
+      },
+      {
+        "periodo": "Dal 2016",
+        "testo": "Responsabile del Centro di Dermatologia di J|medical, centro polispecialistico di Torino."
+      }
+    ],
+    "numeri": [
+      {
+        "valore": "1975",
+        "testo": "inizio della mia attività in dermatologia"
+      },
+      {
+        "valore": "22",
+        "testo": "anni alla guida della Dermatologia del Koelliker"
+      },
+      {
+        "valore": "200+",
+        "testo": "pubblicazioni scientifiche"
+      },
+      {
+        "valore": "2",
+        "testo": "sedi a Torino"
+      }
+    ],
+    "societaLabel": "Incarichi",
+    "societa": [
+      "Presidente del Centro Ricerche Cutanee Piemontesi",
+      "Comitato organizzatore delle Giornate Dermatologiche"
+    ]
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "Le condizioni che seguo più spesso. Prima di tutto cerchiamo la causa: è il modo più sicuro per scegliere la cura giusta.",
+    "voci": [
+      {
+        "titolo": "Dermatite allergica da contatto",
+        "testo": "Arrossamento, prurito e vescicole dove la pelle tocca una sostanza: metalli, profumi, conservanti, tinture, materiali di lavoro.",
+        "img": "/goitre-jbh4/img/rep-contatto.webp"
+      },
+      {
+        "titolo": "Orticaria",
+        "testo": "Pomfi rossi che prudono e cambiano posto nel giro di ore. Non sempre è un'allergia: si cerca la causa, caso per caso.",
+        "img": "/goitre-jbh4/img/rep-orticaria.webp"
+      },
+      {
+        "titolo": "Eczema e dermatite atopica",
+        "testo": "Pelle secca, che prude e si arrossa a periodi, nei bambini come negli adulti. Si controlla con la terapia e con la cura quotidiana della pelle.",
+        "img": "/goitre-jbh4/img/rep-eczema.webp"
+      },
+      {
+        "titolo": "Psoriasi",
+        "testo": "Chiazze arrossate e desquamanti su gomiti, ginocchia, cuoio capelluto. Oggi le cure sono molte e si scelgono in base all'estensione e alla persona.",
+        "img": "/goitre-jbh4/img/rep-psoriasi.webp"
+      },
+      {
+        "titolo": "Nei e tumori della pelle",
+        "testo": "Distinguere un neo benigno da un melanoma iniziale non è sempre facile: per questo uso la videoscopia.",
+        "img": "/goitre-jbh4/img/rep-nei.webp"
+      },
+      {
+        "titolo": "Danni da sole e fotoprotezione",
+        "testo": "Macchie, cheratosi e invecchiamento della pelle dovuti al sole, e come proteggersi davvero, tutto l'anno.",
+        "img": "/goitre-jbh4/img/rep-sole.webp"
+      }
+    ]
+  },
+  "metodo": {
+    "titolo": "Come lavoro",
+    "intro": "Una visita accurata, una diagnosi chiara e una cura spiegata bene: dalla pelle allergica alla prevenzione dei tumori cutanei.",
+    "punti": [
+      {
+        "titolo": "Videoscopia dei nei",
+        "testo": "Con la videoscopia osservo i nei ingranditi e distinguo meglio quelli benigni dai melanomi iniziali e dalle altre lesioni precancerose, come gli epiteliomi.",
+        "img": "/goitre-jbh4/img/rep-videoscopia.webp",
+        "imgAlt": ""
+      },
+      {
+        "titolo": "Dermatologia allergologica",
+        "testo": "Cerco la sostanza che scatena la reazione, anche quando è nascosta in un cosmetico, un gioiello o un materiale di lavoro.",
+        "icona": "lente"
+      },
+      {
+        "titolo": "Dermatologia professionale",
+        "testo": "Le malattie della pelle legate al lavoro sono state per anni la mia materia di insegnamento all'Università di Torino.",
+        "icona": "edificio"
+      },
+      {
+        "titolo": "Pelle e sport",
+        "testo": "Dal 1993 sono consulente della Juventus: so quanto contano tempi rapidi e cure compatibili con l'allenamento.",
+        "icona": "persone"
+      },
+      {
+        "titolo": "Pelle e stress",
+        "testo": "Psoriasi, orticaria e dermatite atopica spesso peggiorano nei periodi difficili. In visita teniamo conto anche di questo.",
+        "icona": "cuore"
+      }
+    ]
+  },
+  "banda": {
+    "img": "/goitre-jbh4/img/rep-banda.webp",
+    "titolo": "Prurito o arrossamenti che tornano?",
+    "testo": "Capire se è un'allergia, un'irritazione o un'altra dermatite è il primo passo per smettere di tentare a caso con creme e rimedi."
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "articolo": {
+    "categoria": "Dermatologia allergologica",
+    "titolo": "Allergia della pelle o dermatite? Come capirlo",
+    "img": "/goitre-jbh4/img/rep-articolo.webp",
+    "intro": "Prurito, rossore, piccole bolle: la prima domanda che molti pazienti mi fanno è «sono allergico a qualcosa?». A volte sì, spesso no. Ecco come si distinguono le forme più comuni e cosa serve per arrivare a una diagnosi.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Due parole che si confondono",
+        "paragrafi": [
+          "«Dermatite» vuol dire semplicemente infiammazione della pelle. «Allergia» è invece una reazione del sistema immunitario contro una sostanza che di solito è innocua.",
+          "Alcune dermatiti sono allergiche, molte altre no. Distinguerle è importante perché la cura cambia: se c'è un'allergia, bisogna trovare la sostanza responsabile ed evitarla; se non c'è, cercarla non serve e si rischia solo di eliminare cose inutilmente."
+        ]
+      },
+      {
+        "titolo": "La dermatite irritativa: la più frequente",
+        "paragrafi": [
+          "È la forma più comune, soprattutto sulle mani. Non dipende da un'allergia: la pelle si irrita perché è esposta troppo spesso ad acqua, detergenti, saponi, solventi, oppure allo sfregamento.",
+          "Colpisce di frequente chi lava spesso le mani per lavoro, chi fa i lavori di casa senza guanti, parrucchieri, operatori sanitari, cuochi. La pelle diventa secca, ruvida, si screpola e brucia."
+        ]
+      },
+      {
+        "titolo": "La dermatite allergica da contatto",
+        "paragrafi": [
+          "Qui c'è una vera allergia: dopo un primo contatto, il sistema immunitario «impara» a riconoscere una sostanza e, ai contatti successivi, reagisce. La reazione compare di solito uno o due giorni dopo, non subito, e questo rende difficile collegarla alla causa.",
+          "Si manifesta con arrossamento, prurito intenso, piccole vescicole, proprio dove la pelle ha toccato la sostanza, e a volte si estende oltre. Tra le cause più frequenti ci sono:"
+        ],
+        "elenco": [
+          "il nichel, in bottoni, fibbie, orologi e bigiotteria;",
+          "i profumi, anche nei prodotti per la cura del corpo;",
+          "alcuni conservanti di cosmetici e detergenti;",
+          "le tinture per capelli;",
+          "gomme e materiali usati sul lavoro, come il cromo del cemento."
+        ]
+      },
+      {
+        "titolo": "La dermatite atopica",
+        "paragrafi": [
+          "È una malattia cronica, che spesso inizia nell'infanzia e può continuare o ripresentarsi da adulti. Chi ne soffre ha spesso in famiglia casi di dermatite, asma o rinite allergica.",
+          "La pelle è secca e reagisce più facilmente agli stimoli, con fasi di peggioramento e di miglioramento. Non è causata da un singolo allergene: per questo, più che cercare «la» causa, si lavora sulla cura quotidiana della pelle e sulla terapia nei momenti di crisi."
+        ]
+      },
+      {
+        "titolo": "E l'orticaria?",
+        "paragrafi": [
+          "L'orticaria si riconosce dai pomfi: rilievi rossi o rosa che prudono, simili a punture di zanzara, che compaiono e scompaiono nel giro di poche ore, spostandosi in punti diversi.",
+          "Molti pensano subito a un cibo, ma l'allergia è solo una delle cause possibili, e non la più frequente. Possono influire infezioni, farmaci, stimoli fisici come pressione, freddo o calore; in molti casi una causa precisa non si trova. Se l'orticaria dura più di sei settimane si parla di forma cronica, che va seguita con un percorso dedicato."
+        ]
+      },
+      {
+        "titolo": "Cosa osservare prima della visita",
+        "paragrafi": [
+          "Queste informazioni aiutano molto la diagnosi. Provi ad annotare:"
+        ],
+        "elenco": [
+          "dove compaiono le lesioni e se hanno una forma particolare;",
+          "quando sono iniziate e se peggiorano in certi momenti, per esempio al lavoro o nel fine settimana;",
+          "se ha cambiato da poco cosmetici, detersivi, gioielli o farmaci;",
+          "quanto dura ogni singola chiazza o pomfo;",
+          "le creme che ha già provato e l'effetto che hanno avuto."
+        ]
+      },
+      {
+        "titolo": "Come si arriva alla diagnosi",
+        "paragrafi": [
+          "Il punto di partenza è sempre la visita: l'aspetto della pelle, la sede delle lesioni e la Sua storia permettono già di orientarsi.",
+          "Quando c'è il sospetto di una dermatite allergica da contatto, l'esame di riferimento sono i test epicutanei, chiamati anche patch test: piccole quantità delle sostanze sospette vengono applicate sulla schiena e la pelle si controlla nei giorni successivi. Per l'orticaria, invece, gli esami si scelgono caso per caso, in base a quello che emerge dalla visita."
+        ]
+      },
+      {
+        "titolo": "Come si cura",
+        "paragrafi": [
+          "La cura dipende dalla diagnosi, ed è per questo che vale la pena arrivarci con calma. Se c'è un'allergia da contatto, la misura più efficace è evitare la sostanza responsabile: dopo i test Le spiego dove si può nascondere e come leggere le etichette.",
+          "Per le dermatiti, nella fase acuta si usano in genere creme antinfiammatorie per periodi brevi e ben definiti; nel tempo conta soprattutto la cura quotidiana della pelle, con detergenti delicati ed emollienti adatti. Per l'orticaria i farmaci di primo impiego sono gli antistaminici, da usare con le dosi e i tempi indicati dal medico.",
+          "In tutti i casi, una terapia funziona meglio quando è chiara: cosa usare, per quanto tempo e quando tornare a controllo."
+        ]
+      },
+      {
+        "titolo": "Quando farsi vedere subito",
+        "paragrafi": [
+          "Se compaiono gonfiore delle labbra, della lingua o della gola, difficoltà a respirare o a deglutire, oppure un malessere generale improvviso, non aspetti la visita: chiami subito il 112.",
+          "Vale la pena farsi visitare in tempi brevi anche quando l'eruzione si estende rapidamente, si accompagna a febbre, forma bolle grandi o coinvolge occhi e bocca. Negli altri casi è meglio evitare il fai da te con creme al cortisone prese in prestito o consigliate da altri: possono mascherare il quadro e rendere più difficile la diagnosi."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo dermatologo."
+  },
+  "instagram": {
+    "handle": "prof.massimogoitre",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "postRitratto",
+        "titolo": "Orticaria: allergia o no?",
+        "sottotitolo": "Spesso la risposta è no",
+        "didascalia": "Pomfi che prudono e cambiano posto nel giro di ore: è orticaria. Molti pensano subito a un cibo, ma l'allergia è solo una delle cause possibili. Infezioni, farmaci, pressione, freddo o calore possono avere un ruolo, e spesso una causa precisa non si trova. Se dura più di sei settimane, va seguita con un percorso dedicato.",
+        "hashtag": "#orticaria #allergia #dermatologia #dermatologo #torino"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Dermatite da contatto: i 5 colpevoli",
+        "punti": [
+          "Nichel: bottoni, fibbie, bigiotteria",
+          "Profumi, anche nelle creme",
+          "Conservanti di cosmetici e detergenti",
+          "Tinture per capelli",
+          "Gomme e materiali di lavoro"
+        ],
+        "didascalia": "La dermatite allergica da contatto compare di solito uno o due giorni dopo il contatto, per questo è difficile collegarla alla causa. Questi sono tra i responsabili più frequenti. Per sapere davvero a cosa si è allergici serve una visita e, quando indicato, i test epicutanei.",
+        "hashtag": "#dermatitedacontatto #nichel #allergia #pelle #dermatologo"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Psoriasi e stress: c'è un legame?",
+        "risposta": "Sì, e se ne tiene conto nella cura.",
+        "didascalia": "Molte persone con la psoriasi notano che le chiazze peggiorano nei periodi di tensione. Lo stress non è la causa della malattia, ma può scatenare o aggravare le fasi acute. Per questo, oltre alle terapie, conta anche prendersi cura dei propri ritmi.",
+        "hashtag": "#psoriasi #stress #pelle #dermatologia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "Ricevo anche presso",
+    "email": null,
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio di corso Stati Uniti",
+        "indirizzo": "Corso Stati Uniti 53",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "lo studio di corso Stati Uniti 53, Torino",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "011 501607"
+          }
+        ],
+        "nota": "Zona Crocetta, 10129 Torino."
+      },
+      {
+        "tipo": "J|medical",
+        "nome": "J|medical",
+        "indirizzo": "Via Druento 153/56",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "J|medical, via Druento 153/56, Torino",
+        "telefoni": [
+          {
+            "label": "Centralino J|medical",
+            "numero": "011 013 0303"
+          }
+        ],
+        "nota": "Centro polispecialistico: sono responsabile del Centro di Dermatologia."
+      }
+    ],
+    "struttureLabel": "Dove ho lavorato e collaboro",
+    "strutture": [
+      {
+        "nome": "Ospedale Koelliker",
+        "testo": "Direttore del Centro di Dermatologia, 1994 – 2016"
+      },
+      {
+        "nome": "Juventus Football Club",
+        "testo": "Consulente dermatologo dal 1993"
+      },
+      {
+        "nome": "Guardia di Finanza",
+        "testo": "Consulente del poliambulatorio di Torino dal 1980"
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Può chiamare lo studio allo 011 501607, oppure scegliere giorno e orario online: La ricontatteremo per confermare l'appuntamento.",
+    "telefono": "011501607",
+    "telefonoLabel": "011 501607",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "emailRichieste": "pragmasolutions.to@gmail.com",
+    "notaRichieste": "Anteprima: le richieste inviate da questa demo arrivano a Pragma Solutions, non al medico.",
+    "oggettoMail": "Richiesta di visita dermatologica",
+    "calendario": {
+      "titolo": "Prenoti online la Sua visita",
+      "intro": "Scelga giorno e orario che preferisce e lasci i Suoi dati: lo studio La ricontatterà per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": null,
+      "privacyTesto": "Questo modulo non salva i Suoi dati: prepara soltanto un messaggio nella Sua app di posta, che decide Lei se inviare. I dati indicati servono unicamente a rispondere alla richiesta di appuntamento.",
+      "notePlaceholder": "Per esempio da quanto tempo ha il problema, creme o farmaci già provati"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F2F5FC",
+      "ink": "#0F1A3D",
+      "muted": "#56607A",
+      "line": "#DDE3F0",
+      "brand": "#000E99",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#7695DC",
+      "deep": "#0A1450",
+      "deep-ink": "#E6ECFA"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Oswald",
+    "fontTesti": "Source Sans 3",
+    "favicon": "/goitre-jbh4/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/goitre-jbh4/brand/brand.json",
+    "pagine": [
+      "https://www.massimogoitre.com/",
+      "https://jmedical.eu/member/prof-massimo-goitre/"
+    ]
+  }
+}
