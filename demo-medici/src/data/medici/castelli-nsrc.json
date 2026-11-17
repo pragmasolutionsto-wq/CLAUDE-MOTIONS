@@ -1,0 +1,605 @@
+{
+  "slug": "castelli-nsrc",
+  "layout": "casistica",
+  "sitoOrigine": "https://www.urologocastelli.com/",
+  "titolo": "Dott.",
+  "nome": "Emanuele Castelli",
+  "specialita": "Specialista in Urologia",
+  "firma": "Urologo e andrologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Emanuele Castelli · Urologo e andrologo a Torino",
+    "description": "Sono urologo e andrologo a Torino: prostata, calcoli, tumori di prostata, vescica e rene, disfunzione erettile e varicocele. Oltre 4150 interventi come primo operatore nell'ultimo decennio."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/castelli-nsrc/img/marchio.png",
+    "logoChiaro": "/castelli-nsrc/img/marchio.png",
+    "marchio": "/castelli-nsrc/img/marchio.png",
+    "logoAlt": "Dott. Emanuele Castelli"
+  },
+  "foto": {
+    "ritratto": "/castelli-nsrc/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Emanuele Castelli",
+    "volto": "/castelli-nsrc/img/volto.webp",
+    "postRitratto": "/castelli-nsrc/img/rep-laboratorio.webp",
+    "microscopio": "/castelli-nsrc/img/rep-microscopio.webp"
+  },
+  "hero": {
+    "eyebrow": "Urologia e andrologia · Torino",
+    "numero": "4150+",
+    "titolo": "interventi come primo operatore nell'ultimo decennio",
+    "testo": "Lavoro in un ospedale sede di DEA di II livello e riferimento per l'onco-urologia: mi occupo di tutta la patologia urologica, anche la più complessa, in elezione e in urgenza.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti la Sua visita",
+      "aree": [
+        {
+          "nome": "Urologia",
+          "icona": "goccia",
+          "motivi": [
+            "Prostata ingrossata",
+            "PSA alto",
+            "Calcoli",
+            "Sangue nelle urine",
+            "Cistite o infezione",
+            "Incontinenza"
+          ],
+          "frasi": [
+            "un ingrossamento della prostata",
+            "un PSA alterato",
+            "dei calcoli urinari",
+            "la presenza di sangue nelle urine",
+            "una cistite o un'infezione urinaria",
+            "un'incontinenza urinaria"
+          ]
+        },
+        {
+          "nome": "Andrologia",
+          "icona": "persone",
+          "motivi": [
+            "Disfunzione erettile",
+            "Infertilità",
+            "Varicocele",
+            "Prostatite",
+            "Fimosi o frenulo"
+          ],
+          "frasi": [
+            "una disfunzione erettile",
+            "un problema di fertilità",
+            "un varicocele",
+            "una prostatite",
+            "una fimosi o un frenulo corto"
+          ]
+        },
+        {
+          "nome": "Oncologia urologica",
+          "icona": "scudo",
+          "motivi": [
+            "Tumore della prostata",
+            "Tumore della vescica",
+            "Tumore del rene",
+            "Tumore del testicolo",
+            "Secondo parere"
+          ],
+          "frasi": [
+            "un tumore della prostata",
+            "un tumore della vescica",
+            "un tumore del rene",
+            "un tumore del testicolo",
+            "un secondo parere su una diagnosi oncologica"
+          ]
+        }
+      ],
+      "motivi": [
+        "Prostata ingrossata",
+        "PSA alto",
+        "Calcoli",
+        "Sangue nelle urine",
+        "Cistite o infezione",
+        "Incontinenza",
+        "Disfunzione erettile",
+        "Infertilità",
+        "Varicocele",
+        "Prostatite",
+        "Fimosi o frenulo",
+        "Tumore della prostata",
+        "Tumore della vescica",
+        "Tumore del rene",
+        "Tumore del testicolo",
+        "Secondo parere"
+      ],
+      "motiviFrase": [
+        "un ingrossamento della prostata",
+        "un PSA alterato",
+        "dei calcoli urinari",
+        "la presenza di sangue nelle urine",
+        "una cistite o un'infezione urinaria",
+        "un'incontinenza urinaria",
+        "una disfunzione erettile",
+        "un problema di fertilità",
+        "un varicocele",
+        "una prostatite",
+        "una fimosi o un frenulo corto",
+        "un tumore della prostata",
+        "un tumore della vescica",
+        "un tumore del rene",
+        "un tumore del testicolo",
+        "un secondo parere su una diagnosi oncologica"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Sede"
+    }
+  },
+  "casistica": {
+    "titolo": "La mia casistica",
+    "intro": "Alcuni numeri dal mio curriculum operatorio, come primo operatore.",
+    "voci": [
+      {
+        "valore": 530,
+        "testo": "ureteroscopie operative con laser olmio, per i calcoli"
+      },
+      {
+        "valore": 290,
+        "testo": "trattamenti laser (tullio e Greenlight) per l'ingrossamento della prostata"
+      },
+      {
+        "valore": 276,
+        "testo": "prostatectomie radicali, open o laparoscopiche"
+      },
+      {
+        "valore": 148,
+        "testo": "nefrectomie e nefroureterectomie radicali"
+      },
+      {
+        "valore": 117,
+        "testo": "cistectomie radicali, con neovescica o derivazione urinaria"
+      },
+      {
+        "valore": 68,
+        "testo": "enucleoresezioni di tumori del rene"
+      }
+    ],
+    "nota": "Cistectomie, prostatectomie, nefrectomie ed enucleoresezioni si riferiscono all'ultimo decennio."
+  },
+  "tecnologie": [
+    {
+      "titolo": "Laparoscopia",
+      "testo": "Chirurgia mininvasiva di rene e prostata.",
+      "img": "/castelli-nsrc/img/rep-chirurgia.webp"
+    },
+    {
+      "titolo": "Laser per la prostata",
+      "testo": "Laser tullio e Greenlight per l'ipertrofia prostatica benigna.",
+      "img": "/castelli-nsrc/img/rep-guanti.webp"
+    },
+    {
+      "titolo": "Laser per i calcoli",
+      "testo": "Ureteroscopia con laser olmio, con strumento semirigido o flessibile; nefrolitotrissia percutanea ed ECIRS per i calcoli complessi.",
+      "img": "/castelli-nsrc/img/rep-piastra.webp"
+    },
+    {
+      "titolo": "Biopsia RM-fusion",
+      "testo": "Biopsie prostatiche guidate dalla risonanza, in regime ambulatoriale.",
+      "img": "/castelli-nsrc/img/rep-microscopio.webp"
+    }
+  ],
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": [
+      {
+        "titolo": "Urologia",
+        "voci": [
+          "Ipertrofia prostatica",
+          "Calcolosi urinaria",
+          "Cistite e infezioni urinarie",
+          "Incontinenza urinaria",
+          "Cistocele",
+          "Stenosi",
+          "Sindrome del giunto pielo-ureterale"
+        ]
+      },
+      {
+        "titolo": "Andrologia",
+        "voci": [
+          "Disfunzione erettile",
+          "Sterilità",
+          "Varicocele",
+          "Idrocele",
+          "Fimosi e frenulo corto",
+          "Prostatite e uretrite",
+          "Disturbi eiaculatori",
+          "Andropausa"
+        ]
+      },
+      {
+        "titolo": "Oncologia urologica",
+        "voci": [
+          "Tumore della prostata",
+          "Tumore della vescica",
+          "Tumore del rene",
+          "Tumore del testicolo"
+        ]
+      }
+    ]
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Ho svolto il mio percorso professionale in un ospedale sede di DEA di II livello e di riferimento per la patologia onco-urologica. Questo mi ha dato esperienza nell'affrontare la patologia urologica di ogni complessità e nel gestire, come primo operatore, interventi di alta complessità sia in elezione sia in urgenza.",
+      "All'Ospedale San Giovanni Bosco ho promosso gli incontri collegiali (GIC) con oncologi, anatomo-patologi, radioterapisti e radiologi per i tumori urologici, e ho mantenuto la consulenza con l'IRCCS di Candiolo. Nella Rete Oncologica del Piemonte e della Valle d'Aosta partecipo al gruppo per le raccomandazioni sui tumori urologici: nel 2016 ho curato il PDTA per le neoplasie vescicali, nel 2017 la revisione di quello per le neoplasie testicolari.",
+      "Ho un'ampia esperienza anche nella chirurgia dell'apparato genitale maschile, in particolare nel trattamento mininvasivo del varicocele."
+    ],
+    "tappe": [
+      {
+        "periodo": "1998",
+        "testo": "Laurea in Medicina e Chirurgia, Università di Torino."
+      },
+      {
+        "periodo": "1999",
+        "testo": "Premio dell'Accademia di Medicina di Torino per la tesi di laurea."
+      },
+      {
+        "periodo": "2003",
+        "testo": "Specializzazione in Urologia, Università di Torino."
+      },
+      {
+        "periodo": "2019",
+        "testo": "Master di II livello in Direzione e Management delle Aziende Sanitarie."
+      },
+      {
+        "periodo": "2020",
+        "testo": "Master di I livello in Gestione del Rischio Clinico."
+      },
+      {
+        "periodo": "2021",
+        "testo": "Master di II livello in Andrologia."
+      },
+      {
+        "periodo": "2022",
+        "testo": "Certificazione di abilitazione in chirurgia robotica."
+      }
+    ],
+    "pubblicazioni": {
+      "numero": "37",
+      "nota": "pubblicazioni elencate sul mio profilo, tra articoli su riviste internazionali e capitoli di libri",
+      "scelte": [
+        {
+          "titolo": "The Turin Pouch: a new technique of ileocecal cutaneous continent urinary diversion",
+          "rivista": "Urology",
+          "anno": "2013"
+        },
+        {
+          "titolo": "Seminal-sparing cystectomy: technical evolution and results over a 20-year period",
+          "rivista": "Urology",
+          "anno": "2014"
+        },
+        {
+          "titolo": "Laparoscopic microwave ablation and enucleation of small renal masses: preliminary experience",
+          "rivista": "European Urology",
+          "anno": "2011"
+        },
+        {
+          "titolo": "Stapled orthotopic ileal neobladder after radical cystectomy for bladder cancer",
+          "rivista": "European Journal of Surgical Oncology",
+          "anno": "2016"
+        },
+        {
+          "titolo": "Quality of Life After Prostate Cancer Diagnosis: Data from the Pros-IT CNR",
+          "rivista": "European Urology Focus",
+          "anno": "2017"
+        }
+      ]
+    },
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "Cosa dicono i pazienti",
+    "nota": "Circa 280 recensioni sul mio profilo MioDottore. Eccone alcune, riportate senza modifiche.",
+    "voci": [
+      {
+        "testo": "Medico molto preparato, empatico, chiaro nelle spiegazioni.Consigliato assolutamente"
+      },
+      {
+        "testo": "Mi ha operato 20 anni fa' ,ora ho portato mio figlio ,il dott. e' sempre supergentile,oltre che preparato."
+      },
+      {
+        "testo": "Disponibile, empatico e rassicurante. Visita completa e spiegazioni esaustive. Ottimo professionista."
+      },
+      {
+        "testo": "Ho effettuato visita dal dott. Castelli e sono rimasto molto soddisfatto. Ha ascoltato con attenzione i miei dubbi riguardo un problema prostatico e mi ha dato tutte le informazioni e le spiegazioni che desideravo.Ho apprezzato molto la sua professionalità."
+      },
+      {
+        "testo": "Non è la prima volta che vado dal Dott. Castelli. L'ho sempre trovato , puntuale e preciso , molto preparato. l'ho consigliato anche ad amici che si sono trovati bene."
+      },
+      {
+        "testo": "Estremamente competente, scrupoloso nella visita e di una cortesia unica. Ti fa sentire subito a tuo agio,  spiega tutto in modo chiaro e rassicurante."
+      },
+      {
+        "testo": "Ottimo medico; molto umano, ti mette a tuo agio e, per una persona ansiosa  come me ( soprattutto per quanto riguarda la salute )non avrei potuto trovare un medico migliore!"
+      },
+      {
+        "testo": "Dottore preparato, scrupoloso, puntuale e molto cordiale."
+      }
+    ]
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "categoria": "Andrologia",
+    "titolo": "Prostatite cronica: cause, diagnosi e terapie",
+    "img": "/castelli-nsrc/img/rep-lab-banco.webp",
+    "intro": "Fastidio al perineo, bruciore, bisogno di urinare spesso: la prostatite cronica è uno dei motivi più frequenti di visita urologica negli uomini giovani e di mezza età. Spesso è anche una delle più frustranti. Ecco cosa sappiamo, come si arriva alla diagnosi e quali cure esistono.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Non è una sola malattia",
+        "paragrafi": [
+          "Con «prostatite» si indicano situazioni diverse. La prostatite batterica acuta è un'infezione improvvisa, con febbre alta, brividi e dolore: va trattata subito. La prostatite batterica cronica è un'infezione che si ripresenta nel tempo. La forma più frequente, però, è la sindrome del dolore pelvico cronico, in cui i sintomi durano a lungo senza che si trovi un batterio responsabile.",
+          "Distinguere queste forme è il primo passo, perché la cura cambia molto dall'una all'altra, e una terapia giusta per una forma può essere inutile per un'altra."
+        ]
+      },
+      {
+        "titolo": "I sintomi",
+        "paragrafi": [
+          "I disturbi possono essere diversi da persona a persona e cambiare nel tempo. I più comuni sono:"
+        ],
+        "elenco": [
+          "dolore o senso di peso al perineo, sopra il pube, ai testicoli o alla base del pene;",
+          "bruciore o fastidio quando si urina;",
+          "bisogno di urinare spesso o con urgenza, anche di notte;",
+          "getto debole o sensazione di non svuotare bene la vescica;",
+          "dolore durante o dopo l'eiaculazione."
+        ],
+        "chiusura": "Febbre alta con brividi e difficoltà a urinare sono invece segni di una forma acuta: in questo caso serve una valutazione medica in giornata."
+      },
+      {
+        "titolo": "Perché si sviluppa",
+        "paragrafi": [
+          "Nelle forme batteriche, i germi arrivano alla prostata in genere risalendo dall'uretra. Nella sindrome del dolore pelvico cronico le cause sono più sfumate e spesso si sommano: un'infiammazione che persiste, una tensione dei muscoli del pavimento pelvico, una maggiore sensibilità dei nervi della zona.",
+          "Anche lo stress, la sedentarietà, alcune abitudini come stare a lungo seduti o andare in bicicletta per molte ore possono peggiorare i sintomi."
+        ]
+      },
+      {
+        "titolo": "Come si arriva alla diagnosi",
+        "paragrafi": [
+          "Si parte da una visita accurata: le domande sui sintomi, sulla loro durata e su cosa li peggiora, e l'esame obiettivo, compresa la valutazione della prostata.",
+          "Gli esami si scelgono caso per caso: esame e coltura delle urine, a volte prelevate in più tempi per capire da dove viene un'eventuale infezione, esame del liquido seminale, ecografia, uroflussometria per valutare il getto. Servono anche a escludere altri problemi che possono dare sintomi simili, come i calcoli, una stenosi dell'uretra o, negli uomini più avanti con l'età, un ingrossamento della prostata."
+        ]
+      },
+      {
+        "titolo": "Le cure",
+        "paragrafi": [
+          "Quando c'è un'infezione batterica, la base è una terapia antibiotica mirata, spesso per alcune settimane. Nelle forme senza batteri gli antibiotici non servono e si costruisce una terapia su più fronti, in base ai sintomi prevalenti.",
+          "Possono aiutare farmaci che rilassano la muscolatura della prostata e della vescica, antinfiammatori per periodi definiti, la fisioterapia del pavimento pelvico. In molti casi la combinazione di più interventi funziona meglio di un singolo farmaco."
+        ]
+      },
+      {
+        "titolo": "Cosa può fare Lei",
+        "paragrafi": [
+          "Alcune abitudini aiutano a ridurre i sintomi:"
+        ],
+        "elenco": [
+          "bere a sufficienza durante la giornata;",
+          "limitare alcol, caffè, cibi molto piccanti, se nota che peggiorano i sintomi;",
+          "alzarsi spesso se lavora seduto e usare un cuscino adatto;",
+          "fare attività fisica regolare, preferendo il cammino o il nuoto alla bicicletta nelle fasi di fastidio;",
+          "non interrompere le terapie di Sua iniziativa."
+        ]
+      },
+      {
+        "titolo": "Prostatite e vita di coppia",
+        "paragrafi": [
+          "Il dolore dopo l'eiaculazione, il calo del desiderio legato al fastidio, la preoccupazione di trasmettere un'infezione: la prostatite cronica pesa spesso anche sulla vita sessuale. Sono aspetti di cui si può e si deve parlare in visita, senza imbarazzo.",
+          "Nelle forme senza batteri non c'è rischio di contagio per la partner. Quando invece c'è un'infezione, a volte è utile valutare anche la coppia, per evitare che il problema si ripresenti. In alcuni casi, la prostatite si accompagna a una difficoltà di erezione: anche questa si affronta, perché spesso migliora insieme ai sintomi."
+        ]
+      },
+      {
+        "titolo": "Quando tornare dal medico",
+        "paragrafi": [
+          "Durante il percorso di cura, è bene ricontattare lo specialista se:"
+        ],
+        "elenco": [
+          "compaiono febbre, brividi o difficoltà a urinare;",
+          "nelle urine o nello sperma compare del sangue;",
+          "i sintomi peggiorano nonostante la terapia;",
+          "dopo alcune settimane di cura non nota alcun miglioramento."
+        ],
+        "chiusura": "A volte serve cambiare strategia: è normale, e fa parte di un percorso costruito sulla persona."
+      },
+      {
+        "titolo": "Un disturbo che si può gestire",
+        "paragrafi": [
+          "La prostatite cronica è un disturbo benigno: non aumenta il rischio di tumore della prostata. Può però incidere molto sulla qualità della vita, sul sonno e sulla sfera sessuale, e per questo merita attenzione.",
+          "Il miglioramento è spesso graduale e richiede qualche controllo. Avere un riferimento stabile, che segua l'andamento nel tempo e adatti la terapia, fa la differenza. Per questo, alla prima visita, oltre alla diagnosi Le propongo un piano con tempi chiari: cosa fare, per quanto tempo e quando rivederci per valutare i risultati.",
+          "Se i disturbi durano da mesi e ha già provato più cure senza beneficio, non si scoraggi: spesso una rivalutazione completa permette di trovare la combinazione giusta."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo urologo."
+  },
+  "instagram": {
+    "handle": "dott.emanuelecastelli",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Prostatite: i sintomi che si confondono",
+        "punti": [
+          "Dolore al perineo o ai testicoli",
+          "Bruciore quando si urina",
+          "Bisogno frequente di urinare",
+          "Fastidio dopo l'eiaculazione"
+        ],
+        "didascalia": "Sono disturbi che si possono confondere con una cistite, un calcolo o un problema muscolare. Per questo la diagnosi parte sempre da una visita accurata e da esami scelti caso per caso.",
+        "hashtag": "#prostatite #urologia #saluteuomo #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Cistite nell'uomo: è normale?",
+        "risposta": "No, va sempre approfondita.",
+        "didascalia": "Nella donna la cistite è frequente; nell'uomo è più rara e spesso ha una causa da cercare: la prostata, un calcolo, un restringimento dell'uretra. Una visita urologica serve a capire perché è successa.",
+        "hashtag": "#cistite #urologo #infezioniurinarie"
+      },
+      {
+        "stile": "foto",
+        "immagine": "microscopio",
+        "titolo": "Disfunzione erettile: la prima visita",
+        "sottotitolo": "Cosa aspettarsi, senza imbarazzo",
+        "didascalia": "Alla prima visita parliamo dei sintomi, dei farmaci che prende, delle abitudini; poi visita ed eventuali esami del sangue. Spesso la disfunzione erettile è un segnale da ascoltare anche per la salute di cuore e vasi.",
+        "hashtag": "#disfunzioneerettile #andrologia #saluteuomo"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": null,
+    "luoghi": [
+      {
+        "tipo": "Poliambulatorio",
+        "nome": "LARC Poliambulatorio",
+        "indirizzo": "Via Mombarcaro 80",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "il Poliambulatorio LARC, via Mombarcaro 80, Torino",
+        "telefoni": [
+          {
+            "label": "LARC",
+            "numero": "011 505983"
+          }
+        ]
+      },
+      {
+        "tipo": "Centro medico",
+        "nome": "Igea Centro Medico",
+        "indirizzo": "Via Tronzano 19",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "Igea Centro Medico, via Tronzano 19, Torino",
+        "telefoni": [
+          {
+            "label": "Igea",
+            "numero": "011 205 0175"
+          }
+        ]
+      },
+      {
+        "tipo": "Ospedale",
+        "nome": "Ospedale San Giovanni Bosco",
+        "indirizzo": "Piazza del Donatore di Sangue 3",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "l'Ospedale San Giovanni Bosco, piazza del Donatore di Sangue 3, Torino",
+        "telefoni": [
+          {
+            "label": "Ospedale",
+            "numero": "011 240 2210"
+          }
+        ]
+      },
+      {
+        "tipo": "Ospedale",
+        "nome": "Ospedale Regionale Umberto Parini",
+        "indirizzo": "Viale Ginevra 3",
+        "citta": "Aosta",
+        "mappa": true,
+        "frase": "l'Ospedale Regionale Umberto Parini, viale Ginevra 3, Aosta",
+        "telefoni": []
+      }
+    ],
+    "consulenzaOnline": {
+      "testo": "Faccio anche consulenze online.",
+      "numero": "335 542 2375"
+    },
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Può chiamare la sede che preferisce oppure scegliere giorno e orario online. Le prenotazioni sono confermate solo dopo il contatto telefonico.",
+    "telefono": "011505983",
+    "telefonoLabel": "011 505983",
+    "chiamaLabel": "il poliambulatorio",
+    "whatsapp": null,
+    "emailRichieste": "pragmasolutions.to@gmail.com",
+    "notaRichieste": "Anteprima: le richieste inviate da questa demo arrivano a Pragma Solutions, non al medico.",
+    "oggettoMail": "Richiesta di visita urologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce venire e lasci i Suoi dati: La ricontatteremo per confermare. Le prenotazioni sono confermate solo dopo il contatto telefonico.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate per telefono.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": null,
+      "privacyTesto": "Questo modulo non salva i Suoi dati: prepara soltanto un messaggio nella Sua app di posta, che decide Lei se inviare. I dati indicati servono unicamente a rispondere alla richiesta di appuntamento.",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F2F5F8",
+      "ink": "#101C2C",
+      "muted": "#566479",
+      "line": "#DCE3EB",
+      "brand": "#17457A",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#E0892E",
+      "deep": "#0C1B2E",
+      "deep-ink": "#E1E9F2"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap",
+    "fontTitoli": "Space Grotesk",
+    "fontTesti": "IBM Plex Sans",
+    "favicon": "/castelli-nsrc/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/castelli-nsrc/brand/brand.json",
+    "pagine": [
+      "https://www.urologocastelli.com/"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "sito": "https://www.urologocastelli.com/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "Sito-template generato da MioDottore (DocPlanner)",
+  "trello": "Prospect medici · Dott. Emanuele Castelli – Urologia",
+  "logo": {
+    "trovato": false,
+    "nota": "Nessun logo: intestazione di testo in Space Grotesk + volto tondo."
+  },
+  "foto": {
+    "tenute": [
+      {
+        "file": "ritratto-miodottore.jpg",
+        "desc": "Foto tessera 437×438: solo formati piccoli e medi",
+        "fonte": "foto profilo MioDottore sul suo sito"
+      },
+      {
+        "file": "miniatura-studio-140px.jpg",
+        "desc": "Miniatura 140px, non usata in pagina"
+      }
+    ],
+    "nota": "Nessuna foto grande trovata: layout costruito sui numeri della casistica. Repertorio Unsplash per tecnologie e articolo."
+  },
+  "colori": {
+    "nota": "Nessun colore proprio (template MioDottore). Palette scelta: blu #17457A, arancio #E0892E, blu notte #0C1B2E."
+  },
+  "font": {
+    "scelti": "Space Grotesk (titoli e numeri) + IBM Plex Sans (testi)"
+  },
+  "recensioni": "Circa 280 recensioni MioDottore sul suo sito. In pagina 8, alla lettera, anonime.",
+  "dati": {
+    "sedi": [
+      "LARC Poliambulatorio, via Mombarcaro 80, Torino · 011 505983",
+      "Igea Centro Medico, via Tronzano 19, Torino · 011 205 0175",
+      "Ospedale San Giovanni Bosco, piazza del Donatore di Sangue 3, Torino · 011 240 2210",
+      "Ospedale Regionale Umberto Parini, viale Ginevra 3, Aosta"
+    ],
+    "consulenza_online": "335 542 2375",
+    "prenotazioni": "Numero MioDottore 011 1980 2397 (call center, non suo): non usato. Sul sito le prenotazioni sono confermate solo per telefono.",
+    "email": "nessuna",
+    "casistica": "4150+ interventi come primo operatore nell'ultimo decennio (dal suo CV)",
+    "pubblicazioni": "37, tra cui la tecnica 'Turin Pouch' (Urology 2013)"
+  }
+}
