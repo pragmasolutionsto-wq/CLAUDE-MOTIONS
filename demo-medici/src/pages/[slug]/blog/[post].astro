@@ -1,0 +1,11 @@
+---
+// Articoli del blog (solo per i medici che hanno "blog" nel JSON)
+import ArticoloPagina from '../../../components/ArticoloPagina.astro';
+import { medici, type Medico } from '../../../lib/medici';
+
+export function getStaticPaths() {
+  return medici.flatMap((m) => (((m as any).blog ?? []) as any[]).map((a) => ({ params: { slug: m.slug, post: a.id }, props: { m, a } })));
+}
+const { m, a } = Astro.props as { m: Medico; a: any };
+---
+<ArticoloPagina m={m} a={a} />

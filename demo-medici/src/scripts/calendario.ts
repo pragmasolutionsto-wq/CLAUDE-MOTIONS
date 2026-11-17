@@ -1,5 +1,5 @@
 // Calendario di richiesta prenotazione: giorno → orario → dati → invio (WhatsApp o mail già compilati).
-type Cfg = { giorni: number[]; mattina: string[]; pomeriggio: string[]; settimane: number; wa: string; email: string; oggetto: string };
+type Cfg = { giorni: number[]; mattina: string[]; pomeriggio: string[]; settimane: number; wa: string; email: string; oggetto: string; saluto?: string };
 
 const sez = document.querySelector<HTMLElement>('[data-calendario]');
 if (sez) {
@@ -144,7 +144,7 @@ if (sez) {
     const dataLunga = fmtLungo.format(giorno!);
     const facoltativi = [v('email') && `Email: ${v('email')}`, v('note') && `Note: ${v('note')}`].filter(Boolean);
     const righe = [
-      `Buongiorno Dottore, vorrei prenotare una visita per ${v('motivo')} presso ${v('sede')}.`,
+      `Buongiorno ${cfg.saluto || 'Dottore'}, vorrei prenotare una visita per ${v('motivo')} presso ${v('sede')}.`,
       '',
       `Data e ora preferite: ${dataLunga}, ore ${ora}`,
       `Tipo di visita: ${v('tipo')}`,

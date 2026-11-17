@@ -5,13 +5,15 @@ interface Props { m: Medico; home?: boolean }
 const { m, home = true } = Astro.props;
 const base = `/${m.slug}`;
 const link = [
-  ['Chi sono', '#chi-sono'], ['Di cosa mi occupo', '#aree'], ['Come lavoro', '#come-lavoro'], ['Articoli', '#articoli'], ['Dove ricevo', '#sedi'],
+  ['Chi sono', '#chi-sono'], ['Di cosa mi occupo', '#aree'], ['Come lavoro', '#come-lavoro'], [(m as any).blog ? 'Blog' : 'Articoli', '#articoli'], ['Dove ricevo', '#sedi'],
 ].map(([t, h]) => [t, home ? h : `${base}${h}`]);
 ---
 <header class="sticky z-30 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
   <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
     <a href={base} class="block min-w-0 shrink">
-      {(m.brand as any).header === 'marchio' ? (
+      {(m.brand as any).header === 'testo' ? (
+        <span class="block min-w-0 leading-tight"><span class="block truncate font-head text-[17px] font-semibold text-ink sm:text-xl">{nomeCompleto(m)}</span><span class="block text-[11px] uppercase tracking-[0.16em] text-muted">{m.firma} · {m.citta}</span></span>
+      ) : (m.brand as any).header === 'marchio' ? (
         <span class="flex min-w-0 items-center gap-2.5">
           <img src={m.brand.marchio} alt="" width="44" height="44" class="h-10 w-10 sm:h-11 sm:w-11" />
           <span class="min-w-0 leading-tight"><span class="block truncate font-head text-[16px] font-semibold text-ink sm:text-lg">{nomeCompleto(m)}</span><span class="hidden text-xs uppercase tracking-[0.08em] text-muted sm:block">{m.firma}</span></span>

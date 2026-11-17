@@ -1,0 +1,775 @@
+{
+  "slug": "cucchiarale-tfcw",
+  "layout": "rivista",
+  "sitoOrigine": "https://urologotorino.com/",
+  "titolo": "Dott.ssa",
+  "nome": "Giuseppina Cucchiarale",
+  "specialita": "Specialista in Urologia",
+  "firma": "Urologa",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott.ssa Giuseppina Cucchiarale · Urologa a Torino",
+    "description": "Sono urologa a Torino: visite urologiche per donne e uomini nel mio studio in San Salvario. Cistiti, incontinenza, prolasso, prostata. Responsabile di Urologia alla Clinica Cellini."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "/cucchiarale-tfcw/img/marchio.png",
+    "logoAlt": "Dott.ssa Giuseppina Cucchiarale, urologa"
+  },
+  "foto": {
+    "ritratto": "/cucchiarale-tfcw/img/ritratto.webp",
+    "ritrattoLargo": "/cucchiarale-tfcw/img/ritratto-largo.webp",
+    "ritrattoAlt": "La Dott.ssa Giuseppina Cucchiarale nel suo studio",
+    "volto": "/cucchiarale-tfcw/img/volto.webp",
+    "studio": "/cucchiarale-tfcw/img/studio-quadri.webp",
+    "lei": "/cucchiarale-tfcw/img/rep-mani.webp",
+    "lui": "/cucchiarale-tfcw/img/rep-uomo.webp",
+    "postRitratto": "/cucchiarale-tfcw/img/studio-quadri.webp"
+  },
+  "hero": {
+    "eyebrow": "Urologa · San Salvario, Torino",
+    "titolo": "Visite urologiche per donne e uomini",
+    "testo": "Sono responsabile dell'Unità Funzionale di Urologia 1 alla Clinica Cellini (Humanitas). Nel mio studio in corso Vittorio Emanuele II ricevo su appuntamento dal lunedì al venerdì.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami lo studio",
+    "box": {
+      "titolo": "Prenoti una visita",
+      "gruppi": [
+        {
+          "nome": "Donna",
+          "motivi": [
+            "Cistiti ricorrenti",
+            "Perdite di urina",
+            "Disturbi in menopausa",
+            "Prolasso vescicale",
+            "Sangue nelle urine",
+            "Altro disturbo"
+          ],
+          "frasi": [
+            "delle cistiti ricorrenti",
+            "delle perdite di urina",
+            "dei disturbi urinari in menopausa",
+            "un prolasso vescicale",
+            "la presenza di sangue nelle urine",
+            "un altro disturbo urologico"
+          ]
+        },
+        {
+          "nome": "Uomo",
+          "motivi": [
+            "Prostata",
+            "Disturbi della minzione",
+            "Prostatite",
+            "Disfunzione erettile",
+            "Sangue nelle urine",
+            "Altro disturbo"
+          ],
+          "frasi": [
+            "un problema alla prostata",
+            "dei disturbi della minzione",
+            "una prostatite",
+            "una disfunzione erettile",
+            "la presenza di sangue nelle urine",
+            "un altro disturbo urologico"
+          ]
+        }
+      ],
+      "fasce": [
+        "Mattina",
+        "Pomeriggio",
+        "Indifferente"
+      ],
+      "fasceFrase": [
+        "al mattino",
+        "al pomeriggio",
+        "in qualsiasi orario"
+      ],
+      "motivi": [
+        "Cistiti ricorrenti",
+        "Perdite di urina",
+        "Disturbi in menopausa",
+        "Prolasso vescicale",
+        "Sangue nelle urine",
+        "Altro disturbo",
+        "Prostata",
+        "Disturbi della minzione",
+        "Prostatite",
+        "Disfunzione erettile"
+      ],
+      "motiviFrase": [
+        "delle cistiti ricorrenti",
+        "delle perdite di urina",
+        "dei disturbi urinari in menopausa",
+        "un prolasso vescicale",
+        "la presenza di sangue nelle urine",
+        "un altro disturbo urologico",
+        "un problema alla prostata",
+        "dei disturbi della minzione",
+        "una prostatite",
+        "una disfunzione erettile"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Sede"
+    }
+  },
+  "perChi": [
+    {
+      "id": "per-lei",
+      "titolo": "Per lei",
+      "img": "/cucchiarale-tfcw/img/rep-mani.webp",
+      "testo": "Anche la donna ha bisogno dell'urologo: reni, ureteri e vescica sono gli stessi. La visita urologica femminile si svolge in modo simile a una visita ginecologica e non è dolorosa né invasiva; spesso un solo controllo basta per arrivare alla diagnosi dei disturbi più lievi.",
+      "voci": [
+        "Cistiti ricorrenti",
+        "Incontinenza urinaria",
+        "Disturbi urinari della menopausa",
+        "Prolasso vescicale",
+        "Sangue nelle urine",
+        "Disturbi della minzione"
+      ],
+      "articoli": [
+        "cistiti-ricorrenti",
+        "menopausa",
+        "prolasso-vescicale"
+      ]
+    },
+    {
+      "id": "per-lui",
+      "titolo": "Per lui",
+      "img": "/cucchiarale-tfcw/img/rep-uomo.webp",
+      "testo": "La differenza principale tra l'apparato urinario maschile e quello femminile è la prostata. In visita parliamo dei disturbi senza imbarazzo; dopo la diagnosi imposto la terapia e, se serve, l'intervento, scegliendo sempre le tecniche meno invasive.",
+      "voci": [
+        "Ingrossamento della prostata",
+        "Prostatiti",
+        "Disturbi della minzione",
+        "Disfunzione erettile",
+        "Malattie sessualmente trasmissibili",
+        "Sangue nelle urine"
+      ],
+      "articoli": [
+        "disturbi-minzione"
+      ]
+    }
+  ],
+  "esami": {
+    "titolo": "In studio",
+    "voci": [
+      "Visita urologica femminile",
+      "Visita urologica maschile",
+      "Uroflussometria",
+      "Cistoscopia"
+    ]
+  },
+  "tv": {
+    "titolo": "Tutti i colori delle urine",
+    "programma": "Martedì Salute, 12 febbraio 2019",
+    "testo": "In televisione ho spiegato a cosa fare attenzione nel colore delle urine e quando rivolgersi al medico.",
+    "url": "https://www.youtube.com/watch?v=n5bX81vKPDk",
+    "img": "https://i.ytimg.com/vi/n5bX81vKPDk/hqdefault.jpg"
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Sono urologa, specialista nella diagnosi e nella cura delle malattie delle vie urinarie, nella donna e nell'uomo. Unisco l'attività alla Clinica Cellini del gruppo Humanitas, dove dal 2017 sono responsabile dell'Unità Funzionale di Urologia 1, alla libera professione nel mio studio in San Salvario.",
+      "Ho maturato un'esperienza particolare nei disturbi funzionali del basso apparato urinario, seguendo per anni l'attività dell'ambulatorio di urodinamica e la chirurgia per correggere le alterazioni del pavimento pelvico. Quando serve un intervento, privilegio le tecniche meno invasive."
+    ],
+    "tappe": [
+      {
+        "periodo": "1999–2008",
+        "testo": "Dirigente medico di I livello, Urologia dell'Ospedale S. Giovanni Battista (Molinette), Torino."
+      },
+      {
+        "periodo": "Dal 2009",
+        "testo": "Urologa alla Clinica Cellini, gruppo Humanitas, Torino."
+      },
+      {
+        "periodo": "Dal 2017",
+        "testo": "Responsabile dell'Unità Funzionale di Urologia 1 della Clinica Cellini."
+      }
+    ],
+    "formazione": [
+      "Laurea in Medicina e Chirurgia, Università di Torino",
+      "Specializzazione in Urologia, Università di Torino (2002)",
+      "Perfezionamento in Chirurgia laparoscopica, Università di Torino",
+      "Diploma in Management e qualità in urologia",
+      "Master in Oncologia prostatica"
+    ],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "cistiti-ricorrenti",
+    "categoria": "Per lei",
+    "titolo": "Cistiti ricorrenti nella donna: perché tornano e come prevenirle",
+    "img": "/cucchiarale-tfcw/img/rep-stick.webp",
+    "intro": "Bruciore, bisogno continuo di urinare, la sensazione di non svuotare mai la vescica. Per molte donne la cistite non è un episodio isolato ma un disturbo che si ripresenta. Ecco perché succede, quando serve l'urologa e cosa si può fare per prevenirla.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Quando si parla di cistite ricorrente",
+        "paragrafi": [
+          "La cistite è un'infiammazione della vescica, quasi sempre causata da batteri che risalgono dall'uretra. Nella donna è molto più frequente che nell'uomo perché l'uretra è corta e vicina alla zona vaginale e anale.",
+          "Si parla di cistite ricorrente quando gli episodi sono almeno due in sei mesi, oppure tre in un anno. A quel punto non basta più curare il singolo episodio: bisogna capire perché si ripresenta."
+        ]
+      },
+      {
+        "titolo": "Non sempre è cistite",
+        "paragrafi": [
+          "Spesso si chiama «cistite» qualsiasi disturbo con bruciore e bisogno frequente di urinare. A volte, però, dietro gli stessi sintomi c'è altro: un'irritazione della vescica senza infezione, un'infiammazione vaginale, un calcolo, un problema di svuotamento. Quando nelle urine compare sangue, va sempre fatta una valutazione.",
+          "Per questo, se le cistiti tornano, il primo passo non è un altro antibiotico preso «per sicurezza», ma una visita urologica che inquadri il problema."
+        ]
+      },
+      {
+        "titolo": "Perché torna",
+        "paragrafi": [
+          "Le cause sono spesso più di una e si sommano. Le più frequenti sono:"
+        ],
+        "elenco": [
+          "i rapporti sessuali, che possono favorire la risalita dei batteri;",
+          "la menopausa, perché il calo degli estrogeni rende più fragili le mucose;",
+          "la stitichezza e alcune alterazioni della flora intestinale;",
+          "bere poco e trattenere a lungo l'urina;",
+          "uno svuotamento incompleto della vescica, per esempio in caso di prolasso;",
+          "terapie antibiotiche ripetute e non mirate, che selezionano batteri più resistenti."
+        ]
+      },
+      {
+        "titolo": "Come si arriva alla diagnosi",
+        "paragrafi": [
+          "In visita raccolgo la storia degli episodi: quanti, quando, cosa li scatena, quali terapie sono state fatte. Segue la visita urologica, che nella donna si svolge in modo simile a una visita ginecologica e non è dolorosa.",
+          "Gli esami si scelgono caso per caso: l'esame delle urine con urinocoltura e antibiogramma, che indica il batterio e l'antibiotico efficace, l'ecografia dell'apparato urinario con la misura dell'urina che resta in vescica, l'uroflussometria. Nei casi selezionati può servire una cistoscopia, che permette di guardare l'interno della vescica."
+        ]
+      },
+      {
+        "titolo": "Le cure",
+        "paragrafi": [
+          "Il singolo episodio si tratta con un antibiotico scelto, quando possibile, in base all'urinocoltura. Prenderlo per il tempo indicato, senza interromperlo appena i sintomi migliorano, riduce il rischio che l'infezione si ripresenti.",
+          "Per le forme ricorrenti si costruisce un piano di prevenzione, che può comprendere integratori specifici, la cura della stitichezza, in menopausa terapie locali a base di estrogeni prescritte dallo specialista e, in casi selezionati, profilassi antibiotiche a basso dosaggio per periodi definiti. Se c'è una causa anatomica, come un prolasso, si valuta anche quella."
+        ]
+      },
+      {
+        "titolo": "Cosa può fare Lei ogni giorno",
+        "paragrafi": [
+          "Alcune abitudini, semplici, fanno davvero la differenza:"
+        ],
+        "elenco": [
+          "bere in modo regolare durante la giornata, così da urinare spesso;",
+          "non trattenere a lungo lo stimolo;",
+          "urinare dopo i rapporti sessuali;",
+          "per l'igiene intima, usare detergenti delicati e lavarsi dal davanti verso il dietro;",
+          "preferire biancheria di cotone e non troppo stretta;",
+          "curare la regolarità intestinale."
+        ],
+        "chiusura": "Sono piccoli accorgimenti, ma da soli possono ridurre in modo sensibile il numero degli episodi."
+      },
+      {
+        "titolo": "Quando chiamare subito il medico",
+        "paragrafi": [
+          "Ci sono situazioni in cui non bisogna aspettare:"
+        ],
+        "elenco": [
+          "febbre, brividi o dolore al fianco, che possono indicare un'infezione del rene;",
+          "sangue nelle urine;",
+          "cistite in gravidanza;",
+          "sintomi che non migliorano dopo due o tre giorni di terapia."
+        ]
+      },
+      {
+        "titolo": "Il ruolo dell'urinocoltura",
+        "paragrafi": [
+          "Nelle cistiti ricorrenti l'urinocoltura è l'esame più importante. Va raccolta prima di iniziare l'antibiotico, con il primo mitto scartato e un contenitore sterile. Indica quale batterio è presente e a quali farmaci è sensibile: così si evita di cambiare antibiotico a tentativi e di favorire resistenze."
+        ]
+      },
+      {
+        "titolo": "Cistite e vita di coppia",
+        "paragrafi": [
+          "Molte donne notano che gli episodi compaiono dopo i rapporti sessuali. Non significa che il partner abbia un'infezione: durante il rapporto i batteri presenti normalmente nella zona possono essere spinti verso l'uretra.",
+          "Urinare subito dopo, bere un bicchiere d'acqua, curare la lubrificazione quando le mucose sono secche aiuta molto. Nei casi più frequenti si può valutare una prevenzione mirata, legata proprio ai rapporti. È un tema di cui parlo apertamente in visita, perché incide sulla serenità di coppia."
+        ]
+      },
+      {
+        "titolo": "Cistite in menopausa",
+        "paragrafi": [
+          "Dopo la menopausa le cistiti diventano spesso più frequenti. Il calo degli estrogeni assottiglia le mucose e cambia la flora vaginale, che normalmente protegge dalla risalita dei batteri.",
+          "In questi casi le terapie locali, prescritte dallo specialista, sono uno degli strumenti più efficaci di prevenzione. Conta anche controllare che la vescica si svuoti bene, perché con l'età un piccolo prolasso può favorire il ristagno di urina."
+        ]
+      },
+      {
+        "titolo": "Un disturbo che si può controllare",
+        "paragrafi": [
+          "Le cistiti ricorrenti pesano sulla vita di tutti i giorni, sul lavoro, sulla vita di coppia. Spesso le donne arrivano in visita dopo anni di cure fatte da sole. Con una diagnosi precisa e un piano di prevenzione costruito su misura, nella maggior parte dei casi gli episodi si riducono molto.",
+          "In studio dedico a questo tema il tempo che serve: è uno dei motivi più frequenti per cui le donne vengono dall'urologa, ed è giusto parlarne senza imbarazzo."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni della Sua urologa."
+  },
+  "blog": [
+    {
+      "id": "menopausa",
+      "categoria": "Per lei",
+      "titolo": "Disturbi urinari in menopausa: cosa succede e cosa si può fare",
+      "img": "/cucchiarale-tfcw/img/rep-colloquio.webp",
+      "tempoLettura": "5 min",
+      "intro": "Piccole perdite quando si tossisce, bisogno urgente di urinare, cistiti più frequenti. Con la menopausa molte donne notano cambiamenti nella vescica. Non sono una conseguenza inevitabile dell'età: nella maggior parte dei casi si possono curare.",
+      "sezioni": [
+        {
+          "titolo": "Perché la menopausa cambia la vescica",
+          "paragrafi": [
+            "Con la menopausa calano gli estrogeni, ormoni che mantengono elastiche e ben irrorate le mucose della vagina, dell'uretra e della vescica. I tessuti diventano più sottili e più fragili, e il pavimento pelvico, l'insieme di muscoli che sostiene gli organi del bacino, può perdere tono.",
+            "A questo si sommano gli anni, le gravidanze e i parti, l'aumento di peso, la tosse cronica, la stitichezza: tutti fattori che mettono sotto sforzo il pavimento pelvico."
+          ]
+        },
+        {
+          "titolo": "I disturbi più frequenti",
+          "paragrafi": [
+            "I cambiamenti possono manifestarsi in modi diversi:"
+          ],
+          "elenco": [
+            "incontinenza da sforzo: piccole perdite quando si tossisce, si starnutisce, si ride o si solleva un peso;",
+            "incontinenza da urgenza: uno stimolo improvviso e difficile da trattenere;",
+            "bisogno di urinare spesso, anche di notte;",
+            "bruciore e fastidio legati alla secchezza delle mucose;",
+            "cistiti più frequenti rispetto al passato."
+          ],
+          "chiusura": "Spesso le forme si mescolano, e capire quale prevale è importante per scegliere la cura."
+        },
+        {
+          "titolo": "Il disagio che non si dice",
+          "paragrafi": [
+            "Nella maggior parte dei casi si tratta di una lieve incontinenza, ma il disagio che provoca è grande. Molte donne rinunciano allo sport, ai viaggi, alla vita sociale; altre si abituano agli assorbenti e smettono di parlarne.",
+            "È un errore pensare che sia normale alla propria età. Sono disturbi frequenti, ma non vanno accettati in silenzio: esistono soluzioni efficaci."
+          ]
+        },
+        {
+          "titolo": "La visita urologica",
+          "paragrafi": [
+            "La visita si svolge in modo simile a quella ginecologica e non è dolorosa. Le chiedo quando compaiono le perdite, quanto spesso, cosa le scatena, quanto beve e come sono le Sue abitudini. A volte Le chiedo di compilare per qualche giorno un diario minzionale, cioè un foglio dove annotare quanto beve e quando urina.",
+            "Se serve, completo con un'ecografia, l'uroflussometria o un esame urodinamico, che studia come la vescica si riempie e si svuota."
+          ]
+        },
+        {
+          "titolo": "Le cure senza farmaci",
+          "paragrafi": [
+            "Il primo passo è spesso la riabilitazione del pavimento pelvico: esercizi mirati, insegnati da professionisti dedicati, che rinforzano i muscoli e migliorano il controllo. Funzionano soprattutto nell'incontinenza da sforzo e richiedono costanza per qualche mese.",
+            "Aiutano anche alcune abitudini: distribuire i liquidi nella giornata e ridurli la sera, limitare caffè, tè e alcol, che irritano la vescica, curare la stitichezza, ridurre il peso in eccesso."
+          ]
+        },
+        {
+          "titolo": "Farmaci e chirurgia",
+          "paragrafi": [
+            "Quando prevale l'urgenza, esistono farmaci che rilassano la vescica. Le terapie locali a base di estrogeni, prescritte dallo specialista, migliorano il trofismo delle mucose e riducono bruciore e cistiti.",
+            "Nell'incontinenza da sforzo che non migliora con la riabilitazione, si può valutare un intervento: oggi le tecniche sono mininvasive e in molti casi permettono una ripresa rapida. La scelta si fa insieme, dopo aver valutato bene il tipo di incontinenza e le Sue aspettative."
+          ]
+        },
+        {
+          "titolo": "Non solo età: altre cause da escludere",
+          "paragrafi": [
+            "Non tutti i disturbi che compaiono in menopausa dipendono dalla menopausa. Un'infezione, un calcolo, un farmaco nuovo, il diabete o un problema neurologico possono dare sintomi simili. Per questo la visita comprende sempre la storia clinica completa e, quando serve, gli esami delle urine: curare la causa giusta è il modo più rapido per stare meglio.",
+            "Lo stesso vale per il sangue nelle urine, che in menopausa non va mai attribuito automaticamente a una cistite: va sempre approfondito con l'urologa, anche se compare una sola volta."
+          ]
+        },
+        {
+          "titolo": "Il diario minzionale",
+          "paragrafi": [
+            "È uno strumento semplice e molto utile. Per due o tre giorni si annotano su un foglio gli orari in cui si urina, la quantità, quanto e cosa si beve, eventuali perdite e cosa le ha provocate.",
+            "Il diario mostra cose che a memoria sfuggono: chi beve molto la sera, chi urina per abitudine ogni ora, chi ha perdite solo in certe situazioni. Spesso, già rivedendolo insieme, emergono correzioni facili da mettere in pratica."
+          ]
+        },
+        {
+          "titolo": "Gli esercizi per il pavimento pelvico",
+          "paragrafi": [
+            "Gli esercizi consistono nel contrarre e rilasciare in modo corretto i muscoli che circondano uretra, vagina e ano. Sembra semplice, ma molte donne all'inizio contraggono i muscoli sbagliati, come gli addominali o i glutei.",
+            "Per questo è importante impararli con una professionista dedicata, che verifica la contrazione e imposta un programma. I risultati arrivano in genere dopo alcune settimane di esercizio regolare e si mantengono continuando a farli nel tempo."
+          ]
+        },
+        {
+          "titolo": "Le cistiti in menopausa",
+          "paragrafi": [
+            "Anche le cistiti, con la menopausa, tendono a diventare più frequenti, per il cambiamento delle mucose e della flora vaginale. Prevenirle fa parte della cura dei disturbi urinari: bere a sufficienza, non trattenere l'urina, curare l'intestino e, quando indicato, usare terapie locali."
+          ]
+        },
+        {
+          "titolo": "Quando rivolgersi all'urologa",
+          "paragrafi": [
+            "È utile una visita se:"
+          ],
+          "elenco": [
+            "le perdite limitano le Sue attività;",
+            "si alza più volte per notte per urinare;",
+            "le cistiti sono diventate frequenti;",
+            "nota sangue nelle urine o dolore."
+          ],
+          "chiusura": "Prima si interviene, più semplici sono di solito le cure."
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni della Sua urologa."
+    },
+    {
+      "id": "prolasso-vescicale",
+      "categoria": "Per lei",
+      "titolo": "Prolasso vescicale (cistocele): i segnali e le cure",
+      "img": "/cucchiarale-tfcw/img/rep-anatomia.webp",
+      "tempoLettura": "5 min",
+      "intro": "Una sensazione di peso nella zona pelvica, la vescica che non si svuota del tutto, a volte qualcosa che si avverte in vagina. Sono i segnali tipici del prolasso vescicale, un disturbo frequente di cui molte donne non parlano.",
+      "sezioni": [
+        {
+          "titolo": "Che cos'è",
+          "paragrafi": [
+            "Il prolasso vescicale, o cistocele, si verifica quando la vescica scende dalla sua posizione e preme sulla parete anteriore della vagina, perché i tessuti che la sostengono si sono indeboliti.",
+            "Il pavimento pelvico funziona come un'amaca di muscoli e legamenti. Quando questa amaca perde tono, gli organi del bacino possono scendere: la vescica è quello che scende più spesso."
+          ]
+        },
+        {
+          "titolo": "Perché succede",
+          "paragrafi": [
+            "Le cause principali sono:"
+          ],
+          "elenco": [
+            "gravidanze e parti vaginali, soprattutto se numerosi o difficili;",
+            "il calo degli estrogeni in menopausa;",
+            "sforzi ripetuti: sollevare pesi, stitichezza cronica, tosse persistente;",
+            "il sovrappeso;",
+            "una predisposizione dei tessuti, che in alcune famiglie è più frequente."
+          ]
+        },
+        {
+          "titolo": "I segnali",
+          "paragrafi": [
+            "Nelle forme lievi il cistocele può non dare disturbi. Quando cresce, i sintomi più tipici sono un senso di peso o di pressione nella zona pelvica, che aumenta la sera o dopo essere state a lungo in piedi, e la sensazione di non svuotare bene la vescica.",
+            "Possono comparire bisogno frequente di urinare, perdite di urina, cistiti ricorrenti per il ristagno di urina, fastidio durante i rapporti. Nei prolassi più importanti si avverte o si vede una sporgenza all'ingresso della vagina."
+          ]
+        },
+        {
+          "titolo": "La visita e gli esami",
+          "paragrafi": [
+            "La diagnosi si fa con la visita, che si svolge come una visita ginecologica: valuto il grado del prolasso, anche chiedendo di fare un piccolo sforzo, e se sono coinvolti altri organi, come l'utero o il retto.",
+            "Gli esami completano il quadro: l'ecografia per misurare quanta urina resta in vescica dopo la minzione, l'esame delle urine, a volte l'esame urodinamico, utile soprattutto prima di un eventuale intervento."
+          ]
+        },
+        {
+          "titolo": "Le cure",
+          "paragrafi": [
+            "Non tutti i cistoceli vanno operati. Nelle forme lievi o moderate si parte da una riabilitazione del pavimento pelvico e da alcune correzioni nelle abitudini: curare la stitichezza, evitare di sollevare pesi, ridurre il peso in eccesso. In menopausa possono aiutare le terapie locali a base di estrogeni.",
+            "In alcune donne si usa un pessario, un piccolo dispositivo che si inserisce in vagina e sostiene la vescica. Quando il prolasso dà disturbi importanti, la soluzione è chirurgica: l'intervento ripristina il sostegno della vescica e, nella maggior parte dei casi, si esegue per via vaginale, senza tagli sull'addome."
+          ]
+        },
+        {
+          "titolo": "Prolasso e incontinenza",
+          "paragrafi": [
+            "Prolasso e incontinenza si presentano spesso insieme, ma non sempre. A volte il prolasso «nasconde» un'incontinenza che compare solo dopo la correzione: per questo, prima di un intervento, è importante una valutazione completa della funzione della vescica.",
+            "Mi occupo da anni dei disturbi funzionali del basso apparato urinario e della chirurgia del pavimento pelvico: è un ambito in cui la scelta della cura giusta dipende molto da una diagnosi accurata."
+          ]
+        },
+        {
+          "titolo": "Gli altri prolassi",
+          "paragrafi": [
+            "Il cistocele è spesso accompagnato da altri cedimenti del pavimento pelvico: l'utero che scende, o il retto che preme sulla parete posteriore della vagina. Per questo la valutazione deve essere complessiva e, quando serve, condivisa con il ginecologo. La scelta della cura tiene conto di tutto il quadro, non solo della vescica.",
+            "In visita Le spiego con calma cosa ho trovato e quali sono le possibilità, dai rimedi più semplici all'intervento, così che possa decidere con tutte le informazioni."
+          ]
+        },
+        {
+          "titolo": "Il prolasso è pericoloso?",
+          "paragrafi": [
+            "Nella grande maggioranza dei casi il cistocele non è pericoloso: è un problema di qualità della vita, non una malattia grave. Per questo la decisione di curarlo dipende soprattutto da quanto disturba.",
+            "Va invece seguito con attenzione quando la vescica non si svuota e restano grandi quantità di urina, perché questo favorisce le infezioni e, nei casi più importanti e trascurati, può affaticare i reni."
+          ]
+        },
+        {
+          "titolo": "Dopo l'intervento",
+          "paragrafi": [
+            "Dopo la correzione chirurgica si resta in genere in clinica per un periodo breve. Nelle settimane successive è importante evitare sforzi e sollevamento di pesi, curare la regolarità intestinale e riprendere gradualmente le attività, seguendo le indicazioni ricevute.",
+            "Il controllo successivo serve a verificare il risultato e il buon svuotamento della vescica. Mantenere il peso nella norma e continuare gli esercizi per il pavimento pelvico aiuta a proteggere nel tempo il risultato ottenuto."
+          ]
+        },
+        {
+          "titolo": "Prevenire, per quanto possibile",
+          "paragrafi": [
+            "Non tutti i prolassi si possono evitare, ma alcune attenzioni riducono il carico sul pavimento pelvico: la riabilitazione dopo il parto, la cura della stitichezza, evitare di sollevare pesi in modo scorretto, curare la tosse cronica, mantenere un peso adeguato.",
+            "In menopausa è utile non trascurare i primi segnali: un prolasso lieve, riconosciuto presto, si gestisce spesso senza intervento."
+          ]
+        },
+        {
+          "titolo": "Quando farsi visitare",
+          "paragrafi": [
+            "È utile una visita urologica se:"
+          ],
+          "elenco": [
+            "avverte peso o pressione nella zona pelvica;",
+            "sente qualcosa che sporge in vagina;",
+            "ha la sensazione di non svuotare bene la vescica;",
+            "le cistiti sono diventate frequenti."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni della Sua urologa."
+    },
+    {
+      "id": "disturbi-minzione",
+      "categoria": "Per lui e per lei",
+      "titolo": "Disturbi della minzione: quando urinare diventa un problema",
+      "img": "/cucchiarale-tfcw/img/rep-campione.webp",
+      "tempoLettura": "5 min",
+      "intro": "Urinare troppo, troppo poco, troppo spesso, di notte, con fatica o senza riuscire a trattenersi. I disturbi della minzione riguardano uomini e donne di ogni età. Ecco come riconoscerli e quando è il caso di farsi vedere.",
+      "sezioni": [
+        {
+          "titolo": "Di cosa parliamo",
+          "paragrafi": [
+            "Con «disturbi della minzione» si indicano alterazioni diverse del modo di urinare. I principali hanno un nome preciso:"
+          ],
+          "elenco": [
+            "poliuria, quando si urina in quantità eccessiva;",
+            "oliguria, quando si urina troppo poco;",
+            "pollachiuria, quando il bisogno di urinare è troppo frequente;",
+            "nicturia, quando il bisogno di urinare sveglia di notte;",
+            "incontinenza, quando trattenere l'urina è un problema;",
+            "disuria, quando urinare è difficoltoso o doloroso."
+          ],
+          "chiusura": "Possono riguardare bambini, adulti e anziani, uomini e donne."
+        },
+        {
+          "titolo": "Nell'uomo",
+          "paragrafi": [
+            "Dopo i cinquant'anni la causa più frequente è l'ingrossamento benigno della prostata, che restringe l'uretra: il getto si indebolisce, bisogna aspettare prima di iniziare, ci si alza di notte, resta la sensazione di non aver svuotato la vescica.",
+            "Nei più giovani, bruciore e bisogno frequente di urinare fanno pensare piuttosto a una prostatite o a un'infezione, a volte trasmessa per via sessuale. In entrambi i casi la visita urologica serve a distinguere le cause e a scegliere la cura."
+          ]
+        },
+        {
+          "titolo": "Nella donna",
+          "paragrafi": [
+            "Nella donna i disturbi più comuni sono le cistiti, l'incontinenza da sforzo o da urgenza e, con l'età, le conseguenze del calo degli estrogeni e dell'indebolimento del pavimento pelvico, come il prolasso vescicale.",
+            "Anche nella donna la vescica può svuotarsi male: succede in caso di prolasso o di alcune alterazioni del funzionamento della vescica. L'urina che ristagna favorisce le infezioni."
+          ]
+        },
+        {
+          "titolo": "I segnali da non trascurare",
+          "paragrafi": [
+            "Alcuni sintomi meritano una valutazione in tempi brevi:"
+          ],
+          "elenco": [
+            "sangue nelle urine, anche se compare una sola volta e senza dolore;",
+            "impossibilità di urinare;",
+            "febbre con bruciore o dolore al fianco;",
+            "un cambiamento improvviso e persistente del modo di urinare."
+          ],
+          "chiusura": "Il sangue nelle urine, in particolare, va sempre approfondito: nella maggior parte dei casi ha una causa benigna, ma è importante escludere le altre."
+        },
+        {
+          "titolo": "Come si svolge la visita",
+          "paragrafi": [
+            "La prima visita parte da un colloquio: quando sono comparsi i disturbi, quanto incidono sulle giornate e sulle notti, quanto beve, quali farmaci prende. Alcuni farmaci, come i diuretici, cambiano molto il modo di urinare.",
+            "Segue la visita urologica. Gli esami si scelgono in base al sospetto: esame delle urine, ecografia dell'apparato urinario, uroflussometria, che misura la forza del getto, a volte la cistoscopia. Spesso un diario minzionale di qualche giorno dice più di molti esami."
+          ]
+        },
+        {
+          "titolo": "Le cure",
+          "paragrafi": [
+            "La cura dipende dalla causa: correzioni nelle abitudini, come distribuire meglio i liquidi o ridurre caffè e alcol, farmaci per la prostata o per la vescica iperattiva, antibiotici mirati nelle infezioni, riabilitazione del pavimento pelvico.",
+            "Quando serve, la chirurgia oggi offre tecniche poco invasive, che privilegio ogni volta che è possibile. Per l'ingrossamento della prostata, per esempio, in pazienti selezionati si può usare il vapore acqueo, in regime di ricovero breve."
+          ]
+        },
+        {
+          "titolo": "Disturbi e qualità della vita",
+          "paragrafi": [
+            "I disturbi della minzione raramente sono pericolosi, ma pesano: il sonno interrotto, la ricerca continua di un bagno, la paura delle perdite. Molte persone rinunciano a viaggi, sport e uscite senza dirlo a nessuno. Riconoscere quanto incidono è il primo passo per decidere, insieme, quanto e come intervenire.",
+            "Ne parli senza imbarazzo: per l'urologa sono temi di ogni giorno, e descrivere con precisione i disturbi è la base per una diagnosi corretta e una cura efficace."
+          ]
+        },
+        {
+          "titolo": "Quanto bere",
+          "paragrafi": [
+            "Bere troppo poco concentra le urine, irrita la vescica e favorisce infezioni e calcoli. Bere moltissimo, al contrario, aumenta il numero delle minzioni e può peggiorare urgenza e perdite.",
+            "Per la maggior parte delle persone l'obiettivo è un'urina di colore giallo chiaro. La quantità giusta dipende dalla stagione, dall'attività fisica, dalle malattie e dai farmaci: è una delle cose che conviene stabilire insieme in visita, soprattutto se si hanno disturbi."
+          ]
+        },
+        {
+          "titolo": "Quando ci si alza di notte",
+          "paragrafi": [
+            "Alzarsi una volta per notte può essere normale, soprattutto con l'età. Quando succede due o più volte, il sonno ne risente e vale la pena capire perché.",
+            "Le cause non sono solo urologiche: bere molto la sera, alcuni farmaci, il diabete, problemi di cuore o il russamento con apnee notturne possono aumentare la produzione di urina di notte. Il diario minzionale aiuta a distinguere se il problema è la vescica o la quantità di urina prodotta."
+          ]
+        },
+        {
+          "titolo": "Nei bambini",
+          "paragrafi": [
+            "Anche i bambini possono avere disturbi della minzione: bisogno urgente, piccole perdite di giorno, bagnare il letto oltre l'età in cui di solito si smette. Spesso sono legati ad abitudini, come trattenere a lungo l'urina o bere poco a scuola, e alla stitichezza. Ne parli con il pediatra, che valuterà se serve uno specialista."
+          ]
+        },
+        {
+          "titolo": "Il primo passo",
+          "paragrafi": [
+            "Molte persone convivono per anni con disturbi che limitano il sonno, il lavoro, i viaggi, pensando che siano normali. Una consulenza e una visita urologica sono il primo passo per capire la causa e trovare la cura più adatta."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni della Sua urologa."
+    }
+  ],
+  "instagram": {
+    "handle": "dott.ssa.cucchiarale.urologa",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "domanda",
+        "titolo": "Cistite ricorrente: perché torna?",
+        "risposta": "Spesso le cause sono più di una.",
+        "didascalia": "Rapporti, menopausa, stitichezza, bere poco, antibiotici presi senza urinocoltura. Se gli episodi sono due in sei mesi o tre in un anno, serve una visita urologica per capire il perché.",
+        "hashtag": "#cistite #urologa #salutedonna #torino"
+      },
+      {
+        "stile": "foto",
+        "immagine": "postRitratto",
+        "titolo": "Disturbi urinari in menopausa",
+        "sottotitolo": "Frequenti, ma non da accettare in silenzio",
+        "didascalia": "Piccole perdite, urgenza, cistiti più frequenti: con il calo degli estrogeni la vescica cambia. Riabilitazione del pavimento pelvico, terapie locali e, se serve, tecniche mininvasive possono aiutare.",
+        "hashtag": "#menopausa #incontinenza #pavimentopelvico"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Prolasso vescicale: i segnali",
+        "punti": [
+          "Peso o pressione nella zona pelvica",
+          "Sensazione di non svuotare la vescica",
+          "Perdite di urina",
+          "Cistiti più frequenti"
+        ],
+        "didascalia": "Il cistocele è frequente dopo le gravidanze e in menopausa. Non sempre va operato: la visita serve a capire il grado e la cura giusta per Lei.",
+        "hashtag": "#prolasso #cistocele #urologia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "segreteriauropoint@gmail.com",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Il mio studio in San Salvario",
+        "indirizzo": "Corso Vittorio Emanuele II 3",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di corso Vittorio Emanuele II 3, Torino",
+        "telefoni": [
+          {
+            "label": "Studio",
+            "numero": "011 599596"
+          }
+        ],
+        "orari": "Dal lunedì al venerdì, su appuntamento"
+      }
+    ],
+    "struttureLabel": "Dove opero",
+    "strutture": [
+      {
+        "nome": "Clinica Cellini · Humanitas",
+        "indirizzo": "Via Benvenuto Cellini 5",
+        "citta": "Torino",
+        "testo": "Responsabile dell'Unità Funzionale di Urologia 1."
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Chiami lo studio dal lunedì al venerdì, oppure scelga giorno e orario online: la segreteria La ricontatterà per confermare.",
+    "telefono": "011599596",
+    "telefonoLabel": "011 599596",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "saluto": "Dottoressa",
+    "emailRichieste": "segreteriauropoint@gmail.com",
+    "oggettoMail": "Richiesta di visita urologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce venire e lasci i Suoi dati: la segreteria La ricontatterà per confermare. La prenotazione è confermata solo dopo il contatto telefonico.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate per telefono.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": "https://urologotorino.com/privacy-policy/",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F3F5F6",
+      "ink": "#242423",
+      "muted": "#5C6166",
+      "line": "#E2E5E7",
+      "brand": "#1D6A8C",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#5BC0EB",
+      "deep": "#1B2731",
+      "deep-ink": "#E3ECF1"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Noto+Sans:wght@400;500;600&display=swap",
+    "fontTitoli": "Playfair Display",
+    "fontTesti": "Noto Sans",
+    "favicon": "/cucchiarale-tfcw/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/cucchiarale-tfcw/brand/brand.json",
+    "pagine": [
+      "https://urologotorino.com/",
+      "https://urologotorino.com/chi-siamo-full/",
+      "https://urologotorino.com/urologia-donna/",
+      "https://urologotorino.com/urologia-uomo/",
+      "https://www.clinicacellini.it/medici/giuseppina-cucchiarale/",
+      "https://www.gruppocdc.it/medici/dott-ssa-cucchiarale-giuseppina"
+    ]
+  }
+}

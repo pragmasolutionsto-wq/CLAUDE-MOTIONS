@@ -12,7 +12,7 @@ const box = m.hero.box;
 const cfg = {
   giorni: c.giorni, mattina: c.mattina, pomeriggio: c.pomeriggio, settimane: c.settimane,
   wa: m.prenota.whatsapp ? String(m.prenota.whatsapp).replace(/\D/g, '') : '',
-  email: emailRichieste(m), oggetto: m.prenota.oggettoMail,
+  email: emailRichieste(m), oggetto: m.prenota.oggettoMail, saluto: (m.prenota as any).saluto || 'Dottore',
 };
 ---
 <section id="prenota" class="py-16 sm:py-24" data-calendario={JSON.stringify(cfg)}>

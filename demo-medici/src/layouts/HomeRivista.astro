@@ -1,0 +1,281 @@
+---
+// Layout "rivista" (prima demo: Giuseppina Cucchiarale). Una home costruita attorno al blog:
+// testata con logotipo in Playfair (i font del suo sito), foto vera nel suo studio, prenotazione "Per lei / Per lui"
+// con fascia oraria, due colonne Per lei / Per lui collegate agli articoli, blog in evidenza, intervista TV, chi sono.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = x.hero.box;
+const gruppi = box.gruppi as any[];
+const luogo = (m.sedi.luoghi as any[])[0];
+const email = emailRichieste(m);
+const saluto = x.prenota.saluto || 'Dottore';
+const testo = (frase: string, fascia: string) => `Buongiorno ${saluto}, vorrei prenotare una visita urologica per ${frase} presso ${luogo.frase}. Preferirei un appuntamento ${fascia}.`;
+const href0 = `mailto:${email}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(testo(gruppi[0].frasi[0], box.fasceFrase[0]))}`;
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const perId = Object.fromEntries(blog.map((b) => [b.id, b]));
+const [primo, ...resto] = blog;
+const ig = m.instagram;
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-30 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} class="min-w-0 leading-tight">
+        <span class="block truncate font-head text-[15px] font-semibold min-[400px]:text-[17px] sm:text-[22px]">{nomeCompleto(m)}</span>
+        <span class="block text-[11px] uppercase tracking-[0.18em] text-muted">{m.firma} · {m.citta}</span>
+      </a>
+      <nav class="hidden items-center gap-7 text-[15px] text-ink/75 lg:flex">
+        <a href="#per-lei" class="hover:text-brand">Per lei</a><a href="#per-lui" class="hover:text-brand">Per lui</a><a href="#articoli" class="hover:text-brand">Blog</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#sedi" class="hover:text-brand">Contatti</a>
+      </nav>
+      <div class="flex shrink-0 items-center gap-3">
+        <a href={telHref(m.prenota.telefono)} class="hidden items-center gap-2 text-[15px] font-semibold text-brand md:inline-flex"><Icona nome="tel" class="h-4 w-4" /> {m.prenota.telefonoLabel}</a>
+        <a href="#prenota-rapida" class="btn btn-primary !min-h-[42px] !rounded-full !px-5 text-sm">Prenoti</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: testata + foto nel suo studio -->
+    <section data-hero-section class="px-4 pb-10 pt-8 sm:px-8 lg:pb-16 lg:pt-14">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-6">
+          <p class="text-[13px] font-semibold uppercase tracking-[0.18em] text-brand">{x.hero.eyebrow}</p>
+          <h1 class="mt-4 font-head text-[2.5rem] font-semibold leading-[1.08] sm:text-[3.6rem]">{nomeCompleto(m)}</h1>
+          <p class="mt-5 font-head text-[1.4rem] leading-snug text-ink/85 sm:text-[1.7rem]">{x.hero.titolo}</p>
+          <p class="mt-5 max-w-xl text-[17px] leading-relaxed text-muted">{x.hero.testo}</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#prenota-rapida" class="btn btn-primary !rounded-full"><Icona nome="calendario" /> {x.hero.ctaPrenota}</a>
+            <a href={telHref(m.prenota.telefono)} class="btn btn-ghost !rounded-full"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          </div>
+        </div>
+        <div class="order-first lg:order-none lg:col-span-6">
+          <img src={foto.ritratto} alt={foto.ritrattoAlt} width="960" height="1200" class="hidden aspect-[4/5] w-full max-w-[520px] rounded-md object-cover lg:ml-auto lg:block" />
+          <img src={foto.ritrattoLargo} alt={foto.ritrattoAlt} width="1500" height="1000" class="aspect-[3/2] w-full rounded-md object-cover lg:hidden" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PRENOTAZIONE: per lei / per lui + fascia oraria -->
+    <section id="prenota-rapida" class="bg-surface px-4 py-12 sm:px-8 sm:py-16">
+      <div class="mx-auto max-w-5xl" data-prenota-genere data-email={email} data-oggetto={m.prenota.oggettoMail} data-saluto={saluto} data-sede={luogo.frase}>
+        <h2 class="font-head text-[1.9rem] font-semibold">{box.titolo}</h2>
+        <div class="mt-6 rounded-md bg-white p-5 shadow-sm ring-1 ring-line sm:p-8">
+          <p class="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Per chi è la visita?</p>
+          <div class="mt-3 grid grid-cols-2 gap-3 sm:max-w-md" role="group" aria-label="Per chi è la visita">
+            {gruppi.map((g, i) => <button type="button" data-genere={i} aria-pressed={i === 0 ? 'true' : 'false'} class="genere rounded-full border border-line px-5 py-3 text-[16px] font-semibold">{g.nome}</button>)}
+          </div>
+          <p class="mt-7 text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Qual è il motivo?</p>
+          {gruppi.map((g, i) => (
+            <div data-gruppo={i} class={`mt-3 flex flex-wrap gap-2 ${i === 0 ? '' : 'hidden'}`}>
+              {g.motivi.map((t: string, j: number) => <button type="button" class="chip" data-chip="motivo" data-frase={g.frasi[j]} aria-pressed={i === 0 && j === 0 ? 'true' : 'false'}>{t}</button>)}
+            </div>
+          ))}
+          <p class="mt-7 text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Quando preferisce?</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            {box.fasce.map((t: string, i: number) => <button type="button" class="chip" data-chip="fascia" data-frase={box.fasceFrase[i]} aria-pressed={i === 0 ? 'true' : 'false'}>{t}</button>)}
+          </div>
+          <div class="mt-8 flex flex-col gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <p class="flex items-start gap-2 text-[14px] text-muted"><Icona nome="pin" class="mt-0.5 h-4 w-4 shrink-0 text-brand" /> {luogo.indirizzo}, {luogo.citta} · {luogo.orari}</p>
+            <a href={href0} data-prenota class="btn btn-primary shrink-0 !rounded-full"><Icona nome="mail" /> Invii la richiesta</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PER LEI / PER LUI -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:gap-16">
+        {x.perChi.map((p: any) => (
+          <article id={p.id} class="scroll-mt-28" data-reveal>
+            <img src={p.img} alt="" width="1200" height="900" loading="lazy" class="aspect-[16/10] w-full rounded-md object-cover" />
+            <h2 class="mt-7 font-head text-[2.2rem] font-semibold">{p.titolo}</h2>
+            <p class="mt-3 text-[16px] leading-relaxed text-ink/80">{p.testo}</p>
+            <ul class="mt-5 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">{p.voci.map((v: string) => <li class="flex items-start gap-2 text-[15px]"><Icona nome="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand" />{v}</li>)}</ul>
+            <div class="mt-6 border-t border-line pt-5">
+              <p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-muted">Dal blog</p>
+              <ul class="mt-2 space-y-1">{p.articoli.map((id: string) => <li><a href={perId[id].href} class="group inline-flex items-start gap-2 py-1 font-head text-[17px] font-semibold text-brand hover:underline"><Icona nome="freccia" class="mt-1 h-4 w-4 shrink-0" />{perId[id].titolo}</a></li>)}</ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="articoli" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div><h2 class="titolo-sez" data-reveal>Il blog</h2><p class="mt-3 max-w-xl text-muted" data-reveal>Spiego in modo semplice i disturbi che vedo più spesso in studio, cosa fare e quando farsi visitare.</p></div>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-8 lg:grid-cols-12">
+          <a href={primo.href} class="group block rounded-md bg-white lg:col-span-7" data-reveal>
+            <img src={primo.img} alt="" width="1200" height="900" loading="lazy" class="aspect-[16/10] w-full rounded-t-md object-cover" />
+            <span class="block p-6 sm:p-8">
+              <span class="text-xs font-semibold uppercase tracking-[0.14em] text-brand">{primo.categoria} · {primo.tempoLettura}</span>
+              <span class="mt-3 block font-head text-[1.8rem] font-semibold leading-tight group-hover:text-brand">{primo.titolo}</span>
+              <span class="mt-3 block text-muted">{primo.intro}</span>
+            </span>
+          </a>
+          <div class="divide-y divide-line lg:col-span-5" data-stagger>
+            {resto.map((b) => (
+              <a href={b.href} class="group grid grid-cols-[96px_1fr] gap-4 py-5 first:pt-0 sm:grid-cols-[128px_1fr]">
+                <img src={b.img} alt="" width="1200" height="900" loading="lazy" class="aspect-square w-full rounded-md object-cover" />
+                <span class="block">
+                  <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand">{b.categoria} · {b.tempoLettura}</span>
+                  <span class="mt-1 block font-head text-[1.15rem] font-semibold leading-snug group-hover:text-brand">{b.titolo}</span>
+                </span>
+              </a>
+            ))}
+            <a href={x.tv.url} target="_blank" rel="noopener" class="group grid grid-cols-[96px_1fr] gap-4 py-5 sm:grid-cols-[128px_1fr]" data-tv>
+              <span class="relative block overflow-hidden rounded-md"><img src={x.tv.img} alt="" width="480" height="360" loading="lazy" class="aspect-square w-full object-cover" /><span class="absolute inset-0 grid place-items-center bg-black/25 text-white"><svg viewBox="0 0 24 24" class="h-8 w-8" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></span></span>
+              <span class="block">
+                <span class="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand">In TV · {x.tv.programma}</span>
+                <span class="mt-1 block font-head text-[1.15rem] font-semibold leading-snug group-hover:text-brand">{x.tv.titolo}</span>
+                <span class="mt-1 block text-[14px] text-muted">{x.tv.testo}</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:items-start">
+        <div class="lg:col-span-6">
+          <img src={foto.studio} alt="La Dott.ssa Cucchiarale nel suo studio in San Salvario" width="1600" height="1200" loading="lazy" class="aspect-[4/3] w-full rounded-md object-cover" />
+        </div>
+        <div class="lg:col-span-6">
+          <h2 class="titolo-sez" data-reveal>{m.bio.titolo}</h2>
+          <div class="mt-6 space-y-4 text-[17px] leading-relaxed text-ink/85" data-reveal>{m.bio.paragrafi.map((p: string) => <p>{p}</p>)}</div>
+          <ul class="mt-8 space-y-4 border-l-2 border-brand2 pl-5">
+            {m.bio.tappe.map((t: any) => <li><p class="font-head text-lg font-semibold text-brand">{t.periodo}</p><p class="text-[15px] text-ink/80">{t.testo}</p></li>)}
+          </ul>
+          <p class="mt-8 text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Formazione</p>
+          <ul class="mt-3 space-y-1.5">{x.bio.formazione.map((f: string) => <li class="flex items-start gap-2 text-[15px] text-ink/80"><Icona nome="libro" class="mt-0.5 h-4 w-4 shrink-0 text-brand" />{f}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- IN STUDIO -->
+    <section id="come-lavoro" class="bg-deep px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto grid max-w-7xl gap-8 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-5">
+          <h2 class="font-head text-[1.9rem] font-semibold">{x.esami.titolo}</h2>
+          <p class="mt-3 text-deep-ink/75">Visite ed esami nel mio studio di San Salvario, dal lunedì al venerdì su appuntamento.</p>
+        </div>
+        <ul class="grid gap-3 sm:grid-cols-2 lg:col-span-7" data-stagger>
+          {x.esami.voci.map((e: string) => <li class="flex items-center gap-3 rounded-md border border-white/15 px-4 py-3 text-[15px]"><Icona nome="check" class="h-4 w-4 shrink-0 text-brand2" />{e}</li>)}
+        </ul>
+      </div>
+    </section>
+
+    <PrenotaCalendario m={m} />
+
+    <!-- INSTAGRAM -->
+    <section class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="titolo-sez" data-reveal>Dal mio profilo Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: il profilo oggi non esiste</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-md border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-brand p-7 text-white">
+                  <span class="font-head text-6xl font-semibold leading-none text-brand2">?</span>
+                  <div><p class="font-head text-[1.8rem] font-semibold leading-[1.12]">{p.titolo}</p><p class="mt-4 w-fit rounded-full bg-white px-4 py-2 text-[14px] font-semibold text-brand">{p.risposta}</p></div>
+                </div>
+              )}
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden">
+                  <img src={foto[p.immagine]} alt="" width="1600" height="1200" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-white/95 px-5 py-4"><p class="font-head text-xl font-semibold leading-tight">{p.titolo}</p><p class="mt-0.5 text-sm text-brand">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-white p-7 ring-1 ring-inset ring-line">
+                  <p class="font-head text-[1.6rem] font-semibold leading-[1.15]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand2"></span>{t}</li>)}</ul>
+                  <p class="mt-6 font-head text-sm font-semibold text-brand">{nomeCompleto(m)}</p>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <h2 class="titolo-sez" data-reveal>{m.sedi.titolo}</h2>
+          <div class="mt-8 rounded-md border border-line p-6 sm:p-8">
+            <p class="font-head text-2xl font-semibold">{luogo.nome}</p>
+            <p class="mt-2 text-[16px] text-muted">{luogo.indirizzo}, 10125 {luogo.citta}</p>
+            <p class="mt-1 text-[15px] text-ink/80">{luogo.orari}</p>
+            <div class="mt-6 flex flex-wrap gap-x-8 gap-y-3">
+              {luogo.telefoni.map((t: any) => <a href={telHref(t.numero)} class="inline-flex items-center gap-2 text-lg font-semibold text-brand hover:underline"><Icona nome="tel" class="h-5 w-5" />{t.numero}</a>)}
+              <a href={`mailto:${m.sedi.email}`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="mail" class="h-5 w-5" />{m.sedi.email}</a>
+            </div>
+            <a href={mapsHref(luogo.indirizzo, luogo.citta)} target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:underline"><Icona nome="pin" class="h-4 w-4" /> Apra la mappa</a>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="font-head text-[1.4rem] font-semibold lg:mt-[4.6rem]">{x.sedi.struttureLabel}</p>
+          {x.sedi.strutture.map((s: any) => (
+            <div class="mt-5 flex items-start gap-4 rounded-md bg-surface p-6"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white text-brand"><Icona nome="ospedale" class="h-5 w-5" /></span><span><span class="block font-head text-lg font-semibold">{s.nome}</span><span class="block text-[14px] text-muted">{s.indirizzo}, {s.citta}</span><span class="mt-1 block text-[15px] text-ink/80">{s.testo}</span></span></div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8" data-cta-finale>
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-3xl font-semibold">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(m.prenota.telefono)} class="btn !rounded-full bg-white text-brand hover:bg-white/90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-full border border-white/50 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    // Prenotazione: per lei / per lui → motivo → fascia oraria → mail già scritta
+    const b = document.querySelector<HTMLElement>('[data-prenota-genere]');
+    if (b) {
+      const link = b.querySelector<HTMLAnchorElement>('[data-prenota]')!;
+      const aggiorna = () => {
+        const mo = b.querySelector<HTMLElement>('[data-chip="motivo"][aria-pressed="true"]')?.dataset.frase;
+        const fa = b.querySelector<HTMLElement>('[data-chip="fascia"][aria-pressed="true"]')?.dataset.frase;
+        if (!mo || !fa) return;
+        const { email, oggetto, saluto, sede } = b.dataset;
+        const t = `Buongiorno ${saluto}, vorrei prenotare una visita urologica per ${mo} presso ${sede}. Preferirei un appuntamento ${fa}.`;
+        link.href = `mailto:${email}?subject=${encodeURIComponent(oggetto ?? '')}&body=${encodeURIComponent(t)}`;
+      };
+      b.querySelectorAll<HTMLButtonElement>('[data-genere]').forEach((g) => g.addEventListener('click', () => {
+        b.querySelectorAll('[data-genere]').forEach((x) => x.setAttribute('aria-pressed', String(x === g)));
+        b.querySelectorAll<HTMLElement>('[data-gruppo]').forEach((d) => d.classList.toggle('hidden', d.dataset.gruppo !== g.dataset.genere));
+        b.querySelector<HTMLButtonElement>(`[data-gruppo="${g.dataset.genere}"] [data-chip="motivo"]`)?.click();
+      }));
+      b.querySelectorAll('[data-chip]').forEach((c) => c.addEventListener('click', aggiorna));
+      aggiorna();
+    }
+  </script>
+</Base>

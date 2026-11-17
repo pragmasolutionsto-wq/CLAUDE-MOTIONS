@@ -34,7 +34,7 @@ const aggiornaPrenota = () => {
   const motivo = boxPren.querySelector<HTMLSelectElement>('[data-motivo-select]')?.value ?? boxPren.querySelector<HTMLElement>('[data-chip="motivo"][aria-pressed="true"]')?.dataset.frase;
   const sede = boxPren.querySelector<HTMLSelectElement>('[data-sede-select]')?.value ?? boxPren.querySelector<HTMLElement>('[data-chip="sede"][aria-pressed="true"]')?.dataset.frase;
   if (!link || !motivo || !sede) return;
-  const testo = `Buongiorno Dottore, vorrei prenotare una visita per ${motivo} presso ${sede}.`;
+  const testo = `Buongiorno ${boxPren.dataset.saluto || 'Dottore'}, vorrei prenotare una visita per ${motivo} presso ${sede}.`;
   const { wa, email, oggetto } = boxPren.dataset;
   link.href = wa
     ? `https://wa.me/${wa}?text=${encodeURIComponent(testo)}`

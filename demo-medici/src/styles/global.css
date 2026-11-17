@@ -123,6 +123,12 @@ html { scroll-behavior: smooth; }
   .stile-interventi .campo, .stile-interventi .btn, .stile-interventi .slot, .stile-interventi .giorno { border-radius: 3px; }
 }
 
+/* Layout "rivista": scelta per lei / per lui */
+@layer components {
+  .genere { transition: border-color .2s, background-color .2s, color .2s; }
+  .genere[aria-pressed="true"] { border-color: var(--c-brand); background: var(--c-brand); color: var(--c-brand-ink); }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }

@@ -1,0 +1,64 @@
+{
+  "sito": "https://urologotorino.com/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "WordPress + Elementor; home aggiornata 01/2024, foto nuove caricate 04/2026; copyright 2023",
+  "trello": "Prospect medici · Dott.ssa Giuseppina Cucchiarale – Urologia uomo e donna · A·8",
+  "logo": {
+    "trovato": false,
+    "nota": "Nessun logo: solo il nome 'Dott.ssa Cucchiarale' in Playfair. Favicon = caduceo generico, non usato. Logotipo di testo: nome in Playfair Display + 'UROLOGA · TORINO'. Avatar Instagram e favicon = suo volto."
+  },
+  "foto": {
+    "tenute": [
+      {
+        "file": "foto-01-studio-quadri.jpg",
+        "desc": "In piedi nel suo studio davanti ai quadri colorati, 1920×1439: Chi sono, post Instagram, volto",
+        "fonte": "home (Chi siamo)"
+      },
+      {
+        "file": "foto-02-scrivania.jpg",
+        "desc": "Alla scrivania, 1785×1785: hero (ritaglio su di lei)",
+        "fonte": "home (sfondo slider)"
+      }
+    ],
+    "scartate": [
+      "Caduceo favicon: icona generica",
+      "Foto stock con volto di medico (dottoressa in divisa): potrebbe sembrare lei"
+    ],
+    "nota": "Repertorio: solo foto stock già presenti sul suo sito (colloqui, stick urine, contenitore, reni-vescica, uomo in visita)."
+  },
+  "colori": {
+    "sito": [
+      "#5BC0EB (pulsanti)",
+      "#A6978C (tortora, NON usato: tende al beige)",
+      "#F4F4F4",
+      "#242423"
+    ],
+    "scelti": "blu #1D6A8C (versione scura e leggibile del suo azzurro) + azzurro #5BC0EB, testo #242423, fondo bianco/grigio freddo #F3F5F6"
+  },
+  "font": {
+    "sito": [
+      {
+        "famiglia": "Playfair Display",
+        "giudizio": "buono, usato dritto (mai corsivo)"
+      },
+      {
+        "famiglia": "Noto Sans",
+        "giudizio": "buono"
+      }
+    ],
+    "scelti": "Playfair Display + Noto Sans"
+  },
+  "blog": "Sul sito 4 'approfondimenti' del 2017 di 2 righe ciascuno (disturbi della minzione, cistite, menopausa, prolasso). Nella demo diventano 4 articoli completi (800+ parole) + pagina indice /blog.",
+  "recensioni": "1 sola su MioDottore (cita nome e data d'intervento di un paziente): non usata.",
+  "media": "Intervista TV 'Martedì Salute' 12/02/2019 sul colore delle urine (YouTube n5bX81vKPDk); intervista Affidea su prevenzione maschile; TorinoToday 2021 su Rezum alla Cellini.",
+  "dati": {
+    "studio": "Corso Vittorio Emanuele II 3, 10125 Torino (San Salvario), lun–ven su appuntamento · 011 599596 · segreteriauropoint@gmail.com",
+    "cellini": "Responsabile Unità Funzionale di Urologia 1 dal 2017 (dal 2009 alla Cellini)",
+    "carriera": "1999–2008 dirigente medico I livello Urologia Ospedale S. Giovanni Battista",
+    "formazione": "Maturità classica, laurea e specializzazione (2002, clinicacellini.it) a Torino, perfezionamento laparoscopia, diploma management e qualità in urologia, master oncologia prostatica",
+    "esperienza": "urodinamica e chirurgia del pavimento pelvico (gruppocdc.it)",
+    "miodottore_indirizzo": "Corso Ferraris 123/bis: diverso dal sito, non usato",
+    "piva": "10012500012",
+    "chiusura_estiva": "agosto (sul sito)"
+  }
+}
