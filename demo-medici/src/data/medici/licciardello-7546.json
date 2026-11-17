@@ -1,0 +1,478 @@
+{
+  "slug": "licciardello-7546",
+  "layout": "recensioni",
+  "sitoOrigine": "https://www.dermatologolicciardello.com/",
+  "titolo": "Dott.",
+  "nome": "Matteo Licciardello",
+  "specialita": "Specialista in Dermatologia e Venereologia",
+  "firma": "Dermatologo, dermochirurgo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Matteo Licciardello · Dermatologo a Torino",
+    "description": "Sono dermatologo e dermochirurgo a Torino: mappatura dei nei, acne, psoriasi, capelli e unghie, laser e chirurgia della pelle. Ricevo in tre sedi in città."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/licciardello-7546/img/marchio.png",
+    "logoChiaro": "/licciardello-7546/img/marchio.png",
+    "marchio": "/licciardello-7546/img/marchio.png",
+    "logoAlt": "Dott. Matteo Licciardello"
+  },
+  "foto": {
+    "ritratto": "/licciardello-7546/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Matteo Licciardello",
+    "volto": "/licciardello-7546/img/volto.webp",
+    "postRitratto": "/licciardello-7546/img/post-ritratto.webp",
+    "pelle": "/licciardello-7546/img/rep-pelle.webp",
+    "capelli": "/licciardello-7546/img/rep-capelli.webp"
+  },
+  "hero": {
+    "eyebrow": "Dermatologo a Torino",
+    "citazione": "Chiaro, diretto, competente.",
+    "citazioneFonte": "Un paziente, su MioDottore",
+    "testo": "Mi occupo di prevenzione dei tumori della pelle, malattie infiammatorie, capelli e unghie, chirurgia e laser. Lavoro nell'Unità di Dermatologia dell'Ospedale Koelliker e ricevo in tre sedi a Torino.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti la Sua visita",
+      "motivoLabel": "per",
+      "motivi": [
+        "Controllo dei nei",
+        "Acne",
+        "Caduta dei capelli",
+        "Psoriasi",
+        "Dermatite o eczema",
+        "Asportazione di una lesione",
+        "Trattamento laser",
+        "Unghie",
+        "Visita dermatologica"
+      ],
+      "motiviFrase": [
+        "un controllo dei nei",
+        "un problema di acne",
+        "la caduta dei capelli",
+        "la psoriasi",
+        "una dermatite o un eczema",
+        "togliere una lesione della pelle",
+        "un trattamento laser",
+        "un problema alle unghie",
+        "una visita dermatologica"
+      ],
+      "sedeLabel": "presso"
+    }
+  },
+  "fatti": [
+    {
+      "valore": "300+",
+      "testo": "recensioni dei pazienti"
+    },
+    {
+      "valore": "Koelliker",
+      "testo": "Unità di Dermatologia, attività clinica e chirurgica"
+    },
+    {
+      "valore": "2024",
+      "testo": "Master di II livello in Dermochirurgia, Siena"
+    }
+  ],
+  "recensioni": {
+    "titolo": "Cosa dicono i pazienti",
+    "nota": "Recensioni pubblicate dai pazienti sul mio profilo MioDottore. Ne riporto alcune, senza modificarle.",
+    "voci": [
+      {
+        "testo": "Il dottor Matteo Licciardello è un medico molto preparato, attento e dotato di una grande capacità di ascolto. Le sue spiegazioni sono sempre chiare e precise, e offre un supporto costante che continua anche oltre il momento della visita."
+      },
+      {
+        "testo": "La capacità del Dott. Licciardello di comunicare la sua diagnosi in modo diretto ed efficace a un'adolescente. Molto apprezzata."
+      },
+      {
+        "testo": "Mi sono recata dal dottor Licciardello per un problema di psoriasi e ho trovato un professionista che ha eseguito una visita scrupolosa spiegandomi nel dettaglio i prossimi passi della cura che andrò ad intraprendere."
+      },
+      {
+        "testo": "Specialista eccellente, empatico e competente. Medico di riferimento per dermatologia e tricologia a Torino."
+      },
+      {
+        "testo": "Visita impeccabile, il medico è disponibile e professionale con l'utilizzo di strumenti che in passato altri suoi colleghi non hanno utilizzato. Tornerò di sicuro."
+      },
+      {
+        "testo": "Non rassegnatevi, ci sono terapie nuove, i farmaci biologici funzionano, serve soltanto un bravo dermatologo capace di prescriverli."
+      },
+      {
+        "testo": "Il dottore ha spiegato a mia figlia in modo semplice la diagnosi ed anche come prendersene cura."
+      },
+      {
+        "testo": "Medico giovane ma molto preparato ed attento. Chiaro nelle spiegazioni."
+      },
+      {
+        "testo": "Ho trovato grande professionalità, gentilezza e disponibilità. Mi sono sentito subito a mio agio, seguito con attenzione e ascoltato con cura."
+      },
+      {
+        "testo": "Visita dermatologica e mappatura nei svolta con grande professionalità."
+      },
+      {
+        "testo": "Finalmente una soluzione al problema di mio figlio. Grazie"
+      },
+      {
+        "testo": "Non potrei essere più soddisfatto. Grande perizia medica, chiarezza, gentilezza, empatia."
+      }
+    ]
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "Le aree in cui lavoro ogni giorno, in ospedale e in studio.",
+    "voci": [
+      {
+        "titolo": "Nei e tumori della pelle",
+        "img": "/licciardello-7546/img/rep-nei.webp",
+        "testo": "Mappatura dei nei in epiluminescenza, per la prevenzione e la diagnosi precoce dei tumori cutanei.",
+        "tag": [
+          "Mappatura dei nevi",
+          "Melanoma",
+          "Cheratosi attinica",
+          "Tumori cutanei"
+        ]
+      },
+      {
+        "titolo": "Pelle infiammata",
+        "img": "/licciardello-7546/img/rep-psoriasi.webp",
+        "testo": "Psoriasi e artrite psoriasica anche con farmaci biologici, dermatite atopica, acne, rosacea, orticaria.",
+        "tag": [
+          "Psoriasi",
+          "Dermatite atopica",
+          "Acne",
+          "Rosacea",
+          "Orticaria",
+          "Idrosadenite suppurativa",
+          "Eczema"
+        ]
+      },
+      {
+        "titolo": "Capelli e unghie",
+        "img": "/licciardello-7546/img/rep-capelli.webp",
+        "testo": "Alopecia androgenetica e areata, telogen effluvium, lichen plano pilare, alopecia fibrosante frontale, onicomicosi, psoriasi ungueale.",
+        "tag": [
+          "Caduta dei capelli",
+          "Alopecia areata",
+          "Telogen effluvium",
+          "Onicomicosi",
+          "Unghia incarnita"
+        ]
+      },
+      {
+        "titolo": "Dermochirurgia e laser",
+        "img": "/licciardello-7546/img/rep-chirurgia.webp",
+        "testo": "Biopsie e asportazione chirurgica o laser di nevi, carcinomi cutanei, lipomi, cheratosi seborroiche, verruche, cisti, fibromi, angiomi.",
+        "tag": [
+          "Cisti sebacee",
+          "Lipomi",
+          "Verruche",
+          "Angiomi",
+          "Laser macchie",
+          "Laser tatuaggi"
+        ]
+      },
+      {
+        "titolo": "Infezioni e pelle genitale",
+        "img": "/licciardello-7546/img/rep-pelle.webp",
+        "testo": "Malattie infettive della pelle e diagnosi e cura delle malattie dermatologiche genitali e sessualmente trasmesse.",
+        "tag": [
+          "Micosi",
+          "Herpes zoster",
+          "Mollusco contagioso",
+          "Condilomi",
+          "Scabbia",
+          "MST"
+        ]
+      }
+    ]
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Mi sono laureato in Medicina e Chirurgia all'Università di Catania nel 2013, con il massimo dei voti e lode, e mi sono specializzato in Dermatologia e Venereologia all'Università di Torino nel 2018, sempre con lode. Nel 2024 ho conseguito il Master di II livello in Dermochirurgia all'Università di Siena.",
+      "Svolgo la mia attività clinica e chirurgica nell'Unità Operativa Autonoma di Dermatologia dell'Ospedale Koelliker di Torino. Sono autore di pubblicazioni su riviste internazionali e relatore a congressi nazionali e internazionali."
+    ],
+    "tappe": [
+      {
+        "periodo": "2013",
+        "testo": "Laurea in Medicina e Chirurgia, Università di Catania, con il massimo dei voti e lode."
+      },
+      {
+        "periodo": "2018",
+        "testo": "Specializzazione in Dermatologia e Venereologia, Università di Torino, con lode. Tutor del progetto nazionale Pso-Improve sulla psoriasi."
+      },
+      {
+        "periodo": "2019 – 2020",
+        "testo": "Tutor del progetto nazionale PROMETEO sull'orticaria cronica spontanea, Clinica Dermatologica dell'Università di Torino."
+      },
+      {
+        "periodo": "2024",
+        "testo": "Master di II livello in Dermochirurgia, Università di Siena."
+      }
+    ],
+    "societaLabel": "Società scientifiche",
+    "societa": [
+      "SIDEMaST",
+      "IMI · Intergruppo Melanoma Italiano",
+      "SIDCO"
+    ]
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "categoria": "Prevenzione",
+    "titolo": "Mappatura dei nevi a Torino: cos'è e quando farla",
+    "img": "/licciardello-7546/img/rep-articolo.webp",
+    "intro": "La mappatura dei nevi è uno degli esami che eseguo più spesso. Serve a riconoscere presto i tumori della pelle e a seguire nel tempo i nei che meritano attenzione, senza toglierli tutti. Ecco come funziona, a chi serve e come prepararsi.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Nevo, neo: la stessa cosa",
+        "paragrafi": [
+          "«Nevo» è il termine medico per quello che tutti chiamiamo neo: un accumulo di melanociti, le cellule che producono il pigmento della pelle. Ogni adulto ne ha in media decine; la stragrande maggioranza resta benigna per tutta la vita.",
+          "Il motivo per cui li controlliamo è il melanoma, il tumore della pelle più aggressivo. All'inizio può somigliare a un neo, e in una parte dei casi nasce proprio da un neo che cambia. Riconoscerlo presto, quando è ancora sottile, fa una grande differenza per la cura."
+        ]
+      },
+      {
+        "titolo": "Cos'è l'epiluminescenza",
+        "paragrafi": [
+          "La mappatura si basa sulla dermatoscopia in epiluminescenza: uno strumento ottico illumina la pelle e la ingrandisce, eliminando i riflessi della superficie. Così si vedono strutture, colori e disegni del neo che a occhio nudo non si colgono.",
+          "Con la videodermatoscopia le immagini vengono anche registrate. È questo che trasforma una semplice visita in una «mappa»: alla visita successiva posso confrontare ogni neo con la sua foto precedente e accorgermi anche di cambiamenti piccoli."
+        ]
+      },
+      {
+        "titolo": "Come si svolge la visita",
+        "paragrafi": [
+          "La visita comincia con alcune domande: tipo di pelle, scottature, nei comparsi di recente, casi di melanoma in famiglia. Poi osservo tutta la superficie della pelle, compresi cuoio capelluto, piante dei piedi e spazi tra le dita.",
+          "I nei che lo richiedono vengono esaminati con il dermatoscopio e, se serve, fotografati. L'esame non fa male, non richiede preparazioni particolari e dura in genere tra i venti minuti e la mezz'ora, a seconda del numero di nei."
+        ]
+      },
+      {
+        "titolo": "A chi serve",
+        "paragrafi": [
+          "Una mappatura periodica è consigliata soprattutto a chi ha:"
+        ],
+        "elenco": [
+          "molti nei, indicativamente più di cinquanta;",
+          "nei atipici, cioè irregolari per forma o colore;",
+          "pelle chiara, che si scotta facilmente;",
+          "scottature importanti in passato, soprattutto da bambino;",
+          "un familiare stretto che ha avuto un melanoma;",
+          "già avuto un melanoma o un altro tumore della pelle."
+        ],
+        "chiusura": "Anche chi non ha fattori di rischio fa bene a sottoporsi almeno a un controllo, per conoscere i propri nei e capire ogni quanto rivederli."
+      },
+      {
+        "titolo": "Cosa Le resta dopo la visita",
+        "paragrafi": [
+          "Alla fine della mappatura Le spiego cosa ho visto, neo per neo quando serve. Se tutto è tranquillo, fissiamo semplicemente la data del prossimo controllo. Se c'è un neo da tenere d'occhio, Le indico quale e perché, così potrà osservarlo anche Lei.",
+          "Le immagini salvate restano a disposizione per i controlli successivi: è il loro vero valore. Un neo che a una singola visita sembra dubbio, ma che resta identico nel tempo, nella maggior parte dei casi può essere solo seguito, senza bisogno di toglierlo. Al contrario, anche un piccolo cambiamento rispetto alla foto precedente è un segnale prezioso.",
+          "Per questo è utile rivolgersi, per quanto possibile, sempre allo stesso dermatologo o allo stesso centro: la mappa funziona meglio quando c'è un confronto."
+        ]
+      },
+      {
+        "titolo": "Ogni quanto ripeterla",
+        "paragrafi": [
+          "Non c'è una regola valida per tutti. Nella maggior parte degli adulti un controllo ogni anno è un buon ritmo; in chi ha un rischio più alto si possono programmare controlli ogni sei mesi, o rivedere a breve distanza un singolo neo dubbio.",
+          "Nei bambini i nei cambiano di più, perché crescono insieme alla pelle: per questo la valutazione tiene conto dell'età. La frequenza giusta per Lei la decidiamo alla fine della prima visita."
+        ]
+      },
+      {
+        "titolo": "Come prepararsi",
+        "paragrafi": [
+          "Bastano poche attenzioni:"
+        ],
+        "elenco": [
+          "eviti l'abbronzatura intensa nelle settimane prima, perché rende i nei più difficili da leggere;",
+          "non metta autoabbronzanti, creme colorate o trucco pesante il giorno della visita;",
+          "tolga lo smalto, se possibile: anche le unghie vanno guardate;",
+          "porti i referti di eventuali visite o esami istologici precedenti."
+        ]
+      },
+      {
+        "titolo": "Se un neo è sospetto",
+        "paragrafi": [
+          "Quando un neo ha caratteristiche dubbie, le strade sono due: rivederlo dopo qualche mese per vedere se cambia, oppure toglierlo. L'asportazione si fa in anestesia locale, in ambulatorio, e il tessuto viene sempre analizzato con l'esame istologico, l'unico che dà una diagnosi certa.",
+          "Mi occupo anche di dermochirurgia: quando serve, la stessa persona che ha valutato il neo esegue l'intervento, con attenzione al risultato estetico della cicatrice."
+        ]
+      },
+      {
+        "titolo": "Tra un controllo e l'altro",
+        "paragrafi": [
+          "L'autocontrollo a casa aiuta: una volta ogni due o tre mesi guardi la Sua pelle davanti allo specchio, con buona luce. Faccia attenzione a nei nuovi, nei che cambiano forma, colore o dimensione, e a quello che è diverso da tutti gli altri.",
+          "E protegga la pelle dal sole tutto l'anno, in particolare quella dei bambini. È la prevenzione più semplice ed efficace che esista. Eviti le scottature, usi una protezione alta e non usi lampade abbronzanti: sono gesti semplici, che riducono davvero il rischio nel tempo."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo dermatologo."
+  },
+  "instagram": {
+    "handle": "dott.matteolicciardello",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "pelle",
+        "titolo": "Acne da adulti",
+        "sottotitolo": "Non è solo una cosa da ragazzi",
+        "didascalia": "L'acne può comparire o continuare dopo i 25 anni, soprattutto nelle donne, spesso su mento e mandibola. Ormoni, cosmetici troppo ricchi e alcuni farmaci possono avere un ruolo. Si cura bene, con una terapia scelta sulla persona.",
+        "hashtag": "#acne #acneadulti #dermatologo #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Alopecia androgenetica: si può fermare?",
+        "risposta": "Si può rallentare, prima si inizia meglio è.",
+        "didascalia": "Il diradamento graduale su tempie e vertice, o sulla riga nelle donne, è l'alopecia androgenetica. Oggi ci sono terapie che rallentano la perdita e in parte la recuperano. Conta iniziare presto, dopo una diagnosi corretta.",
+        "hashtag": "#capelli #alopecia #tricologia #dermatologia"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Cisti sebacea: toglierla o no",
+        "punti": [
+          "Se si infiamma spesso",
+          "Se cresce o dà fastidio",
+          "Meglio quando non è infiammata",
+          "Si toglie intera, in anestesia locale"
+        ],
+        "didascalia": "Una cisti sebacea è benigna, ma tende a infiammarsi e a riformarsi se non si toglie per intero. L'intervento è semplice e si programma meglio quando la cisti è tranquilla.",
+        "hashtag": "#cisti #dermochirurgia #pelle #dermatologo"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": null,
+    "luoghi": [
+      {
+        "tipo": "Studio Medico Emmetre",
+        "nome": "Studio Medico Emmetre",
+        "indirizzo": "Via Lamarmora 77",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "lo Studio Medico Emmetre, via Lamarmora 77, Torino",
+        "telefoni": [
+          {
+            "label": "Studio",
+            "numero": "011 580 7602"
+          }
+        ]
+      },
+      {
+        "tipo": "Ospedale Koelliker",
+        "nome": "Ospedale Koelliker",
+        "indirizzo": "Corso Galileo Ferraris 247",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "l'Ospedale Koelliker, corso Galileo Ferraris 247, Torino",
+        "telefoni": [
+          {
+            "label": "Ospedale",
+            "numero": "011 618 4511"
+          }
+        ]
+      },
+      {
+        "tipo": "Studio Medico Broganelli",
+        "nome": "Studio Medico Broganelli",
+        "indirizzo": "Corso Massimo d'Azeglio 102",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "lo Studio Medico Broganelli, corso Massimo d'Azeglio 102, Torino",
+        "telefoni": [
+          {
+            "label": "Studio",
+            "numero": "011 696 4140"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Può chiamare una delle sedi oppure scegliere giorno e orario online: La ricontatteremo per confermare.",
+    "telefono": "0115807602",
+    "telefonoLabel": "011 580 7602",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "emailRichieste": "pragmasolutions.to@gmail.com",
+    "notaRichieste": "Anteprima: le richieste inviate da questa demo arrivano a Pragma Solutions, non al medico.",
+    "oggettoMail": "Richiesta di visita dermatologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce venire e lasci i Suoi dati: La ricontatteremo per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate dalla segreteria.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": null,
+      "privacyTesto": "Questo modulo non salva i Suoi dati: prepara soltanto un messaggio nella Sua app di posta, che decide Lei se inviare. I dati indicati servono unicamente a rispondere alla richiesta di appuntamento.",
+      "notePlaceholder": "Per esempio da quanto tempo ha il problema"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F6F4F7",
+      "ink": "#1E1A24",
+      "muted": "#625C6B",
+      "line": "#E5E0E8",
+      "brand": "#5E2A57",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#C9A2C2",
+      "deep": "#26142A",
+      "deep-ink": "#EFE6EE"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap",
+    "fontTitoli": "DM Serif Display",
+    "fontTesti": "DM Sans",
+    "fontUi": "DM Sans",
+    "favicon": "/licciardello-7546/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/licciardello-7546/brand/brand.json",
+    "pagine": [
+      "https://www.dermatologolicciardello.com/"
+    ]
+  }
+}

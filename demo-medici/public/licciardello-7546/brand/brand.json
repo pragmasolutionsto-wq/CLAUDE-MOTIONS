@@ -1,0 +1,31 @@
+{
+  "sito": "https://www.dermatologolicciardello.com/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "Sito-template generato da MioDottore (DocPlanner), font Dosis/Open Sans del template",
+  "trello": "Prospect medici · Dott. Matteo Licciardello – Dermatologia · A·8",
+  "logo": { "trovato": false, "nota": "Nessun logo: solo il nome nel template. Intestazione di testo in DM Serif Display + volto tondo." },
+  "foto": {
+    "tenute": [ { "file": "ritratto-miodottore.jpg", "desc": "Ritratto in camice, braccia conserte. 404×404: piccolo, usato in formato medio (card in hero) e piccolo (avatar).", "fonte": "foto profilo MioDottore sul suo sito" } ],
+    "scartate": [
+      "Esterno dell'Ospedale Koelliker (1280×640, 1280×487): foto della struttura, non sua",
+      "vidix-prodotto.jpg: foto pubblicitaria del videodermatoscopio",
+      "Foto 584×706 sul sito dell'Ospedale Koelliker: sito terzo, NON usata (senza ok di Meme)"
+    ],
+    "nota": "Repertorio Unsplash per le aree e l'articolo."
+  },
+  "colori": { "nota": "Nessun colore proprio (template MioDottore). Palette scelta: prugna #5E2A57 (dalla sua cravatta), lilla #C9A2C2, fondo grigio-lilla chiaro #F6F4F7." },
+  "font": { "sito": [ { "famiglia": "Dosis", "giudizio": "font del template, non suo" } ], "scelti": "DM Serif Display (titoli) + DM Sans (testi)" },
+  "recensioni": "Oltre 300 recensioni dei pazienti pubblicate sul suo sito (da MioDottore). In pagina 12, riportate alla lettera, anonime come sul sito.",
+  "dati": {
+    "sedi": [
+      "Studio Medico Emmetre, via Lamarmora 77, 10128 Torino · 011 580 7602",
+      "Ospedale Koelliker, corso Galileo Ferraris 247-255, Torino · 011 618 4511",
+      "Studio Medico Broganelli, corso Massimo d'Azeglio 102, 10126 Torino · 011 696 4140"
+    ],
+    "prenotazioni": "Numero di prenotazione MioDottore +39 095 951 8383 (call center, non suo): non usato",
+    "email": "nessuna",
+    "linkedin": "https://www.linkedin.com/in/matteo-licciardello-53bb76194/",
+    "piva": "05520410878",
+    "prezzi": "Presenti sul sito (anche un 'Prima visita 10 €' probabilmente errato): NON riportati"
+  }
+}
