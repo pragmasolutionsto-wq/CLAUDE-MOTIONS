@@ -50,10 +50,10 @@ const cfg = {
         <div class="mt-5 border-t border-line pt-5">
           <p class="font-head text-[17px] font-semibold" data-giorno-titolo>Scelga un giorno nel calendario</p>
           <div data-orari class="mt-3 hidden">
-            <p class="text-[13px] font-semibold uppercase tracking-wide text-muted">Mattina</p>
-            <div class="mt-2 grid grid-cols-4 gap-2 sm:grid-cols-7" data-slot="mattina"></div>
-            <p class="mt-4 text-[13px] font-semibold uppercase tracking-wide text-muted">Pomeriggio</p>
-            <div class="mt-2 grid grid-cols-4 gap-2 sm:grid-cols-7" data-slot="pomeriggio"></div>
+            {c.mattina.length > 0 && <p class="mb-2 text-[13px] font-semibold uppercase tracking-wide text-muted">Mattina</p>}
+            {c.mattina.length > 0 && <div class="mb-4 grid grid-cols-4 gap-2 sm:grid-cols-7" data-slot="mattina"></div>}
+            {c.pomeriggio.length > 0 && <p class="mb-2 text-[13px] font-semibold uppercase tracking-wide text-muted">Pomeriggio</p>}
+            {c.pomeriggio.length > 0 && <div class="grid grid-cols-4 gap-2 sm:grid-cols-7" data-slot="pomeriggio"></div>}
           </div>
           <p class="mt-4 flex items-start gap-2 text-[13px] text-muted"><Icona nome="calendario" class="mt-0.5 h-4 w-4 shrink-0" />{c.notaOrari}</p>
         </div>
@@ -102,7 +102,7 @@ const cfg = {
           <input name="email" type="email" autocomplete="email" class="campo mt-1" />
         </label>
         <label class="mt-3 block text-sm font-medium">Note per il medico
-          <textarea name="note" rows="2" class="campo mt-1 resize-none" placeholder="Per esempio da quanto tempo ha dolore, esami già fatti"></textarea>
+          <textarea name="note" rows="2" class="campo mt-1 resize-none" placeholder={(c as any).notePlaceholder ?? 'Per esempio da quanto tempo ha dolore, esami già fatti'}></textarea>
         </label>
         <label class="mt-3 flex items-start gap-2 text-[13px] leading-snug text-muted">
           <input name="privacy" type="checkbox" class="mt-0.5 h-4 w-4 accent-[var(--c-brand)]" required />

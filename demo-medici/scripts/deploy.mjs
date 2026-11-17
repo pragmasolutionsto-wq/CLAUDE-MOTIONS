@@ -1,4 +1,6 @@
-// Uso: npm run deploy   (fa build + pubblica su Cloudflare Pages)
+// Uso: npm run deploy -- <slug>   (build + pubblica UNA demo nel suo progetto Cloudflare Pages
+//      "anteprima-<slug>", link: https://anteprima-<slug>.pages.dev/<slug>)
+//      npm run deploy                (senza slug: ripubblica le demo storiche su pragma-anteprime)
 // Il sito statico in dist/ viene impacchettato dentro un _worker.js (Pages advanced mode)
 // e caricato con UNA sola richiesta autenticata dal token API. Niente wrangler: il suo upload
 // a due passaggi (JWT) non passa dal proxy dei container cloud.
@@ -6,7 +8,11 @@ import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, extname } from 'node:path';
 
 const ACCOUNT = process.env.CLOUDFLARE_ACCOUNT_ID || '0d93afbbfd4d255b5c3091bd86afe3ae';
-const PROJECT = process.env.CF_PAGES_PROJECT || 'pragma-anteprime';
+const SLUG = process.argv[2];
+// Le prime due demo vivono su pragma-anteprime; da Delmonte in poi un progetto per medico (limite 3 MB per worker).
+const STORICHE = ['motta-m2zh', 'russo-6ajb'];
+const PROJECT = process.env.CF_PAGES_PROJECT || (SLUG ? `anteprima-${SLUG}` : 'pragma-anteprime');
+const tieni = SLUG ? [SLUG] : STORICHE;
 const TOKEN = process.env.CLOUDFLARE_API_TOKEN || 'proxy-injected'; // nel cloud lo inietta il proxy
 const API = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT}/pages/projects`;
 const H = { Authorization: `Bearer ${TOKEN}` };
@@ -18,11 +24,14 @@ const TIPI = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; cha
 const TESTO = new Set(['.html', '.js', '.css', '.json', '.txt', '.svg']);
 
 const walk = (d) => readdirSync(d).flatMap((f) => (statSync(join(d, f)).isDirectory() ? walk(join(d, f)) : [join(d, f)]));
+if (SLUG && !statSync(join(dist, SLUG), { throwIfNoEntry: false })) { console.error(`Demo "${SLUG}" non trovata in dist/`); process.exit(1); }
 const files = {};
 for (const f of walk(dist)) {
   const rel = '/' + relative(dist, f);
   if (rel === '/_headers') continue; // gli header li mette il worker
   if (rel.includes('/brand/')) continue; // originali estratti dal sito: restano in repo, non online
+  const primo = rel.split('/')[1];
+  if (rel.split('/').length > 2 && primo !== '_astro' && !tieni.includes(primo)) continue; // solo la demo richiesta + file comuni
   const ext = extname(f).toLowerCase();
   const buf = readFileSync(f);
   files[rel] = TESTO.has(ext) ? { t: TIPI[ext], s: buf.toString('utf8') } : { t: TIPI[ext] || 'application/octet-stream', b: buf.toString('base64') };
@@ -65,4 +74,4 @@ form.append('branch', 'main');
 form.append('_worker.js', new Blob([worker], { type: 'application/javascript' }), '_worker.js');
 const j = await (await fetch(`${API}/${PROJECT}/deployments`, { method: 'POST', headers: H, body: form })).json();
 if (!j.success) { console.error('Deploy fallito:', JSON.stringify(j.errors)); process.exit(1); }
-console.log(`Deploy OK\n  ${j.result.url}\n  https://${PROJECT}.pages.dev`);
+console.log(`Deploy OK\n  ${j.result.url}${SLUG ? '/' + SLUG : ''}\n  https://${PROJECT}.pages.dev${SLUG ? '/' + SLUG : ''}`);

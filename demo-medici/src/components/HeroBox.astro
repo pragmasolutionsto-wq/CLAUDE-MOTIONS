@@ -31,11 +31,11 @@ const molte = luoghi.length > 2;
         {luoghi.map((l) => <option value={l.frase}>{l.nome ?? l.tipo} · {l.indirizzo}</option>)}
       </select>
     ) : (
-      <div class="mt-2 grid grid-cols-2 gap-1 rounded-xl bg-surface p-1" role="group">
+      <div class={`mt-2 grid gap-1 rounded-xl bg-surface p-1 ${luoghi.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`} role="group">
         {luoghi.map((l, i) => (
           <button type="button" data-chip="sede" aria-pressed={i === 0 ? 'true' : 'false'} data-frase={l.frase}
             class="rounded-lg px-3 py-2 text-left text-[13px] leading-tight text-muted aria-pressed:bg-white aria-pressed:text-ink aria-pressed:shadow-sm">
-            <span class="block font-semibold">{l.tipo}</span><span class="hidden sm:inline">{l.indirizzo}</span>
+            <span class="block font-semibold">{l.tipo}</span><span class={luoghi.length > 1 ? 'hidden sm:inline' : ''}>{l.indirizzo}{luoghi.length > 1 ? '' : `, ${(l as any).citta ?? ''}`}</span>
           </button>
         ))}
       </div>

@@ -28,7 +28,7 @@ const foto = m.foto as Record<string, string | undefined>;
       <!-- HERO (ritratto verticale): sfondo del colore della foto, ritratto a destra, box a sinistra -->
       <section data-hero-section class="relative overflow-hidden" style={`background:${m.foto.heroSfondo}`}>
         <div class="mx-auto grid max-w-7xl lg:grid-cols-12 lg:items-end lg:gap-8 lg:px-8">
-          <div class="flex justify-center lg:order-2 lg:col-span-6 lg:justify-end">
+          <div class="flex justify-center pt-6 lg:order-2 lg:col-span-6 lg:justify-end lg:pt-0">
             <img src={m.foto.hero} alt={m.foto.heroAlt} width="900" height="1100" fetchpriority="high"
               class="h-[340px] w-auto object-contain object-bottom sm:h-[440px] lg:h-[620px]" />
           </div>
@@ -314,11 +314,12 @@ const foto = m.foto as Record<string, string | undefined>;
                   </a>
                 ))}
               </div>
+              {(l as any).nota && <p class="mt-4 text-sm leading-relaxed text-muted">{(l as any).nota}</p>}
               {l.mappa && <a href={mapsHref(l.indirizzo, l.citta)} target="_blank" rel="noopener" class="btn btn-ghost mt-4 w-full !min-h-[46px] text-[15px]"><Icona nome="pin" class="h-4 w-4" /> Apra in Google Maps</a>}
             </div>
           ))}
           {foto.diplomi && (
-            <div class="card relative overflow-hidden">
+            <div class={`card relative overflow-hidden ${altri.length === 0 && principali.length === 1 ? 'lg:col-span-2' : ''}`}>
               <img src={foto.diplomi} alt={foto.diplomiAlt} width="680" height="520" loading="lazy" class="h-full min-h-[240px] w-full object-cover" />
             </div>
           )}

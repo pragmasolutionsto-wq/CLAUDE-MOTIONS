@@ -1,0 +1,55 @@
+{
+  "sito": "https://www.dermatologo-torino.it/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "WordPress (tema con slider), news ferme a maggio 2022",
+  "trello": "Prospect medici · Dott. Sergio Delmonte – Dermatologia e venereologia · A·9",
+  "logo": {
+    "trovato": true,
+    "file": {
+      "logo-delmonte.png": { "desc": "Logotipo 'dr. Sergio Delmonte' (nero + rosso) / 'DERMATOLOGO' (blu), font tipo Raleway. 365×85, piccolo ma nitido.", "fonte": "header (uploads/2021/10/logo-delmonte.png)" },
+      "cropped-delmonte-icona.png": { "desc": "Marchio 'SD' nero e rosso in cerchio blu pennellato. 512×512.", "fonte": "site icon / favicon" }
+    },
+    "versione_chiara": "assente: per il footer scuro si ricava in bianco dal canale alfa (derivata)"
+  },
+  "foto": {
+    "tenute": [
+      { "file": "dermatolgo-torino-dott-sergio-delmonte-dirigente-medico.png", "desc": "Ritratto in camice e cravatta, braccia conserte, fondo beige. 657×874 con angoli arrotondati.", "fonte": "home" },
+      { "file": "dermatolgo-torino-dottor-sergio-delmonte.png", "desc": "Ritratto in camice, mezzo busto, stesso fondo. 656×700.", "fonte": "/dottor-sergio-delmonte-curriculum/" },
+      { "file": "laser-terapia-dermatologia.jpg", "desc": "Mani guantate con manipolo laser sulla pelle (il medico non si vede): usata come immagine di repertorio.", "fonte": "/laser-trattamento-dermatologico/" },
+      { "file": "controllo-nei-slider-1.jpg", "desc": "Dito guantato su nei della schiena (slider home): usata come immagine di repertorio.", "fonte": "home, slider" }
+    ],
+    "scartate": [
+      "Foto cliniche di IST, condilomi, lichen, chirurgia aperta: troppo crude per una homepage",
+      "Locandine congressi AIDA/SIMaST: grafiche di terzi",
+      "Icone 242×238 (FAQ, trattamenti): illustrazioni stock a bassa risoluzione"
+    ],
+    "nota": "HTML di tutte le pagine controllato (anche sfondi CSS). Nessuna foto dello studio. Data di nascita presente sul sito: NON usata."
+  },
+  "colori": {
+    "blu": { "hex": "#004791", "fonte": "logo 'DERMATOLOGO', cerchio del marchio" },
+    "rosso": { "hex": "#DE403E", "fonte": "logo 'Delmonte', 'D' del marchio" },
+    "blu_link": { "hex": "#2A60D0", "fonte": "CSS del tema" }
+  },
+  "font": {
+    "sito": [
+      { "famiglia": "Roboto", "ruolo": "testi", "giudizio": "vietato dalle regole Pragma" },
+      { "famiglia": "Lato", "ruolo": "testi", "giudizio": "buono, si tiene" }
+    ],
+    "logo": "Raleway (stima visiva): usato per i titoli, con cifre allineate"
+  },
+  "dati": {
+    "nome": "Dott. Sergio Delmonte, Specialista in Dermatologia e Venereologia",
+    "studio": "Studio Medico Specialistico, via San Pio V 32, 10125 Torino",
+    "telefono": "393 879 4002, lun–ven 15–19 (fuori orario SMS o WhatsApp per essere richiamati)",
+    "email": "info@dermatologo-torino.it",
+    "parcheggio": "piazza Madama Cristina",
+    "altre_sedi": [
+      "AOU Città della Salute e della Scienza, Presidio Dermatologico San Lazzaro, via Cherasco 23, S.C. Dermatologia-U",
+      "ASL Città di Torino, Presidio C. Sperino, via Juvarra 19, CEMUSS"
+    ],
+    "piva": "11045670012",
+    "privacy": "https://www.dermatologo-torino.it/privacy-policy/",
+    "social": "nessuno",
+    "prenotazione_online": "nessuna"
+  }
+}

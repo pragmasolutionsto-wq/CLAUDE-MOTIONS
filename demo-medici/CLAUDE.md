@@ -56,9 +56,9 @@ La demo deve sembrare "il suo sito, ma fatto bene". Il medico deve riconoscersi 
 
 ---
 
-**Dominio:** `pragma-anteprime.pages.dev` → link demo: `https://pragma-anteprime.pages.dev/<slug>`
+**Link demo (da Delmonte in poi):** `https://anteprima-<slug>.pages.dev/<slug>` (un progetto Pages per medico). Motta e Russo restano su `https://pragma-anteprime.pages.dev/<slug>`.
 
-Hosting: **Cloudflare Pages**, progetto `pragma-anteprime` (gratis, uso commerciale ammesso). Si pubblica con `npm run deploy`.
+Hosting: **Cloudflare Pages** (gratis, uso commerciale ammesso). Si pubblica con `npm run deploy -- <slug>`.
 
 ## Trello: tenere SEMPRE la bacheca allineata (regola fissa di Meme)
 Bacheca "Prospect medici": https://trello.com/b/MqV9G8vV/prospect-medici (connettore Trello).
@@ -116,10 +116,10 @@ Template v3 (`HomeMedico.astro`, `articolo.astro`): stile AutoScout con i colori
 - `npm run shot` fallisce (exit 2) se trova: errori console, richieste fallite, scroll orizzontale, meta robots sbagliato, fascia mancante, elementi rimasti invisibili, font titoli non caricato, link nella root.
 
 ## Deploy
-`npm run deploy` = build + pubblicazione su Cloudflare Pages (`scripts/deploy.mjs`).
+`npm run deploy -- <slug>` = build + pubblicazione della sola demo `<slug>` nel suo progetto Cloudflare Pages `anteprima-<slug>` (creato in automatico). `npm run deploy` senza slug ripubblica solo le demo storiche (Motta, Russo) su `pragma-anteprime`. Script: `scripts/deploy.mjs`.
 - Il sito statico viene impacchettato in un `_worker.js` (Pages advanced mode) e caricato in **una sola richiesta** API. Il worker serve i file e mette `X-Robots-Tag: noindex, nofollow` su tutto.
 - **Non usare wrangler** nei container cloud: il suo upload usa un JWT nell'header Authorization che il proxy sovrascrive col token → deploy "riuscito" ma vuoto (500). E `wrangler pages project create` lancia un'autoconfig che converte il sito in SSR: da evitare.
 - Credenziale: token Cloudflare (permesso Pages → Edit) salvato nell'ambiente cloud "Pragma" per `api.cloudflare.com`, iniettato dal proxy. Account ID nello script (non è un segreto).
 - Il container non raggiunge `*.pages.dev`: verifica online con Firecrawl (status 200 + meta robots + screenshot).
 - `public/_headers` e `vercel.json` restano come riserva se si cambia hosting.
-- **Limite di peso:** tutto il sito finisce dentro un unico worker (max ~3 MB sul piano gratuito, e le immagini non si comprimono). Per questo `deploy.mjs` esclude `*/brand/*` (originali) e si blocca sopra 2,8 MB. Le pagine usano solo le versioni web in `img/`. **Stato al 17/11/2026: 2 demo = 2,6 MB su 2,8. La terza demo NON ci sta**: prima di farla va cambiato il deploy (un progetto Pages per medico, oppure immagini su R2). Dopo un deploy l'indirizzo principale può impiegare qualche minuto ad aggiornarsi: verifica prima sull'URL del deploy (`https://<id>.pragma-anteprime.pages.dev`).
+- **Limite di peso:** tutto il sito finisce dentro un unico worker (max ~3 MB sul piano gratuito, e le immagini non si comprimono). Per questo `deploy.mjs` esclude `*/brand/*` (originali) e si blocca sopra 2,8 MB. Le pagine usano solo le versioni web in `img/`. Dal 17/11/2026 ogni demo nuova ha il suo progetto, quindi il limite vale per la singola demo (Delmonte ≈ 0,8 MB). Dopo un deploy l'indirizzo principale può impiegare qualche minuto ad aggiornarsi: verifica prima sull'URL del deploy (`https://<id>.anteprima-<slug>.pages.dev/<slug>`).

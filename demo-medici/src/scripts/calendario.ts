@@ -62,7 +62,9 @@ if (sez) {
     orari.classList.remove('hidden');
     titoloGiorno.textContent = fmtLungo.format(giorno).replace(/^./, (c) => c.toUpperCase());
     (['mattina', 'pomeriggio'] as const).forEach((k) => {
-      const box = $(`[data-slot="${k}"]`); box.innerHTML = '';
+      const box = sez.querySelector<HTMLElement>(`[data-slot="${k}"]`);
+      if (!box) return;
+      box.innerHTML = '';
       cfg[k].forEach((h) => {
         const b = document.createElement('button');
         b.type = 'button'; b.className = 'slot'; b.textContent = h; b.dataset.ora = h;

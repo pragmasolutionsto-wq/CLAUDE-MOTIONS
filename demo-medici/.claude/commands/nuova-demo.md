@@ -67,7 +67,7 @@ Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito,
 5. Si pubblica **solo con: sì, sì, no.** Altrimenti correggi e ricontrolla (torna al punto 1). Controlla anche i divieti della Fase 3 uno per uno.
 
 ## Pubblicazione
-1. `npm run deploy` → "Deploy OK".
+1. `npm run deploy -- <slug>` → "Deploy OK" (progetto Pages dedicato `anteprima-<slug>`).
 2. Verifica online con Firecrawl (`maxAge: 0`) home e articolo: status 200, `robots: noindex, nofollow`, screenshot coerente con quello locale.
 3. `git add` dei file della demo (`public/<slug>/`, JSON, eventuali fix al template), commit `Demo: Dr. <Nome> (<specialità>)`, push sul branch di lavoro. Non committare `shots/`.
 
@@ -75,7 +75,7 @@ Prima di disegnare, scrivi in una riga come farai sembrare la demo "il suo sito,
 - Descrizione della scheda nel formato di Motta (Link demo, Articolo demo, Sito attuale, Contatti, Problemi/aggancio, Demo, Prossimi passi, Note) e spostamento in "2. Demo pronta (Loom da fare)". Correggi nella scheda i dati che la ricerca ha smentito.
 
 ## Risposta finale a Meme (breve)
-- Link: `https://pragma-anteprime.pages.dev/<slug>` e `/<slug>/articolo` (verificati online)
+- Link: `https://anteprima-<slug>.pages.dev/<slug>` e `/<slug>/articolo` (verificati online)
 - Le tre risposte del controllo (sì / sì / no) con una riga di motivazione ciascuna
 - Cosa hai preso dal sito, cosa hai scartato e perché, cosa hai scritto tu
 - L'immagine affiancata sito attuale vs demo

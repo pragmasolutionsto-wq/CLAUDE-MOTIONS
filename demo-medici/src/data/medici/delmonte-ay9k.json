@@ -1,0 +1,448 @@
+{
+  "slug": "delmonte-ay9k",
+  "sitoOrigine": "https://www.dermatologo-torino.it/",
+  "titolo": "Dott.",
+  "nome": "Sergio Delmonte",
+  "specialita": "Specialista in Dermatologia e Venereologia",
+  "firma": "Dermatologo e venereologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Sergio Delmonte · Dermatologo e venereologo a Torino",
+    "description": "Sono dermatologo e venereologo a Torino: controllo dei nei, malattie della pelle, alopecia, infezioni sessualmente trasmissibili, laser e dermochirurgia. Studio in via San Pio V 32."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/delmonte-ay9k/img/logo-scuro.png",
+    "logoChiaro": "/delmonte-ay9k/img/logo-chiaro.png",
+    "marchio": "/delmonte-ay9k/img/marchio.png",
+    "logoAlt": "dr. Sergio Delmonte, Dermatologo"
+  },
+  "foto": {
+    "heroTipo": "ritratto",
+    "hero": "/delmonte-ay9k/img/ritratto.webp",
+    "heroSfondo": "#D8CABF",
+    "heroAlt": "Il Dott. Sergio Delmonte",
+    "volto": "/delmonte-ay9k/img/volto.webp",
+    "postRitratto": "/delmonte-ay9k/img/post-ritratto.webp",
+    "diplomi": "/delmonte-ay9k/img/rep-torino.webp",
+    "diplomiAlt": "Torino vista dall'alto, con la Mole Antonelliana"
+  },
+  "hero": {
+    "eyebrow": "Dermatologia · Torino",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami la segreteria",
+    "box": {
+      "titolo": "Prenoti la Sua visita",
+      "motivoLabel": "Motivo della visita",
+      "motivi": [
+        "Controllo dei nei",
+        "Macchie o lesioni della pelle",
+        "Caduta dei capelli",
+        "Infezioni sessualmente trasmissibili",
+        "Trattamento laser"
+      ],
+      "motiviFrase": [
+        "un controllo dei nei",
+        "macchie o lesioni della pelle",
+        "la caduta dei capelli",
+        "un sospetto di infezione sessualmente trasmissibile",
+        "valutare un trattamento laser"
+      ],
+      "sedeLabel": "Dove ricevo"
+    }
+  },
+  "fiducia": [
+    {
+      "icona": "medaglia",
+      "titolo": "Laurea con lode e medaglia",
+      "testo": "Università di Genova, con una tesi sul melanoma"
+    },
+    {
+      "icona": "ospedale",
+      "titolo": "Dirigente medico",
+      "testo": "Dermatologia, Città della Salute e della Scienza di Torino"
+    },
+    {
+      "icona": "libro",
+      "titolo": "31 pubblicazioni",
+      "testo": "su riviste scientifiche internazionali"
+    },
+    {
+      "icona": "persone",
+      "titolo": "Consiglio Direttivo SIMaST",
+      "testo": "società scientifica sulle malattie sessualmente trasmesse"
+    }
+  ],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Sono dermatologo e venereologo. Lavoro come dirigente medico nella Dermatologia della Città della Salute e della Scienza di Torino e ricevo nel mio studio di via San Pio V, vicino a piazza Madama Cristina.",
+      "Mi occupo di malattie della pelle, controllo dei nei e prevenzione dei tumori cutanei, caduta dei capelli, dermochirurgia e laser. Da oltre vent'anni seguo anche le infezioni sessualmente trasmissibili: dal 2012 al 2017 sono stato responsabile del Centro di Dermatologia Genitale e per le Infezioni Sessualmente Trasmissibili della Città della Salute e della Scienza.",
+      "Mi sono laureato e specializzato a Genova, con lode. Ho completato la formazione con uno stage all'Istituto di Dermatologia dell'Università di Lione e con un Master di II livello in Dermochirurgia all'Università di Siena."
+    ],
+    "tappe": [
+      {
+        "periodo": "1994",
+        "testo": "Laurea in Medicina e Chirurgia all'Università di Genova, 110/110 e lode e medaglia, con la tesi «Melanoma: esperienza personale»."
+      },
+      {
+        "periodo": "1998",
+        "testo": "Specializzazione in Dermatologia e Venereologia all'Università di Genova, 50/50 e lode."
+      },
+      {
+        "periodo": "1998 – 1999",
+        "testo": "Stage all'Istituto di Dermatologia dell'Università di Lione: istopatologia, venereologia e chirurgia laser."
+      },
+      {
+        "periodo": "Dal 2000",
+        "testo": "Dirigente medico in Dermatologia all'ospedale San Giovanni Battista di Torino, oggi Città della Salute e della Scienza."
+      },
+      {
+        "periodo": "2006 – 2007",
+        "testo": "Master di II livello in Dermochirurgia all'Università di Siena."
+      },
+      {
+        "periodo": "2008 – 2018",
+        "testo": "Docente alla Scuola di Specializzazione in Dermatologia e Venereologia dell'Università di Torino."
+      },
+      {
+        "periodo": "2009 – 2017",
+        "testo": "Responsabile del centro per le Malattie Sessualmente Trasmissibili del San Giovanni Battista e, dal 2012, del Centro di Dermatologia Genitale e IST della Città della Salute e della Scienza."
+      },
+      {
+        "periodo": "Dal 2019",
+        "testo": "Dermatologo consulente del CEMUSS, il Centro Multidisciplinare per la Salute Sessuale della Città di Torino, al presidio Sperino."
+      }
+    ],
+    "numeri": [
+      {
+        "valore": "31",
+        "testo": "pubblicazioni su riviste internazionali"
+      },
+      {
+        "valore": "Dal 1996",
+        "testo": "relatore a congressi italiani ed europei"
+      },
+      {
+        "valore": "Dal 2001",
+        "testo": "docente in corsi sulle infezioni sessualmente trasmissibili"
+      },
+      {
+        "valore": "3",
+        "testo": "società scientifiche, italiane e internazionali"
+      }
+    ],
+    "societaLabel": "Società scientifiche e reti",
+    "societa": [
+      "SIDEMaST",
+      "IUSTI",
+      "SIMaST, membro del Consiglio Direttivo",
+      "Rete di sorveglianza delle MST del Piemonte",
+      "Rete Sentinella MST dell'Istituto Superiore di Sanità"
+    ]
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "Le condizioni che seguo più spesso. Dopo la visita decidiamo insieme se servono altri esami, un trattamento o solo controlli nel tempo.",
+    "voci": [
+      {
+        "titolo": "Controllo dei nei",
+        "testo": "Visita di tutta la pelle, con la dermatoscopia quando serve, per capire quali nei vanno solo tenuti d'occhio e quali è meglio togliere.",
+        "img": "/delmonte-ay9k/img/rep-dermatoscopia.webp"
+      },
+      {
+        "titolo": "Melanoma e tumori della pelle",
+        "testo": "Diagnosi precoce, asportazione chirurgica con esame istologico e controlli nel tempo.",
+        "img": "/delmonte-ay9k/img/rep-nei.webp"
+      },
+      {
+        "titolo": "Macchie solari",
+        "testo": "Macchie scure su viso, mani e décolleté dovute al sole: prima le valuto, poi scegliamo il trattamento più adatto.",
+        "img": "/delmonte-ay9k/img/rep-sole.webp"
+      },
+      {
+        "titolo": "Caduta dei capelli",
+        "testo": "Alopecia androgenetica e altre forme di diradamento, in uomini e donne: si parte dalla diagnosi della causa.",
+        "img": "/delmonte-ay9k/img/rep-capelli.webp"
+      },
+      {
+        "titolo": "Infezioni sessualmente trasmissibili",
+        "testo": "HPV e condilomi, herpes genitale, sifilide, gonorrea, clamidia, mollusco contagioso. Diagnosi, cura e prevenzione, con riservatezza.",
+        "img": "/delmonte-ay9k/img/rep-ist.webp"
+      },
+      {
+        "titolo": "Malattie della pelle",
+        "testo": "Lesioni che cambiano, irritazioni che non passano, lichen sclerosus e altre malattie dermatologiche di adulti e ragazzi.",
+        "img": "/delmonte-ay9k/img/rep-pelle.webp"
+      }
+    ]
+  },
+  "metodo": {
+    "titolo": "Come lavoro",
+    "intro": "Dalla diagnosi con il dermatoscopio ai trattamenti in studio: laser, crioterapia, diatermocoagulazione e dermochirurgia.",
+    "punti": [
+      {
+        "titolo": "Laser CO2",
+        "testo": "Vaporizza in modo preciso le lesioni benigne, come cheratosi, papillomi, angiomi e verruche. Con lo skin resurfacing tratta cicatrici dell'acne, rughe e macchie.",
+        "img": "/delmonte-ay9k/img/rep-laser.webp",
+        "imgAlt": ""
+      },
+      {
+        "titolo": "Dermatoscopia in epiluminescenza",
+        "testo": "Uno strumento ottico mostra dettagli dei nei che a occhio nudo non si vedono e aiuta a riconoscere presto le lesioni sospette.",
+        "icona": "lente"
+      },
+      {
+        "titolo": "Dermochirurgia",
+        "testo": "Asporto nei, cisti e tumori della pelle in anestesia locale, con esame istologico e attenzione al risultato estetico.",
+        "icona": "scudo"
+      },
+      {
+        "titolo": "Crioterapia",
+        "testo": "L'azoto liquido congela lesioni superficiali come verruche e cheratosi, oppure schiarisce alcune macchie.",
+        "icona": "fiocco"
+      },
+      {
+        "titolo": "Diatermocoagulazione",
+        "testo": "Il calore elimina lesioni più spesse, come grandi verruche, condilomi e cheratosi seborroiche, sempre dopo anestesia locale.",
+        "icona": "goccia"
+      }
+    ]
+  },
+  "banda": {
+    "img": "/delmonte-ay9k/img/rep-banda.webp",
+    "titolo": "Un neo è cambiato?",
+    "testo": "Forma, colore o dimensioni diversi da prima sono un buon motivo per farlo vedere. La visita serve a capire se basta controllarlo o se è meglio toglierlo."
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "articolo": {
+    "categoria": "Prevenzione",
+    "titolo": "Mappatura dei nei a Torino: come funziona e quando farla",
+    "img": "/delmonte-ay9k/img/rep-articolo.webp",
+    "intro": "«Ogni quanto devo controllare i nei?» è una delle domande che sento più spesso. La risposta dipende da Lei: dal tipo di pelle, dal numero di nei e dalla storia Sua e della Sua famiglia. Ecco come funziona il controllo e quando conviene farlo.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Perché controllare i nei",
+        "paragrafi": [
+          "I nei sono quasi sempre innocui. Sono però un indicatore importante del rischio di melanoma, il tumore della pelle più pericoloso.",
+          "Melanoma e nei sono cose diverse, ma legate. Un melanoma all'inizio può somigliare a un neo, e una parte dei melanomi nasce proprio da un neo che nel tempo cambia. Per questo preferisco chiamare il controllo dei nei con il suo vero nome: una visita di prevenzione dei tumori della pelle.",
+          "La buona notizia è che un melanoma scoperto presto, quando è ancora sottile, ha in genere una prognosi molto migliore. La prevenzione funziona se i controlli sono fatti con regolarità."
+        ]
+      },
+      {
+        "titolo": "Come si svolge la visita",
+        "paragrafi": [
+          "La visita riguarda tutta la superficie della pelle, comprese le zone che di solito non guardiamo: schiena, cuoio capelluto, pianta dei piedi, spazi tra le dita.",
+          "Prima Le faccio qualche domanda: se si scotta facilmente, se ha avuto scottature importanti, se in famiglia ci sono stati casi di melanoma, se ha notato nei nuovi o che sono cambiati. Poi osservo la pelle a occhio nudo e, quando serve, con il dermatoscopio.",
+          "Il dermatoscopio è uno strumento ottico che illumina e ingrandisce il neo e mostra strutture che a occhio nudo non si vedono. Ha migliorato molto la capacità di riconoscere i melanomi iniziali e ha ridotto le asportazioni inutili di nei normali. L'esame non fa male e non richiede preparazione.",
+          "Alla fine della visita Le spiego cosa ho visto, se ci sono nei da tenere d'occhio e quando conviene rivedersi. Se un neo mi sembra sospetto, Le propongo di toglierlo."
+        ]
+      },
+      {
+        "titolo": "Cos'è la mappatura",
+        "paragrafi": [
+          "Si parla di mappatura quando le immagini dei nei vengono registrate, spesso con un videodermatoscopio digitale, e conservate. Al controllo successivo si possono confrontare con le nuove e vedere anche piccoli cambiamenti.",
+          "È utile soprattutto per chi ha molti nei o nei atipici, perché permette di seguire nel tempo le lesioni dubbie senza toglierle tutte. Se nel Suo caso serve, ne parliamo durante la visita."
+        ]
+      },
+      {
+        "titolo": "Chi dovrebbe farla, e ogni quanto",
+        "paragrafi": [
+          "Alcune persone hanno un rischio più alto di sviluppare un melanoma. In particolare:"
+        ],
+        "elenco": [
+          "chi ha la pelle chiara e si scotta facilmente;",
+          "chi ha molti nei, più di venti;",
+          "chi ha avuto scottature solari, soprattutto da bambino;",
+          "chi ha casi di melanoma in famiglia."
+        ],
+        "chiusura": "Se si riconosce in almeno uno di questi punti, Le consiglio un controllo ogni anno, già a partire dall'adolescenza. Il melanoma però può colpire chiunque: anche senza fattori di rischio, una visita tra i 30 e i 60 anni andrebbe fatta almeno una volta, per valutare il proprio rischio. La frequenza dei controlli successivi la decidiamo insieme."
+      },
+      {
+        "titolo": "I segnali da non trascurare",
+        "paragrafi": [
+          "Tra un controllo e l'altro è utile guardare la propria pelle, magari con l'aiuto di uno specchio o di una persona di fiducia. Per ricordare cosa osservare si usa la regola ABCDE:"
+        ],
+        "elenco": [
+          "A come asimmetria: le due metà del neo sono diverse;",
+          "B come bordi: irregolari, frastagliati o sfumati;",
+          "C come colore: più colori nello stesso neo, o un colore che cambia;",
+          "D come dimensioni: un neo che cresce o è più grande degli altri;",
+          "E come evoluzione: qualsiasi cambiamento nel tempo."
+        ],
+        "chiusura": "Conta anche il neo «brutto anatroccolo», cioè quello diverso da tutti gli altri. Se nota uno di questi segnali, o un neo che sanguina o prude senza motivo, non aspetti il controllo programmato."
+      },
+      {
+        "titolo": "Quando un neo va tolto",
+        "paragrafi": [
+          "Si asporta un neo quando c'è il sospetto di un melanoma o quando si tratta di un neo atipico con un rischio alto di trasformarsi. Solo l'asportazione chirurgica, seguita dall'esame istologico, permette una diagnosi certa di una lesione che resta dubbia.",
+          "Molti specialisti sanno togliere un neo. La scelta di quali nei togliere e quali lasciare, però, spetta al dermatologo, che sa «leggere» la pelle. Per questo è preferibile affidarsi a uno specialista che sappia sia valutare sia intervenire. L'intervento si fa in anestesia locale e, nella maggior parte dei casi, richiede pochi punti."
+        ]
+      },
+      {
+        "titolo": "Come prepararsi alla visita",
+        "paragrafi": [
+          "Bastano poche attenzioni:"
+        ],
+        "elenco": [
+          "eviti il trucco pesante e, se possibile, lo smalto, perché coprono la pelle e le unghie;",
+          "porti i referti di eventuali visite o esami istologici precedenti;",
+          "annoti i nei che Le sembrano nuovi o cambiati, così non li dimentichiamo;",
+          "si ricordi di eventuali casi di melanoma in famiglia."
+        ]
+      },
+      {
+        "titolo": "La prevenzione di tutti i giorni",
+        "paragrafi": [
+          "Il controllo dal dermatologo è importante, ma la prima prevenzione è la protezione dal sole: evitare le scottature, soprattutto nei bambini, usare una crema solare adatta al proprio tipo di pelle e rinnovarla spesso, non usare le lampade abbronzanti.",
+          "Se ha dubbi su un neo o vuole programmare un controllo, può prenotare una visita nel mio studio di via San Pio V a Torino."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo dermatologo."
+  },
+  "instagram": {
+    "handle": "dott.sergiodelmonte",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "postRitratto",
+        "titolo": "Mappatura dei nei: ogni quanto farla",
+        "sottotitolo": "Dipende da Lei, ecco perché",
+        "didascalia": "Pelle chiara che si scotta facilmente, più di venti nei, scottature da bambini, casi di melanoma in famiglia: se si riconosce in uno di questi punti, il controllo andrebbe fatto ogni anno. Negli altri casi, almeno una visita tra i 30 e i 60 anni serve a capire il proprio rischio.",
+        "hashtag": "#nei #mappaturanei #melanoma #prevenzione #dermatologo #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "HPV e condilomi: le domande che nessuno fa",
+        "risposta": "In visita se ne parla senza imbarazzo.",
+        "didascalia": "Si può avere l'HPV senza saperlo? I condilomi tornano? Il partner deve farsi visitare? Sono domande frequenti, che spesso non si ha il coraggio di fare. Una visita dermatologica serve a fare diagnosi, scegliere il trattamento e capire come proteggere sé e il partner.",
+        "hashtag": "#hpv #condilomi #saluteSessuale #prevenzione #venereologo"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Herpes genitale in gravidanza",
+        "punti": [
+          "Lo dica al ginecologo fin dalla prima visita",
+          "Se compaiono lesioni, si faccia visitare subito",
+          "Non usi farmaci senza indicazione medica"
+        ],
+        "didascalia": "L'herpes genitale in gravidanza va gestito con attenzione, ma nella maggior parte dei casi si può affrontare con serenità. La cosa più importante è che il medico che La segue sia informato: insieme si valutano controlli ed eventuali terapie.",
+        "hashtag": "#herpesgenitale #gravidanza #saluteSessuale #dermatologo"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "Ricevo anche presso",
+    "email": "info@dermatologo-torino.it",
+    "luoghi": [
+      {
+        "principale": true,
+        "tipo": "Studio Medico Specialistico",
+        "nome": "Studio Medico Specialistico",
+        "indirizzo": "Via San Pio V 32",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "lo studio di via San Pio V 32, Torino",
+        "telefoni": [
+          {
+            "label": "Segreteria, lun–ven 15–19",
+            "numero": "393 879 4002"
+          }
+        ],
+        "nota": "Fuori orario può mandare un SMS o un messaggio WhatsApp: La ricontattiamo noi. Il parcheggio più vicino è quello di piazza Madama Cristina."
+      }
+    ],
+    "struttureLabel": "Dove lavoro anche",
+    "strutture": [
+      {
+        "nome": "Ospedale Dermatologico San Lazzaro",
+        "testo": "Città della Salute e della Scienza di Torino · via Cherasco 23"
+      },
+      {
+        "nome": "CEMUSS · Presidio Sperino",
+        "testo": "Centro Multidisciplinare per la Salute Sessuale · via Juvarra 19, Torino"
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Può chiamare la segreteria dal lunedì al venerdì, dalle 15 alle 19, oppure scegliere giorno e orario online e inviarmi la richiesta su WhatsApp.",
+    "telefono": "3938794002",
+    "telefonoLabel": "393 879 4002",
+    "chiamaLabel": "la segreteria",
+    "whatsapp": "393938794002",
+    "emailRichieste": null,
+    "oggettoMail": "Richiesta di visita dermatologica",
+    "calendario": {
+      "titolo": "Prenoti online la Sua visita",
+      "intro": "Scelga giorno e orario che preferisce e lasci i Suoi dati: la segreteria La ricontatterà per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [],
+      "pomeriggio": [
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00",
+        "18:30"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dalla segreteria.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": "https://www.dermatologo-torino.it/privacy-policy/",
+      "notePlaceholder": "Per esempio da quanto tempo ha notato il problema, esami già fatti"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F1F4F9",
+      "ink": "#13233D",
+      "muted": "#55627A",
+      "line": "#DCE3ED",
+      "brand": "#004791",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#DE403E",
+      "deep": "#0B2A52",
+      "deep-ink": "#E5ECF6"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Lato:wght@400;700&display=swap",
+    "fontTitoli": "Raleway",
+    "fontTesti": "Lato",
+    "favicon": "/delmonte-ay9k/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/delmonte-ay9k/brand/brand.json",
+    "pagine": [
+      "https://www.dermatologo-torino.it/",
+      "https://www.dermatologo-torino.it/dottor-sergio-delmonte-curriculum/",
+      "https://www.dermatologo-torino.it/contatti/",
+      "https://www.dermatologo-torino.it/mappatura-controllo-dei-nei-torino/",
+      "https://www.dermatologo-torino.it/trattamenti-dermatologici/",
+      "https://www.dermatologo-torino.it/laser-trattamento-dermatologico/",
+      "https://www.dermatologo-torino.it/dermatoscopia-in-epiluminescenza-elm/",
+      "https://www.dermatologo-torino.it/dermochirurgia/",
+      "https://www.dermatologo-torino.it/alopecia-intervista-al-dott-sergio-delmonte/"
+    ]
+  }
+}
