@@ -1,0 +1,65 @@
+{
+  "sito": "https://robertocarone.it/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "Single page Vue (Viola Gabriele), immagini protette da hotlink (scaricate con referer)",
+  "trello": "Prospect medici · Dott. Roberto Carone – Urologia e neuro-urologia · A·8",
+  "logo": {
+    "trovato": true,
+    "file": "logo.png",
+    "nota": "241×97 su fondo blu notte #072240: monogramma a cerchi (cervello, midollo, vescica) + ROBERTO CARONE. Usato su header scuro dello stesso colore. Marchio tondo ritagliato per favicon e avatar."
+  },
+  "foto": {
+    "tenute": [
+      {
+        "file": "foto-01-banner-con-scritta.jpg",
+        "desc": "Banner 1366×570 con scritta: ritagliato solo su di lui (295×566), via il doppio sfumato",
+        "fonte": "home"
+      },
+      {
+        "file": "foto-03-sala-operatoria-tondo.png",
+        "desc": "In sala operatoria, tondo 401px: Chi sono",
+        "fonte": "home"
+      },
+      {
+        "file": "libro-*.png",
+        "desc": "Copertine dei 2 libri (Minerva Medica) ritagliate dai tondi",
+        "fonte": "home"
+      }
+    ],
+    "scartate": [
+      "tondo4: foto stock (mani su tastiera)",
+      "Foto MioDottore: sito terzo"
+    ],
+    "nota": "Foto vere tutte piccole: il layout usa il ritratto in un cerchio medio (come i 'tondi' del suo sito). Repertorio Unsplash: coppie di anziani, carrozzina, corridoio, prato."
+  },
+  "colori": {
+    "sito": [
+      "#21398F (pulsanti)",
+      "#04233F / #072240 (logo, header)",
+      "#0D6EFD"
+    ],
+    "scelti": "blu #21398F, blu notte #072240, verde acqua #7FD1C7 (dai tondi delle copertine), fondo bianco/grigio freddo #F1F4F9"
+  },
+  "font": {
+    "sito": [
+      {
+        "famiglia": "Klavika",
+        "giudizio": "commerciale, non disponibile"
+      }
+    ],
+    "scelti": "Sora (titoli, simile a Klavika) + Source Sans 3"
+  },
+  "recensioni": "19 su MioDottore; in pagina 8 alla lettera con nome come pubblicato (esclusa quella che critica il centralino).",
+  "dati": {
+    "studio": "Via Bava 11, Torino (solo email appuntamenti@robertocarone.it)",
+    "santa_caterina": "Via Villa della Regina 19, Torino · 011 81 99 206 · visite, urodinamica, video-urodinamica, interventi",
+    "koelliker": "Corso Galileo Ferraris 247, Torino · 011 61 84 151 · visite, urodinamica, interventi",
+    "carriera": "Laurea 1975, Urologia 1978, Fisiatria 1988 (MioDottore); già primario Neuro-Urologia e Unità Spinale CTO; prof. a contratto UniTO; docente Genova; già presidente SIUD; presidente emerito FIC",
+    "pubblicazioni": "oltre cento (sito; MioDottore dice 200: usato il dato del sito)",
+    "libri": [
+      "Urologia funzionale. La terza via (Minerva Medica 2020, 96 pp, L10193)",
+      "La vescica neurologica (Minerva Medica 2022, 128 pp, L10247)"
+    ],
+    "video": "YouTube FIC 'Incontinenza urinaria maschile' 830f7P_uWq8"
+  }
+}

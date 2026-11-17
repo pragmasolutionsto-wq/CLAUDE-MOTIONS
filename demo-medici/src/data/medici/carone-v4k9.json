@@ -1,0 +1,487 @@
+{
+  "slug": "carone-v4k9",
+  "layout": "cinetica",
+  "sitoOrigine": "https://robertocarone.it/",
+  "titolo": "Dott.",
+  "nome": "Roberto Carone",
+  "specialita": "Specialista in Urologia",
+  "firma": "Urologo · neuro-urologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Roberto Carone · Urologo e neuro-urologo a Torino",
+    "description": "Sono urologo a Torino, esperto di urologia funzionale e neuro-urologia: incontinenza, ritenzione urinaria, prostata, prolasso, dolore pelvico, vescica neurologica. Esami urodinamici."
+  },
+  "brand": {
+    "header": "logo",
+    "logoScuro": "/carone-v4k9/img/logo.png",
+    "logoChiaro": "/carone-v4k9/img/logo.png",
+    "marchio": "/carone-v4k9/img/marchio.png",
+    "logoAlt": "Roberto Carone, urologo"
+  },
+  "foto": {
+    "ritratto": "/carone-v4k9/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Roberto Carone",
+    "volto": "/carone-v4k9/img/volto.webp",
+    "sala": "/carone-v4k9/img/sala.png",
+    "postRitratto": "/carone-v4k9/img/rep-coppia.webp",
+    "coppia": "/carone-v4k9/img/rep-coppia.webp"
+  },
+  "hero": {
+    "eyebrow": "Urologo · Neuro-urologo · Torino",
+    "titoloRighe": [
+      "Urologia",
+      "funzionale e",
+      "neuro-urologia"
+    ],
+    "titolo": "Urologia funzionale e neuro-urologia",
+    "testo": "Mi occupo dei disturbi di come funzionano vescica e pavimento pelvico: incontinenza, ritenzione, dolore pelvico, vescica neurologica. Sono stato primario della Neuro-Urologia e Unità Spinale dell'Ospedale CTO di Torino.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Mi scriva",
+    "box": {
+      "titolo": "Mi scriva per un appuntamento",
+      "motivi": [
+        "Incontinenza urinaria",
+        "Ritenzione urinaria",
+        "Prostata",
+        "Prolasso vaginale",
+        "Dolore pelvico",
+        "Vescica neurologica",
+        "Esame urodinamico",
+        "Altro disturbo"
+      ],
+      "motiviFrase": [
+        "un'incontinenza urinaria",
+        "una ritenzione urinaria",
+        "un problema alla prostata",
+        "un prolasso vaginale",
+        "un dolore pelvico",
+        "una vescica neurologica",
+        "un esame urodinamico",
+        "un altro disturbo urologico"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Dove"
+    }
+  },
+  "numeri": [
+    {
+      "valore": 100,
+      "suffisso": "+",
+      "testo": "lavori scientifici su riviste internazionali"
+    },
+    {
+      "valore": 2,
+      "suffisso": "",
+      "testo": "libri recenti con Edizioni Minerva Medica"
+    },
+    {
+      "valore": 2,
+      "suffisso": "",
+      "testo": "specializzazioni: Urologia e Fisiatria"
+    },
+    {
+      "valore": 3,
+      "suffisso": "",
+      "testo": "sedi a Torino"
+    }
+  ],
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "L'urologia funzionale cura i disturbi di come la vescica si riempie e si svuota, e del pavimento pelvico. La neuro-urologia ne studia le cause neurologiche.",
+    "voci": [
+      {
+        "titolo": "Incontinenza urinaria",
+        "testo": "Perdite da sforzo, da urgenza o miste, nella donna e nell'uomo, anche dopo un intervento alla prostata.",
+        "img": "/carone-v4k9/img/rep-coppia.webp"
+      },
+      {
+        "titolo": "Ritenzione urinaria",
+        "testo": "Quando la vescica non si svuota del tutto o non si svuota affatto: si cerca la causa, ostruttiva o funzionale.",
+        "img": "/carone-v4k9/img/rep-corridoio.webp"
+      },
+      {
+        "titolo": "Patologie prostatiche",
+        "testo": "Ingrossamento della prostata e disturbi della minzione nell'uomo, con cure mediche e chirurgiche.",
+        "img": "/carone-v4k9/img/rep-passeggiata.webp"
+      },
+      {
+        "titolo": "Prolasso vaginale",
+        "testo": "Il cedimento del pavimento pelvico e i disturbi urinari che lo accompagnano.",
+        "img": "/carone-v4k9/img/rep-mani.webp"
+      },
+      {
+        "titolo": "Dolore pelvico",
+        "testo": "Il dolore pelvico cronico, spesso legato a più cause, richiede un percorso costruito sulla persona.",
+        "img": "/carone-v4k9/img/rep-prato.webp"
+      },
+      {
+        "titolo": "Vescica neurologica",
+        "testo": "I disturbi urinari dovuti a lesioni del midollo spinale, sclerosi multipla, malattie neurologiche.",
+        "img": "/carone-v4k9/img/rep-carrozzina.webp"
+      }
+    ]
+  },
+  "esami": {
+    "titolo": "Esami urodinamici",
+    "testo": "L'esame urodinamico misura come la vescica si riempie e si svuota; il video-urodinamico unisce le immagini radiologiche. Sono gli esami chiave dell'urologia funzionale: li eseguo alla Clinica Santa Caterina da Siena e all'Ospedale Koelliker."
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Sono specialista in Urologia e in Fisiatria. Il mio campo è l'urologia funzionale e la neuro-urologia: i disturbi del basso apparato urinario e del pavimento pelvico, anche quando dipendono da una malattia neurologica.",
+      "Per anni ho diretto la Neuro-Urologia e l'Unità Spinale dell'Ospedale CTO di Torino. Oggi visito nel mio studio privato e lavoro con l'équipe di urologia dell'Ospedale Koelliker e alla Clinica Santa Caterina da Siena."
+    ],
+    "tappe": [
+      {
+        "periodo": "1975",
+        "testo": "Laurea in Medicina e Chirurgia, Università di Torino."
+      },
+      {
+        "periodo": "1978",
+        "testo": "Specializzazione in Urologia."
+      },
+      {
+        "periodo": "1988",
+        "testo": "Specializzazione in Fisiatria."
+      },
+      {
+        "periodo": "CTO",
+        "testo": "Primario della Neuro-Urologia e Unità Spinale, Città della Salute e della Scienza di Torino, Ospedale CTO."
+      },
+      {
+        "periodo": "Università",
+        "testo": "Professore a contratto nel corso di Laurea in Medicina dell'Università di Torino; docente alla Scuola di specializzazione in Urologia dell'Università di Genova."
+      },
+      {
+        "periodo": "SIUD · FIC",
+        "testo": "Già Presidente della Società Italiana di Urodinamica; Presidente emerito della Fondazione Italiana Continenza."
+      }
+    ],
+    "societaLabel": "",
+    "societa": []
+  },
+  "libri": [
+    {
+      "titolo": "Urologia funzionale",
+      "sottotitolo": "La terza via",
+      "img": "/carone-v4k9/img/libro-funzionale.webp",
+      "editore": "Edizioni Minerva Medica, 2020 · 96 pagine",
+      "testo": "Il primo libro in Italia dedicato in modo specifico all'urologia funzionale: vescica iperattiva, incontinenza da sforzo, ritenzione, dolore pelvico, con un approccio costruito sul singolo paziente.",
+      "url": "https://www.minervamedica.it/it/volumi/specialita-mediche/urologia/scheda.php?cod=L10193"
+    },
+    {
+      "titolo": "La vescica neurologica",
+      "sottotitolo": "e le disfunzioni autonomiche dell'area sacrale, ovvero la neuro-urologia",
+      "img": "/carone-v4k9/img/libro-vescica.webp",
+      "editore": "Edizioni Minerva Medica, 2022 · 128 pagine",
+      "testo": "Un testo sulla neuro-urologia: i disturbi della vescica e dell'area sacrale legati alle malattie e alle lesioni del sistema nervoso.",
+      "url": "https://www.minervamedica.it/it/volumi/specialita-mediche/urologia/scheda.php?cod=L10247"
+    }
+  ],
+  "video": {
+    "titolo": "Incontinenza urinaria maschile",
+    "fonte": "Fondazione Italiana Continenza",
+    "url": "https://www.youtube.com/watch?v=830f7P_uWq8",
+    "img": "https://i.ytimg.com/vi/830f7P_uWq8/hqdefault.jpg"
+  },
+  "recensioni": {
+    "titolo": "Cosa dicono i pazienti",
+    "nota": "Dal mio profilo MioDottore (19 recensioni), riportate senza modifiche.",
+    "voci": [
+      {
+        "testo": "Sono partita da Catanzaro per incontrare il Dott Carone, il quale e finalmente riuscito a chiarire tanti dubbi sul mio problema con grande preparazione, grande gentilezza e sopratutto grande sensibilità che di questi tempi non è cosa scontata. Consiglio vivamente questo professionista. Grazie Dottore e alla prossima!!",
+        "nome": "Francesca D."
+      },
+      {
+        "testo": "La visita si e' svolta in modo professionale e cordiale, spiegando le problematiche del caso e rimandando ad ulteriori accertamenti per controllare nel modo migliore la patologia in atto. Molto soddisfatto sotto ogni aspetto.",
+        "nome": "Daniele"
+      },
+      {
+        "testo": "Esame urodinamico eseguito in data 29 maggio 2024. Il Professor Carone e le sue assistenti hanno dimostrato grande attenzione ed empatia, mettendomi subito a mio agio. Ho apprezzato anche in questa occasione, dopo la visita urologica, professionalità e competenze di alto livello.",
+        "nome": "A.T."
+      },
+      {
+        "testo": "Dottore preparato e empatico, sono davvero soddisfatto della visita e del modo di porsi con il paziente.",
+        "nome": "ALESSANDRO"
+      },
+      {
+        "testo": "Staff eccezionale. Dottore semplice,competente e professionale. Sono rimasto molto soddisfatto. Consigliatissimo",
+        "nome": "Fatbardh"
+      },
+      {
+        "testo": "Specialista responsabile e team di supporto straordinariamamente gentili ed empatici. Impressione (non sono competente...) di esame condotto in modo approfondito e con attrezzatura adeguata. Spiegazioni sull' esito e le possibili soluzioni estremamente chiare.",
+        "nome": "Flavio Menichini"
+      },
+      {
+        "testo": "Dimostra competenza, chiarezza espositiva, empatia",
+        "nome": "Vittorio Lucotti"
+      },
+      {
+        "testo": "Gentilezza e attenzione da parte di tutto lo staff oltre a competenza e professionalità",
+        "nome": "MC"
+      }
+    ]
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "categoria": "Urologia funzionale",
+    "titolo": "Incontinenza urinaria: le cure che esistono oggi",
+    "img": "/carone-v4k9/img/rep-articolo.webp",
+    "intro": "Perdere urina non è una conseguenza inevitabile dell'età né un problema solo femminile. È un disturbo frequente, di cui si parla poco, e per cui oggi esistono molte cure. Ecco come si arriva alla diagnosi e quali sono le possibilità.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Un disturbo frequente e poco raccontato",
+        "paragrafi": [
+          "L'incontinenza urinaria è la perdita involontaria di urina. Riguarda milioni di persone in Italia, donne e uomini, giovani e anziani. Molti non ne parlano nemmeno con il medico, per imbarazzo o perché pensano che non ci sia nulla da fare.",
+          "Non è così. Nella maggior parte dei casi una diagnosi precisa permette di scegliere una cura efficace, spesso senza intervento chirurgico."
+        ]
+      },
+      {
+        "titolo": "Non esiste una sola incontinenza",
+        "paragrafi": [
+          "Le forme principali sono diverse tra loro, e la cura dipende proprio dalla forma:"
+        ],
+        "elenco": [
+          "incontinenza da sforzo: piccole perdite quando si tossisce, si ride, si solleva un peso, per un indebolimento del pavimento pelvico o dello sfintere;",
+          "incontinenza da urgenza: uno stimolo improvviso e forte, difficile da trattenere, legato a una vescica iperattiva;",
+          "incontinenza mista, che unisce le due;",
+          "incontinenza da rigurgito: la vescica non si svuota e «trabocca», tipica di alcune ostruzioni o di disturbi neurologici."
+        ]
+      },
+      {
+        "titolo": "Nella donna e nell'uomo",
+        "paragrafi": [
+          "Nella donna le cause più comuni sono le gravidanze, i parti, la menopausa e il cedimento del pavimento pelvico. Nell'uomo l'incontinenza compare più spesso dopo un intervento alla prostata, oppure insieme a un ingrossamento della prostata o a una vescica iperattiva.",
+          "In entrambi i sessi alcune malattie neurologiche, come la sclerosi multipla, il Parkinson, le lesioni del midollo spinale o l'ictus, possono alterare il controllo della vescica: è il campo della neuro-urologia."
+        ]
+      },
+      {
+        "titolo": "Come si arriva alla diagnosi",
+        "paragrafi": [
+          "Si parte dalla visita: le domande su quando compaiono le perdite, quanto sono abbondanti, quanto si beve, quali farmaci si assumono, e l'esame obiettivo. Spesso chiedo di compilare per qualche giorno un diario minzionale, cioè un foglio dove annotare liquidi bevuti, minzioni e perdite.",
+          "Quando serve capire con precisione come funziona la vescica, l'esame chiave è l'esame urodinamico: misura le pressioni della vescica durante il riempimento e lo svuotamento. Il video-urodinamico unisce a queste misure le immagini radiologiche ed è utile nei casi più complessi, come nella vescica neurologica."
+        ]
+      },
+      {
+        "titolo": "L'esame urodinamico, passo per passo",
+        "paragrafi": [
+          "Molte persone temono questo esame, ma è ben tollerato. Si esegue in ambulatorio, senza anestesia: con un sottile catetere si riempie lentamente la vescica di liquido sterile e si registrano le pressioni, mentre Le chiedo di descrivere le sensazioni e, quando serve, di tossire o di urinare.",
+          "Dura in genere meno di un'ora. Alla fine si torna subito alle proprie attività. I risultati permettono di capire perché si perde urina e quale cura ha più probabilità di funzionare."
+        ]
+      },
+      {
+        "titolo": "Quando c'entra il sistema nervoso",
+        "paragrafi": [
+          "La vescica è comandata da nervi che partono dal cervello e scendono lungo il midollo spinale. Quando questa comunicazione si altera, per una lesione midollare, una sclerosi multipla, il Parkinson o l'esito di un ictus, si parla di vescica neurologica. In questi casi l'incontinenza può alternarsi alla difficoltà a svuotare, e la cura deve proteggere anche i reni nel tempo. Servono una valutazione specialistica e controlli regolari."
+        ]
+      },
+      {
+        "titolo": "Le cure senza intervento",
+        "paragrafi": [
+          "Il primo passo sono spesso gli accorgimenti quotidiani: distribuire i liquidi nella giornata, ridurre caffè e alcol, curare la stitichezza, perdere il peso in eccesso.",
+          "La riabilitazione del pavimento pelvico, con esercizi mirati insegnati da professionisti dedicati, è efficace soprattutto nell'incontinenza da sforzo, anche nell'uomo dopo la chirurgia della prostata. Nella vescica iperattiva esistono farmaci che riducono l'urgenza; quando non bastano, si possono valutare le infiltrazioni di tossina botulinica nella vescica o la neuromodulazione, che agisce sui nervi che controllano la vescica."
+        ]
+      },
+      {
+        "titolo": "Quando si valuta la chirurgia",
+        "paragrafi": [
+          "Se le cure conservative non danno il risultato sperato, esistono interventi mininvasivi. Nella donna con incontinenza da sforzo, per esempio, si possono usare piccole benderelle che sostengono l'uretra. Nell'uomo, dopo la chirurgia della prostata, esistono dispositivi specifici, fino allo sfintere urinario artificiale nei casi più importanti.",
+          "La scelta si fa sempre dopo una diagnosi completa, valutando benefici, possibili complicanze e aspettative della persona."
+        ]
+      },
+      {
+        "titolo": "Un approccio su misura",
+        "paragrafi": [
+          "In urologia funzionale non esiste una soluzione uguale per tutti. Due persone con lo stesso sintomo possono avere cause diverse e quindi cure diverse. Per questo dedico tempo alla diagnosi: capire il meccanismo è il modo più sicuro per scegliere la cura giusta, e spesso la più semplice."
+        ]
+      },
+      {
+        "titolo": "Cosa può fare subito",
+        "paragrafi": [
+          "Alcune abitudini aiutano già da ora:"
+        ],
+        "elenco": [
+          "bere in modo regolare, senza eccessi la sera;",
+          "non andare in bagno «per sicurezza» ogni pochi minuti;",
+          "curare la regolarità intestinale;",
+          "evitare di sollevare pesi in modo scorretto;",
+          "parlarne con il medico, senza imbarazzo."
+        ],
+        "chiusura": "Se ha perdite che limitano le Sue attività, si alza spesso di notte o ha la sensazione di non svuotare la vescica, una visita urologica è il primo passo."
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo urologo."
+  },
+  "instagram": {
+    "handle": "dott.robertocarone",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "coppia",
+        "titolo": "Incontinenza: non è solo dell'età",
+        "sottotitolo": "Si può curare, a ogni età",
+        "didascalia": "Perdere urina è frequente, ma non è normale né inevitabile. Esistono forme diverse e cure diverse: la diagnosi giusta è il primo passo.",
+        "hashtag": "#incontinenza #urologia #torino"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Dolore pelvico cronico",
+        "punti": [
+          "Dura da più di sei mesi",
+          "Spesso ha più cause insieme",
+          "Coinvolge vescica, muscoli, nervi",
+          "Si cura con un percorso su misura"
+        ],
+        "didascalia": "Il dolore pelvico cronico è difficile da inquadrare e per questo spesso sottovalutato. Una valutazione completa aiuta a costruire la cura giusta.",
+        "hashtag": "#dolorepelvico #urologiafunzionale"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Ritenzione urinaria: quando è urgente?",
+        "risposta": "Se non riesce a urinare: Pronto soccorso.",
+        "didascalia": "Non riuscire a urinare, con dolore sopra il pube, è un'urgenza. Getto debole e svuotamento incompleto, invece, vanno valutati con calma in visita.",
+        "hashtag": "#ritenzioneurinaria #urologo"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "appuntamenti@robertocarone.it",
+    "luoghi": [
+      {
+        "tipo": "Studio privato",
+        "nome": "Studio privato",
+        "indirizzo": "Via Bava 11",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di via Bava 11, Torino",
+        "telefoni": [],
+        "servizi": "Visite specialistiche. Appuntamenti via email."
+      },
+      {
+        "tipo": "Clinica",
+        "nome": "Clinica Santa Caterina da Siena",
+        "indirizzo": "Via Villa della Regina 19",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": true,
+        "frase": "la Clinica Santa Caterina da Siena, via Villa della Regina 19, Torino",
+        "telefoni": [
+          {
+            "label": "Clinica",
+            "numero": "011 819 9206"
+          }
+        ],
+        "servizi": "Visite, esami urodinamici e video-urodinamici, interventi chirurgici."
+      },
+      {
+        "tipo": "Ospedale",
+        "nome": "Ospedale Koelliker",
+        "indirizzo": "Corso Galileo Ferraris 247",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": true,
+        "frase": "l'Ospedale Koelliker, corso Galileo Ferraris 247, Torino",
+        "telefoni": [
+          {
+            "label": "Koelliker",
+            "numero": "011 618 4151"
+          }
+        ],
+        "servizi": "Visite, esami urodinamici, interventi chirurgici."
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Mi scriva per un appuntamento nel mio studio, oppure chiami la sede che preferisce. Può anche scegliere giorno e orario online: la data viene confermata da me o dalla segreteria.",
+    "telefono": "0118199206",
+    "telefonoLabel": "011 819 9206",
+    "chiamaLabel": "la clinica",
+    "whatsapp": null,
+    "emailRichieste": "appuntamenti@robertocarone.it",
+    "oggettoMail": "Richiesta di appuntamento",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce venire e lasci i Suoi dati: La ricontatteremo per confermare. La prenotazione è confermata solo dopo la risposta.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate via email o per telefono.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": null,
+      "privacyTesto": "Questo modulo non salva i Suoi dati: prepara soltanto un messaggio nella Sua app di posta, che decide Lei se inviare. I dati indicati servono unicamente a rispondere alla richiesta di appuntamento.",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F1F4F9",
+      "ink": "#122033",
+      "muted": "#55627A",
+      "line": "#DDE3EE",
+      "brand": "#21398F",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#7FD1C7",
+      "deep": "#072240",
+      "deep-ink": "#DCE6F4"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap",
+    "fontTitoli": "Sora",
+    "fontTesti": "Source Sans 3",
+    "favicon": "/carone-v4k9/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/carone-v4k9/brand/brand.json",
+    "pagine": [
+      "https://robertocarone.it/",
+      "https://www.miodottore.it/profilo/roberto-carone",
+      "https://fondazioneitalianacontinenza.it/urologia-funzionale-la-terza-via-il-nuovo-libro-del-prof-roberto-carone/"
+    ]
+  }
+}

@@ -1,0 +1,376 @@
+---
+// Layout "cinetica" (prima demo: Roberto Carone). Layout guidato dalle animazioni (richiesta di Meme: layout avanzati, animati, diversi):
+// hero blu notte come il suo logo, titolo che sale riga per riga, ritratto che si apre a cerchio (i "tondi" del suo sito) con anelli del marchio,
+// nastro delle patologie, contatori, sezione "Di cosa mi occupo" bloccata con scorrimento orizzontale (desktop), mail di prenotazione
+// che si scrive da sola, timeline che si disegna allo scroll, libri che ruotano in 3D, recensioni in nastro continuo.
+// Tutto rispetta prefers-reduced-motion (niente animazioni, contenuti subito visibili).
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = x.hero.box;
+const luoghi = m.sedi.luoghi as any[];
+const email = emailRichieste(m);
+const msg = (mo: string, se: string) => `Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${se}.`;
+const href0 = `mailto:${email}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(msg(box.motiviFrase[0], luoghi[0].frase))}`;
+const rec = m.recensioni.voci as any[];
+const ig = m.instagram;
+const nastro = x.aree.voci.map((v: any) => v.titolo).concat(['Esami urodinamici', 'Video-urodinamica']);
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-30 bg-deep text-white" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 sm:px-8">
+      <a href={`/${m.slug}`} class="block shrink-0"><img src={m.brand.logoScuro} alt={m.brand.logoAlt} width="241" height="97" class="h-12 w-auto sm:h-14" /></a>
+      <nav class="hidden items-center gap-7 font-head text-[13px] font-semibold uppercase tracking-[0.12em] text-deep-ink/70 lg:flex">
+        <a href="#aree" class="hover:text-white">Di cosa mi occupo</a><a href="#chi-sono" class="hover:text-white">Chi sono</a><a href="#libri" class="hover:text-white">Libri</a><a href="#recensioni" class="hover:text-white">Pazienti</a><a href="#sedi" class="hover:text-white">Sedi</a>
+      </nav>
+      <a href="#scrivimi" class="btn !min-h-[42px] !rounded-xl bg-brand2 !px-5 text-sm text-deep hover:opacity-90">Mi scriva</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section data-hero-section class="relative overflow-hidden bg-deep text-white">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-10 sm:px-8 lg:grid-cols-12 lg:pb-24 lg:pt-16">
+        <div class="lg:col-span-7">
+          <p class="font-head text-[12px] font-semibold uppercase tracking-[0.22em] text-brand2" data-entra>{x.hero.eyebrow}</p>
+          <h1 class="mt-5 font-head text-[2.6rem] font-light leading-[1.02] sm:text-[4.4rem]" aria-label={x.hero.titolo}>
+            {x.hero.titoloRighe.map((r: string, i: number) => <span class="block overflow-hidden pb-1" aria-hidden="true"><span class={`riga block ${i === 2 ? 'font-semibold text-brand2' : ''}`} data-riga>{r}</span></span>)}
+          </h1>
+          <p class="mt-6 font-head text-lg text-white sm:text-xl" data-entra>{nomeCompleto(m)}</p>
+          <p class="mt-3 max-w-xl text-[17px] leading-relaxed text-deep-ink/80" data-entra>{x.hero.testo}</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row" data-entra>
+            <a href="#scrivimi" class="btn !rounded-xl bg-brand2 text-deep hover:opacity-90"><Icona nome="mail" /> {x.hero.ctaPrenota}</a>
+            <a href={telHref(m.prenota.telefono)} class="btn !rounded-xl border border-white/30 text-white hover:bg-white/10"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          </div>
+        </div>
+        <div class="relative order-first mx-auto w-full max-w-[260px] sm:max-w-[340px] lg:order-none lg:col-span-5 lg:max-w-[420px]">
+          <div class="relative aspect-square">
+            {[0, 1, 2].map((i) => <span class={`anello absolute rounded-full border border-white/15 ${['inset-0', 'inset-[-7%]', 'inset-[-14%]'][i]}`} data-anello aria-hidden="true"></span>)}
+            <span class="absolute right-[6%] top-[6%] h-4 w-4 rounded-full bg-brand2" data-satellite aria-hidden="true"></span>
+            <div class="absolute inset-[6%] overflow-hidden rounded-full bg-white" data-cerchio>
+              <img src={foto.ritratto} alt={foto.ritrattoAlt} width="295" height="566" class="h-full w-full object-cover object-[50%_18%]" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- nastro delle patologie -->
+      <div class="border-y border-white/10 py-4" aria-hidden="true">
+        <div class="nastro flex w-max gap-10 whitespace-nowrap font-head text-[15px] uppercase tracking-[0.18em] text-deep-ink/60">
+          {[0, 1].map(() => nastro.map((t: string) => <span class="flex items-center gap-10">{t}<span class="h-1.5 w-1.5 rounded-full bg-brand2"></span></span>))}
+        </div>
+      </div>
+    </section>
+
+    <!-- NUMERI -->
+    <section class="px-4 py-14 sm:px-8">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-8 lg:grid-cols-4">
+        {x.numeri.map((n: any) => (
+          <div class="border-l-2 border-brand2 pl-5">
+            <p class="font-head text-[3rem] font-semibold leading-none text-brand sm:text-[3.6rem]"><span data-conta={n.valore}>{n.valore}</span>{n.suffisso}</p>
+            <p class="mt-2 text-[15px] leading-snug text-muted">{n.testo}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- SCRIVIMI: la mail si scrive da sola -->
+    <section id="scrivimi" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12" data-composer data-email={email} data-oggetto={m.prenota.oggettoMail}>
+        <div class="lg:col-span-6">
+          <h2 class="titolo-sez text-ink" data-parole>{box.titolo}</h2>
+          <p class="mt-3 text-muted">Scelga il motivo e la sede: preparo io il testo della mail.</p>
+          <p class="mt-8 text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">{box.motivoLabel}</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            {box.motivi.map((t: string, i: number) => <button type="button" class="chip !rounded-xl" data-chip="motivo" data-frase={box.motiviFrase[i]} aria-pressed={i === 0 ? 'true' : 'false'}>{t}</button>)}
+          </div>
+          <p class="mt-7 text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">{box.sedeLabel}</p>
+          <div class="mt-3 grid gap-2 sm:grid-cols-3">
+            {luoghi.map((l, i) => <button type="button" class="sede-scelta rounded-xl border border-line bg-white px-4 py-3 text-left" data-chip="sede" data-frase={l.frase} aria-pressed={i === 0 ? 'true' : 'false'}><span class="block text-[14px] font-semibold leading-tight">{l.nome}</span><span class="mt-0.5 block text-[12px] text-muted">{l.indirizzo}</span></button>)}
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-line">
+            <div class="flex items-center gap-2 bg-deep px-5 py-3 text-white"><Icona nome="mail" class="h-4 w-4 text-brand2" /><span class="text-sm font-semibold">Nuovo messaggio</span></div>
+            <dl class="divide-y divide-line text-[14px]">
+              <div class="flex gap-3 px-5 py-3"><dt class="w-16 shrink-0 text-muted">A</dt><dd class="font-semibold">{email}</dd></div>
+              <div class="flex gap-3 px-5 py-3"><dt class="w-16 shrink-0 text-muted">Oggetto</dt><dd>{m.prenota.oggettoMail}</dd></div>
+            </dl>
+            <p class="min-h-[132px] border-t border-line px-5 py-5 text-[16px] leading-relaxed" aria-live="polite"><span data-anteprima>{msg(box.motiviFrase[0], luoghi[0].frase)}</span><span class="cursore" aria-hidden="true"></span></p>
+            <div class="flex flex-col gap-3 border-t border-line px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+              <a href={telHref(m.prenota.telefono)} class="text-[14px] text-muted hover:text-brand">oppure chiami {m.prenota.chiamaLabel}: {m.prenota.telefonoLabel}</a>
+              <a href={href0} data-prenota class="btn btn-primary !rounded-xl"><Icona nome="invia" /> Apra la mail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DI COSA MI OCCUPO: scorrimento orizzontale bloccato -->
+    <section id="aree" class="overflow-hidden bg-deep text-white" data-orizzontale>
+      <div class="flex min-h-[100svh] flex-col justify-center py-16 lg:py-0">
+        <div class="mx-auto w-full max-w-7xl px-4 sm:px-8">
+          <h2 class="titolo-sez" data-parole>{m.aree.titolo}</h2>
+          <p class="mt-3 max-w-2xl text-deep-ink/75">{m.aree.intro}</p>
+        </div>
+        <div class="mt-10 grid gap-5 px-4 sm:grid-cols-2 sm:px-8 lg:flex lg:w-max lg:gap-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-16" data-pista>
+          {x.aree.voci.map((v: any) => (
+            <article class="group relative overflow-hidden rounded-2xl bg-white/5 lg:h-[56vh] lg:w-[38vw] lg:max-w-[520px]">
+              <img src={v.img} alt="" width="1200" height="900" loading="lazy" class="aspect-[4/3] w-full object-cover lg:aspect-auto lg:h-[65%]" data-zoom />
+              <div class="p-6"><h3 class="font-head text-xl font-semibold text-white">{v.titolo}</h3><p class="mt-2 text-[15px] leading-relaxed text-deep-ink/75">{v.testo}</p></div>
+            </article>
+          ))}
+          <article class="flex flex-col justify-center rounded-2xl bg-brand2 p-7 text-deep lg:h-[56vh] lg:w-[38vw] lg:max-w-[520px]">
+            <Icona nome="lente" class="h-8 w-8" />
+            <h3 class="mt-4 font-head text-2xl font-semibold">{x.esami.titolo}</h3>
+            <p class="mt-3 text-[16px] leading-relaxed">{x.esami.testo}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO: timeline che si disegna -->
+    <section id="chi-sono" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <div class="lg:sticky lg:top-32">
+            <h2 class="titolo-sez" data-parole>{m.bio.titolo}</h2>
+            <div class="mt-6 flex items-center gap-5">
+              <img src={foto.sala} alt="Il Dott. Carone in sala operatoria" width="401" height="401" loading="lazy" class="h-28 w-28 rounded-full object-cover sm:h-36 sm:w-36" />
+              <img src={foto.volto} alt="" width="240" height="240" loading="lazy" class="h-20 w-20 rounded-full object-cover ring-4 ring-surface sm:h-24 sm:w-24" />
+            </div>
+            <div class="mt-6 space-y-4 text-[17px] leading-relaxed text-ink/85">{m.bio.paragrafi.map((p: string) => <p>{p}</p>)}</div>
+          </div>
+        </div>
+        <ol class="relative lg:col-span-6 lg:col-start-7" data-timeline>
+          <span class="absolute bottom-2 left-[7px] top-2 w-0.5 bg-line" aria-hidden="true"></span>
+          <span class="absolute bottom-2 left-[7px] top-2 w-0.5 origin-top bg-brand" data-linea aria-hidden="true"></span>
+          {m.bio.tappe.map((t: any) => (
+            <li class="tappa relative pb-10 pl-10 last:pb-0" data-tappa>
+              <span class="pallino-t absolute left-0 top-1.5 h-4 w-4 rounded-full border-2 border-brand bg-white" aria-hidden="true"></span>
+              <p class="font-head text-2xl font-semibold text-brand">{t.periodo}</p>
+              <p class="mt-1 text-[16px] leading-relaxed text-ink/80">{t.testo}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <!-- LIBRI: rotazione 3D allo scroll -->
+    <section id="libri" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="titolo-sez" data-parole>I miei libri</h2>
+        <div class="mt-12 grid gap-14 md:grid-cols-2">
+          {x.libri.map((l: any) => (
+            <article class="grid grid-cols-[140px_1fr] items-start gap-6 sm:grid-cols-[180px_1fr]" style="perspective: 900px">
+              <img src={l.img} alt={`Copertina di ${l.titolo}`} width="203" height="302" loading="lazy" class="w-full rounded-md shadow-2xl" data-libro />
+              <div>
+                <h3 class="font-head text-2xl font-semibold leading-tight">{l.titolo}</h3>
+                <p class="mt-1 text-[15px] text-brand">{l.sottotitolo}</p>
+                <p class="mt-1 text-[13px] text-muted">{l.editore}</p>
+                <p class="mt-4 text-[15px] leading-relaxed text-ink/80">{l.testo}</p>
+                <a href={l.url} target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand hover:underline">Scheda dell'editore <Icona nome="freccia" class="h-4 w-4" /></a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <a href={x.video.url} target="_blank" rel="noopener" class="group mt-16 grid items-center gap-6 rounded-2xl bg-white p-4 ring-1 ring-line sm:grid-cols-[260px_1fr] sm:p-5" data-video>
+          <span class="relative block overflow-hidden rounded-xl"><img src={x.video.img} alt="" width="480" height="360" loading="lazy" class="aspect-video w-full object-cover transition-[scale] duration-500 group-hover:scale-105" /><span class="absolute inset-0 grid place-items-center"><span class="grid h-14 w-14 place-items-center rounded-full bg-white/90 text-brand"><svg viewBox="0 0 24 24" class="h-7 w-7" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></span></span></span>
+          <span class="block"><span class="text-[12px] font-semibold uppercase tracking-[0.16em] text-brand">Video · {x.video.fonte}</span><span class="mt-1 block font-head text-xl font-semibold group-hover:text-brand">{x.video.titolo}</span><span class="mt-1 block text-[15px] text-muted">Ne parlo in un'intervista per la Fondazione Italiana Continenza.</span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- RECENSIONI: nastro continuo -->
+    <section id="recensioni" class="overflow-hidden py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-8">
+        <h2 class="titolo-sez" data-parole>{m.recensioni.titolo}</h2>
+        <p class="mt-3 text-muted">{m.recensioni.nota}</p>
+      </div>
+      {[rec.slice(0, 4), rec.slice(4)].map((riga, k) => (
+        <div class="nastro-rec mt-8 overflow-x-auto [scrollbar-width:none]">
+          <div class={`flex w-max gap-5 px-4 ${k === 1 ? 'inverso' : ''}`}>
+            {[0, 1].map((copia) => riga.map((r: any) => (
+              <figure class="w-[300px] shrink-0 rounded-2xl bg-surface p-6 sm:w-[380px]" aria-hidden={copia === 1 ? 'true' : undefined} data-copia={copia === 1 ? '' : undefined}>
+                <blockquote class="text-[15px] leading-relaxed text-ink/85">“{r.testo}”</blockquote>
+                <figcaption class="mt-4 text-[13px] font-semibold text-brand">{r.nome} <span class="font-normal text-muted">· MioDottore</span></figcaption>
+              </figure>
+            )))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <div class="stile-cinetica"><PrenotaCalendario m={m} /></div>
+
+    <!-- ARTICOLO + INSTAGRAM -->
+    <section id="articoli" class="bg-deep px-4 py-16 text-white sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <a href={`/${m.slug}/articolo`} class="group grid items-center gap-8 md:grid-cols-2" data-reveal>
+          <span class="block overflow-hidden rounded-2xl"><img src={m.articolo.img} alt="" width="1500" height="843" loading="lazy" class="aspect-[16/10] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+          <span class="block">
+            <span class="font-head text-[12px] font-semibold uppercase tracking-[0.18em] text-brand2">{m.articolo.categoria} · {m.articolo.tempoLettura}</span>
+            <span class="mt-3 block font-head text-[2rem] font-semibold leading-tight">{m.articolo.titolo}</span>
+            <span class="mt-4 block text-deep-ink/75">{m.articolo.intro}</span>
+            <span class="mt-6 inline-flex items-center gap-2 font-semibold text-brand2">Legga l'articolo <Icona nome="freccia" class="h-4 w-4 transition-[translate] group-hover:translate-x-1" /></span>
+          </span>
+        </a>
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="titolo-sez" data-parole>Dal mio profilo Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-xl bg-white/10 px-3 py-1.5 text-xs text-deep-ink/80"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: il profilo oggi non esiste</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-ig>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-2xl bg-white text-ink sm:w-[60%] lg:w-auto" data-post>
+              <header class="flex items-center gap-3 px-4 py-3"><img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden">
+                  <img src={foto[p.immagine]} alt="" width="1200" height="900" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-deep/95 px-5 py-4 text-white"><p class="font-head text-xl font-semibold leading-tight">{p.titolo}</p><p class="mt-0.5 text-sm text-brand2">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.6rem] font-semibold leading-[1.15]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand2"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-brand2 p-7 text-deep">
+                  <img src={m.brand.marchio} alt="" width="48" height="48" class="h-12 w-12 rounded-full" />
+                  <div><p class="font-head text-[1.7rem] font-semibold leading-[1.12]">{p.titolo}</p><p class="mt-4 w-fit rounded-xl bg-deep px-3 py-2 text-[14px] font-semibold text-white">{p.risposta}</p></div>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="titolo-sez" data-parole>{m.sedi.titolo}</h2>
+        <div class="mt-10 grid gap-5 md:grid-cols-3" data-sedi>
+          {luoghi.map((l) => (
+            <div class="sede flex flex-col rounded-2xl border border-line p-6">
+              <p class="font-head text-[12px] font-semibold uppercase tracking-[0.16em] text-brand">{l.tipo}</p>
+              <p class="mt-2 font-head text-xl font-semibold leading-tight">{l.nome}</p>
+              <p class="mt-1 text-[15px] text-muted">{l.indirizzo}, {l.citta}</p>
+              <p class="mt-3 text-[14px] text-ink/80">{l.servizi}</p>
+              {l.telefoni.map((t: any) => <a href={telHref(t.numero)} class="mt-4 inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="tel" class="h-4 w-4" />{t.numero}</a>)}
+              {l.telefoni.length === 0 && <a href={`mailto:${m.sedi.email}`} class="mt-4 inline-flex items-center gap-2 break-all font-semibold text-brand hover:underline"><Icona nome="mail" class="h-4 w-4 shrink-0" />{m.sedi.email}</a>}
+              <a href={mapsHref(l.indirizzo, l.citta)} target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-muted hover:text-brand"><Icona nome="pin" class="h-4 w-4" /> Apra la mappa</a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8" data-cta-finale>
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-3xl font-semibold">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/80">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href="#scrivimi" class="btn !rounded-xl bg-white text-brand hover:bg-white/90"><Icona nome="mail" /> Mi scriva</a>
+          <a href="#prenota" class="btn !rounded-xl bg-brand2 text-deep hover:opacity-90"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (ridotto) document.documentElement.classList.add('senza-moto');
+
+    // --- Mail di prenotazione: il testo si scrive lettera per lettera ---
+    const c = document.querySelector<HTMLElement>('[data-composer]');
+    if (c) {
+      const out = c.querySelector<HTMLElement>('[data-anteprima]')!;
+      const link = c.querySelector<HTMLAnchorElement>('[data-prenota]')!;
+      let timer = 0;
+      const aggiorna = () => {
+        const mo = c.querySelector<HTMLElement>('[data-chip="motivo"][aria-pressed="true"]')?.dataset.frase;
+        const se = c.querySelector<HTMLElement>('[data-chip="sede"][aria-pressed="true"]')?.dataset.frase;
+        if (!mo || !se) return;
+        const t = `Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${se}.`;
+        link.href = `mailto:${c.dataset.email}?subject=${encodeURIComponent(c.dataset.oggetto ?? '')}&body=${encodeURIComponent(t)}`;
+        window.clearInterval(timer);
+        if (ridotto) { out.textContent = t; return; }
+        // riparte da dove il nuovo testo diverge dal vecchio
+        let i = 0; const vecchio = out.textContent ?? '';
+        while (i < vecchio.length && vecchio[i] === t[i]) i++;
+        out.textContent = t.slice(0, i);
+        timer = window.setInterval(() => { i++; out.textContent = t.slice(0, i); if (i >= t.length) window.clearInterval(timer); }, 18);
+      };
+      c.querySelectorAll('[data-chip]').forEach((b) => b.addEventListener('click', aggiorna));
+    }
+
+    if (!ridotto) {
+      // --- Hero: righe del titolo che salgono, ritratto che si apre a cerchio ---
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('[data-riga]', { yPercent: 110, duration: 1, stagger: 0.12 })
+        .from('[data-cerchio]', { clipPath: 'circle(0% at 50% 50%)', duration: 1.2, ease: 'power2.inOut' }, 0.15)
+        .from('[data-anello]', { scale: 0.6, opacity: 0, duration: 1, stagger: 0.12 }, 0.3)
+        .from('[data-satellite]', { scale: 0, duration: 0.6, ease: 'back.out(3)' }, 1)
+        .from('[data-entra]', { y: 24, opacity: 0, duration: 0.8, stagger: 0.08 }, 0.35);
+
+      // --- Titoli di sezione: parole che salgono ---
+      document.querySelectorAll<HTMLElement>('[data-parole]').forEach((h) => {
+        const parole = (h.textContent ?? '').trim().split(/\s+/);
+        h.setAttribute('aria-label', parole.join(' '));
+        h.innerHTML = parole.map((p) => `<span class="inline-block overflow-hidden pb-[0.08em] align-bottom" aria-hidden="true"><span class="inline-block">${p}</span></span>`).join(' ');
+        gsap.from(h.querySelectorAll(':scope > span > span'), { yPercent: 105, duration: 0.8, ease: 'power3.out', stagger: 0.06, scrollTrigger: { trigger: h, start: 'top 88%', once: true } });
+      });
+
+      // --- Contatori ---
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.6, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true }, onUpdate: () => { el.textContent = String(Math.round(o.v)); } });
+      });
+
+      // --- Di cosa mi occupo: blocco + scorrimento orizzontale (solo desktop) ---
+      const mm = gsap.matchMedia();
+      mm.add('(min-width: 1024px)', () => {
+        const sez = document.querySelector<HTMLElement>('[data-orizzontale]');
+        const pista = sez?.querySelector<HTMLElement>('[data-pista]');
+        if (!sez || !pista) return;
+        const dist = () => Math.max(0, pista.scrollWidth - window.innerWidth);
+        gsap.to(pista, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: sez, pin: true, scrub: 0.8, start: 'top top', end: () => '+=' + dist(), invalidateOnRefresh: true } });
+      });
+      mm.add('(max-width: 1023px)', () => {
+        gsap.utils.toArray<HTMLElement>('[data-pista] > article').forEach((a) => gsap.from(a, { y: 40, opacity: 0, duration: 0.7, ease: 'power2.out', scrollTrigger: { trigger: a, start: 'top 92%', once: true } }));
+      });
+      gsap.utils.toArray<HTMLElement>('[data-zoom]').forEach((img) => gsap.fromTo(img, { scale: 1.15 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: img, start: 'top bottom', end: 'bottom top', scrub: true } }));
+
+      // --- Timeline che si disegna ---
+      const tlEl = document.querySelector<HTMLElement>('[data-timeline]');
+      if (tlEl) {
+        gsap.fromTo('[data-linea]', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: tlEl, start: 'top 70%', end: 'bottom 60%', scrub: true } });
+        tlEl.querySelectorAll<HTMLElement>('[data-tappa]').forEach((li) => ScrollTrigger.create({ trigger: li, start: 'top 68%', onEnter: () => li.classList.add('accesa'), onLeaveBack: () => li.classList.remove('accesa') }));
+      }
+
+      // --- Libri: rotazione 3D ---
+      gsap.utils.toArray<HTMLElement>('[data-libro]').forEach((l, i) => gsap.fromTo(l, { rotateY: i ? 32 : -32, rotateX: 6 }, { rotateY: 0, rotateX: 0, ease: 'none', scrollTrigger: { trigger: l, start: 'top bottom', end: 'center 55%', scrub: true } }));
+
+      // --- Instagram e sedi: ingresso a ventaglio ---
+      gsap.from('[data-post]', { y: 60, rotate: (i: number) => (i - 1) * 4, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.12, scrollTrigger: { trigger: '[data-ig]', start: 'top 85%', once: true } });
+      gsap.from('[data-sedi] > *', { y: 40, opacity: 0, duration: 0.8, ease: 'power2.out', stagger: 0.1, scrollTrigger: { trigger: '[data-sedi]', start: 'top 85%', once: true } });
+
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>

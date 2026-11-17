@@ -129,6 +129,26 @@ html { scroll-behavior: smooth; }
   .genere[aria-pressed="true"] { border-color: var(--c-brand); background: var(--c-brand); color: var(--c-brand-ink); }
 }
 
+/* Layout "cinetica": nastri continui, anelli, cursore della mail, timeline */
+@keyframes nastro-scorre { to { transform: translateX(-50%); } }
+@keyframes nastro-inverso { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@keyframes anello-gira { to { transform: rotate(360deg); } }
+@keyframes cursore-lampeggia { 50% { opacity: 0; } }
+@layer components {
+  .nastro { animation: nastro-scorre 38s linear infinite; }
+  .nastro-rec > div { animation: nastro-scorre 70s linear infinite; }
+  .nastro-rec > div.inverso { animation-name: nastro-inverso; animation-duration: 80s; }
+  .nastro-rec:hover > div { animation-play-state: paused; }
+  [data-anello]:nth-child(2) { border-style: dashed; animation: anello-gira 60s linear infinite; }
+  .cursore { display: inline-block; width: 2px; height: 1.1em; margin-left: 2px; vertical-align: -0.18em; background: var(--c-brand); animation: cursore-lampeggia 1s steps(1) infinite; }
+  .tappa .pallino-t { transition: background-color .3s, box-shadow .3s; }
+  .tappa.accesa .pallino-t { background: var(--c-brand); box-shadow: 0 0 0 5px color-mix(in srgb, var(--c-brand) 18%, transparent); }
+  .stile-cinetica .card { border-radius: 16px; }
+  .senza-moto .nastro, .senza-moto .nastro-rec > div, .senza-moto [data-anello], .senza-moto .cursore { animation: none; }
+  .senza-moto .nastro-rec [data-copia] { display: none; }
+}
+@media (max-width: 1023px) { .nastro-rec > div { animation-duration: 55s; } }
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }
