@@ -1,0 +1,507 @@
+{
+  "slug": "valentino-avrj",
+  "layout": "interventi",
+  "sitoOrigine": "https://www.valentinourologo.it/",
+  "titolo": "Dr.",
+  "nome": "Francesco Valentino",
+  "specialita": "Specialista in Urologia",
+  "firma": "Urologo e andrologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dr. Francesco Valentino · Urologo e andrologo a Torino",
+    "description": "Sono urologo e andrologo a Torino. Mi occupo di prostata, calcoli renali e ureterali, tumore della prostata e andrologia; opero all'Humanitas Cellini e all'Ospedale Koelliker."
+  },
+  "brand": {
+    "header": "logo",
+    "logoScuro": "/valentino-avrj/img/logo.svg",
+    "logoChiaro": "/valentino-avrj/img/logo-chiaro.svg",
+    "marchio": "/valentino-avrj/img/marchio.png",
+    "logoAlt": "Dr. Francesco Valentino, urologo"
+  },
+  "foto": {
+    "ritratto": "/valentino-avrj/img/ritratto.webp",
+    "ritrattoLargo": "/valentino-avrj/img/ritratto-largo.webp",
+    "ritrattoAlt": "Il Dr. Francesco Valentino in sala operatoria",
+    "volto": "/valentino-avrj/img/volto.webp",
+    "curriculum": "/valentino-avrj/img/curriculum.webp",
+    "thulep": "/valentino-avrj/img/thulep.webp",
+    "acqua": "/valentino-avrj/img/rep-acqua.webp",
+    "postRitratto": "/valentino-avrj/img/ritratto-largo.webp"
+  },
+  "hero": {
+    "eyebrow": "Urologo e andrologo · Torino",
+    "titolo": "Chirurgia laser della prostata e dei calcoli",
+    "testo": "Opero con il Servizio Sanitario Nazionale e in regime privato all'Humanitas Cellini e all'Ospedale Koelliker. Ricevo nel mio studio di corso Massimo d'Azeglio e al Koelliker.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti una visita",
+      "motivi": [
+        "Prostata ingrossata",
+        "Calcoli o colica renale",
+        "PSA alto",
+        "Infezioni urinarie",
+        "Disfunzione erettile",
+        "Varicocele, fimosi, frenulo",
+        "Altro disturbo"
+      ],
+      "motiviFrase": [
+        "un ingrossamento della prostata",
+        "dei calcoli o una colica renale",
+        "un PSA alterato",
+        "delle infezioni urinarie",
+        "una disfunzione erettile",
+        "un varicocele, una fimosi o un frenulo corto",
+        "un altro disturbo urologico"
+      ],
+      "motivoLabel": "Per quale motivo",
+      "sedeLabel": "Dove"
+    }
+  },
+  "interventi": {
+    "titolo": "Gli interventi che eseguo",
+    "intro": "Quando le terapie mediche non bastano più, la chirurgia va presa in considerazione. Le tecniche che uso sono in gran parte endoscopiche e mini-invasive: passano per le vie naturali o per piccoli accessi.",
+    "voci": [
+      {
+        "id": "thulep",
+        "patologia": "Ipertrofia prostatica",
+        "nome": "ThuLEP",
+        "esteso": "Enucleazione della prostata con laser al Tullio",
+        "testo": "È l'intervento che eseguo più spesso per la prostata ingrossata che ostacola la minzione. Con il laser al Tullio, per via endoscopica, separo l'adenoma dalla capsula della prostata; poi lo frammento all'interno della vescica e lo estraggo, per inviarlo all'esame istologico.",
+        "punti": [
+          "Tratta anche prostate di grandi dimensioni, riservando la chirurgia aperta a casi selezionati",
+          "Minor sanguinamento e rimozione del catetere in tempi brevi",
+          "Degenza in genere ridotta"
+        ],
+        "nota": "Come le altre tecniche per la prostata, può dare incontinenza urinaria, di solito transitoria, ed eiaculazione retrograda: ne parliamo in visita."
+      },
+      {
+        "id": "prostatectomia",
+        "patologia": "Tumore della prostata",
+        "nome": "Prostatectomia radicale laparoscopica",
+        "esteso": "Asportazione della prostata e delle vescicole seminali",
+        "testo": "Nel tumore della prostata localizzato, in chi ha una buona aspettativa di vita, l'obiettivo è eliminare la malattia. Asporto la prostata e le vescicole seminali, a volte i linfonodi vicini, e ricostruisco il collegamento tra uretra e vescica.",
+        "punti": [
+          "Tecnica laparoscopica, con piccole incisioni",
+          "Nella mia casistica, meno dolore dopo l'intervento e ripresa più rapida",
+          "Risultati oncologici sovrapponibili alle altre tecniche"
+        ],
+        "nota": "Le complicanze possibili, oltre a quelle generali, sono l'incontinenza urinaria e il deficit erettile."
+      },
+      {
+        "id": "rirs",
+        "patologia": "Calcoli nel rene",
+        "nome": "RIRS",
+        "esteso": "Chirurgia retrograda intrarenale",
+        "testo": "Per i calcoli nel rene e nei calici, dopo uno studio attento, propongo un intervento mini-invasivo: un ureterorenoscopio flessibile raggiunge le cavità del rene per le vie naturali e il laser a Olmio frammenta o polverizza i calcoli.",
+        "punti": [
+          "Nessuna incisione sulla pelle",
+          "Estrazione dei frammenti più grandi",
+          "Uno stent ureterale di protezione, rimosso in un secondo momento"
+        ],
+        "nota": "Se i calcoli sono multipli o complessi, a volte serve più di un intervento."
+      },
+      {
+        "id": "urs",
+        "patologia": "Calcoli nell'uretere",
+        "nome": "URS",
+        "esteso": "Ureteroscopia operativa",
+        "testo": "Quando un calcolo ostruisce l'uretere o non viene espulso con la sola terapia medica, introduco un ureteroscopio semirigido per le vie naturali e polverizzo il calcolo, in genere con il laser.",
+        "punti": [
+          "Accesso per le vie naturali",
+          "Rimozione dei frammenti più grandi",
+          "Stent di protezione, rimosso in un secondo tempo"
+        ],
+        "nota": ""
+      }
+    ]
+  },
+  "esami": {
+    "titolo": "Visite ed esami",
+    "voci": [
+      "Visita urologica",
+      "Visita andrologica",
+      "Ecografia dell'apparato urinario",
+      "Ecografia transrettale",
+      "Ecocolordoppler scrotale",
+      "Ecocolordoppler penieno dinamico",
+      "Cistoscopia flessibile",
+      "Consulenza online"
+    ]
+  },
+  "andrologia": {
+    "titolo": "Andrologia",
+    "intro": "L'andrologia è la parte dell'urologia che si occupa dell'apparato genitale maschile, dal punto di vista funzionale e riproduttivo. Queste sono le situazioni più frequenti.",
+    "voci": [
+      {
+        "titolo": "Frenulo breve",
+        "testo": "Può dare dolore durante l'erezione. Si corregge con la frenuloplastica."
+      },
+      {
+        "titolo": "Fimosi",
+        "testo": "Il prepuzio stretto non scorre sul glande. Si tratta con la circoncisione."
+      },
+      {
+        "titolo": "Varicocele",
+        "testo": "Vene del testicolo dilatate, che possono incidere sulla fertilità. Si corregge con la varicocelectomia."
+      },
+      {
+        "titolo": "Idrocele",
+        "testo": "Liquido intorno al testicolo. Se è voluminoso si asporta con l'idrocelectomia."
+      },
+      {
+        "titolo": "Tumori del testicolo",
+        "testo": "Colpiscono più spesso prima dei 40 o dopo i 65 anni. Diagnosi precoce e chirurgia tempestiva sono decisive."
+      },
+      {
+        "titolo": "Deficit erettile",
+        "testo": "Può avere cause organiche, psicologiche o di coppia. Si inquadra con l'andrologo; nei casi indicati esistono protesi."
+      },
+      {
+        "titolo": "Eiaculazione precoce",
+        "testo": "Un problema da affrontare per prima cosa in ambito andrologico, senza imbarazzo."
+      },
+      {
+        "titolo": "Emospermia",
+        "testo": "Sangue nel liquido seminale, spesso come unico sintomo: va valutata dallo specialista."
+      },
+      {
+        "titolo": "Malattia di La Peyronie",
+        "testo": "Placche fibrose che incurvano il pene. Ha fasi diverse, quindi anche le terapie vanno personalizzate."
+      }
+    ]
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "citazione": "Credo che la Medicina possa essere annoverata anche tra le materie umanistiche. Davanti a me c'è sempre una persona in difficoltà, che chiede aiuto e supporto.",
+    "paragrafi": [
+      "Sono medico chirurgo, specialista in Urologia, con un Master universitario di II livello in Andrologia. Mi occupo dei problemi dell'apparato urinario dell'uomo e della donna e, come andrologo, dell'apparato genitale maschile.",
+      "Seguo le linee guida internazionali e uso le tecnologie diagnostiche e operative più moderne, ma adatto ogni terapia, farmacologica o chirurgica, alla persona che ho davanti. Il rapporto tra medico e paziente, per me, è parte della cura: un percorso che si fa insieme.",
+      "Mi hanno insegnato i miei Maestri ad avere una visione ampia e disciplinata della materia e a lavorare con impegno. È quello che cerco di fare ogni giorno, in ambulatorio e in sala operatoria."
+    ],
+    "tappe": [
+      {
+        "periodo": "2007",
+        "testo": "Laurea in Medicina e Chirurgia all'Università di Torino, con una tesi sulle linee guida per il trattamento della calcolosi urinaria. Abilitazione alla professione nello stesso anno."
+      },
+      {
+        "periodo": "2008",
+        "testo": "Vincitore del concorso di Specialità in Urologia all'Università di Pavia; dal secondo anno alla Scuola di Specialità delle Molinette, Università di Torino."
+      },
+      {
+        "periodo": "2014",
+        "testo": "Specializzazione in Urologia all'Università di Torino, con una tesi sulla risonanza magnetica multiparametrica nella diagnosi del tumore della prostata."
+      },
+      {
+        "periodo": "Master",
+        "testo": "Master universitario di II livello in Andrologia «Andrea Tamagnone», con lode, alla Città della Salute e della Scienza (Molinette), Università di Torino."
+      }
+    ],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "Cosa dicono i pazienti",
+    "nota": "Recensioni pubblicate sul mio profilo MioDottore, riportate senza modifiche.",
+    "voci": [
+      {
+        "testo": "Medico urologo di grande competenza e professionalità. Fin dal primo incontro si è dimostrato gentile, disponibile e molto attento, mettendomi subito a mio agio. Ha spiegato tutto con chiarezza e pazienza, rispondendo a ogni domanda senza fretta e con grande umanità.",
+        "nome": "Monti Marcello",
+        "data": "febbraio 2026"
+      },
+      {
+        "testo": "Che dire? Ottimo Urologo, ti fa sentire a proprio agio, spiegazioni in modo chiare. Empatico ed anche simpatico, più di così...Credo di aver trovato il mio urologo di fiducia.",
+        "nome": "Paki Cas",
+        "data": "aprile 2026"
+      },
+      {
+        "testo": "Dottore molto bravo, consiglio assolutamente. Molto attento a percepire il problema. Spiegazioni molto chiare e semplici.",
+        "nome": "N.M.F",
+        "data": "marzo 2026"
+      },
+      {
+        "testo": "Il dott. Valentino mi ha messo subito a mio agio considerato che fosse la mia prima visita di questo tipo. Esaustivo nelle spiegazioni e nel togliere dubbi e preoccupazioni. Grazie mille.",
+        "nome": "D.U.",
+        "data": "luglio 2025"
+      },
+      {
+        "testo": "Visita accurata e spiegazioni dettagliate. Sono soddisfatto.",
+        "nome": "MF",
+        "data": "maggio 2026"
+      }
+    ]
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "categoria": "Prostata",
+    "titolo": "Ipertrofia prostatica benigna: sintomi, cure e quando operare",
+    "img": "/valentino-avrj/img/rep-articolo.webp",
+    "intro": "Alzarsi più volte di notte, aspettare prima che il getto parta, avere la sensazione di non svuotare bene la vescica. Sono i disturbi tipici della prostata che si ingrossa con l'età. Ecco cosa sono, come si curano e quando la chirurgia diventa la scelta giusta.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Che cos'è",
+        "paragrafi": [
+          "La prostata è una ghiandola che si trova sotto la vescica e circonda il primo tratto dell'uretra, il canale da cui esce l'urina. Con il passare degli anni, in molti uomini la sua parte centrale, l'adenoma, aumenta di volume. È l'ipertrofia prostatica benigna: «benigna» perché non è un tumore e non si trasforma in tumore.",
+          "Il problema è meccanico. Crescendo, l'adenoma stringe l'uretra e la vescica deve fare più fatica per svuotarsi. Nel tempo questo sforzo può modificare anche la vescica stessa."
+        ]
+      },
+      {
+        "titolo": "I sintomi",
+        "paragrafi": [
+          "I disturbi compaiono di solito in modo graduale, e per questo spesso ci si abitua senza accorgersene. I più comuni sono:"
+        ],
+        "elenco": [
+          "bisogno di urinare spesso, anche di notte;",
+          "getto debole o che si interrompe;",
+          "attesa prima che il getto parta;",
+          "sensazione di non aver svuotato del tutto la vescica;",
+          "urgenza, cioè uno stimolo difficile da trattenere;",
+          "gocciolamento alla fine della minzione."
+        ],
+        "chiusura": "Non esiste un rapporto diretto tra il volume della prostata e l'intensità dei disturbi: una prostata non molto grande può dare molti sintomi, e viceversa."
+      },
+      {
+        "titolo": "Come si arriva alla diagnosi",
+        "paragrafi": [
+          "La visita urologica parte dalle domande sui disturbi, su quanto incidono sulla vita di tutti i giorni e sui farmaci che si assumono. Segue l'esame obiettivo, con l'esplorazione della prostata.",
+          "Gli esami più utili sono l'ecografia dell'apparato urinario, con la misura dell'urina che resta in vescica dopo la minzione, l'ecografia transrettale per valutare il volume della prostata, l'uroflussometria per misurare il getto e, nei casi indicati, il dosaggio del PSA. Servono anche a escludere altre cause degli stessi sintomi, come un'infezione, un calcolo o un restringimento dell'uretra."
+        ]
+      },
+      {
+        "titolo": "Le cure con i farmaci",
+        "paragrafi": [
+          "Nei disturbi lievi a volte bastano alcuni accorgimenti: non bere molto la sera, limitare alcol e caffè, non trattenere a lungo lo stimolo. Quando i sintomi danno fastidio, si passa ai farmaci.",
+          "Alcuni rilassano la muscolatura della prostata e del collo della vescica e migliorano il getto in poche settimane. Altri riducono lentamente il volume della ghiandola. Spesso si usano insieme. La scelta dipende dai sintomi, dal volume della prostata e dagli effetti collaterali, che vanno valutati con lo specialista."
+        ]
+      },
+      {
+        "titolo": "Quando operare",
+        "paragrafi": [
+          "La chirurgia va presa in considerazione quando le terapie mediche non sono più sufficienti, oppure quando compaiono complicanze. Le situazioni più frequenti sono:"
+        ],
+        "elenco": [
+          "disturbi che restano importanti nonostante i farmaci;",
+          "uno o più episodi di ritenzione urinaria, cioè l'impossibilità di urinare;",
+          "infezioni urinarie che si ripetono;",
+          "calcoli in vescica;",
+          "sangue nelle urine legato alla prostata;",
+          "segni di sofferenza della vescica o dei reni."
+        ],
+        "chiusura": "Operare non è un fallimento della terapia medica: è il passo successivo, quando serve."
+      },
+      {
+        "titolo": "Le tecniche chirurgiche",
+        "paragrafi": [
+          "Oggi la gran parte degli interventi si esegue per via endoscopica, cioè attraverso l'uretra, senza incisioni sulla pelle. Le tecniche principali sono la resezione transuretrale (TURP), mono o bipolare, e l'enucleazione con il laser: con il laser a Olmio (HoLEP) o con il laser al Tullio (ThuLEP). La chirurgia a cielo aperto è riservata a casi selezionati.",
+          "L'intervento che eseguo più spesso è la ThuLEP. Con il laser al Tullio separo l'adenoma dalla capsula della prostata seguendo il suo piano anatomico; poi lo frammento all'interno della vescica e lo estraggo, per inviarlo all'esame istologico. La tecnica permette di trattare anche prostate di grandi dimensioni, con un sanguinamento in genere ridotto, una rimozione del catetere in tempi brevi e una degenza più breve."
+        ]
+      },
+      {
+        "titolo": "Dopo l'intervento",
+        "paragrafi": [
+          "Dopo un intervento endoscopico si resta in genere con un catetere vescicale per un breve periodo. Quando viene rimosso, si torna a urinare spontaneamente; nelle prime settimane è normale avere un po' di bruciore, qualche urgenza o tracce di sangue nelle urine, che si riducono con il tempo.",
+          "In questa fase conviene bere a sufficienza, evitare sforzi intensi e lunghi tragitti in bicicletta e seguire con attenzione le indicazioni ricevute alla dimissione. Il controllo successivo serve a verificare che la vescica si svuoti bene e che i sintomi siano migliorati."
+        ]
+      },
+      {
+        "titolo": "Effetti collaterali da conoscere",
+        "paragrafi": [
+          "Come ogni intervento, anche la chirurgia della prostata ha possibili complicanze. Oltre a quelle generali, le più tipiche sono l'incontinenza urinaria, di solito transitoria, e l'eiaculazione retrograda: lo sperma, durante l'orgasmo, va verso la vescica invece di uscire. Non è dolorosa e non è pericolosa, ma è bene saperlo prima, soprattutto se si desiderano figli.",
+          "Sono aspetti di cui parlo sempre con il paziente prima di decidere, insieme ai benefici attesi nel suo caso."
+        ]
+      },
+      {
+        "titolo": "Quando rivolgersi all'urologo",
+        "paragrafi": [
+          "È utile una visita urologica se:"
+        ],
+        "elenco": [
+          "si alza più di una volta per notte per urinare;",
+          "nota che il getto è diventato più debole;",
+          "ha la sensazione di non svuotare bene la vescica;",
+          "ha fatto un esame del PSA con un valore alterato."
+        ],
+        "chiusura": "Se invece non riesce a urinare, o ha febbre alta con brividi e bruciore, serve una valutazione medica in giornata."
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo urologo."
+  },
+  "instagram": {
+    "handle": "dr.francescovalentino",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Prostata ingrossata: quando operare",
+        "punti": [
+          "I farmaci non bastano più",
+          "Episodi di ritenzione urinaria",
+          "Infezioni urinarie ripetute",
+          "Calcoli in vescica"
+        ],
+        "didascalia": "L'ipertrofia prostatica si cura prima con i farmaci. La chirurgia diventa la scelta giusta quando non bastano o compaiono complicanze. Oggi si opera quasi sempre per via endoscopica, senza incisioni.",
+        "hashtag": "#prostata #urologia #saluteuomo #torino"
+      },
+      {
+        "stile": "foto",
+        "immagine": "acqua",
+        "titolo": "Calcoli renali: cosa bere",
+        "sottotitolo": "Acqua, distribuita in tutta la giornata",
+        "didascalia": "Bere a sufficienza è la prima prevenzione dei calcoli: l'obiettivo è un'urina chiara. Meno sale, niente diete fai-da-te senza calcio. La quantità giusta per Lei la stabiliamo in visita, in base al tipo di calcolo.",
+        "hashtag": "#calcolirenali #urologo #prevenzione"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Colica renale: cosa fare subito?",
+        "risposta": "Con febbre o vomito, Pronto soccorso.",
+        "didascalia": "Il dolore della colica è improvviso e forte, al fianco, e può scendere verso l'inguine. Se c'è febbre, vomito che non passa o se non urina, vada subito in Pronto soccorso. Dopo l'episodio, una visita urologica serve a capire la causa.",
+        "hashtag": "#colicarenale #calcoli #urologia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "info@valentinourologo.it",
+    "luoghi": [
+      {
+        "tipo": "Studio privato",
+        "nome": "Studio Dr. Valentino",
+        "indirizzo": "Corso Massimo d'Azeglio 60, scala H",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di corso Massimo d'Azeglio 60, Torino",
+        "telefoni": [
+          {
+            "label": "Appuntamenti",
+            "numero": "366 898 5757"
+          }
+        ]
+      },
+      {
+        "tipo": "Ospedale",
+        "nome": "Ospedale Koelliker",
+        "indirizzo": "Corso Galileo Ferraris 247-255",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": true,
+        "frase": "l'Ospedale Koelliker, corso Galileo Ferraris 247-255, Torino",
+        "telefoni": [
+          {
+            "label": "Koelliker",
+            "numero": "011 618 4511"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "Dove opero",
+    "strutture": [
+      {
+        "nome": "Humanitas Cellini",
+        "indirizzo": "Via Benvenuto Cellini 5",
+        "citta": "Torino",
+        "testo": "Interventi con il Servizio Sanitario Nazionale e in regime privato."
+      },
+      {
+        "nome": "Ospedale Koelliker",
+        "indirizzo": "Corso Galileo Ferraris 247-255",
+        "citta": "Torino",
+        "testo": "Interventi con il Servizio Sanitario Nazionale e in regime privato."
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Mi chiami per fissare un appuntamento, oppure scelga giorno e orario online: Le confermerò la data per telefono.",
+    "telefono": "3668985757",
+    "telefonoLabel": "366 898 5757",
+    "chiamaLabel": "per appuntamento",
+    "whatsapp": null,
+    "emailRichieste": "info@valentinourologo.it",
+    "oggettoMail": "Richiesta di visita urologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce venire e lasci i Suoi dati: La ricontatterò per confermare. La prenotazione è confermata solo dopo il contatto telefonico.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate per telefono.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": "https://www.valentinourologo.it/privacy-policy/",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F1F6F7",
+      "ink": "#13232E",
+      "muted": "#53656F",
+      "line": "#DAE5E9",
+      "brand": "#31556E",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#63BEAA",
+      "deep": "#0C222D",
+      "deep-ink": "#DDEBEF"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap",
+    "fontTitoli": "Montserrat",
+    "fontTesti": "Source Sans 3",
+    "favicon": "/valentino-avrj/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/valentino-avrj/brand/brand.json",
+    "pagine": [
+      "https://www.valentinourologo.it/",
+      "https://www.valentinourologo.it/curriculum/",
+      "https://www.valentinourologo.it/contatti/",
+      "https://www.miodottore.it/profilo/francesco-valentino"
+    ]
+  }
+}

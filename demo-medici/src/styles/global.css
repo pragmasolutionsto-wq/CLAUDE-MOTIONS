@@ -112,6 +112,17 @@ html { scroll-behavior: smooth; }
   .sede-scelta[aria-pressed="true"] { border-color: var(--c-brand); background: color-mix(in srgb, var(--c-brand) 6%, white); box-shadow: inset 0 0 0 1px var(--c-brand); }
 }
 
+/* Layout "interventi": prenotazione a lista con pallino, angoli quasi vivi come nel sito del medico */
+@layer components {
+  .voce-pallino { transition: color .2s; }
+  .voce-pallino:hover { color: var(--c-brand); }
+  .voce-pallino .pallino { width: 1.05rem; height: 1.05rem; flex-shrink: 0; border-radius: 999px; border: 2px solid var(--c-line); transition: border-color .2s, box-shadow .2s, background-color .2s; }
+  .voce-pallino[aria-pressed="true"] { color: var(--c-brand); font-weight: 600; }
+  .voce-pallino[aria-pressed="true"] .pallino { border-color: var(--c-brand2); background: var(--c-brand2); box-shadow: inset 0 0 0 3px #fff; }
+  .stile-interventi .card { border-radius: 4px; box-shadow: none; border: 1px solid var(--c-line); }
+  .stile-interventi .campo, .stile-interventi .btn, .stile-interventi .slot, .stile-interventi .giorno { border-radius: 3px; }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }

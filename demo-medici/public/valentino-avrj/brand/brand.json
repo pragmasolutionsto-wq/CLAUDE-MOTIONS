@@ -1,0 +1,77 @@
+{
+  "sito": "https://www.valentinourologo.it/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "WordPress + Divi (2021), pagine ferme ad aprile 2021",
+  "trello": "Prospect medici · Dr. Francesco Valentino – Urologia e andrologia · A·8",
+  "logo": {
+    "trovato": true,
+    "file": "logo.svg",
+    "fonte": "https://www.valentinourologo.it/wp-content/uploads/2021/02/logo_valentino.svg",
+    "nota": "Monogramma FV calligrafico + 'Dr. Francesco VALENTINO UROLOGO' in Montserrat, blu #31556E con pallino verde acqua #63BEAA. Versione chiara per il footer ricolorata in bianco. Monogramma (favicon 512px) usato come avatar e favicon."
+  },
+  "foto": {
+    "tenute": [
+      {
+        "file": "foto-01-sala-operatoria.jpg",
+        "desc": "In sala operatoria con divisa e mascherina, 1920×2560: hero",
+        "fonte": "home"
+      },
+      {
+        "file": "foto-04-in-sala-con-equipe.jpg",
+        "desc": "Mentre opera con l'équipe, 1920×1374 (sfondo CSS dell'hero mobile): scheda prostatectomia",
+        "fonte": "home, hero_02.jpg"
+      },
+      {
+        "file": "foto-02-thulep-514px.jpg",
+        "desc": "Intervento ThuLEP con monitor endoscopico, 514×351: usata piccola nella scheda ThuLEP",
+        "fonte": "pagina ipertrofia prostatica"
+      },
+      {
+        "file": "foto-03-curriculum-249px.jpg",
+        "desc": "Ritratto in camice 249×300: solo formato piccolo in Chi sono",
+        "fonte": "pagina curriculum"
+      }
+    ],
+    "scartate": [
+      "Illustrazioni mani+icona 514×351 delle patologie: grafica del sito, non foto",
+      "Icone 120px",
+      "Foto profilo MioDottore 584px e foto su clinicacellini.it / osp-koelliker.it: siti terzi, NON usate (senza ok di Meme)"
+    ],
+    "nota": "Repertorio Unsplash: sale operatorie, chirurgo, bicchiere d'acqua (post calcoli), sala bianca (articolo)."
+  },
+  "colori": {
+    "logo": [
+      "#31556E",
+      "#63BEAA"
+    ],
+    "sito": [
+      "#01C3AA",
+      "#0C222D",
+      "#1E5670"
+    ],
+    "scelti": "blu #31556E, verde acqua #63BEAA, scuro #0C222D, fondo bianco/grigio-verde chiaro #F1F6F7"
+  },
+  "font": {
+    "sito": [
+      {
+        "famiglia": "Montserrat",
+        "giudizio": "buono, è anche il font del logo"
+      }
+    ],
+    "scelti": "Montserrat (titoli) + Source Sans 3 (testi)"
+  },
+  "recensioni": "8 recensioni su MioDottore; in pagina 5, alla lettera, con il nome come pubblicato. Esclusa quella che cita un tumore 'completamente guarito' (promessa di risultato) e una troncata.",
+  "dati": {
+    "sedi": [
+      "Studio Dr. Valentino, corso Massimo d'Azeglio 60 scala H, Torino (MioDottore 2026)",
+      "Ospedale Koelliker, corso Galileo Ferraris 247-255, Torino · 011 618 4511"
+    ],
+    "sedi_sul_sito_vecchie": "Il sito indica studio in corso Re Umberto 31 e Clinica Sedes Sapientiae (via Bidone 31, 011 4677888): non confermati dalle fonti 2025-2026, NON usati. Doctolib indica via Marenco 28/B: non usato.",
+    "interventi": "Humanitas Cellini e Ospedale Koelliker, SSN e privati (home del sito; scheda medico su clinicacellini.it)",
+    "telefono": "366 898 5757 'per appuntamento' (header del sito). WhatsApp non verificato.",
+    "email": "info@valentinourologo.it (pagina privacy del sito): destinazione delle richieste della demo",
+    "piva": "IT09876440018",
+    "specializzazione_2014": "anno da centromedicosgregorio.it",
+    "prezzi": "Presenti su MioDottore: NON riportati"
+  }
+}
