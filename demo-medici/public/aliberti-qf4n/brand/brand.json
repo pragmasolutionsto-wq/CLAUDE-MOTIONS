@@ -1,0 +1,30 @@
+{
+  "sito": "https://alibertiurologo.com/",
+  "estratto_il": "2026-11-17",
+  "piattaforma": "WordPress (tema a blocchi), contenuti fermi a luglio 2023",
+  "trello": "Prospect medici · Dott. Marco Aliberti – Urologia e andrologia · A·9",
+  "logo": { "trovato": false, "nota": "Nessun logo: titolo 'STUDIO MEDICO / Dott. MARCO ALIBERTI' in Playfair Display, come la targa sulla porta. Ripreso come intestazione di testo. Marchio = suo volto tondo." },
+  "foto": {
+    "tenute": [
+      { "file": "img-home-def.jpg", "desc": "Il dottore apre la porta con la targa 'Studio Medico Dott. Marco Aliberti'. 1980×1036", "fonte": "home" },
+      { "file": "contatti.jpg", "desc": "In piedi, braccia conserte, quadro alle spalle. 1438×598", "fonte": "/contatti/" },
+      { "file": "sessuologia-pma.jpeg", "desc": "Alla scrivania con diploma alle spalle. 1024×683", "fonte": "/sessuologia-e-pma/" },
+      { "file": "unnamed-scaled.jpeg / unnamed-2-scaled.jpeg", "desc": "Studio e ambulatorio con il dottore. 2560×1707", "fonte": "pagine prestazioni" },
+      { "file": "img-pma.jpg / img-pma-1.jpg", "desc": "Sala d'attesa", "fonte": "/sessuologia-e-pma/" },
+      { "file": "img-gallery-contact.jpg", "desc": "Angolo con libreria", "fonte": "/contatti/" },
+      { "file": "urologia.jpg", "desc": "Ambulatorio con il dottore, testa al bordo: non usata per i tagli", "fonte": "/prestazioni-di-urologia/" }
+    ],
+    "scartate": [],
+    "nota": "Repertorio solo per articolo e laboratorio (microscopio)."
+  },
+  "colori": { "nota": "Il sito non ha colori propri (palette predefinita di WordPress). Palette ricavata dallo studio: petrolio #1B5366 e corallo #D9634A (la sua cravatta), fondo scuro #0F2B35." },
+  "font": { "sito": [ { "famiglia": "Playfair Display", "ruolo": "titoli", "giudizio": "si tiene, mai in corsivo" } ], "testi": "Work Sans" },
+  "dati": {
+    "studio": "Via Luigi Leonardo Colli 14, 10128 Torino",
+    "telefoni": ["011 5069807", "338 4027440"],
+    "email": "alibertiurologo@gmail.com",
+    "piva": "05780930011",
+    "clinica": "Casa di Cura Fornaca di Sessant (libera professione)",
+    "nota_privacy": "Il sito pubblica l'anno di nascita: NON usato."
+  }
+}

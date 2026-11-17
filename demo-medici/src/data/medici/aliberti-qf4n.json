@@ -1,0 +1,505 @@
+{
+  "slug": "aliberti-qf4n",
+  "layout": "studio",
+  "sitoOrigine": "https://alibertiurologo.com/",
+  "titolo": "Dott.",
+  "nome": "Marco Aliberti",
+  "specialita": "Specialista in Urologia",
+  "firma": "Urologo, andrologo e sessuologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Marco Aliberti · Urologo e andrologo a Torino",
+    "description": "Sono urologo, andrologo e sessuologo clinico a Torino: prostata, calcoli, tumori urologici, varicocele, infertilità maschile e disfunzioni sessuali. Studio in via Colli 14."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/aliberti-qf4n/img/marchio.png",
+    "logoChiaro": "/aliberti-qf4n/img/marchio.png",
+    "marchio": "/aliberti-qf4n/img/marchio.png",
+    "logoAlt": "Studio Medico Dott. Marco Aliberti"
+  },
+  "foto": {
+    "hero": "/aliberti-qf4n/img/hero.webp",
+    "heroMobile": "/aliberti-qf4n/img/hero-mobile.webp",
+    "heroAlt": "Il Dott. Aliberti sulla porta del suo studio medico",
+    "volto": "/aliberti-qf4n/img/volto.webp",
+    "postRitratto": "/aliberti-qf4n/img/post-ritratto.webp",
+    "scrivania": "/aliberti-qf4n/img/studio-scrivania.webp",
+    "laboratorio": "/aliberti-qf4n/img/rep-laboratorio.webp"
+  },
+  "galleria": [
+    {
+      "img": "/aliberti-qf4n/img/studio-scrivania.webp",
+      "alt": "Lo studio, con la scrivania del medico"
+    },
+    {
+      "img": "/aliberti-qf4n/img/studio-ambulatorio.webp",
+      "alt": "L'ambulatorio per le visite"
+    },
+    {
+      "img": "/aliberti-qf4n/img/studio-attesa.webp",
+      "alt": "La sala d'attesa"
+    },
+    {
+      "img": "/aliberti-qf4n/img/studio-libreria.webp",
+      "alt": "Un angolo dello studio con la libreria"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Studio Medico",
+    "titolo": "Urologia, andrologia e sessuologia a Torino",
+    "testo": "Più di trent'anni di esperienza e oltre 5000 interventi da primo operatore. Nel mio studio di via Colli mi occupo della salute urologica di uomini e donne e della salute maschile a ogni età.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami lo studio",
+    "box": {
+      "titolo": "Prenoti la Sua visita",
+      "motivoLabel": "Motivo",
+      "motivi": [
+        "Prostata",
+        "PSA alto",
+        "Calcoli renali",
+        "Sangue nelle urine",
+        "Disturbi urinari",
+        "Infertilità",
+        "Varicocele",
+        "Fimosi o frenulo",
+        "Dolore al testicolo",
+        "Visita andrologica",
+        "Disfunzione erettile",
+        "Calo del desiderio",
+        "Disturbi dell'orgasmo",
+        "Consulenza sessuologica"
+      ],
+      "motiviFrase": [
+        "un problema alla prostata",
+        "un PSA alterato",
+        "dei calcoli renali",
+        "la presenza di sangue nelle urine",
+        "dei disturbi urinari",
+        "un problema di fertilità",
+        "un varicocele",
+        "una fimosi o un frenulo breve",
+        "un dolore al testicolo",
+        "una visita andrologica",
+        "una disfunzione erettile",
+        "un calo del desiderio",
+        "un disturbo dell'orgasmo",
+        "una consulenza sessuologica"
+      ],
+      "sedeLabel": "Sede"
+    }
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "Tre ambiti, un solo medico che La segue dall'inizio alla fine.",
+    "voci": [
+      {
+        "nome": "Urologia",
+        "img": "/aliberti-qf4n/img/area-urologia.webp",
+        "imgAlt": "Il Dott. Aliberti nel suo studio",
+        "testo": "Rene, vescica, prostata: dalla diagnosi alla chirurgia mininvasiva.",
+        "voci": [
+          "Tumore del rene",
+          "Calcolosi renale e ureterale",
+          "Ingrossamento della prostata",
+          "Prostatite acuta e cronica",
+          "Biopsia prostatica ecoguidata",
+          "Tumore della prostata",
+          "Neoformazioni della vescica"
+        ],
+        "motivi": [
+          "Prostata",
+          "PSA alto",
+          "Calcoli renali",
+          "Sangue nelle urine",
+          "Disturbi urinari"
+        ],
+        "frasi": [
+          "un problema alla prostata",
+          "un PSA alterato",
+          "dei calcoli renali",
+          "la presenza di sangue nelle urine",
+          "dei disturbi urinari"
+        ]
+      },
+      {
+        "nome": "Andrologia",
+        "img": "/aliberti-qf4n/img/area-andrologia.webp",
+        "imgAlt": "L'ambulatorio dello studio",
+        "testo": "Salute maschile a ogni età, compresa la fertilità.",
+        "voci": [
+          "Fimosi e circoncisione",
+          "Frenulo breve e frenuloplastica",
+          "Varicocele",
+          "Idrocele",
+          "Torsione e subtorsione del testicolo",
+          "Tumore del testicolo",
+          "Malattie sessualmente trasmissibili"
+        ],
+        "motivi": [
+          "Infertilità",
+          "Varicocele",
+          "Fimosi o frenulo",
+          "Dolore al testicolo",
+          "Visita andrologica"
+        ],
+        "frasi": [
+          "un problema di fertilità",
+          "un varicocele",
+          "una fimosi o un frenulo breve",
+          "un dolore al testicolo",
+          "una visita andrologica"
+        ]
+      },
+      {
+        "nome": "Sessuologia",
+        "img": "/aliberti-qf4n/img/area-sessuologia.webp",
+        "imgAlt": "Il Dott. Aliberti alla scrivania",
+        "testo": "Le difficoltà della sfera sessuale, nell'uomo e nella donna.",
+        "voci": [
+          "Disturbi del desiderio",
+          "Disfunzione erettile",
+          "Disturbi della lubrificazione",
+          "Disturbi dell'orgasmo",
+          "Consulenza di coppia"
+        ],
+        "motivi": [
+          "Disfunzione erettile",
+          "Calo del desiderio",
+          "Disturbi dell'orgasmo",
+          "Consulenza sessuologica"
+        ],
+        "frasi": [
+          "una disfunzione erettile",
+          "un calo del desiderio",
+          "un disturbo dell'orgasmo",
+          "una consulenza sessuologica"
+        ]
+      }
+    ]
+  },
+  "numeri": [
+    {
+      "valore": "5000+",
+      "testo": "interventi come primo operatore, su tutta la patologia urologica"
+    },
+    {
+      "valore": "2003",
+      "testo": "dall'anno in cui eseguo la prostatectomia radicale laparoscopica"
+    },
+    {
+      "valore": "30+",
+      "testo": "anni di esperienza, tra ospedale e attività privata"
+    }
+  ],
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "citazione": "Mi sono formato tra Torino, San Francisco, Parigi, New York e Ulm. Ho lavorato come volontario in Kenya. Oggi porto tutto questo nel mio studio.",
+    "paragrafi": [
+      "Mi sono laureato in Medicina e Chirurgia all'Università di Torino, dove ho conseguito con lode le specializzazioni in Urologia e in Chirurgia d'Urgenza e Pronto Soccorso. Sempre con lode ho ottenuto il Master Universitario di II livello in Andrologia, e ho frequentato la Scuola Superiore di Sessuologia Clinica di Torino, diventando consulente in sessuologia e sessuologo clinico.",
+      "Dal 1990 al 2009 sono stato dirigente medico della Divisione di Urologia dell'Ospedale Cottolengo di Torino, poi dell'Ospedale Mauriziano Umberto I. Svolgo attività libero professionale alla Casa di Cura Fornaca di Sessant. Dal 2003 mi dedico in particolare alla chirurgia laparoscopica e alla prostatectomia radicale.",
+      "Sono autore di pubblicazioni su riviste nazionali e internazionali, relatore e moderatore a congressi, con un interesse particolare per la chirurgia urologica laparoscopica."
+    ],
+    "viaggi": [
+      {
+        "luogo": "San Francisco",
+        "anno": "1992",
+        "testo": "Urological Department, San Francisco Medical Hospital"
+      },
+      {
+        "luogo": "Parigi",
+        "anno": "1993",
+        "testo": "Division d'Urologie, Hôpital Saint-Louis"
+      },
+      {
+        "luogo": "New York",
+        "anno": "1995",
+        "testo": "Columbia University"
+      },
+      {
+        "luogo": "Ulm",
+        "anno": "1995",
+        "testo": "Urologische Klinik der Universität"
+      },
+      {
+        "luogo": "Kenya",
+        "anno": "1996 · 1999",
+        "testo": "Medico volontario a Sololo e al Cottolengo Hospital di Chaaria"
+      }
+    ],
+    "tappe": [
+      {
+        "periodo": "1990 – 2009",
+        "testo": "Dirigente medico, Urologia, Ospedale Cottolengo di Torino."
+      },
+      {
+        "periodo": "Poi",
+        "testo": "Dirigente medico, Urologia, Ospedale Mauriziano Umberto I di Torino."
+      },
+      {
+        "periodo": "Dal 2003",
+        "testo": "Chirurgia laparoscopica e prostatectomia radicale."
+      }
+    ],
+    "societaLabel": "Società scientifiche",
+    "societa": [
+      "European Association of Urology (EAU)",
+      "Società Italiana di Urologia (SIU)",
+      "Federazione Italiana di Sessuologia Scientifica (FISS)"
+    ]
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "articolo": {
+    "categoria": "Andrologia",
+    "titolo": "Spermiogramma a Torino: come prepararsi",
+    "img": "/aliberti-qf4n/img/rep-articolo.webp",
+    "intro": "Lo spermiogramma è il primo esame per valutare la fertilità maschile. È semplice e non invasivo, ma per avere un risultato affidabile bisogna prepararsi bene. Ecco cosa fare, cosa evitare e come leggere il referto insieme all'andrologo.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Cos'è lo spermiogramma",
+        "paragrafi": [
+          "Lo spermiogramma, chiamato anche esame del liquido seminale, analizza un campione di sperma in laboratorio. Valuta il volume, il numero degli spermatozoi, la loro capacità di muoversi, la forma e altre caratteristiche del liquido.",
+          "È l'esame di partenza quando una coppia cerca una gravidanza da tempo senza risultati, ma è utile anche in altri casi: per esempio dopo un intervento per varicocele, per controllare l'effetto di una terapia, o prima di cure che possono ridurre la fertilità."
+        ]
+      },
+      {
+        "titolo": "Quando farlo",
+        "paragrafi": [
+          "Si parla di infertilità di coppia quando la gravidanza non arriva dopo circa un anno di rapporti regolari non protetti. In circa la metà dei casi c'è anche un fattore maschile: per questo è giusto che l'uomo venga valutato fin dall'inizio, insieme alla partner, e non solo dopo gli esami di lei.",
+          "Lo spermiogramma è un esame semplice da fare e dà informazioni importanti già al primo passo."
+        ]
+      },
+      {
+        "titolo": "Come prepararsi",
+        "paragrafi": [
+          "Perché il risultato sia affidabile, è importante seguire alcune regole:"
+        ],
+        "elenco": [
+          "un periodo di astinenza sessuale di almeno 2 e non più di 7 giorni prima della raccolta;",
+          "nessun lubrificante, saliva o preservativo comune durante la raccolta, perché possono alterare il campione;",
+          "segnalare febbre, infezioni o farmaci presi nei tre mesi precedenti;",
+          "evitare, nei giorni prima, eccessi di alcol, saune e bagni molto caldi."
+        ],
+        "chiusura": "Il laboratorio fornisce di solito indicazioni precise e un contenitore sterile: segua quelle."
+      },
+      {
+        "titolo": "La raccolta del campione",
+        "paragrafi": [
+          "Il campione si raccoglie per masturbazione, direttamente nel contenitore sterile, cercando di raccogliere tutto l'eiaculato: la prima parte è spesso la più ricca di spermatozoi.",
+          "Si può fare in laboratorio, in un locale dedicato, oppure a casa. In questo caso il contenitore va consegnato entro un'ora, tenuto a temperatura corporea, per esempio in una tasca interna."
+        ]
+      },
+      {
+        "titolo": "Perché a volte va ripetuto",
+        "paragrafi": [
+          "Le caratteristiche dello sperma cambiano molto da un campione all'altro, anche nella stessa persona. Una febbre di qualche settimana prima, un periodo di stress o un'astinenza troppo breve possono peggiorare temporaneamente i valori.",
+          "Gli spermatozoi impiegano circa tre mesi a formarsi: un risultato alterato riflette spesso quello che è successo nei mesi precedenti. Per questo, se un esame non è nella norma, di solito si ripete a distanza di qualche settimana prima di trarre conclusioni."
+        ]
+      },
+      {
+        "titolo": "Leggere il referto",
+        "paragrafi": [
+          "Il referto riporta diversi valori, confrontati con i limiti di riferimento dell'Organizzazione Mondiale della Sanità. Un valore fuori norma non significa da solo infertilità, e un esame normale non esclude del tutto altri problemi.",
+          "Il referto va letto dall'andrologo, insieme alla visita e alla storia della persona. Durante la visita controllo anche i testicoli e la presenza di un varicocele, una delle cause più frequenti e correggibili di ridotta fertilità."
+        ]
+      },
+      {
+        "titolo": "Dopo lo spermiogramma",
+        "paragrafi": [
+          "A seconda di quello che emerge, possono servire altri esami: un'ecografia scrotale, esami ormonali, uno studio più approfondito degli spermatozoi o esami genetici in casi selezionati.",
+          "Spesso alcune abitudini fanno già la differenza: smettere di fumare, ridurre l'alcol, mantenere un peso adeguato, fare attività fisica regolare. Quando c'è una causa correggibile, come il varicocele, si valuta il trattamento più adatto."
+        ]
+      },
+      {
+        "titolo": "Il varicocele, una causa da conoscere",
+        "paragrafi": [
+          "Il varicocele è una dilatazione delle vene del testicolo, quasi sempre a sinistra. Riscalda il testicolo e, in alcuni uomini, riduce la produzione e la qualità degli spermatozoi. Spesso non dà sintomi; a volte dà un senso di peso o di tensione, soprattutto dopo essere stati a lungo in piedi.",
+          "Si riconosce con la visita e con un'ecografia doppler. Quando è indicato, oggi si corregge con tecniche mininvasive, come la scleroembolizzazione retrograda attraverso una piccola incisione di circa un centimetro alla radice dello scroto. Dopo il trattamento, lo spermiogramma si ricontrolla a distanza di alcuni mesi."
+        ]
+      },
+      {
+        "titolo": "Cosa può fare Lei, da subito",
+        "paragrafi": [
+          "In attesa degli esami, alcune abitudini aiutano la salute degli spermatozoi:"
+        ],
+        "elenco": [
+          "smettere di fumare, anche solo per qualche mese;",
+          "ridurre l'alcol e non usare sostanze anabolizzanti;",
+          "mantenere un peso adeguato e muoversi con regolarità;",
+          "evitare il calore prolungato su testicoli, come computer portatili sulle gambe e saune frequenti;",
+          "non assumere integratori «per la fertilità» senza averne parlato con il medico."
+        ],
+        "chiusura": "Sono cambiamenti semplici, che fanno bene in generale e che si riflettono sullo spermiogramma nel giro di qualche mese."
+      },
+      {
+        "titolo": "Un esame da fare senza imbarazzo",
+        "paragrafi": [
+          "Molti uomini rimandano lo spermiogramma per pudore o perché pensano che la difficoltà a concepire riguardi soprattutto la donna. Non è così: la fertilità è una questione di coppia.",
+          "Se state cercando una gravidanza da tempo, il primo passo può essere proprio questo esame, accompagnato da una visita andrologica. In studio ne parliamo con calma e riservatezza, e Le spiego ogni risultato in parole semplici."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo andrologo."
+  },
+  "instagram": {
+    "handle": "dott.marcoaliberti",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "domanda",
+        "titolo": "Infertilità maschile: qual è il primo esame?",
+        "risposta": "Lo spermiogramma, con una visita andrologica.",
+        "didascalia": "Quando la gravidanza non arriva dopo circa un anno, anche l'uomo va valutato, fin da subito. Il primo esame è lo spermiogramma: semplice, non invasivo, e già molto informativo se fatto con la giusta preparazione.",
+        "hashtag": "#fertilità #andrologia #spermiogramma #torino"
+      },
+      {
+        "stile": "foto",
+        "immagine": "postRitratto",
+        "titolo": "Disfunzione erettile a 40 anni",
+        "sottotitolo": "Un segnale da non ignorare",
+        "didascalia": "A quarant'anni una difficoltà di erezione non va liquidata come stress. A volte è il primo segnale di un problema dei vasi sanguigni, del metabolismo o degli ormoni. Una visita aiuta a capire la causa e a scegliere la cura.",
+        "hashtag": "#disfunzioneerettile #andrologia #saluteuomo #sessuologia"
+      },
+      {
+        "stile": "lista",
+        "titolo": "PSA: quando misurarlo",
+        "punti": [
+          "Dai 50 anni, con la visita urologica annuale",
+          "Prima, se un parente stretto ha avuto un tumore della prostata",
+          "Sempre interpretato dall'urologo"
+        ],
+        "didascalia": "Il PSA è un esame del sangue utile, ma da solo non basta: può alzarsi anche per un'infiammazione o un ingrossamento benigno della prostata. Va sempre letto insieme alla visita.",
+        "hashtag": "#psa #prostata #urologia #prevenzione"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "alibertiurologo@gmail.com",
+    "luoghi": [
+      {
+        "principale": true,
+        "tipo": "Studio Medico",
+        "nome": "Studio Medico Dott. Marco Aliberti",
+        "indirizzo": "Via Luigi Leonardo Colli 14",
+        "citta": "Torino",
+        "mappa": true,
+        "frase": "lo studio di via Colli 14, Torino",
+        "telefoni": [
+          {
+            "label": "Studio",
+            "numero": "011 506 9807"
+          },
+          {
+            "label": "Cellulare",
+            "numero": "338 402 7440"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "Attività in clinica",
+    "strutture": [
+      {
+        "nome": "Casa di Cura Fornaca di Sessant",
+        "testo": "Attività libero professionale, Torino"
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Può chiamare lo studio, scrivermi una mail oppure scegliere giorno e orario online.",
+    "telefono": "0115069807",
+    "telefonoLabel": "011 506 9807",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "emailRichieste": null,
+    "oggettoMail": "Richiesta di visita",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce venire e lasci i Suoi dati: lo studio La ricontatterà per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "09:30",
+        "10:00",
+        "10:30",
+        "11:00",
+        "11:30",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": null,
+      "privacyTesto": "Questo modulo non salva i Suoi dati: prepara soltanto un messaggio nella Sua app di posta, che decide Lei se inviare. I dati indicati servono unicamente a rispondere alla richiesta di appuntamento.",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F3F6F6",
+      "ink": "#14232A",
+      "muted": "#566870",
+      "line": "#DCE4E5",
+      "brand": "#1B5366",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#D9634A",
+      "deep": "#0F2B35",
+      "deep-ink": "#E2ECEE"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap",
+    "fontTitoli": "Playfair Display",
+    "fontTesti": "Work Sans",
+    "fontUi": "Work Sans",
+    "favicon": "/aliberti-qf4n/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/aliberti-qf4n/brand/brand.json",
+    "pagine": [
+      "https://alibertiurologo.com/",
+      "https://alibertiurologo.com/chi-sono/",
+      "https://alibertiurologo.com/prestazioni-di-urologia/",
+      "https://alibertiurologo.com/prestazioni-di-andrologia/",
+      "https://alibertiurologo.com/sessuologia-e-pma/",
+      "https://alibertiurologo.com/contatti/"
+    ]
+  }
+}

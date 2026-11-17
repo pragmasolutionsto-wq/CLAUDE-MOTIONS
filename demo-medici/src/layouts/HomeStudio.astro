@@ -1,0 +1,247 @@
+---
+// Layout "studio" (prima demo: Aliberti). Impostazione editoriale classica: intestazione centrata,
+// hero divisa a metà (foto vera della porta dello studio / pannello pieno con prenotazione a schede per area),
+// numeri grandi in serif, tre colonne editoriali per area, galleria dello studio a scorrimento,
+// citazione e formazione internazionale, contatti su fondo scuro. Titoli serif mai in corsivo.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const aree = x.aree.voci as any[];
+const sede = (m.sedi.luoghi as any[])[0];
+const email = emailRichieste(m);
+const wa = m.prenota.whatsapp ? String(m.prenota.whatsapp).replace(/\D/g, '') : '';
+const msg = `Buongiorno Dottore, vorrei prenotare una visita per ${aree[0].frasi[0]} presso ${sede.frase}.`;
+const href0 = wa ? `https://wa.me/${wa}?text=${encodeURIComponent(msg)}` : `mailto:${email}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(msg)}`;
+const nav = [['Di cosa mi occupo', '#aree'], ['Lo studio', '#studio'], ['Chi sono', '#chi-sono'], ['Articoli', '#articoli'], ['Contatti', '#sedi']];
+const ig = m.instagram;
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <!-- intestazione classica centrata -->
+  <header class="sticky z-30 border-b border-line bg-white" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8 lg:grid lg:grid-cols-3">
+      <a href={telHref(m.prenota.telefono)} class="hidden items-center gap-2 text-sm text-muted hover:text-brand lg:flex"><Icona nome="tel" class="h-4 w-4" /> {m.prenota.telefonoLabel}</a>
+      <a href={`/${m.slug}`} class="min-w-0 lg:text-center">
+        <span class="block text-[11px] font-semibold uppercase tracking-[0.3em] text-brand2">Studio Medico</span>
+        <span class="block truncate font-head text-xl font-semibold text-ink sm:text-2xl">{nomeCompleto(m)}</span>
+      </a>
+      <div class="flex justify-end"><a href="#prenota" class="btn btn-primary shrink-0 !min-h-[42px] !rounded-none !px-5 text-sm">Prenoti</a></div>
+    </div>
+    <nav class="hidden border-t border-line lg:block">
+      <ul class="mx-auto flex max-w-7xl justify-center gap-10 py-2.5 text-[13px] font-medium uppercase tracking-[0.16em] text-ink/70">
+        {nav.map(([t, h]) => <li><a href={h} class="hover:text-brand">{t}</a></li>)}
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO divisa a metà -->
+    <section data-hero-section class="grid lg:min-h-[640px] lg:grid-cols-2">
+      <picture class="block">
+        <source media="(min-width: 1024px)" srcset={foto.hero} />
+        <img src={foto.heroMobile} alt={foto.heroAlt} width="1100" height="1300" fetchpriority="high" class="h-[360px] w-full object-cover object-[60%_35%] sm:h-[460px] lg:h-full" />
+      </picture>
+      <div class="flex flex-col justify-center bg-deep px-5 py-10 text-deep-ink sm:px-10 lg:px-14 lg:py-14">
+        <p class="text-[12px] font-semibold uppercase tracking-[0.3em] text-brand2">{x.hero.eyebrow}</p>
+        <h1 class="mt-4 text-[2.3rem] font-semibold leading-[1.08] text-white sm:text-[3.1rem]">{x.hero.titolo}</h1>
+        <p class="mt-5 max-w-xl text-[16px] leading-relaxed text-deep-ink/80">{x.hero.testo}</p>
+
+        <div class="mt-8 bg-white p-5 text-ink sm:p-6" data-booking data-wa={wa} data-email={email} data-oggetto={m.prenota.oggettoMail}>
+          <p class="font-head text-xl font-semibold">{x.hero.box.titolo}</p>
+          <div class="mt-4 grid grid-cols-3 border-b border-line" role="tablist">
+            {aree.map((a, i) => (
+              <button type="button" role="tab" data-scheda={i} aria-selected={i === 0 ? 'true' : 'false'} class="scheda -mb-px border-b-2 border-transparent px-1 pb-2.5 text-[14px] font-semibold text-muted hover:text-ink aria-selected:border-brand2 aria-selected:text-ink">{a.nome}</button>
+            ))}
+          </div>
+          {aree.map((a, i) => (
+            <div role="tabpanel" data-pannello={i} class={`mt-4 flex flex-wrap gap-2 ${i === 0 ? '' : 'hidden'}`}>
+              {a.motivi.map((t: string, j: number) => (
+                <button type="button" class="chip !rounded-none" data-chip="motivo" data-frase={a.frasi[j]} aria-pressed={i === 0 && j === 0 ? 'true' : 'false'}>{t}</button>
+              ))}
+            </div>
+          ))}
+          <button type="button" data-chip="sede" data-frase={sede.frase} aria-pressed="true" class="mt-4 flex items-center gap-2 text-left text-[13px] text-muted">
+            <Icona nome="pin" class="h-4 w-4 text-brand2" /> {sede.indirizzo}, {sede.citta}
+          </button>
+          <a href={href0} data-prenota target={wa ? '_blank' : undefined} rel={wa ? 'noopener' : undefined} class="btn btn-primary mt-4 w-full !rounded-none"><Icona nome={wa ? 'commento' : 'mail'} /> {wa ? 'Invii su WhatsApp' : 'Invii la richiesta via mail'}</a>
+          <p class="mt-3 text-center text-[13px] text-muted">Oppure chiami {m.prenota.chiamaLabel}: <a href={telHref(m.prenota.telefono)} class="font-semibold text-brand">{m.prenota.telefonoLabel}</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUMERI in serif -->
+    <section class="border-b border-line px-4 py-14 sm:px-8">
+      <dl class="mx-auto grid max-w-6xl divide-y divide-line md:grid-cols-3 md:divide-x md:divide-y-0" data-stagger>
+        {x.numeri.map((n: any) => (
+          <div class="py-6 text-center md:px-8 md:py-0"><dt class="font-head text-[3.2rem] font-semibold leading-none text-brand">{n.valore}</dt><dd class="mx-auto mt-3 max-w-[260px] text-[15px] leading-snug text-muted">{n.testo}</dd></div>
+        ))}
+      </dl>
+    </section>
+
+    <!-- TRE AREE in colonne editoriali -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center">
+          <p class="text-[12px] font-semibold uppercase tracking-[0.3em] text-brand2" data-reveal>{m.aree.titolo}</p>
+          <h2 class="titolo-sez mx-auto mt-3 max-w-2xl" data-reveal>{m.aree.intro}</h2>
+        </div>
+        <div class="mt-12 grid gap-12 lg:grid-cols-3 lg:gap-0 lg:divide-x lg:divide-line" data-stagger>
+          {aree.map((a) => (
+            <article class="lg:px-8">
+              <img src={a.img} alt={a.imgAlt} width="900" height="1100" loading="lazy" class="aspect-[4/5] w-full object-cover" />
+              <h3 class="mt-6 font-head text-[2rem] font-semibold">{a.nome}</h3>
+              <p class="mt-2 text-muted">{a.testo}</p>
+              <ul class="mt-5 divide-y divide-line border-y border-line">
+                {a.voci.map((v: string) => <li class="flex items-center gap-3 py-2.5 text-[15px]"><span class="h-1.5 w-1.5 shrink-0 bg-brand2"></span>{v}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- LO STUDIO: galleria a scorrimento -->
+    <section id="studio" class="bg-surface py-16 sm:py-24" data-carosello>
+      <div class="mx-auto flex max-w-7xl items-end justify-between gap-6 px-4 sm:px-8">
+        <div>
+          <p class="text-[12px] font-semibold uppercase tracking-[0.3em] text-brand2" data-reveal>Lo studio</p>
+          <h2 class="titolo-sez mt-3" data-reveal>{sede.indirizzo}, {sede.citta}</h2>
+        </div>
+        <div class="hidden gap-2 sm:flex">
+          <button type="button" data-scorri="-1" aria-label="Foto precedente" class="grid h-12 w-12 place-items-center border border-ink/20 hover:border-brand hover:text-brand"><Icona nome="sx" /></button>
+          <button type="button" data-scorri="1" aria-label="Foto successiva" class="grid h-12 w-12 place-items-center border border-ink/20 hover:border-brand hover:text-brand"><Icona nome="dx" /></button>
+        </div>
+      </div>
+      <div class="mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-2 sm:px-8 [scrollbar-width:none]" data-traccia>
+        {x.galleria.map((g: any) => (
+          <figure class="w-[85%] shrink-0 snap-start sm:w-[60%] lg:w-[44%]">
+            <img src={g.img} alt={g.alt} width="1400" height="930" loading="lazy" class="aspect-[3/2] w-full object-cover" />
+            <figcaption class="mt-3 text-sm text-muted">{g.alt}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-6xl">
+        <p class="text-center text-[12px] font-semibold uppercase tracking-[0.3em] text-brand2" data-reveal>{m.bio.titolo}</p>
+        <blockquote class="mx-auto mt-6 max-w-4xl border-t-2 border-brand2 pt-8 text-center font-head text-[1.7rem] font-medium leading-snug text-ink sm:text-[2.2rem]" data-reveal>{x.bio.citazione}</blockquote>
+        <div class="mt-12 grid gap-10 lg:grid-cols-12">
+          <div class="lg:col-span-5" data-reveal>
+            <img src={foto.scrivania} alt="Il Dott. Aliberti nel suo studio" width="1400" height="930" loading="lazy" class="aspect-[4/3] w-full object-cover" />
+            <p class="mt-6 text-[12px] font-semibold uppercase tracking-[0.2em] text-muted">{m.bio.societaLabel}</p>
+            <ul class="mt-2 space-y-1 text-[15px] text-ink/80">{m.bio.societa.map((s: string) => <li>{s}</li>)}</ul>
+          </div>
+          <div class="space-y-5 text-[17px] leading-relaxed text-ink/85 lg:col-span-7" data-reveal>
+            {m.bio.paragrafi.map((p: string) => <p>{p}</p>)}
+          </div>
+        </div>
+        <p class="mt-14 text-center text-[12px] font-semibold uppercase tracking-[0.3em] text-muted">Formazione e volontariato all'estero</p>
+        <ul class="mt-6 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-5" data-stagger>
+          {x.bio.viaggi.map((v: any) => (
+            <li class="bg-white p-5 text-center"><p class="font-head text-2xl font-semibold">{v.luogo}</p><p class="mt-1 text-sm font-semibold text-brand2">{v.anno}</p><p class="mt-2 text-[13px] leading-snug text-muted">{v.testo}</p></li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <div class="stile-studio"><PrenotaCalendario m={m} /></div>
+
+    <!-- ARTICOLO + INSTAGRAM -->
+    <section id="articoli" class="border-t border-line px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-6xl">
+        <a href={`/${m.slug}/articolo`} class="group grid items-center gap-8 lg:grid-cols-2" data-reveal>
+          <span class="block">
+            <span class="text-[12px] font-semibold uppercase tracking-[0.3em] text-brand2">Articoli · {m.articolo.categoria}</span>
+            <span class="mt-4 block font-head text-[2.2rem] font-semibold leading-tight group-hover:text-brand sm:text-[2.8rem]">{m.articolo.titolo}</span>
+            <span class="mt-5 block text-[17px] leading-relaxed text-muted">{m.articolo.intro}</span>
+            <span class="mt-6 inline-flex items-center gap-2 border-b-2 border-brand2 pb-1 font-semibold">Legga l'articolo · {m.articolo.tempoLettura} <Icona nome="freccia" class="h-4 w-4" /></span>
+          </span>
+          <img src={m.articolo.img} alt="" width="1500" height="843" loading="lazy" class="aspect-[4/3] w-full object-cover" />
+        </a>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="titolo-sez" data-reveal>Dal mio profilo Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 border border-line px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: il profilo oggi non esiste</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3">
+                <img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full" />
+                <span class="text-sm font-semibold">{ig.handle}</span>
+              </header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden">
+                  <img src={foto[p.immagine ?? 'postRitratto']} alt="" width="640" height="640" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-white/95 px-5 py-4">
+                    <p class="font-head text-xl font-semibold leading-tight">{p.titolo}</p>
+                    <p class="mt-0.5 text-sm text-brand2">{p.sottotitolo}</p>
+                  </div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-surface p-7">
+                  <p class="text-[11px] font-semibold uppercase tracking-[0.3em] text-brand2">Studio Medico Aliberti</p>
+                  <p class="mt-3 font-head text-[1.7rem] font-semibold leading-[1.12]">{p.titolo}</p>
+                  <ul class="mt-5 divide-y divide-line border-y border-line">
+                    {p.punti.map((t: string) => <li class="py-2 text-[14px]">{t}</li>)}
+                  </ul>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.7rem] font-semibold leading-[1.15]">{p.titolo}</p>
+                  <p class="mt-5 border-l-2 border-brand2 pl-4 text-[16px]">{p.risposta}</p>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATTI su fondo scuro -->
+    <section id="sedi" class="bg-deep px-4 py-16 text-deep-ink sm:px-8 sm:py-24" data-cta-finale>
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-2">
+        <div>
+          <p class="text-[12px] font-semibold uppercase tracking-[0.3em] text-brand2">{m.sedi.titolo}</p>
+          <h2 class="mt-3 font-head text-[2.4rem] font-semibold leading-tight text-white">{sede.nome}</h2>
+          <p class="mt-3 text-lg">{sede.indirizzo}, {sede.citta}</p>
+          <ul class="mt-8 divide-y divide-white/15 border-y border-white/15">
+            {sede.telefoni.map((t: any) => <li><a href={telHref(t.numero)} class="flex items-center justify-between py-4 hover:text-white"><span class="text-deep-ink/70">{t.label}</span><span class="font-head text-2xl font-semibold text-white">{t.numero}</span></a></li>)}
+            {m.sedi.email && <li><a href={`mailto:${m.sedi.email}`} class="flex items-center justify-between gap-4 py-4 hover:text-white"><span class="text-deep-ink/70">Email</span><span class="truncate font-semibold text-white">{m.sedi.email}</span></a></li>}
+          </ul>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#prenota" class="btn !rounded-none bg-brand2 text-white hover:opacity-90"><Icona nome="calendario" /> Scelga giorno e orario</a>
+            <a href={mapsHref(sede.indirizzo, sede.citta)} target="_blank" rel="noopener" class="btn !rounded-none border border-white/40 text-white hover:bg-white/10"><Icona nome="pin" /> Apra in Google Maps</a>
+          </div>
+          <p class="mt-8 text-sm text-deep-ink/60">{m.sedi.struttureLabel}: {m.sedi.strutture.map((s: any) => s.nome).join(', ')}.</p>
+        </div>
+        <img src={x.galleria[2].img} alt={x.galleria[2].alt} width="1400" height="930" loading="lazy" class="aspect-[4/3] w-full object-cover lg:aspect-auto lg:h-full" />
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    // Schede della prenotazione (Urologia / Andrologia / Sessuologia): mostrano i motivi dell'area e selezionano il primo
+    document.querySelectorAll<HTMLButtonElement>('[data-scheda]').forEach((tab) => tab.addEventListener('click', () => {
+      const i = tab.dataset.scheda;
+      document.querySelectorAll('[data-scheda]').forEach((t) => t.setAttribute('aria-selected', String(t === tab)));
+      document.querySelectorAll<HTMLElement>('[data-pannello]').forEach((p) => p.classList.toggle('hidden', p.dataset.pannello !== i));
+      document.querySelector<HTMLButtonElement>(`[data-pannello="${i}"] [data-chip="motivo"]`)?.click();
+    }));
+  </script>
+</Base>

@@ -2,6 +2,7 @@
 import HomeMedico from '../../layouts/HomeMedico.astro';
 import HomeClinica from '../../layouts/HomeClinica.astro';
 import HomeLaterale from '../../layouts/HomeLaterale.astro';
+import HomeStudio from '../../layouts/HomeStudio.astro';
 import { medici, type Medico } from '../../lib/medici';
 
 export function getStaticPaths() {
@@ -9,4 +10,4 @@ export function getStaticPaths() {
 }
 const { m } = Astro.props as { m: Medico };
 ---
-{(m as any).layout === 'clinica' ? <HomeClinica m={m} /> : (m as any).layout === 'laterale' ? <HomeLaterale m={m} /> : <HomeMedico m={m} />}
+{(m as any).layout === 'clinica' ? <HomeClinica m={m} /> : (m as any).layout === 'laterale' ? <HomeLaterale m={m} /> : (m as any).layout === 'studio' ? <HomeStudio m={m} /> : <HomeMedico m={m} />}

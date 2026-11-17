@@ -90,6 +90,13 @@ html { scroll-behavior: smooth; }
   .tessera[aria-pressed="true"] { border-color: var(--c-brand); background: color-mix(in srgb, var(--c-brand) 7%, white); color: var(--c-brand); box-shadow: inset 0 0 0 1px var(--c-brand); }
 }
 
+/* Layout "studio": schede della prenotazione */
+@layer components {
+  .scheda[aria-selected="true"] { border-color: var(--c-brand2); color: var(--c-ink); }
+  .stile-studio .card { border-radius: 0; box-shadow: none; border: 1px solid var(--c-line); }
+  .stile-studio .campo, .stile-studio .btn, .stile-studio .slot, .stile-studio .giorno { border-radius: 0; }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }
