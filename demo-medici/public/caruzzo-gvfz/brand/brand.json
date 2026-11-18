@@ -1,0 +1,47 @@
+{
+  "sito": "https://www.cardiologocaruzzo.it/",
+  "estratto_il": "2026-11-18",
+  "piattaforma": "Italiaonline / PagineGialle (Duda), testi in terza persona, slider con 'Slide title / Write your caption here' dimenticati in pagina",
+  "trello": "Prospect medici · Dott. Enrico Caruzzo – Cardiologia e aritmologia · A·8",
+  "logo": {
+    "trovato": true,
+    "file": "logo.jpg",
+    "nota": "803×309, cuore blu a nastro + 'DOTTOR CARUZZO ENRICO Cardiologo'. Marchio (solo cuore) ricavato per favicon e avatar."
+  },
+  "foto": {
+    "tenute": [
+      "foto-01-sala-elettrofisiologia.jpg (1476×1225, durante un impianto: hero e fascia sala)",
+      "foto-02/03/04 alla scrivania",
+      "foto-05/06/07 studio con poltrone rosse e sala d'attesa",
+      "foto-08-padre-figlio-congresso.jpg (con il figlio Carloalberto)"
+    ],
+    "scartate": [
+      "Illustrazioni Getty del cuore",
+      "cuore di peluche con stetoscopio",
+      "foto del figlio (selfie, badge, face shield): non pertinenti alla home"
+    ],
+    "repertorio": "Dal suo sito: monitor ECG (articolo), stetoscopio su tracciato, ascolto con stetoscopio (post)."
+  },
+  "colori": {
+    "sito": [
+      "#0066A8"
+    ],
+    "scelti": "blu #0066A8 (logo), rosso cuore #E2263B (dalle poltrone e dal cuore), blu notte #071A2E"
+  },
+  "font": {
+    "sito": [
+      "Muli (Mulish)",
+      "Source Sans Pro"
+    ],
+    "scelti": "Mulish (titoli, pesi forti) + Source Sans 3"
+  },
+  "recensioni": "Nessuna (MioDottore: 0). Sezione recensioni omessa; al suo posto la storia dello studio (1960, tre generazioni).",
+  "dati": {
+    "studio": "Via Pietro Giuria 29/bis, 10126 Torino · 011 650 2000 · enrico.caruzzo@clinicacellini.it · mar-mer-gio 13:00-18:30",
+    "incarichi": "Resp. Cardiostimolazione Humanitas Cellini dal 2006; resp. Cardiologia Clinica Fornaca dal 2016; comitato scientifico Fornaca dal 2025; vicepresidente piemontese A.R.C.A.; CTU Tribunale di Torino",
+    "numeri": "circa 2000 pacemaker, 300 studi EF con ablazione, 300 defibrillatori (suo sito; Fornaca riporta cifre diverse: usate quelle del suo sito), circa 80 pubblicazioni",
+    "formazione": "laurea 1989, specializzazione 1993, EF a Londra (St George), Napoli (Pappone), Asti (Gaita)",
+    "storia": "studio aperto nel 1960 dal padre prof. Carlo Caruzzo (1925-2019); dal 2021 collabora il figlio Carloalberto",
+    "video": "Martedì Salute 02/10/2018 fibrillazione atriale (YouTube qncSs24VW0U)"
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "slug": "caruzzo-gvfz",
+  "layout": "battito",
+  "sitoOrigine": "https://www.cardiologocaruzzo.it/",
+  "titolo": "Dott.",
+  "nome": "Enrico Caruzzo",
+  "specialita": "Specialista in Cardiologia",
+  "firma": "Cardiologo e aritmologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Enrico Caruzzo · Cardiologo e aritmologo a Torino",
+    "description": "Sono cardiologo e aritmologo a Torino: visite, ECG, Holter, controllo di pacemaker e defibrillatori, aritmie e fibrillazione atriale. Studio in via Giuria 29 bis, dal 1960."
+  },
+  "brand": {
+    "header": "logo",
+    "logoScuro": "/caruzzo-gvfz/img/logo.webp",
+    "logoChiaro": "/caruzzo-gvfz/img/logo.webp",
+    "marchio": "/caruzzo-gvfz/img/marchio.png",
+    "logoAlt": "Dottor Caruzzo Enrico, cardiologo"
+  },
+  "foto": {
+    "ritratto": "/caruzzo-gvfz/img/hero.webp",
+    "ritrattoAlt": "Il Dott. Enrico Caruzzo in sala di elettrofisiologia",
+    "volto": "/caruzzo-gvfz/img/volto.webp",
+    "postRitratto": "/caruzzo-gvfz/img/scrivania.webp",
+    "sala": "/caruzzo-gvfz/img/sala-larga.webp",
+    "scrivania": "/caruzzo-gvfz/img/scrivania.webp",
+    "ascolto": "/caruzzo-gvfz/img/rep-ascolto.webp"
+  },
+  "hero": {
+    "eyebrow": "Cardiologo e aritmologo · Torino",
+    "titolo": "Cardiologia e aritmologia",
+    "testo": "Dal 2006 dirigo il Servizio di Cardiostimolazione di Humanitas Cellini e dal 2016 il Servizio di Cardiologia della Clinica Fornaca. Nel mio studio di via Giuria ricevo dal martedì al giovedì.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti una visita",
+      "motivi": [
+        "Palpitazioni",
+        "Fibrillazione atriale",
+        "Pressione alta",
+        "Controllo pacemaker",
+        "Holter ed ECG",
+        "Prevenzione",
+        "Dolore al petto",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "delle palpitazioni",
+        "una fibrillazione atriale",
+        "la pressione alta",
+        "il controllo del pacemaker o del defibrillatore",
+        "un Holter o un elettrocardiogramma",
+        "una visita di prevenzione cardiovascolare",
+        "un dolore al petto",
+        "un altro disturbo cardiologico"
+      ],
+      "giorni": [
+        "Martedì",
+        "Mercoledì",
+        "Giovedì"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Sede"
+    }
+  },
+  "numeri": [
+    {
+      "valore": 2000,
+      "prefisso": "circa ",
+      "testo": "impianti di pacemaker come primo operatore"
+    },
+    {
+      "valore": 300,
+      "prefisso": "",
+      "testo": "studi elettrofisiologici con ablazione transcatetere"
+    },
+    {
+      "valore": 300,
+      "prefisso": "",
+      "testo": "impianti di defibrillatore"
+    },
+    {
+      "valore": 80,
+      "prefisso": "circa ",
+      "testo": "pubblicazioni scientifiche"
+    }
+  ],
+  "storia": {
+    "titolo": "Tre generazioni, uno studio",
+    "scene": [
+      {
+        "anno": 1960,
+        "titolo": "Lo studio apre",
+        "testo": "Mio padre, il professor Carlo Caruzzo (1925-2019), già professore alla facoltà di Medicina dell'Università di Torino, inaugura lo studio.",
+        "img": "/caruzzo-gvfz/img/attesa.webp"
+      },
+      {
+        "anno": 1993,
+        "titolo": "La cardiologia, poi l'elettrofisiologia",
+        "testo": "Mi laureo a Torino nel 1989 e mi specializzo in Cardiologia nel 1993. Mi formo in elettrofisiologia al St. George Hospital di Londra, a Napoli e ad Asti; oggi sono il titolare dello studio.",
+        "img": "/caruzzo-gvfz/img/scrivania.webp"
+      },
+      {
+        "anno": 2021,
+        "titolo": "La terza generazione",
+        "testo": "Mio figlio, il dottor Carloalberto Caruzzo, si laurea e inizia a collaborare con lo studio. Oggi si sta specializzando in cardiologia all'Istituto Cardiocentro Ticino di Lugano.",
+        "img": "/caruzzo-gvfz/img/congresso.webp"
+      }
+    ]
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "Visite cardiologiche e aritmologiche per pazienti di tutte le età, anche solo per prevenzione.",
+    "voci": [
+      {
+        "titolo": "Visita cardiologica",
+        "testo": "Visite specialistiche e di controllo, con elettrocardiogramma.",
+        "icona": "cuore"
+      },
+      {
+        "titolo": "Aritmie",
+        "testo": "Palpitazioni, battiti irregolari, tachicardie e bradicardie: diagnosi e cura.",
+        "icona": "lente"
+      },
+      {
+        "titolo": "Fibrillazione atriale",
+        "testo": "L'aritmia più frequente: va riconosciuta, anche quando non dà sintomi.",
+        "icona": "medaglia"
+      },
+      {
+        "titolo": "Pacemaker e defibrillatori",
+        "testo": "Programmazione e controlli telemetrici, per verificare che funzionino bene.",
+        "icona": "scudo"
+      },
+      {
+        "titolo": "Holter",
+        "testo": "Monitoraggio del ritmo cardiaco nelle 24-48 ore, durante la vita di tutti i giorni.",
+        "icona": "calendario"
+      },
+      {
+        "titolo": "Ipertensione e prevenzione",
+        "testo": "Pressione alta, ischemia, fattori di rischio: consigli e terapie per proteggere il cuore.",
+        "icona": "goccia"
+      }
+    ]
+  },
+  "sintomi": {
+    "titolo": "Aritmia: i segnali",
+    "voci": [
+      "Palpitazioni o battito irregolare",
+      "La sensazione che il cuore «salti un battito»",
+      "Vertigini o capogiri",
+      "Stanchezza insolita",
+      "Fiato corto",
+      "Svenimenti"
+    ]
+  },
+  "video": {
+    "titolo": "Fibrillazione atriale",
+    "fonte": "Martedì Salute, 2 ottobre 2018",
+    "testo": "In TV ho spiegato come la fibrillazione atriale cambia con l'età e cos'è la forma silente, che non dà sintomi.",
+    "url": "https://www.youtube.com/watch?v=qncSs24VW0U",
+    "img": "https://i.ytimg.com/vi/qncSs24VW0U/hqdefault.jpg"
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Sono medico chirurgo, specialista in cardiologia e aritmologia. Ho lavorato all'Ospedale Maggiore di Chieri e, dal 1993 al 2005, alla Cardiologia dell'Ospedale Mauriziano di Torino, dove sono stato corresponsabile del Laboratorio di Elettrofisiologia e Pacemaker.",
+      "Nel 2006 ho diretto il Servizio di Elettrofisiologia e Cardiostimolazione della clinica Villa Maria Pia. Sono vicepresidente piemontese dell'Associazione Regionale Cardiologi Ambulatoriali (A.R.C.A.) e consulente tecnico del Tribunale di Torino in perizie cardiologiche. Nella primavera 2020 ho prestato assistenza volontaria nel reparto COVID di Humanitas Cellini."
+    ],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "categoria": "Aritmie",
+    "titolo": "Fibrillazione atriale: sintomi, rischi e cure",
+    "img": "/caruzzo-gvfz/img/rep-ecg.webp",
+    "intro": "È l'aritmia più frequente e spesso non dà disturbi evidenti. Eppure riconoscerla è importante, soprattutto per prevenire l'ictus. Ecco cos'è, come si scopre e come si cura oggi.",
+    "tempoLettura": "6 min",
+    "sezioni": [
+      {
+        "titolo": "Che cos'è",
+        "paragrafi": [
+          "Normalmente il cuore batte con un ritmo regolare, comandato da un piccolo «pacemaker naturale» che si trova negli atri, le cavità superiori del cuore. Nella fibrillazione atriale gli atri ricevono impulsi elettrici disordinati e velocissimi: invece di contrarsi, «tremano».",
+          "Il risultato è un battito irregolare, spesso accelerato. La fibrillazione atriale è l'aritmia più diffusa e diventa più frequente con l'età: riguarda una piccola parte degli adulti, ma una quota molto più alta delle persone oltre i 70-80 anni."
+        ]
+      },
+      {
+        "titolo": "I sintomi",
+        "paragrafi": [
+          "I disturbi variano molto da persona a persona. I più comuni sono:"
+        ],
+        "elenco": [
+          "palpitazioni, cioè la sensazione di un battito veloce o irregolare;",
+          "stanchezza e minore resistenza allo sforzo;",
+          "fiato corto;",
+          "capogiri o sensazione di testa vuota;",
+          "a volte un senso di oppressione al petto."
+        ],
+        "chiusura": "Molte persone, però, non avvertono nulla: si parla di fibrillazione atriale silente, che spesso viene scoperta per caso durante un controllo o un elettrocardiogramma."
+      },
+      {
+        "titolo": "Le forme della fibrillazione atriale",
+        "paragrafi": [
+          "Si distinguono forme diverse in base alla durata. La fibrillazione parossistica compare all'improvviso e si risolve da sola, in genere entro pochi giorni. Quella persistente dura più a lungo e spesso richiede un intervento per riportare il ritmo normale. Nella forma permanente, invece, si decide insieme di non tentare più di ripristinare il ritmo e di controllare la frequenza. Riconoscere la forma aiuta a scegliere la cura più adatta."
+        ]
+      },
+      {
+        "titolo": "Perché è importante riconoscerla",
+        "paragrafi": [
+          "Quando gli atri non si contraggono bene, il sangue al loro interno rallenta e possono formarsi dei piccoli coaguli. Se un coagulo si stacca e raggiunge il cervello, può causare un ictus. Per questo la fibrillazione atriale va riconosciuta e valutata anche quando non dà fastidio.",
+          "Nel tempo, un battito irregolare e troppo veloce può anche affaticare il cuore e ridurre la sua capacità di pompare."
+        ]
+      },
+      {
+        "titolo": "Le cause e i fattori di rischio",
+        "paragrafi": [
+          "La fibrillazione atriale è più probabile in presenza di:"
+        ],
+        "elenco": [
+          "età avanzata;",
+          "pressione alta, la causa più comune;",
+          "malattie delle valvole o del muscolo cardiaco, cardiopatia ischemica;",
+          "diabete, obesità, apnee notturne;",
+          "malattie della tiroide;",
+          "consumo eccessivo di alcol."
+        ]
+      },
+      {
+        "titolo": "Come si arriva alla diagnosi",
+        "paragrafi": [
+          "Lo strumento principale è l'elettrocardiogramma, che registra l'attività elettrica del cuore. Se l'aritmia va e viene, si usa l'Holter, un piccolo registratore che si porta per 24-48 ore o più durante la vita di tutti i giorni.",
+          "L'ecocardiogramma serve a valutare la struttura del cuore e delle valvole; gli esami del sangue aiutano a cercare cause come i problemi della tiroide. Con questi elementi si stima anche il rischio di ictus di quella persona."
+        ]
+      },
+      {
+        "titolo": "Le cure",
+        "paragrafi": [
+          "Le cure hanno due obiettivi. Il primo è prevenire l'ictus: in molti pazienti, in base al rischio calcolato, si prescrivono farmaci anticoagulanti. Il secondo è controllare il ritmo o la frequenza del cuore, con farmaci dedicati.",
+          "In alcuni casi si riporta il cuore al ritmo normale con la cardioversione, elettrica o farmacologica. Quando l'aritmia si ripresenta spesso o dà molti disturbi, si può valutare l'ablazione transcatetere, una procedura che isola le zone del cuore da cui partono gli impulsi anomali. Se il cuore tende a rallentare troppo, può essere indicato un pacemaker."
+        ]
+      },
+      {
+        "titolo": "L'ablazione transcatetere, in pratica",
+        "paragrafi": [
+          "L'ablazione si esegue in una sala di elettrofisiologia, in genere in sedazione. Attraverso una vena dell'inguine si portano fino al cuore dei sottili cateteri, che prima registrano l'attività elettrica e poi trattano, con il calore o con il freddo, le zone da cui partono gli impulsi anomali.",
+          "Non è indicata per tutti: la scelta dipende dal tipo di fibrillazione atriale, da quanto disturba, dall'età e dalle altre malattie. Va discussa con l'aritmologo, valutando benefici e possibili complicanze."
+        ]
+      },
+      {
+        "titolo": "Vivere con la fibrillazione atriale",
+        "paragrafi": [
+          "Con le cure giuste, la maggior parte delle persone con fibrillazione atriale conduce una vita normale: lavora, viaggia, fa attività fisica adatta alla propria condizione. Sono importanti i controlli periodici, per verificare che la terapia funzioni e adattarla nel tempo.",
+          "È utile imparare a misurare il polso e annotare gli episodi di palpitazioni, con data, durata e cosa si stava facendo: sono informazioni preziose per il cardiologo."
+        ]
+      },
+      {
+        "titolo": "Cosa può fare Lei",
+        "paragrafi": [
+          "Alcune abitudini riducono il rischio e aiutano a tenere sotto controllo l'aritmia:"
+        ],
+        "elenco": [
+          "controllare la pressione arteriosa e seguire le terapie prescritte;",
+          "mantenere un peso adeguato e fare attività fisica regolare;",
+          "limitare l'alcol;",
+          "curare le apnee notturne, se presenti;",
+          "non sospendere mai gli anticoagulanti di Sua iniziativa."
+        ]
+      },
+      {
+        "titolo": "Quando farsi visitare",
+        "paragrafi": [
+          "È utile una visita cardiologica se avverte palpitazioni, battiti irregolari, affanno o stanchezza insoliti, soprattutto se ha più di 65 anni o la pressione alta. Anche un semplice controllo del polso può far nascere il sospetto: un battito irregolare va sempre approfondito.",
+          "Se invece compaiono dolore al petto, svenimento, difficoltà a parlare o debolezza di un braccio o di una gamba, chiami subito il 112."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo cardiologo."
+  },
+  "instagram": {
+    "handle": "dott.enricocaruzzo",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "domanda",
+        "titolo": "Palpitazioni: quando preoccuparsi?",
+        "risposta": "Se sono frequenti o con capogiri.",
+        "didascalia": "Avvertire ogni tanto il cuore che batte forte è comune. Vanno valutate se si ripetono, durano a lungo o si accompagnano a capogiri, fiato corto o svenimenti.",
+        "hashtag": "#palpitazioni #cardiologo #torino"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Pressione alta senza sintomi",
+        "punti": [
+          "Spesso non dà disturbi",
+          "Affatica cuore e vasi",
+          "Va misurata regolarmente",
+          "Si cura, anche con lo stile di vita"
+        ],
+        "didascalia": "L'ipertensione è chiamata «killer silenzioso» perché per anni non dà segni. Misurarla è il primo passo della prevenzione cardiovascolare.",
+        "hashtag": "#ipertensione #prevenzione #cuore"
+      },
+      {
+        "stile": "foto",
+        "immagine": "ascolto",
+        "titolo": "Fibrillazione atriale: cos'è",
+        "sottotitolo": "L'aritmia più frequente",
+        "didascalia": "Il battito diventa irregolare e spesso veloce. Può non dare sintomi, ma aumenta il rischio di ictus: per questo va riconosciuta e curata.",
+        "hashtag": "#fibrillazioneatriale #aritmia #cardiologia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "enrico.caruzzo@clinicacellini.it",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio medico Caruzzo",
+        "indirizzo": "Via Pietro Giuria 29/bis",
+        "citta": "Torino",
+        "cap": "10126",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di via Pietro Giuria 29/bis, Torino",
+        "telefoni": [
+          {
+            "label": "Studio",
+            "numero": "011 650 2000"
+          }
+        ],
+        "orari": [
+          [
+            "Martedì",
+            "13:00 – 18:30"
+          ],
+          [
+            "Mercoledì",
+            "13:00 – 18:30"
+          ],
+          [
+            "Giovedì",
+            "13:00 – 18:30"
+          ]
+        ]
+      }
+    ],
+    "struttureLabel": "Dove opero",
+    "strutture": [
+      {
+        "nome": "Humanitas Cellini",
+        "indirizzo": "Via Benvenuto Cellini 5",
+        "citta": "Torino",
+        "testo": "Responsabile del Servizio di Cardiostimolazione dal 2006."
+      },
+      {
+        "nome": "Clinica Fornaca",
+        "indirizzo": "Corso Vittorio Emanuele II 91",
+        "citta": "Torino",
+        "testo": "Responsabile del Servizio di Cardiologia dal 2016; dal 2025 nel comitato scientifico."
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Chiami lo studio oppure scelga giorno e orario online: Le confermiamo l'appuntamento per telefono.",
+    "telefono": "0116502000",
+    "telefonoLabel": "011 650 2000",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "emailRichieste": "enrico.caruzzo@clinicacellini.it",
+    "oggettoMail": "Richiesta di visita cardiologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Lo studio è aperto il martedì, il mercoledì e il giovedì pomeriggio. Indichi quando preferisce venire: La ricontatteremo per confermare.",
+      "giorni": [
+        2,
+        3,
+        4
+      ],
+      "mattina": [],
+      "pomeriggio": [
+        "13:00",
+        "13:30",
+        "14:00",
+        "14:30",
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00"
+      ],
+      "settimane": 8,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate per telefono.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": null,
+      "privacyTesto": "Questo modulo non salva i Suoi dati: prepara soltanto un messaggio nella Sua app di posta, che decide Lei se inviare. I dati indicati servono unicamente a rispondere alla richiesta di appuntamento.",
+      "notePlaceholder": "Per esempio i sintomi e da quando li avverte"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F2F6FA",
+      "ink": "#0E1B2A",
+      "muted": "#566476",
+      "line": "#DCE4ED",
+      "brand": "#0066A8",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#E2263B",
+      "deep": "#071A2E",
+      "deep-ink": "#DCE7F2"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;800;900&family=Source+Sans+3:wght@400;500;600&display=swap",
+    "fontTitoli": "Mulish",
+    "fontTesti": "Source Sans 3",
+    "favicon": "/caruzzo-gvfz/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/caruzzo-gvfz/brand/brand.json",
+    "pagine": [
+      "https://www.cardiologocaruzzo.it/",
+      "https://www.cardiologocaruzzo.it/dott-enrico-caruzzo",
+      "https://www.cardiologocaruzzo.it/prestazioni",
+      "https://www.cardiologocaruzzo.it/aritmia-cardiaca",
+      "https://www.cardiologocaruzzo.it/dott-carlo-alberto-caruzzo"
+    ]
+  }
+}

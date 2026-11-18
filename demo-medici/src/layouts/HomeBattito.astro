@@ -1,0 +1,401 @@
+---
+// Layout "battito" (prima demo: Enrico Caruzzo, cardiologo). Il più dinamico finora (richiesta di Meme: "ancora più dinamico e wow").
+// Tema: il ritmo del cuore. Intro con tracciato ECG che si disegna e apre la pagina, scroll fluido (Lenis), barra di avanzamento
+// a forma di ECG, hero scura con nome lettera per lettera e foto vera in sala che reagisce al mouse, prenotazione nella hero
+// (motivo + giorno di apertura), contatori, storia di tre generazioni bloccata con l'anno che scorre, schede che si inclinano
+// col mouse, sala di elettrofisiologia che si apre a tutto schermo, galleria dello studio che si inclina con la velocità dello scroll,
+// pulsanti magnetici. Con prefers-reduced-motion: niente intro, niente scroll fluido, tutto fermo e visibile.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = x.hero.box;
+const luogo = (m.sedi.luoghi as any[])[0];
+const email = emailRichieste(m);
+const testo = (mo: string, g: string) => `Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${luogo.frase}. Preferirei di ${g.toLowerCase()}.`;
+const href0 = `mailto:${email}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(testo(box.motiviFrase[0], box.giorni[0]))}`;
+const scene = x.storia.scene as any[];
+const ig = m.instagram;
+const lettere = (s: string) => [...s].map((c) => (c === ' ' ? ' ' : c));
+// un battito ECG ripetuto (coordinate in unità di 100 di larghezza)
+const battito = (x0: number) => `L${x0 + 30},50 L${x0 + 36},44 L${x0 + 42},50 L${x0 + 46},50 L${x0 + 50},62 L${x0 + 55},12 L${x0 + 60},74 L${x0 + 64},50 L${x0 + 74},50 L${x0 + 82},40 L${x0 + 90},50 L${x0 + 100},50`;
+const ecg = (n: number) => 'M0,50 ' + Array.from({ length: n }, (_, i) => battito(i * 100)).join(' ');
+const galleria = [foto.scrivania, `/${m.slug}/img/studio.webp`, `/${m.slug}/img/attesa.webp`, `/${m.slug}/img/computer.webp`, `/${m.slug}/img/studio-verticale.webp`, `/${m.slug}/img/scrivania-largo.webp`];
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <!-- INTRO: il tracciato si disegna, poi la pagina si apre -->
+  <div class="intro pointer-events-none fixed inset-0 z-[60] grid place-items-center bg-deep" data-intro aria-hidden="true">
+    <svg viewBox="0 0 300 100" class="w-[min(80vw,720px)]" fill="none"><path d={ecg(3)} stroke="#E2263B" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" pathLength="1" data-intro-linea /></svg>
+  </div>
+
+  <header class="sticky z-40 border-b border-line bg-white/90 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-8">
+      <a href={`/${m.slug}`} class="block shrink-0"><img src={m.brand.logoScuro} alt={m.brand.logoAlt} width="803" height="309" class="h-11 w-auto sm:h-12" /></a>
+      <nav class="hidden items-center gap-7 font-head text-[14px] font-semibold text-ink/70 lg:flex">
+        <a href="#storia" class="hover:text-brand">Lo studio</a><a href="#aree" class="hover:text-brand">Di cosa mi occupo</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#articoli" class="hover:text-brand">Articoli</a><a href="#sedi" class="hover:text-brand">Contatti</a>
+      </nav>
+      <a href={telHref(m.prenota.telefono)} class="btn !min-h-[42px] !rounded-full bg-brand2 !px-5 text-sm text-white hover:opacity-90" data-magnete><Icona nome="tel" class="h-4 w-4" /> <span class="hidden sm:inline">{m.prenota.telefonoLabel}</span><span class="sm:hidden">Chiami</span></a>
+    </div>
+    <!-- avanzamento della pagina: un ECG che si disegna -->
+    <svg viewBox="0 0 1200 100" preserveAspectRatio="none" class="absolute inset-x-0 -bottom-[7px] h-3.5 w-full" fill="none" aria-hidden="true"><path d={ecg(12)} stroke="#E2263B" stroke-width="2" vector-effect="non-scaling-stroke" pathLength="1" class="avanzamento" data-avanzamento /></svg>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section data-hero-section class="relative overflow-hidden bg-deep text-white">
+      <svg viewBox="0 0 1200 100" preserveAspectRatio="none" class="ecg-vivo pointer-events-none absolute inset-x-0 bottom-24 h-28 w-[200%] opacity-30" fill="none" aria-hidden="true"><path d={ecg(24)} stroke="#E2263B" stroke-width="1.5" vector-effect="non-scaling-stroke" /></svg>
+      <div class="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 pt-10 sm:px-8 lg:grid-cols-12 lg:items-center lg:pb-24 lg:pt-14">
+        <div class="lg:col-span-7">
+          <p class="flex items-center gap-3 font-head text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2"><span class="cuore-pulsa h-2.5 w-2.5 rounded-full bg-brand2"></span>{x.hero.eyebrow}</p>
+          <h1 class="mt-5 font-head font-black leading-[0.95] tracking-tight" aria-label={nomeCompleto(m)}>
+            <span class="block text-[1.1rem] font-semibold tracking-normal text-deep-ink/70" aria-hidden="true">{m.titolo}</span>
+            <span class="block overflow-hidden text-[3.2rem] sm:text-[5.6rem]" aria-hidden="true">{lettere('Enrico').map((c) => <span class="lettera inline-block">{c}</span>)}</span>
+            <span class="block overflow-hidden text-[3.2rem] text-brand sm:text-[5.6rem]" aria-hidden="true" style="color:#5BB0EA">{lettere('Caruzzo').map((c) => <span class="lettera inline-block">{c}</span>)}</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-[17px] leading-relaxed text-deep-ink/80" data-entra>{x.hero.testo}</p>
+
+          <div class="mt-8 rounded-3xl bg-white p-5 text-ink shadow-2xl sm:p-6" data-prenota-box data-email={email} data-oggetto={m.prenota.oggettoMail} data-sede={luogo.frase} data-entra>
+            <p class="font-head text-lg font-extrabold">{box.titolo}</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              {box.motivi.map((t: string, i: number) => <button type="button" class="chip" data-chip="motivo" data-frase={box.motiviFrase[i]} aria-pressed={i === 0 ? 'true' : 'false'}>{t}</button>)}
+            </div>
+            <p class="mt-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-muted">Giorno preferito · lo studio è aperto 13:00–18:30</p>
+            <div class="mt-2 grid grid-cols-3 gap-2">
+              {box.giorni.map((g: string, i: number) => <button type="button" class="giorno-scelta rounded-2xl border border-line px-3 py-2.5 text-[15px] font-semibold" data-chip="giorno" data-frase={g} aria-pressed={i === 0 ? 'true' : 'false'}>{g}</button>)}
+            </div>
+            <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a href={href0} data-prenota class="btn btn-primary !rounded-full" data-magnete><Icona nome="mail" /> Invii la richiesta</a>
+              <a href={telHref(m.prenota.telefono)} class="text-[14px] text-muted hover:text-brand">o chiami {m.prenota.telefonoLabel}</a>
+            </div>
+          </div>
+        </div>
+        <div class="relative order-first lg:order-none lg:col-span-5">
+          <div class="relative mx-auto aspect-[4/3] w-full max-w-[460px] overflow-hidden rounded-[2rem] sm:aspect-[4/5]" data-hero-foto>
+            <img src={foto.ritratto} alt={foto.ritrattoAlt} width="1000" height="1250" class="h-full w-full scale-110 object-cover object-[50%_25%]" data-hero-img />
+          </div>
+          <div class="absolute -bottom-5 left-2 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-ink shadow-xl sm:left-6" data-galleggia>
+            <span class="cuore-pulsa grid h-10 w-10 place-items-center rounded-full bg-brand2/10 text-brand2"><Icona nome="cuore" class="h-5 w-5" /></span>
+            <span class="leading-tight"><span class="block font-head text-xl font-black">1960</span><span class="text-[13px] text-muted">lo studio di famiglia</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUMERI -->
+    <section class="px-4 py-16 sm:px-8 sm:py-20">
+      <div class="mx-auto max-w-7xl">
+        <p class="font-head text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">Come primo operatore</p>
+        <div class="mt-6 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
+          {x.numeri.map((n: any) => (
+            <div>
+              <p class="font-head text-[0.95rem] font-semibold text-muted">{n.prefisso || ' '}</p>
+              <p class="numero font-head text-[3.2rem] font-black leading-none text-ink sm:text-[4.4rem]" data-conta={n.valore}>{n.valore.toLocaleString('it-IT')}</p>
+              <p class="mt-3 max-w-[16rem] text-[15px] leading-snug text-muted">{n.testo}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- STORIA: tre generazioni, bloccata con l'anno che scorre -->
+    <section id="storia" class="bg-surface" data-storia>
+      <div class="mx-auto grid min-h-[100svh] max-w-7xl items-center gap-10 px-4 py-16 sm:px-8 lg:grid-cols-12 lg:py-0">
+        <div class="lg:col-span-5">
+          <h2 class="font-head text-[2.2rem] font-black leading-tight sm:text-[2.8rem]">{x.storia.titolo}</h2>
+          <p class="anno mt-4 hidden font-head text-[8rem] font-black leading-none text-brand lg:block" data-anno>{scene[0].anno}</p>
+          <div class="mt-6 lg:relative lg:min-h-[12rem]">
+            {scene.map((s, i) => (
+              <div class={`scena-testo ${i ? 'lg:absolute lg:inset-0' : ''} mb-10 lg:mb-0`} data-scena-testo={i}>
+                <p class="font-head text-3xl font-black text-brand lg:hidden">{s.anno}</p>
+                <h3 class="font-head text-2xl font-extrabold">{s.titolo}</h3>
+                <p class="mt-2 max-w-md text-[16px] leading-relaxed text-ink/80">{s.testo}</p>
+                <img src={s.img} alt="" width="900" height="1200" loading="lazy" class="mt-5 aspect-[4/3] w-full rounded-3xl object-cover lg:hidden" />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="relative hidden aspect-[4/5] max-h-[78vh] w-full overflow-hidden rounded-[2rem] lg:col-span-6 lg:col-start-7 lg:block">
+          {scene.map((s, i) => <img src={s.img} alt="" width="900" height="1200" loading="lazy" class="scena-img absolute inset-0 h-full w-full object-cover" data-scena-img={i} />)}
+          <div class="absolute bottom-5 left-5 flex gap-2" aria-hidden="true">{scene.map((_, i) => <span class="tacca h-1.5 w-10 rounded-full bg-white/40" data-tacca={i}></span>)}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DI COSA MI OCCUPO: schede che si inclinano -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <h2 class="font-head text-[2.2rem] font-black leading-tight sm:text-[2.8rem] lg:col-span-6" data-reveal>{m.aree.titolo}</h2>
+          <p class="text-[17px] text-muted lg:col-span-5 lg:col-start-8" data-reveal>{m.aree.intro}</p>
+        </div>
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" style="perspective: 1000px" data-stagger>
+          {x.aree.voci.map((v: any) => (
+            <article class="scheda-tilt group rounded-3xl border border-line bg-white p-7 transition-[border-color,box-shadow] hover:border-brand hover:shadow-xl" data-tilt>
+              <span class="grid h-12 w-12 place-items-center rounded-2xl bg-brand/10 text-brand transition-[background-color,color] group-hover:bg-brand group-hover:text-white"><Icona nome={v.icona} class="h-6 w-6" /></span>
+              <h3 class="mt-5 font-head text-xl font-extrabold">{v.titolo}</h3>
+              <p class="mt-2 text-[15px] leading-relaxed text-muted">{v.testo}</p>
+            </article>
+          ))}
+        </div>
+        <div class="mt-12 grid gap-8 rounded-3xl bg-deep p-7 text-white sm:p-10 lg:grid-cols-12 lg:items-center">
+          <h3 class="font-head text-2xl font-black lg:col-span-4">{x.sintomi.titolo}</h3>
+          <ul class="grid gap-x-8 gap-y-3 sm:grid-cols-2 lg:col-span-8" data-sintomi>
+            {x.sintomi.voci.map((s: string) => <li class="flex items-center gap-3 text-[16px]"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0" fill="none" stroke="#E2263B" stroke-width="3" aria-hidden="true"><path d="M5 12l5 5L19 7" pathLength="1" class="spunta" /></svg>{s}</li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SALA: si apre a tutto schermo -->
+    <section class="relative px-4 sm:px-8" data-sala>
+      <div class="relative mx-auto h-[70svh] max-w-[100rem] overflow-hidden rounded-[2rem] sm:h-[86svh]" data-sala-cornice>
+        <img src={foto.sala} alt="Il Dott. Caruzzo durante un impianto di pacemaker" width="1476" height="830" loading="lazy" class="absolute inset-0 h-full w-full scale-125 object-cover" data-sala-img />
+        <div class="absolute inset-0 bg-deep/45"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 text-white sm:p-12">
+          <p class="font-head text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2">Cardiostimolazione</p>
+          <p class="mt-3 max-w-3xl font-head text-[1.9rem] font-black leading-tight sm:text-[3.4rem]" data-sala-testo>Pacemaker e defibrillatori: dall'impianto ai controlli nel tempo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO + VIDEO -->
+    <section id="chi-sono" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-6">
+          <div class="flex items-center gap-5">
+            <img src={foto.volto} alt="" width="320" height="320" loading="lazy" class="h-20 w-20 rounded-full object-cover ring-4 ring-brand/15" />
+            <h2 class="font-head text-[2.2rem] font-black sm:text-[2.8rem]" data-reveal>{m.bio.titolo}</h2>
+          </div>
+          <div class="mt-6 space-y-4 text-[17px] leading-relaxed text-ink/85" data-reveal>{m.bio.paragrafi.map((p: string) => <p>{p}</p>)}</div>
+        </div>
+        <div class="lg:col-span-6">
+          <a href={x.video.url} target="_blank" rel="noopener" class="group block overflow-hidden rounded-3xl bg-deep text-white" data-video data-reveal>
+            <span class="relative block"><img src={x.video.img} alt="" width="480" height="360" loading="lazy" class="aspect-video w-full object-cover opacity-80 transition-[opacity,scale] duration-500 group-hover:scale-105 group-hover:opacity-100" /><span class="absolute inset-0 grid place-items-center"><span class="cuore-pulsa grid h-16 w-16 place-items-center rounded-full bg-brand2 text-white"><svg viewBox="0 0 24 24" class="h-8 w-8" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></span></span></span>
+            <span class="block p-6"><span class="text-[12px] font-semibold uppercase tracking-[0.16em] text-brand2">In TV · {x.video.fonte}</span><span class="mt-1 block font-head text-xl font-extrabold">{x.video.titolo}</span><span class="mt-1 block text-[15px] text-deep-ink/75">{x.video.testo}</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LO STUDIO: galleria che si inclina con lo scroll -->
+    <section class="overflow-hidden bg-surface py-16 sm:py-20" data-galleria>
+      <div class="mx-auto max-w-7xl px-4 sm:px-8"><h2 class="font-head text-[2.2rem] font-black sm:text-[2.8rem]" data-reveal>Lo studio di via Giuria</h2></div>
+      <div class="mt-10 flex w-max gap-5 px-4 sm:px-8" data-galleria-pista>
+        {galleria.map((g) => <img src={g} alt="" width="900" height="700" loading="lazy" class="galleria-img h-[38vh] w-auto rounded-3xl object-cover sm:h-[52vh]" />)}
+      </div>
+    </section>
+
+    <div class="stile-battito"><PrenotaCalendario m={m} /></div>
+
+    <!-- ARTICOLO + INSTAGRAM -->
+    <section id="articoli" class="bg-deep px-4 py-16 text-white sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <a href={`/${m.slug}/articolo`} class="group grid items-center gap-8 md:grid-cols-2" data-reveal>
+          <span class="block overflow-hidden rounded-3xl"><img src={m.articolo.img} alt="" width="1500" height="843" loading="lazy" class="aspect-[16/10] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+          <span class="block">
+            <span class="font-head text-[12px] font-semibold uppercase tracking-[0.18em] text-brand2">{m.articolo.categoria} · {m.articolo.tempoLettura}</span>
+            <span class="mt-3 block font-head text-[2.1rem] font-black leading-tight">{m.articolo.titolo}</span>
+            <span class="mt-4 block text-deep-ink/75">{m.articolo.intro}</span>
+            <span class="mt-6 inline-flex items-center gap-2 font-semibold text-brand2">Legga l'articolo <Icona nome="freccia" class="h-4 w-4 transition-[translate] group-hover:translate-x-1" /></span>
+          </span>
+        </a>
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-black" data-reveal>Dal mio profilo Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs text-deep-ink/80"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: il profilo oggi non esiste</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-3xl bg-white text-ink sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full ring-1 ring-line" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-brand2 p-7 text-white">
+                  <svg viewBox="0 0 300 100" class="w-40" fill="none" aria-hidden="true"><path d={ecg(3)} stroke="currentColor" stroke-width="3" /></svg>
+                  <div><p class="font-head text-[1.8rem] font-black leading-[1.1]">{p.titolo}</p><p class="mt-4 w-fit rounded-full bg-white px-4 py-2 text-[14px] font-semibold text-brand2">{p.risposta}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.7rem] font-black leading-[1.1]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-white"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden">
+                  <img src={foto[p.immagine]} alt="" width="724" height="483" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-white/95 px-5 py-4"><p class="font-head text-xl font-black leading-tight">{p.titolo}</p><p class="mt-0.5 text-sm text-brand">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <h2 class="font-head text-[2.2rem] font-black sm:text-[2.8rem]" data-reveal>{m.sedi.titolo}</h2>
+          <div class="mt-8 grid gap-8 rounded-3xl border border-line p-6 sm:grid-cols-2 sm:p-8">
+            <div>
+              <p class="font-head text-xl font-extrabold">{luogo.nome}</p>
+              <p class="mt-1 text-muted">{luogo.indirizzo}, {luogo.cap} {luogo.citta}</p>
+              {luogo.telefoni.map((t: any) => <a href={telHref(t.numero)} class="mt-5 inline-flex items-center gap-2 text-lg font-bold text-brand hover:underline"><Icona nome="tel" class="h-5 w-5" />{t.numero}</a>)}
+              <a href={`mailto:${m.sedi.email}`} class="mt-2 flex items-center gap-2 break-all text-[15px] font-semibold text-brand hover:underline"><Icona nome="mail" class="h-4 w-4 shrink-0" />{m.sedi.email}</a>
+              <a href={mapsHref(luogo.indirizzo, luogo.citta)} target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-muted hover:text-brand"><Icona nome="pin" class="h-4 w-4" /> Apra la mappa</a>
+            </div>
+            <div>
+              <p class="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Orari</p>
+              <ul class="mt-3 divide-y divide-line">{luogo.orari.map((o: string[]) => <li class="flex justify-between py-2.5 text-[15px]"><span class="font-semibold">{o[0]}</span><span>{o[1]}</span></li>)}</ul>
+              <p class="mt-2 text-[14px] text-muted">Lunedì, venerdì e fine settimana chiuso.</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <p class="font-head text-[1.4rem] font-extrabold lg:mt-[4.6rem]">{x.sedi.struttureLabel}</p>
+          <ul class="mt-5 space-y-4">
+            {x.sedi.strutture.map((s: any) => <li class="flex items-start gap-4 rounded-3xl bg-surface p-5"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white text-brand"><Icona nome="ospedale" class="h-5 w-5" /></span><span><span class="block font-head font-extrabold">{s.nome}</span><span class="block text-[14px] text-muted">{s.indirizzo}, {s.citta}</span><span class="mt-1 block text-[15px] text-ink/80">{s.testo}</span></span></li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-16 text-white sm:px-8" data-cta-finale>
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-3xl font-black sm:text-4xl">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(m.prenota.telefono)} class="btn !rounded-full bg-white text-brand hover:bg-white/90" data-magnete><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-full bg-brand2 text-white hover:opacity-90" data-magnete><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const fine = window.matchMedia('(pointer: fine)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+
+    // --- Prenotazione nella hero: motivo + giorno → mail già scritta ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]');
+    if (box) {
+      const link = box.querySelector<HTMLAnchorElement>('[data-prenota]')!;
+      const aggiorna = () => {
+        const mo = box.querySelector<HTMLElement>('[data-chip="motivo"][aria-pressed="true"]')?.dataset.frase;
+        const g = box.querySelector<HTMLElement>('[data-chip="giorno"][aria-pressed="true"]')?.dataset.frase;
+        if (!mo || !g) return;
+        const t = `Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${box.dataset.sede}. Preferirei di ${g.toLowerCase()}.`;
+        link.href = `mailto:${box.dataset.email}?subject=${encodeURIComponent(box.dataset.oggetto ?? '')}&body=${encodeURIComponent(t)}`;
+      };
+      box.querySelectorAll('[data-chip]').forEach((c) => c.addEventListener('click', aggiorna));
+    }
+
+    const intro = document.querySelector<HTMLElement>('[data-intro]');
+    if (ridotto) { intro?.remove(); }
+    else {
+      // --- Scroll fluido ---
+      const lenis = new Lenis({ anchors: { offset: -90 }, lerp: 0.11 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      // --- Intro: il tracciato si disegna, poi la pagina si apre ---
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.fromTo('[data-intro-linea]', { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 1.05, ease: 'power1.inOut' })
+        .to('[data-intro]', { clipPath: 'inset(0 0 100% 0)', duration: 0.75, ease: 'power3.inOut' }, '+=0.1')
+        .set('[data-intro]', { display: 'none' })
+        .from('.lettera', { yPercent: 110, rotate: 8, duration: 0.9, stagger: 0.035 }, '-=0.45')
+        .from('[data-hero-foto]', { clipPath: 'inset(100% 0 0 0 round 2rem)', duration: 1.1, ease: 'power3.inOut' }, '<')
+        .from('[data-entra]', { y: 30, opacity: 0, duration: 0.8, stagger: 0.1 }, '-=0.7')
+        .from('[data-galleggia]', { y: 40, opacity: 0, scale: 0.9, duration: 0.7, ease: 'back.out(2)' }, '-=0.5');
+
+      // --- Avanzamento: l'ECG nell'header si disegna con lo scroll ---
+      gsap.fromTo('[data-avanzamento]', { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: 0.3 } });
+
+      // --- Foto in hero: segue il mouse, si allontana con lo scroll ---
+      if (fine) {
+        const img = document.querySelector<HTMLElement>('[data-hero-img]');
+        if (img) {
+          const qx = gsap.quickTo(img, 'x', { duration: 0.8, ease: 'power3' }), qy = gsap.quickTo(img, 'y', { duration: 0.8, ease: 'power3' });
+          document.querySelector('[data-hero-section]')?.addEventListener('mousemove', (e) => { const ev = e as MouseEvent; qx((ev.clientX / innerWidth - 0.5) * -24); qy((ev.clientY / innerHeight - 0.5) * -24); });
+        }
+      }
+      gsap.to('[data-hero-img]', { yPercent: 8, ease: 'none', scrollTrigger: { trigger: '[data-hero-section]', start: 'top top', end: 'bottom top', scrub: true } });
+
+      // --- Contatori con battito finale ---
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fineV = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fineV, duration: 1.8, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+          onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString('it-IT'); },
+          onComplete: () => { gsap.fromTo(el, { scale: 1 }, { scale: 1.08, duration: 0.14, yoyo: true, repeat: 3, ease: 'power1.inOut', transformOrigin: 'left center' }); } });
+      });
+
+      // --- Storia: bloccata, l'anno scorre e le foto si sostituiscono ---
+      const mm = gsap.matchMedia();
+      mm.add('(min-width: 1024px)', () => {
+        const sez = document.querySelector<HTMLElement>('[data-storia]'); if (!sez) return;
+        const anni = [...sez.querySelectorAll<HTMLElement>('[data-scena-testo]')].length;
+        const annoEl = sez.querySelector<HTMLElement>('[data-anno]')!;
+        const valori = [1960, 1993, 2021]; const o = { v: valori[0] };
+        gsap.set('[data-scena-testo]:not([data-scena-testo="0"])', { autoAlpha: 0, y: 30 });
+        gsap.set('[data-scena-img]:not([data-scena-img="0"])', { clipPath: 'inset(100% 0 0 0)' });
+        gsap.set('[data-tacca="0"]', { backgroundColor: '#fff' });
+        const t = gsap.timeline({ scrollTrigger: { trigger: sez, pin: true, scrub: 0.8, start: 'top top', end: () => '+=' + innerHeight * (anni - 1) * 1.1 } });
+        for (let i = 1; i < anni; i++) {
+          t.to(`[data-scena-testo="${i - 1}"]`, { autoAlpha: 0, y: -30, duration: 0.4 })
+           .to(o, { v: valori[i], duration: 1, ease: 'none', onUpdate: () => { annoEl.textContent = String(Math.round(o.v)); } }, '<')
+           .to(`[data-scena-img="${i}"]`, { clipPath: 'inset(0% 0 0 0)', duration: 1, ease: 'power2.inOut' }, '<')
+           .to(`[data-tacca="${i}"]`, { backgroundColor: '#fff', duration: 0.2 }, '<0.5')
+           .to(`[data-scena-testo="${i}"]`, { autoAlpha: 1, y: 0, duration: 0.5 }, '-=0.4');
+        }
+        return () => { annoEl.textContent = String(valori[0]); };
+      });
+
+      // --- Schede che si inclinano col mouse ---
+      if (fine) document.querySelectorAll<HTMLElement>('[data-tilt]').forEach((c) => {
+        c.addEventListener('mousemove', (e) => { const r = c.getBoundingClientRect(); const px = (e.clientX - r.left) / r.width - 0.5, py = (e.clientY - r.top) / r.height - 0.5; gsap.to(c, { rotateY: px * 10, rotateX: -py * 10, duration: 0.4, ease: 'power2.out' }); });
+        c.addEventListener('mouseleave', () => gsap.to(c, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'power3.out' }));
+      });
+
+      // --- Sintomi: le spunte si disegnano ---
+      gsap.fromTo('.spunta', { strokeDasharray: 1, strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.5, stagger: 0.12, ease: 'power2.out', scrollTrigger: { trigger: '[data-sintomi]', start: 'top 85%', once: true } });
+
+      // --- Sala: si apre a tutto schermo ---
+      gsap.fromTo('[data-sala-cornice]', { clipPath: 'inset(12% 14% 12% 14% round 2rem)' }, { clipPath: 'inset(0% 0% 0% 0% round 2rem)', ease: 'none', scrollTrigger: { trigger: '[data-sala]', start: 'top 85%', end: 'top 15%', scrub: true } });
+      gsap.to('[data-sala-img]', { scale: 1, ease: 'none', scrollTrigger: { trigger: '[data-sala]', start: 'top bottom', end: 'bottom top', scrub: true } });
+      gsap.from('[data-sala-testo]', { y: 60, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '[data-sala]', start: 'top 40%', once: true } });
+
+      // --- Galleria: scorre con lo scroll e si inclina in base alla velocità ---
+      const pista = document.querySelector<HTMLElement>('[data-galleria-pista]');
+      if (pista) {
+        gsap.to(pista, { x: () => -Math.max(0, pista.scrollWidth - innerWidth) * 0.6, ease: 'none', scrollTrigger: { trigger: '[data-galleria]', start: 'top bottom', end: 'bottom top', scrub: 0.6, invalidateOnRefresh: true } });
+        const skew = gsap.quickTo('.galleria-img', 'skewX', { duration: 0.5, ease: 'power3' });
+        ScrollTrigger.create({ trigger: '[data-galleria]', start: 'top bottom', end: 'bottom top', onUpdate: (s) => skew(gsap.utils.clamp(-8, 8, s.getVelocity() / -250)), onLeave: () => skew(0), onLeaveBack: () => skew(0) });
+      }
+
+      // --- Pulsanti magnetici ---
+      if (fine) document.querySelectorAll<HTMLElement>('[data-magnete]').forEach((b) => {
+        const qx = gsap.quickTo(b, 'x', { duration: 0.4, ease: 'power3' }), qy = gsap.quickTo(b, 'y', { duration: 0.4, ease: 'power3' });
+        b.addEventListener('mousemove', (e) => { const r = b.getBoundingClientRect(); qx((e.clientX - r.left - r.width / 2) * 0.3); qy((e.clientY - r.top - r.height / 2) * 0.4); });
+        b.addEventListener('mouseleave', () => { qx(0); qy(0); });
+      });
+
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>

@@ -8,6 +8,7 @@ import HomeCasistica from '../../layouts/HomeCasistica.astro';
 import HomeInterventi from '../../layouts/HomeInterventi.astro';
 import HomeRivista from '../../layouts/HomeRivista.astro';
 import HomeCinetica from '../../layouts/HomeCinetica.astro';
+import HomeBattito from '../../layouts/HomeBattito.astro';
 import { medici, type Medico } from '../../lib/medici';
 
 export function getStaticPaths() {
@@ -15,4 +16,4 @@ export function getStaticPaths() {
 }
 const { m } = Astro.props as { m: Medico };
 ---
-{(m as any).layout === 'clinica' ? <HomeClinica m={m} /> : (m as any).layout === 'laterale' ? <HomeLaterale m={m} /> : (m as any).layout === 'studio' ? <HomeStudio m={m} /> : (m as any).layout === 'recensioni' ? <HomeRecensioni m={m} /> : (m as any).layout === 'casistica' ? <HomeCasistica m={m} /> : (m as any).layout === 'interventi' ? <HomeInterventi m={m} /> : (m as any).layout === 'rivista' ? <HomeRivista m={m} /> : (m as any).layout === 'cinetica' ? <HomeCinetica m={m} /> : <HomeMedico m={m} />}
+{(m as any).layout === 'clinica' ? <HomeClinica m={m} /> : (m as any).layout === 'laterale' ? <HomeLaterale m={m} /> : (m as any).layout === 'studio' ? <HomeStudio m={m} /> : (m as any).layout === 'recensioni' ? <HomeRecensioni m={m} /> : (m as any).layout === 'casistica' ? <HomeCasistica m={m} /> : (m as any).layout === 'interventi' ? <HomeInterventi m={m} /> : (m as any).layout === 'rivista' ? <HomeRivista m={m} /> : (m as any).layout === 'cinetica' ? <HomeCinetica m={m} /> : (m as any).layout === 'battito' ? <HomeBattito m={m} /> : <HomeMedico m={m} />}

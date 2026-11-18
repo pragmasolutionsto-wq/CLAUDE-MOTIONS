@@ -149,6 +149,20 @@ html { scroll-behavior: smooth; }
 }
 @media (max-width: 1023px) { .nastro-rec > div { animation-duration: 55s; } }
 
+/* Layout "battito": ECG che scorre, cuore che pulsa, scelta del giorno */
+@keyframes ecg-scorre { to { transform: translateX(-50%); } }
+@keyframes battito { 0%, 60%, 100% { transform: scale(1); } 10% { transform: scale(1.25); } 20% { transform: scale(1); } 30% { transform: scale(1.15); } }
+@layer components {
+  .ecg-vivo { animation: ecg-scorre 14s linear infinite; }
+  .cuore-pulsa { animation: battito 1.6s ease-in-out infinite; }
+  .avanzamento { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .giorno-scelta { transition: border-color .2s, background-color .2s, color .2s; }
+  .giorno-scelta[aria-pressed="true"] { border-color: var(--c-brand); background: var(--c-brand); color: #fff; }
+  .stile-battito .card { border-radius: 24px; }
+  .senza-moto .ecg-vivo, .senza-moto .cuore-pulsa { animation: none; }
+  .senza-moto .avanzamento { display: none; }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }
