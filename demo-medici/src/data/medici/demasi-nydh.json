@@ -1,0 +1,764 @@
+{
+  "slug": "demasi-nydh",
+  "layout": "sala",
+  "sitoOrigine": "https://www.demasioculista.it/",
+  "titolo": "Dott.",
+  "nome": "Christian Demasi",
+  "specialita": "Medico chirurgo oculista",
+  "firma": "Oculista",
+  "citta": "Collegno e Moncalieri",
+  "meta": {
+    "title": "Dott. Christian Demasi · Oculista a Collegno e Moncalieri",
+    "description": "Sono oculista e chirurgo a Collegno e Moncalieri: visita oculistica completa, cataratta, glaucoma, maculopatie, cheratocono, trapianto di cornea e chirurgia della retina."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "/demasi-nydh/img/marchio.png",
+    "logoAlt": "Studio Oculistico Dott. Demasi"
+  },
+  "foto": {
+    "ritratto": "/demasi-nydh/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Christian Demasi",
+    "forottero": "/demasi-nydh/img/rep-forottero.webp",
+    "collirio": "/demasi-nydh/img/rep-collirio.webp",
+    "sala": "/demasi-nydh/img/rep-sala.webp",
+    "reparto": "/demasi-nydh/img/rep-reparto.webp",
+    "videoCataratta": "/demasi-nydh/img/video/FY-HF8Fi0jI.webp",
+    "videoRetina": "/demasi-nydh/img/video/8_zBobjdKVE.webp",
+    "videoGlaucoma": "/demasi-nydh/img/video/-mMMY4-mfXM.webp"
+  },
+  "hero": {
+    "eyebrow": "Studio Oculistico Dott. Demasi",
+    "titolo": "Vedere bene, capire tutto.",
+    "testo": "Sono medico oculista e chirurgo. Ricevo a Collegno e a Moncalieri. Mi occupo di cornea, cataratta, retina e glaucoma, e opero personalmente: i miei interventi li trova anche in video.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti una visita",
+      "motivi": [
+        "Visita oculistica",
+        "Occhiali e lenti",
+        "Cataratta",
+        "Glaucoma",
+        "Maculopatia",
+        "Cheratocono",
+        "Bambini",
+        "Controllo dopo intervento"
+      ],
+      "motiviFrase": [
+        "un controllo completo della vista",
+        "occhiali o lenti a contatto",
+        "cataratta",
+        "glaucoma",
+        "maculopatia",
+        "cheratocono",
+        "mio figlio",
+        "un controllo dopo l'intervento"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Studio"
+    }
+  },
+  "fatti": [
+    "Due studi: Collegno e Moncalieri",
+    "Visita in tre passaggi",
+    "Chirurgia di cornea, cataratta, retina e glaucoma",
+    "Scientific Reviewer per riviste internazionali"
+  ],
+  "passi": [
+    {
+      "titolo": "L'ortottista",
+      "testo": "Il primo passaggio è con l'ortottista, che misura la vista e valuta i movimenti degli occhi. Se ha portato esami o referti, li guarda già in questa fase e mi riporta le informazioni utili."
+    },
+    {
+      "titolo": "La visita con me",
+      "testo": "Poi la visita con me: valuto la cornea e il cristallino alla lampada a fessura e misuro la pressione dell'occhio con metodica a contatto, più accurata del «soffio»."
+    },
+    {
+      "titolo": "Gocce e retina",
+      "testo": "Infine instillo le gocce per dilatare la pupilla e, quando hanno fatto effetto, controllo tutta la retina fino alla periferia. È il passaggio che permette di non lasciare fuori nulla."
+    }
+  ],
+  "passiNota": "Mentre un paziente fa un passaggio, un altro può essere al passaggio successivo: per questo in sala d'attesa può trovare più persone. Dopo le gocce la vista resta sfocata per qualche ora: meglio non guidare.",
+  "video": [
+    {
+      "id": "FY-HF8Fi0jI",
+      "cat": "cataratta",
+      "titolo": "Facoemulsificazione 3D con impianto di cristallino artificiale",
+      "breve": "La tecnica moderna di chirurgia della cataratta"
+    },
+    {
+      "id": "Fbbqqcrd81g",
+      "cat": "cataratta",
+      "titolo": "Cataratta «a puntini bianchi»",
+      "breve": "Intervento di cataratta"
+    },
+    {
+      "id": "ldi9LHy-oJ4",
+      "cat": "cataratta",
+      "titolo": "Cataratta con capsula fragile e uncini capsulari",
+      "breve": "Un caso complesso"
+    },
+    {
+      "id": "bKmNz6FIiOQ",
+      "cat": "cataratta",
+      "titolo": "Cataratta bianca con aderenze dell'iride",
+      "breve": "Un caso complesso"
+    },
+    {
+      "id": "y85v8UN4Wg4",
+      "cat": "cataratta",
+      "titolo": "Sostituzione del cristallino artificiale",
+      "breve": "Scambio di lente intraoculare"
+    },
+    {
+      "id": "8_zBobjdKVE",
+      "cat": "retina",
+      "titolo": "Vitrectomia 3D per foro maculare",
+      "breve": "Con il sistema Alcon nGenuity"
+    },
+    {
+      "id": "1Hqz7Qee_1g",
+      "cat": "retina",
+      "titolo": "Foro maculare e cataratta nello stesso intervento",
+      "breve": "Intervento dal vivo"
+    },
+    {
+      "id": "2JhWDhLoKhg",
+      "cat": "retina",
+      "titolo": "Facoemulsificazione e peeling maculare per foro maculare",
+      "breve": "Cataratta e retina"
+    },
+    {
+      "id": "b_fnwID7v8s",
+      "cat": "retina",
+      "titolo": "Facoemulsificazione e vitrectomia per foro maculare",
+      "breve": "Cataratta e retina"
+    },
+    {
+      "id": "rsqgaksxbi4",
+      "cat": "retina",
+      "titolo": "Trazione vitreo-maculare e cataratta",
+      "breve": "Intervento dal vivo"
+    },
+    {
+      "id": "VT9AsOm0qFU",
+      "cat": "retina",
+      "titolo": "Cataratta e membrana epiretinica",
+      "breve": "Intervento dal vivo"
+    },
+    {
+      "id": "q_NY68ibTyg",
+      "cat": "retina",
+      "titolo": "Distacco di retina inferiore",
+      "breve": "Chirurgia vitreo-retinica"
+    },
+    {
+      "id": "7yNmiGIuEX8",
+      "cat": "cornea",
+      "titolo": "Trapianto endoteliale DSAEK nella cornea guttata",
+      "breve": "Trapianto di cornea"
+    },
+    {
+      "id": "OXoKVwbS-oA",
+      "cat": "cornea",
+      "titolo": "Un imprevisto durante un DSAEK",
+      "breve": "Trapianto di cornea"
+    },
+    {
+      "id": "-mMMY4-mfXM",
+      "cat": "glaucoma",
+      "titolo": "Come impianto lo XEN 63 nel glaucoma",
+      "breve": "Chirurgia mini-invasiva del glaucoma"
+    }
+  ],
+  "videoCategorie": [
+    {
+      "id": "tutti",
+      "nome": "Tutti"
+    },
+    {
+      "id": "cataratta",
+      "nome": "Cataratta"
+    },
+    {
+      "id": "retina",
+      "nome": "Retina"
+    },
+    {
+      "id": "cornea",
+      "nome": "Cornea"
+    },
+    {
+      "id": "glaucoma",
+      "nome": "Glaucoma"
+    }
+  ],
+  "youtube": "https://www.youtube.com/@Real-lifeOphthalmology",
+  "amsler": {
+    "titolo": "Provi la griglia di Amsler",
+    "passi": [
+      "Si metta alla distanza di lettura, con gli occhiali da vicino se li usa.",
+      "Copra un occhio e guardi fisso il punto centrale.",
+      "Senza spostare lo sguardo, osservi le linee della griglia.",
+      "Ripeta con l'altro occhio."
+    ],
+    "domanda": "Vede linee storte, ondulate, sfocate o mancanti?",
+    "si": "Ne parli con un oculista in tempi brevi: è un segnale da approfondire con una visita e, se serve, con un OCT.",
+    "no": "Bene. Ripeta il test ogni tanto, soprattutto se ha più di 50 anni, il diabete o una miopia elevata, e non salti i controlli.",
+    "nota": "Il test aiuta ad accorgersi di un cambiamento della visione centrale, ma non permette una diagnosi e non sostituisce la visita."
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": [
+      {
+        "id": "cataratta",
+        "nome": "Cataratta",
+        "testo": "Facoemulsificazione, anche con laser a femtosecondi, e lenti intraoculari premium multifocali e toriche."
+      },
+      {
+        "id": "glaucoma",
+        "nome": "Glaucoma",
+        "testo": "Colliri, laser (SLT, iridoclasia) e chirurgia: trabeculectomia, sclerectomia profonda, MIGS come iStent e XEN, valvole di drenaggio."
+      },
+      {
+        "id": "retina",
+        "nome": "Retina e macula",
+        "testo": "Maculopatie, iniezioni intravitreali anti-VEGF, chirurgia vitreo-retinica per foro maculare, membrane e distacco di retina."
+      },
+      {
+        "id": "cornea",
+        "nome": "Cornea e cheratocono",
+        "testo": "Cheratiti e distrofie, cross-linking, anelli intrastromali, trapianto di cornea (perforante, DALK, DSAEK)."
+      },
+      {
+        "id": "bambini",
+        "nome": "Bambini",
+        "testo": "Ambliopia, strabismo, difetti di refrazione, patologie congenite: visite con un approccio gentile e rassicurante."
+      },
+      {
+        "id": "esami",
+        "nome": "Esami",
+        "testo": "OCT e angio-OCT, campo visivo, topografia corneale, ecografia oculare (UBM e B-scan), test dei colori."
+      }
+    ]
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [
+      "Mi sono laureato in Medicina e Chirurgia all'Università di Torino e mi sono specializzato in Oculistica all'Università di Verona, con il massimo dei voti.",
+      "Mi occupo di diagnosi e cura delle malattie della cornea, del cristallino, della retina e del glaucoma, ed eseguo ecografie oculari (UBM e B-scan). In sala operatoria mi dedico soprattutto a cataratta, trapianto di cornea, chirurgia vitreo-retinica, chirurgia refrattiva e glaucoma.",
+      "Sono autore di pubblicazioni su riviste nazionali e internazionali, co-autore della Relazione Ufficiale SOI 2015 sulla chirurgia della cataratta, relatore a congressi e Scientific Reviewer per «International Ophthalmology» e per il «British Medical Journal»."
+    ],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": [],
+    "orcid": "https://orcid.org/0000-0002-4150-2379"
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "glaucoma",
+    "categoria": "Glaucoma",
+    "titolo": "Glaucoma: controlli e cure per il «ladro silenzioso» della vista",
+    "img": "/demasi-nydh/img/video/-mMMY4-mfXM.webp",
+    "tempoLettura": "7 min",
+    "intro": "Il glaucoma danneggia il nervo ottico lentamente e, all'inizio, senza dare sintomi. Per questo lo chiamano il «ladro silenzioso della vista». La buona notizia è che si può scoprire con esami semplici e che esistono molte cure per rallentarlo. Ecco cosa sapere.",
+    "sezioni": [
+      {
+        "titolo": "Cos'è il glaucoma",
+        "paragrafi": [
+          "Il glaucoma è un gruppo di malattie dell'occhio che danneggiano il nervo ottico, la struttura che porta le informazioni visive al cervello. Nella maggior parte dei casi il danno è legato a una pressione dell'occhio troppo alta.",
+          "All'interno dell'occhio circola un liquido, l'umore acqueo, che viene prodotto e drenato di continuo. Se il drenaggio non funziona bene, la pressione sale e, nel tempo, può danneggiare le fibre del nervo ottico. Il danno al nervo, una volta avvenuto, non si recupera: per questo la diagnosi precoce è così importante."
+        ]
+      },
+      {
+        "titolo": "Le forme principali",
+        "paragrafi": [
+          "Esistono diversi tipi di glaucoma:"
+        ],
+        "elenco": [
+          "glaucoma primario ad angolo aperto, la forma più comune, in cui l'umore acqueo defluisce male attraverso l'angolo di drenaggio;",
+          "glaucoma ad angolo chiuso, quando l'angolo di drenaggio si blocca e il liquido non riesce più a uscire;",
+          "glaucoma congenito, una forma rara presente alla nascita;",
+          "glaucoma secondario, causato da altre condizioni come traumi, infiammazioni o l'uso di farmaci cortisonici."
+        ]
+      },
+      {
+        "titolo": "Perché è «silenzioso»",
+        "paragrafi": [
+          "Nelle fasi iniziali il glaucoma non dà quasi mai sintomi. La vista centrale resta buona a lungo, mentre si riduce la visione periferica, quella ai lati, di cui ci si accorge poco.",
+          "Quando compaiono i sintomi, possono essere aloni attorno alle luci, rossore, dolore all'occhio o mal di testa. Nel glaucoma acuto ad angolo chiuso possono comparire anche nausea e vomito: è un'urgenza e bisogna rivolgersi subito all'oculista o al pronto soccorso."
+        ]
+      },
+      {
+        "titolo": "Come si scopre",
+        "paragrafi": [
+          "La diagnosi si basa su esami precisi, che eseguo nel mio studio:"
+        ],
+        "elenco": [
+          "la tonometria, che misura la pressione dell'occhio; la eseguo con metodica a contatto, più accurata del «soffio»;",
+          "la gonioscopia, che esamina l'angolo di drenaggio;",
+          "l'OCT, che fotografa in alta risoluzione il nervo ottico e lo strato delle fibre nervose;",
+          "il campo visivo, che misura la visione periferica;",
+          "la pachimetria, che misura lo spessore della cornea e aiuta a interpretare correttamente la pressione."
+        ],
+        "chiusura": "Insieme, questi esami permettono di capire se c'è un glaucoma, a che stadio è e come cambia nel tempo."
+      },
+      {
+        "titolo": "Le cure: colliri e laser",
+        "paragrafi": [
+          "Lo scopo della cura è abbassare la pressione dell'occhio per proteggere il nervo ottico. Il primo passo sono di solito i colliri, a volte le compresse, che riducono la produzione di umore acqueo o ne migliorano il drenaggio.",
+          "Esistono poi trattamenti laser. La trabeculoplastica laser selettiva (SLT) migliora il drenaggio attraverso le vie naturali dell'occhio. L'iridotomia crea una piccola apertura nell'iride per far circolare meglio il liquido, ed è indicata in alcuni casi di angolo stretto."
+        ]
+      },
+      {
+        "titolo": "Quando serve la chirurgia",
+        "paragrafi": [
+          "Se colliri e laser non bastano, si può ricorrere alla chirurgia, che crea una nuova via di drenaggio per l'umore acqueo. Le tecniche sono diverse:"
+        ],
+        "elenco": [
+          "trabeculectomia, che crea un canale di drenaggio artificiale;",
+          "sclerectomia profonda, che rimuove una piccola porzione della sclera per facilitare il deflusso;",
+          "MIGS, tecniche mini-invasive con recupero più rapido, come iStent, Trabectome o l'impianto XEN;",
+          "impianti di drenaggio, come le valvole di Ahmed e Baerveldt, per i casi più difficili."
+        ],
+        "chiusura": "Sul mio canale YouTube può vedere come impianto lo XEN 63: credo che vedere un intervento aiuti ad affrontarlo con meno paura."
+      },
+      {
+        "titolo": "Una malattia da seguire nel tempo",
+        "paragrafi": [
+          "Il glaucoma è una malattia cronica: non si «guarisce», si tiene sotto controllo. Per questo sono fondamentali le visite di controllo regolari, che permettono di verificare se la cura funziona e, se serve, di modificarla.",
+          "È importante anche usare i colliri con costanza, esattamente come prescritto, anche quando non si avvertono disturbi. Saltare le gocce non dà sintomi immediati, ma può permettere alla pressione di risalire."
+        ]
+      },
+      {
+        "titolo": "Chi deve controllarsi di più",
+        "paragrafi": [
+          "Alcune persone hanno un rischio maggiore e dovrebbero misurare la pressione oculare con regolarità:"
+        ],
+        "elenco": [
+          "chi ha casi di glaucoma in famiglia;",
+          "chi ha superato i 40 anni;",
+          "chi è molto miope;",
+          "chi usa a lungo farmaci cortisonici;",
+          "chi soffre di diabete o di problemi di circolazione."
+        ]
+      },
+      {
+        "titolo": "Glaucoma e vita quotidiana",
+        "paragrafi": [
+          "Con una diagnosi precoce e una cura seguita con costanza, la maggior parte delle persone con glaucoma conserva una buona vista per tutta la vita. Per questo, accanto ai controlli, dedico tempo a spiegare la malattia, le cure disponibili e come gestirle ogni giorno: sapere cosa si sta facendo aiuta a farlo bene."
+        ]
+      },
+      {
+        "titolo": "Come prenotare",
+        "paragrafi": [
+          "Ricevo negli studi di Collegno, in corso Francia 173, e di Moncalieri, in via Montenero 18 bis. Può chiamare il 371 320 3101 o scrivermi a demasioculista@gmail.com; per le urgenze c'è il 324 150 0131.",
+          "La visita completa prevede tre passaggi: prima l'ortottista, poi la visita con me, infine le gocce per dilatare la pupilla e controllare tutta la retina. Così nessun dettaglio resta fuori."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo oculista."
+  },
+  "blog": [
+    {
+      "id": "maculopatia",
+      "categoria": "Retina",
+      "titolo": "Maculopatia: i segnali da riconoscere e il test della griglia di Amsler",
+      "img": "/demasi-nydh/img/video/8_zBobjdKVE.webp",
+      "tempoLettura": "7 min",
+      "intro": "La macula è la piccola zona centrale della retina che ci permette di leggere, guidare e riconoscere i volti. Quando si ammala, la visione centrale si deforma o si offusca. Ecco quali sono le maculopatie più frequenti, come si scoprono e cosa si può fare.",
+      "sezioni": [
+        {
+          "titolo": "Cos'è la macula",
+          "paragrafi": [
+            "La retina è lo strato sensibile alla luce che riveste l'interno dell'occhio. Al suo centro c'è la macula, una zona molto piccola ma preziosa: è responsabile della visione fine e dei dettagli.",
+            "Per questo, quando la macula si ammala, i problemi riguardano proprio le attività di precisione: leggere, infilare un ago, vedere bene le facce, guidare. La visione laterale invece resta spesso conservata."
+          ]
+        },
+        {
+          "titolo": "Le maculopatie più frequenti",
+          "paragrafi": [
+            "Con maculopatia si intende qualsiasi malattia della macula. Le forme più comuni sono:"
+          ],
+          "elenco": [
+            "la degenerazione maculare legata all'età, nella forma secca, con piccoli depositi giallastri chiamati drusen, e nella forma umida, con vasi sanguigni anomali che possono perdere sangue e liquido;",
+            "la maculopatia diabetica, una complicanza del diabete che colpisce i vasi della retina;",
+            "la maculopatia miopica, legata alla miopia elevata."
+          ]
+        },
+        {
+          "titolo": "I sintomi",
+          "paragrafi": [
+            "I segnali possono comparire lentamente o all'improvviso. I più frequenti sono:"
+          ],
+          "elenco": [
+            "visione centrale sfocata o deformata, con linee dritte che appaiono storte;",
+            "difficoltà a leggere o a vedere i dettagli;",
+            "macchie scure o vuoti al centro del campo visivo;",
+            "colori percepiti in modo diverso;",
+            "difficoltà a riconoscere i volti."
+          ],
+          "chiusura": "Se uno di questi sintomi compare all'improvviso, soprattutto in un solo occhio, conviene fare una visita in tempi brevi."
+        },
+        {
+          "titolo": "Il test della griglia di Amsler",
+          "paragrafi": [
+            "Uno strumento semplice per accorgersi di un cambiamento è la griglia di Amsler: un reticolo di linee con un punto al centro. Si guarda il punto centrale con un occhio alla volta, alla distanza di lettura, con gli occhiali da vicino se si usano.",
+            "Se alcune linee appaiono storte, ondulate, sfocate o mancanti, è un segnale da riferire all'oculista. Nella pagina principale del mio sito trova una griglia interattiva per provarlo. Attenzione: il test aiuta ad accorgersi di un cambiamento, ma non permette una diagnosi e non sostituisce la visita."
+          ]
+        },
+        {
+          "titolo": "Come si arriva alla diagnosi",
+          "paragrafi": [
+            "In studio la macula si studia con esami precisi:"
+          ],
+          "elenco": [
+            "l'OCT, un esame non invasivo che mostra in dettaglio gli strati della macula e i cambiamenti più sottili;",
+            "l'angio-OCT, che visualizza i vasi della retina senza bisogno di coloranti;",
+            "l'angiografia con fluoresceina o con verde di indocianina, quando serve studiare le perdite dai vasi;",
+            "l'esame del fondo oculare dopo la dilatazione della pupilla."
+          ]
+        },
+        {
+          "titolo": "Le cure",
+          "paragrafi": [
+            "Il trattamento dipende dal tipo di maculopatia e dalla sua gravità:"
+          ],
+          "elenco": [
+            "iniezioni intravitreali di farmaci anti-VEGF, che bloccano la crescita dei vasi anomali e riducono il gonfiore nella forma umida;",
+            "terapia fotodinamica, che combina un farmaco attivato dalla luce con un laser a bassa potenza;",
+            "laser argon, in alcune forme specifiche;",
+            "integratori con vitamine, zinco e luteina, che possono rallentare la forma secca;",
+            "nella maculopatia diabetica, un buon controllo della glicemia."
+          ]
+        },
+        {
+          "titolo": "Quando serve la chirurgia della retina",
+          "paragrafi": [
+            "Alcune malattie della macula si curano in sala operatoria. È il caso del foro maculare, della membrana epiretinica e della trazione vitreo-maculare, in cui il vitreo «tira» la retina.",
+            "In questi interventi, la vitrectomia, si rimuove il vitreo e si libera la macula. Spesso la cataratta si opera nello stesso intervento. Sul mio canale YouTube può vedere alcuni di questi interventi, anche in 3D con il sistema Alcon nGenuity."
+          ]
+        },
+        {
+          "titolo": "Controlli nel tempo",
+          "paragrafi": [
+            "Le maculopatie richiedono controlli regolari, per seguire l'andamento della malattia e l'efficacia della cura. Tra una visita e l'altra, l'autocontrollo con la griglia di Amsler aiuta ad accorgersi presto di un peggioramento.",
+            "Se ha il diabete o una miopia elevata, è importante non saltare i controlli del fondo oculare, anche se vede bene."
+          ]
+        },
+        {
+          "titolo": "Alimentazione e stile di vita",
+          "paragrafi": [
+            "Alcune abitudini aiutano a proteggere la macula. Non fumare è la più importante: il fumo è uno dei principali fattori di rischio per la degenerazione maculare. Anche una dieta ricca di verdure a foglia verde, frutta e pesce, il controllo della pressione arteriosa e del peso fanno la loro parte.",
+            "Gli integratori con vitamine, zinco e luteina possono essere utili in alcune forme secche, ma non vanno presi «a caso»: la scelta va fatta con l'oculista, in base al tipo e allo stadio della maculopatia."
+          ]
+        },
+        {
+          "titolo": "Cataratta e macula",
+          "paragrafi": [
+            "Spesso chi ha una maculopatia ha anche una cataratta, soprattutto dopo i 60 anni. Le due cose si influenzano: la cataratta può nascondere la macula agli esami e peggiorare la vista. Valutare bene entrambe, con OCT e visita, permette di decidere se e quando operare la cataratta e cosa aspettarsi dall'intervento."
+          ]
+        },
+        {
+          "titolo": "Come prenotare",
+          "paragrafi": [
+            "Ricevo a Collegno e a Moncalieri. Può chiamare il 371 320 3101 o scrivermi a demasioculista@gmail.com. Per le urgenze, come un calo improvviso della vista centrale, c'è il 324 150 0131."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo oculista."
+    },
+    {
+      "id": "cheratocono",
+      "categoria": "Cornea",
+      "titolo": "Cheratocono nei ragazzi: come si riconosce e come si cura",
+      "img": "/demasi-nydh/img/video/7yNmiGIuEX8.webp",
+      "tempoLettura": "6 min",
+      "intro": "Il cheratocono inizia spesso nell'adolescenza o nella prima età adulta, proprio quando la vista dovrebbe essere stabile. Riconoscerlo presto fa la differenza, perché oggi esistono cure che possono fermarlo. Ecco come si presenta e quali sono le possibilità.",
+      "sezioni": [
+        {
+          "titolo": "Cos'è il cheratocono",
+          "paragrafi": [
+            "La cornea è la «finestra» trasparente davanti all'occhio e normalmente ha la forma di una cupola regolare. Nel cheratocono la cornea si assottiglia progressivamente e si deforma a forma di cono.",
+            "Questa deformazione impedisce alla cornea di mettere a fuoco bene la luce sulla retina: la vista diventa sfocata e distorta. Il cheratocono può colpire un occhio solo o entrambi, spesso in modo diverso."
+          ]
+        },
+        {
+          "titolo": "I campanelli d'allarme",
+          "paragrafi": [
+            "I sintomi variano con la gravità. I più frequenti sono:"
+          ],
+          "elenco": [
+            "vista sfocata o distorta;",
+            "fastidio alla luce;",
+            "visione doppia;",
+            "occhiali o lenti a contatto da cambiare spesso;",
+            "aloni attorno alle luci;",
+            "difficoltà a vedere bene di notte."
+          ],
+          "chiusura": "Se un ragazzo cambia spesso gradazione degli occhiali, soprattutto per un astigmatismo che aumenta, vale la pena di fare un controllo specifico."
+        },
+        {
+          "titolo": "Gli esami per la diagnosi",
+          "paragrafi": [
+            "Una diagnosi precoce è fondamentale. Per riconoscere il cheratocono uso esami dedicati:"
+          ],
+          "elenco": [
+            "la topografia corneale, che disegna la mappa della curvatura della cornea;",
+            "la tomografia corneale, che ricostruisce la cornea in tre dimensioni e ne misura spessore e forma;",
+            "la pachimetria, che misura lo spessore della cornea;",
+            "l'aberrometria, che analizza la qualità della visione."
+          ]
+        },
+        {
+          "titolo": "Occhiali e lenti a contatto",
+          "paragrafi": [
+            "Nelle fasi iniziali la vista si corregge con occhiali o lenti a contatto morbide. Con il progredire della malattia possono servire lenti speciali: rigide gas permeabili, ibride o sclerali, che si appoggiano sulla cornea in modo da compensarne la forma irregolare.",
+            "Le lenti migliorano la vista, ma non fermano la malattia: per questo, se il cheratocono progredisce, si valutano altre cure."
+          ]
+        },
+        {
+          "titolo": "Il cross-linking: fermare la progressione",
+          "paragrafi": [
+            "Il cross-linking corneale è una procedura minimamente invasiva che rinforza le fibre di collagene della cornea, usando riboflavina, cioè vitamina B2, e luce ultravioletta. Lo scopo è rallentare o fermare la deformazione.",
+            "Esistono due varianti. Nella tecnica epi-off si rimuove lo strato superficiale della cornea, l'epitelio, per far penetrare meglio la riboflavina: è più efficace ma richiede un recupero più lungo. Nella tecnica epi-on l'epitelio resta intatto: il recupero è più rapido e meno fastidioso, ma l'efficacia può essere minore."
+          ]
+        },
+        {
+          "titolo": "Anelli intrastromali",
+          "paragrafi": [
+            "In alcuni casi si possono inserire nella cornea piccoli segmenti di anello, gli anelli intrastromali, che ne appiattiscono la forma e migliorano la vista. Questa procedura può ridurre la necessità di un trapianto."
+          ]
+        },
+        {
+          "titolo": "Il trapianto di cornea",
+          "paragrafi": [
+            "Nei casi avanzati, quando le altre cure non bastano, può servire un trapianto di cornea. Si può sostituire tutto lo spessore della cornea, con la cheratoplastica perforante, oppure solo gli strati anteriori, con la cheratoplastica lamellare anteriore profonda (DALK), che conserva l'endotelio del paziente.",
+            "Il trapianto di cornea è uno degli interventi di cui mi occupo: sul mio canale YouTube trova alcuni video di trapianti endoteliali."
+          ]
+        },
+        {
+          "titolo": "Lenti a contatto e cheratocono",
+          "paragrafi": [
+            "Molti ragazzi con cheratocono portano lenti a contatto per vedere meglio. È importante che le lenti siano adattate da professionisti con esperienza, perché una lente che non si appoggia bene sulla cornea può dare fastidio e irritazione.",
+            "Prima degli esami della cornea, come la topografia, le lenti a contatto vanno tolte per un periodo, così che la cornea torni alla sua forma naturale e le mappe siano affidabili. Al momento della prenotazione Le indico i tempi giusti in base al tipo di lente."
+          ]
+        },
+        {
+          "titolo": "Allergie e strofinamento degli occhi",
+          "paragrafi": [
+            "Tra i fattori che possono favorire il cheratocono c'è lo strofinamento frequente degli occhi, tipico di chi soffre di allergie. Curare bene l'allergia oculare e insegnare ai ragazzi a non stropicciarsi gli occhi è un piccolo gesto di prevenzione.",
+            "Se in famiglia ci sono casi di cheratocono, è bene dirlo all'oculista: anche la predisposizione genetica conta, e permette di programmare controlli più attenti."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi vengono fatte spesso:"
+          ],
+          "elenco": [
+            "Il cross-linking fa male? Si esegue con gocce anestetiche; nei giorni successivi, soprattutto con la tecnica epi-off, l'occhio può dare fastidio.",
+            "Si può fare sport? Sì, con le precauzioni che indico caso per caso, soprattutto dopo un intervento.",
+            "Il cheratocono porta alla cecità? No, ma senza cure può ridurre molto la qualità della vista: per questo conviene scoprirlo presto.",
+            "Ogni quanto vanno fatti i controlli? Dipende da età e andamento: nei ragazzi di solito più spesso, perché la malattia può cambiare più in fretta."
+          ]
+        },
+        {
+          "titolo": "Cosa possono fare i genitori",
+          "paragrafi": [
+            "Il consiglio più utile è non sottovalutare i cambi frequenti di occhiali e i disturbi visivi riferiti dai ragazzi, e far fare controlli regolari, soprattutto se ci sono casi di cheratocono in famiglia o allergie oculari che portano a strofinarsi spesso gli occhi.",
+            "Il cheratocono richiede controlli nel tempo, per seguire la malattia e l'efficacia delle cure. Ricevo a Collegno e a Moncalieri: può chiamare il 371 320 3101 o scrivermi a demasioculista@gmail.com."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo oculista."
+    }
+  ],
+  "instagram": {
+    "handle": "demasioculista",
+    "nota": "Esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "videoGlaucoma",
+        "titolo": "Glaucoma: il ladro silenzioso",
+        "sottotitolo": "All'inizio non dà sintomi",
+        "didascalia": "La vista centrale resta buona a lungo mentre si perde quella laterale. Per scoprirlo servono tonometria, OCT e campo visivo: un controllo semplice che può cambiare molto.",
+        "hashtag": "#glaucoma #oculista #collegno"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Cheratocono nei ragazzi?",
+        "risposta": "Occhiali da cambiare spesso? Meglio un controllo.",
+        "didascalia": "Il cheratocono inizia spesso nell'adolescenza. Con la topografia corneale si scopre presto, e il cross-linking può fermarlo.",
+        "hashtag": "#cheratocono #crosslinking #moncalieri"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Miopia infantile e schermi",
+        "punti": [
+          "Più tempo all'aperto",
+          "Pause regolari dagli schermi",
+          "Libri e tablet non troppo vicini",
+          "Controlli regolari della vista"
+        ],
+        "didascalia": "Passare più tempo all'aperto durante l'infanzia può ridurre il rischio di miopia. Le pause dagli schermi riducono l'affaticamento.",
+        "hashtag": "#miopia #bambini #vista"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "demasioculista@gmail.com",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio di Collegno",
+        "indirizzo": "Corso Francia 173",
+        "citta": "Collegno",
+        "cap": "10093",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di corso Francia 173, Collegno",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "371 320 3101"
+          }
+        ]
+      },
+      {
+        "tipo": "Studio",
+        "nome": "Studio di Moncalieri",
+        "indirizzo": "Via Montenero 18 bis",
+        "citta": "Moncalieri",
+        "cap": "10024",
+        "mappa": true,
+        "principale": false,
+        "frase": "lo studio di via Montenero 18 bis, Moncalieri",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "371 320 3101"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": [],
+    "urgenze": "324 150 0131",
+    "facebook": "https://www.facebook.com/demasioculista",
+    "miodottore": "https://www.miodottore.it/christian-demasi/oculista/collegno"
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Chiami il 371 320 3101 o mi scriva: Le rispondo per fissare l'appuntamento nello studio che preferisce. Per le urgenze c'è il 324 150 0131.",
+    "telefono": "3713203101",
+    "telefonoLabel": "371 320 3101",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "oggettoMail": "Richiesta di visita oculistica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi studio, giorno e orario che preferisce: La ricontatto per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "motiviFrase": [
+        "un controllo completo della vista",
+        "occhiali o lenti a contatto",
+        "cataratta",
+        "glaucoma",
+        "maculopatia",
+        "cheratocono",
+        "mio figlio",
+        "un controllo dopo l'intervento"
+      ],
+      "privacy": "https://www.demasioculista.it/privacy-policy",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio se porta lenti a contatto o se è già stato operato",
+      "motivi": [
+        "Visita oculistica",
+        "Occhiali e lenti",
+        "Cataratta",
+        "Glaucoma",
+        "Maculopatia",
+        "Cheratocono",
+        "Bambini",
+        "Controllo dopo intervento"
+      ]
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F0F7F4",
+      "ink": "#16241F",
+      "muted": "#56645F",
+      "line": "#DAE7E1",
+      "brand": "#038B5F",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#CC3366",
+      "deep": "#0D1714",
+      "deep-ink": "#D3E6DE"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap",
+    "fontTitoli": "League Spartan",
+    "fontTesti": "Figtree",
+    "favicon": "/demasi-nydh/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/demasi-nydh/brand/brand.json",
+    "pagine": [
+      "https://www.demasioculista.it/",
+      "https://www.demasioculista.it/chi-sono",
+      "https://www.demasioculista.it/patologie-glaucoma",
+      "https://www.demasioculista.it/patologie-maculopatie",
+      "https://www.demasioculista.it/patologie-cheratocono",
+      "https://www.youtube.com/@Real-lifeOphthalmology"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "medico": "Dott. Christian Luigi Demasi",
+  "specialita": "Medico chirurgo oculista",
+  "sito": "https://www.demasioculista.it/",
+  "ordine": "Albo 22029 Ordine dei Medici di Torino",
+  "logo": "logo-quadrato.png (screenshot ritagliato, testo tagliato ai bordi): in demo logotipo di testo, marchio solo come favicon",
+  "colori": {
+    "verde": "#038B5F",
+    "magenta": "#CC3366"
+  },
+  "font": {
+    "sito": "League Spartan",
+    "demo": [
+      "League Spartan",
+      "Figtree"
+    ]
+  },
+  "contatti": {
+    "telefono": "371 320 3101",
+    "urgenze": "324 150 0131",
+    "email": "demasioculista@gmail.com",
+    "facebook": "https://www.facebook.com/demasioculista",
+    "youtube": "https://www.youtube.com/@Real-lifeOphthalmology",
+    "orcid": "https://orcid.org/0000-0002-4150-2379",
+    "calcom": "https://cal.com/christian-demasi-2wvu87",
+    "miodottore": "https://www.miodottore.it/christian-demasi/oculista/collegno"
+  },
+  "sedi": [
+    "Corso Francia 173, 10093 Collegno",
+    "Via Montenero 18 bis, 10024 Moncalieri"
+  ],
+  "orari": "non indicati (calendario con orari indicativi lun-ven)",
+  "foto": [
+    "foto-01-ritratto-280.jpg: unica foto vera, 280x280 (su MioDottore la stessa alla stessa risoluzione)"
+  ],
+  "video": "15 video dei suoi interventi dal canale YouTube Real-life Ophthalmology (copertine in img/video, player youtube-nocookie)",
+  "visita_3_passaggi": "dalla sua risposta pubblica a una recensione su MioDottore",
+  "dati_esclusi": "codice fiscale e indirizzo fiscale di Rivoli (nel footer del sito): non pubblicati",
+  "repertorio": "4 foto stock del suo sito"
+}

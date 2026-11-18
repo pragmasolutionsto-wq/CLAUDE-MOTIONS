@@ -209,6 +209,24 @@ html { scroll-behavior: smooth; }
   .stile-eta .card { border-radius: 20px; }
 }
 
+/* Layout "sala": scelte, passaggi, filtri video, griglia di Amsler */
+@layer components {
+  .sede-scelta { color: var(--c-muted); transition: background-color .2s, color .2s; }
+  .sede-scelta[aria-pressed="true"] { background: #fff; color: var(--c-ink); box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
+  .passo-tab { background: #fff; transition: background-color .2s, color .2s, border-color .2s; }
+  .passo-tab[aria-selected="true"] { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+  .filtro-video { transition: background-color .2s, color .2s; }
+  .filtro-video[aria-pressed="true"] { background: var(--c-brand2); border-color: var(--c-brand2); }
+  .chip-sala[aria-pressed="true"] { border-color: var(--c-brand2); background: var(--c-brand2); color: #fff; }
+  .amsler-griglia { position: relative; border: 2px solid #111; }
+  .amsler-cella { border-right: 1px solid #111; border-bottom: 1px solid #111; background: #fff; transition: background-color .15s; cursor: pointer; }
+  .amsler-cella:hover { background: color-mix(in srgb, var(--c-brand2) 12%, white); }
+  .amsler-cella[aria-pressed="true"] { background: color-mix(in srgb, var(--c-brand2) 55%, white); }
+  .amsler-punto { position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 999px; background: #111; pointer-events: none; }
+  .video-dialog::backdrop { background: rgb(0 0 0 / .8); }
+  .stile-sala .card { border-radius: 24px; }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }

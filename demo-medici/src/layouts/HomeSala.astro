@@ -1,0 +1,427 @@
+---
+// Layout "sala" (prima demo: Christian Demasi, oculista chirurgo). Costruito sui suoi video di chirurgia (canale "Real-life Ophthalmology")
+// e sull'interattività: prenotazione con scelta dello studio (Collegno/Moncalieri), visita in tre passaggi da sfogliare,
+// "Di cosa mi occupo" collegato alla videoteca, videoteca con filtri e player in finestra, griglia di Amsler su cui segnare le zone storte.
+// Movimento: titolo che entra parola per parola, pellicola di copertine che scorre in hero, numeri, schede che entrano. Lenis.
+// Con prefers-reduced-motion: tutto fermo e visibile.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = x.hero.box;
+const sedi = m.sedi.luoghi as any[];
+const mail = emailRichieste(m);
+const testo = (mo: string, se: string) => `Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${se}.`;
+const mailto = (mo: string, se: string) => `mailto:${mail}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(testo(mo, se))}`;
+const href0 = mailto(box.motiviFrase[0], sedi[0].frase);
+const video = x.video as any[];
+const pellicola = [...video, ...video];
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const icone: Record<string, string> = { cataratta: 'lente', glaucoma: 'goccia', retina: 'lente', cornea: 'scudo', bambini: 'persone', esami: 'calendario' };
+const N = 20;
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/90 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} class="flex min-w-0 items-center gap-3">
+        <span class="min-w-0 leading-tight"><span class="block font-head text-[21px] font-extrabold text-brand">Dott. Demasi</span><span class="block truncate text-[12px] uppercase tracking-[0.14em] text-muted">Studio oculistico</span></span>
+      </a>
+      <nav class="hidden items-center gap-7 text-[15px] font-semibold text-ink/70 lg:flex">
+        <a href="#visita" class="hover:text-brand">La visita</a><a href="#aree" class="hover:text-brand">Di cosa mi occupo</a><a href="#video" class="hover:text-brand">In sala operatoria</a><a href="#amsler" class="hover:text-brand">Test di Amsler</a><a href="#sedi" class="hover:text-brand">Contatti</a>
+      </nav>
+      <a href={telHref(m.prenota.telefono)} class="btn !min-h-[42px] shrink-0 !rounded-full bg-brand !px-5 text-sm text-white hover:opacity-90"><Icona nome="tel" class="h-4 w-4" /> <span class="hidden sm:inline">{m.prenota.telefonoLabel}</span><span class="sm:hidden">Chiami</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO con prenotazione interattiva e pellicola dei video -->
+    <section class="relative overflow-hidden" data-hero>
+      <div class="pointer-events-none absolute inset-y-0 right-0 hidden w-[34%] overflow-hidden lg:block" aria-hidden="true">
+        <div class="pellicola flex flex-col gap-3 p-3" data-pellicola>
+          {pellicola.map((v) => <img src={`/${m.slug}/img/video/${v.id}.webp`} alt="" width="640" height="360" class="aspect-video w-full rounded-xl object-cover opacity-90" />)}
+        </div>
+      </div>
+      <div class="relative mx-auto grid max-w-7xl gap-10 px-4 pb-14 pt-10 sm:px-8 lg:grid-cols-12 lg:pb-20 lg:pt-16">
+        <div class="lg:col-span-7 lg:pr-6">
+          <p class="text-[14px] font-semibold uppercase tracking-[0.18em] text-brand" data-entra>{x.hero.eyebrow} · Collegno e Moncalieri</p>
+          <h1 class="mt-4 font-head text-[3rem] font-extrabold leading-[0.95] tracking-tight text-ink sm:text-[5.2rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 max-w-xl text-[17px] leading-relaxed text-muted" data-entra>{x.hero.testo}</p>
+          <ul class="mt-6 grid max-w-xl gap-2 sm:grid-cols-2" data-entra>{x.fatti.map((f: string) => <li class="flex items-start gap-2 text-[15px] font-medium"><Icona nome="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand" />{f}</li>)}</ul>
+        </div>
+        <div class="lg:col-span-5 lg:-mr-2">
+          <div class="relative rounded-3xl border border-line bg-white p-6 shadow-2xl sm:p-7" data-prenota-box data-mail={mail} data-oggetto={m.prenota.oggettoMail} data-entra-box>
+            <div class="flex items-center gap-4">
+              <img src={foto.ritratto} alt={foto.ritrattoAlt} width="280" height="280" class="h-16 w-16 rounded-full object-cover ring-4 ring-surface" />
+              <div><p class="font-head text-xl font-bold leading-tight">{nomeCompleto(m)}</p><p class="text-[14px] text-muted">{m.specialita}</p></div>
+            </div>
+            <p class="mt-6 text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">{box.sedeLabel}</p>
+            <div class="mt-2 grid grid-cols-2 gap-1 rounded-xl bg-surface p-1" role="group" aria-label="Studio">
+              {sedi.map((s, i) => <button type="button" class="sede-scelta rounded-lg px-3 py-2.5 text-[15px] font-semibold" data-chip="sede" data-frase={s.frase} data-indirizzo={`${s.indirizzo}, ${s.citta}`} aria-pressed={i === 0 ? 'true' : 'false'}>{s.citta}</button>)}
+            </div>
+            <p class="mt-2 flex items-center gap-2 text-[14px] text-muted"><Icona nome="pin" class="h-4 w-4 shrink-0" /><span data-indirizzo-testo>{sedi[0].indirizzo}, {sedi[0].citta}</span></p>
+            <label class="mt-5 block text-[13px] font-semibold uppercase tracking-[0.14em] text-muted" for="motivo-hero">{box.motivoLabel}</label>
+            <select id="motivo-hero" class="campo mt-2" data-motivo>
+              {box.motivi.map((t: string, i: number) => <option value={box.motiviFrase[i]}>{t}</option>)}
+            </select>
+            <p class="mt-4 rounded-xl bg-surface p-4 text-[15px] leading-snug text-ink/85" data-anteprima>{testo(box.motiviFrase[0], sedi[0].frase)}</p>
+            <div class="mt-4 grid gap-2 sm:grid-cols-2">
+              <a href={href0} data-prenota class="btn !rounded-full bg-brand text-white hover:opacity-90"><Icona nome="mail" /> Invii la mail</a>
+              <a href={telHref(m.prenota.telefono)} class="btn btn-ghost !rounded-full"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+            </div>
+            <p class="mt-3 text-center text-[13px] text-muted">Urgenze: <a href={telHref(x.sedi.urgenze)} class="font-semibold text-brand2 hover:underline">{x.sedi.urgenze}</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LA VISITA IN TRE PASSAGGI -->
+    <section id="visita" class="bg-surface px-4 py-16 sm:px-8 sm:py-24" data-passi-box>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <h2 class="font-head text-[2.4rem] font-extrabold leading-tight sm:text-[3.2rem]" data-sale>Come si svolge la visita</h2>
+            <p class="mt-3 max-w-md text-muted">Una visita completa, in tre passaggi. Li sfogli qui sotto: saprà cosa aspettarsi.</p>
+            <div class="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Passaggi della visita">
+              {x.passi.map((p: any, i: number) => <button type="button" role="tab" id={`passo-tab-${i}`} aria-controls={`passo-${i}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="passo-tab rounded-full border border-line px-4 py-2 text-[15px] font-semibold" data-passo-tab={i}>{p.titolo}</button>)}
+            </div>
+            <div class="mt-5 h-1.5 overflow-hidden rounded-full bg-line" aria-hidden="true"><div class="h-full w-1/3 rounded-full bg-brand" data-barra></div></div>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="relative min-h-[15rem] rounded-3xl bg-white p-8 shadow-sm sm:p-10">
+              {x.passi.map((p: any, i: number) => (
+                <div id={`passo-${i}`} role="tabpanel" aria-labelledby={`passo-tab-${i}`} class={i ? 'hidden' : ''} data-fase={i}>
+                  <p class="flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.16em] text-brand2"><Icona nome={['persone', 'lente', 'goccia'][i]} class="h-5 w-5" /> {['Primo passaggio', 'Secondo passaggio', 'Ultimo passaggio'][i]}</p>
+                  <h3 class="mt-3 font-head text-[2rem] font-bold leading-tight">{p.titolo}</h3>
+                  <p class="mt-3 text-[17px] leading-relaxed text-ink/85">{p.testo}</p>
+                </div>
+              ))}
+              <div class="mt-8 flex gap-3">
+                <button type="button" class="btn btn-ghost !min-h-[44px] !rounded-full" data-passo-prev aria-label="Passaggio precedente"><Icona nome="sx" /></button>
+                <button type="button" class="btn !min-h-[44px] !rounded-full bg-ink text-white" data-passo-next>Avanti <Icona nome="dx" /></button>
+              </div>
+            </div>
+            <p class="mt-4 text-[14px] leading-relaxed text-muted">{x.passiNota}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AREE collegate alla videoteca -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-extrabold leading-tight sm:text-[3.2rem]" data-sale>{x.aree.titolo}</h2>
+        <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-aree>
+          {x.aree.voci.map((a: any) => {
+            const ha = video.some((v) => v.cat === a.id);
+            return (
+              <li class="area-card group flex flex-col rounded-3xl border border-line bg-white p-7">
+                <span class="grid h-12 w-12 place-items-center rounded-2xl bg-surface text-brand"><Icona nome={icone[a.id] ?? 'lente'} class="h-6 w-6" /></span>
+                <h3 class="mt-5 font-head text-2xl font-bold">{a.nome}</h3>
+                <p class="mt-2 flex-1 text-[15px] leading-relaxed text-muted">{a.testo}</p>
+                {ha && <a href="#video" class="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold text-brand2 hover:underline" data-vai-video={a.id}><Icona nome="foto" class="h-4 w-4" /> Guardi i miei interventi</a>}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </section>
+
+    <!-- VIDEOTECA -->
+    <section id="video" class="bg-deep px-4 py-16 text-white sm:px-8 sm:py-24" data-videoteca>
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <h2 class="font-head text-[2.4rem] font-extrabold leading-tight sm:text-[3.2rem]" data-sale>In sala operatoria con me</h2>
+            <p class="mt-3 max-w-xl text-deep-ink/80">Sono interventi veri, dal mio canale YouTube. Vedere come funziona un intervento aiuta ad affrontarlo con meno paura.</p>
+          </div>
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filtra i video">
+            {x.videoCategorie.map((c: any, i: number) => <button type="button" class="filtro-video rounded-full border border-white/25 px-4 py-2 text-[15px] font-semibold" data-filtro={c.id} aria-pressed={i === 0 ? 'true' : 'false'}>{c.nome}</button>)}
+          </div>
+        </div>
+        <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-video-griglia>
+          {video.map((v) => (
+            <li data-cat={v.cat}>
+              <button type="button" class="group block w-full overflow-hidden rounded-2xl bg-white/5 text-left ring-1 ring-white/10" data-apri-video={v.id} data-titolo={v.titolo}>
+                <span class="relative block overflow-hidden"><img src={`/${m.slug}/img/video/${v.id}.webp`} alt="" width="640" height="360" loading="lazy" class="aspect-video w-full object-cover transition-[scale] duration-500 group-hover:scale-105" />
+                  <span class="absolute inset-0 grid place-items-center"><span class="grid h-14 w-14 place-items-center rounded-full bg-brand2 text-white shadow-lg transition-[scale] group-hover:scale-110"><svg viewBox="0 0 24 24" class="ml-1 h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></span></span></span>
+                <span class="block p-4"><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">{v.breve}</span><span class="mt-1 block font-head text-lg font-bold leading-snug">{v.titolo}</span></span>
+              </button>
+            </li>
+          ))}
+        </ul>
+        <a href={x.youtube} target="_blank" rel="noopener" class="mt-8 inline-flex items-center gap-2 font-semibold text-deep-ink hover:text-white">Tutti i video sul canale «Real-life Ophthalmology» <Icona nome="freccia" class="h-4 w-4" /></a>
+      </div>
+      <dialog class="video-dialog m-auto w-[min(960px,94vw)] rounded-2xl bg-black p-0 text-white" data-dialog aria-label="Video dell'intervento">
+        <div class="flex items-center justify-between gap-4 px-4 py-3"><p class="font-head text-lg font-bold" data-dialog-titolo></p><button type="button" class="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-2xl leading-none hover:bg-white/20" data-chiudi aria-label="Chiudi il video">×</button></div>
+        <div class="aspect-video w-full" data-dialog-player></div>
+      </dialog>
+    </section>
+
+    <!-- GRIGLIA DI AMSLER -->
+    <section id="amsler" class="px-4 py-16 sm:px-8 sm:py-24" data-amsler>
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-6">
+          <h2 class="font-head text-[2.4rem] font-extrabold leading-tight sm:text-[3.2rem]" data-sale>{x.amsler.titolo}</h2>
+          <p class="mt-3 max-w-lg text-muted">Un test semplice per accorgersi di un cambiamento della visione centrale, che dipende dalla macula.</p>
+          <ul class="mt-6 space-y-3">{x.amsler.passi.map((p: string) => <li class="flex items-start gap-3 text-[16px]"><Icona nome="check" class="mt-1 h-4 w-4 shrink-0 text-brand" />{p}</li>)}</ul>
+          <div class="mt-6 grid grid-cols-2 gap-1 rounded-xl bg-surface p-1 sm:w-80" role="group" aria-label="Occhio">
+            <button type="button" class="sede-scelta rounded-lg px-3 py-2 font-semibold" data-occhio="destro" aria-pressed="true">Occhio destro</button>
+            <button type="button" class="sede-scelta rounded-lg px-3 py-2 font-semibold" data-occhio="sinistro" aria-pressed="false">Occhio sinistro</button>
+          </div>
+          <p class="mt-6 font-head text-xl font-bold">{x.amsler.domanda}</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <button type="button" class="chip chip-sala" data-risposta="si" aria-pressed="false">Sì, ne vedo</button>
+            <button type="button" class="chip chip-sala" data-risposta="no" aria-pressed="false">No, sono tutte dritte</button>
+          </div>
+          <div class="mt-4 hidden rounded-2xl p-5" data-esito="si" style="background: color-mix(in srgb, var(--c-brand2) 10%, white)" aria-live="polite">
+            <p class="text-[16px] leading-relaxed">{x.amsler.si}</p>
+            <a href="#prenota-calendario-ancora" class="mt-3 inline-flex items-center gap-2 font-semibold text-brand2 hover:underline" data-amsler-prenota>Prenoti un controllo <Icona nome="freccia" class="h-4 w-4" /></a>
+          </div>
+          <div class="mt-4 hidden rounded-2xl bg-surface p-5" data-esito="no" aria-live="polite"><p class="text-[16px] leading-relaxed">{x.amsler.no}</p></div>
+          <p class="mt-5 text-[13px] text-muted">{x.amsler.nota}</p>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="mx-auto w-full max-w-[460px]">
+            <p class="mb-3 text-center text-[14px] text-muted">Se vede una zona storta o sfocata, la tocchi per segnarla: potrà mostrarla al medico. <span class="font-semibold text-ink" data-segnate>Zone segnate: 0</span></p>
+            <div class="amsler-griglia grid aspect-square w-full bg-white" style={`grid-template-columns: repeat(${N}, 1fr)`} data-griglia-amsler role="group" aria-label="Griglia di Amsler: selezioni le zone in cui vede le linee storte">
+              {Array.from({ length: N * N }, (_, k) => <button type="button" class="amsler-cella" aria-pressed="false" aria-label={`Riga ${Math.floor(k / N) + 1}, colonna ${(k % N) + 1}`} data-cella={k}></button>)}
+              <span class="amsler-punto" aria-hidden="true"></span>
+            </div>
+            <button type="button" class="mx-auto mt-3 block text-[14px] font-semibold text-muted hover:text-ink" data-azzera>Cancelli i segni</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <img src={foto.ritratto} alt={foto.ritrattoAlt} width="280" height="280" loading="lazy" class="h-36 w-36 rounded-3xl object-cover" />
+          <h2 class="mt-6 font-head text-[2.4rem] font-extrabold leading-tight sm:text-[3rem]" data-sale>{x.bio.titolo}</h2>
+          <a href={x.bio.orcid} target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-2 font-semibold text-brand hover:underline">Il mio curriculum su ORCID <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="space-y-5 text-[17px] leading-relaxed text-ink/85 lg:col-span-8" data-stagger>{x.bio.paragrafi.map((p: string) => <p>{p}</p>)}</div>
+      </div>
+    </section>
+
+    <div id="prenota-calendario-ancora" class="stile-sala"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-extrabold leading-tight sm:text-[3.2rem]" data-sale>Dal mio blog</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-3" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group block overflow-hidden rounded-3xl bg-white">
+              <span class="block overflow-hidden"><img src={b.img} alt="" width="640" height="360" loading="lazy" class="aspect-video w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="block p-6"><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">{b.categoria} · {b.tempoLettura}</span><span class="mt-2 block font-head text-[1.4rem] font-bold leading-snug group-hover:text-brand">{b.titolo}</span></span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-extrabold" data-sale>Dal mio profilo Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-3xl border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.ritratto} alt="" width="32" height="32" class="h-8 w-8 rounded-full object-cover" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="640" height="360" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-deep/95 px-5 py-4 text-white"><p class="font-head text-xl font-bold leading-tight">{p.titolo}</p><p class="mt-0.5 text-sm text-deep-ink">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-brand2 p-7 text-white">
+                  <span class="font-head text-6xl font-extrabold leading-none">?</span>
+                  <div><p class="font-head text-[1.9rem] font-extrabold leading-[1.05]">{p.titolo}</p><p class="mt-4 w-fit rounded-full bg-deep px-4 py-2 text-[14px] font-semibold">{p.risposta}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.9rem] font-extrabold leading-[1.05]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-white"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-extrabold leading-tight sm:text-[3.2rem]" data-sale>{m.sedi.titolo}</h2>
+        <div class="mt-10 grid gap-6 lg:grid-cols-2" data-stagger>
+          {sedi.map((s) => (
+            <article class="rounded-3xl border border-line bg-white p-7 sm:p-9">
+              <h3 class="font-head text-2xl font-bold">{s.nome}</h3>
+              <p class="mt-1 text-muted">{s.indirizzo}, {s.cap} {s.citta}</p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a href={telHref(m.prenota.telefono)} class="btn btn-ghost !rounded-full"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+                <a href={mapsHref(s.indirizzo, s.citta)} target="_blank" rel="noopener" class="btn btn-ghost !rounded-full"><Icona nome="pin" /> Apra la mappa</a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div class="mt-6 flex flex-col gap-3 rounded-3xl bg-surface p-7 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-[16px]">Per le urgenze: <a href={telHref(x.sedi.urgenze)} class="font-bold text-brand2 hover:underline">{x.sedi.urgenze}</a></p>
+          <a href={`mailto:${m.sedi.email}`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="mail" class="h-4 w-4" />{m.sedi.email}</a>
+          <a href={x.sedi.facebook} target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-semibold text-muted hover:text-brand">La mia pagina Facebook <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-4xl font-extrabold">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(m.prenota.telefono)} class="btn !rounded-full bg-white text-ink hover:opacity-90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-full border border-white/60 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    const premi = (gruppo: Iterable<Element>, el: Element) => { for (const b of gruppo) b.setAttribute('aria-pressed', String(b === el)); };
+
+    // --- Prenotazione nella hero: studio + motivo → mail ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const sedi = box.querySelectorAll<HTMLElement>('[data-chip="sede"]');
+    const motivo = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const aggiorna = () => {
+      const s = box.querySelector<HTMLElement>('[data-chip="sede"][aria-pressed="true"]')!;
+      const t = `Buongiorno Dottore, vorrei prenotare una visita per ${motivo.value} presso ${s.dataset.frase}.`;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(box.dataset.oggetto!)}&body=${encodeURIComponent(t)}`;
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector('[data-indirizzo-testo]')!.textContent = s.dataset.indirizzo!;
+      if (!ridotto) gsap.fromTo('[data-anteprima]', { opacity: 0.3 }, { opacity: 1, duration: 0.3 });
+    };
+    sedi.forEach((s) => s.addEventListener('click', () => { premi(sedi, s); aggiorna(); }));
+    motivo.addEventListener('change', aggiorna);
+
+    // --- La visita in tre passaggi ---
+    const pb = document.querySelector<HTMLElement>('[data-passi-box]')!;
+    const tabs = [...pb.querySelectorAll<HTMLButtonElement>('[data-passo-tab]')];
+    const pannelli = [...pb.querySelectorAll<HTMLElement>('[data-fase]')];
+    let passo = 0;
+    const vai = (i: number, focus = false) => {
+      passo = (i + tabs.length) % tabs.length;
+      tabs.forEach((t, k) => { t.setAttribute('aria-selected', String(k === passo)); t.tabIndex = k === passo ? 0 : -1; });
+      pannelli.forEach((p, k) => p.classList.toggle('hidden', k !== passo));
+      if (focus) tabs[passo].focus();
+      const barra = pb.querySelector<HTMLElement>('[data-barra]')!;
+      if (ridotto) barra.style.width = `${((passo + 1) / tabs.length) * 100}%`;
+      else { gsap.to(barra, { width: `${((passo + 1) / tabs.length) * 100}%`, duration: 0.5, ease: 'power3.out' }); gsap.from(pannelli[passo].children, { x: 30, opacity: 0, duration: 0.45, stagger: 0.06, ease: 'power3.out' }); }
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => vai(i));
+      t.addEventListener('keydown', (e) => { const k = (e as KeyboardEvent).key; if (k === 'ArrowRight') { e.preventDefault(); vai(passo + 1, true); } if (k === 'ArrowLeft') { e.preventDefault(); vai(passo - 1, true); } });
+    });
+    pb.querySelector('[data-passo-next]')!.addEventListener('click', () => vai(passo + 1));
+    pb.querySelector('[data-passo-prev]')!.addEventListener('click', () => vai(passo - 1));
+
+    // --- Videoteca: filtri e player ---
+    const vt = document.querySelector<HTMLElement>('[data-videoteca]')!;
+    const filtri = vt.querySelectorAll<HTMLElement>('[data-filtro]');
+    const voci = [...vt.querySelectorAll<HTMLElement>('[data-video-griglia] > li')];
+    const filtra = (id: string) => {
+      const f = vt.querySelector(`[data-filtro="${id}"]`)!; premi(filtri, f);
+      const vis = voci.filter((v) => id === 'tutti' || v.dataset.cat === id);
+      voci.forEach((v) => v.classList.toggle('hidden', !vis.includes(v)));
+      if (!ridotto) gsap.fromTo(vis, { y: 24, opacity: 0, scale: 0.97 }, { y: 0, opacity: 1, scale: 1, duration: 0.45, stagger: 0.05, ease: 'power3.out' });
+    };
+    filtri.forEach((f) => f.addEventListener('click', () => filtra(f.dataset.filtro!)));
+    document.querySelectorAll<HTMLElement>('[data-vai-video]').forEach((a) => a.addEventListener('click', () => filtra(a.dataset.vaiVideo!)));
+    const dlg = vt.querySelector<HTMLDialogElement>('[data-dialog]')!;
+    const player = dlg.querySelector<HTMLElement>('[data-dialog-player]')!;
+    vt.querySelectorAll<HTMLElement>('[data-apri-video]').forEach((b) => b.addEventListener('click', () => {
+      dlg.querySelector('[data-dialog-titolo]')!.textContent = b.dataset.titolo!;
+      player.innerHTML = `<iframe class="h-full w-full" src="https://www.youtube-nocookie.com/embed/${b.dataset.apriVideo}?autoplay=1&rel=0" title="${b.dataset.titolo}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+      dlg.showModal();
+    }));
+    const chiudi = () => { dlg.close(); };
+    dlg.querySelector('[data-chiudi]')!.addEventListener('click', chiudi);
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) chiudi(); });
+    dlg.addEventListener('close', () => { player.innerHTML = ''; });
+
+    // --- Griglia di Amsler ---
+    const am = document.querySelector<HTMLElement>('[data-amsler]')!;
+    const celle = am.querySelectorAll<HTMLElement>('[data-cella]');
+    const conta = () => { am.querySelector('[data-segnate]')!.textContent = `Zone segnate: ${am.querySelectorAll('[data-cella][aria-pressed="true"]').length}`; };
+    celle.forEach((c) => c.addEventListener('click', () => { c.setAttribute('aria-pressed', String(c.getAttribute('aria-pressed') !== 'true')); conta(); }));
+    am.querySelector('[data-azzera]')!.addEventListener('click', () => { celle.forEach((c) => c.setAttribute('aria-pressed', 'false')); conta(); });
+    const occhi = am.querySelectorAll<HTMLElement>('[data-occhio]');
+    occhi.forEach((o) => o.addEventListener('click', () => { premi(occhi, o); celle.forEach((c) => c.setAttribute('aria-pressed', 'false')); conta(); }));
+    const risposte = am.querySelectorAll<HTMLElement>('[data-risposta]');
+    risposte.forEach((r) => r.addEventListener('click', () => {
+      premi(risposte, r);
+      am.querySelectorAll<HTMLElement>('[data-esito]').forEach((e) => e.classList.toggle('hidden', e.dataset.esito !== r.dataset.risposta));
+      if (!ridotto) gsap.from(am.querySelector(`[data-esito="${r.dataset.risposta}"]`), { y: 14, opacity: 0, duration: 0.4 });
+    }));
+    am.querySelector('[data-amsler-prenota]')!.addEventListener('click', () => {
+      const sel = document.querySelector<HTMLSelectElement>('#prenota select[name=motivo]');
+      if (sel) sel.value = 'maculopatia';
+    });
+
+    if (!ridotto) {
+      const lenis = new Lenis({ anchors: { offset: -90 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+      dlg.addEventListener('close', () => lenis.start());
+      vt.querySelectorAll('[data-apri-video]').forEach((b) => b.addEventListener('click', () => lenis.stop()));
+
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.08em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= 2 ? 'text-brand' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.9, stagger: 0.08 })
+        .from('[data-entra]', { y: 24, opacity: 0, duration: 0.7, stagger: 0.08 }, '-=0.6')
+        .from('[data-entra-box]', { y: 60, opacity: 0, rotate: 2, duration: 0.9 }, 0.2);
+      // la pellicola scorre di continuo, più veloce quando si scorre la pagina
+      const pel = document.querySelector<HTMLElement>('[data-pellicola]');
+      if (pel) {
+        const giro = gsap.to(pel, { yPercent: -50, duration: 60, ease: 'none', repeat: -1 });
+        ScrollTrigger.create({ trigger: '[data-hero]', start: 'top top', end: 'bottom top', onUpdate: (st) => gsap.to(giro, { timeScale: 1 + Math.abs(st.getVelocity()) / 300, duration: 0.2, overwrite: true, onComplete: () => gsap.to(giro, { timeScale: 1, duration: 1 }) }) });
+      }
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      gsap.from('[data-aree] > li', { y: 50, opacity: 0, duration: 0.7, stagger: 0.08, ease: 'power3.out', scrollTrigger: { trigger: '[data-aree]', start: 'top 85%', once: true } });
+      gsap.from('[data-video-griglia] > li', { y: 50, opacity: 0, scale: 0.96, duration: 0.7, stagger: 0.05, ease: 'power3.out', scrollTrigger: { trigger: '[data-video-griglia]', start: 'top 85%', once: true } });
+      // la griglia di Amsler si disegna
+      gsap.from('[data-griglia-amsler] .amsler-cella', { opacity: 0, duration: 0.4, stagger: { amount: 0.8, grid: [20, 20], from: 'center' }, scrollTrigger: { trigger: '[data-griglia-amsler]', start: 'top 80%', once: true } });
+      gsap.from('[data-blog] > a', { y: 60, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: '[data-blog]', start: 'top 85%', once: true } });
+      // la visita: i passaggi si sfogliano da soli la prima volta, finché la persona non tocca
+      let tocca = false; pb.addEventListener('pointerdown', () => { tocca = true; }, { once: true });
+      ScrollTrigger.create({ trigger: pb, start: 'top 55%', once: true, onEnter: () => { [1, 2].forEach((i, k) => window.setTimeout(() => { if (!tocca) vai(i); }, 2600 * (k + 1))); } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>
