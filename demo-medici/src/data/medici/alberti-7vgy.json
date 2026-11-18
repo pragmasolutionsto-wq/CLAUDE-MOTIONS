@@ -1,0 +1,581 @@
+{
+  "slug": "alberti-7vgy",
+  "layout": "domicilio",
+  "sitoOrigine": "https://www.cardioalberti.com/",
+  "titolo": "Dott.",
+  "nome": "Alessandro Alberti",
+  "specialita": "Specialista in Cardiologia",
+  "firma": "Cardiologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Alessandro Alberti · Cardiologo a domicilio e in studio a Torino",
+    "description": "Sono cardiologo a Torino: visite a domicilio in tutto il Piemonte, 7 giorni su 7, con ECG ed ecografia. Holter, ECG da sforzo, psicocardiologia. Studio in Gran Madre."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "/alberti-7vgy/img/marchio.png",
+    "logoAlt": "Cardioalberti, Dott. Alessandro Alberti"
+  },
+  "foto": {
+    "ritratto": "/alberti-7vgy/img/ritratto.webp",
+    "ritrattoLargo": "/alberti-7vgy/img/ritratto-largo.webp",
+    "ritrattoAlt": "Il Dott. Alessandro Alberti",
+    "volto": "/alberti-7vgy/img/volto.webp",
+    "ospedale": "/alberti-7vgy/img/ospedale.webp",
+    "studio": "/alberti-7vgy/img/studio.webp",
+    "presa": "/alberti-7vgy/img/presa-in-carico.webp",
+    "postRitratto": "/alberti-7vgy/img/ritratto-largo.webp",
+    "kitEcg": "/alberti-7vgy/img/kit-ecg.webp"
+  },
+  "hero": {
+    "eyebrow": "Cardioalberti · Torino, Gran Madre",
+    "parole": [
+      "a domicilio",
+      "in studio",
+      "in video-chiamata"
+    ],
+    "titolo": "Cardiologia e psicocardiologia",
+    "testo": "Porto a casa Sua visita, ECG ed ecografia, in tutto il Piemonte, sette giorni su sette. Prima, per quasi trent'anni, cardiologia interventistica in ospedale.",
+    "ctaPrenota": "Prenoti su WhatsApp",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti una visita",
+      "dove": [
+        {
+          "nome": "A domicilio",
+          "frase": "a domicilio",
+          "prezzo": "Visita a domicilio 250 €, con ECG ed ecografia"
+        },
+        {
+          "nome": "In studio",
+          "frase": "nello studio di via Cosmo 6, Torino",
+          "prezzo": "Visita in studio 200 €, con ECG ed ecografia"
+        },
+        {
+          "nome": "In video-chiamata",
+          "frase": "in video-chiamata",
+          "prezzo": "Televisita su WhatsApp o Telegram"
+        }
+      ],
+      "motivi": [
+        "Visita cardiologica",
+        "ECG",
+        "Holter",
+        "Ecografia del cuore",
+        "Palpitazioni",
+        "Ansia e cuore",
+        "Controllo terapia",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "una visita cardiologica",
+        "un elettrocardiogramma",
+        "un Holter",
+        "un'ecografia del cuore",
+        "delle palpitazioni",
+        "un consulto per ansia e disturbi al cuore",
+        "un controllo della terapia",
+        "un altro disturbo cardiologico"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Dove"
+    }
+  },
+  "fatti": [
+    "Tutto il Piemonte",
+    "7 giorni su 7, 8:00–20:00",
+    "Appuntamenti in tempi brevi",
+    "Referto immediato"
+  ],
+  "kit": [
+    {
+      "titolo": "Visita a domicilio",
+      "prezzo": "250 €",
+      "testo": "Visita completa a casa Sua, con elettrocardiogramma ed ecografie comprese. Utile per chi ha difficoltà a muoversi e per evitare ricoveri non necessari.",
+      "img": "/alberti-7vgy/img/ritratto-largo.webp"
+    },
+    {
+      "titolo": "ECG a domicilio",
+      "prezzo": "da 70 €",
+      "testo": "Elettrocardiografo bluetooth con app dedicata: il tracciato si condivide a distanza e il referto è immediato. Per allerta (100 €) c'è anche il colloquio con la psicologa e con me in video-chiamata.",
+      "img": "/alberti-7vgy/img/kit-ecg.webp"
+    },
+    {
+      "titolo": "Ecografie a domicilio",
+      "prezzo": "200 €",
+      "testo": "Una sola sonda collegata al telefono: ecocardiogramma, eco-doppler delle carotidi e degli arti inferiori, ecografia toraco-polmonare.",
+      "img": "/alberti-7vgy/img/kit-eco.webp"
+    },
+    {
+      "titolo": "Holter a domicilio",
+      "prezzo": "150 €",
+      "testo": "Una fascia senza elettrodi e senza fili, facile da indossare, che registra tracciati affidabili anche durante le attività. Referto entro 24 ore.",
+      "img": "/alberti-7vgy/img/kit-holter.webp"
+    },
+    {
+      "titolo": "ECG da sforzo in studio",
+      "prezzo": "160 €",
+      "testo": "Al cicloergometro, con assistenza infermieristica: utile soprattutto per chi ha problemi coronarici.",
+      "img": "/alberti-7vgy/img/kit-sforzo.webp"
+    },
+    {
+      "titolo": "Presa in carico",
+      "prezzo": "50 € a trimestre",
+      "testo": "Per chi ha bisogno di controlli frequenti: un'app a casa o in studio per ripetere ECG ed ecografie, monitorare i parametri e fare tele-visite.",
+      "img": "/alberti-7vgy/img/presa-in-carico.webp"
+    }
+  ],
+  "numeri": [
+    {
+      "valore": 15000,
+      "testo": "angioplastiche coronariche"
+    },
+    {
+      "valore": 7000,
+      "testo": "esami IVUS"
+    },
+    {
+      "valore": 2000,
+      "testo": "procedure di Rotablator"
+    },
+    {
+      "valore": 1000,
+      "testo": "angioplastiche di carotidi, reni e arterie delle gambe"
+    }
+  ],
+  "storia": {
+    "titolo": "La mia storia",
+    "testo": "Coronarografia, angioplastica e stent hanno aperto una nuova era: con piccoli tubicini dal polso o dall'inguine si curano cuore e arterie evitando le classiche operazioni. Dal 1991 al 1993, all'Ospedale Mauriziano, sono stato il primo in Piemonte a impiantare stent nelle coronarie e a usare il Rotablator. Dal 1993 al 2006 ho diretto la Cardiologia di Villa Maria Pia, dove sono stato il primo in Italia a eseguire la valvuloplastica percutanea tricuspidale. Dal 2007 al 2011, alla Clinica Cellini, ho introdotto per primo in Piemonte l'aterectomia con il laser. Dal 2019 porto questa esperienza a domicilio.",
+    "tappe": [
+      {
+        "anno": "1991",
+        "testo": "Primo in Piemonte a impiantare stent coronarici, Ospedale Mauriziano"
+      },
+      {
+        "anno": "1993",
+        "testo": "Direttore della Cardiologia di Villa Maria Pia, fino al 2006"
+      },
+      {
+        "anno": "2007",
+        "testo": "Clinica Cellini: primo in Piemonte con l'aterectomia laser"
+      },
+      {
+        "anno": "2012",
+        "testo": "Consulente in ospedali pubblici e privati in tutta Italia"
+      },
+      {
+        "anno": "2019",
+        "testo": "Nasce Cardioalberti: la cardiologia a domicilio"
+      }
+    ]
+  },
+  "mente": {
+    "titolo": "Mente e cuore",
+    "testo": "Ansie e paure spesso simulano o complicano i problemi cardiovascolari. Per questo lavoro con la psicologa dottoressa Ilaria Falcone: pazienti, familiari e caregiver possono essere aiutati nelle loro difficoltà, in presenza e online.",
+    "url": "https://www.dottoressailaria.com/"
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "domicilio",
+    "categoria": "A domicilio",
+    "titolo": "Visita cardiologica a domicilio a Torino: come funziona e quando serve",
+    "img": "/alberti-7vgy/img/kit-ecg.webp",
+    "tempoLettura": "6 min",
+    "intro": "Spostarsi per una visita non è sempre facile: per una persona anziana, per chi ha difficoltà a camminare, per chi è appena tornato dall'ospedale. La visita cardiologica a domicilio porta a casa la stessa qualità dello studio. Ecco come si svolge e per chi è utile.",
+    "sezioni": [
+      {
+        "titolo": "Il cardiologo che viene a casa",
+        "paragrafi": [
+          "Per molti anni la cardiologia si è fatta solo in ospedale o in studio, perché gli strumenti erano grandi e fissi. Oggi elettrocardiografi, ecografi e Holter sono diventati piccoli e portatili, e si collegano al telefono o al tablet. Questo permette di fare a casa del paziente gli stessi esami di base che si fanno in ambulatorio.",
+          "Dal 2019 ho scelto di organizzare il mio lavoro così: uno studio «agile», a Torino in zona Gran Madre, che può spostarsi in tutto il Piemonte, sette giorni su sette."
+        ]
+      },
+      {
+        "titolo": "Per chi è utile",
+        "paragrafi": [
+          "La visita a domicilio è particolarmente indicata per:"
+        ],
+        "elenco": [
+          "persone anziane o con difficoltà a muoversi;",
+          "chi è stato dimesso da poco dall'ospedale e ha bisogno di un controllo;",
+          "pazienti che non possono uscire di casa per altre malattie;",
+          "chi vuole evitare un accesso in ospedale che potrebbe non essere necessario;",
+          "familiari e caregiver che assistono una persona fragile."
+        ]
+      },
+      {
+        "titolo": "Come si svolge",
+        "paragrafi": [
+          "La visita comincia come in studio: un colloquio sui disturbi, sulle malattie già note e sui farmaci in uso, poi la visita. Nel costo sono compresi l'elettrocardiogramma, eseguito con un apparecchio che trasmette il tracciato via bluetooth, e le ecografie necessarie, fatte con una sonda singola collegata a un'applicazione.",
+          "Con la stessa sonda si possono eseguire l'ecocardiogramma, l'eco-doppler delle carotidi, l'eco-doppler degli arti inferiori e l'ecografia del torace e dei polmoni. Il referto è immediato e può essere condiviso a distanza con il medico curante."
+        ]
+      },
+      {
+        "titolo": "Holter e controlli nel tempo",
+        "paragrafi": [
+          "Quando servono più dati, a casa si può applicare anche un Holter: uso uno strumento senza elettrodi e senza fili, una fascia che si indossa facilmente e registra il ritmo anche durante le attività di tutti i giorni. Il referto arriva entro 24 ore.",
+          "Per chi ha bisogno di controlli frequenti, per esempio dopo un cambio di terapia, esiste la presa in carico: un'applicazione installata a casa o in studio permette di ripetere ECG ed ecografie, monitorare i parametri e fare tele-visite di controllo."
+        ]
+      },
+      {
+        "titolo": "Quando il problema è (anche) l'ansia",
+        "paragrafi": [
+          "Palpitazioni, senso di oppressione al petto, fiato corto: a volte dietro questi disturbi c'è un problema del cuore, a volte l'ansia, spesso entrambe le cose. Ansie e paure possono simulare o complicare i problemi cardiovascolari.",
+          "Per questo lavoro con la psicologa dottoressa Ilaria Falcone. Quando l'ECG viene eseguito per un dubbio o un allarme, l'esame è integrato da un colloquio con la psicologa in presenza e con me in video-chiamata."
+        ]
+      },
+      {
+        "titolo": "Quando invece serve l'ospedale",
+        "paragrafi": [
+          "La visita a domicilio non sostituisce il pronto soccorso. In caso di dolore al petto intenso o che dura più di qualche minuto, fiato molto corto, svenimento, difficoltà a parlare o debolezza improvvisa di un braccio o di una gamba, bisogna chiamare subito il 112.",
+          "In tutte le altre situazioni, una valutazione a casa può aiutare a capire se e quando è necessario un approfondimento in ospedale, ed evitare ricoveri non necessari."
+        ]
+      },
+      {
+        "titolo": "Cosa preparare per la visita",
+        "paragrafi": [
+          "Per sfruttare al meglio il tempo della visita, è utile tenere a portata di mano:"
+        ],
+        "elenco": [
+          "l'elenco dei farmaci che assume, con le dosi;",
+          "gli esami e i referti più recenti, compresi eventuali ECG ed ecografie precedenti;",
+          "le lettere di dimissione, se è stato ricoverato;",
+          "un diario della pressione o del battito, se lo tiene;",
+          "una persona di famiglia, se può aiutarLa a ricordare i dettagli."
+        ],
+        "chiusura": "Non serve preparare la stanza: bastano un letto o un divano e una presa di corrente vicina."
+      },
+      {
+        "titolo": "In studio o a casa?",
+        "paragrafi": [
+          "Se può spostarsi senza difficoltà, la visita in studio, in via Cosmo a Torino, comprende anch'essa ECG ed ecografie, e permette di aggiungere altri esami, come l'ECG da sforzo al cicloergometro con assistenza infermieristica. Se invece uscire di casa è faticoso o rischioso, la visita a domicilio offre gli stessi esami di base nel luogo più comodo per Lei. Ne parliamo insieme al momento della prenotazione.",
+          "In entrambi i casi il referto è immediato e, se lo desidera, posso inviarlo direttamente al Suo medico di famiglia, così che tutte le informazioni restino in un unico percorso di cura."
+        ]
+      },
+      {
+        "titolo": "Come prenotare",
+        "paragrafi": [
+          "Può scrivermi o chiamarmi al 340 888 9138, anche su WhatsApp e Telegram, tutti i giorni dalle 8 alle 20. Di solito riesco a fissare l'appuntamento in tempi brevi. Mi indichi il motivo della visita, l'indirizzo e i farmaci che prende: mi aiuterà a prepararmi al meglio.",
+          "Ho dedicato gran parte della mia carriera alla cardiologia interventistica, in ospedale. Oggi porto quella esperienza a domicilio, con strumenti moderni e con il tempo necessario per ascoltare la persona."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo cardiologo."
+  },
+  "blog": [
+    {
+      "id": "come-funziona-il-cuore",
+      "categoria": "In Ascolto",
+      "titolo": "Come funziona il cuore: idraulica, meccanica ed elettricità",
+      "img": "/alberti-7vgy/img/blog-cuore.webp",
+      "tempoLettura": "4 min",
+      "intro": "Per capire i problemi del cuore conviene partire da come funziona. Le sue funzioni principali sono tre, e sono strettamente collegate tra loro.",
+      "sezioni": [
+        {
+          "titolo": "La funzione idraulica",
+          "paragrafi": [
+            "Il cuore pompa il sangue necessario a ogni organo per svolgere il proprio ruolo. Tra gli organi che ricevono sangue c'è anche il muscolo cardiaco, che lo riceve attraverso le coronarie, le arterie del cuore. Se le coronarie si restringono, il cuore non riesce a funzionare in modo adeguato, né per sé né per gli altri organi."
+          ]
+        },
+        {
+          "titolo": "La funzione meccanica",
+          "paragrafi": [
+            "La parte destra del cuore riceve il sangue venoso, ormai povero di ossigeno, e lo spinge nei polmoni, dove si ricarica. Dai polmoni il sangue torna nella parte sinistra del cuore, da cui viene pompato nelle coronarie e nelle arterie di tutto il corpo.",
+            "Per farlo il cuore lavora come una pompa che aspira e spinge, e le sue valvole si aprono e si chiudono perché il sangue vada nel verso giusto. Se le valvole non funzionano bene, o se il muscolo non ha forza a sufficienza, la circolazione ne risente."
+          ]
+        },
+        {
+          "titolo": "La funzione elettrica",
+          "paragrafi": [
+            "Il cuore produce impulsi elettrici sincronizzati che fanno contrarre e rilasciare atri e ventricoli al momento giusto. Il segnale nasce in un punto preciso, il segnapassi naturale, e si propaga lungo vie preferenziali. Se il segnapassi o le vie di conduzione non funzionano bene, il ritmo si altera."
+          ]
+        },
+        {
+          "titolo": "Tre funzioni collegate",
+          "paragrafi": [
+            "Queste funzioni dipendono l'una dall'altra. Le cellule che producono e trasmettono l'impulso elettrico hanno bisogno di sangue; il muscolo ha bisogno dell'impulso per contrarsi; la circolazione ha bisogno di muscolo e valvole efficienti. Infine il cuore deve potersi muovere liberamente nel torace, dentro il pericardio, un sacchetto che lo avvolge: se il pericardio si ammala, anche il cuore ne risente.",
+            "Capire questo intreccio aiuta a capire perché, in visita, valuto insieme il ritmo con l'ECG, la struttura e le valvole con l'ecografia, e la circolazione."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo cardiologo."
+    },
+    {
+      "id": "le-coronarie",
+      "categoria": "In Ascolto",
+      "titolo": "Le coronarie: anatomia, malattia e cure",
+      "img": "/alberti-7vgy/img/referto.webp",
+      "tempoLettura": "5 min",
+      "intro": "Anche il cuore ha bisogno di sangue, e lo riceve dalle arterie coronarie. Quando si restringono compaiono l'angina e, nei casi più gravi, l'infarto.",
+      "sezioni": [
+        {
+          "titolo": "Il cuore nutre se stesso",
+          "paragrafi": [
+            "Tutti gli organi hanno bisogno di sangue, e il cuore lo spinge nelle arterie. Ma anche il cuore è un muscolo che ha bisogno di sangue: appena uscito dal cuore, il sangue prende per prima la strada delle coronarie, che riportano nutrimento al cuore stesso.",
+            "Con il tempo le arterie diventano più rigide (aterosclerosi) e nelle loro pareti si formano placche che ne restringono il lume. Vale per tutte le arterie, e quindi anche per le coronarie."
+          ]
+        },
+        {
+          "titolo": "Angina e infarto",
+          "paragrafi": [
+            "Quando il cuore riceve meno sangue del necessario si verifica l'ischemia, che si manifesta come angina: una sensazione di peso o di dolore al petto. Se il sangue manca solo sotto sforzo, l'angina compare durante l'attività fisica, con forti emozioni o con il freddo. Se manca sempre, compare anche a riposo.",
+            "Quando un'arteria si chiude del tutto si verifica l'infarto, con un dolore simile all'angina ma più intenso e prolungato, in genere oltre mezz'ora. Alcune persone, per esempio molti diabetici, possono avvertire pochi sintomi o nessuno."
+          ]
+        },
+        {
+          "titolo": "Perché i sintomi cambiano da persona a persona",
+          "paragrafi": [
+            "Le coronarie principali sono tre e si ramificano in molti rami, spesso collegati tra loro. I disturbi sono tanto più marcati quanto più importante è l'arteria colpita. A volte, invece, i collegamenti tra le arterie, i cosiddetti circoli collaterali, compensano la mancanza di sangue e la persona non avverte nulla.",
+            "L'evoluzione è in parte imprevedibile: un restringimento del 75% può restare stabile per anni, mentre uno del 25% può peggiorare rapidamente."
+          ]
+        },
+        {
+          "titolo": "Come si cura oggi",
+          "paragrafi": [
+            "Coronarografia, angioplastica e stent hanno aperto una nuova era: introducendo piccoli cateteri dal polso o dall'inguine si possono vedere e trattare i restringimenti delle coronarie, spesso evitando l'intervento chirurgico.",
+            "In ospedale ho dedicato gran parte della mia carriera a questo campo. Oggi, in visita, il mio compito è riconoscere i segnali, scegliere gli esami giusti e indirizzare la persona, quando serve, verso il percorso più adatto."
+          ]
+        },
+        {
+          "titolo": "Quando chiamare subito",
+          "paragrafi": [
+            "Un dolore al petto intenso, che non passa dopo pochi minuti, magari con sudorazione, nausea o fiato corto, richiede di chiamare subito il 112."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo cardiologo."
+    },
+    {
+      "id": "event-recorder",
+      "categoria": "In Ascolto",
+      "titolo": "Event recorder: un nuovo modo di controllare le aritmie",
+      "img": "/alberti-7vgy/img/kit-recorder.webp",
+      "tempoLettura": "3 min",
+      "intro": "Un piccolo dispositivo tascabile permette di registrare un ECG in qualunque momento e inviarlo al cardiologo. È utile per seguire una nuova terapia e per scoprire aritmie che l'Holter non riesce a «catturare».",
+      "sezioni": [
+        {
+          "titolo": "Due dita, e il tracciato parte",
+          "paragrafi": [
+            "Basta appoggiare due dita su ciascuna delle due piastrine del dispositivo per avviare la registrazione dell'ECG. Il paziente lo porta con sé e può inviare frequenti tracciati al cardiologo, così da controllare l'aritmia e valutare insieme eventuali cambi di terapia."
+          ]
+        },
+        {
+          "titolo": "Curare a casa, quando è possibile",
+          "paragrafi": [
+            "Quando compare una nuova aritmia spesso serve iniziare una terapia e ripetere molti ECG per vederne l'effetto. Con l'event recorder si possono seguire a domicilio anche aritmie che altrimenti richiederebbero un ricovero."
+          ]
+        },
+        {
+          "titolo": "Le aritmie che vanno e vengono",
+          "paragrafi": [
+            "Alcune aritmie si presentano di rado e difficilmente vengono registrate da un Holter di 24 o 48 ore. Con l'event recorder si registra l'ECG proprio nel momento in cui compaiono i disturbi. A volte si scopre un'aritmia innocua, altre volte un problema da trattare.",
+            "Se pensa che possa esserLe utile, me lo chieda in visita: posso fornirLe direttamente lo strumento."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita medica né le indicazioni del Suo cardiologo."
+    }
+  ],
+  "instagram": {
+    "handle": "cardioalberti",
+    "nota": "Proposta di contenuti per il mio profilo Instagram.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "kitEcg",
+        "titolo": "ECG a domicilio: per chi serve",
+        "sottotitolo": "Anziani, dimessi da poco, chi non può uscire",
+        "didascalia": "Con un elettrocardiografo bluetooth l'ECG si fa a casa, con referto immediato e condivisibile con il medico curante. Utile anche per evitare accessi in ospedale non necessari.",
+        "hashtag": "#ecg #cardiologo #torino #domicilio"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Ansia o cuore? Come distinguerli",
+        "risposta": "Spesso servono tutti e due gli sguardi.",
+        "didascalia": "Palpitazioni e oppressione al petto possono venire dal cuore, dall'ansia o da entrambi. Per questo l'ECG «di allerta» si integra con un colloquio con la psicologa.",
+        "hashtag": "#ansia #palpitazioni #psicocardiologia"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Holter: come si fa",
+        "punti": [
+          "Una fascia, niente fili né elettrodi",
+          "Si indossa per 24-48 ore",
+          "Si fa vita normale",
+          "Referto entro 24 ore"
+        ],
+        "didascalia": "L'Holter registra il ritmo del cuore durante la giornata. Con la fascia senza fili è semplice da indossare anche per chi ha la pelle delicata.",
+        "hashtag": "#holter #aritmie #cuore"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "telecardiologia@cardioalberti.com",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio Cardioalberti",
+        "indirizzo": "Via Umberto Cosmo 6",
+        "citta": "Torino",
+        "cap": "10131",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di via Cosmo 6, Torino",
+        "telefoni": [
+          {
+            "label": "Info e prenotazioni",
+            "numero": "340 888 9138"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": [],
+    "canali": [
+      {
+        "nome": "Assistenza cardiologica",
+        "url": "https://t.me/aalberti",
+        "testo": "Telegram"
+      },
+      {
+        "nome": "Assistenza psicologica",
+        "url": "https://t.me/dr_ilaria",
+        "testo": "Telegram"
+      }
+    ]
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Mi scriva su WhatsApp o mi chiami, tutti i giorni dalle 8 alle 20. Di solito fissiamo l'appuntamento in tempi brevi.",
+    "telefono": "3408889138",
+    "telefonoLabel": "340 888 9138",
+    "chiamaLabel": "lo studio",
+    "whatsapp": "393408889138",
+    "oggettoMail": "Richiesta di visita cardiologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Ricevo e mi sposto tutti i giorni, anche il sabato e la domenica. Indichi quando preferisce: Le confermo l'appuntamento su WhatsApp.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        0
+      ],
+      "mattina": [
+        "08:30",
+        "09:30",
+        "10:30",
+        "11:30",
+        "12:30"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30",
+        "18:30",
+        "19:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e luogo vengono confermati su WhatsApp.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": "https://cardioalberti.com/privacy",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio se preferisce la visita a domicilio e l'indirizzo",
+      "motivi": [
+        "Visita cardiologica",
+        "ECG",
+        "Holter",
+        "Ecografia del cuore",
+        "Palpitazioni",
+        "Ansia e cuore",
+        "Controllo terapia",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "un controllo cardiologico",
+        "un elettrocardiogramma",
+        "un Holter",
+        "un'ecografia del cuore",
+        "delle palpitazioni",
+        "ansia e disturbi al cuore",
+        "un controllo della terapia",
+        "un altro disturbo cardiologico"
+      ],
+      "luoghi": [
+        {
+          "nome": "A domicilio",
+          "frase": "il mio domicilio"
+        },
+        {
+          "nome": "Studio, Via Umberto Cosmo 6",
+          "frase": "lo studio di via Cosmo 6, Torino"
+        }
+      ]
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F0F6F4",
+      "ink": "#11414B",
+      "muted": "#557078",
+      "line": "#D7E6E2",
+      "brand": "#11414B",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#68CD9A",
+      "deep": "#0A2A30",
+      "deep-ink": "#DAEEE8"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@400;700&display=swap",
+    "fontTitoli": "Montserrat",
+    "fontTesti": "Lato",
+    "favicon": "/alberti-7vgy/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/alberti-7vgy/brand/brand.json",
+    "pagine": [
+      "https://www.cardioalberti.com/",
+      "https://www.cardioalberti.com/contattaci",
+      "https://www.cardioalberti.com/in-ascolto"
+    ]
+  }
+}

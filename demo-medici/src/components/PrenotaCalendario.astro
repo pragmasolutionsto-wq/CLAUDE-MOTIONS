@@ -69,12 +69,12 @@ const cfg = {
         <div class="mt-4 grid gap-3">
           <label class="block text-sm font-medium">Motivo della visita
             <select name="motivo" class="campo mt-1">
-              {box.motivi.map((x, i) => <option value={box.motiviFrase[i]}>{x}</option>)}
+              {((c as any).motivi ?? box.motivi).map((x: string, i: number) => <option value={((c as any).motiviFrase ?? box.motiviFrase)[i]}>{x}</option>)}
             </select>
           </label>
           <label class="block text-sm font-medium">Sede
             <select name="sede" class="campo mt-1">
-              {m.sedi.luoghi.map((l) => <option value={l.frase}>{l.indirizzo}</option>)}
+              {((c as any).luoghi ?? m.sedi.luoghi.map((l) => ({ nome: l.indirizzo, frase: l.frase }))).map((l: any) => <option value={l.frase}>{l.nome}</option>)}
             </select>
           </label>
         </div>

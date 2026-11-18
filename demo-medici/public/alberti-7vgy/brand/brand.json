@@ -1,0 +1,116 @@
+{
+  "medico": "Dott. Alessandro Alberti",
+  "specialita": "Cardiologia (cardiologia interventistica), cardiologo a domicilio",
+  "sito": "https://cardioalberti.com/",
+  "logo": null,
+  "logoNota": "Nessun logo sul sito: logotipo di testo 'Cardioalberti' + marchio tondo col volto",
+  "colori": {
+    "brand": "#11414B",
+    "brand2": "#68CD9A",
+    "accento_sito": "#B70601"
+  },
+  "font": {
+    "sito": [
+      "Montserrat",
+      "Lato"
+    ],
+    "demo": [
+      "Montserrat",
+      "Lato"
+    ]
+  },
+  "contatti": {
+    "telefono_whatsapp": "340 888 9138",
+    "email": "telecardiologia@cardioalberti.com",
+    "studio": "Via Umberto Cosmo 6, 10131 Torino",
+    "telegram": [
+      "https://t.me/aalberti",
+      "https://t.me/dr_ilaria"
+    ]
+  },
+  "orari": "Tutti i giorni 8:00-20:00, a domicilio in tutto il Piemonte",
+  "foto": [
+    "foto-01-ritratto.jpg (volti sullo sfondo sfocati nella versione web)",
+    "foto-02-in-ospedale.jpg",
+    "foto-03-studio.jpg",
+    "foto-04-presa-in-carico.png"
+  ],
+  "strumenti": [
+    "strumento-ecg-bluetooth.jpg",
+    "strumento-ecografo-sonda.png",
+    "strumento-holter-fascia.jpg",
+    "strumento-event-recorder.jpg",
+    "strumento-cicloergometro.jpg",
+    "referto-ecg-eco.png",
+    "blog-cuore.jpg"
+  ],
+  "prezzi": [
+    {
+      "voce": "Visita a domicilio",
+      "prezzo": "250 €"
+    },
+    {
+      "voce": "ECG a domicilio",
+      "prezzo": "da 70 €"
+    },
+    {
+      "voce": "Ecografie a domicilio",
+      "prezzo": "200 €"
+    },
+    {
+      "voce": "Holter a domicilio",
+      "prezzo": "150 €"
+    },
+    {
+      "voce": "ECG da sforzo in studio",
+      "prezzo": "160 €"
+    },
+    {
+      "voce": "Presa in carico",
+      "prezzo": "50 € a trimestre"
+    }
+  ],
+  "numeri": [
+    {
+      "valore": 15000,
+      "testo": "angioplastiche coronariche"
+    },
+    {
+      "valore": 7000,
+      "testo": "esami IVUS"
+    },
+    {
+      "valore": 2000,
+      "testo": "procedure di Rotablator"
+    },
+    {
+      "valore": 1000,
+      "testo": "angioplastiche di carotidi, reni e arterie delle gambe"
+    }
+  ],
+  "storia": [
+    {
+      "anno": "1991",
+      "testo": "Primo in Piemonte a impiantare stent coronarici, Ospedale Mauriziano"
+    },
+    {
+      "anno": "1993",
+      "testo": "Direttore della Cardiologia di Villa Maria Pia, fino al 2006"
+    },
+    {
+      "anno": "2007",
+      "testo": "Clinica Cellini: primo in Piemonte con l'aterectomia laser"
+    },
+    {
+      "anno": "2012",
+      "testo": "Consulente in ospedali pubblici e privati in tutta Italia"
+    },
+    {
+      "anno": "2019",
+      "testo": "Nasce Cardioalberti: la cardiologia a domicilio"
+    }
+  ],
+  "blog_sito": "In Ascolto (canale Telegram / pagina blog)",
+  "social": "nessun profilo Instagram",
+  "collaborazione": "Dott.ssa Ilaria Falcone, psicologa (dottoressailaria.com)"
+}

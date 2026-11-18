@@ -163,6 +163,19 @@ html { scroll-behavior: smooth; }
   .senza-moto .avanzamento { display: none; }
 }
 
+/* Layout "domicilio": scelta del luogo, chip su fondo scuro, timeline che si accende */
+@layer components {
+  .dove-scelta { color: #fff; transition: border-color .2s, background-color .2s, color .2s; }
+  .dove-scelta[aria-pressed="true"] { border-color: var(--c-brand2); background: var(--c-brand2); color: var(--c-deep); }
+  .chip-scuro { background: transparent; border-color: rgb(255 255 255 / .25); color: #fff; }
+  .chip-scuro[aria-pressed="true"] { border-color: var(--c-brand2); background: var(--c-brand2); color: var(--c-deep); }
+  .tappa-d .punto { transition: background-color .4s, scale .4s; }
+  .tappa-d.accesa .punto { background: var(--c-brand2); scale: 1.4; }
+  .senza-moto .tappa-d .punto { background: var(--c-brand2); }
+  .stile-domicilio .card { border-radius: 28px; }
+  .senza-moto [data-cursore] { display: none; }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }
