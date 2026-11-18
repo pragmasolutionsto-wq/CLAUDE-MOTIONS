@@ -193,6 +193,22 @@ html { scroll-behavior: smooth; }
   .senza-moto .punto-visus .alone { animation: none; }
 }
 
+/* Layout "eta": cursore dell'età, scelte, schede che si girano */
+@layer components {
+  .eta-range { -webkit-appearance: none; appearance: none; height: 10px; border-radius: 999px; background: color-mix(in srgb, #fff 15%, transparent); outline-offset: 6px; cursor: pointer; background-image: linear-gradient(var(--c-brand2), var(--c-brand2)); background-size: var(--p, 39%) 100%; background-repeat: no-repeat; }
+  .eta-range::-webkit-slider-thumb { -webkit-appearance: none; width: 28px; height: 28px; border-radius: 999px; background: #fff; border: 6px solid var(--c-brand2); }
+  .eta-range::-moz-range-thumb { width: 18px; height: 18px; border-radius: 999px; background: #fff; border: 6px solid var(--c-brand2); }
+  .gruppo-scelta { transition: border-color .2s, background-color .2s; }
+  .gruppo-scelta[aria-pressed="true"] { border-color: var(--c-brand); background: var(--c-surface); }
+  .chip-eta { border-radius: 999px; font-weight: 600; }
+  .chip-eta[aria-pressed="true"] { border-color: var(--c-brand); background: var(--c-brand); color: #fff; }
+  .carta-esame { transform-style: preserve-3d; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+  .carta-esame[aria-pressed="true"] { transform: rotateY(180deg); }
+  .carta-esame .faccia { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+  .carta-esame .retro { transform: rotateY(180deg); }
+  .stile-eta .card { border-radius: 20px; }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }

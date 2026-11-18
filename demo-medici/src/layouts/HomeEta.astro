@@ -1,0 +1,397 @@
+---
+// Layout "eta" (prima demo: Simona Scalabrin, oculista). Costruito sul suo "calendario dei controlli":
+// ritratto in una forma a occhio (come il suo logo) che si apre con un battito di ciglia, marchio che sbatte le palpebre,
+// selettore "Quanti anni ha?" che mostra il controllo consigliato e precompila la prenotazione,
+// prenotazione in due passi (per chi è la visita → motivo) con mail già scritta, esami su schede che si girano,
+// ricerca e insegnamento in un mazzo di carte che si apre a ventaglio con lo scroll, sedi studio + Koelliker.
+// Lenis. Con prefers-reduced-motion: tutto fermo e visibile.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = x.hero.box;
+const gruppi = box.gruppi as any[];
+const luoghi = m.sedi.luoghi as any[];
+const studio = luoghi[0];
+const mail = emailRichieste(m);
+const testo = (f: string) => `Buongiorno Dottoressa, vorrei prenotare ${f} presso ${studio.frase}.`;
+const mailto = (f: string) => `mailto:${mail}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(testo(f))}`;
+const href0 = mailto(gruppi[1].frasi[0]);
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const fasce = x.eta as any[];
+const tappe = [3, 6, 8, 40, 45, 65];
+const fotoGruppo: Record<string, string> = { bambino: foto.bambina, adulto: foto.occhiali, senior: foto.senior };
+const occhio = `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" preserveAspectRatio="none"><path d="M50 0 C95 25 95 95 50 120 C5 95 5 25 50 0Z"/></svg>')}")`;
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/90 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} class="flex min-w-0 items-center" aria-label={m.brand.logoAlt}><img src={m.brand.logoScuro} alt={m.brand.logoAlt} width="506" height="115" class="h-9 w-auto sm:h-11" /></a>
+      <nav class="hidden items-center gap-7 font-head text-[15px] font-medium text-ink/70 lg:flex">
+        <a href="#eta" class="hover:text-brand">Quando fare i controlli</a><a href="#aree" class="hover:text-brand">Visite ed esami</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#articoli" class="hover:text-brand">Blog</a><a href="#sedi" class="hover:text-brand">Contatti</a>
+      </nav>
+      <a href="#prenota-box" class="btn !min-h-[42px] shrink-0 !rounded-full bg-brand2 !px-5 text-sm text-white hover:opacity-90"><Icona nome="calendario" class="h-4 w-4" /> Prenoti</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden" data-hero>
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-8 sm:px-8 lg:grid-cols-12 lg:pb-20 lg:pt-14">
+        <div class="lg:col-span-7">
+          <p class="flex items-center gap-3 font-head text-[14px] font-semibold uppercase tracking-[0.16em] text-brand" data-entra><img src={m.brand.marchio} alt="" width="302" height="241" class="h-7 w-auto origin-center" data-blink />{x.hero.eyebrow}</p>
+          <h1 class="mt-5 font-head text-[2.6rem] font-bold leading-[1.02] tracking-tight text-ink sm:text-[4rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 font-head text-xl font-semibold" data-entra>{nomeCompleto(m)} · {m.specialita}</p>
+          <p class="mt-2 max-w-xl text-[17px] leading-relaxed text-muted" data-entra>{x.hero.testo}</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row" data-entra>
+            <a href="#eta" class="btn !rounded-full bg-brand text-white hover:opacity-90"><Icona nome="calendario" /> Quando fare i controlli</a>
+            <a href={telHref(m.prenota.telefono)} class="btn btn-ghost !rounded-full"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          </div>
+          <ul class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[15px] font-semibold text-ink/80" data-entra>{x.fatti.map((f: string) => <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand2"></span>{f}</li>)}</ul>
+        </div>
+        <div class="relative order-first lg:order-none lg:col-span-5">
+          <div class="occhio-foto relative mx-auto aspect-[5/6] w-full max-w-[300px] sm:max-w-[440px]" style={`-webkit-mask-image:${occhio};mask-image:${occhio};-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center`} data-occhio>
+            <img src={foto.ritratto} alt={foto.ritrattoAlt} width="1100" height="1327" class="h-full w-full object-cover object-[50%_25%]" data-ritratto />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUANTI ANNI HA? -->
+    <section id="eta" class="bg-deep px-4 py-16 text-white sm:px-8 sm:py-24" data-eta-box>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-5">
+            <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>Quanti anni ha chi deve fare la visita?</h2>
+            <p class="mt-3 max-w-md text-deep-ink/80">Sposti il cursore: Le dico ogni quanto controllare gli occhi, secondo il calendario che seguo nel mio studio.</p>
+          </div>
+          <div class="lg:col-span-7">
+            <p class="font-head font-extrabold leading-none" aria-hidden="true"><span class="text-[6rem] text-brand2 sm:text-[9rem]" data-anni>35</span><span class="ml-3 text-3xl text-deep-ink/70">anni</span></p>
+          </div>
+        </div>
+        <div class="relative mt-8">
+          <label for="eta-range" class="sr-only">Età</label>
+          <input id="eta-range" type="range" min="0" max="90" value="35" step="1" class="eta-range w-full" data-eta-range aria-describedby="eta-risultato" />
+          <div class="relative mt-2 h-6 text-[12px] text-deep-ink/60" aria-hidden="true">
+            {tappe.map((t) => <span class={`absolute -translate-x-1/2 ${[6, 45].includes(t) ? 'hidden sm:inline' : ''}`} style={`left: calc(${(t / 90) * 100}% + ${(0.5 - t / 90) * 28}px)`}>{t}</span>)}
+          </div>
+        </div>
+        <div class="mt-8 grid gap-6 rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 sm:p-8 lg:grid-cols-12 lg:items-center" id="eta-risultato" aria-live="polite">
+          <div class="lg:col-span-8">
+            {fasce.map((f, i) => (
+              <div class={`fascia ${f.da <= 35 && 35 <= f.a ? '' : 'hidden'}`} data-fascia={i} data-da={f.da} data-a={f.a}>
+                <p class="font-head text-[13px] font-semibold uppercase tracking-[0.16em] text-brand2">{f.titolo}</p>
+                <p class="mt-2 font-head text-[1.7rem] font-bold leading-tight sm:text-[2.2rem]">{f.frequenza}</p>
+                <p class="mt-3 max-w-2xl text-[16px] leading-relaxed text-deep-ink/85">{f.testo}</p>
+              </div>
+            ))}
+            <p class="mt-4 text-[14px] text-deep-ink/60">{x.etaNota}</p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right">
+            <a href="#prenota-box" class="btn !rounded-full bg-brand2 text-white hover:opacity-90" data-eta-prenota><Icona nome="calendario" /> Prenoti questo controllo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRENOTAZIONE IN DUE PASSI -->
+    <section id="prenota-box" class="px-4 py-16 sm:px-8 sm:py-24" data-prenota-box data-mail={mail} data-oggetto={m.prenota.oggettoMail} data-sede={studio.frase}>
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>{box.titolo}</h2>
+        <div class="mt-8 grid gap-4 sm:grid-cols-3" role="group" aria-label="Per chi è la visita">
+          {gruppi.map((g, i) => (
+            <button type="button" class="gruppo-scelta group flex items-center gap-4 rounded-2xl border-2 border-line p-3 text-left" data-gruppo={g.id} aria-pressed={i === 1 ? 'true' : 'false'}>
+              <img src={fotoGruppo[g.id]} alt="" width="200" height="200" class="h-16 w-16 shrink-0 rounded-xl object-cover sm:h-20 sm:w-20" />
+              <span><span class="block font-head text-xl font-bold">{g.nome}</span><span class="block text-[14px] text-muted">{g.nota}</span></span>
+            </button>
+          ))}
+        </div>
+        <p class="mt-8 font-head text-[13px] font-semibold uppercase tracking-[0.16em] text-brand">{box.motivoLabel}</p>
+        {gruppi.map((g, gi) => (
+          <div class={`mt-3 flex flex-wrap gap-2 ${gi === 1 ? '' : 'hidden'}`} data-motivi={g.id}>
+            {g.motivi.map((t: string, i: number) => <button type="button" class="chip chip-eta" data-chip="motivo" data-frase={g.frasi[i]} aria-pressed={gi === 1 && i === 0 ? 'true' : 'false'}>{t}</button>)}
+          </div>
+        ))}
+        <div class="mt-8 grid gap-6 rounded-2xl bg-surface p-6 sm:p-8 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-8">
+            <p class="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">La Sua mail, già scritta</p>
+            <p class="mt-2 font-head text-[1.3rem] font-medium leading-snug text-ink sm:text-[1.6rem]" data-anteprima>{testo(gruppi[1].frasi[0])}</p>
+          </div>
+          <div class="flex flex-col gap-3 lg:col-span-4">
+            <a href={href0} data-prenota class="btn !rounded-full bg-brand text-white hover:opacity-90"><Icona nome="mail" /> Invii la mail</a>
+            <a href={x.sedi.miodottore} target="_blank" rel="noopener" class="btn btn-ghost !rounded-full"><Icona nome="calendario" /> Prenoti su MioDottore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESAMI: schede che si girano -->
+    <section id="aree" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>Visite ed esami nel mio studio</h2>
+          <p class="max-w-md text-muted">Selezioni una scheda per leggere come si svolge.</p>
+        </div>
+        <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" style="perspective: 1400px" data-esami>
+          {x.esami.map((e: any) => (
+            <li>
+              <button type="button" class="carta-esame relative block aspect-[4/5] w-full text-left" aria-pressed="false" data-carta>
+                <span class="faccia absolute inset-0 overflow-hidden rounded-2xl bg-white shadow-sm">
+                  <img src={e.img} alt="" width="900" height="600" loading="lazy" class="h-3/5 w-full object-cover" />
+                  <span class="flex h-2/5 flex-col justify-between p-5"><span class="font-head text-xl font-bold leading-tight">{e.nome}</span><span class="flex items-center gap-2 text-[14px] font-semibold text-brand">Come funziona <Icona nome="freccia" class="h-4 w-4" /></span></span>
+                </span>
+                <span class="faccia retro absolute inset-0 flex flex-col justify-between rounded-2xl bg-brand p-6 text-white">
+                  <span><span class="block font-head text-xl font-bold">{e.nome}</span><span class="mt-3 block text-[15px] leading-relaxed text-white/90">{e.testo}</span></span>
+                  <span class="text-[13px] font-semibold text-white/70">Selezioni di nuovo per tornare indietro</span>
+                </span>
+              </button>
+            </li>
+          ))}
+        </ul>
+        <div class="mt-14 grid overflow-hidden rounded-2xl bg-deep text-white lg:grid-cols-2">
+          <div class="overflow-hidden"><img src={foto.autorefrattometro} alt="" width="1200" height="801" loading="lazy" class="h-full min-h-[240px] w-full object-cover" data-parallasse /></div>
+          <div class="p-8 sm:p-10">
+            <img src={foto.koelliker} alt="Ospedale Koelliker" width="300" height="133" loading="lazy" class="h-14 w-auto rounded bg-white p-1" />
+            <h3 class="mt-5 font-head text-2xl font-bold">Esami e chirurgia all'Ospedale Koelliker</h3>
+            <p class="mt-2 text-deep-ink/80">In regime privato, assicurativo o in convenzione con il Servizio Sanitario Nazionale. Se serve un intervento, avvio io il percorso.</p>
+            <ul class="mt-5 flex flex-wrap gap-2" data-stagger>{x.esamiKoelliker.map((t: string) => <li class="rounded-full border border-white/20 px-3 py-1.5 text-[14px]">{t}</li>)}</ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO: mazzo che si apre a ventaglio -->
+    <section id="chi-sono" class="overflow-hidden px-4 py-16 sm:px-8 sm:py-24" data-ventaglio-sez>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-5">
+            <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>{x.ricerca.titolo}</h2>
+            <p class="mt-4 text-[17px] leading-relaxed text-ink/85">{x.ricerca.testo}</p>
+          </div>
+          <div class="flex items-center gap-4 lg:col-span-7 lg:justify-end">
+            <img src={foto.volto} alt="" width="320" height="320" loading="lazy" class="h-20 w-20 rounded-full object-cover" />
+            <p class="max-w-sm text-[15px] text-muted">Socia della Società Oftalmologica Italiana. Associate Editor di Minerva Ophthalmology.</p>
+          </div>
+        </div>
+        <ol class="relative mt-12 grid gap-4 md:grid-cols-2 lg:block lg:h-[22rem]" data-ventaglio>
+          {x.ricerca.voci.map((v: any, i: number) => (
+            <li class="carta-ventaglio rounded-2xl border border-line bg-white p-6 shadow-lg lg:absolute lg:top-0 lg:w-[19%]" style={`--i:${i}`} data-carta-v={i}>
+              <span class="block h-1.5 w-10 rounded-full" style={`background: ${i % 2 ? 'var(--c-brand2)' : 'var(--c-brand)'}`}></span>
+              <h3 class="mt-4 font-head text-lg font-bold leading-snug">{v.titolo}</h3>
+              <p class="mt-2 text-[14px] leading-relaxed text-muted">{v.testo}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <div class="stile-eta bg-surface"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>Dal mio blog</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-3" data-blog>
+          {blog.map((b, i) => (
+            <a href={b.href} class={`group block overflow-hidden rounded-2xl border border-line bg-white ${i === 0 ? 'md:row-span-1' : ''}`}>
+              <span class="block overflow-hidden"><img src={b.img} alt="" width="1200" height="800" loading="lazy" class="aspect-[3/2] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="block p-6"><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">{b.categoria} · {b.tempoLettura}</span><span class="mt-2 block font-head text-[1.3rem] font-bold leading-snug group-hover:text-brand">{b.titolo}</span></span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-bold" data-sale>Dal mio profilo Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-2xl border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full border border-line bg-white object-contain p-1" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="1080" height="675" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-deep/95 px-5 py-4 text-white"><p class="font-head text-xl font-bold leading-tight">{p.titolo}</p><p class="mt-0.5 text-sm text-brand2">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-brand2 p-7 text-white">
+                  <img src={m.brand.marchio} alt="" width="302" height="241" class="h-12 w-auto self-start rounded bg-white p-1" />
+                  <div><p class="font-head text-[1.8rem] font-bold leading-[1.1]">{p.titolo}</p><p class="mt-4 w-fit rounded-full bg-deep px-4 py-2 text-[14px] font-semibold">{p.risposta}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.8rem] font-bold leading-[1.1]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand2"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>{m.sedi.titolo}</h2>
+        <div class="mt-10 grid gap-6 lg:grid-cols-2" data-stagger>
+          {luoghi.map((l) => (
+            <article class="flex flex-col rounded-2xl bg-white p-7 sm:p-9">
+              <p class="text-[13px] font-semibold uppercase tracking-[0.14em] text-brand2">{l.tipo}</p>
+              <h3 class="mt-2 font-head text-2xl font-bold">{l.nome}</h3>
+              <p class="mt-1 text-muted">{l.indirizzo}{l.cap ? `, ${l.cap}` : ''} {l.citta}</p>
+              <p class="mt-3 text-[15px]">{l.nota}</p>
+              {l.telefoni.length > 0 && <div class="mt-5 flex flex-wrap gap-3">{l.telefoni.map((t: any) => <a href={telHref(t.numero)} class="btn btn-ghost !rounded-full"><Icona nome="tel" /> {t.numero}</a>)}</div>}
+              {l.principale && <a href={`mailto:${m.sedi.email}`} class="mt-4 inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="mail" class="h-4 w-4" />{m.sedi.email}</a>}
+              <a href={mapsHref(l.indirizzo, l.citta)} target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-muted hover:text-brand"><Icona nome="pin" class="h-4 w-4" /> Apra la mappa</a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-3xl font-bold sm:text-4xl">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href="#prenota-box" class="btn !rounded-full bg-brand2 text-white hover:opacity-90"><Icona nome="mail" /> Scriva alla Dottoressa</a>
+          <a href="#prenota" class="btn !rounded-full border border-white/50 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+
+    // --- Prenotazione: per chi → motivo → mail già scritta ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const link = box.querySelector<HTMLAnchorElement>('[data-prenota]')!;
+    const ant = box.querySelector<HTMLElement>('[data-anteprima]')!;
+    const aggiorna = () => {
+      const g = box.querySelector<HTMLElement>('[data-gruppo][aria-pressed="true"]')!.dataset.gruppo;
+      const f = box.querySelector<HTMLElement>(`[data-motivi="${g}"] [data-chip="motivo"][aria-pressed="true"]`)!.dataset.frase;
+      const t = `Buongiorno Dottoressa, vorrei prenotare ${f} presso ${box.dataset.sede}.`;
+      link.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(box.dataset.oggetto!)}&body=${encodeURIComponent(t)}`;
+      ant.textContent = t;
+      if (!ridotto) gsap.fromTo(ant, { opacity: 0.2, y: 8 }, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' });
+    };
+    const scegliGruppo = (id: string) => {
+      box.querySelectorAll<HTMLElement>('[data-gruppo]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.gruppo === id)));
+      box.querySelectorAll<HTMLElement>('[data-motivi]').forEach((d) => {
+        const on = d.dataset.motivi === id;
+        d.classList.toggle('hidden', !on);
+        if (on) {
+          const chips = d.querySelectorAll<HTMLElement>('[data-chip]');
+          chips.forEach((c, i) => c.setAttribute('aria-pressed', String(i === 0)));
+          if (!ridotto) gsap.from(chips, { y: 12, opacity: 0, duration: 0.3, stagger: 0.04, ease: 'power2.out' });
+        }
+      });
+      aggiorna();
+    };
+    box.querySelectorAll<HTMLElement>('[data-gruppo]').forEach((b) => b.addEventListener('click', () => scegliGruppo(b.dataset.gruppo!)));
+    box.querySelectorAll<HTMLElement>('[data-chip="motivo"]').forEach((c) => c.addEventListener('click', () => {
+      c.parentElement!.querySelectorAll('[data-chip]').forEach((k) => k.setAttribute('aria-pressed', String(k === c)));
+      aggiorna();
+    }));
+
+    // --- Quanti anni ha? ---
+    const eb = document.querySelector<HTMLElement>('[data-eta-box]')!;
+    const range = eb.querySelector<HTMLInputElement>('[data-eta-range]')!;
+    const anni = eb.querySelector<HTMLElement>('[data-anni]')!;
+    const fasce = [...eb.querySelectorAll<HTMLElement>('[data-fascia]')];
+    let attiva = fasce.findIndex((f) => !f.classList.contains('hidden'));
+    const imposta = (v: number) => {
+      anni.textContent = String(v);
+      range.style.setProperty('--p', `${(v / 90) * 100}%`);
+      range.setAttribute('aria-valuetext', `${v} anni`);
+      const i = fasce.findIndex((f) => v >= Number(f.dataset.da) && v <= Number(f.dataset.a));
+      if (i !== attiva && i >= 0) {
+        fasce[attiva]?.classList.add('hidden'); fasce[i].classList.remove('hidden'); attiva = i;
+        if (!ridotto) gsap.fromTo(fasce[i].children, { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, stagger: 0.05, ease: 'power2.out' });
+      }
+    };
+    range.addEventListener('input', () => imposta(Number(range.value)));
+    imposta(Number(range.value));
+    eb.querySelector('[data-eta-prenota]')!.addEventListener('click', () => {
+      const v = Number(range.value);
+      scegliGruppo(v < 15 ? 'bambino' : v > 65 ? 'senior' : 'adulto');
+    });
+
+    // --- Esami: schede che si girano ---
+    document.querySelectorAll<HTMLButtonElement>('[data-carta]').forEach((c) => c.addEventListener('click', () => {
+      const g = c.getAttribute('aria-pressed') !== 'true';
+      c.setAttribute('aria-pressed', String(g));
+    }));
+
+    if (!ridotto) {
+      const lenis = new Lenis({ anchors: { offset: -90 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      // Hero: l'occhio si apre con un battito di ciglia, il titolo sale parola per parola
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w) => `<span class="inline-block overflow-hidden pb-[0.08em] align-bottom" aria-hidden="true"><span class="inline-block ${/età/.test(w) ? 'text-brand' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.fromTo('[data-occhio]', { maskSize: '100% 2%', webkitMaskSize: '100% 2%' }, { maskSize: '100% 100%', webkitMaskSize: '100% 100%', duration: 1.1, ease: 'power4.inOut' })
+        .from('[data-ritratto]', { scale: 1.2, duration: 1.4 }, '<')
+        .from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.8, stagger: 0.05 }, 0.2)
+        .from('[data-entra]', { y: 24, opacity: 0, duration: 0.7, stagger: 0.08 }, '-=0.5');
+      // il marchio sbatte le palpebre ogni tanto
+      gsap.timeline({ repeat: -1, repeatDelay: 3.5, delay: 2 }).to('[data-blink]', { scaleY: 0.1, duration: 0.09, ease: 'power1.in' }).to('[data-blink]', { scaleY: 1, duration: 0.14, ease: 'power1.out' });
+      gsap.to('[data-ritratto]', { yPercent: 7, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+
+      // Titoli che salgono
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+
+      // Il cursore dell'età si muove da solo la prima volta
+      ScrollTrigger.create({ trigger: eb, start: 'top 60%', once: true, onEnter: () => {
+        const o = { v: 0 };
+        gsap.to(o, { v: 35, duration: 1.8, ease: 'power2.inOut', onUpdate: () => { const v = Math.round(o.v); range.value = String(v); imposta(v); } });
+      } });
+
+      // Esami: entrano girando
+      gsap.from('[data-esami] li', { rotateY: -80, opacity: 0, transformOrigin: '0% 50%', duration: 0.8, stagger: 0.08, ease: 'power3.out', scrollTrigger: { trigger: '[data-esami]', start: 'top 85%', once: true } });
+
+      // Ricerca: il mazzo si apre a ventaglio (desktop)
+      const mm = gsap.matchMedia();
+      mm.add('(min-width: 1024px)', () => {
+        const carte = gsap.utils.toArray<HTMLElement>('[data-carta-v]');
+        const n = carte.length;
+        gsap.set(carte, { left: '40%', rotate: (i) => (i - (n - 1) / 2) * 3, y: (i) => i * 4 });
+        gsap.to(carte, { left: (i) => `${i * 20.25}%`, rotate: 0, y: 0, ease: 'power2.out', stagger: 0.04, scrollTrigger: { trigger: '[data-ventaglio]', start: 'top 85%', end: 'top 35%', scrub: 0.6 } });
+      });
+
+      gsap.utils.toArray<HTMLElement>('[data-parallasse]').forEach((im) => gsap.fromTo(im, { scale: 1.15, yPercent: -6 }, { scale: 1.15, yPercent: 6, ease: 'none', scrollTrigger: { trigger: im, start: 'top bottom', end: 'bottom top', scrub: true } }));
+      gsap.from('[data-blog] > a', { y: 60, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: '[data-blog]', start: 'top 85%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    } else {
+      document.querySelectorAll<HTMLElement>('[data-carta-v]').forEach((c, i) => c.style.setProperty('left', `${i * 20.25}%`));
+    }
+  </script>
+</Base>

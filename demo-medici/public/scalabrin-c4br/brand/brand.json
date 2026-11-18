@@ -1,0 +1,81 @@
+{
+  "medico": "Dott.ssa Simona Scalabrin",
+  "specialita": "Medico chirurgo oculista",
+  "sito": "https://www.oculistascalabrin.com/",
+  "ordine": "OMCeO TO n. 23689",
+  "logo": "logo-orizzontale.png (506x115), logo-verticale.png, marchio-occhio.png (icona)",
+  "colori": {
+    "teal_logo": "#1E7F79 / #1BB7A7",
+    "arancio_logo": "#E4963A",
+    "grigio": "#3A3A3C"
+  },
+  "font": {
+    "sito": [
+      "Montserrat",
+      "Open Sans"
+    ],
+    "demo": [
+      "Outfit",
+      "Nunito Sans"
+    ]
+  },
+  "contatti": {
+    "studio": "Corso Casale 170, 10132 Torino (solo su appuntamento)",
+    "telefono": "011 037 8643",
+    "cellulare": "375 504 3931 (WhatsApp non indicato sul sito: prenotazione via mail)",
+    "email": "info@oculistascalabrin.com",
+    "miodottore": "https://www.miodottore.it/simona-scalabrin/oculista/torino",
+    "privacy": "https://www.iubenda.com/privacy-policy/86753220"
+  },
+  "altre_sedi": "Ospedale Koelliker, Corso Galileo Ferraris 247/255, Torino (esami integrativi, chirurgia, YAG laser; privato, assicurativo, SSN)",
+  "orari": "non indicati (calendario con orari indicativi lun-ven)",
+  "foto": [
+    "foto-01-ritratto.jpg (unica foto vera)"
+  ],
+  "repertorio": "foto stock già presenti sul suo sito; esclusa quella del BUT con watermark EyeRounds.org",
+  "calendario_controlli": [
+    {
+      "da": 0,
+      "a": 2,
+      "titolo": "Prima dei 3 anni",
+      "frequenza": "Visita intorno ai 3 anni",
+      "testo": "In assenza di anomalie evidenti, la prima visita oculistica è consigliata intorno ai 3 anni, quando il bambino riesce a collaborare. Se nota qualcosa che non La convince, come un occhio che devia, ne parli subito con il pediatra."
+    },
+    {
+      "da": 3,
+      "a": 5,
+      "titolo": "La prima visita",
+      "frequenza": "A 3 anni, poi a 6",
+      "testo": "I bambini non sanno quanto e come dovrebbero vedere: un difetto visivo può non dare segnali evidenti. Per questo la prima visita si fa intorno ai 3 anni e il controllo si ripete intorno ai 6."
+    },
+    {
+      "da": 6,
+      "a": 8,
+      "titolo": "Gli anni decisivi",
+      "frequenza": "Controllo intorno ai 6 anni",
+      "testo": "Il sistema visivo si sviluppa entro i 6-8 anni di vita, nel periodo della plasticità. Un difetto di vista o uno strabismo non corretto entro quest'età dà spesso deficit permanenti, non più correggibili."
+    },
+    {
+      "da": 9,
+      "a": 40,
+      "titolo": "Dalla scuola ai 40 anni",
+      "frequenza": "Ogni 4 anni · con occhiali ogni anno o anno e mezzo",
+      "testo": "Senza difetti di vista è consigliata una visita di controllo ogni 4 anni fino ai 40. Se porta lenti correttive, è opportuno un controllo ogni anno o anno e mezzo."
+    },
+    {
+      "da": 41,
+      "a": 65,
+      "titolo": "Tra i 45 e i 65 anni",
+      "frequenza": "Ogni 2 anni",
+      "testo": "Fra i 45 e i 65 anni una visita andrebbe eseguita ogni 2 anni, anche per valutare la presbiopia, che è fisiologica, e aggiornare la lente per la lettura."
+    },
+    {
+      "da": 66,
+      "a": 90,
+      "titolo": "Dopo i 65 anni",
+      "frequenza": "Ogni anno",
+      "testo": "Dopo i 65 anni gli occhi sono più spesso soggetti a cataratta, glaucoma e degenerazione maculare della retina: è bene sottoporsi a controlli ogni anno."
+    }
+  ],
+  "social": "nessuno"
+}

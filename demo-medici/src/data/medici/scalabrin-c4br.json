@@ -1,0 +1,774 @@
+{
+  "slug": "scalabrin-c4br",
+  "layout": "eta",
+  "sitoOrigine": "https://www.oculistascalabrin.com/",
+  "titolo": "Dott.ssa",
+  "nome": "Simona Scalabrin",
+  "specialita": "Medico chirurgo oculista",
+  "firma": "Oculista",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott.ssa Simona Scalabrin · Oculista a Torino · Visite per bambini e adulti",
+    "description": "Sono oculista a Torino, in corso Casale 170: visita oculistica per bambini e adulti, occhiali, rinnovo patente, occhio secco, glaucoma. Opero all'Ospedale Koelliker."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/scalabrin-c4br/img/logo.png",
+    "logoChiaro": "/scalabrin-c4br/img/logo-chiaro.png",
+    "marchio": "/scalabrin-c4br/img/marchio.png",
+    "logoAlt": "Dott.ssa Simona Scalabrin, oculista"
+  },
+  "foto": {
+    "ritratto": "/scalabrin-c4br/img/ritratto.webp",
+    "ritrattoAlt": "La Dott.ssa Simona Scalabrin nel suo studio",
+    "volto": "/scalabrin-c4br/img/volto.webp",
+    "bambina": "/scalabrin-c4br/img/rep-bambina.webp",
+    "lampada": "/scalabrin-c4br/img/rep-lampada.webp",
+    "senior": "/scalabrin-c4br/img/rep-senior.webp",
+    "lettura": "/scalabrin-c4br/img/rep-lettura.webp",
+    "oct": "/scalabrin-c4br/img/rep-oct.webp",
+    "cataratta": "/scalabrin-c4br/img/rep-cataratta.webp",
+    "patente": "/scalabrin-c4br/img/rep-patente.webp",
+    "occhiali": "/scalabrin-c4br/img/rep-occhiali.webp",
+    "autorefrattometro": "/scalabrin-c4br/img/rep-autorefrattometro.webp",
+    "koelliker": "/scalabrin-c4br/img/koelliker.png"
+  },
+  "hero": {
+    "eyebrow": "Studio oculistico · Torino, corso Casale 170",
+    "titolo": "Gli occhi cambiano con l'età. Le visite anche.",
+    "testo": "Sono medico oculista. Visito bambini dai 3 anni, adulti e anziani nel mio studio in corso Casale, e opero all'Ospedale Koelliker di Torino. Mi occupo anche di ricerca sulle terapie con cellule staminali all'Università di Torino.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Per chi è la visita?",
+      "gruppi": [
+        {
+          "id": "bambino",
+          "nome": "Un bambino",
+          "nota": "Visita pediatrica dai 3 ai 14 anni",
+          "motivi": [
+            "Prima visita (3 anni)",
+            "Controllo dei 6 anni",
+            "Occhio che devia",
+            "Occhiali",
+            "Altro"
+          ],
+          "frasi": [
+            "la prima visita oculistica di mio figlio",
+            "il controllo oculistico dei 6 anni di mio figlio",
+            "una visita per mio figlio, che ha un occhio che sembra deviare",
+            "una visita per gli occhiali di mio figlio",
+            "una visita oculistica pediatrica per mio figlio"
+          ]
+        },
+        {
+          "id": "adulto",
+          "nome": "Un adulto",
+          "nota": "Visita completa, occhiali, patente",
+          "motivi": [
+            "Visita oculistica",
+            "Occhiali da vista",
+            "Rinnovo patente",
+            "Occhio secco",
+            "Pressione oculare",
+            "Lacrimazione",
+            "Altro"
+          ],
+          "frasi": [
+            "una visita oculistica completa",
+            "una visita per la prescrizione degli occhiali",
+            "una visita per il rinnovo della patente",
+            "una visita per occhio secco",
+            "una visita con misurazione della pressione oculare",
+            "una visita per lacrimazione eccessiva",
+            "una visita oculistica"
+          ]
+        },
+        {
+          "id": "senior",
+          "nome": "Over 65",
+          "nota": "Controllo annuale consigliato",
+          "motivi": [
+            "Controllo annuale",
+            "Cataratta",
+            "Glaucoma",
+            "Maculopatia",
+            "Rinnovo patente",
+            "Altro"
+          ],
+          "frasi": [
+            "il controllo oculistico annuale",
+            "una visita per cataratta",
+            "una visita per glaucoma",
+            "una visita per maculopatia",
+            "una visita per il rinnovo della patente",
+            "una visita oculistica"
+          ]
+        }
+      ],
+      "motivi": [
+        "Prima visita (3 anni)",
+        "Controllo dei 6 anni",
+        "Occhio che devia",
+        "Occhiali",
+        "Altro",
+        "Visita oculistica",
+        "Occhiali da vista",
+        "Rinnovo patente",
+        "Occhio secco",
+        "Pressione oculare",
+        "Lacrimazione",
+        "Altro",
+        "Controllo annuale",
+        "Cataratta",
+        "Glaucoma",
+        "Maculopatia",
+        "Rinnovo patente",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "la prima visita oculistica di mio figlio",
+        "il controllo oculistico dei 6 anni di mio figlio",
+        "una visita per mio figlio, che ha un occhio che sembra deviare",
+        "una visita per gli occhiali di mio figlio",
+        "una visita oculistica pediatrica per mio figlio",
+        "una visita oculistica completa",
+        "una visita per la prescrizione degli occhiali",
+        "una visita per il rinnovo della patente",
+        "una visita per occhio secco",
+        "una visita con misurazione della pressione oculare",
+        "una visita per lacrimazione eccessiva",
+        "una visita oculistica",
+        "il controllo oculistico annuale",
+        "una visita per cataratta",
+        "una visita per glaucoma",
+        "una visita per maculopatia",
+        "una visita per il rinnovo della patente",
+        "una visita oculistica"
+      ],
+      "motivoLabel": "Il motivo",
+      "sedeLabel": "Dove"
+    }
+  },
+  "fatti": [
+    "Bambini dai 3 anni",
+    "Solo su appuntamento",
+    "Ospedale Koelliker",
+    "Ricerca all'Università di Torino"
+  ],
+  "eta": [
+    {
+      "da": 0,
+      "a": 2,
+      "titolo": "Prima dei 3 anni",
+      "frequenza": "Visita intorno ai 3 anni",
+      "testo": "In assenza di anomalie evidenti, la prima visita oculistica è consigliata intorno ai 3 anni, quando il bambino riesce a collaborare. Se nota qualcosa che non La convince, come un occhio che devia, ne parli subito con il pediatra."
+    },
+    {
+      "da": 3,
+      "a": 5,
+      "titolo": "La prima visita",
+      "frequenza": "A 3 anni, poi a 6",
+      "testo": "I bambini non sanno quanto e come dovrebbero vedere: un difetto visivo può non dare segnali evidenti. Per questo la prima visita si fa intorno ai 3 anni e il controllo si ripete intorno ai 6."
+    },
+    {
+      "da": 6,
+      "a": 8,
+      "titolo": "Gli anni decisivi",
+      "frequenza": "Controllo intorno ai 6 anni",
+      "testo": "Il sistema visivo si sviluppa entro i 6-8 anni di vita, nel periodo della plasticità. Un difetto di vista o uno strabismo non corretto entro quest'età dà spesso deficit permanenti, non più correggibili."
+    },
+    {
+      "da": 9,
+      "a": 40,
+      "titolo": "Dalla scuola ai 40 anni",
+      "frequenza": "Ogni 4 anni · con occhiali ogni anno o anno e mezzo",
+      "testo": "Senza difetti di vista è consigliata una visita di controllo ogni 4 anni fino ai 40. Se porta lenti correttive, è opportuno un controllo ogni anno o anno e mezzo."
+    },
+    {
+      "da": 41,
+      "a": 65,
+      "titolo": "Tra i 45 e i 65 anni",
+      "frequenza": "Ogni 2 anni",
+      "testo": "Fra i 45 e i 65 anni una visita andrebbe eseguita ogni 2 anni, anche per valutare la presbiopia, che è fisiologica, e aggiornare la lente per la lettura."
+    },
+    {
+      "da": 66,
+      "a": 90,
+      "titolo": "Dopo i 65 anni",
+      "frequenza": "Ogni anno",
+      "testo": "Dopo i 65 anni gli occhi sono più spesso soggetti a cataratta, glaucoma e degenerazione maculare della retina: è bene sottoporsi a controlli ogni anno."
+    }
+  ],
+  "etaNota": "In caso di diabete, ipertensione, malattie reumatiche o renali è bene prestare ancora più attenzione agli occhi.",
+  "esami": [
+    {
+      "nome": "Visita oculistica pediatrica",
+      "img": "/scalabrin-c4br/img/rep-bambina.webp",
+      "testo": "Per i bambini dai 3 ai 14 anni. Comprende la refrazione in cicloplegia: gocce che dilatano la pupilla e mettono a riposo l'accomodazione, per misurare con precisione anche i difetti nascosti. L'effetto dura in media circa 24 ore."
+    },
+    {
+      "nome": "Occhiali da vista",
+      "img": "/scalabrin-c4br/img/rep-occhiali.webp",
+      "testo": "Autorefrattometria, controllo delle lenti che già usa e misura del visus, in decimi, per trovare la correzione che Le permette di vedere al meglio. Valuto anche la vista da vicino e, se serve, prescrivo l'occhiale da lettura."
+    },
+    {
+      "nome": "Rinnovo patente",
+      "img": "/scalabrin-c4br/img/rep-patente.webp",
+      "testo": "Acutezza visiva, visione crepuscolare, recupero dopo l'abbagliamento, sensibilità al contrasto, diplopia. Al termine riceve un referto da portare alla visita per il rilascio o il rinnovo."
+    },
+    {
+      "nome": "Tonometria",
+      "img": "/scalabrin-c4br/img/rep-tonometria.webp",
+      "testo": "Misura la pressione dell'occhio. La pressione alta di solito non dà sintomi ed è il principale fattore di rischio per il glaucoma: per questo va controllata anche quando ci si sente bene."
+    },
+    {
+      "nome": "Test di Schirmer",
+      "img": "/scalabrin-c4br/img/rep-schirmer.webp",
+      "testo": "Due sottili strisce di carta millimetrata misurano in 5 minuti quante lacrime produce l'occhio. È uno dei test più usati per l'occhio secco, non è invasivo né doloroso."
+    },
+    {
+      "nome": "Break-up time (BUT)",
+      "img": "/scalabrin-c4br/img/rep-lampada.webp",
+      "testo": "Misura quanto resta stabile il film lacrimale dopo un battito di ciglia. Un tempo troppo breve indica lacrime di qualità insufficiente, che proteggono e lubrificano poco."
+    },
+    {
+      "nome": "Vie lacrimali",
+      "img": "/scalabrin-c4br/img/rep-lacrimali.webp",
+      "testo": "Se l'occhio lacrima troppo, il lavaggio delle vie lacrimali verifica se il deflusso verso il naso è ostruito. Si fa con un anestetico in gocce e soluzione fisiologica sterile."
+    },
+    {
+      "nome": "Fondo oculare",
+      "img": "/scalabrin-c4br/img/rep-fondo.webp",
+      "testo": "L'esame della retina, del nervo ottico e dei vasi. Con la retinografia a colori l'immagine del fondo oculare si fotografa e si confronta nel tempo."
+    }
+  ],
+  "esamiKoelliker": [
+    "OCT macula e nervo ottico",
+    "Angio-OCT",
+    "Campo visivo computerizzato",
+    "Topografia corneale Pentacam",
+    "Pachimetria",
+    "Conta endoteliale",
+    "YAG laser",
+    "Chirurgia della cataratta"
+  ],
+  "ricerca": {
+    "titolo": "Ricerca e insegnamento",
+    "testo": "All'Università di Torino studio le terapie con cellule staminali e i loro bioprodotti per le malattie dell'occhio: della cornea, della retina e del nervo ottico. Coordino il progetto «Implementazione della Terapia Cellulare in Oculistica», cofinanziato dalla Fondazione CRT e dall'Università.",
+    "voci": [
+      {
+        "titolo": "Laurea e specializzazione con lode",
+        "testo": "Medicina e Chirurgia con 110 e lode, dignità di stampa e menzione d'onore. Specializzazione in Oftalmologia con 70/70 e lode, con una tesi sulla terapia rigenerativa della cornea."
+      },
+      {
+        "titolo": "Scuola di Studi Superiori",
+        "testo": "Certificato di Alta Qualificazione della Scuola di Studi Superiori Ferdinando Rossi dell'Università di Torino, il percorso di eccellenza per gli allievi più meritevoli."
+      },
+      {
+        "titolo": "Ospedale e chirurgia",
+        "testo": "Ho lavorato all'Ospedale Oftalmico e alle Molinette. Oggi opero all'Ospedale Koelliker: chirurgia della cataratta, esami diagnostici, YAG laser."
+      },
+      {
+        "titolo": "Insegnamento",
+        "testo": "Responsabile della didattica del corso di Oftalmologia per Medicina e Chirurgia, anche nel corso in lingua inglese, all'Università di Torino."
+      },
+      {
+        "titolo": "Pubblicazioni",
+        "testo": "Autrice di articoli scientifici su riviste internazionali e di capitoli di libri. Associate Editor della rivista Minerva Ophthalmology. Socia della Società Oftalmologica Italiana."
+      }
+    ]
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "visita-pediatrica",
+    "categoria": "Oculistica pediatrica",
+    "titolo": "Visita oculistica pediatrica: a che età e perché",
+    "img": "/scalabrin-c4br/img/rep-bambina.webp",
+    "tempoLettura": "6 min",
+    "intro": "Molti genitori portano il bambino dall'oculista solo quando c'è un problema evidente. Ma i bambini non sanno quanto dovrebbero vedere, e spesso non si lamentano. Ecco quando fare la prima visita, come si svolge e perché i primi anni sono così importanti.",
+    "sezioni": [
+      {
+        "titolo": "I bambini non si accorgono di vedere male",
+        "paragrafi": [
+          "Un adulto che vede peggio se ne accorge: legge con fatica, vede sfocato, socchiude gli occhi. Un bambino no. Non ha un termine di paragone: pensa che tutti vedano come lui. Per questo un difetto visivo, anche importante, può passare inosservato per anni.",
+          "Spesso i segnali sono indiretti: avvicinarsi molto alla televisione o ai libri, strizzare gli occhi, inclinare la testa, stropicciarsi spesso gli occhi, essere distratto a scuola. Altre volte non c'è nessun segnale, ed è solo la visita a scoprire il problema."
+        ]
+      },
+      {
+        "titolo": "Perché i primi anni sono decisivi",
+        "paragrafi": [
+          "Il sistema visivo del bambino si sviluppa entro i 6-8 anni di vita. È il periodo della cosiddetta plasticità: il cervello «impara» a vedere usando le immagini che arrivano dai due occhi.",
+          "Se in questi anni un occhio vede male, per un difetto di vista o per uno strabismo, il cervello tende a escluderlo. Un difetto non corretto entro quest'età dà spesso deficit permanenti, che più avanti non si possono più correggere. È il motivo per cui conviene muoversi presto."
+        ]
+      },
+      {
+        "titolo": "A che età la prima visita",
+        "paragrafi": [
+          "In assenza di anomalie evidenti, consiglio la prima visita oculistica intorno ai 3 anni, quando il bambino riesce a collaborare in modo sufficiente e le sue risposte sono attendibili. Il controllo va poi ripetuto intorno ai 6 anni, all'inizio della scuola.",
+          "Se invece nota qualcosa che non La convince prima dei 3 anni, per esempio un occhio che sembra deviare, non aspetti: ne parli con il pediatra e prenoti una visita."
+        ]
+      },
+      {
+        "titolo": "Come si svolge la visita",
+        "paragrafi": [
+          "La visita oculistica pediatrica è pensata per pazienti dai 3 ai 14 anni. In genere comprende:"
+        ],
+        "elenco": [
+          "un colloquio con il genitore sulla storia del bambino e su eventuali casi in famiglia;",
+          "la misura della vista con tavole adatte all'età;",
+          "la valutazione dell'allineamento degli occhi e dei loro movimenti;",
+          "la refrazione in cicloplegia, per misurare con precisione il difetto visivo;",
+          "l'esame del fondo oculare."
+        ],
+        "chiusura": "Cerco di rendere la visita un momento tranquillo: un bambino sereno collabora meglio e le misure sono più affidabili."
+      },
+      {
+        "titolo": "Cos'è la cicloplegia",
+        "paragrafi": [
+          "Nei bambini il muscolo che mette a fuoco, quello dell'accomodazione, è molto vivace. Può «coprire» un difetto, soprattutto l'ipermetropia, e falsare la misura. Per questo durante la visita si instillano gocce che dilatano la pupilla e mettono a riposo questo muscolo.",
+          "Così si ottiene una misura più precisa e obiettiva anche dei difetti latenti, e la pupilla dilatata permette di osservare meglio il fondo dell'occhio."
+        ]
+      },
+      {
+        "titolo": "Dopo le gocce",
+        "paragrafi": [
+          "L'effetto delle gocce dura in media circa 24 ore, a seconda del collirio usato e della reazione del bambino. In questo periodo la vista da vicino è sfocata e la luce può dare fastidio.",
+          "Le consiglio di prenotare la visita in un giorno in cui il bambino non debba fare compiti impegnativi subito dopo, e di portare un cappellino o occhiali da sole per il ritorno a casa."
+        ]
+      },
+      {
+        "titolo": "E dopo i 6 anni?",
+        "paragrafi": [
+          "Se il bambino non ha difetti di vista, in età scolare è consigliata una visita di controllo ogni 4 anni. Se porta occhiali, è opportuno un controllo ogni anno o anno e mezzo, perché il difetto può cambiare con la crescita.",
+          "Nei bambini miopi i controlli regolari permettono di seguire l'andamento del difetto nel tempo e di aggiornare la correzione."
+        ]
+      },
+      {
+        "titolo": "Come prepararsi",
+        "paragrafi": [
+          "Per una visita più semplice, può essere utile:"
+        ],
+        "elenco": [
+          "portare gli occhiali, se il bambino li usa già, e le prescrizioni precedenti;",
+          "segnalare eventuali difetti di vista o strabismo in famiglia;",
+          "annotare i comportamenti che L'hanno colpita, come avvicinarsi molto ai libri;",
+          "spiegare al bambino, con parole semplici, che si tratta di giochi con le lettere e le luci."
+        ]
+      },
+      {
+        "titolo": "Strabismo: non è solo una questione estetica",
+        "paragrafi": [
+          "Un occhio che devia, anche solo ogni tanto o quando il bambino è stanco, va sempre controllato. Oltre all'aspetto estetico, lo strabismo può impedire ai due occhi di lavorare insieme: il cervello, per evitare di vedere doppio, tende a escludere l'occhio deviato.",
+          "Nelle foto a volte si nota un riflesso diverso nelle due pupille, o un occhio che guarda in un'altra direzione. Sono segnali da riferire al pediatra e all'oculista, senza aspettare la visita programmata. Prima si interviene, più il sistema visivo ha tempo per svilupparsi in modo corretto."
+        ]
+      },
+      {
+        "titolo": "Come prenotare",
+        "paragrafi": [
+          "Ricevo solo su appuntamento nel mio studio di corso Casale 170 a Torino. Può chiamare lo 011 037 8643 o il 375 504 3931, scrivermi all'indirizzo info@oculistascalabrin.com o prenotare su MioDottore.",
+          "Per esami diagnostici integrativi e per la chirurgia ricevo anche all'Ospedale Koelliker di Torino, in regime privato, assicurativo o in convenzione con il Servizio Sanitario Nazionale."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico oculista."
+  },
+  "blog": [
+    {
+      "id": "occhio-secco",
+      "categoria": "Superficie oculare",
+      "titolo": "Occhio secco: come si riconosce e quali test servono",
+      "img": "/scalabrin-c4br/img/rep-schirmer.webp",
+      "tempoLettura": "6 min",
+      "intro": "Bruciore, sabbia negli occhi, occhi arrossati a fine giornata. L'occhio secco è un disturbo molto comune e spesso sottovalutato. Ecco come si riconosce, quali esami eseguo in studio per capirne la causa e cosa si può fare.",
+      "sezioni": [
+        {
+          "titolo": "Cos'è l'occhio secco",
+          "paragrafi": [
+            "La superficie dell'occhio è protetta da un sottile strato di lacrime, il film lacrimale, che la lubrifica, la nutre e la difende. Si parla di occhio secco, o dry eye, quando le lacrime sono troppo poche oppure di cattiva qualità, e non riescono più a proteggere bene l'occhio.",
+            "Sono due problemi diversi: nel primo caso l'occhio produce poche lacrime, nel secondo le lacrime ci sono ma evaporano o si rompono troppo in fretta. Per questo, prima di scegliere una terapia, è importante capire quale dei due meccanismi è in gioco."
+          ]
+        },
+        {
+          "titolo": "I sintomi più comuni",
+          "paragrafi": [
+            "Chi ha l'occhio secco riferisce spesso:"
+          ],
+          "elenco": [
+            "secchezza e bruciore;",
+            "sensazione di sabbia o di corpo estraneo;",
+            "rossore;",
+            "fastidio alla luce;",
+            "vista che si annebbia e migliora sbattendo le palpebre;",
+            "a volte, paradossalmente, lacrimazione eccessiva."
+          ],
+          "chiusura": "L'ultimo punto stupisce molti: un occhio irritato dalla secchezza può reagire producendo lacrime «di emergenza», acquose e poco protettive."
+        },
+        {
+          "titolo": "Il test di Schirmer",
+          "paragrafi": [
+            "È uno dei test più usati per diagnosticare la sindrome dell'occhio secco e misura la quantità di lacrime prodotte. Si inseriscono nel bordo della palpebra inferiore due sottili strisce di carta assorbente millimetrata e, dopo 5 minuti, si misura quanto si sono inumidite.",
+            "Non è un esame invasivo né doloroso. Lo consiglio in caso di secchezza, sensazione di corpo estraneo, rossore o fastidio alla luce."
+          ]
+        },
+        {
+          "titolo": "Il break-up time (BUT)",
+          "paragrafi": [
+            "Il BUT valuta invece la qualità delle lacrime. Alla lampada a fessura si osserva quanto tempo passa tra l'apertura delle palpebre e la «rottura» del film lacrimale, cioè la comparsa di zone asciutte sulla superficie della cornea.",
+            "Un tempo troppo breve è anormale: indica una produzione di lacrime di qualità insufficiente, con ridotta protezione e lubrificazione dell'occhio. Insieme, Schirmer e BUT aiutano a capire se il problema è di quantità, di qualità o di entrambe."
+          ]
+        },
+        {
+          "titolo": "Quando l'occhio lacrima troppo",
+          "paragrafi": [
+            "Se invece l'occhio lacrima di continuo, il problema può essere nel deflusso. Le vie lacrimali portano le lacrime dagli occhi al naso: con l'età o per infiammazioni ripetute possono restringersi o chiudersi. Le lacrime allora traboccano e possono favorire infezioni.",
+            "Il lavaggio delle vie lacrimali, eseguito con un anestetico in gocce e soluzione fisiologica sterile, verifica se il passaggio è libero. In caso di ostruzione si può valutare l'intervento correttivo più adatto."
+          ]
+        },
+        {
+          "titolo": "Cosa favorisce l'occhio secco",
+          "paragrafi": [
+            "Alcune situazioni rendono il disturbo più frequente:"
+          ],
+          "elenco": [
+            "molte ore davanti a computer e telefono, perché si sbattono meno le palpebre;",
+            "ambienti con aria condizionata o riscaldamento e aria secca;",
+            "l'uso prolungato di lenti a contatto;",
+            "l'età e i cambiamenti ormonali, per esempio in menopausa;",
+            "alcuni farmaci e alcune malattie generali."
+          ]
+        },
+        {
+          "titolo": "Cosa si può fare",
+          "paragrafi": [
+            "In caso di diagnosi di occhio secco, una terapia appropriata con sostituti lacrimali allevia i fastidi. La scelta del prodotto e della frequenza dipende dal tipo di occhio secco e dalla sua gravità.",
+            "Possono aiutare anche piccole abitudini: fare pause regolari davanti agli schermi, ricordarsi di sbattere le palpebre, umidificare gli ambienti, proteggere gli occhi dal vento. Sono consigli generali: la terapia giusta si decide dopo la visita."
+          ]
+        },
+        {
+          "titolo": "Schermi e lavoro: un problema di tutti i giorni",
+          "paragrafi": [
+            "Quando fissiamo uno schermo sbattiamo le palpebre molto meno del normale. Ogni battito di ciglia distribuisce le lacrime sulla superficie dell'occhio: se i battiti diminuiscono, il film lacrimale si asciuga e compaiono bruciore e affaticamento, soprattutto a fine giornata.",
+            "Una regola semplice può aiutare: ogni tanto distogliere lo sguardo dallo schermo, guardare lontano per qualche secondo e sbattere le palpebre con calma. Anche la posizione dello schermo conta: se è un po' più basso degli occhi, la superficie esposta all'aria è minore."
+          ]
+        },
+        {
+          "titolo": "Lenti a contatto e occhio secco",
+          "paragrafi": [
+            "Chi porta lenti a contatto per molte ore al giorno sente spesso gli occhi secchi, soprattutto la sera o in ambienti climatizzati. A volte basta rivedere il tipo di lente, i tempi di utilizzo o il liquido di manutenzione; altre volte serve una terapia con sostituti lacrimali compatibili con le lenti.",
+            "Se le lenti danno fastidio, diventano difficili da tollerare o l'occhio si arrossa spesso, è meglio non insistere e fare un controllo: la superficie dell'occhio va protetta. Nel frattempo conviene alternare le lenti con gli occhiali e non dormire con le lenti, se non sono indicate per questo uso."
+          ]
+        },
+        {
+          "titolo": "Quando prenotare una visita",
+          "paragrafi": [
+            "Se i fastidi durano da settimane, peggiorano o disturbano la lettura e il lavoro, è il momento di un controllo. Una visita permette anche di escludere altre cause di occhio rosso e irritato, che richiedono cure diverse.",
+            "Ricevo su appuntamento nello studio di corso Casale 170 a Torino: può chiamare lo 011 037 8643, scrivermi o prenotare su MioDottore."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico oculista."
+    },
+    {
+      "id": "rinnovo-patente",
+      "categoria": "Patente",
+      "titolo": "Rinnovo della patente: cosa si controlla agli occhi e cosa portare",
+      "img": "/scalabrin-c4br/img/rep-patente.webp",
+      "tempoLettura": "5 min",
+      "intro": "Per ottenere o rinnovare la patente servono precisi requisiti visivi. Presentarsi alla visita del medico competente senza sapere come si vede, o con occhiali vecchi, può significare un rinvio. Ecco perché conviene fare prima una visita oculistica e cosa comprende.",
+      "sezioni": [
+        {
+          "titolo": "Perché una visita prima del rinnovo",
+          "paragrafi": [
+            "Il rilascio e il rinnovo della patente richiedono la presenza di molteplici requisiti visivi. Fare prima una visita oculistica Le permette di presentarsi preparato, con occhiali correttivi aggiornati e un referto chiaro sulla Sua vista.",
+            "Capita spesso che la vista cambi lentamente, senza che ce ne accorgiamo: la visita è l'occasione per scoprirlo prima, e non durante l'esame."
+          ]
+        },
+        {
+          "titolo": "Cosa si controlla",
+          "paragrafi": [
+            "La visita oculistica per il rilascio o il rinnovo della patente comprende:"
+          ],
+          "elenco": [
+            "la misura dell'acutezza visiva, con ciascun occhio e con entrambi;",
+            "la valutazione della visione crepuscolare, con poca luce;",
+            "il tempo di recupero dopo un abbagliamento, come quello dei fari in senso opposto;",
+            "la sensibilità al contrasto;",
+            "la ricerca di visione doppia (diplopia);",
+            "la valutazione delle malattie oculari che possono ridurre la capacità di guida e del loro rischio di peggiorare."
+          ]
+        },
+        {
+          "titolo": "Chi ha bisogno di test in più",
+          "paragrafi": [
+            "Le persone con malattie degli occhi, come glaucoma, maculopatia, retinopatia diabetica o miopia elevata, hanno bisogno di una valutazione più completa, con alcuni test aggiuntivi.",
+            "In questi casi la visita serve anche a capire se la malattia è stabile e se servono controlli più ravvicinati, non solo a ottenere il certificato."
+          ]
+        },
+        {
+          "titolo": "Il campo visivo",
+          "paragrafi": [
+            "Il medico competente che rilascia l'idoneità, all'ACI, in autoscuola o al distretto sanitario, deve accertare anche la presenza di un buon campo visivo, cioè dell'ampiezza dello spazio che vediamo tenendo lo sguardo fermo.",
+            "Per questo può essere richiesto un esame integrativo, il campo visivo binoculare di Esterman. Gli esami diagnostici integrativi li eseguo all'Ospedale Koelliker di Torino."
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Per non perdere tempo, Le consiglio di portare:"
+          ],
+          "elenco": [
+            "gli occhiali e le lenti a contatto che usa alla guida;",
+            "le prescrizioni e i referti oculistici precedenti;",
+            "l'elenco dei farmaci che assume e delle malattie note, come diabete o pressione alta;",
+            "eventuali esami recenti, come un campo visivo o un OCT."
+          ],
+          "chiusura": "Se porta lenti a contatto, me lo dica al momento della prenotazione."
+        },
+        {
+          "titolo": "Dopo la visita",
+          "paragrafi": [
+            "Al termine degli accertamenti Le rilascio un referto da portare con sé alla visita per il rilascio o il rinnovo della patente. Se serve, nello stesso appuntamento posso prescrivere occhiali nuovi, così da presentarsi all'esame con la correzione giusta.",
+            "L'idoneità alla guida resta compito del medico competente: la visita oculistica Le dà gli elementi per affrontarla con tranquillità."
+          ]
+        },
+        {
+          "titolo": "Guidare bene, non solo superare il test",
+          "paragrafi": [
+            "Una buona vista alla guida è una questione di sicurezza, per sé e per gli altri. Abbagliamento, visione notturna ridotta e sensibilità al contrasto possono peggiorare con l'età o con la cataratta anche quando le lettere della tabella si leggono ancora bene.",
+            "Per questo, oltre al rinnovo, conviene rispettare il calendario dei controlli: ogni 2 anni fra i 45 e i 65 anni, ogni anno dopo i 65."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi vengono fatte spesso:"
+          ],
+          "elenco": [
+            "Devo guidare con gli occhiali se lo prevede la patente? Sì: se sulla patente è indicato l'obbligo di lenti, vanno sempre indossate alla guida.",
+            "Posso guidare dopo la visita? Se non vengono instillate gocce per dilatare la pupilla, di solito sì. Se servono, Le consiglio di farsi accompagnare.",
+            "La cataratta impedisce il rinnovo? Dipende da quanto riduce la vista e l'abbagliamento: la visita serve proprio a valutarlo.",
+            "Ogni quanto si rinnova la patente? Dipende dall'età e dalla categoria: lo indica la patente stessa.",
+            "Serve il campo visivo per tutti? Lo decide il medico competente: in presenza di malattie oculari è spesso richiesto."
+          ],
+          "chiusura": "Per qualsiasi dubbio sulla Sua situazione, chieda pure al momento della prenotazione: Le dico cosa portare e quanto tempo prevedere per la visita, così da non avere sorprese."
+        },
+        {
+          "titolo": "Vista di notte e abbagliamento",
+          "paragrafi": [
+            "Molte persone si accorgono di vedere peggio solo quando guidano di notte: le luci dei fari danno fastidio, i contorni sono meno netti, ci vuole più tempo per tornare a vedere bene dopo un abbagliamento. Sono disturbi che una tabella di lettere ben illuminata non sempre rivela.",
+            "Per questo, durante la visita per la patente, valuto anche la visione crepuscolare, il recupero dopo l'abbagliamento e la sensibilità al contrasto. Se emergono problemi, ne cerchiamo la causa: a volte basta aggiornare gli occhiali, altre volte c'è una cataratta iniziale da seguire nel tempo."
+          ]
+        },
+        {
+          "titolo": "Come prenotare",
+          "paragrafi": [
+            "Ricevo solo su appuntamento nel mio studio di corso Casale 170 a Torino. Può chiamare lo 011 037 8643 o il 375 504 3931, scrivere a info@oculistascalabrin.com o prenotare su MioDottore.",
+            "Le consiglio di prenotare qualche settimana prima della scadenza della patente, così da avere il tempo per eventuali esami integrativi o per gli occhiali nuovi."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico oculista."
+    }
+  ],
+  "instagram": {
+    "handle": "oculistascalabrin",
+    "nota": "Esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "bambina",
+        "titolo": "Prima visita oculistica del bambino",
+        "sottotitolo": "Intorno ai 3 anni, poi a 6",
+        "didascalia": "I bambini non sanno quanto dovrebbero vedere: un difetto può non dare segnali. Il sistema visivo si sviluppa entro i 6-8 anni, ed è lì che si gioca la partita.",
+        "hashtag": "#oculistica #bambini #torino"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Occhio secco: le cause",
+        "punti": [
+          "Tante ore davanti agli schermi",
+          "Aria condizionata e riscaldamento",
+          "Lenti a contatto a lungo",
+          "Età e cambiamenti ormonali"
+        ],
+        "didascalia": "Bruciore e sabbia negli occhi? Con il test di Schirmer e il BUT capiamo se il problema è nella quantità o nella qualità delle lacrime.",
+        "hashtag": "#occhiosecco #dryeye #oculista"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Rinnovo patente: cosa portare?",
+        "risposta": "Occhiali, lenti e referti precedenti.",
+        "didascalia": "Prima della visita per la patente conviene un controllo dall'oculista: si arriva con occhiali aggiornati e un referto chiaro.",
+        "hashtag": "#patente #vista #torino"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "Ricevo anche presso",
+    "email": "info@oculistascalabrin.com",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio Oculistico Dott.ssa Scalabrin",
+        "indirizzo": "Corso Casale 170",
+        "citta": "Torino",
+        "cap": "10132",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di corso Casale 170, Torino",
+        "telefoni": [
+          {
+            "label": "Studio",
+            "numero": "011 037 8643"
+          },
+          {
+            "label": "Cellulare",
+            "numero": "375 504 3931"
+          }
+        ],
+        "nota": "Solo su appuntamento"
+      },
+      {
+        "tipo": "Ospedale",
+        "nome": "Ospedale Koelliker",
+        "indirizzo": "Corso Galileo Ferraris 247/255",
+        "citta": "Torino",
+        "cap": "",
+        "mappa": true,
+        "principale": false,
+        "frase": "l'Ospedale Koelliker, Torino",
+        "telefoni": [],
+        "nota": "Esami diagnostici integrativi e chirurgia, in regime privato, assicurativo o in convenzione con il SSN"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": [],
+    "miodottore": "https://www.miodottore.it/simona-scalabrin/oculista/torino"
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Ricevo solo su appuntamento. Mi scriva, chiami lo studio o prenoti su MioDottore: La ricontatto per confermare giorno e orario.",
+    "telefono": "0110378643",
+    "telefonoLabel": "011 037 8643",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "saluto": "Dottoressa",
+    "oggettoMail": "Richiesta di visita oculistica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce venire: Le scrivo o La chiamo per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "motivi": [
+        "Visita oculistica",
+        "Visita pediatrica",
+        "Occhiali da vista",
+        "Rinnovo patente",
+        "Occhio secco",
+        "Pressione oculare",
+        "Cataratta",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "un controllo della vista",
+        "una visita pediatrica",
+        "la prescrizione degli occhiali",
+        "il rinnovo della patente",
+        "occhio secco",
+        "la misurazione della pressione oculare",
+        "cataratta",
+        "un altro problema agli occhi"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio, Corso Casale 170",
+          "frase": "lo studio di corso Casale 170, Torino"
+        }
+      ],
+      "privacy": "https://www.iubenda.com/privacy-policy/86753220",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio l'età del bambino o se porta lenti a contatto"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F1F7F6",
+      "ink": "#22302F",
+      "muted": "#5B6967",
+      "line": "#DCE8E6",
+      "brand": "#1E7F79",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#E4963A",
+      "deep": "#12302E",
+      "deep-ink": "#D5E9E6"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap",
+    "fontTitoli": "Outfit",
+    "fontTesti": "Nunito Sans",
+    "favicon": "/scalabrin-c4br/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/scalabrin-c4br/brand/brand.json",
+    "pagine": [
+      "https://www.oculistascalabrin.com/",
+      "https://www.oculistascalabrin.com/chi-sono/",
+      "https://www.oculistascalabrin.com/contatti/",
+      "https://www.oculistascalabrin.com/calendario-controlli-oculistici/",
+      "https://www.oculistascalabrin.com/servizi/"
+    ]
+  }
+}
