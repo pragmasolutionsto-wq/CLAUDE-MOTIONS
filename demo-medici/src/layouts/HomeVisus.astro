@@ -1,0 +1,452 @@
+---
+// Layout "visus" (prima demo: Edmondo Borasio, oculista, EYE PRO). Tutto gira attorno alla "messa a fuoco":
+// titolo-ottotipo che va a fuoco riga per riga, foto che si apre come una palpebra, esploratore dei problemi con cambio "a fuoco",
+// viaggio Torino → Londra → Dubai → Abu Dhabi → Torino disegnato con lo scroll (bloccato su desktop),
+// confronto prima/dopo trascinabile delle mappe corneali (KeraNatural), manifesto che va a fuoco parola per parola,
+// contatori, linea dell'innovazione che si allunga, blog che entra sfocato. Lenis. Con prefers-reduced-motion: tutto fermo e nitido.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = x.hero.box;
+const wa = String(m.prenota.whatsapp);
+const luogo = (m.sedi.luoghi as any[])[0];
+const testo = (mo: string) => `Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${luogo.frase}.`;
+const href0 = `https://wa.me/${wa}?text=${encodeURIComponent(testo(box.motiviFrase[0]))}`;
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const tappe = x.percorso as any[];
+const rotta = tappe.map((t, i) => `${i ? 'L' : 'M'}${t.x * 10} ${t.y * 6}`).join(' ');
+const doctolib = x.sedi.doctolib;
+const taglie = ['text-[3.6rem] sm:text-[6.2rem] lg:text-[7.4rem]', 'text-[3rem] sm:text-[5rem] lg:text-[6rem]', 'text-[2.4rem] sm:text-[3.9rem] lg:text-[4.6rem]'];
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/90 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-8">
+      <a href={`/${m.slug}`} class="flex min-w-0 items-center" aria-label={m.brand.logoAlt}>
+        <img src={m.brand.logoScuro} alt={m.brand.logoAlt} width="560" height="269" class="h-12 w-auto sm:h-14" />
+      </a>
+      <nav class="hidden items-center gap-7 font-head text-[16px] font-semibold uppercase tracking-[0.06em] text-ink/70 lg:flex">
+        <a href="#aree" class="hover:text-brand">Di cosa mi occupo</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#keranatural" class="hover:text-brand">KeraNatural</a><a href="#articoli" class="hover:text-brand">Blog</a><a href="#sedi" class="hover:text-brand">Contatti</a>
+      </nav>
+      <a href={href0} target="_blank" rel="noopener" class="btn !min-h-[42px] shrink-0 !rounded-md bg-brand2 !px-5 text-sm text-white hover:opacity-90"><Icona nome="commento" class="h-4 w-4" /> WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: ottotipo che va a fuoco + foto che si apre come una palpebra -->
+    <section class="relative overflow-hidden" data-hero>
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-8 sm:px-8 lg:grid-cols-12 lg:pb-20 lg:pt-14">
+        <div class="lg:col-span-7">
+          <p class="font-head text-[15px] font-semibold uppercase tracking-[0.24em] text-brand" data-entra>{x.hero.eyebrow}</p>
+          <h1 class="mt-4 font-head font-extrabold uppercase leading-[0.9] tracking-tight text-ink" aria-label={x.hero.titolo}>
+            {x.hero.righe.map((r: string, i: number) => <span class={`riga-ottotipo block ${taglie[i]} ${i === 2 ? 'text-brand2' : ''}`} aria-hidden="true" data-riga>{r}</span>)}
+          </h1>
+          <p class="mt-6 font-head text-2xl font-bold uppercase tracking-wide" data-entra>{nomeCompleto(m)}</p>
+          <p class="mt-2 max-w-xl text-[17px] leading-relaxed text-muted" data-entra>{x.hero.testo}</p>
+          <ul class="mt-6 flex flex-wrap gap-2" data-entra>{x.fatti.map((f: string) => <li class="inline-flex items-center gap-2 rounded-md bg-surface px-3 py-1.5 text-[14px] font-medium"><Icona nome="check" class="h-4 w-4 text-brand2" />{f}</li>)}</ul>
+        </div>
+        <div class="relative order-first lg:order-none lg:col-span-5">
+          <div class="palpebra relative mx-auto aspect-[4/5] w-full max-w-[300px] overflow-hidden rounded-[2rem] bg-surface sm:max-w-[460px]" data-palpebra>
+            <img src={foto.ritratto} alt={foto.ritrattoAlt} width="1100" height="1375" class="h-full w-full object-cover" data-ritratto />
+          </div>
+          <img src={m.brand.marchio} alt="" width="192" height="187" class="absolute -bottom-6 -left-2 hidden h-24 w-24 rounded-full bg-white p-3 shadow-xl sm:block lg:-left-8" data-marchio aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PRENOTAZIONE: la frase si compone -->
+    <section id="prenota-wa" class="bg-deep px-4 py-14 text-white sm:px-8 sm:py-20" data-wa-box data-wa={wa} data-sede={luogo.frase}>
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-bold uppercase leading-none sm:text-[3.4rem]" data-titolo>{box.titolo}</h2>
+        <p class="mt-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-brand2">{box.motivoLabel}</p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          {box.motivi.map((t: string, i: number) => <button type="button" class="chip chip-visus" data-chip="motivo" data-frase={box.motiviFrase[i]} aria-pressed={i === 0 ? 'true' : 'false'}>{t}</button>)}
+        </div>
+        <div class="mt-8 grid gap-6 border-t border-white/15 pt-8 lg:grid-cols-12 lg:items-end">
+          <p class="font-head text-[1.6rem] font-medium leading-snug text-white/90 sm:text-[2.1rem] lg:col-span-8" aria-live="polite">«Buongiorno Dottore, vorrei prenotare una visita per <span class="inline-block overflow-hidden align-bottom"><span class="inline-block font-bold text-brand2" data-frase-motivo>{box.motiviFrase[0]}</span></span> presso {luogo.frase}.»</p>
+          <div class="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:justify-end">
+            <a href={href0} target="_blank" rel="noopener" data-prenota class="btn !rounded-md bg-brand2 text-white hover:opacity-90"><Icona nome="commento" /> Invii su WhatsApp</a>
+            <a href={doctolib} target="_blank" rel="noopener" class="btn !rounded-md border border-white/30 text-white hover:bg-white/10"><Icona nome="calendario" /> Doctolib</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESPLORATORE DEI PROBLEMI -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.6rem] font-bold uppercase leading-none sm:text-[3.6rem]" data-titolo>Di cosa mi occupo</h2>
+        <p class="mt-3 max-w-2xl text-muted">Scelga il problema: Le mostro come lo affronto e con quali tecniche.</p>
+        <div class="mt-10 grid gap-8 lg:grid-cols-12" data-esplora>
+          <div class="-mx-4 flex gap-2 overflow-x-auto px-4 pb-2 lg:col-span-4 lg:mx-0 lg:flex-col lg:overflow-visible lg:px-0" role="tablist" aria-label="Problemi">
+            {x.problemi.map((p: any, i: number) => (
+              <button type="button" role="tab" id={`tab-${p.id}`} aria-controls={`pan-${p.id}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="tab-visus shrink-0 rounded-lg border border-line px-4 py-3 text-left lg:px-5 lg:py-4" data-tab={i}>
+                <span class="block font-head text-[1.15rem] font-bold uppercase leading-tight tracking-wide lg:text-[1.35rem]">{p.nome}</span>
+                <span class="hidden text-[14px] text-muted lg:block">{p.breve}</span>
+              </button>
+            ))}
+          </div>
+          <div class="lg:col-span-8">
+            {x.problemi.map((p: any, i: number) => (
+              <article id={`pan-${p.id}`} role="tabpanel" aria-labelledby={`tab-${p.id}`} class={`grid gap-6 md:grid-cols-2 ${i ? 'hidden' : ''}`} data-pannello={i}>
+                <div class="overflow-hidden rounded-xl bg-surface"><img src={p.img} alt={p.alt} width="900" height="900" loading={i ? 'lazy' : 'eager'} class="aspect-[4/3] h-full w-full object-cover md:aspect-square" data-pannello-img /></div>
+                <div class="flex flex-col justify-center">
+                  <p class="font-head text-[13px] font-semibold uppercase tracking-[0.2em] text-brand">{p.breve}</p>
+                  <h3 class="mt-2 font-head text-[2rem] font-bold uppercase leading-none">{p.nome}</h3>
+                  <p class="mt-4 text-[16px] leading-relaxed text-ink/85">{p.testo}</p>
+                  <ul class="mt-5 flex flex-wrap gap-2">{p.tecniche.map((t: string) => <li class="rounded-md border border-brand2/40 bg-surface px-3 py-1.5 text-[14px] font-semibold text-brand">{t}</li>)}</ul>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERCORSO: Torino → Londra → Dubai → Abu Dhabi → Torino -->
+    <section id="chi-sono" class="bg-surface" data-percorso>
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-8 lg:min-h-[calc(100vh-var(--banner-h)-70px)] lg:grid-cols-12 lg:items-center lg:py-12">
+        <div class="lg:col-span-5">
+          <h2 class="font-head text-[2.6rem] font-bold uppercase leading-none sm:text-[3.6rem]" data-titolo>Il mio percorso</h2>
+          <ol class="mt-8 space-y-6 lg:hidden">
+            {tappe.map((t) => <li class="border-l-2 border-brand2 pl-4"><p class="font-head text-xl font-bold uppercase">{t.luogo} <span class="text-brand">· {t.anni}</span></p><p class="mt-1 text-[15px] leading-relaxed text-muted">{t.testo}</p></li>)}
+          </ol>
+          <div class="relative mt-8 hidden min-h-[13rem] lg:block" aria-live="polite">
+            {tappe.map((t, i) => (
+              <div class={`tappa-visus absolute inset-0 ${i ? 'opacity-0' : ''}`} data-tappa={i}>
+                <p class="font-head text-[3.4rem] font-extrabold uppercase leading-none text-ink">{t.luogo}</p>
+                <p class="mt-1 font-head text-xl font-semibold uppercase tracking-wide text-brand">{t.anni}</p>
+                <p class="mt-4 max-w-md text-[16px] leading-relaxed text-ink/80">{t.testo}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="hidden lg:col-span-7 lg:block">
+          <svg viewBox="0 0 1000 600" class="w-full" aria-hidden="true">
+            <path d={rotta} fill="none" stroke="var(--c-line)" stroke-width="3" stroke-dasharray="8 10" />
+            <path d={rotta} fill="none" stroke="var(--c-brand2)" stroke-width="4" stroke-linecap="round" pathLength="1" class="rotta" data-rotta />
+            {tappe.slice(0, -1).map((t, i) => (
+              <g data-punto={i} class="punto-visus">
+                <circle cx={t.x * 10} cy={t.y * 6} r="26" fill="var(--c-brand2)" opacity="0.15" class="alone" />
+                <circle cx={t.x * 10} cy={t.y * 6} r="10" fill="var(--c-brand2)" />
+                <text x={t.x * 10 + (t.luogo === 'Abu Dhabi' ? -22 : 22)} y={t.y * 6 + (t.luogo === 'Abu Dhabi' ? 44 : -18)} text-anchor={t.luogo === 'Abu Dhabi' ? 'end' : 'start'} class="fill-ink font-head text-[30px] font-bold uppercase">{t.luogo}</text>
+              </g>
+            ))}
+          </svg>
+          <div class="mt-4 flex items-center gap-4 rounded-xl bg-white p-4">
+            <img src={foto.salaBn} alt="Il Dott. Borasio in sala operatoria" width="768" height="1024" loading="lazy" class="h-24 w-20 rounded-lg object-cover" />
+            <p class="text-[15px] leading-relaxed text-muted">Fellow dello European Board of Ophthalmology, membro della European Vitreo Retinal Society e dell'IOL Power Club. Tre volte campione italiano di canottaggio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUMERI -->
+    <section class="px-4 py-16 sm:px-8 sm:py-20">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4" data-numeri>
+        {x.numeri.map((n: any) => (
+          <div class="border-t-2 border-ink pt-4">
+            <p class="font-head text-[3.4rem] font-extrabold leading-none text-ink sm:text-[4.6rem]"><span data-conta={n.valore}>{n.valore.toLocaleString('it-IT')}</span>{n.suffisso}</p>
+            <p class="mt-2 max-w-[15rem] text-[15px] leading-snug text-muted">{n.testo}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- MANIFESTO che va a fuoco -->
+    <section class="bg-deep px-4 py-20 text-white sm:px-8 sm:py-28">
+      <div class="mx-auto max-w-6xl">
+        <p class="font-head text-[2.4rem] font-bold uppercase leading-[1.02] sm:text-[4.2rem]" data-fuoco>{x.manifesto}</p>
+        <p class="mt-8 flex items-center gap-3 text-deep-ink/80"><img src={foto.volto} alt="" width="48" height="48" class="h-12 w-12 rounded-full object-cover" />{nomeCompleto(m)}</p>
+      </div>
+    </section>
+
+    <!-- KERANATURAL: prima/dopo trascinabile -->
+    <section id="keranatural" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-6">
+          <p class="font-head text-[14px] font-semibold uppercase tracking-[0.22em] text-brand">Cheratocono</p>
+          <h2 class="mt-2 font-head text-[2.6rem] font-bold uppercase leading-[0.95] sm:text-[3.6rem]" data-titolo>{x.keranatural.titolo}</h2>
+          <p class="mt-5 max-w-xl text-[17px] leading-relaxed text-ink/85">{x.keranatural.testo}</p>
+          <ul class="mt-6 grid gap-3 sm:grid-cols-2">{x.keranatural.punti.map((t: string) => <li class="flex items-center gap-3 rounded-lg bg-surface px-4 py-3 font-medium"><Icona nome="check" class="h-5 w-5 shrink-0 text-brand2" />{t}</li>)}</ul>
+          <div class="mt-6 flex items-center gap-4">
+            <img src={foto.anello} alt="Segmento di KeraNatural" width="1000" height="900" loading="lazy" class="h-24 w-28 rounded-lg object-cover" data-anello />
+            <a href={`/${m.slug}/blog/keranatural`} class="inline-flex items-center gap-2 font-head text-lg font-bold uppercase tracking-wide text-brand hover:underline">Come funziona KeraNatural <Icona nome="freccia" class="h-4 w-4" /></a>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="relative mx-auto aspect-[1261/1135] w-full max-w-[560px] select-none overflow-hidden rounded-xl border border-line bg-white" data-confronto>
+            <img src={foto.topoDopo} alt="Mappa topografica due giorni dopo KeraNatural" width="900" height="810" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            <div class="absolute inset-0" style="clip-path: inset(0 50% 0 0)" data-prima>
+              <img src={foto.topoPrima} alt="Mappa topografica prima di KeraNatural" width="900" height="810" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+            </div>
+            <div class="pointer-events-none absolute inset-y-0 left-1/2 w-0.5 -translate-x-1/2 bg-ink" data-maniglia><span class="absolute left-1/2 top-1/2 grid h-11 w-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-ink text-white"><Icona nome="sx" class="h-4 w-4" /><Icona nome="dx" class="-ml-1 h-4 w-4" /></span></div>
+            <span class="absolute left-3 top-3 rounded bg-ink px-2 py-1 font-head text-sm font-bold uppercase text-white">Prima</span>
+            <span class="absolute right-3 top-3 rounded bg-brand2 px-2 py-1 font-head text-sm font-bold uppercase text-white">Dopo 2 giorni</span>
+            <label class="sr-only" for="cursore-confronto">Confronto prima e dopo</label>
+            <input id="cursore-confronto" type="range" min="0" max="100" value="50" class="confronto-range absolute inset-0 h-full w-full cursor-ew-resize opacity-0" data-range />
+          </div>
+          <p class="mx-auto mt-3 max-w-[560px] text-[13px] text-muted">{x.keranatural.notaMappa}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INNOVAZIONE: linea che si allunga -->
+    <section class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.6rem] font-bold uppercase leading-none sm:text-[3.6rem]" data-titolo>Ricerca e innovazione</h2>
+        <div class="relative mt-12" data-innova>
+          <div class="absolute left-0 right-0 top-[11px] hidden h-0.5 bg-line lg:block"><div class="h-full origin-left bg-brand2" data-linea></div></div>
+          <ol class="grid gap-8 lg:grid-cols-4">
+            {x.innovazione.map((n: any) => (
+              <li class="relative" data-innova-voce>
+                <span class="relative z-10 block h-6 w-6 rounded-full border-4 border-surface bg-brand2" aria-hidden="true"></span>
+                <p class="mt-4 font-head text-[2.4rem] font-extrabold leading-none text-brand">{n.anno}</p>
+                <h3 class="mt-2 font-head text-xl font-bold uppercase">{n.titolo}</h3>
+                <p class="mt-2 text-[15px] leading-relaxed text-muted">{n.testo}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-2">
+          <figure class="overflow-hidden rounded-xl bg-white"><img src={foto.femtoCataratta} alt="Il Dott. Borasio durante una Femto Phaco con piattaforma Alcon LenSx" width="833" height="552" loading="lazy" class="aspect-[3/2] w-full object-cover" data-parallasse /></figure>
+          <div class="flex flex-col justify-center rounded-xl bg-deep p-8 text-white">
+            <p class="font-head text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2">Diagnostica nel mio studio</p>
+            <ul class="mt-4 flex flex-wrap gap-2" data-stagger>{x.diagnostica.map((t: string) => <li class="rounded-md border border-white/20 px-3 py-1.5 text-[14px]">{t}</li>)}</ul>
+            <p class="mt-6 text-[15px] leading-relaxed text-deep-ink/80">{x.piloti}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-visus"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG -->
+    <section id="articoli" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.6rem] font-bold uppercase leading-none sm:text-[3.6rem]" data-titolo>Dal mio blog</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-head text-lg font-bold uppercase tracking-wide text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group block overflow-hidden rounded-xl border border-line bg-white">
+              <span class="block overflow-hidden bg-surface"><img src={b.img} alt="" width="1200" height="900" loading="lazy" class="aspect-[4/3] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="block p-5"><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">{b.categoria} · {b.tempoLettura}</span><span class="mt-2 block font-head text-[1.35rem] font-bold uppercase leading-tight group-hover:text-brand">{b.titolo}</span></span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-bold uppercase leading-none" data-titolo>Il mio Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-xl border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full border border-line bg-white p-0.5" /><a href={`https://www.instagram.com/${ig.handle}/`} target="_blank" rel="noopener" class="text-sm font-semibold hover:underline">{ig.handle}</a></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="900" height="900" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-deep/95 px-5 py-4 text-white"><p class="font-head text-2xl font-bold uppercase leading-tight">{p.titolo}</p><p class="mt-0.5 text-sm text-brand2">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-brand2 p-7 text-white">
+                  <img src={m.brand.logoChiaro} alt="" width="560" height="269" class="h-12 w-auto self-start" />
+                  <div><p class="font-head text-[2.1rem] font-extrabold uppercase leading-[0.95]">{p.titolo}</p><p class="mt-4 w-fit rounded-md bg-deep px-4 py-2 text-[14px] font-semibold">{p.risposta}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-deep p-7 text-white">
+                  <p class="font-head text-[2rem] font-extrabold uppercase leading-[0.95]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand2"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="overflow-hidden rounded-xl lg:col-span-6"><img src={foto.studio} alt="Il palazzo dello studio EYE PRO in via Carlo Giordana 5" width="1200" height="926" loading="lazy" class="aspect-[4/3] w-full object-cover" data-parallasse /></div>
+        <div class="lg:col-span-6">
+          <h2 class="font-head text-[2.6rem] font-bold uppercase leading-none sm:text-[3.6rem]" data-titolo>{m.sedi.titolo}</h2>
+          <p class="mt-4 font-head text-2xl font-bold uppercase">{luogo.nome}</p>
+          <p class="mt-1 text-muted">{luogo.indirizzo}, {luogo.cap} {luogo.citta} · Ricevo esclusivamente qui</p>
+          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+            <a href={href0} target="_blank" rel="noopener" class="btn !rounded-md bg-brand2 text-white"><Icona nome="commento" /> WhatsApp 339 716 9990</a>
+            <a href={telHref(m.prenota.telefono)} class="btn btn-ghost !rounded-md"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+            <a href={doctolib} target="_blank" rel="noopener" class="btn btn-ghost !rounded-md"><Icona nome="calendario" /> Prenoti su Doctolib</a>
+            <a href={`mailto:${m.sedi.email}`} class="btn btn-ghost !rounded-md"><Icona nome="mail" /> {m.sedi.email}</a>
+          </div>
+          <a href={mapsHref(luogo.indirizzo, luogo.citta)} target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-muted hover:text-brand"><Icona nome="pin" class="h-4 w-4" /> Apra la mappa</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand2 px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-4xl font-extrabold uppercase leading-none sm:text-5xl">{m.prenota.titolo}</h2><p class="mt-3 max-w-xl text-white/90">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={href0} target="_blank" rel="noopener" class="btn !rounded-md bg-white text-ink hover:opacity-90"><Icona nome="commento" /> WhatsApp</a>
+          <a href="#prenota" class="btn !rounded-md border border-white/60 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+
+    // --- Prenotazione: la frase si compone ---
+    const box = document.querySelector<HTMLElement>('[data-wa-box]');
+    if (box) {
+      const link = box.querySelector<HTMLAnchorElement>('[data-prenota]')!;
+      const parola = box.querySelector<HTMLElement>('[data-frase-motivo]')!;
+      box.querySelectorAll<HTMLElement>('[data-chip="motivo"]').forEach((c) => c.addEventListener('click', () => {
+        const mo = c.dataset.frase!;
+        link.href = `https://wa.me/${box.dataset.wa}?text=${encodeURIComponent(`Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${box.dataset.sede}.`)}`;
+        if (ridotto) { parola.textContent = mo; return; }
+        gsap.to(parola, { yPercent: -100, filter: 'blur(6px)', duration: 0.2, ease: 'power2.in', onComplete: () => {
+          parola.textContent = mo;
+          gsap.fromTo(parola, { yPercent: 100, filter: 'blur(6px)' }, { yPercent: 0, filter: 'blur(0px)', duration: 0.35, ease: 'power3.out' });
+        } });
+      }));
+    }
+
+    // --- Esploratore dei problemi (tab accessibili) ---
+    const esplora = document.querySelector<HTMLElement>('[data-esplora]');
+    if (esplora) {
+      const tabs = [...esplora.querySelectorAll<HTMLButtonElement>('[data-tab]')];
+      const pannelli = [...esplora.querySelectorAll<HTMLElement>('[data-pannello]')];
+      const apri = (i: number, focus = false) => {
+        tabs.forEach((t, k) => { t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1; });
+        pannelli.forEach((p, k) => p.classList.toggle('hidden', k !== i));
+        if (focus) tabs[i].focus();
+        if (!ridotto) {
+          const p = pannelli[i];
+          gsap.fromTo(p.querySelector('[data-pannello-img]'), { filter: 'blur(14px)', scale: 1.12 }, { filter: 'blur(0px)', scale: 1, duration: 0.7, ease: 'power3.out' });
+          gsap.fromTo(p.querySelectorAll('h3, p, li'), { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.03, ease: 'power2.out' });
+        }
+      };
+      tabs.forEach((t, i) => {
+        t.addEventListener('click', () => apri(i));
+        t.addEventListener('keydown', (e) => {
+          const k = (e as KeyboardEvent).key;
+          if (['ArrowRight', 'ArrowDown'].includes(k)) { e.preventDefault(); apri((i + 1) % tabs.length, true); }
+          if (['ArrowLeft', 'ArrowUp'].includes(k)) { e.preventDefault(); apri((i - 1 + tabs.length) % tabs.length, true); }
+        });
+      });
+    }
+
+    // --- Confronto prima/dopo ---
+    const conf = document.querySelector<HTMLElement>('[data-confronto]');
+    if (conf) {
+      const r = conf.querySelector<HTMLInputElement>('[data-range]')!;
+      const prima = conf.querySelector<HTMLElement>('[data-prima]')!;
+      const man = conf.querySelector<HTMLElement>('[data-maniglia]')!;
+      const muovi = (v: number) => { prima.style.clipPath = `inset(0 ${100 - v}% 0 0)`; man.style.left = `${v}%`; };
+      r.addEventListener('input', () => muovi(Number(r.value)));
+      if (!ridotto) ScrollTrigger.create({ trigger: conf, start: 'top 70%', once: true, onEnter: () => {
+        const o = { v: 50 };
+        gsap.timeline().to(o, { v: 82, duration: 0.9, ease: 'power2.inOut', onUpdate: () => muovi(o.v) }).to(o, { v: 50, duration: 0.9, ease: 'power2.inOut', onUpdate: () => muovi(o.v), onComplete: () => { r.value = '50'; } });
+      } });
+    }
+
+    if (!ridotto) {
+      const lenis = new Lenis({ anchors: { offset: -90 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      // Hero: l'ottotipo va a fuoco riga per riga, la foto si apre come una palpebra
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('[data-palpebra]', { clipPath: 'inset(50% 0% 50% 0% round 2rem)', duration: 1.1, ease: 'power4.inOut' })
+        .from('[data-ritratto]', { scale: 1.25, filter: 'blur(10px)', duration: 1.4 }, '<0.2')
+        .from('[data-riga]', { filter: 'blur(16px)', opacity: 0.15, letterSpacing: '0.12em', duration: 1, stagger: 0.28 }, 0.1)
+        .from('[data-entra]', { y: 24, opacity: 0, duration: 0.7, stagger: 0.08 }, '-=0.7')
+        .from('[data-marchio]', { scale: 0, rotate: -90, duration: 0.7, ease: 'back.out(2)' }, '-=0.5');
+      gsap.to('[data-ritratto]', { yPercent: 8, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+
+      // Titoli che vanno a fuoco
+      gsap.utils.toArray<HTMLElement>('[data-titolo]').forEach((h) => gsap.from(h, { filter: 'blur(12px)', opacity: 0, y: 20, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: h, start: 'top 88%', once: true } }));
+
+      // Percorso: bloccato su desktop, rotta che si disegna e tappe che cambiano
+      const mm = gsap.matchMedia();
+      mm.add('(min-width: 1024px)', () => {
+        const tappe = gsap.utils.toArray<HTMLElement>('[data-tappa]');
+        const punti = gsap.utils.toArray<SVGGElement>('[data-punto]');
+        let att = 0;
+        const mostra = (i: number) => {
+          if (i === att) return;
+          gsap.to(tappe[att], { opacity: 0, filter: 'blur(8px)', y: -10, duration: 0.3 });
+          gsap.fromTo(tappe[i], { opacity: 0, filter: 'blur(8px)', y: 10 }, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 0.45 });
+          att = i;
+        };
+        gsap.set('[data-rotta]', { strokeDasharray: 1, strokeDashoffset: 1 });
+        ScrollTrigger.create({
+          trigger: '[data-percorso]', start: 'top top+=' + (document.querySelector('header')!.getBoundingClientRect().bottom), end: '+=2200', pin: true, scrub: 0.6,
+          animation: gsap.to('[data-rotta]', { strokeDashoffset: 0, ease: 'none' }),
+          onUpdate: (st) => {
+            const i = Math.min(tappe.length - 1, Math.floor(st.progress * tappe.length * 0.999));
+            mostra(i);
+            punti.forEach((p, k) => p.classList.toggle('acceso', k <= Math.min(i, punti.length - 1) || (i === tappe.length - 1 && k === 0)));
+          },
+        });
+        punti[0]?.classList.add('acceso');
+      });
+
+      // Contatori
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.8, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true }, onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString('it-IT'); } });
+        gsap.from(el, { filter: 'blur(10px)', duration: 1.2, scrollTrigger: { trigger: el, start: 'top 90%', once: true } });
+      });
+
+      // Manifesto: le parole vanno a fuoco con lo scroll
+      const fu = document.querySelector<HTMLElement>('[data-fuoco]');
+      if (fu) {
+        const p = (fu.textContent ?? '').trim().split(/\s+/);
+        fu.setAttribute('aria-label', p.join(' '));
+        fu.innerHTML = p.map((w) => `<span class="inline-block" aria-hidden="true">${w}</span>`).join(' ');
+        gsap.fromTo(fu.querySelectorAll('span'), { filter: 'blur(10px)', opacity: 0.25 }, { filter: 'blur(0px)', opacity: 1, stagger: 0.08, ease: 'none', scrollTrigger: { trigger: fu, start: 'top 80%', end: 'bottom 50%', scrub: true } });
+      }
+
+      // Anello KeraNatural che ruota con lo scroll
+      gsap.to('[data-anello]', { rotate: 14, scale: 1.06, ease: 'none', scrollTrigger: { trigger: '#keranatural', start: 'top bottom', end: 'bottom top', scrub: true } });
+
+      // Innovazione: la linea si allunga, le voci entrano
+      gsap.from('[data-linea]', { scaleX: 0, ease: 'none', scrollTrigger: { trigger: '[data-innova]', start: 'top 80%', end: 'top 30%', scrub: true } });
+      gsap.from('[data-innova-voce]', { y: 30, opacity: 0, filter: 'blur(6px)', duration: 0.7, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '[data-innova]', start: 'top 80%', once: true } });
+
+      // Foto con parallasse
+      gsap.utils.toArray<HTMLElement>('[data-parallasse]').forEach((im) => gsap.fromTo(im, { scale: 1.15, yPercent: -6 }, { scale: 1.15, yPercent: 6, ease: 'none', scrollTrigger: { trigger: im, start: 'top bottom', end: 'bottom top', scrub: true } }));
+
+      // Blog: le schede entrano sfocate
+      gsap.from('[data-blog] > a', { filter: 'blur(12px)', opacity: 0, y: 40, duration: 0.8, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: '[data-blog]', start: 'top 85%', once: true } });
+
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>

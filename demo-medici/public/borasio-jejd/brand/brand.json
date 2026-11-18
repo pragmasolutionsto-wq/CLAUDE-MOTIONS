@@ -1,0 +1,124 @@
+{
+  "medico": "Dott. Edmondo Borasio",
+  "studio": "EYE PRO Studio Oculistico",
+  "specialita": "Oculista: cornea, cataratta, chirurgia refrattiva, cheratocono",
+  "sito": "https://www.edmondoborasio.com/",
+  "logo": "logo-eye-pro.png (HighRescopia2.png, trasparente); marchio-eye-pro.jpg (favicon)",
+  "colori": {
+    "blu_logo": "#2BA9E1",
+    "nero": "#1A1A1A",
+    "blu_scuro_demo": "#1A8FC4"
+  },
+  "font": {
+    "sito": "Helvetica / font di sistema",
+    "demo": [
+      "Barlow Condensed",
+      "Barlow"
+    ],
+    "nota": "il logo usa un bastoni condensato: Barlow Condensed è il più vicino"
+  },
+  "contatti": {
+    "studio": "Via Carlo Giordana 5, 10128 Torino",
+    "telefono": "392 723 1024",
+    "whatsapp": "339 716 9990",
+    "email": "dr@edmondoborasio.com",
+    "doctolib": "https://www.doctolib.it/oftalmologo/torino/edmondo-borasio",
+    "instagram": "https://www.instagram.com/eyeprostudiooculistico/ (fermo dal 2023)",
+    "facebook": "https://www.facebook.com/edmondoborasio/",
+    "linkedin": "http://www.linkedin.com/in/edmondo-borasio-722a3b38"
+  },
+  "orari": "non indicati sul sito (calendario con orari indicativi lun-ven)",
+  "foto": [
+    "foto-01-ritratto.jpg",
+    "foto-02-in-sala.jpg",
+    "foto-03-in-sala-bn.jpg",
+    "foto-04-femto-cataratta-lensx.png (volto del paziente sfocato)",
+    "foto-05-femto-lasik-wavelight.png (volto del paziente sfocato)",
+    "foto-06-studio-esterno.jpg",
+    "post-keranatural-italia.jpg (usate solo mappe topografiche e anello, niente volto del paziente)",
+    "disegno-vitreo-*.jpg (suoi disegni)"
+  ],
+  "repertorio": "3 foto Unsplash già presenti sul suo sito (occhiali, iride, occhio)",
+  "dati_esclusi": "anno di nascita (presente nella pagina Chi è): non pubblicato",
+  "percorso": [
+    {
+      "luogo": "Torino",
+      "anni": "Laurea e specializzazione",
+      "testo": "Laurea con 110 e lode e dignità di stampa all'Università di Torino, poi la specializzazione in Oftalmologia nella stessa Università. Premio Achille Menzio per la migliore tesi.",
+      "x": 46,
+      "y": 32
+    },
+    {
+      "luogo": "Londra",
+      "anni": "2002 – 2007",
+      "testo": "Moorfields Eye Hospital, il più prestigioso ospedale oculistico al mondo: tre fellowship complete, in chirurgia della cataratta, chirurgia refrattiva e cornea.",
+      "x": 30,
+      "y": 16
+    },
+    {
+      "luogo": "Dubai",
+      "anni": "2007 – 2014",
+      "testo": "Pioniere della chirurgia della cornea al Moorfields Eye Hospital Dubai, dove ho avviato il servizio di chirurgia refrattiva e corneale.",
+      "x": 80,
+      "y": 64
+    },
+    {
+      "luogo": "Abu Dhabi",
+      "anni": "2015 – 2020",
+      "testo": "Primario e Direttore del Dipartimento di Cornea e Chirurgia Refrattiva del Burjeel Hospital e del reparto di Oculistica del Burjeel Day Surgery Center. Medico di Fiducia dell'Ambasciata Italiana.",
+      "x": 76,
+      "y": 72
+    },
+    {
+      "luogo": "Torino",
+      "anni": "Oggi",
+      "testo": "Ho fondato EYE PRO Studio Oculistico, in via Carlo Giordana 5. Opero nelle migliori cliniche di Torino. Nel 2022 sono stato anche consulente per cornea e trapianti all'Ospedale Beauregard di Aosta.",
+      "x": 46,
+      "y": 32
+    }
+  ],
+  "numeri": [
+    {
+      "valore": 400,
+      "suffisso": "+",
+      "testo": "trapianti di cornea eseguiti"
+    },
+    {
+      "valore": 3,
+      "suffisso": "",
+      "testo": "fellowship al Moorfields Eye Hospital di Londra"
+    },
+    {
+      "valore": 10000,
+      "suffisso": "+",
+      "testo": "oculisti nel mondo usano le mie app"
+    },
+    {
+      "valore": 2,
+      "suffisso": "",
+      "testo": "brevetti per il trapianto di cornea con il laser"
+    }
+  ],
+  "innovazione": [
+    {
+      "anno": "2006",
+      "titolo": "La formula BESSt",
+      "testo": "Ho sviluppato una formula per calcolare con più precisione la lente da impiantare nella cataratta di chi ha già fatto LASIK, LASEK o PRK. Pubblicata sul Journal of Cataract and Refractive Surgery."
+    },
+    {
+      "anno": "2009",
+      "titolo": "EYE PRO, la prima app oculistica",
+      "testo": "Sono programmatore autodidatta: EYE PRO è stata la prima app di oftalmologia per iPhone e iPad. Oggi le mie app sono usate da oltre 10.000 oculisti."
+    },
+    {
+      "anno": "2013",
+      "titolo": "IOL Power Club",
+      "testo": "Per il lavoro sulla biometria dopo chirurgia refrattiva sono stato ammesso all'IOL Power Club, una ventina di esperti mondiali del calcolo delle lenti intraoculari."
+    },
+    {
+      "anno": "Oggi",
+      "titolo": "Primo KeraNatural in Italia",
+      "testo": "Ho eseguito il primo impianto di KeraNatural in Italia: segmenti di cornea umana per rimodellare la cornea con il cheratocono."
+    }
+  ]
+}

@@ -176,6 +176,23 @@ html { scroll-behavior: smooth; }
   .senza-moto [data-cursore] { display: none; }
 }
 
+/* Layout "visus": chip e schede, punti della rotta che si accendono */
+@keyframes alone-visus { 0%, 100% { transform: scale(1); opacity: .15; } 50% { transform: scale(1.5); opacity: .3; } }
+@layer components {
+  .chip-visus { background: transparent; border-color: rgb(255 255 255 / .25); color: #fff; border-radius: 6px; font-family: var(--f-head); font-weight: 600; font-size: 1rem; text-transform: uppercase; letter-spacing: .04em; }
+  .chip-visus[aria-pressed="true"] { border-color: var(--c-brand2); background: var(--c-brand2); color: #fff; }
+  .tab-visus { transition: border-color .2s, background-color .2s, color .2s; }
+  .tab-visus[aria-selected="true"] { border-color: var(--c-ink); background: var(--c-ink); color: #fff; }
+  .tab-visus[aria-selected="true"] span { color: inherit; }
+  .punto-visus { opacity: .3; transition: opacity .4s; }
+  .punto-visus.acceso { opacity: 1; }
+  .punto-visus .alone { transform-box: fill-box; transform-origin: center; }
+  .punto-visus.acceso .alone { animation: alone-visus 2s ease-in-out infinite; }
+  .stile-visus .card { border-radius: 12px; }
+  .senza-moto .punto-visus { opacity: 1; }
+  .senza-moto .punto-visus .alone { animation: none; }
+}
+
 /* Testo articolo */
 .prose-medico h2 { font-family: var(--f-head); font-weight: 600; font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem); line-height: 1.2; margin: 2.6rem 0 .9rem; color: var(--c-ink); }
 .prose-medico > section:first-child h2 { margin-top: 0; }

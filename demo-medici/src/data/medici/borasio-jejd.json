@@ -1,0 +1,784 @@
+{
+  "slug": "borasio-jejd",
+  "layout": "visus",
+  "sitoOrigine": "https://www.edmondoborasio.com/",
+  "titolo": "Dott.",
+  "nome": "Edmondo Borasio",
+  "specialita": "Medico oculista, chirurgo della cornea, della cataratta e refrattivo",
+  "firma": "Oculista",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Edmondo Borasio · Oculista a Torino · EYE PRO Studio Oculistico",
+    "description": "Sono oculista a Torino, formato al Moorfields Eye Hospital di Londra: chirurgia refrattiva (Femto LASIK, SMILE, PRK, ICL), cataratta laser, cheratocono e KeraNatural, trapianti di cornea, laser per le mosche volanti."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/borasio-jejd/img/logo.png",
+    "logoChiaro": "/borasio-jejd/img/logo-chiaro.png",
+    "marchio": "/borasio-jejd/img/marchio.png",
+    "logoAlt": "EYE PRO Studio Oculistico, Dr. Edmondo Borasio"
+  },
+  "foto": {
+    "ritratto": "/borasio-jejd/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Edmondo Borasio",
+    "volto": "/borasio-jejd/img/volto.webp",
+    "sala": "/borasio-jejd/img/sala.webp",
+    "salaBn": "/borasio-jejd/img/sala-bn.webp",
+    "femtoLasik": "/borasio-jejd/img/femto-lasik.webp",
+    "femtoCataratta": "/borasio-jejd/img/femto-cataratta.webp",
+    "studio": "/borasio-jejd/img/studio.webp",
+    "anello": "/borasio-jejd/img/anello.webp",
+    "topoPrima": "/borasio-jejd/img/topo-prima.webp",
+    "topoDopo": "/borasio-jejd/img/topo-dopo.webp",
+    "vitreoYag": "/borasio-jejd/img/vitreo-yag.webp",
+    "repOcchiali": "/borasio-jejd/img/rep-occhiali.webp",
+    "repIride": "/borasio-jejd/img/rep-iride.webp",
+    "repOcchio": "/borasio-jejd/img/rep-occhio.webp"
+  },
+  "hero": {
+    "eyebrow": "EYE PRO Studio Oculistico · Torino",
+    "righe": [
+      "La Sua",
+      "vista è",
+      "preziosa."
+    ],
+    "titolo": "La Sua vista è preziosa.",
+    "testo": "Sono oculista e chirurgo della cornea, della cataratta e della chirurgia refrattiva. Mi sono formato al Moorfields Eye Hospital di Londra e ho lavorato tredici anni negli Emirati Arabi. Oggi ricevo a Torino, nel mio studio.",
+    "ctaPrenota": "Prenoti su WhatsApp",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Di cosa ha bisogno?",
+      "motivi": [
+        "Miopia e astigmatismo",
+        "Presbiopia",
+        "Cataratta",
+        "Cheratocono",
+        "Mosche volanti",
+        "Cornea",
+        "Visita oculistica",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "miopia o astigmatismo",
+        "presbiopia",
+        "cataratta",
+        "cheratocono",
+        "corpi mobili vitreali (mosche volanti)",
+        "un problema della cornea",
+        "un controllo della vista",
+        "un altro problema agli occhi"
+      ],
+      "motivoLabel": "Il motivo della visita",
+      "sedeLabel": "Dove"
+    }
+  },
+  "fatti": [
+    "Formato al Moorfields di Londra",
+    "Oltre 400 trapianti di cornea",
+    "Primo KeraNatural in Italia",
+    "Nessun legame con case farmaceutiche"
+  ],
+  "problemi": [
+    {
+      "id": "miopia",
+      "nome": "Miopia, astigmatismo, ipermetropia",
+      "breve": "Togliere gli occhiali",
+      "img": "/borasio-jejd/img/femto-lasik.webp",
+      "alt": "Il Dott. Borasio prima di una Femto LASIK",
+      "testo": "Correggo i difetti visivi con il laser, scegliendo la tecnica in base alla Sua cornea: Femto LASIK, SMILE, PRK, LASEK, TransPRK, trattamenti personalizzati wavefront e topoguidati. Quando la cornea è sottile o il difetto è molto alto, impianto lenti fachiche ICL: sono chirurgo certificato STAAR.",
+      "tecniche": [
+        "Femto LASIK",
+        "SMILE",
+        "PRK · TransPRK",
+        "Lenti ICL"
+      ]
+    },
+    {
+      "id": "presbiopia",
+      "nome": "Presbiopia",
+      "breve": "Leggere senza occhiali",
+      "img": "/borasio-jejd/img/rep-occhiali.webp",
+      "alt": "",
+      "testo": "Dopo i 45 anni la vista da vicino cala. In casi selezionati si può sostituire il cristallino, ancora trasparente, con lenti artificiali trifocali o EDOF, che correggono la visione da lontano, intermedia e da vicino: senza occhiali per gran parte delle attività quotidiane.",
+      "tecniche": [
+        "Lensectomia refrattiva",
+        "IOL trifocali",
+        "IOL EDOF",
+        "Laser"
+      ]
+    },
+    {
+      "id": "cataratta",
+      "nome": "Cataratta",
+      "breve": "Tornare a vedere nitido",
+      "img": "/borasio-jejd/img/femto-cataratta.webp",
+      "alt": "Il Dott. Borasio durante una cataratta con laser a femtosecondi",
+      "testo": "Opero la cataratta anche con il laser a femtosecondi (Femto Phaco, piattaforma Alcon LenSx): la capsula si apre con un cerchio perfetto e la cataratta si fraziona in piccoli pezzi, con meno stress per la cornea. È la scelta ideale per chi impianta lenti premium, multifocali o toriche.",
+      "tecniche": [
+        "Femto Phaco (FLACS)",
+        "IOL multifocali",
+        "IOL toriche",
+        "Lenti Artisan"
+      ]
+    },
+    {
+      "id": "cheratocono",
+      "nome": "Cheratocono",
+      "breve": "Fermarlo e migliorare la vista",
+      "img": "/borasio-jejd/img/anello.webp",
+      "alt": "Segmento di KeraNatural",
+      "testo": "Negli Emirati, dove il cheratocono è molto frequente, ho trattato moltissimi casi. Uso tutte le tecniche: cross-linking nelle fasi iniziali, anelli intracorneali con laser a femtosecondi e KeraNatural nelle fasi intermedie, trapianto lamellare nei casi avanzati.",
+      "tecniche": [
+        "Cross-linking",
+        "KeraNatural",
+        "Anelli intracorneali",
+        "DALK"
+      ]
+    },
+    {
+      "id": "cornea",
+      "nome": "Malattie della cornea",
+      "breve": "Trapianti di cornea",
+      "img": "/borasio-jejd/img/sala.webp",
+      "alt": "Il Dott. Borasio al microscopio operatorio",
+      "testo": "Ho eseguito oltre 400 trapianti di cornea, la maggior parte con il laser a femtosecondi: cheratoplastica perforante, lamellare anteriore profonda (DALK, tecnica big bubble), endoteliale (DSAEK, DMEK). Ho due brevetti per nuovi metodi di taglio con il laser.",
+      "tecniche": [
+        "PK",
+        "DALK",
+        "DSAEK · DMEK",
+        "Pterigio"
+      ]
+    },
+    {
+      "id": "mosche",
+      "nome": "Mosche volanti",
+      "breve": "Corpi mobili vitreali",
+      "img": "/borasio-jejd/img/vitreo-yag.webp",
+      "alt": "Disegno del Dott. Borasio: vitreolisi con YAG laser",
+      "testo": "I corpi mobili più densi, che disturbano la lettura e la qualità della vita, si possono trattare con la vitreolisi YAG laser: un trattamento ambulatoriale, non invasivo, di pochi minuti. Il mio studio è tra i pochissimi centri in Italia che lo offrono.",
+      "tecniche": [
+        "Vitreolisi YAG",
+        "Capsulotomia YAG",
+        "Laser SLT",
+        "Argon laser"
+      ]
+    }
+  ],
+  "percorso": [
+    {
+      "luogo": "Torino",
+      "anni": "Laurea e specializzazione",
+      "testo": "Laurea con 110 e lode e dignità di stampa all'Università di Torino, poi la specializzazione in Oftalmologia nella stessa Università. Premio Achille Menzio per la migliore tesi.",
+      "x": 46,
+      "y": 32
+    },
+    {
+      "luogo": "Londra",
+      "anni": "2002 – 2007",
+      "testo": "Moorfields Eye Hospital, il più prestigioso ospedale oculistico al mondo: tre fellowship complete, in chirurgia della cataratta, chirurgia refrattiva e cornea.",
+      "x": 30,
+      "y": 16
+    },
+    {
+      "luogo": "Dubai",
+      "anni": "2007 – 2014",
+      "testo": "Pioniere della chirurgia della cornea al Moorfields Eye Hospital Dubai, dove ho avviato il servizio di chirurgia refrattiva e corneale.",
+      "x": 80,
+      "y": 64
+    },
+    {
+      "luogo": "Abu Dhabi",
+      "anni": "2015 – 2020",
+      "testo": "Primario e Direttore del Dipartimento di Cornea e Chirurgia Refrattiva del Burjeel Hospital e del reparto di Oculistica del Burjeel Day Surgery Center. Medico di Fiducia dell'Ambasciata Italiana.",
+      "x": 76,
+      "y": 72
+    },
+    {
+      "luogo": "Torino",
+      "anni": "Oggi",
+      "testo": "Ho fondato EYE PRO Studio Oculistico, in via Carlo Giordana 5. Opero nelle migliori cliniche di Torino. Nel 2022 sono stato anche consulente per cornea e trapianti all'Ospedale Beauregard di Aosta.",
+      "x": 46,
+      "y": 32
+    }
+  ],
+  "numeri": [
+    {
+      "valore": 400,
+      "suffisso": "+",
+      "testo": "trapianti di cornea eseguiti"
+    },
+    {
+      "valore": 3,
+      "suffisso": "",
+      "testo": "fellowship al Moorfields Eye Hospital di Londra"
+    },
+    {
+      "valore": 10000,
+      "suffisso": "+",
+      "testo": "oculisti nel mondo usano le mie app"
+    },
+    {
+      "valore": 2,
+      "suffisso": "",
+      "testo": "brevetti per il trapianto di cornea con il laser"
+    }
+  ],
+  "manifesto": "Non sono legato ad alcuna azienda farmaceutica. Non Le proporrò mai un intervento che non Le serve.",
+  "innovazione": [
+    {
+      "anno": "2006",
+      "titolo": "La formula BESSt",
+      "testo": "Ho sviluppato una formula per calcolare con più precisione la lente da impiantare nella cataratta di chi ha già fatto LASIK, LASEK o PRK. Pubblicata sul Journal of Cataract and Refractive Surgery."
+    },
+    {
+      "anno": "2009",
+      "titolo": "EYE PRO, la prima app oculistica",
+      "testo": "Sono programmatore autodidatta: EYE PRO è stata la prima app di oftalmologia per iPhone e iPad. Oggi le mie app sono usate da oltre 10.000 oculisti."
+    },
+    {
+      "anno": "2013",
+      "titolo": "IOL Power Club",
+      "testo": "Per il lavoro sulla biometria dopo chirurgia refrattiva sono stato ammesso all'IOL Power Club, una ventina di esperti mondiali del calcolo delle lenti intraoculari."
+    },
+    {
+      "anno": "Oggi",
+      "titolo": "Primo KeraNatural in Italia",
+      "testo": "Ho eseguito il primo impianto di KeraNatural in Italia: segmenti di cornea umana per rimodellare la cornea con il cheratocono."
+    }
+  ],
+  "keranatural": {
+    "titolo": "Primo impianto di KeraNatural in Italia",
+    "testo": "KeraNatural rimodella la cornea con il cheratocono usando segmenti di cornea umana donata, al posto degli anelli in plastica. Si inserisce in un tunnel creato dal laser a femtosecondi, in circa 10 minuti, con una goccia di anestetico.",
+    "punti": [
+      "Tessuto naturale e biocompatibile",
+      "Regolabile dopo l'intervento",
+      "Reversibile se necessario",
+      "Rischio di rigetto basso"
+    ],
+    "notaMappa": "Mappa topografica di un mio paziente prima e due giorni dopo KeraNatural. I risultati variano da persona a persona."
+  },
+  "diagnostica": [
+    "Pentacam AXL Wave",
+    "Forottero automatico",
+    "Tonometria ad applanazione",
+    "Autorefrattometro",
+    "Conta endoteliale",
+    "Retinografo Zeiss Clarus",
+    "Laser YAG",
+    "Laser SLT",
+    "Argon laser"
+  ],
+  "piloti": "Ho trattato piloti commerciali e militari, piloti di elicotteri e membri delle Forze Speciali degli Stati Uniti e degli Emirati Arabi. Una vista nitida e una buona sensibilità al contrasto, anche con poca luce, non servono solo a loro.",
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "lasik-prk-smile",
+    "categoria": "Chirurgia refrattiva",
+    "titolo": "LASIK, PRK e SMILE a confronto: quale tecnica per togliere gli occhiali",
+    "img": "/borasio-jejd/img/femto-lasik.webp",
+    "tempoLettura": "7 min",
+    "intro": "Miopia, astigmatismo e ipermetropia oggi si possono correggere con il laser in molti modi diversi. LASIK, PRK e SMILE sono le tecniche di cui si sente parlare di più. Non esiste la tecnica migliore in assoluto: esiste quella più adatta ai Suoi occhi. Ecco come funzionano e come scelgo insieme al paziente.",
+    "sezioni": [
+      {
+        "titolo": "Cosa fa il laser sulla cornea",
+        "paragrafi": [
+          "La cornea è la «finestra» trasparente davanti all'occhio. Insieme al cristallino mette a fuoco le immagini sulla retina. Nella miopia, nell'ipermetropia e nell'astigmatismo la messa a fuoco non è precisa, e per questo servono occhiali o lenti a contatto.",
+          "Il laser ad eccimeri modifica di pochi micron la curvatura della cornea, in modo che l'occhio torni a mettere a fuoco senza aiuti. Le tecniche si differenziano soprattutto per il modo in cui il chirurgo arriva al tessuto da trattare."
+        ]
+      },
+      {
+        "titolo": "PRK, LASEK e TransPRK: il trattamento di superficie",
+        "paragrafi": [
+          "Nella PRK e nelle tecniche simili, come la LASEK e la TransPRK, il laser lavora direttamente sulla superficie della cornea, dopo aver rimosso il sottile strato di cellule che la ricopre, l'epitelio. Nella TransPRK anche questo passaggio è eseguito dal laser, senza strumenti a contatto con l'occhio.",
+          "Il vantaggio è che la cornea resta più robusta, perché non si crea nessun lembo. Per questo la PRK è spesso indicata per cornee più sottili o per chi pratica sport da contatto. Lo svantaggio è un recupero più lento: per qualche giorno l'occhio può dare fastidio e la vista si stabilizza nell'arco di alcune settimane."
+        ]
+      },
+      {
+        "titolo": "Femto LASIK: il recupero rapido",
+        "paragrafi": [
+          "Nella LASIK il chirurgo crea un sottile lembo di cornea, lo solleva, applica il laser e poi lo riposiziona. Oggi il lembo si crea con il laser a femtosecondi (Femto LASIK), molto più preciso della lama del microcheratomo usata in passato.",
+          "Il recupero è rapido: già il giorno dopo la maggior parte delle persone vede bene e il fastidio è minimo. Serve però una cornea di spessore e forma adeguati, perché il lembo la indebolisce in parte. Ho eseguito Femto LASIK con diverse piattaforme laser, tra cui la Alcon WaveLight."
+        ]
+      },
+      {
+        "titolo": "SMILE: una piccola incisione",
+        "paragrafi": [
+          "Nella SMILE il laser a femtosecondi disegna all'interno della cornea un sottile disco di tessuto, che il chirurgo estrae da una piccola incisione di pochi millimetri. Non si crea un lembo come nella LASIK e la superficie della cornea resta quasi intatta.",
+          "È una tecnica indicata soprattutto per la miopia e l'astigmatismo miopico. Ha un recupero rapido e un'incisione piccola, ma non è adatta a tutti i difetti visivi: per l'ipermetropia, per esempio, si scelgono altre strade."
+        ]
+      },
+      {
+        "titolo": "Come si sceglie la tecnica",
+        "paragrafi": [
+          "La scelta non dipende da una moda, ma da misure precise. Prima di qualsiasi intervento eseguo una valutazione completa, che comprende:"
+        ],
+        "elenco": [
+          "la misura del difetto visivo, anche con il forottero automatico;",
+          "la topografia e la tomografia corneale con la Pentacam, per studiare forma e spessore della cornea;",
+          "il controllo dell'endotelio, della pressione oculare e della retina;",
+          "un colloquio sul lavoro, gli sport e le abitudini di vita."
+        ],
+        "chiusura": "Con questi dati Le spiego quali tecniche sono possibili nel Suo caso, con i vantaggi e i limiti di ciascuna. A volte la risposta è che il laser non è la soluzione migliore."
+      },
+      {
+        "titolo": "Quando il laser non è indicato",
+        "paragrafi": [
+          "Se la cornea è troppo sottile o irregolare, o in presenza di cheratocono, il laser può essere sconsigliato o addirittura controindicato. In questi casi esistono alternative: le lenti fachiche ICL, che si impiantano all'interno dell'occhio senza togliere tessuto alla cornea, oppure, dopo una certa età, la sostituzione del cristallino con una lente artificiale multifocale.",
+          "Sono un chirurgo certificato da STAAR per l'impianto delle lenti Visian ICL, anche toriche, indicate per miopie, ipermetropie o astigmatismi elevati."
+        ]
+      },
+      {
+        "titolo": "Prima della visita: le lenti a contatto",
+        "paragrafi": [
+          "Un dettaglio che fa la differenza: è essenziale togliere le lenti a contatto una settimana prima della visita iniziale. Le lenti modificano temporaneamente la forma della cornea e le misure prese con le lenti appena tolte non sarebbero affidabili.",
+          "Se porta lenti rigide, i tempi possono essere più lunghi: me lo dica quando prenota, così Le do l'indicazione corretta."
+        ]
+      },
+      {
+        "titolo": "Rischi e aspettative",
+        "paragrafi": [
+          "Ogni intervento chirurgico comporta dei rischi, anche se piccoli. Diffidi di chi Le dice che le complicanze sono impossibili: un chirurgo esperto le conosce, le spiega prima e sa come gestirle se si presentano. Nel tempo ho seguito molti casi complessi, anche di complicanze nate da interventi eseguiti altrove.",
+          "Lo scopo della chirurgia refrattiva è ridurre o eliminare la dipendenza dagli occhiali, ma il risultato varia da persona a persona. Durante la visita parliamo con franchezza di quello che è ragionevole aspettarsi nel Suo caso."
+        ]
+      },
+      {
+        "titolo": "Come prenotare una valutazione",
+        "paragrafi": [
+          "Ricevo esclusivamente nel mio studio EYE PRO, in via Carlo Giordana 5 a Torino. Può prenotare su WhatsApp al 339 716 9990, chiamare il 392 723 1024 o usare Doctolib. Gli interventi si eseguono nelle migliori cliniche di Torino, negli ambienti più sicuri.",
+          "Non sono legato ad alcuna azienda farmaceutica: il mio obiettivo è consigliarLe la soluzione giusta per i Suoi occhi, anche quando la soluzione giusta è non operare."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo oculista."
+  },
+  "blog": [
+    {
+      "id": "keranatural",
+      "categoria": "Cheratocono",
+      "titolo": "KeraNatural: il cheratocono si può trattare con tessuto naturale",
+      "img": "/borasio-jejd/img/anello.webp",
+      "tempoLettura": "7 min",
+      "intro": "Ho eseguito il primo impianto di KeraNatural in Italia per il trattamento del cheratocono. È una tecnica recente che rimodella la cornea con segmenti di tessuto corneale umano, al posto degli anelli in plastica. Ecco cos'è, a chi può servire e come si inserisce tra le altre cure del cheratocono.",
+      "sezioni": [
+        {
+          "titolo": "Cos'è il cheratocono",
+          "paragrafi": [
+            "Il cheratocono è una malattia in cui la cornea, la parte trasparente davanti all'occhio, si assottiglia e si sfianca in avanti prendendo una forma a cono. La vista diventa distorta e l'astigmatismo aumenta in modo irregolare.",
+            "Inizia spesso durante l'adolescenza e di solito viene diagnosticato verso i vent'anni. In genere progredisce tra i 20 e i 40 anni, per poi rallentare o fermarsi verso la metà dei quarant'anni. Tra i fattori che contribuiscono ci sono una predisposizione genetica e i traumi ripetuti, come lo sfregamento frequente degli occhi tipico delle allergie."
+          ]
+        },
+        {
+          "titolo": "I segnali da non sottovalutare",
+          "paragrafi": [
+            "Alcuni campanelli d'allarme possono far sospettare un cheratocono:"
+          ],
+          "elenco": [
+            "occhiali da aggiornare spesso, senza riuscire a vedere nitido;",
+            "difficoltà a vedere bene alla guida, alla lettura o alla scrittura;",
+            "linee dritte che appaiono ondulate;",
+            "lenti a contatto che non si adattano più e tendono a «scappare»;",
+            "prurito e allergie frequenti agli occhi;",
+            "fastidio e abbagliamento con la luce;",
+            "miopia e astigmatismo che aumentano."
+          ],
+          "chiusura": "Una visita di routine può non accorgersene: serve una visita specialistica con la topografia corneale, soprattutto nei ragazzi con casi in famiglia."
+        },
+        {
+          "titolo": "Le cure, stadio per stadio",
+          "paragrafi": [
+            "La scelta del trattamento dipende da quanto è avanzata la malattia.",
+            "Nelle fasi iniziali, quando la vista è ancora buona, si usa il cross-linking: gocce di riboflavina e luce ultravioletta rinforzano le fibre di collagene della cornea e rallentano o arrestano la progressione.",
+            "Nelle fasi intermedie, con vista ridotta e lenti a contatto mal tollerate, si possono impiantare segmenti di anello all'interno della cornea, in tunnel creati dal laser a femtosecondi. Possono essere anelli tradizionali in PMMA, una plastica rigida, oppure segmenti di tessuto corneale umano: è la tecnica CAIRS, e il tessuto si chiama KeraNatural.",
+            "Nelle fasi avanzate, con forte distorsione o opacità, serve un trapianto di cornea, lamellare anteriore profondo (DALK) o a tutto spessore (PK)."
+          ]
+        },
+        {
+          "titolo": "Come funziona KeraNatural",
+          "paragrafi": [
+            "KeraNatural è un metodo completamente biologico. Sviluppato negli Stati Uniti, utilizza segmenti di cornea umana donata, tagliati ad arco e già pronti per l'impianto. Il segmento viene posizionato nel tunnel corneale creato dal laser a femtosecondi.",
+            "La procedura dura in tutto circa 10 minuti. Si esegue con una goccia di anestetico sulla cornea ed è indolore. Pochi giorni dopo, nella maggior parte dei casi, si torna alla vita normale."
+          ]
+        },
+        {
+          "titolo": "Perché il tessuto naturale",
+          "paragrafi": [
+            "Rispetto agli anelli in plastica, il tessuto donato offre alcuni vantaggi:"
+          ],
+          "elenco": [
+            "è biocompatibile, quindi il rischio di rigetto è basso;",
+            "riduce il rischio di complicanze legate al materiale sintetico, come infezioni, infiammazioni o assottigliamento della cornea;",
+            "è regolabile: si può modificare dopo l'intervento;",
+            "è reversibile: se necessario si può rimuovere."
+          ],
+          "chiusura": "Preparare questo tessuto a mano, partendo da una cornea donata, è lungo e comporta rischi; il tessuto KeraNatural arriva invece già sagomato e controllato."
+        },
+        {
+          "titolo": "Prima KeraNatural, poi il cross-linking",
+          "paragrafi": [
+            "Spesso le due tecniche si combinano. Di solito si esegue prima KeraNatural e, circa sei mesi dopo, il cross-linking per stabilizzare la cornea. Non c'è però nessun problema a impiantare KeraNatural in chi ha già fatto il cross-linking: anzi, succede spesso, perché il cross-linking è di norma il primo trattamento nel cheratocono iniziale."
+          ]
+        },
+        {
+          "titolo": "Per chi è indicato",
+          "paragrafi": [
+            "KeraNatural può essere adatto a chi ha un cheratocono in stadio moderato, a chi non vede bene nonostante occhiali o lenti a contatto, e a chi tollera male le lenti a contatto. Può essere un'opzione anche per chi non è candidato al trapianto.",
+            "L'idoneità dipende dallo stadio del cheratocono, dallo spessore e dalla forma della cornea e dalla salute generale dell'occhio. Per questo serve sempre una valutazione approfondita con topografia corneale, che eseguo con la Pentacam."
+          ]
+        },
+        {
+          "titolo": "Come si svolge la prima visita",
+          "paragrafi": [
+            "La prima visita per il cheratocono è più lunga di un controllo normale. Oltre alla misura della vista con il forottero automatico, eseguo la topografia e la tomografia corneale con la Pentacam, che misura curvatura e spessore della cornea punto per punto. Controllo anche l'endotelio, lo strato più interno della cornea, e la pressione dell'occhio.",
+            "Se porta lenti a contatto, è importante toglierle prima della visita: deformano temporaneamente la cornea e falserebbero le mappe. Le rigide vanno tolte con più anticipo. Al momento della prenotazione Le indico i tempi giusti per il Suo tipo di lente.",
+            "Con le mappe in mano Le mostro come è fatta la Sua cornea, se il cheratocono sta progredendo e quali trattamenti sono possibili, con i tempi di recupero di ciascuno."
+          ]
+        },
+        {
+          "titolo": "Cosa aspettarsi",
+          "paragrafi": [
+            "Lo scopo è migliorare la qualità della vista e ridurre la necessità di occhiali o lenti a contatto. La maggior parte dei pazienti nota un miglioramento, ma l'entità varia da persona a persona. In rari casi la vista può non migliorare o peggiorare, e i segmenti vanno regolati o, molto raramente, rimossi.",
+            "Ho maturato una lunga esperienza sul cheratocono negli Emirati Arabi, dove la malattia è molto frequente. Durante la visita Le spiego quali trattamenti sono possibili nel Suo caso e con quali tempi."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo oculista."
+    },
+    {
+      "id": "mosche-volanti",
+      "categoria": "Corpi mobili vitreali",
+      "titolo": "Mosche volanti: quando preoccuparsi e quando si possono trattare con il laser",
+      "img": "/borasio-jejd/img/vitreo-corpi-mobili.webp",
+      "tempoLettura": "6 min",
+      "intro": "Puntini, filamenti, ragnatele che si muovono davanti agli occhi, soprattutto guardando il cielo o un muro bianco. Si chiamano corpi mobili vitreali, o miodesopsie. Nella maggior parte dei casi sono innocui, ma a volte vanno controllati subito, e in alcuni casi si possono trattare con il laser.",
+      "sezioni": [
+        {
+          "titolo": "Da dove nascono",
+          "paragrafi": [
+            "Il corpo vitreo è una massa gelatinosa che riempie l'occhio tra il cristallino e la retina. Alla nascita è compatto e completamente trasparente. Con l'età tende a degenerare: al suo interno si formano zone più liquide e zone di addensamento.",
+            "Questi addensamenti proiettano ombre sulla retina, che percepiamo come corpi che si muovono con gli occhi o con la testa. A volte la degenerazione porta a un distacco posteriore del vitreo, che di solito provoca un aumento improvviso dei corpi mobili."
+          ]
+        },
+        {
+          "titolo": "Chi ne soffre di più",
+          "paragrafi": [
+            "I fattori che favoriscono la degenerazione del vitreo sono soprattutto:"
+          ],
+          "elenco": [
+            "la miopia elevata;",
+            "l'età che avanza;",
+            "l'intervento di cataratta, anche quando non ci sono complicanze."
+          ]
+        },
+        {
+          "titolo": "Come si presentano",
+          "paragrafi": [
+            "Le forme sono molto diverse: filamenti singoli o ramificati, un anello irregolare (l'anello di Weiss), ragnatele, masse di varia grandezza, fino a un velo generalizzato davanti alla vista. Alcuni si trovano al centro del campo visivo, altri in periferia e passano davanti solo con certi movimenti degli occhi.",
+            "Si vedono meglio guardando il cielo azzurro o uno sfondo bianco ben illuminato."
+          ]
+        },
+        {
+          "titolo": "Quando andare subito dall'oculista",
+          "paragrafi": [
+            "Se i corpi mobili compaiono all'improvviso, o aumentano di colpo, o se vede lampi di luce, deve andare subito dall'oculista. Con la dilatazione della pupilla si controlla che non ci siano rotture della retina: le piccole rotture si mettono in sicurezza con il laser Argon, mentre un distacco di retina richiede un intervento urgente."
+          ]
+        },
+        {
+          "titolo": "Quando non serve fare niente",
+          "paragrafi": [
+            "La percezione di piccole mosche volanti scure è un fenomeno molto comune, soprattutto nei miopi e con l'età, e non richiede alcun trattamento. Spesso il cervello si abitua e col tempo si notano meno."
+          ]
+        },
+        {
+          "titolo": "Quando si possono trattare",
+          "paragrafi": [
+            "Ci sono però corpi mobili così densi da abbassare la vista, rendere difficile la lettura e peggiorare la qualità della vita. In questi casi si può valutare la vitreolisi con YAG laser.",
+            "Il laser frammenta i corpi mobili più grandi in parti più piccole e meno fastidiose, e vaporizza quelli più piccoli. Lo scopo è ridurre i corpi mobili nel campo visivo, soprattutto quelli centrali, e migliorare la qualità della vita. Il mio studio è tra i pochissimi centri in Italia che offrono questo trattamento: al momento in Italia sono installate solo 7 unità di questo laser."
+          ]
+        },
+        {
+          "titolo": "Come si svolge il trattamento",
+          "paragrafi": [
+            "La vitreolisi YAG:"
+          ],
+          "elenco": [
+            "non è invasiva e si esegue in ambulatorio in pochi minuti;",
+            "richiede solo la dilatazione della pupilla e una goccia di anestetico;",
+            "non comporta rischio di infezione all'interno dell'occhio;",
+            "spesso richiede più sedute, specialmente con grossi addensamenti."
+          ],
+          "chiusura": "Dopo la seduta vedrà sfocato per alcune ore: serve qualcuno che La accompagni a casa."
+        },
+        {
+          "titolo": "Cosa può fare nel frattempo",
+          "paragrafi": [
+            "Se i corpi mobili sono pochi e stabili, non serve nessuna cura. Può essere utile ridurre l'abbagliamento con occhiali da sole all'aperto, perché la luce forte li rende più evidenti, e ricordare che muovere gli occhi in alto e in basso a volte li sposta fuori dal centro del campo visivo.",
+            "È importante invece non trascurare i cambiamenti: se compaiono nuovi corpi mobili, una tendina scura o lampi di luce, serve un controllo in giornata.",
+            "Se è miope o è stato operato di cataratta, un controllo periodico della retina con la pupilla dilatata è comunque una buona abitudine, anche senza disturbi nuovi."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi vengono fatte spesso:"
+          ],
+          "elenco": [
+            "Le mosche volanti fanno diventare ciechi? No, di per sé no. Va però esclusa una rottura della retina quando compaiono all'improvviso.",
+            "Spariscono da sole? A volte si spostano o si notano meno, perché il cervello si abitua. Quelle molto dense di solito restano.",
+            "Il laser le elimina tutte? Lo scopo è ridurle e migliorare la qualità della vita: le più piccole vengono vaporizzate, le più grandi frammentate.",
+            "Fa male? No: si usano una goccia di anestetico e la dilatazione della pupilla.",
+            "Quante sedute servono? Dipende da numero e densità dei corpi mobili. Glielo indico già alla prima visita."
+          ],
+          "chiusura": "Ogni occhio è diverso: per questo la decisione si prende sempre dopo una visita con la pupilla dilatata."
+        },
+        {
+          "titolo": "Chi è un buon candidato",
+          "paragrafi": [
+            "I candidati ideali hanno in genere più di 45 anni, corpi mobili non troppo vicini alla retina o al cristallino e non troppo periferici. Gli occhi già operati di cataratta sono spesso particolarmente adatti.",
+            "Rispetto alla vitrectomia, l'intervento chirurgico che rimuove il vitreo, il laser ha rischi molto più bassi e un costo minore. Durante la prima visita dilato la pupilla, controllo dimensione e posizione dei corpi mobili e Le dico se il trattamento è sicuro nel Suo caso e quante sedute potrebbero servire."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo oculista."
+    },
+    {
+      "id": "lasik-prezzi-bassi",
+      "categoria": "Chirurgia refrattiva",
+      "titolo": "LASIK a prezzi stracciati? Cinque domande da fare prima di operarsi",
+      "img": "/borasio-jejd/img/femto-cataratta.webp",
+      "tempoLettura": "6 min",
+      "intro": "Negli ultimi anni il prezzo della LASIK è sceso molto, in alcuni Paesi in modo drastico. Un prezzo basso non è per forza un cattivo segnale, ma conviene sapere dove si può risparmiare a spese della sicurezza. Ecco le domande che consiglio di fare a qualsiasi centro, compreso il mio.",
+      "sezioni": [
+        {
+          "titolo": "Perché la LASIK costa",
+          "paragrafi": [
+            "La Femto LASIK è una procedura costosa per diverse ragioni: gli strumenti richiedono grandi investimenti, la manutenzione è cara e i materiali di consumo hanno prezzi alti, decisi dai produttori.",
+            "Negli Emirati Arabi, dove ho lavorato per molti anni, ho visto l'apertura di troppe cliniche e un crollo dei prezzi. Quando i margini si riducono, la tentazione di risparmiare su qualcosa diventa forte."
+          ]
+        },
+        {
+          "titolo": "1. Il lembo è fatto con il laser o con la lama?",
+          "paragrafi": [
+            "In molti centri la procedura è pubblicizzata come «Ultra LASIK», ma il lembo viene creato con il microcheratomo, cioè con una lama. La lama comporta un rischio maggiore di complicanze del lembo, a volte irreversibili, ed è stata superata dal laser a femtosecondi.",
+            "Tra le complicanze dei lembi fatti con la lama ci sono il lembo rotto o forato, la crescita di cellule sotto il lembo e gli aloni notturni attorno alle luci. A volte, per ridurre i costi, si usa la stessa lama su più pazienti, con rischio di infezioni e di tagli irregolari."
+          ]
+        },
+        {
+          "titolo": "2. Il laser è sottoposto a manutenzione regolare?",
+          "paragrafi": [
+            "Le piattaforme laser ad eccimeri devono essere controllate e tarate con regolarità. Saltare la manutenzione fa risparmiare, ma può portare a un risultato visivo scadente, per esempio con aloni permanenti attorno alle fonti di luce."
+          ]
+        },
+        {
+          "titolo": "3. I miei occhi sono adatti?",
+          "paragrafi": [
+            "La LASIK non va eseguita se ci sono controindicazioni. Alcune sono relative, come una cornea irregolare o sottile, o un'età troppo giovane, prima che la vista si sia stabilizzata. Altre sono assolute, come il cheratocono.",
+            "Per saperlo servono esami precisi, a partire dalla topografia corneale: nel mio studio uso la Pentacam, che misura anche lo spessore della cornea e aiuta a riconoscere chi non è idoneo. Se il laser non è indicato, esistono alternative come le lenti fachiche ICL."
+          ]
+        },
+        {
+          "titolo": "4. Quanto tempo devo stare senza lenti a contatto?",
+          "paragrafi": [
+            "Le lenti a contatto modificano la forma della cornea. Se non si aspetta abbastanza tra la rimozione delle lenti e le misure finali, la correzione calcolata non è precisa e il risultato ne risente. Di norma vanno tolte una settimana prima della visita iniziale, anche più a lungo per le lenti rigide."
+          ]
+        },
+        {
+          "titolo": "5. Il chirurgo mi parla dei rischi?",
+          "paragrafi": [
+            "Diffidi dell'oculista che non discute con Lei rischi e benefici e Le dice che le complicanze sono impossibili. Significa che non è sincero, oppure che non ha ancora eseguito abbastanza interventi per incontrarne una: e allora non saprà come gestirla quando si presenterà.",
+            "Nel corso degli anni ho trattato molte complicanze di interventi eseguiti altrove, come lembi difettosi da microcheratomo, opacità dopo PRK o LASEK senza mitomicina e complicanze dopo SMILE."
+          ]
+        },
+        {
+          "titolo": "Cosa chiedere durante la visita",
+          "paragrafi": [
+            "Prima di decidere, è legittimo fare al chirurgo domande precise. Le consiglio di chiedere sempre:"
+          ],
+          "elenco": [
+            "quale tecnica propone e perché è la più adatta ai Suoi occhi;",
+            "con quale laser e in quale struttura verrà eseguito l'intervento;",
+            "chi La opera e chi La seguirà nei controlli;",
+            "quali sono i rischi nel Suo caso e come verrebbero gestiti;",
+            "cosa è compreso nel prezzo: esami, intervento, farmaci, controlli e eventuali ritocchi."
+          ],
+          "chiusura": "Un centro serio risponde volentieri e Le lascia il tempo di pensarci, senza fretta e senza offerte a scadenza. Se le risposte sono vaghe, è un segnale da non ignorare."
+        },
+        {
+          "titolo": "Dopo l'intervento: i controlli",
+          "paragrafi": [
+            "La chirurgia refrattiva non finisce in sala operatoria. Nei giorni e nelle settimane successive servono controlli per verificare la guarigione della cornea, la stabilità della correzione e l'assenza di infiammazioni.",
+            "Nei primi giorni bisogna seguire con attenzione la terapia con le gocce, evitare di strofinare gli occhi e proteggerli da polvere, acqua di piscina e trucco, secondo le indicazioni ricevute. Sono piccole regole, ma contano molto per una guarigione regolare. In caso di dolore forte, calo improvviso della vista o occhio molto rosso, bisogna contattare subito il chirurgo, senza aspettare il controllo programmato.",
+            "Anche questi controlli fanno parte del valore di un intervento. Chiedere in anticipo come sono organizzati, e da chi, aiuta a capire se si sta pagando davvero un percorso completo o solo pochi minuti di laser."
+          ]
+        },
+        {
+          "titolo": "Il prezzo giusto è quello trasparente",
+          "paragrafi": [
+            "Non esiste un prezzo giusto uguale per tutti: dipende dalla tecnica, dalla tecnologia usata e dal Suo caso. Quello che conta è sapere esattamente cosa si paga. Durante la visita Le spiego quale tecnica consiglio, perché, dove viene eseguita e con quale piattaforma.",
+            "Non sono legato ad alcuna azienda farmaceutica e non Le proporrò mai un intervento che non Le serve."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo oculista."
+    }
+  ],
+  "instagram": {
+    "handle": "eyeprostudiooculistico",
+    "nota": "Il profilo esiste ma è fermo dal 2023: ecco come potrebbe ripartire.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "femtoLasik",
+        "titolo": "LASIK o SMILE?",
+        "sottotitolo": "Non c'è la migliore: c'è la più adatta",
+        "didascalia": "Femto LASIK e SMILE correggono la miopia con il laser a femtosecondi, in modo diverso. La scelta dipende dalla Sua cornea: per questo prima di tutto serve la topografia.",
+        "hashtag": "#lasik #smile #chirurgiarefrattiva #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Mosche volanti: quando preoccuparsi?",
+        "risposta": "Se compaiono all'improvviso o con lampi di luce.",
+        "didascalia": "Nella maggior parte dei casi i corpi mobili vitreali sono innocui. Se aumentano di colpo o vede lampi, vada subito dall'oculista per controllare la retina.",
+        "hashtag": "#moschevolanti #retina #oculista"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Cheratocono: il cross-linking",
+        "punti": [
+          "Gocce di riboflavina (vitamina B2)",
+          "Luce UV per pochi minuti",
+          "La cornea diventa più rigida",
+          "Rallenta o ferma il cheratocono"
+        ],
+        "didascalia": "Nelle fasi iniziali del cheratocono il cross-linking rinforza la cornea. Nei casi più avanzati si combina con KeraNatural o con gli anelli intracorneali.",
+        "hashtag": "#cheratocono #crosslinking #keranatural"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "dr@edmondoborasio.com",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "EYE PRO Studio Oculistico",
+        "indirizzo": "Via Carlo Giordana 5",
+        "citta": "Torino",
+        "cap": "10128",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio EYE PRO di via Carlo Giordana 5, Torino",
+        "telefoni": [
+          {
+            "label": "Studio",
+            "numero": "392 723 1024"
+          },
+          {
+            "label": "WhatsApp",
+            "numero": "339 716 9990"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": [],
+    "doctolib": "https://www.doctolib.it/oftalmologo/torino/edmondo-borasio"
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Mi scriva su WhatsApp, chiami lo studio o prenoti su Doctolib. Ricevo esclusivamente nello studio EYE PRO, in via Carlo Giordana 5 a Torino.",
+    "telefono": "3927231024",
+    "telefonoLabel": "392 723 1024",
+    "chiamaLabel": "lo studio",
+    "whatsapp": "393397169990",
+    "oggettoMail": "Richiesta di visita oculistica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi il giorno e l'orario che preferisce: Le confermo l'appuntamento su WhatsApp. Se porta lenti a contatto, le tolga una settimana prima della visita.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate su WhatsApp.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "privacy": "https://www.edmondoborasio.com/downloads/PrivacyPolicySitoWeb.pdf",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio se porta lenti a contatto o se è già stato operato agli occhi"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F0F7FB",
+      "ink": "#0E1B26",
+      "muted": "#566573",
+      "line": "#DCE7EE",
+      "brand": "#1A8FC4",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#2BA9E1",
+      "deep": "#0B141C",
+      "deep-ink": "#D6E6F0"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&display=swap",
+    "fontTitoli": "Barlow Condensed",
+    "fontTesti": "Barlow",
+    "favicon": "/borasio-jejd/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/borasio-jejd/brand/brand.json",
+    "pagine": [
+      "https://www.edmondoborasio.com/",
+      "https://www.edmondoborasio.com/about-dr-borasio_it.html",
+      "https://www.edmondoborasio.com/procedures_it.html",
+      "https://www.edmondoborasio.com/keranatural_it.html",
+      "https://www.edmondoborasio.com/corpi-mobili-vitreali.html",
+      "https://www.edmondoborasio.com/home_itcc.html"
+    ]
+  }
+}
