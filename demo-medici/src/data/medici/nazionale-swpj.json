@@ -1,0 +1,797 @@
+{
+  "slug": "nazionale-swpj",
+  "layout": "profilo",
+  "sitoOrigine": "https://www.giuseppenazionale.it/",
+  "titolo": "Dott.",
+  "nome": "Giuseppe Nazionale",
+  "specialita": "Specialista in Otorinolaringoiatria e Rinoplastica",
+  "firma": "Otorino",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Giuseppe Nazionale · Otorino e rinoplastica a Torino, Rivoli, Vinovo e Pinerolo",
+    "description": "Sono otorinolaringoiatra e Direttore dell'ORL degli ospedali di Rivoli e Pinerolo. Rinoplastica e settoplastica, sinusiti, russamento, voce, orecchio e collo."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "/nazionale-swpj/img/volto.webp",
+    "logoAlt": "Dott. Giuseppe Nazionale"
+  },
+  "foto": {
+    "ritratto": "/nazionale-swpj/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Giuseppe Nazionale",
+    "volto": "/nazionale-swpj/img/volto.webp",
+    "sala": "/nazionale-swpj/img/sala.webp",
+    "equipe": "/nazionale-swpj/img/equipe.webp",
+    "ospedale": "/nazionale-swpj/img/ospedale-rivoli.webp",
+    "profiloPrima": "/nazionale-swpj/img/profilo-prima.webp",
+    "profiloIntervento": "/nazionale-swpj/img/profilo-intervento.webp",
+    "profiloDopo": "/nazionale-swpj/img/profilo-dopo.webp",
+    "profili": "/nazionale-swpj/img/rep-profili.webp",
+    "fibroscopia": "/nazionale-swpj/img/rep-fibroscopia.webp",
+    "orecchio": "/nazionale-swpj/img/rep-orecchio.webp"
+  },
+  "hero": {
+    "eyebrow": "Otorino a Torino · Rivoli · Vinovo · Pinerolo",
+    "titolo": "Orecchio, naso e gola. E un profilo che respira.",
+    "testo": "Sono otorinolaringoiatra e dirigo l'Otorinolaringoiatria degli ospedali di Rivoli e Pinerolo. Mi occupo di tutte le patologie ORL, con una particolare esperienza nella rinosettoplastica: un naso armonico che respira bene.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti una visita",
+      "motivi": [
+        "Visita ORL",
+        "Rinoplastica",
+        "Setto deviato",
+        "Sinusite e polipi",
+        "Russamento",
+        "Orecchio e udito",
+        "Voce e gola",
+        "Bambini"
+      ],
+      "motiviFrase": [
+        "una visita otorinolaringoiatrica",
+        "un consulto per rinoplastica",
+        "un setto nasale deviato",
+        "sinusite o polipi nasali",
+        "russamento",
+        "un problema all'orecchio o all'udito",
+        "un problema di voce o di gola",
+        "mio figlio"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Dove preferisce"
+    }
+  },
+  "numeri": [
+    {
+      "valore": 3000,
+      "suffisso": "+",
+      "testo": "interventi chirurgici"
+    },
+    {
+      "valore": 1000,
+      "suffisso": "+",
+      "testo": "rinoplastiche, aperte e chiuse"
+    },
+    {
+      "valore": 4,
+      "suffisso": "",
+      "testo": "sedi tra Torino e provincia"
+    }
+  ],
+  "fatti": [
+    "Direttore ORL Rivoli e Pinerolo",
+    "Più di 1000 rinoplastiche",
+    "Specialista anche in chirurgia oncologica testa-collo"
+  ],
+  "distretti": [
+    {
+      "id": "naso",
+      "nome": "Naso e seni paranasali",
+      "img": "/nazionale-swpj/img/rep-profili.webp",
+      "testo": "Riniti, sinusiti, poliposi, deviazione del setto. Per la diagnosi uso la fibroendoscopia e, se serve, la TC. Quando la terapia medica non basta, opero per via endoscopica.",
+      "interventi": [
+        "Rinosettoplastica funzionale ed estetica",
+        "Settoplastica",
+        "Turbinotomia",
+        "FESS: chirurgia endoscopica per sinusiti e poliposi",
+        "Chirurgia per il russamento (OSAS)",
+        "Chirurgia tumorale"
+      ]
+    },
+    {
+      "id": "gola",
+      "nome": "Gola e laringe",
+      "img": "/nazionale-swpj/img/rep-fibroscopia.webp",
+      "testo": "Disturbi della voce, noduli e lesioni delle corde vocali, faringiti e laringiti. Con la fibroscopia flessibile vedo direttamente laringe e faringe, anche in studio.",
+      "interventi": [
+        "Microlaringoscopia",
+        "Noduli e pelage delle corde vocali",
+        "Cordectomia",
+        "Chirurgia tumorale della laringe",
+        "Riabilitazione della voce con protesi fonatoria"
+      ]
+    },
+    {
+      "id": "bocca",
+      "nome": "Cavo orale e russamento",
+      "img": "/nazionale-swpj/img/rep-visita.webp",
+      "testo": "Tonsille, palato e lingua. Il russamento e le apnee notturne (OSAS) si valutano con una visita accurata delle vie aeree, dal naso alla gola.",
+      "interventi": [
+        "Ugolo-faringoplastica",
+        "Chirurgia per il russamento (OSAS)",
+        "Tonsillectomia",
+        "Emiglossectomia",
+        "Chirurgia tumorale"
+      ]
+    },
+    {
+      "id": "orecchio",
+      "nome": "Orecchio e udito",
+      "img": "/nazionale-swpj/img/rep-orecchio.webp",
+      "testo": "Acufeni, labirintiti e vertigini, otiti, tappi di cerume. Con l'audiometria misuro la soglia uditiva e individuo eventuali deficit.",
+      "interventi": [
+        "Rimozione dei tappi di cerume",
+        "Audiometria",
+        "Drenaggi trans-timpanici"
+      ]
+    },
+    {
+      "id": "collo",
+      "nome": "Collo e ghiandole salivari",
+      "img": "/nazionale-swpj/img/sala.webp",
+      "testo": "Ghiandole salivari, tiroide, cisti congenite e linfonodi del collo. Mi occupo anche di chirurgia oncologica della testa e del collo, con un approccio multidisciplinare.",
+      "interventi": [
+        "Parotidectomia",
+        "Scialoadenectomia sottomandibolare",
+        "Tiroidectomia",
+        "Svuotamento laterocervicale",
+        "Asportazione di cisti congenite del collo"
+      ]
+    },
+    {
+      "id": "bambini",
+      "nome": "Bambini",
+      "img": "/nazionale-swpj/img/rep-audiometria.webp",
+      "testo": "Adenoidi e tonsille ingrossate, otiti ricorrenti, russamento nel bambino. Valuto con calma insieme ai genitori se e quando serve un intervento.",
+      "interventi": [
+        "Adenotonsillectomia",
+        "Adenoidectomia",
+        "Tonsillectomia",
+        "Chirurgia per il russamento (OSAS)",
+        "Drenaggi trans-timpanici"
+      ]
+    }
+  ],
+  "decorso": [
+    {
+      "giorno": 0,
+      "titolo": "Il giorno dell'intervento",
+      "testo": "L'intervento dura circa un'ora e mezza, in anestesia generale, di solito in day surgery. Termina con un archetto fermato sul dorso del naso e due tamponi di spugna, molto confortevoli."
+    },
+    {
+      "giorno": 1,
+      "titolo": "Dopo 24 ore",
+      "testo": "I tamponi nasali vengono rimossi. Nelle prime 48 ore è importante il riposo."
+    },
+    {
+      "giorno": 2,
+      "titolo": "Primi due giorni",
+      "testo": "Possono comparire gonfiore ed ecchimosi intorno agli occhi: è normale. Molto raramente compaiono sanguinamenti che richiedono tamponi."
+    },
+    {
+      "giorno": 3,
+      "titolo": "Dal terzo giorno",
+      "testo": "Può riprendere una vita normale, evitando attività faticose, saune e bagni turchi, sole, cibi e bevande molto calde, e limitando al massimo l'uso degli occhiali."
+    },
+    {
+      "giorno": 7,
+      "titolo": "Dopo una settimana",
+      "testo": "Rimuovo l'archetto. Il naso, inizialmente gonfio, giorno dopo giorno assume la forma concordata prima dell'intervento."
+    },
+    {
+      "giorno": 14,
+      "titolo": "Dopo due settimane",
+      "testo": "Il risultato in genere è già apprezzabile. Un po' di gonfiore, soprattutto sulla punta, può durare ancora qualche settimana."
+    },
+    {
+      "giorno": 30,
+      "titolo": "Dopo un mese",
+      "testo": "È il tempo minimo prima di riprendere sport con rischio di traumi: le ossa devono consolidarsi."
+    },
+    {
+      "giorno": 365,
+      "titolo": "Dopo un anno",
+      "testo": "Il risultato definitivo si raggiunge a circa un anno dall'intervento."
+    }
+  ],
+  "faq": [
+    {
+      "d": "Esistono limiti di età per la rinoplastica?",
+      "r": "Non ci sono limiti di età, ma è preferibile aspettare la fine dello sviluppo di ossa e cartilagini: in genere dai 15 anni nelle ragazze e dai 16 nei ragazzi, perché nel sesso maschile la maturazione arriva circa 12 mesi più tardi."
+    },
+    {
+      "d": "Che tipo di anestesia si usa?",
+      "r": "In genere l'anestesia generale, con ricovero in day surgery. Solo nei casi più complessi può servire restare in clinica una o due notti."
+    },
+    {
+      "d": "Le incisioni si vedono?",
+      "r": "Le incisioni interne sono invisibili, perché nascoste nelle cavità nasali. Nella tecnica aperta c'è una piccola incisione alla base della punta, suturata con un filo particolare che la rende non visibile dopo l'intervento."
+    },
+    {
+      "d": "Tecnica aperta o chiusa?",
+      "r": "La tecnica chiusa, con incisioni interne, va bene per piccoli difetti. La tecnica aperta, a mio parere, permette di correggere qualsiasi difetto estetico e funzionale, anche con innesti di cartilagine del setto. Un buon chirurgo deve padroneggiarle entrambe."
+    },
+    {
+      "d": "Chi decide la forma del naso?",
+      "r": "La decidiamo insieme, rispettando la fisionomia del volto e le Sue caratteristiche. Per esempio, a una persona molto alta non consiglio una punta molto sollevata; in un uomo è preferibile un naso diritto, anche se un po' più importante."
+    },
+    {
+      "d": "La rinoplastica può migliorare anche la respirazione?",
+      "r": "Sì. Quando serve, alla rinoplastica si associa una settoplastica per correggere la deviazione del setto o altri problemi respiratori. Una rinoplastica ben riuscita unisce un buon risultato estetico a una perfetta funzione del naso."
+    },
+    {
+      "d": "Quali sono i rischi?",
+      "r": "È un intervento chirurgico vero e proprio: le complicanze, come sanguinamento o infezione, sono rare ma possibili. Per ridurle è fondamentale seguire le indicazioni prima e dopo l'intervento. Chi fuma dovrebbe ridurre le sigarette, perché il fumo può rallentare la guarigione."
+    },
+    {
+      "d": "La rinoplastica secondaria è più difficile?",
+      "r": "Sì: dopo un primo intervento i tessuti non hanno più i loro piani naturali e il tessuto cicatriziale è resistente. Spesso l'obiettivo realistico è il miglioramento, non la perfezione, e serve un'esperienza maturata su un grande numero di interventi al naso."
+    }
+  ],
+  "storia": [
+    {
+      "anno": "XV–XVI sec.",
+      "titolo": "I fratelli Vianeo di Tropea",
+      "testo": "Pietro e Paolo Vianeo ricostruivano il naso con un lembo di pelle dell'avambraccio: sono considerati tra i primi fautori della chirurgia ricostruttiva ed estetica del naso.",
+      "img": "/nazionale-swpj/img/storia-tropea.webp"
+    },
+    {
+      "anno": "1597",
+      "titolo": "Il trattato di Tagliacozzi",
+      "testo": "A Venezia Gaspare Tagliacozzi pubblica il «De curtorum chirurgia per insitionem» e descrive la tecnica dei Vianeo, chiamandola «il miracolo tropeano».",
+      "img": "/nazionale-swpj/img/storia-tagliacozzi.webp"
+    },
+    {
+      "anno": "1987",
+      "titolo": "Il liceo «Pietro e Paolo Vianeo»",
+      "testo": "Mi diplomo al liceo scientifico di Tropea che porta il loro nome. Poi la laurea a Torino, nel 1993, e la specializzazione in Otorinolaringoiatria con 70/70 e lode.",
+      "img": "/nazionale-swpj/img/ritratto.webp"
+    },
+    {
+      "anno": "2005",
+      "titolo": "La chirurgia del naso",
+      "testo": "All'Ospedale Galliera di Genova imparo la tecnica aperta. Da allora ho eseguito più di 1000 rinoplastiche, con tecnica aperta e chiusa.",
+      "img": "/nazionale-swpj/img/sala.webp"
+    },
+    {
+      "anno": "2016",
+      "titolo": "Una tecnica mia",
+      "testo": "Presento al Congresso nazionale SIO di Roma una tecnica per conservare la cartilagine nella rinoplastica: un «serbatoio di cartilagine» utile anche per gli interventi secondari.",
+      "img": "/nazionale-swpj/img/profilo-intervento.webp"
+    },
+    {
+      "anno": "2025",
+      "titolo": "Direttore a Rivoli e Pinerolo",
+      "testo": "Divento Direttore della Struttura Complessa di Otorinolaringoiatria degli ospedali di Rivoli e Pinerolo.",
+      "img": "/nazionale-swpj/img/ospedale-rivoli.webp"
+    }
+  ],
+  "videoRinoplastica": "https://www.youtube.com/watch?v=4jgpDMhxKqU",
+  "galleria": "https://www.giuseppenazionale.it/gallery-rinoplastica/",
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "rinoplastica",
+    "categoria": "Rinoplastica",
+    "titolo": "Rinoplastica a Torino: come si svolge, il recupero e i risultati",
+    "img": "/nazionale-swpj/img/rep-profili.webp",
+    "tempoLettura": "7 min",
+    "intro": "Il naso disegna il profilo e, insieme agli occhi, caratterizza un volto. Ma è anche l'inizio delle vie respiratorie. Per questo una rinoplastica ben riuscita unisce un buon risultato estetico a una respirazione libera. Ecco come lavoro, dalla prima visita al risultato definitivo.",
+    "sezioni": [
+      {
+        "titolo": "Estetica e funzione insieme",
+        "paragrafi": [
+          "Il naso è un organo complesso: scalda, filtra e umidifica l'aria, e ospita l'olfatto. Quando si interviene sulla sua forma, tutte queste funzioni vanno rispettate.",
+          "Per questo nella visita prima dell'intervento non guardo solo la forma esterna: controllo con cura il naso interno, per scoprire eventuali alterazioni che ostacolano il passaggio dell'aria, come una deviazione del setto, e programmare le correzioni da fare durante la stessa operazione."
+        ]
+      },
+      {
+        "titolo": "La prima visita",
+        "paragrafi": [
+          "La rinoplastica è un intervento molto personalizzato. Durante la prima visita valuto forma e dimensioni del naso, eventuali difetti estetici o funzionali, e Le illustro le possibili modifiche armoniche di forma e profilo.",
+          "Valuto anche le Sue condizioni di salute, per escludere problemi come pressione alta o disturbi della coagulazione o della cicatrizzazione. Alla fine, d'accordo con Lei, scegliamo la forma più adatta alla fisionomia del Suo volto. Prima dell'intervento riceverà indicazioni su alimentazione, farmaci, alcol e fumo."
+        ]
+      },
+      {
+        "titolo": "Tecnica aperta o chiusa",
+        "paragrafi": [
+          "Nella rinoplastica chiusa le incisioni sono tutte all'interno del naso. È una tecnica valida per piccoli difetti, ma a mio avviso non permette di controllare tutte le trasformazioni, soprattutto in una punta complessa.",
+          "Nella rinoplastica aperta si pratica una piccola incisione alla base della punta, la columella, suturata con un filo particolare che la rende non visibile. Secondo me questa tecnica permette di correggere qualsiasi difetto estetico e funzionale, anche con innesti di cartilagine presi di solito dal setto. Un chirurgo esperto deve comunque padroneggiare entrambe."
+        ]
+      },
+      {
+        "titolo": "Chi decide la forma del naso",
+        "paragrafi": [
+          "La forma si sceglie insieme, rispettando il più possibile la fisionomia e le caratteristiche fisiche della persona. A una persona molto alta, per esempio, sconsiglio una punta molto sollevata: chi è più basso finirebbe per vedere soprattutto le narici. In un uomo è preferibile un naso diritto, anche se un po' più importante, piuttosto che un naso minuto e all'insù.",
+          "Il tipico «naso rifatto» nasce quasi sempre da un eccesso di rimozione di osso e cartilagine: per questo preferisco tecniche che conservano le strutture."
+        ]
+      },
+      {
+        "titolo": "L'intervento",
+        "paragrafi": [
+          "La rinoplastica si esegue di norma in anestesia generale, in day surgery; solo nei casi più complessi serve restare in clinica una o due notti. L'intervento dura circa un'ora e mezza e termina con un archetto fermato sul dorso del naso e due tamponi di spugna, molto confortevoli, che si tolgono dopo circa 24 ore.",
+          "Se serve, nello stesso intervento si corregge la deviazione del setto con una settoplastica, per migliorare anche la respirazione."
+        ]
+      },
+      {
+        "titolo": "Il decorso, giorno per giorno",
+        "paragrafi": [
+          "Ecco cosa aspettarsi, in genere:"
+        ],
+        "elenco": [
+          "nelle prime 48 ore riposo; possono comparire gonfiore ed ecchimosi intorno agli occhi;",
+          "dal terzo giorno si riprende una vita normale, evitando fatica, saune, sole, cibi molto caldi e limitando gli occhiali;",
+          "dopo una settimana tolgo l'archetto;",
+          "dopo due settimane il risultato è già apprezzabile, anche se la punta può restare gonfia ancora per qualche settimana;",
+          "per almeno un mese conviene evitare sport con rischio di traumi;",
+          "il risultato definitivo si raggiunge a circa un anno."
+        ],
+        "chiusura": "Nella pagina principale trova un cursore interattivo per seguire il decorso giorno per giorno."
+      },
+      {
+        "titolo": "Rischi e aspettative",
+        "paragrafi": [
+          "La rinoplastica è una vera procedura chirurgica: le complicanze, come sanguinamento o infezione, sono rare ma possono accadere. Seguire con precisione le indicazioni prima e dopo l'intervento aiuta a ridurle; il fumo può rallentare la guarigione.",
+          "Anche la guarigione è diversa da persona a persona: la cartilagine può flettersi, le ossa possono saldarsi in modo irregolare, il gonfiore può durare a lungo. Ne parliamo con franchezza prima dell'intervento."
+        ]
+      },
+      {
+        "titolo": "Quando è una rinoplastica secondaria",
+        "paragrafi": [
+          "Chi chiede una seconda rinoplastica di solito non si è mai piaciuto con il nuovo naso e spesso respira ancora male. Rioperare è più difficile: i piani naturali dei tessuti non ci sono più e il tessuto cicatriziale è resistente. Spesso l'obiettivo realistico è il miglioramento, non la perfezione.",
+          "Per questi casi serve un'esperienza maturata su molti interventi al naso. Dal 2005 ho eseguito più di 1000 rinoplastiche, primarie e secondarie, e nel 2016 ho presentato al congresso nazionale SIO una tecnica per conservare la cartilagine."
+        ]
+      },
+      {
+        "titolo": "Dopo quanto si torna allo sport",
+        "paragrafi": [
+          "Dopo una rinoplastica è consigliabile non esporsi al rischio di traumi per almeno un mese, il tempo che serve perché le ossa del naso si consolidino. Gli sport di contatto vanno ripresi con gradualità, dopo il controllo."
+        ]
+      },
+      {
+        "titolo": "Come prenotare una visita",
+        "paragrafi": [
+          "Ricevo a Rivoli, a Torino nella Clinica Santa Caterina da Siena, a Vinovo e a Pinerolo. Per prenotare può chiamare il 392 917 5758 o scrivere a studio.dottgiuseppenazionale@gmail.com.",
+          "Sono Direttore della Struttura Complessa di Otorinolaringoiatria degli ospedali di Rivoli e Pinerolo e mi occupo di tutte le patologie dell'orecchio, del naso e della gola, con particolare esperienza nella chirurgia del naso."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "setto-deviato",
+      "categoria": "Naso",
+      "titolo": "Setto deviato: si respira meglio dopo la settoplastica?",
+      "img": "/nazionale-swpj/img/rep-fibroscopia.webp",
+      "tempoLettura": "6 min",
+      "intro": "Naso sempre chiuso da un lato, sinusiti che tornano, sonno disturbato: spesso dietro c'è un setto nasale deviato. Ecco cos'è, come si riconosce e come la settoplastica può migliorare la respirazione.",
+      "sezioni": [
+        {
+          "titolo": "Cos'è il setto nasale",
+          "paragrafi": [
+            "Il setto è la parete, fatta di osso e cartilagine, che divide le due fosse nasali. Se è dritto, l'aria passa in modo simmetrico da entrambi i lati. Se è deviato, una fossa nasale è più stretta dell'altra.",
+            "La deviazione può essere congenita, legata a uno sviluppo disarmonico dello scheletro del viso, oppure acquisita, dopo un trauma al naso, anche avvenuto durante l'infanzia."
+          ]
+        },
+        {
+          "titolo": "I sintomi",
+          "paragrafi": [
+            "Il sintomo principale è l'ostruzione nasale. A questa si possono aggiungere:"
+          ],
+          "elenco": [
+            "sinusiti frequenti;",
+            "disturbi del sonno e russamento;",
+            "faringiti, perché l'aria non viene filtrata dal naso e si respira con la bocca;",
+            "naso chiuso più da un lato che dall'altro."
+          ],
+          "chiusura": "Spesso, dalla parte opposta alla deviazione, i turbinati si ingrossano per compensare: è l'ipertrofia dei turbinati, che peggiora ancora l'ostruzione."
+        },
+        {
+          "titolo": "Come si fa la diagnosi",
+          "paragrafi": [
+            "La diagnosi si fa con la visita otorinolaringoiatrica e con la fibroendoscopia: una sottile fibra ottica flessibile, a luce fredda, che permette di vedere bene l'interno delle fosse nasali e il rinofaringe. Quando serve, per studiare i seni paranasali, si aggiunge una TC del massiccio facciale.",
+            "È importante distinguere la deviazione del setto da altre cause di naso chiuso, come le riniti, la sinusite o i polipi, che si curano in modo diverso."
+          ]
+        },
+        {
+          "titolo": "Riniti, sinusiti e polipi",
+          "paragrafi": [
+            "Non tutto il naso chiuso è un problema di setto. La rinite può essere infettiva, come il raffreddore, o allergica: le forme allergiche rappresentano circa il 20% delle infiammazioni nasali.",
+            "La sinusite è un'infiammazione dei seni paranasali e può essere acuta, subacuta o cronica, quando dura più di sei mesi. I polipi sono estroflessioni della mucosa, spesso legate all'allergia. Nella maggior parte dei casi la cura è medica; nei casi che non rispondono si interviene per via endoscopica (FESS)."
+          ]
+        },
+        {
+          "titolo": "La settoplastica",
+          "paragrafi": [
+            "Per la deviazione del setto la terapia è chirurgica. L'obiettivo della settoplastica è rendere simmetriche le cavità nasali e migliorare la respirazione.",
+            "L'intervento si esegue in anestesia generale, con una piccola incisione all'interno del naso, quindi invisibile. Si scolla la mucosa che riveste il setto e lo si rimodella, asportando una parte di cartilagine e di osso. Se i turbinati sono ingrossati, nello stesso intervento si può ridurli con una turbinotomia."
+          ]
+        },
+        {
+          "titolo": "Settoplastica e rinoplastica insieme",
+          "paragrafi": [
+            "Quando oltre alla respirazione c'è anche un desiderio di cambiare la forma del naso, settoplastica e rinoplastica si possono eseguire nello stesso intervento: si parla di rinosettoplastica funzionale.",
+            "È uno degli interventi di cui mi occupo di più. Una rinoplastica ben riuscita, per me, è sempre anche un naso che respira bene."
+          ]
+        },
+        {
+          "titolo": "Dopo l'intervento",
+          "paragrafi": [
+            "Nei primi giorni il naso è chiuso per il gonfiore e per eventuali medicazioni interne: è normale. La respirazione migliora gradualmente, man mano che la mucosa guarisce.",
+            "È importante seguire le indicazioni su lavaggi nasali, farmaci e attività fisica, evitare sforzi e traumi al naso nelle prime settimane e presentarsi ai controlli programmati."
+          ]
+        },
+        {
+          "titolo": "Il russamento e il naso",
+          "paragrafi": [
+            "Un naso chiuso costringe a respirare con la bocca, soprattutto di notte. Questo può favorire il russamento e, in alcune persone, le apnee notturne (OSAS), in cui il respiro si interrompe per qualche secondo durante il sonno.",
+            "Il russamento va valutato lungo tutte le vie aeree, dal naso alla gola: a volte il problema è il setto, a volte il palato, le tonsille o la base della lingua. Per questo, prima di proporre un intervento, studio con attenzione dove si trova l'ostacolo."
+          ]
+        },
+        {
+          "titolo": "Nei bambini",
+          "paragrafi": [
+            "Anche nei bambini il naso chiuso merita attenzione. Spesso la causa non è il setto ma le adenoidi ingrossate, che possono dare respirazione a bocca aperta, russamento e otiti ricorrenti.",
+            "In questi casi la valutazione è diversa e l'eventuale intervento, come l'adenoidectomia, si decide insieme ai genitori, con calma, dopo aver provato le terapie mediche quando sono indicate."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi vengono fatte spesso:"
+          ],
+          "elenco": [
+            "La settoplastica cambia la forma del naso? No: lavora all'interno. Se si desidera anche un cambiamento estetico, si parla di rinosettoplastica.",
+            "Si vedono cicatrici? No, l'incisione è all'interno del naso.",
+            "Il naso deviato si raddrizza da solo? No: se la deviazione dà disturbi importanti, la soluzione è chirurgica.",
+            "Quanto dura il ricovero? Dipende dal caso e dagli altri interventi associati: ne parliamo in visita, insieme ai tempi per tornare al lavoro."
+          ],
+          "chiusura": "Ogni naso è diverso: la risposta giusta arriva sempre dopo la visita e la fibroendoscopia."
+        },
+        {
+          "titolo": "Quando fare una visita",
+          "paragrafi": [
+            "Se il naso è chiuso da mesi, se le sinusiti tornano spesso, se russa o dorme male, vale la pena di fare una visita: capire la causa è il primo passo per scegliere la cura giusta, medica o chirurgica.",
+            "Ricevo a Rivoli, Torino, Vinovo e Pinerolo. Può prenotare al 392 917 5758 o scrivere a studio.dottgiuseppenazionale@gmail.com."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "storia-rinoplastica",
+      "categoria": "Storia",
+      "titolo": "Dai fratelli Vianeo di Tropea alla rinoplastica moderna",
+      "img": "/nazionale-swpj/img/storia-tagliacozzi.webp",
+      "tempoLettura": "5 min",
+      "intro": "La chirurgia del naso ha una storia lunga, e una parte importante parla calabrese. Sono cresciuto a Tropea, dove nel Quattrocento due fratelli inventarono una tecnica che il mondo avrebbe chiamato «il miracolo tropeano».",
+      "sezioni": [
+        {
+          "titolo": "Il naso come punizione",
+          "paragrafi": [
+            "Per secoli l'amputazione del naso è stata una punizione indelebile, riservata per esempio ai ladri o agli adulteri. Chi la subiva portava sul volto, per sempre, il segno della condanna.",
+            "Ricostruire un naso significava quindi restituire a una persona non solo una funzione, ma anche una dignità."
+          ]
+        },
+        {
+          "titolo": "Pietro e Paolo Vianeo",
+          "paragrafi": [
+            "Tra il XV e il XVI secolo i fratelli Pietro e Paolo Vianeo, a Tropea, misero a punto una tecnica particolare: ricostruivano la piramide nasale usando un lembo di pelle dell'avambraccio, che restava attaccato al braccio finché non attecchiva sul volto.",
+            "Sono considerati tra i primi fautori della chirurgia ricostruttiva ed estetica del naso."
+          ]
+        },
+        {
+          "titolo": "Il trattato di Tagliacozzi",
+          "paragrafi": [
+            "Nel 1597, a Venezia, il chirurgo bolognese Gaspare Tagliacozzi pubblicò il trattato «De curtorum chirurgia per insitionem», la chirurgia delle mutilazioni per mezzo di innesti. Vi descrisse in dettaglio la tecnica dei Vianeo e la definì «il miracolo tropeano».",
+            "Le tavole del trattato, con il paziente immobilizzato con il braccio sollevato verso il viso, sono ancora oggi tra le immagini più famose della storia della chirurgia."
+          ]
+        },
+        {
+          "titolo": "La bellezza del naso, già nel Cinquecento",
+          "paragrafi": [
+            "Che il naso conti molto nella bellezza di un volto lo si sapeva già. Nel XVI secolo Agnolo Firenzuola scriveva che chi non ha un naso perfetto non potrà mai avere un bel profilo, e descriveva un naso ideale stretto piuttosto che largo, affusolato dalla radice alla base, con la punta un po' sollevata.",
+            "Oggi sappiamo che non esiste un naso ideale uguale per tutti: razza, età e sesso condizionano la forma della piramide nasale, e il naso giusto è quello che si armonizza con il resto del volto."
+          ]
+        },
+        {
+          "titolo": "Da Tropea a Torino",
+          "paragrafi": [
+            "Mi sono diplomato nel 1987 al liceo scientifico «Pietro e Paolo Vianeo» di Tropea. Poi sono venuto a Torino, dove mi sono laureato in Medicina nel 1993 e specializzato in Otorinolaringoiatria nel 1999, con 70/70 e lode. Nel 2004 mi sono specializzato anche in chirurgia oncologica della testa e del collo.",
+            "Dal 2005, dopo aver imparato la tecnica aperta all'Ospedale Galliera di Genova, mi occupo di chirurgia morfo-funzionale del naso."
+          ]
+        },
+        {
+          "titolo": "La rinoplastica oggi",
+          "paragrafi": [
+            "Le tecniche si sono evolute moltissimo e per fortuna le mutilazioni del naso sono diventate rare. Oggi le tecniche si distinguono soprattutto per la via di accesso: chiusa, con incisioni tutte interne, o aperta, con una piccola incisione alla base della punta.",
+            "Al centro, però, resta lo stesso principio dei Vianeo: ricostruire una forma armonica e una funzione. Una rinoplastica ben riuscita è quella in cui a un buon risultato estetico si associa una perfetta funzione respiratoria."
+          ]
+        },
+        {
+          "titolo": "Una tecnica per conservare la cartilagine",
+          "paragrafi": [
+            "Uno dei rischi della rinoplastica è togliere troppo: il cosiddetto «naso rifatto» nasce spesso da un eccesso di rimozione di osso e cartilagine. Per questo ho messo a punto una tecnica per conservare la cartilagine negli interventi primari, presentata al Congresso nazionale SIO di Roma nel 2016.",
+            "La cartilagine conservata funziona come un «serbatoio», utile anche nel caso in cui serva un intervento secondario."
+          ]
+        },
+        {
+          "titolo": "Perché la storia conta ancora",
+          "paragrafi": [
+            "Raccontare questa storia non è solo una curiosità. Ricorda che la chirurgia del naso nasce come chirurgia ricostruttiva, per restituire una funzione e un aspetto a chi li aveva perduti. Anche oggi, prima di pensare all'estetica, controllo sempre che il naso respiri bene.",
+            "E ricorda che le tecniche migliori nascono dall'esperienza e dall'osservazione paziente di tanti casi, come accadde a Tropea più di cinquecento anni fa."
+          ]
+        },
+        {
+          "titolo": "Naso e respirazione: le due facce dello stesso intervento",
+          "paragrafi": [
+            "Una rinoplastica che cambia la forma ma peggiora il respiro non è riuscita. Per questo nella visita prima dell'intervento esamino con attenzione l'interno del naso, alla ricerca di deviazioni del setto, turbinati ingrossati o altre alterazioni che ostacolano il passaggio dell'aria.",
+            "Quando servono, queste correzioni si eseguono nello stesso intervento: è la rinosettoplastica funzionale. È il punto in cui la storia ricostruttiva dei Vianeo e la chirurgia estetica moderna si incontrano."
+          ]
+        },
+        {
+          "titolo": "La chirurgia oncologica: l'altra metà del mio lavoro",
+          "paragrafi": [
+            "Accanto alla chirurgia del naso mi occupo da molti anni di chirurgia oncologica della testa e del collo, con interventi anche complessi di demolizione e ricostruzione con lembi. È stata proprio questa esperienza a insegnarmi quanto contino la ricostruzione e il rispetto dei tessuti.",
+            "Sono stato anche tra i primi in Italia a usare le protesi fonatorie per restituire la voce ai pazienti laringectomizzati, organizzando corsi per specialisti a Vicenza, Torino e San Giovanni Rotondo."
+          ]
+        },
+        {
+          "titolo": "Più di mille nasi dopo",
+          "paragrafi": [
+            "In tutta la mia attività ho eseguito oltre 3000 interventi chirurgici, di cui più di 1000 rinoplastiche, con tecnica aperta e chiusa. Oggi dirigo la Struttura Complessa di Otorinolaringoiatria degli ospedali di Rivoli e Pinerolo.",
+            "Ogni naso è una storia diversa. La visita serve proprio a capire quella della persona che ho davanti. Se vuole parlarne, mi chiami al 392 917 5758."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "otorinotorino",
+    "nota": "Il profilo esiste ma è fermo da aprile 2025: ecco come potrebbe ripartire.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "profili",
+        "titolo": "Setto deviato: si respira meglio dopo?",
+        "sottotitolo": "Settoplastica e rinosettoplastica",
+        "didascalia": "Naso chiuso da un lato, sinusiti frequenti, sonno disturbato: spesso è il setto. La settoplastica rende simmetriche le fosse nasali, con un'incisione interna invisibile.",
+        "hashtag": "#settoplastica #otorino #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Rinoplastica funzionale o estetica?",
+        "risposta": "La migliore è tutte e due.",
+        "didascalia": "Una rinoplastica ben riuscita unisce un buon risultato estetico a una perfetta funzione respiratoria. Per questo in visita controllo sempre anche il naso interno.",
+        "hashtag": "#rinoplastica #rinosettoplastica #rivoli"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Russare: quando è un problema",
+        "punti": [
+          "Pause del respiro nel sonno",
+          "Stanchezza e sonnolenza di giorno",
+          "Naso chiuso da tempo",
+          "Nei bambini: adenoidi e tonsille grandi"
+        ],
+        "didascalia": "Il russamento va valutato dal naso alla gola. Con una visita accurata capiamo dov'è l'ostacolo e se serve una cura medica o chirurgica.",
+        "hashtag": "#russamento #OSAS #otorino"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "Ricevo anche presso",
+    "email": "studio.dottgiuseppenazionale@gmail.com",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio Dott. Nazionale",
+        "indirizzo": "Via Pasteur 17",
+        "citta": "Rivoli",
+        "cap": "",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di via Pasteur 17, Rivoli",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "392 917 5758"
+          }
+        ],
+        "img": "/nazionale-swpj/img/sede-rivoli.webp",
+        "zona": "Rivoli e Val di Susa"
+      },
+      {
+        "tipo": "Clinica",
+        "nome": "Clinica Santa Caterina da Siena",
+        "indirizzo": "Via Villa della Regina 19",
+        "citta": "Torino",
+        "cap": "",
+        "mappa": true,
+        "principale": false,
+        "frase": "la Clinica Santa Caterina da Siena, Torino",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "392 917 5758"
+          }
+        ],
+        "img": "/nazionale-swpj/img/sede-santa-caterina.webp",
+        "zona": "Torino"
+      },
+      {
+        "tipo": "Poliambulatorio",
+        "nome": "Poliambulatorio Vinovo",
+        "indirizzo": "Via Cottolengo 7",
+        "citta": "Vinovo",
+        "cap": "",
+        "mappa": true,
+        "principale": false,
+        "frase": "il Poliambulatorio di Vinovo",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "392 917 5758"
+          }
+        ],
+        "img": "/nazionale-swpj/img/sede-vinovo.webp",
+        "zona": "Torino sud"
+      },
+      {
+        "tipo": "Ambulatorio",
+        "nome": "Ambulatorio Aurora di Pinerolo",
+        "indirizzo": "Via Ettore Bignone 85/17",
+        "citta": "Pinerolo",
+        "cap": "",
+        "mappa": true,
+        "principale": false,
+        "frase": "l'Ambulatorio Aurora di Pinerolo",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "392 917 5758"
+          }
+        ],
+        "img": "/nazionale-swpj/img/sede-pinerolo.webp",
+        "zona": "Pinerolese",
+        "nota": "Presso l'area commerciale «Le Macine»"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Ricevo su appuntamento a Rivoli, Torino, Vinovo e Pinerolo. Mi chiami al 392 917 5758 o mi scriva: Le rispondo per fissare la visita.",
+    "telefono": "3929175758",
+    "telefonoLabel": "392 917 5758",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "oggettoMail": "Richiesta di visita otorinolaringoiatrica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi sede, giorno e orario che preferisce: La ricontatto per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "motivi": [
+        "Visita ORL",
+        "Rinoplastica",
+        "Setto deviato",
+        "Sinusite e polipi",
+        "Russamento",
+        "Orecchio e udito",
+        "Voce e gola",
+        "Bambini"
+      ],
+      "motiviFrase": [
+        "una visita otorinolaringoiatrica",
+        "un consulto per rinoplastica",
+        "un setto nasale deviato",
+        "sinusite o polipi nasali",
+        "russamento",
+        "un problema all'orecchio o all'udito",
+        "un problema di voce o di gola",
+        "mio figlio"
+      ],
+      "privacy": "https://www.giuseppenazionale.it/privacy-policy/",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio se è già stato operato al naso"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F2F6F9",
+      "ink": "#14212C",
+      "muted": "#566370",
+      "line": "#DCE4EB",
+      "brand": "#084A79",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#C08A3E",
+      "deep": "#062857",
+      "deep-ink": "#D4E1EE"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Cormorant Garamond",
+    "fontTesti": "Manrope",
+    "fontUi": "Manrope",
+    "favicon": "/nazionale-swpj/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/nazionale-swpj/brand/brand.json",
+    "pagine": [
+      "https://www.giuseppenazionale.it/",
+      "https://www.giuseppenazionale.it/curriculum-vitae/",
+      "https://www.giuseppenazionale.it/rinoplastica-torino/",
+      "https://www.giuseppenazionale.it/faq/",
+      "https://www.giuseppenazionale.it/naso/",
+      "https://www.giuseppenazionale.it/contatti/"
+    ]
+  }
+}

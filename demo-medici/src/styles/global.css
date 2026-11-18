@@ -239,3 +239,26 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
 }
+
+/* Layout "profilo": sedi con foto, pannelli dei distretti, disegno del profilo, decorso */
+@layer components {
+  .sede-foto { transition: border-color .2s, background-color .2s; }
+  .sede-foto[aria-pressed="true"] { border-color: var(--c-brand2); background: color-mix(in srgb, var(--c-brand2) 18%, transparent); }
+  .pannello-corpo { display: none; }
+  .pannello.aperto .pannello-corpo { display: grid; }
+  .pannello.aperto { background: #fff; box-shadow: 0 10px 30px rgb(0 0 0 / .08); }
+  @media (min-width: 1024px) {
+    .pannello { flex: 1 1 0; min-width: 4.5rem; transition: flex-grow .6s cubic-bezier(.2,.7,.2,1), background-color .3s; }
+    .pannello.aperto { flex-grow: 7; }
+    .pannello.aperto .pannello-testa { display: none !important; }
+    .pannello:not(.aperto):hover { background: color-mix(in srgb, var(--c-brand2) 14%, var(--c-surface)); }
+  }
+  .profilo-tab { background: #fff; transition: background-color .2s, color .2s; }
+  .profilo-tab[aria-selected="true"] { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+  .decorso-tacca { padding: 2px 4px; border-radius: 6px; }
+  .decorso-tacca.attiva { color: var(--c-brand2); }
+  .storia-pista { scrollbar-width: thin; cursor: grab; }
+  .storia-pista.trascina { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+  .stile-profilo .card { border-radius: 24px; }
+  .senza-moto .pannello { transition: none; }
+}

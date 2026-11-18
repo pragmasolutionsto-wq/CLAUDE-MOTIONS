@@ -1,0 +1,42 @@
+{
+  "medico": "Dott. Giuseppe Nazionale",
+  "specialita": "Otorinolaringoiatra, rinosettoplastica",
+  "sito": "https://www.giuseppenazionale.it/",
+  "incarico": "Direttore della Struttura Complessa di Otorinolaringoiatria, ospedali di Rivoli e Pinerolo (2025)",
+  "logo": "logo.png (scritta 'Dott. Giuseppe Nazionale' in serif, bassa risoluzione): in demo logotipo di testo Cormorant Garamond",
+  "colori": {
+    "blu": "#084A79",
+    "oro": "#C08A3E",
+    "blu_notte": "#062857"
+  },
+  "font": {
+    "sito": "Cormorant Garamond (titoli) + Open Sans",
+    "demo": ["Cormorant Garamond", "Manrope"]
+  },
+  "contatti": {
+    "telefono": "392 917 5758",
+    "email": "studio.dottgiuseppenazionale@gmail.com",
+    "instagram": "https://www.instagram.com/otorinotorino/ (fermo da aprile 2025)",
+    "privacy": "https://www.giuseppenazionale.it/privacy-policy/"
+  },
+  "sedi": [
+    "Studio, Via Pasteur 17, Rivoli (principale)",
+    "Clinica Santa Caterina da Siena, Via Villa della Regina 19, Torino",
+    "Poliambulatorio Vinovo, Via Cottolengo 7, Vinovo",
+    "Ambulatorio Aurora presso Le Macine, Via Ettore Bignone 85/17, Pinerolo"
+  ],
+  "whatsapp": "nessun numero WhatsApp verificato: prenotazione via mail già compilata",
+  "foto": [
+    "foto-01-ritratto.jpg: ritratto in camice (hero, avatar Instagram)",
+    "foto-02-in-sala.jpg: in sala operatoria",
+    "foto-03-equipe-pinerolo.jpg: équipe (fascia larga)",
+    "ospedale-rivoli.jpg, sede-*.jpg: sedi",
+    "disegno-profilo-prima/intervento/dopo.jpg: suoi disegni del profilo",
+    "storia-tagliacozzi.jpg, storia-tropea.jpg: immagini storiche dal suo sito"
+  ],
+  "numeri": "3000+ interventi, 1000+ rinoplastiche, 4 sedi (dal suo sito)",
+  "non_usate": "galleria prima/dopo e copertine video: volti di pazienti",
+  "dati_esclusi": "codice fiscale e dati fiscali del footer: non pubblicati",
+  "problemi_sito": "WordPress 5.3 (2019), news solo comunicati stampa, pagina testimonianze vuota, Instagram fermo da aprile 2025, banner cookie invasivo",
+  "repertorio": "brand/repertorio/: fibroscopia, audiometria, orecchio, profili, visita (Unsplash gratuito)"
+}

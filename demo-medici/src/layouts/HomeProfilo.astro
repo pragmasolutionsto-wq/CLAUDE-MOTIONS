@@ -1,0 +1,416 @@
+---
+// Layout "profilo" (prima demo: Giuseppe Nazionale, otorino e rinoplastica). Elegante (Cormorant, blu notte e bronzo) e molto interattivo:
+// prenotazione con scelta tra 4 sedi (schede con foto) + motivo → mail già scritta; distretti ORL in pannelli che si allargano;
+// "il disegno di un profilo" (i suoi tre disegni: prima → progetto → dopo); cursore del decorso dopo la rinoplastica (giorno 0 → 1 anno);
+// FAQ con ricerca; storia dai fratelli Vianeo a oggi in una fila da trascinare. Movimento: ritratto che si scopre con una tenda,
+// titolo parola per parola, contatori, parallasse. Lenis. Con prefers-reduced-motion: tutto fermo e visibile.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { nomeCompleto, telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = x.hero.box;
+const sedi = m.sedi.luoghi as any[];
+const mail = emailRichieste(m);
+const testo = (mo: string, se: string) => `Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${se}.`;
+const href0 = `mailto:${mail}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(testo(box.motiviFrase[0], sedi[0].frase))}`;
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const decorso = x.decorso as any[];
+const profili = [
+  { img: foto.profiloPrima, nome: 'Prima', testo: 'Valuto forma e dimensioni del naso, il profilo e il naso interno, che deve respirare bene.' },
+  { img: foto.profiloIntervento, nome: 'Il progetto', testo: 'Insieme scegliamo la forma più adatta al Suo volto: decidiamo dove e quanto intervenire, conservando il più possibile la cartilagine.' },
+  { img: foto.profiloDopo, nome: 'Dopo', testo: 'Un profilo armonico con il resto del viso, e un naso che respira. Il risultato definitivo si vede a circa un anno.' },
+];
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/90 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} class="min-w-0 leading-none">
+        <span class="block font-head text-[26px] font-bold text-brand sm:text-[30px]">Giuseppe Nazionale</span>
+        <span class="mt-1 block text-[11px] font-semibold uppercase tracking-[0.2em] text-brand2">Otorino · Rinoplastica</span>
+      </a>
+      <nav class="hidden items-center gap-7 text-[14px] font-semibold text-ink/70 lg:flex">
+        <a href="#aree" class="hover:text-brand">Di cosa mi occupo</a><a href="#rinoplastica" class="hover:text-brand">Rinoplastica</a><a href="#chi-sono" class="hover:text-brand">La mia storia</a><a href="#articoli" class="hover:text-brand">Blog</a><a href="#sedi" class="hover:text-brand">Sedi</a>
+      </nav>
+      <a href={telHref(m.prenota.telefono)} class="btn !min-h-[42px] shrink-0 !rounded-full bg-brand !px-5 text-sm text-white hover:opacity-90"><Icona nome="tel" class="h-4 w-4" /> <span class="hidden sm:inline">{m.prenota.telefonoLabel}</span><span class="sm:hidden">Chiami</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden" data-hero>
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-12 pt-8 sm:px-8 lg:grid-cols-12 lg:pb-16 lg:pt-14">
+        <div class="lg:col-span-7">
+          <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2" data-entra>{x.hero.eyebrow}</p>
+          <h1 class="mt-4 font-head text-[2.9rem] font-bold leading-[1] text-ink sm:text-[4.6rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 font-head text-2xl font-semibold text-brand" data-entra>{nomeCompleto(m)}</p>
+          <p class="mt-2 max-w-xl text-[17px] leading-relaxed text-muted" data-entra>{x.hero.testo}</p>
+          <dl class="mt-8 grid max-w-lg grid-cols-3 gap-4 border-t border-line pt-6" data-entra>
+            {x.numeri.map((n: any) => <div><dt class="sr-only">{n.testo}</dt><dd class="font-head text-[2.4rem] font-bold leading-none text-brand"><span data-conta={n.valore}>{n.valore.toLocaleString('it-IT')}</span>{n.suffisso}</dd><p class="mt-1 text-[13px] leading-snug text-muted" aria-hidden="true">{n.testo}</p></div>)}
+          </dl>
+        </div>
+        <div class="relative order-first lg:order-none lg:col-span-5">
+          <div class="relative mx-auto aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-t-[10rem] rounded-b-2xl sm:max-w-[440px]" data-tenda>
+            <img src={foto.ritratto} alt={foto.ritrattoAlt} width="740" height="925" class="h-full w-full object-cover object-[45%_30%]" data-ritratto />
+          </div>
+          <p class="mx-auto mt-3 max-w-[440px] text-center text-[13px] text-muted">Direttore della Struttura Complessa di Otorinolaringoiatria, ospedali di Rivoli e Pinerolo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRENOTAZIONE: sede con foto + motivo -->
+    <section id="prenota-box" class="bg-deep px-4 py-14 text-white sm:px-8 sm:py-20" data-prenota-box data-mail={mail} data-oggetto={m.prenota.oggettoMail}>
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>{box.titolo}</h2>
+        <p class="mt-2 text-deep-ink/80">Ricevo in quattro sedi: scelga la più comoda.</p>
+        <div class="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4" role="group" aria-label={box.sedeLabel}>
+          {sedi.map((s, i) => (
+            <button type="button" class="sede-foto group overflow-hidden rounded-2xl border-2 border-white/15 text-left" data-chip="sede" data-frase={s.frase} data-indirizzo={`${s.indirizzo}, ${s.citta}`} aria-pressed={i === 0 ? 'true' : 'false'}>
+              <span class="block overflow-hidden"><img src={s.img} alt="" width="500" height="320" loading="lazy" class="aspect-[16/10] w-full object-cover transition-[scale] duration-500 group-hover:scale-105" /></span>
+              <span class="block p-3 sm:p-4"><span class="block font-head text-xl font-bold leading-tight">{s.citta}</span><span class="block text-[13px] text-deep-ink/75">{s.nome}</span></span>
+            </button>
+          ))}
+        </div>
+        <div class="mt-6 grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-4">
+            <label for="motivo-box" class="text-[13px] font-semibold uppercase tracking-[0.16em] text-brand2">{box.motivoLabel}</label>
+            <select id="motivo-box" class="campo mt-2 !text-ink" data-motivo>{box.motivi.map((t: string, i: number) => <option value={box.motiviFrase[i]}>{t}</option>)}</select>
+            <p class="mt-3 flex items-center gap-2 text-[14px] text-deep-ink/80"><Icona nome="pin" class="h-4 w-4 shrink-0" /><span data-indirizzo-testo>{sedi[0].indirizzo}, {sedi[0].citta}</span></p>
+          </div>
+          <p class="rounded-2xl bg-white/5 p-5 font-head text-[1.35rem] leading-snug ring-1 ring-white/10 lg:col-span-5" data-anteprima aria-live="polite">{testo(box.motiviFrase[0], sedi[0].frase)}</p>
+          <div class="flex flex-col gap-3 lg:col-span-3">
+            <a href={href0} data-prenota class="btn !rounded-full bg-brand2 text-white hover:opacity-90"><Icona nome="mail" /> Invii la mail</a>
+            <a href={telHref(m.prenota.telefono)} class="btn !rounded-full border border-white/30 text-white hover:bg-white/10"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISTRETTI: pannelli che si allargano -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>Di cosa mi occupo</h2>
+        <p class="mt-2 max-w-xl text-muted">Orecchio, naso, gola, collo: tocchi un'area per vedere cosa curo e quali interventi eseguo.</p>
+        <div class="pannelli mt-10 flex flex-col gap-3 lg:h-[30rem] lg:flex-row" data-pannelli>
+          {x.distretti.map((d: any, i: number) => (
+            <div class={`pannello relative overflow-hidden rounded-3xl bg-surface ${i === 0 ? 'aperto' : ''}`} data-pannello={i}>
+              <button type="button" class="pannello-testa flex w-full items-center justify-between gap-3 p-5 text-left lg:absolute lg:inset-0 lg:flex-col lg:items-start lg:justify-end" aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`dist-${d.id}`} data-apri-pannello={i}>
+                <span class="font-head text-2xl font-bold leading-tight lg:[writing-mode:vertical-rl] lg:rotate-180 pannello-etichetta">{d.nome}</span>
+                <Icona nome="dx" class="h-5 w-5 shrink-0 text-brand2 lg:hidden" />
+              </button>
+              <div id={`dist-${d.id}`} class="pannello-corpo gap-6 p-5 pt-0 lg:absolute lg:inset-0 lg:grid-cols-2 lg:p-8" data-corpo>
+                <img src={d.img} alt="" width="900" height="600" loading="lazy" class="hidden h-full w-full rounded-2xl object-cover lg:block" />
+                <div class="flex flex-col justify-center">
+                  <h3 class="hidden font-head text-3xl font-bold lg:block">{d.nome}</h3>
+                  <p class="mt-2 text-[16px] leading-relaxed text-ink/85">{d.testo}</p>
+                  <ul class="mt-4 space-y-2">{d.interventi.map((t: string) => <li class="flex items-start gap-2 text-[15px]"><Icona nome="check" class="mt-0.5 h-4 w-4 shrink-0 text-brand2" />{t}</li>)}</ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- RINOPLASTICA: il disegno di un profilo + decorso -->
+    <section id="rinoplastica" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-5">
+            <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2">Rinoplastica</p>
+            <h2 class="mt-2 font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>Il disegno di un profilo</h2>
+            <p class="mt-4 text-[17px] leading-relaxed text-ink/85">Dal 2005 mi occupo di chirurgia morfo-funzionale del naso: più di 1000 rinoplastiche, con tecnica aperta e chiusa. Sfogli i miei disegni: così nasce un intervento.</p>
+            <div class="mt-6 flex flex-wrap gap-2" role="tablist" aria-label="Il disegno di un profilo">
+              {profili.map((p, i) => <button type="button" role="tab" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="profilo-tab rounded-full border border-line px-4 py-2 text-[15px] font-semibold" data-profilo-tab={i}>{p.nome}</button>)}
+            </div>
+            <label class="mt-5 block"><span class="sr-only">Prima e dopo</span><input type="range" min="0" max="2" step="1" value="0" class="w-full accent-[var(--c-brand)]" data-profilo-range /></label>
+            <p class="mt-4 min-h-[4.5rem] text-[16px] leading-relaxed text-muted" data-profilo-testo aria-live="polite">{profili[0].testo}</p>
+            <a href={x.galleria} target="_blank" rel="noopener" class="mt-2 inline-flex items-center gap-2 font-semibold text-brand hover:underline">I casi nella mia gallery <Icona nome="freccia" class="h-4 w-4" /></a>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="relative mx-auto aspect-[205/296] w-full max-w-[340px] overflow-hidden rounded-3xl bg-white shadow-xl" data-profilo-box>
+              {profili.map((p, i) => <img src={p.img} alt={`Disegno del Dott. Nazionale: ${p.nome.toLowerCase()}`} width="205" height="296" class={`absolute inset-0 h-full w-full object-cover ${i ? 'opacity-0' : ''}`} data-profilo-img={i} />)}
+            </div>
+          </div>
+        </div>
+
+        <!-- decorso -->
+        <div class="mt-20 rounded-3xl bg-white p-6 sm:p-10" data-decorso data-dati={JSON.stringify(decorso)}>
+          <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <h3 class="font-head text-[2rem] font-bold leading-tight sm:text-[2.6rem]">Dopo l'intervento, giorno per giorno</h3>
+            <p class="text-[14px] text-muted">Sposti il cursore per vedere cosa aspettarsi.</p>
+          </div>
+          <label class="mt-8 block"><span class="sr-only">Tempo dopo l'intervento</span><input type="range" min="0" max={decorso.length - 1} step="1" value="0" class="w-full accent-[var(--c-brand2)]" data-decorso-range /></label>
+          <div class="mt-2 flex justify-between text-[12px] font-semibold text-muted" aria-hidden="true">{decorso.map((d) => <button type="button" class="decorso-tacca" data-tacca={d.giorno}>{d.giorno === 0 ? 'Oggi' : d.giorno === 365 ? '1 anno' : d.giorno === 30 ? '1 mese' : `${d.giorno} g`}</button>)}</div>
+          <div class="mt-8 grid gap-4 md:grid-cols-12 md:items-center" aria-live="polite">
+            <p class="font-head text-[3.4rem] font-bold leading-none text-brand2 md:col-span-4" data-decorso-titolo>{decorso[0].titolo}</p>
+            <p class="text-[17px] leading-relaxed text-ink/85 md:col-span-8" data-decorso-testo>{decorso[0].testo}</p>
+          </div>
+        </div>
+
+        <!-- FAQ con ricerca -->
+        <div class="mt-20 grid gap-10 lg:grid-cols-12" data-faq>
+          <div class="lg:col-span-4">
+            <h3 class="font-head text-[2rem] font-bold leading-tight sm:text-[2.6rem]">Domande frequenti</h3>
+            <label class="mt-5 block"><span class="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Cerchi una domanda</span>
+              <input type="search" class="campo mt-2" placeholder="Per esempio: anestesia, sport, età" data-faq-cerca /></label>
+            <p class="mt-3 hidden text-[14px] text-muted" data-faq-vuoto>Nessuna domanda trovata. Me la faccia in visita!</p>
+          </div>
+          <div class="divide-y divide-line rounded-3xl bg-white lg:col-span-8">
+            {x.faq.map((f: any, i: number) => (
+              <details class="faq-voce group p-5 sm:p-6" data-faq-voce data-cerca={`${f.d} ${f.r}`.toLowerCase()}>
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-head text-xl font-bold leading-snug">{f.d}<span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-surface text-brand transition-[rotate] group-open:rotate-45" aria-hidden="true">+</span></summary>
+                <p class="mt-3 text-[16px] leading-relaxed text-ink/80">{f.r}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORIA da trascinare -->
+    <section id="chi-sono" class="overflow-hidden px-4 py-16 sm:px-8 sm:py-24" data-storia>
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>Da Tropea a Torino</h2>
+            <p class="mt-2 max-w-xl text-muted">La storia della rinoplastica e la mia, che si incrociano. La trascini o usi le frecce.</p>
+          </div>
+          <div class="flex gap-2">
+            <button type="button" class="grid h-12 w-12 place-items-center rounded-full border border-line hover:bg-surface" data-storia-prev aria-label="Indietro"><Icona nome="sx" /></button>
+            <button type="button" class="grid h-12 w-12 place-items-center rounded-full bg-brand text-white hover:opacity-90" data-storia-next aria-label="Avanti"><Icona nome="dx" /></button>
+          </div>
+        </div>
+        <ol class="storia-pista -mx-4 mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-6 sm:mx-0 sm:px-0" data-pista tabindex="0" aria-label="La mia storia">
+          {x.storia.map((s: any) => (
+            <li class="w-[82%] shrink-0 snap-start overflow-hidden rounded-3xl border border-line bg-white sm:w-[46%] lg:w-[31%]">
+              <img src={s.img} alt="" width="800" height="600" loading="lazy" draggable="false" class="aspect-[4/3] w-full object-cover object-[50%_20%]" />
+              <div class="p-6"><p class="font-head text-[2.2rem] font-bold leading-none text-brand2">{s.anno}</p><h3 class="mt-2 font-head text-2xl font-bold">{s.titolo}</h3><p class="mt-2 text-[15px] leading-relaxed text-muted">{s.testo}</p></div>
+            </li>
+          ))}
+        </ol>
+        <div class="mt-10 grid overflow-hidden rounded-3xl bg-deep text-white lg:grid-cols-2">
+          <div class="overflow-hidden"><img src={foto.equipe} alt="Il Dott. Nazionale con la sua équipe all'ospedale di Pinerolo" width="1400" height="1050" loading="lazy" class="h-full min-h-[260px] w-full object-cover" data-parallasse /></div>
+          <div class="flex flex-col justify-center p-8 sm:p-12">
+            <h3 class="font-head text-3xl font-bold">In ospedale, con la mia équipe</h3>
+            <p class="mt-3 leading-relaxed text-deep-ink/85">Dal 2001 lavoro all'Ospedale di Rivoli, dove dal 2011 al 2016 ho avuto l'incarico di Altissima Specialità per la chirurgia morfo-funzionale nasale. Dal 2025 dirigo la Struttura Complessa di Otorinolaringoiatria di Rivoli e Pinerolo.</p>
+            <p class="mt-3 leading-relaxed text-deep-ink/85">Sono stato tra i primi in Italia a usare le protesi fonatorie per restituire la voce ai pazienti laringectomizzati, e ho organizzato corsi per specialisti a Vicenza, Torino e San Giovanni Rotondo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-profilo bg-surface"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>Dal mio blog</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-3" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group block overflow-hidden rounded-3xl border border-line bg-white">
+              <span class="block overflow-hidden bg-surface"><img src={b.img} alt="" width="1200" height="800" loading="lazy" class="aspect-[3/2] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="block p-6"><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">{b.categoria} · {b.tempoLettura}</span><span class="mt-2 block font-head text-[1.6rem] font-bold leading-tight group-hover:text-brand">{b.titolo}</span></span>
+            </a>
+          ))}
+        </div>
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-bold" data-sale>Dal mio Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-3xl border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.volto} alt="" width="32" height="32" class="h-8 w-8 rounded-full object-cover" /><a href={`https://www.instagram.com/${ig.handle}/`} target="_blank" rel="noopener" class="text-sm font-semibold hover:underline">{ig.handle}</a></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="1600" height="900" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-deep/95 px-5 py-4 text-white"><p class="font-head text-2xl font-bold leading-tight">{p.titolo}</p><p class="mt-0.5 text-sm text-brand2">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-brand p-7 text-white">
+                  <span class="font-head text-7xl font-bold leading-none text-brand2">?</span>
+                  <div><p class="font-head text-[2.1rem] font-bold leading-[1.05]">{p.titolo}</p><p class="mt-4 w-fit rounded-full bg-brand2 px-4 py-2 text-[14px] font-semibold">{p.risposta}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-deep p-7 text-white">
+                  <p class="font-head text-[2.1rem] font-bold leading-[1.05]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand2"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-bold leading-tight sm:text-[3.2rem]" data-sale>{m.sedi.titolo}</h2>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" data-stagger>
+          {sedi.map((s) => (
+            <article class="flex flex-col overflow-hidden rounded-3xl bg-white">
+              <img src={s.img} alt={s.nome} width="500" height="320" loading="lazy" class="aspect-[16/10] w-full object-cover" />
+              <div class="flex flex-1 flex-col p-6">
+                <h3 class="font-head text-2xl font-bold leading-tight">{s.nome}</h3>
+                <p class="mt-1 text-[15px] text-muted">{s.indirizzo}, {s.citta}{s.nota ? ` · ${s.nota}` : ''}</p>
+                <a href={mapsHref(s.indirizzo, s.citta)} target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 pt-4 text-sm font-semibold text-brand hover:underline"><Icona nome="pin" class="h-4 w-4" /> Apra la mappa</a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-[16px]"><span>Per tutte le sedi: <a href={telHref(m.prenota.telefono)} class="font-bold text-brand hover:underline">{m.prenota.telefonoLabel}</a></span><a href={`mailto:${m.sedi.email}`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="mail" class="h-4 w-4" />{m.sedi.email}</a></p>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-4xl font-bold sm:text-5xl">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(m.prenota.telefono)} class="btn !rounded-full bg-brand2 text-white hover:opacity-90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-full border border-white/50 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+
+    // --- Prenotazione: sede + motivo ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const sedi = box.querySelectorAll<HTMLElement>('[data-chip="sede"]');
+    const motivo = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const aggiorna = () => {
+      const s = box.querySelector<HTMLElement>('[data-chip="sede"][aria-pressed="true"]')!;
+      const t = `Buongiorno Dottore, vorrei prenotare una visita per ${motivo.value} presso ${s.dataset.frase}.`;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(box.dataset.oggetto!)}&body=${encodeURIComponent(t)}`;
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector('[data-indirizzo-testo]')!.textContent = s.dataset.indirizzo!;
+      if (!ridotto) gsap.fromTo('[data-anteprima]', { opacity: 0.3, y: 6 }, { opacity: 1, y: 0, duration: 0.3 });
+    };
+    sedi.forEach((s) => s.addEventListener('click', () => { sedi.forEach((k) => k.setAttribute('aria-pressed', String(k === s))); aggiorna(); }));
+    motivo.addEventListener('change', aggiorna);
+
+    // --- Pannelli dei distretti ---
+    const pann = [...document.querySelectorAll<HTMLElement>('[data-pannello]')];
+    const apri = (i: number) => {
+      pann.forEach((p, k) => {
+        const on = k === i;
+        p.classList.toggle('aperto', on);
+        p.querySelector('[data-apri-pannello]')!.setAttribute('aria-expanded', String(on));
+      });
+      if (!ridotto) gsap.fromTo(pann[i].querySelectorAll('[data-corpo] > *'), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, delay: 0.15, ease: 'power3.out' });
+    };
+    pann.forEach((p, i) => p.querySelector('[data-apri-pannello]')!.addEventListener('click', () => apri(i)));
+
+    // --- Il disegno di un profilo ---
+    const testi = ['Valuto forma e dimensioni del naso, il profilo e il naso interno, che deve respirare bene.', 'Insieme scegliamo la forma più adatta al Suo volto: decidiamo dove e quanto intervenire, conservando il più possibile la cartilagine.', 'Un profilo armonico con il resto del viso, e un naso che respira. Il risultato definitivo si vede a circa un anno.'];
+    const ptab = [...document.querySelectorAll<HTMLElement>('[data-profilo-tab]')];
+    const prange = document.querySelector<HTMLInputElement>('[data-profilo-range]')!;
+    const pimg = [...document.querySelectorAll<HTMLElement>('[data-profilo-img]')];
+    let pAtt = 0;
+    const profilo = (i: number, focus = false) => {
+      ptab.forEach((t, k) => { t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1; });
+      prange.value = String(i);
+      document.querySelector('[data-profilo-testo]')!.textContent = testi[i];
+      if (ridotto) pimg.forEach((im, k) => { im.style.opacity = k === i ? '1' : '0'; });
+      else { gsap.to(pimg, { opacity: (k) => (k === i ? 1 : 0), duration: 0.6, ease: 'power2.inOut' }); gsap.fromTo(pimg[i], { scale: 1.04 }, { scale: 1, duration: 0.8 }); }
+      if (focus) ptab[i].focus();
+      pAtt = i;
+    };
+    ptab.forEach((t, i) => {
+      t.addEventListener('click', () => profilo(i));
+      t.addEventListener('keydown', (e) => { const k = (e as KeyboardEvent).key; if (k === 'ArrowRight') { e.preventDefault(); profilo((pAtt + 1) % 3, true); } if (k === 'ArrowLeft') { e.preventDefault(); profilo((pAtt + 2) % 3, true); } });
+    });
+    prange.addEventListener('input', () => profilo(Number(prange.value)));
+
+    // --- Decorso ---
+    const dec = document.querySelector<HTMLElement>('[data-decorso]')!;
+    const dati = JSON.parse(dec.dataset.dati!) as { giorno: number; titolo: string; testo: string }[];
+    const drange = dec.querySelector<HTMLInputElement>('[data-decorso-range]')!;
+    const mostraDec = (i: number) => {
+      drange.value = String(i);
+      drange.setAttribute('aria-valuetext', dati[i].titolo);
+      dec.querySelector('[data-decorso-titolo]')!.textContent = dati[i].titolo;
+      dec.querySelector('[data-decorso-testo]')!.textContent = dati[i].testo;
+      dec.querySelectorAll<HTMLElement>('[data-tacca]').forEach((t, k) => t.classList.toggle('attiva', k === i));
+      if (!ridotto) gsap.fromTo(['[data-decorso-titolo]', '[data-decorso-testo]'], { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35, stagger: 0.05 });
+    };
+    drange.addEventListener('input', () => mostraDec(Number(drange.value)));
+    dec.querySelectorAll<HTMLElement>('[data-tacca]').forEach((t, k) => t.addEventListener('click', () => mostraDec(k)));
+
+    // --- FAQ con ricerca ---
+    const voci = [...document.querySelectorAll<HTMLElement>('[data-faq-voce]')];
+    document.querySelector<HTMLInputElement>('[data-faq-cerca]')!.addEventListener('input', (e) => {
+      const q = (e.target as HTMLInputElement).value.trim().toLowerCase();
+      let n = 0;
+      voci.forEach((v) => { const ok = !q || v.dataset.cerca!.includes(q); v.classList.toggle('hidden', !ok); if (ok) n++; });
+      document.querySelector('[data-faq-vuoto]')!.classList.toggle('hidden', n > 0);
+    });
+
+    // --- Storia da trascinare ---
+    const pista = document.querySelector<HTMLElement>('[data-pista]')!;
+    const passo = () => (pista.querySelector('li') as HTMLElement).offsetWidth + 20;
+    document.querySelector('[data-storia-next]')!.addEventListener('click', () => pista.scrollBy({ left: passo(), behavior: ridotto ? 'auto' : 'smooth' }));
+    document.querySelector('[data-storia-prev]')!.addEventListener('click', () => pista.scrollBy({ left: -passo(), behavior: ridotto ? 'auto' : 'smooth' }));
+    let giu = false, x0 = 0, s0 = 0;
+    pista.addEventListener('pointerdown', (e) => { if (e.pointerType !== 'mouse') return; giu = true; x0 = e.clientX; s0 = pista.scrollLeft; pista.classList.add('trascina'); });
+    window.addEventListener('pointermove', (e) => { if (giu) pista.scrollLeft = s0 - (e.clientX - x0); });
+    window.addEventListener('pointerup', () => { giu = false; pista.classList.remove('trascina'); });
+
+    if (!ridotto) {
+      const lenis = new Lenis({ anchors: { offset: -90 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.1em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= 5 ? 'text-brand' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('[data-tenda]', { clipPath: 'inset(0 0 0 100% round 10rem 10rem 1rem 1rem)', duration: 1.2, ease: 'power4.inOut' })
+        .from('[data-ritratto]', { scale: 1.2, xPercent: -6, duration: 1.4 }, '<0.1')
+        .from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.8, stagger: 0.05 }, 0.2)
+        .from('[data-entra]', { y: 24, opacity: 0, duration: 0.7, stagger: 0.08 }, '-=0.5');
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.8, delay: 0.8, ease: 'power2.out', onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString('it-IT'); } });
+      });
+      gsap.to('[data-ritratto]', { yPercent: 6, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      gsap.from('[data-chip="sede"]', { y: 40, opacity: 0, duration: 0.6, stagger: 0.08, ease: 'power3.out', scrollTrigger: { trigger: '[data-prenota-box]', start: 'top 80%', once: true } });
+      gsap.from('[data-pannello]', { x: 60, opacity: 0, duration: 0.7, stagger: 0.07, ease: 'power3.out', scrollTrigger: { trigger: '[data-pannelli]', start: 'top 85%', once: true } });
+      gsap.from('[data-pista] > li', { x: 120, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out', scrollTrigger: { trigger: '[data-pista]', start: 'top 85%', once: true } });
+      gsap.utils.toArray<HTMLElement>('[data-parallasse]').forEach((im) => gsap.fromTo(im, { scale: 1.15, yPercent: -6 }, { scale: 1.15, yPercent: 6, ease: 'none', scrollTrigger: { trigger: im, start: 'top bottom', end: 'bottom top', scrub: true } }));
+      gsap.from('[data-blog] > a', { y: 60, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: '[data-blog]', start: 'top 85%', once: true } });
+      // il disegno del profilo si sfoglia da solo la prima volta
+      let toccato = false; document.querySelector('#rinoplastica')!.addEventListener('pointerdown', () => { toccato = true; }, { once: true });
+      ScrollTrigger.create({ trigger: '[data-profilo-box]', start: 'top 70%', once: true, onEnter: () => { [1, 2].forEach((i, k) => window.setTimeout(() => { if (!toccato) profilo(i); }, 1800 * (k + 1))); } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>
