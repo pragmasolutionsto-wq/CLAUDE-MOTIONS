@@ -1,0 +1,75 @@
+{
+  "medico": "Dr. Giancarlo Marra PhD",
+  "specialita": "Urologo e ricercatore universitario (Molinette, UniTo): oncologia urologica, tumore della prostata, terapia focale, chirurgia robotica",
+  "sito": "https://www.drmarra.it/",
+  "logo": {
+    "originale": "img/logo.png (Logo-DrMarra.png 1724x256, GM a contorno + nome)",
+    "chiaro": "img/logo-chiaro.png (tutto bianco)",
+    "marchio": "img/marchio.png (favicon GM)"
+  },
+  "colori": {
+    "blu": "#023E8A",
+    "blu medio": "#175DB5",
+    "ghiaccio": "#CAF0F8"
+  },
+  "font_sito": "serif del logo; demo: Newsreader (mai corsivo) + Hanken Grotesk",
+  "foto": [
+    "387834168_805981808196086_6486562381740439409_n.jpeg",
+    "AO0A5700-scaled.webp",
+    "DSC_9481-scaled.jpg",
+    "DSC_9547-1.png",
+    "IMG_0005.jpeg",
+    "IMG_5D2CC3E49594-1.jpeg",
+    "IMG_8D6048816AD1-1.jpeg",
+    "Image-1-3.jpeg",
+    "Image-1.jpeg",
+    "Logo-DrMarra.png",
+    "WhatsApp-Image-2023-11-03-at-11.45-1-1.png",
+    "WhatsApp-Image-2023-11-03-at-11.45-1.png",
+    "WhatsApp-Image-2023-11-03-at-11.45-2.png",
+    "WhatsApp-Image-2023-11-03-at-11.45-3.png",
+    "card.png",
+    "cropped-favicon-gm-c.png",
+    "logo-default-it.svg",
+    "og-image.png",
+    "yt.jpg"
+  ],
+  "mappa_foto": {
+    "ritratto/ritratto-v/volto": "DSC_9481",
+    "scrivania": "DSC_9547-1 (paziente di spalle)",
+    "relatore": "AO0A5700",
+    "equipe": "IMG_0005",
+    "ire": "WhatsApp 11.45-1 (sala con sistema per elettroporazione)",
+    "premio-robotica": "WhatsApp 11.45-2 (EAU)",
+    "uroonco": "Image-1-3",
+    "istanbul": "Image-1 (slide Prevention and Handling of Complications)",
+    "bulgaria": "IMG_5D2CC",
+    "siu-roma": "WhatsApp 11.45-3",
+    "premio-mininvasiva": "387834168"
+  },
+  "repertorio": "riuso: rep-colloquio (Cucchiarale), rep-microscopio, rep-laboratorio (Castelli N.), rep-coppia (Carone)",
+  "contatti": {
+    "telefono": "375 575 4886",
+    "email": "studio@drmarra.it",
+    "whatsapp": null,
+    "miodottore": "https://www.miodottore.it/giancarlo-marra/urologo-andrologo-chirurgo/torino",
+    "x": "https://twitter.com/GMarra_MD",
+    "linkedin": "https://it.linkedin.com/in/giancarlo-marra-4b6b8949"
+  },
+  "studio": "Via Paolini 12, 10138 Torino · lun-ven 15-19",
+  "privacy": "nessuna pagina privacy sul sito → nota nel form",
+  "dati": [
+    "700+ interventi da primo e secondo operatore",
+    "130+ lavori scientifici, 150+ abstract",
+    "Laurea Torino 2014 110L, Urologia 2020 70/70 tesi terapia focale, PhD Politecnico/UniTo",
+    "Londra King's/Guy's 1 anno, Parigi Montsouris + Tenon 2+ anni",
+    "primo caso italiano IRE di salvataggio (Molinette)",
+    "premio miglior lavoro chirurgia robotica 2022 (European Urology)",
+    "EAU exchange USA 2023",
+    "Chief Editor UroONCO prostata",
+    "filosofia: Patient comes first (Guy's 2013), shared decision making"
+  ],
+  "video": [
+    "5Xf_lwBJtkY (intervista UroONCO con Prof. Bossi, PEACE-1)"
+  ]
+}

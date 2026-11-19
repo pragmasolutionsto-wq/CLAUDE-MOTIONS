@@ -1,0 +1,468 @@
+---
+// Layout "condivisa" (prima demo: Dr. Giancarlo Marra PhD, urologo, tumore della prostata). Costruito sulla sua filosofia dello
+// «shared decision making»: due cerchi a contorno che si avvicinano e si sovrappongono (come le lettere del suo monogramma GM),
+// Newsreader (mai corsivo) + Hanken Grotesk, blu #023E8A + #175DB5 + ghiaccio #CAF0F8. Interattivi: prenotazione (motivo → canale:
+// MioDottore / mail già scritta / telefono); «Il percorso» a tappe (tab da tastiera); «PI-RADS» (scala 1-5 su schema della
+// prostata); «Le opzioni, una accanto all'altra» (priorità del paziente → note per ogni opzione, senza classifica); prestazioni a
+// schede; riconoscimenti a carosello con foto vere; intervista UroONCO caricata al clic.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const P = x.prenota;
+const mail = emailRichieste(m);
+const motivi = x.motivi as any[];
+const per = x.percorso as any[];
+const pir = x.pirads as any[];
+const pri = x.priorita as any[];
+const opz = x.opzioni as any[];
+const prest = x.prestazioni as any[];
+const ric = x.riconoscimenti as any[];
+const form = x.formazione as any[];
+const sede = m.sedi.luoghi[0] as any;
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const msg0 = `Buongiorno Dottore, vorrei prenotare una visita per ${motivi[0].frase} presso ${sede.frase}.`;
+const mailHref = (t: string) => `mailto:${mail}?subject=${encodeURIComponent(P.oggettoMail)}&body=${encodeURIComponent(t)}`;
+const segno: Record<string, string> = { si: 'Sì', parte: 'In parte', no: 'No' };
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} aria-label={m.brand.logoAlt}><img src={m.brand.logoScuro} alt={m.brand.logoAlt} width="1724" height="256" class="h-7 w-auto sm:h-9" /></a>
+      <nav class="hidden items-center gap-6 text-[14.5px] text-ink/75 xl:flex" aria-label="Sezioni">
+        <a href="#aree" class="hover:text-brand">Il percorso</a><a href="#pirads" class="hover:text-brand">La risonanza</a><a href="#opzioni" class="hover:text-brand">Le opzioni</a><a href="#prestazioni" class="hover:text-brand">Prestazioni</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#sedi" class="hover:text-brand">Lo studio</a>
+      </nav>
+      <a href="#prenota-box" class="btn !min-h-[40px] shrink-0 !rounded-full bg-brand !px-5 text-[14px] text-white hover:bg-deep">Prenoti</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden" data-hero>
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 pb-10 pt-10 sm:px-8 lg:grid-cols-12 lg:items-center lg:pt-16">
+        <div class="lg:col-span-7">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand2" data-entra>{x.hero.eyebrow}</p>
+          <h1 class="mt-5 font-head text-[3rem] font-medium leading-[1.02] tracking-[-0.015em] text-deep sm:text-[4.7rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-ink/80" data-entra>{x.hero.testo}</p>
+          <dl class="mt-9 grid max-w-xl grid-cols-3 gap-5" data-entra>
+            {(x.numeri as any[]).map((n) => <div><dt class="sr-only">{n.testo}</dt><dd><span class="block font-head text-[2.4rem] font-medium leading-none text-brand sm:text-[3rem]"><span class="text-[0.45em] text-muted">{n.pre} </span><span data-conta={n.valore} data-fmt={n.fmt}>{n.fmt}</span></span><span class="mt-2 block text-[13px] leading-snug text-muted">{n.testo}</span></dd></div>)}
+          </dl>
+        </div>
+        <div class="relative lg:col-span-5">
+          <svg viewBox="0 0 600 600" class="pointer-events-none absolute -left-10 -top-6 h-[112%] w-[120%] max-w-none" aria-hidden="true" data-cerchi>
+            <circle cx="230" cy="300" r="210" fill="none" stroke="var(--c-brand)" stroke-width="1.6" data-cerchio="a" />
+            <circle cx="370" cy="300" r="210" fill="none" stroke="var(--c-brand2)" stroke-width="1.6" data-cerchio="b" />
+          </svg>
+          <figure class="relative mx-auto max-w-[420px] overflow-hidden rounded-[999px_999px_28px_28px] bg-surface" data-foto-hero>
+            <img src={foto.ritrattoV} alt={foto.ritrattoAlt} width="1100" height="1464" fetchpriority="high" class="aspect-[3/4] w-full object-cover object-top" />
+          </figure>
+          <p class="relative mx-auto -mt-7 w-fit rounded-full bg-deep px-5 py-2.5 text-center text-[14px] text-white shadow-lg" data-entra>«Patient comes first, il paziente per primo»</p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 pb-16 sm:px-8">
+        <div id="prenota-box" class="grid gap-5 rounded-[28px] bg-surface p-5 ring-1 ring-line sm:p-7 lg:grid-cols-12 lg:items-end" data-prenota-box data-mail={mail} data-oggetto={P.oggettoMail} data-frase-sede={sede.frase} data-entra>
+          <label class="block lg:col-span-4"><span class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Prenoti una visita per</span>
+            <select class="campo mt-2 !rounded-2xl bg-white" data-motivo>{motivi.map((t) => <option value={t.id} data-frase={t.frase}>{t.nome}</option>)}</select></label>
+          <div class="rounded-2xl bg-white px-4 py-3 ring-1 ring-line lg:col-span-4"><p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">Il Suo messaggio</p><p class="mt-1 text-[15px] leading-snug text-deep" data-anteprima aria-live="polite">{msg0}</p></div>
+          <div class="grid gap-2 sm:grid-cols-3 lg:col-span-4 lg:grid-cols-1">
+            <a href={x.miodottore} target="_blank" rel="noopener" class="btn !rounded-full bg-brand text-white hover:bg-deep" data-miodottore><Icona nome="calendario" /> Su MioDottore</a>
+            <a href={mailHref(msg0)} class="btn !rounded-full bg-white text-deep ring-1 ring-line hover:ring-deep" data-prenota><Icona nome="mail" /> Invii la mail</a>
+            <a href={telHref(P.telefono)} class="btn !rounded-full bg-white text-deep ring-1 ring-line hover:ring-deep"><Icona nome="tel" /> {P.telefonoLabel}</a>
+          </div>
+          <p class="text-[13px] text-muted lg:col-span-12">Studio in via Paolini 12, Torino · dal lunedì al venerdì, 15-19.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILOSOFIA -->
+    <section class="bg-deep px-4 py-16 text-deep-ink sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-6">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-ghiaccio">Come lavoro</p>
+          <blockquote class="mt-4 font-head text-[2.1rem] font-medium leading-[1.15] text-white sm:text-[2.8rem]" data-sale>«Patient comes first.»<span class="mt-3 block text-[15px] font-normal tracking-normal text-deep-ink">Guy's Hospital, Londra, 2013</span></blockquote>
+          <p class="mt-6 text-[16.5px] leading-relaxed">Credo nella decisione condivisa: la soluzione non è più offerta solo dall'urologo, ma scelta insieme al paziente tra le molte opzioni spesso disponibili. L'obiettivo è la strada che meglio concilia le Sue esigenze con il miglior risultato possibile.</p>
+          <p class="mt-4 text-[16.5px] leading-relaxed">Per farlo servono dati aggiornati: per questo continuo a fare ricerca e a confrontarmi con colleghi in Italia e all'estero.</p>
+        </div>
+        <figure class="lg:col-span-6"><img src={foto.scrivania} alt="Il Dr. Marra a colloquio con un paziente nel suo studio" width="2000" height="722" loading="lazy" class="aspect-[16/9] w-full rounded-[28px] object-cover object-[78%_50%]" data-scrivania /></figure>
+      </div>
+    </section>
+
+    <!-- PERCORSO -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24" data-percorso data-per={JSON.stringify(per)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand2">Tumore della prostata</p><h2 class="mt-2 font-head text-[2.5rem] font-medium leading-[1.05] tracking-[-0.01em] text-deep sm:text-[3.5rem]" data-sale>Il percorso, un passo alla volta.</h2></div>
+          <p class="text-[16.5px] leading-relaxed text-ink/80 lg:col-span-5">Oggi la diagnosi è molto più precisa di qualche anno fa: si fanno meno biopsie inutili e si trovano più spesso i tumori che contano davvero.</p>
+        </div>
+        <div class="relative mt-12">
+          <div class="absolute left-0 right-0 top-[11px] hidden h-px bg-line md:block" aria-hidden="true"><div class="h-full origin-left bg-brand" style="transform:scaleX(0)" data-per-linea></div></div>
+          <div class="relative grid gap-2 md:grid-cols-5" role="tablist" aria-label="Le tappe del percorso">
+            {per.map((p, i) => <button type="button" role="tab" id={`tappa-${p.id}`} aria-controls="per-pannello" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="tappa-c flex items-start gap-3 rounded-2xl p-2 text-left md:flex-col md:gap-4 md:p-0" data-tappa={p.id}><span class="tappa__pt mt-1 h-[22px] w-[22px] shrink-0 rounded-full border-2 border-brand bg-white md:mt-0"></span><span><span class="block font-head text-[1.3rem] font-medium leading-tight text-deep">{p.titolo}</span><span class="mt-0.5 block text-[13.5px] text-muted">{p.breve}</span></span></button>)}
+          </div>
+          <div id="per-pannello" role="tabpanel" aria-labelledby={`tappa-${per[0].id}`} class="mt-8 grid gap-6 rounded-[28px] bg-surface p-6 sm:p-9 lg:grid-cols-12" aria-live="polite">
+            <div class="lg:col-span-7"><p class="font-head text-[1.9rem] font-medium leading-tight text-deep" data-per-titolo>{per[0].titolo}</p><p class="mt-3 text-[16.5px] leading-relaxed text-ink/85" data-per-testo>{per[0].testo}</p></div>
+            <div class="lg:col-span-5"><ul class="space-y-2.5" data-per-punti>{per[0].punti.map((t: string) => <li class="flex items-start gap-3 text-[15.5px] text-deep"><Icona nome="check" class="mt-0.5 h-5 w-5 shrink-0 text-brand2" />{t}</li>)}</ul>
+              <div class="mt-6 flex flex-wrap gap-2"><button type="button" class="btn !rounded-full bg-brand text-white hover:bg-deep" data-per-prenota>Prenoti una visita</button><button type="button" class="btn !rounded-full bg-white text-deep ring-1 ring-line hover:ring-deep" data-per-succ>Tappa successiva <Icona nome="freccia" class="h-4 w-4" /></button></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PI-RADS -->
+    <section id="pirads" class="bg-surface px-4 py-16 sm:px-8 sm:py-24" data-pirads data-pir={JSON.stringify(pir)}>
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-5">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand2">La risonanza</p>
+          <h2 class="mt-2 font-head text-[2.5rem] font-medium leading-[1.05] tracking-[-0.01em] text-deep sm:text-[3.2rem]" data-sale>Che cosa vuol dire il PI-RADS sul referto?</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-ink/80">La risonanza multiparametrica dà a ogni area sospetta un punteggio da 1 a 5. Scelga il valore del Suo referto: Le spiego cosa significa di solito, e cosa si fa dopo.</p>
+          <fieldset class="mt-8"><legend class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Punteggio PI-RADS</legend>
+            <div class="mt-3 grid grid-cols-5 gap-2">{pir.map((p, i) => <label class="pir-r"><input type="radio" name="pirads" value={p.v} checked={i === 2} class="sr-only" /><span>{p.v}</span></label>)}</div></fieldset>
+          <div class="mt-6 rounded-[22px] bg-white p-6 ring-1 ring-line" aria-live="polite">
+            <p class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand2">Probabilità <span data-pir-nome>{pir[2].nome.toLowerCase()}</span></p>
+            <p class="mt-2 font-head text-[1.4rem] leading-snug text-deep" data-pir-testo>{pir[2].testo}</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-ink/80"><span class="font-semibold text-deep">Di solito: </span><span data-pir-dopo>{pir[2].dopo}</span></p>
+          </div>
+          <p class="mt-3 text-[13px] text-muted">Indicazioni generali: il referto va sempre letto con l'urologo, insieme a PSA, volume della prostata e storia familiare.</p>
+        </div>
+        <figure class="lg:col-span-7">
+          <svg viewBox="0 0 640 520" class="w-full" role="img" aria-labelledby="pir-tit" data-pir-svg>
+            <title id="pir-tit">Schema della prostata in sezione, con un'area sospetta più o meno evidente a seconda del punteggio PI-RADS</title>
+            <ellipse cx="320" cy="270" rx="250" ry="190" fill="#fff" stroke="var(--c-line)" stroke-width="2" />
+            <path d="M120 300 Q120 120 320 110 Q520 120 520 300 Q470 420 320 430 Q170 420 120 300 Z" fill="color-mix(in srgb, var(--c-ghiaccio) 55%, #fff)" stroke="var(--c-brand2)" stroke-width="2" />
+            <path d="M200 260 Q215 160 320 155 Q425 160 440 260 Q410 330 320 335 Q230 330 200 260 Z" fill="#fff" stroke="var(--c-brand2)" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="5 5" />
+            <circle cx="320" cy="215" r="13" fill="var(--c-surface)" stroke="var(--c-brand)" stroke-width="2" />
+            <circle cx="400" cy="372" r="34" class="lesione" data-lesione />
+            <circle cx="400" cy="372" r="54" fill="none" stroke="var(--c-deep)" stroke-width="1.5" stroke-dasharray="4 5" class="lesione-anello" data-lesione-anello />
+            <text x="320" y="195" text-anchor="middle" class="pir-et">uretra</text>
+            <text x="320" y="290" text-anchor="middle" class="pir-et">zona di transizione</text>
+            <text x="160" y="395" text-anchor="middle" class="pir-et">zona periferica</text>
+            <text x="455" y="452" text-anchor="middle" class="pir-et pir-et--forte" data-pir-et>PI-RADS 3</text>
+            <text x="320" y="505" text-anchor="middle" class="pir-et">retto</text>
+            <path d="M200 480 Q320 455 440 480" fill="none" stroke="var(--c-line)" stroke-width="10" stroke-linecap="round" />
+          </svg>
+          <figcaption class="mt-2 text-[13px] text-muted">Schema semplificato della prostata in sezione: la maggior parte dei tumori nasce nella zona periferica.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- OPZIONI -->
+    <section id="opzioni" class="px-4 py-16 sm:px-8 sm:py-24" data-opzioni data-opz={JSON.stringify(opz)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand2">Decidere insieme</p><h2 class="mt-2 font-head text-[2.5rem] font-medium leading-[1.05] tracking-[-0.01em] text-deep sm:text-[3.5rem]" data-sale>Le opzioni, una accanto all'altra.</h2></div>
+          <p class="text-[16.5px] leading-relaxed text-ink/80 lg:col-span-5">Per un tumore confinato alla prostata, spesso più strade sono ragionevoli. Mi dica cosa conta di più per Lei: per ogni opzione vede cosa comporta.</p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-2" role="group" aria-label="Cosa conta di più per Lei">
+          {pri.map((p, i) => <button type="button" class="pri rounded-full border border-line px-4 py-2.5 text-[14.5px] font-semibold" data-pri={p.id} aria-pressed={i < 2 ? 'true' : 'false'}>{p.nome}</button>)}
+        </div>
+        <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4" data-opz-griglia>
+          {opz.map((o) => (
+            <article class="opzione flex flex-col rounded-[24px] p-6 ring-1 ring-line" data-opz-card={o.id}>
+              <h3 class="font-head text-[1.55rem] font-medium leading-tight text-deep">{o.nome}</h3>
+              <p class="mt-1 text-[13px] font-semibold text-brand2">{o.per}</p>
+              <p class="mt-3 text-[14.5px] leading-relaxed text-ink/80">{o.testo}</p>
+              <ul class="mt-5 space-y-3 border-t border-line pt-4" data-opz-note>
+                {pri.map((p) => <li class="nota-opz flex items-start gap-3" data-nota={p.id} data-livello={o.note[p.id][0]}><span class="livello mt-0.5 shrink-0 rounded-full px-2 py-0.5 text-[11.5px] font-bold uppercase tracking-wide">{segno[o.note[p.id][0]]}</span><span class="text-[14px] leading-snug text-ink/85"><span class="block font-semibold text-deep">{p.nome}</span>{o.note[p.id][1]}</span></li>)}
+              </ul>
+              <p class="mt-auto pt-4 text-[13.5px] text-muted" data-opz-vuoto hidden>Scelga almeno una priorità.</p>
+            </article>
+          ))}
+        </div>
+        <div class="mt-8 flex flex-col gap-4 rounded-[24px] bg-surface p-6 sm:flex-row sm:items-center sm:justify-between">
+          <p class="max-w-2xl text-[15px] leading-relaxed text-ink/85">Non è una classifica né una raccomandazione: la scelta dipende dal rischio del tumore, dall'età, dalla salute e da cosa conta per Lei. Ne parliamo insieme, con i Suoi esami.</p>
+          <button type="button" class="btn shrink-0 !rounded-full bg-brand text-white hover:bg-deep" data-prenota-motivo="diagnosi">Prenoti un colloquio</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESTAZIONI -->
+    <section id="prestazioni" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <h2 class="font-head text-[2.5rem] font-medium leading-[1.05] tracking-[-0.01em] text-deep sm:text-[3rem]" data-sale>Prestazioni</h2>
+          <p class="mt-3 text-[16px] leading-relaxed text-ink/80">Urologia, andrologia e uro-ginecologia. In studio eseguo visite ed ecografie; biopsie e interventi nelle strutture in cui opero.</p>
+          <div class="mt-6 grid gap-1" role="tablist" aria-label="Gruppi di prestazioni" aria-orientation="vertical">
+            {prest.map((g, i) => <button type="button" role="tab" id={`pr-${g.id}`} aria-controls="pr-pannello" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="pr-tab flex items-center justify-between rounded-2xl px-4 py-3 text-left text-[15.5px] font-semibold" data-pr={g.id}>{g.nome}<span class="text-[13px] font-normal opacity-70">{g.voci.length}</span></button>)}
+          </div>
+        </div>
+        <div id="pr-pannello" role="tabpanel" aria-labelledby={`pr-${prest[0].id}`} class="lg:col-span-8">
+          {prest.map((g, i) => <ul class="grid gap-2 sm:grid-cols-2" data-pr-lista={g.id} hidden={i !== 0}>{g.voci.map((v: string) => <li class="flex items-center gap-3 rounded-2xl bg-white px-4 py-3.5 text-[15px] text-deep ring-1 ring-line"><span class="h-2 w-2 shrink-0 rounded-full bg-brand2"></span>{v}</li>)}</ul>)}
+          <figure class="mt-6 grid grid-cols-2 gap-3"><img src={`/${m.slug}/img/ire.webp`} alt="Il Dr. Marra con l'équipe in sala, accanto al sistema per l'elettroporazione" width="759" height="1011" loading="lazy" class="aspect-[4/3] w-full rounded-[22px] object-cover" /><img src={foto.colloquio} alt="" width="1200" height="900" loading="lazy" class="aspect-[4/3] w-full rounded-[22px] object-cover" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- RICONOSCIMENTI -->
+    <section class="px-4 py-16 sm:px-8 sm:py-24" data-ric>
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div><p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand2">Ricerca e riconoscimenti</p><h2 class="mt-2 font-head text-[2.5rem] font-medium leading-[1.05] tracking-[-0.01em] text-deep sm:text-[3.2rem]" data-sale>Dalla ricerca, cure aggiornate.</h2></div>
+          <div class="flex gap-2"><button type="button" class="grid h-12 w-12 place-items-center rounded-full ring-1 ring-line hover:ring-deep" data-ric-prec aria-label="Precedenti"><Icona nome="sx" /></button><button type="button" class="grid h-12 w-12 place-items-center rounded-full bg-deep text-white hover:bg-brand" data-ric-succ aria-label="Successivi"><Icona nome="dx" /></button></div>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0" data-ric-pista tabindex="0" aria-label="Riconoscimenti">
+          {ric.map((r) => <article class="w-[80%] shrink-0 snap-start sm:w-[46%] lg:w-[31%]"><div class="overflow-hidden rounded-[24px] bg-surface"><img src={r.img} alt="" width="800" height="600" loading="lazy" class="aspect-[4/3] w-full object-cover" /></div>{r.anno && <p class="mt-4 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand2">{r.anno}</p>}<h3 class={`${r.anno ? 'mt-1' : 'mt-4'} font-head text-[1.35rem] font-medium leading-snug text-deep`}>{r.titolo}</h3><p class="mt-1.5 text-[14.5px] leading-relaxed text-ink/80">{r.testo}</p></article>)}
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="bg-deep px-4 py-16 text-deep-ink sm:px-8 sm:py-20">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-5">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-ghiaccio">UroONCO · Chief Editor</p>
+          <h2 class="mt-2 font-head text-[2.3rem] font-medium leading-[1.08] text-white sm:text-[2.8rem]" data-sale>Ogni mese, le novità sul tumore della prostata per gli urologi europei.</h2>
+          <p class="mt-4 text-[16px] leading-relaxed">Nell'intervista con il Prof. Alberto Bossi, dell'Institut Gustave Roussy, parliamo dei risultati del trial PEACE-1, che ha cambiato la terapia del tumore della prostata metastatico.</p>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="relative aspect-video overflow-hidden rounded-[24px] bg-black" data-video data-yt={x.video.id}>
+            <button type="button" class="group absolute inset-0 h-full w-full" data-play aria-label={`Guardi il video: ${x.video.titolo}`}>
+              <img src={`/${m.slug}/img/yt-${x.video.id}.webp`} alt="" width="480" height="270" loading="lazy" class="h-full w-full object-cover" />
+              <span class="absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white text-deep shadow-lg transition-[scale] group-hover:scale-110"><svg viewBox="0 0 24 24" class="ml-1 h-7 w-7" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></span>
+            </button>
+          </div>
+          <p class="mt-3 text-[13.5px]">{x.video.titolo} · {x.video.fonte} · si apre da YouTube</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+        <figure class="lg:col-span-4"><img src={foto.relatore} alt="Il Dr. Marra durante una relazione a un congresso" width="1000" height="1500" loading="lazy" class="aspect-[3/4] w-full rounded-[999px_999px_28px_28px] object-cover object-top" /></figure>
+        <div class="lg:col-span-8">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand2">Chi sono</p>
+          <h2 class="mt-2 font-head text-[2.5rem] font-medium leading-[1.05] tracking-[-0.01em] text-deep sm:text-[3.2rem]" data-sale>Torino, Londra, Parigi. E di nuovo Torino.</h2>
+          <p class="mt-4 max-w-2xl text-[16.5px] leading-relaxed text-ink/80">Sono urologo e ricercatore universitario all'Ospedale Molinette e all'Università di Torino. Ho eseguito oltre 700 interventi da primo e secondo operatore, endoscopici, laparoscopici e robotici. Sono autore di oltre 130 lavori scientifici, revisore delle principali riviste di urologia e relatore a congressi in Europa, Asia e Stati Uniti.</p>
+          <ol class="mt-10 grid gap-x-8 gap-y-6 sm:grid-cols-2" data-form>
+            {form.map((f) => <li class="border-t-2 border-brand pt-4"><p class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand2">{f.luogo}{f.anno && ` · ${f.anno}`}</p><h3 class="mt-1 font-head text-[1.3rem] font-medium leading-snug text-deep">{f.titolo}</h3><p class="mt-1 text-[14.5px] leading-relaxed text-ink/80">{f.testo}</p></li>)}
+          </ol>
+          <p class="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-[14.5px] font-semibold"><a href="https://twitter.com/GMarra_MD" target="_blank" rel="noopener" class="text-brand hover:underline">X · @GMarra_MD</a><a href="https://it.linkedin.com/in/giancarlo-marra-4b6b8949" target="_blank" rel="noopener" class="text-brand hover:underline">LinkedIn</a><a href="https://prostate.uroonco.uroweb.org/editorial-board/" target="_blank" rel="noopener" class="text-brand hover:underline">UroONCO</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO -->
+    <section id="sedi" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <h2 class="font-head text-[2.5rem] font-medium leading-[1.05] tracking-[-0.01em] text-deep sm:text-[3rem]" data-sale>Via Paolini 12, Torino.</h2>
+          <p class="mt-3 text-[16px] text-ink/80">Il mio studio privato, dal lunedì al venerdì.</p>
+          <p class="mt-6 text-[15.5px]"><a href={telHref(P.telefono)} class="font-semibold text-brand hover:underline">{P.telefonoLabel}</a><br /><a href={`mailto:${m.sedi.email}`} class="font-semibold text-brand hover:underline">{m.sedi.email}</a></p>
+          <div class="mt-6 flex flex-wrap gap-2"><a href={mapsHref(sede.indirizzo, sede.citta)} target="_blank" rel="noopener" class="btn !rounded-full bg-brand text-white hover:bg-deep"><Icona nome="pin" /> Indicazioni</a><a href={x.miodottore} target="_blank" rel="noopener" class="btn !rounded-full bg-white text-deep ring-1 ring-line hover:ring-deep">Prenoti su MioDottore</a></div>
+        </div>
+        <div class="lg:col-span-7">
+          <table class="w-full overflow-hidden rounded-[24px] bg-white text-left text-[15.5px] ring-1 ring-line"><caption class="sr-only">Orari dello studio</caption><tbody>{(x.orari as string[][]).map(([g, o]) => <tr class="border-t border-line first:border-t-0"><th class="px-5 py-3.5 font-semibold text-deep">{g}</th><td class={`px-5 py-3.5 text-right ${o === 'Chiuso' ? 'text-muted' : 'text-ink'}`}>{o}</td></tr>)}</tbody></table>
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-condivisa"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.5rem] font-medium leading-tight text-deep sm:text-[3.1rem]" data-sale>Da leggere prima della visita</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group flex flex-col rounded-[24px] bg-white p-3 ring-1 ring-line hover:ring-brand">
+              <span class="block overflow-hidden rounded-[18px]"><img src={b.img} alt="" width="900" height="560" loading="lazy" class="aspect-[4/3] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="mt-4 px-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">{b.categoria} · {b.tempoLettura}</span>
+              <span class="mt-1.5 block px-2 pb-2 font-head text-[1.35rem] font-medium leading-snug text-deep group-hover:text-brand">{b.titolo}</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-medium text-deep" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-white px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-[24px] bg-white ring-1 ring-line sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.volto} alt="" width="32" height="32" class="h-8 w-8 rounded-full object-cover" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="900" height="560" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-3 bottom-3 rounded-2xl bg-white px-5 py-4"><p class="font-head text-[1.55rem] font-medium leading-tight text-deep">{p.titolo}</p><p class="mt-0.5 text-sm font-semibold text-brand2">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="relative flex aspect-square flex-col justify-end overflow-hidden bg-deep p-7 text-white">
+                  <svg viewBox="0 0 600 600" class="absolute -right-24 -top-24 w-96" aria-hidden="true"><circle cx="230" cy="300" r="210" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2" /><circle cx="370" cy="300" r="210" fill="none" stroke="var(--c-ghiaccio)" stroke-opacity=".5" stroke-width="2" /></svg>
+                  <p class="relative font-head text-[2.3rem] font-medium leading-[1.05]">{p.titolo}</p><p class="relative mt-4 w-fit rounded-full bg-ghiaccio px-4 py-2 text-[14px] font-semibold text-deep">{p.risposta}</p>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.9rem] font-medium leading-[1.08]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full border-2 border-white"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand2">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-[2.4rem] font-medium sm:text-5xl">{P.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{P.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(P.telefono)} class="btn !rounded-full bg-white text-deep hover:bg-ghiaccio"><Icona nome="tel" /> {P.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-full border border-white/50 text-white hover:bg-white/10">Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    let lenis: Lenis | null = null;
+    const vaiA = (sel: string) => { const el = document.querySelector<HTMLElement>(sel)!; const y = el.getBoundingClientRect().top + window.scrollY - 100; if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'auto' }); };
+
+    // --- Prenotazione ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const selM = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const aggiorna = () => {
+      const t = `Buongiorno Dottore, vorrei prenotare una visita per ${selM.selectedOptions[0].dataset.frase} presso ${box.dataset.fraseSede}.`;
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(box.dataset.oggetto!)}&body=${encodeURIComponent(t)}`;
+    };
+    selM.addEventListener('change', aggiorna);
+    const scegli = (id: string) => { selM.value = id; aggiorna(); vaiA('#prenota-box'); selM.focus({ preventScroll: true }); };
+    document.querySelectorAll<HTMLElement>('[data-prenota-motivo]').forEach((b) => b.addEventListener('click', () => scegli(b.dataset.prenotaMotivo!)));
+    aggiorna();
+
+    // --- Tab generiche ---
+    const tablist = (tabs: HTMLElement[], attiva: (t: HTMLElement) => void, verticale = false) => {
+      tabs.forEach((t, i) => {
+        t.addEventListener('click', () => attiva(t));
+        t.addEventListener('keydown', (e) => {
+          const k = (e as KeyboardEvent).key; let j = -1;
+          const av = verticale ? ['ArrowDown', 'ArrowRight'] : ['ArrowRight', 'ArrowDown'], ind = verticale ? ['ArrowUp', 'ArrowLeft'] : ['ArrowLeft', 'ArrowUp'];
+          if (av.includes(k)) j = (i + 1) % tabs.length; else if (ind.includes(k)) j = (i - 1 + tabs.length) % tabs.length; else if (k === 'Home') j = 0; else if (k === 'End') j = tabs.length - 1;
+          if (j >= 0) { e.preventDefault(); tabs[j].focus(); attiva(tabs[j]); }
+        });
+      });
+    };
+    const seleziona = (tabs: HTMLElement[], t: HTMLElement) => tabs.forEach((k) => { const s = k === t; k.setAttribute('aria-selected', String(s)); k.tabIndex = s ? 0 : -1; });
+
+    // --- Percorso ---
+    const pc = document.querySelector<HTMLElement>('[data-percorso]')!;
+    const PER = JSON.parse(pc.dataset.per!) as { id: string; titolo: string; testo: string; punti: string[]; motivo: string }[];
+    const pTabs = Array.from(pc.querySelectorAll<HTMLElement>('[data-tappa]'));
+    const lineaP = pc.querySelector<HTMLElement>('[data-per-linea]')!;
+    const check = pc.querySelector('[data-per-punti] svg')!.outerHTML;
+    const mostraTappa = (i: number) => {
+      const p = PER[i]; seleziona(pTabs, pTabs[i]);
+      pTabs.forEach((t, k) => t.classList.toggle('fatta', k <= i));
+      pc.querySelector('[data-per-titolo]')!.textContent = p.titolo; pc.querySelector('[data-per-testo]')!.textContent = p.testo;
+      pc.querySelector('[data-per-punti]')!.innerHTML = p.punti.map((t) => `<li class="flex items-start gap-3 text-[15.5px] text-deep">${check}<span></span></li>`).join('');
+      pc.querySelectorAll('[data-per-punti] li span').forEach((s, k) => { s.textContent = p.punti[k]; });
+      pc.querySelector('#per-pannello')!.setAttribute('aria-labelledby', `tappa-${p.id}`);
+      pc.querySelector<HTMLElement>('[data-per-succ]')!.hidden = i === PER.length - 1;
+      pc.dataset.tappaAttiva = p.id; pc.dataset.motivo = p.motivo;
+      if (ridotto) lineaP.style.transform = `scaleX(${i / (PER.length - 1)})`; else gsap.to(lineaP, { scaleX: i / (PER.length - 1), duration: 0.6, ease: 'power2.out' });
+    };
+    tablist(pTabs, (t) => mostraTappa(pTabs.indexOf(t)));
+    pc.querySelector('[data-per-succ]')!.addEventListener('click', () => { const i = Math.min(PER.length - 1, pTabs.findIndex((t) => t.getAttribute('aria-selected') === 'true') + 1); mostraTappa(i); pTabs[i].focus(); });
+    pc.querySelector('[data-per-prenota]')!.addEventListener('click', () => scegli(pc.dataset.motivo!));
+    mostraTappa(0);
+
+    // --- PI-RADS ---
+    const pr = document.querySelector<HTMLElement>('[data-pirads]')!;
+    const PIR = JSON.parse(pr.dataset.pir!) as { v: number; nome: string; testo: string; dopo: string }[];
+    const les = pr.querySelector<SVGCircleElement>('[data-lesione]')!, anello = pr.querySelector<SVGCircleElement>('[data-lesione-anello]')!;
+    const mostraPir = (v: number) => {
+      const p = PIR[v - 1];
+      pr.querySelector('[data-pir-nome]')!.textContent = p.nome.toLowerCase(); pr.querySelector('[data-pir-testo]')!.textContent = p.testo; pr.querySelector('[data-pir-dopo]')!.textContent = p.dopo;
+      pr.querySelector('[data-pir-et]')!.textContent = `PI-RADS ${v}`;
+      const r = 14 + v * 7, op = 0.1 + (v - 1) * 0.2;
+      if (ridotto) { les.setAttribute('r', String(r)); les.style.fillOpacity = String(op); } else gsap.to(les, { attr: { r }, fillOpacity: op, duration: 0.5, ease: 'power2.out' });
+      anello.style.opacity = v >= 4 ? '1' : '0';
+      pr.dataset.valore = String(v);
+    };
+    pr.querySelectorAll<HTMLInputElement>('input[name="pirads"]').forEach((r) => r.addEventListener('change', () => mostraPir(Number(r.value))));
+    mostraPir(3);
+
+    // --- Opzioni ---
+    const op = document.querySelector<HTMLElement>('[data-opzioni]')!;
+    const aggOpz = () => {
+      const sel = Array.from(op.querySelectorAll<HTMLElement>('[data-pri][aria-pressed="true"]')).map((b) => b.dataset.pri!);
+      op.querySelectorAll<HTMLElement>('[data-nota]').forEach((n) => { n.hidden = !sel.includes(n.dataset.nota!); });
+      op.querySelectorAll<HTMLElement>('[data-opz-vuoto]').forEach((n) => { n.hidden = sel.length > 0; });
+      op.querySelectorAll<HTMLElement>('[data-opz-note]').forEach((n) => { n.hidden = sel.length === 0; });
+      op.dataset.priorita = sel.join(',');
+      if (!ridotto) gsap.fromTo(op.querySelectorAll('[data-nota]:not([hidden])'), { opacity: 0.3, y: 6 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.02 });
+    };
+    op.querySelectorAll<HTMLElement>('[data-pri]').forEach((b) => b.addEventListener('click', () => { b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true')); aggOpz(); }));
+    aggOpz();
+
+    // --- Prestazioni ---
+    const prTabs = Array.from(document.querySelectorAll<HTMLElement>('[data-pr]'));
+    tablist(prTabs, (t) => { seleziona(prTabs, t); document.querySelectorAll<HTMLElement>('[data-pr-lista]').forEach((l) => { l.hidden = l.dataset.prLista !== t.dataset.pr; }); document.querySelector('#pr-pannello')!.setAttribute('aria-labelledby', t.id); }, true);
+
+    // --- Riconoscimenti ---
+    const pista = document.querySelector<HTMLElement>('[data-ric-pista]')!;
+    const passo = () => (pista.firstElementChild as HTMLElement).getBoundingClientRect().width + 20;
+    document.querySelector('[data-ric-succ]')!.addEventListener('click', () => pista.scrollBy({ left: passo(), behavior: ridotto ? 'auto' : 'smooth' }));
+    document.querySelector('[data-ric-prec]')!.addEventListener('click', () => pista.scrollBy({ left: -passo(), behavior: ridotto ? 'auto' : 'smooth' }));
+
+    // --- Video ---
+    const vd = document.querySelector<HTMLElement>('[data-video]')!;
+    vd.querySelector('[data-play]')!.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${vd.dataset.yt}?autoplay=1&rel=0`; f.title = 'Intervista UroONCO'; f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+      f.className = 'absolute inset-0 h-full w-full'; vd.replaceChildren(f);
+    });
+
+    if (!ridotto) {
+      lenis = new Lenis({ anchors: { offset: -100 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis!.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.1em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= parole.length - 2 ? 'text-brand2' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.9, stagger: 0.07 }, 0.1)
+        .from('[data-cerchio="a"]', { attr: { cx: 110 }, opacity: 0, duration: 1.6, ease: 'power2.inOut' }, 0.2)
+        .from('[data-cerchio="b"]', { attr: { cx: 490 }, opacity: 0, duration: 1.6, ease: 'power2.inOut' }, 0.2)
+        .from('[data-foto-hero]', { clipPath: 'inset(100% 0 0 0 round 999px 999px 28px 28px)', duration: 1.2, ease: 'power3.inOut' }, 0.3)
+        .from('[data-entra]', { y: 22, opacity: 0, duration: 0.7, stagger: 0.1 }, 0.5);
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.8, delay: 0.9, ease: 'power2.out', onUpdate: () => { el.textContent = String(Math.round(o.v)); }, onComplete: () => { el.textContent = el.dataset.fmt!; } });
+      });
+      gsap.to('[data-cerchio="a"]', { attr: { cx: 260 }, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.to('[data-cerchio="b"]', { attr: { cx: 340 }, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 30, opacity: 0, duration: 0.8, scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      gsap.from('[data-scrivania]', { scale: 1.08, ease: 'none', scrollTrigger: { trigger: '[data-scrivania]', start: 'top bottom', end: 'bottom top', scrub: true } });
+      gsap.from('[data-form] > li', { y: 24, opacity: 0, duration: 0.6, stagger: 0.08, scrollTrigger: { trigger: '[data-form]', start: 'top 85%', once: true } });
+      gsap.from('[data-ric-pista] > article', { x: 40, opacity: 0, duration: 0.7, stagger: 0.08, scrollTrigger: { trigger: '[data-ric-pista]', start: 'top 85%', once: true } });
+      gsap.from('[data-blog] > a', { y: 40, opacity: 0, duration: 0.7, stagger: 0.1, scrollTrigger: { trigger: '[data-blog]', start: 'top 88%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>

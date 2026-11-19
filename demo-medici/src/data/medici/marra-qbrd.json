@@ -1,0 +1,1082 @@
+{
+  "slug": "marra-qbrd",
+  "layout": "condivisa",
+  "sitoOrigine": "https://www.drmarra.it/",
+  "titolo": "Dr.",
+  "nome": "Giancarlo Marra",
+  "specialita": "Urologo, oncologia urologica e chirurgia robotica",
+  "firma": "Urologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dr. Giancarlo Marra PhD · Urologo a Torino: tumore della prostata, biopsia di fusione, terapia focale, chirurgia robotica",
+    "description": "Urologo e ricercatore universitario all'Ospedale Molinette di Torino. Diagnosi del tumore della prostata con risonanza e biopsia di fusione, sorveglianza attiva, terapia focale (HIFU, elettroporazione), chirurgia robotica. Studio in via Paolini 12."
+  },
+  "brand": {
+    "header": "logo",
+    "logoScuro": "/marra-qbrd/img/logo.png",
+    "logoChiaro": "/marra-qbrd/img/logo-chiaro.png",
+    "marchio": "/marra-qbrd/img/marchio.png",
+    "logoAlt": "Dr. Giancarlo Marra, PhD - Urologo e ricercatore universitario"
+  },
+  "foto": {
+    "ritratto": "/marra-qbrd/img/ritratto.webp",
+    "ritrattoV": "/marra-qbrd/img/ritratto-v.webp",
+    "ritrattoAlt": "Il Dr. Giancarlo Marra nel suo studio",
+    "volto": "/marra-qbrd/img/volto.webp",
+    "scrivania": "/marra-qbrd/img/scrivania.webp",
+    "relatore": "/marra-qbrd/img/relatore.webp",
+    "equipe": "/marra-qbrd/img/equipe.webp",
+    "colloquio": "/marra-qbrd/img/rep-colloquio.webp",
+    "microscopio": "/marra-qbrd/img/rep-microscopio.webp",
+    "laboratorio": "/marra-qbrd/img/rep-laboratorio.webp",
+    "coppia": "/marra-qbrd/img/rep-coppia.webp",
+    "microfono": "/marra-qbrd/img/microfono.webp"
+  },
+  "hero": {
+    "eyebrow": "Urologo · PhD · Ricercatore universitario, Ospedale Molinette",
+    "titolo": "La scelta giusta si prende insieme.",
+    "testo": "Mi occupo di urologia e di oncologia urologica, in particolare del tumore della prostata: diagnosi con risonanza e biopsia mirata, sorveglianza attiva, terapia focale e chirurgia robotica. Ogni decisione la prendiamo insieme, con i dati sul tavolo.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami"
+  },
+  "numeri": [
+    {
+      "valore": 700,
+      "fmt": "700",
+      "pre": "oltre",
+      "testo": "interventi da primo e secondo operatore"
+    },
+    {
+      "valore": 130,
+      "fmt": "130",
+      "pre": "oltre",
+      "testo": "lavori scientifici internazionali"
+    },
+    {
+      "valore": 150,
+      "fmt": "150",
+      "pre": "oltre",
+      "testo": "abstract a congressi"
+    }
+  ],
+  "motivi": [
+    {
+      "id": "psa",
+      "nome": "PSA alto",
+      "frase": "un PSA alto"
+    },
+    {
+      "id": "diagnosi",
+      "nome": "Tumore della prostata appena diagnosticato",
+      "frase": "un tumore della prostata appena diagnosticato"
+    },
+    {
+      "id": "parere",
+      "nome": "Secondo parere oncologico",
+      "frase": "un secondo parere su un tumore della prostata"
+    },
+    {
+      "id": "sorveglianza",
+      "nome": "Controllo in sorveglianza attiva",
+      "frase": "un controllo in sorveglianza attiva"
+    },
+    {
+      "id": "prostata",
+      "nome": "Disturbi urinari, prostata ingrossata",
+      "frase": "disturbi urinari o prostata ingrossata"
+    },
+    {
+      "id": "calcoli",
+      "nome": "Calcoli renali",
+      "frase": "calcoli renali"
+    },
+    {
+      "id": "andrologia",
+      "nome": "Visita andrologica",
+      "frase": "un problema andrologico"
+    },
+    {
+      "id": "uroginecologia",
+      "nome": "Visita uro-ginecologica",
+      "frase": "un problema uro-ginecologico"
+    },
+    {
+      "id": "controllo",
+      "nome": "Controllo urologico",
+      "frase": "un controllo urologico"
+    }
+  ],
+  "percorso": [
+    {
+      "id": "psa",
+      "titolo": "PSA e visita",
+      "breve": "Il punto di partenza",
+      "testo": "Un PSA alto ha quasi sempre cause benigne. Lo interpreto insieme all'età, al volume della prostata e all'andamento nel tempo, con la visita e, se utile, un'ecografia.",
+      "punti": [
+        "Storia familiare e disturbi",
+        "Esplorazione rettale",
+        "Densità del PSA"
+      ],
+      "motivo": "psa"
+    },
+    {
+      "id": "rm",
+      "titolo": "Risonanza multiparametrica",
+      "breve": "Vedere prima di pungere",
+      "testo": "Se il sospetto rimane, la risonanza magnetica multiparametrica mostra le aree sospette e le classifica da 1 a 5 (PI-RADS). Se è rassicurante, spesso la biopsia si può evitare.",
+      "punti": [
+        "Punteggio PI-RADS 1-5",
+        "Evita biopsie inutili",
+        "Guida i prelievi"
+      ],
+      "motivo": "psa"
+    },
+    {
+      "id": "biopsia",
+      "titolo": "Biopsia mirata",
+      "breve": "Solo dove serve",
+      "testo": "Con la biopsia di fusione le immagini della risonanza si sovrappongono all'ecografia in tempo reale; in casi selezionati la biopsia è guidata dalla PET-PSMA.",
+      "punti": [
+        "Fusione risonanza-ecografia",
+        "Guidata da PET-PSMA",
+        "Anestesia locale, in giornata"
+      ],
+      "motivo": "psa"
+    },
+    {
+      "id": "rischio",
+      "titolo": "Aggressività e stadio",
+      "breve": "Quanto conta questo tumore",
+      "testo": "Il punteggio di Gleason e il gruppo ISUP descrivono l'aggressività; gli esami di stadiazione, se servono, dicono se la malattia è confinata alla prostata.",
+      "punti": [
+        "Gleason e gruppo ISUP",
+        "Rischio basso, intermedio, alto",
+        "PET-PSMA per la stadiazione"
+      ],
+      "motivo": "diagnosi"
+    },
+    {
+      "id": "decisione",
+      "titolo": "La decisione, insieme",
+      "breve": "Le opzioni sul tavolo",
+      "testo": "Sorveglianza attiva, terapia focale, chirurgia robotica, radioterapia: spesso più strade sono ragionevoli. Le confrontiamo con i dati e scegliamo quella più adatta a Lei.",
+      "punti": [
+        "Vantaggi e conseguenze di ognuna",
+        "Le Sue priorità",
+        "Tempo per decidere"
+      ],
+      "motivo": "diagnosi"
+    }
+  ],
+  "pirads": [
+    {
+      "v": 1,
+      "nome": "Molto basso",
+      "testo": "Un tumore clinicamente significativo è molto improbabile.",
+      "dopo": "Di solito non serve la biopsia: si prosegue con il controllo del PSA nel tempo."
+    },
+    {
+      "v": 2,
+      "nome": "Basso",
+      "testo": "Un tumore clinicamente significativo è improbabile.",
+      "dopo": "Di solito non serve la biopsia; si valutano densità del PSA e altri fattori per programmare i controlli."
+    },
+    {
+      "v": 3,
+      "nome": "Intermedio",
+      "testo": "Il risultato è incerto: l'area non è né chiaramente benigna né chiaramente sospetta.",
+      "dopo": "La decisione è individuale: pesano densità del PSA, età, storia familiare ed esami precedenti."
+    },
+    {
+      "v": 4,
+      "nome": "Alto",
+      "testo": "Un tumore clinicamente significativo è probabile.",
+      "dopo": "In genere si consiglia una biopsia mirata sull'area sospetta."
+    },
+    {
+      "v": 5,
+      "nome": "Molto alto",
+      "testo": "Un tumore clinicamente significativo è molto probabile.",
+      "dopo": "In genere si consiglia una biopsia mirata e, a seconda del caso, esami di stadiazione."
+    }
+  ],
+  "priorita": [
+    {
+      "id": "evitare",
+      "nome": "Evitare o rimandare un intervento"
+    },
+    {
+      "id": "funzioni",
+      "nome": "Proteggere continenza ed erezione"
+    },
+    {
+      "id": "definitivo",
+      "nome": "Un trattamento unico, su tutta la prostata"
+    },
+    {
+      "id": "controlli",
+      "nome": "Meno controlli negli anni"
+    }
+  ],
+  "opzioni": [
+    {
+      "id": "sorveglianza",
+      "nome": "Sorveglianza attiva",
+      "per": "Tumori a basso rischio",
+      "testo": "Non si cura subito: si controlla il tumore con PSA, risonanza e biopsie, e si interviene solo se cambia.",
+      "note": {
+        "evitare": [
+          "si",
+          "Nessun trattamento finché la malattia resta stabile."
+        ],
+        "funzioni": [
+          "si",
+          "Finché non si tratta, nessun effetto su continenza ed erezione."
+        ],
+        "definitivo": [
+          "no",
+          "Non è un trattamento: si interviene solo se la malattia cambia."
+        ],
+        "controlli": [
+          "no",
+          "Richiede PSA, risonanze e biopsie a intervalli regolari."
+        ]
+      }
+    },
+    {
+      "id": "focale",
+      "nome": "Terapia focale",
+      "per": "Casi selezionati, malattia limitata a un'area",
+      "testo": "Si tratta solo l'area malata, con HIFU o elettroporazione irreversibile, risparmiando il resto della prostata.",
+      "note": {
+        "evitare": [
+          "parte",
+          "È mininvasiva e non asporta la prostata."
+        ],
+        "funzioni": [
+          "si",
+          "Risparmiando la ghiandola sana, in genere gli effetti su continenza ed erezione sono minori."
+        ],
+        "definitivo": [
+          "parte",
+          "Tratta solo l'area malata: il resto della prostata va controllato nel tempo."
+        ],
+        "controlli": [
+          "no",
+          "Servono PSA e risonanza nel tempo, a volte nuove biopsie."
+        ]
+      }
+    },
+    {
+      "id": "robotica",
+      "nome": "Prostatectomia robotica",
+      "per": "Rischio intermedio e alto, pazienti in buona salute",
+      "testo": "Si asporta tutta la prostata con tecnica mininvasiva robotica, cercando di risparmiare nervi e strutture della continenza.",
+      "note": {
+        "evitare": [
+          "no",
+          "È un intervento chirurgico, con qualche giorno di ricovero."
+        ],
+        "funzioni": [
+          "parte",
+          "Continenza ed erezione richiedono un periodo di recupero, variabile da persona a persona."
+        ],
+        "definitivo": [
+          "si",
+          "Asporta tutta la prostata; l'esame istologico completa la stadiazione."
+        ],
+        "controlli": [
+          "si",
+          "Dopo, il controllo si basa soprattutto sul PSA."
+        ]
+      }
+    },
+    {
+      "id": "radioterapia",
+      "nome": "Radioterapia",
+      "per": "Alternativa all'intervento, con il radioterapista",
+      "testo": "Si tratta tutta la prostata con le radiazioni, in sedute ambulatoriali, a volte insieme a una terapia ormonale.",
+      "note": {
+        "evitare": [
+          "si",
+          "Nessun intervento chirurgico."
+        ],
+        "funzioni": [
+          "parte",
+          "Possibili effetti su erezione, vescica e intestino, anche a distanza di tempo."
+        ],
+        "definitivo": [
+          "si",
+          "Tratta tutta la ghiandola."
+        ],
+        "controlli": [
+          "si",
+          "Dopo, il controllo si basa soprattutto sul PSA."
+        ]
+      }
+    }
+  ],
+  "prestazioni": [
+    {
+      "id": "visite",
+      "nome": "Visite",
+      "voci": [
+        "Prima visita urologica e di controllo",
+        "Prima visita andrologica e di controllo",
+        "Prima visita uro-ginecologica e di controllo"
+      ]
+    },
+    {
+      "id": "ecografie",
+      "nome": "Ecografie",
+      "voci": [
+        "Ecografia addome inferiore",
+        "Residuo post-minzionale",
+        "Ecografia trans-rettale",
+        "Ecografia reno-vescicale",
+        "Ecografia addome completo",
+        "Ecografia trans-vaginale",
+        "Ecografia testicolare",
+        "Ecodoppler funicolare"
+      ]
+    },
+    {
+      "id": "prostata",
+      "nome": "Tumore della prostata",
+      "voci": [
+        "Biopsia prostatica di fusione risonanza-ecografia",
+        "Biopsia prostatica guidata da PET-PSMA",
+        "Sorveglianza attiva",
+        "Terapia focale: HIFU ed elettroporazione irreversibile",
+        "Prostatectomia radicale robotica"
+      ]
+    },
+    {
+      "id": "procedure",
+      "nome": "Altre procedure",
+      "voci": [
+        "Cistoscopia",
+        "Biopsia peniena"
+      ]
+    }
+  ],
+  "riconoscimenti": [
+    {
+      "anno": "2022",
+      "titolo": "Premio per il miglior lavoro sulla chirurgia robotica",
+      "testo": "Lavoro scientifico pubblicato su European Urology, la rivista più importante in urologia.",
+      "img": "/marra-qbrd/img/premio-robotica.webp"
+    },
+    {
+      "anno": "2023",
+      "titolo": "In rappresentanza dell'EAU negli Stati Uniti",
+      "testo": "Selezionato con altri due urologi europei per visitare Vanderbilt University, Duke University e Medstar Georgetown University.",
+      "img": "/marra-qbrd/img/relatore.webp"
+    },
+    {
+      "anno": "2023",
+      "titolo": "Congresso Nazionale SIU, Roma",
+      "testo": "Relatore in sessione plenaria sulle novità della biopsia prostatica.",
+      "img": "/marra-qbrd/img/siu-roma.webp"
+    },
+    {
+      "anno": "2023",
+      "titolo": "Société Internationale d'Urologie, Istanbul",
+      "testo": "Invitato a presentare prevenzione e gestione delle complicanze della terapia focale.",
+      "img": "/marra-qbrd/img/istanbul.webp"
+    },
+    {
+      "anno": "",
+      "titolo": "Primo caso in Italia di elettroporazione di salvataggio",
+      "testo": "Elettroporazione irreversibile per la terapia focale del tumore prostatico, all'Ospedale Molinette di Torino.",
+      "img": "/marra-qbrd/img/ire.webp"
+    },
+    {
+      "anno": "",
+      "titolo": "Chief Editor di UroONCO",
+      "testo": "La piattaforma educativa della Società Europea di Urologia che aggiorna ogni mese gli urologi sul tumore della prostata.",
+      "img": "/marra-qbrd/img/uroonco.webp"
+    },
+    {
+      "anno": "",
+      "titolo": "Premio per la chirurgia mininvasiva",
+      "testo": "Miglior lavoro scientifico sulla chirurgia mini-invasiva.",
+      "img": "/marra-qbrd/img/premio-mininvasiva.webp"
+    },
+    {
+      "anno": "",
+      "titolo": "Società bulgara di Urologia",
+      "testo": "Al congresso nazionale come rappresentante della Società Europea di Urologia, per un corso sul tumore della prostata.",
+      "img": "/marra-qbrd/img/bulgaria.webp"
+    }
+  ],
+  "formazione": [
+    {
+      "anno": "2014",
+      "luogo": "Torino",
+      "titolo": "Laurea in Medicina e Chirurgia",
+      "testo": "110/110 e lode, menzione d'onore e dignità di stampa."
+    },
+    {
+      "anno": "",
+      "luogo": "Londra",
+      "titolo": "King's College Hospital e Guy's Hospital",
+      "testo": "Un anno di formazione."
+    },
+    {
+      "anno": "",
+      "luogo": "Parigi",
+      "titolo": "Institut Mutualiste Montsouris e Hôpital Tenon",
+      "testo": "Oltre due anni: chirurgia mininvasiva e robotica della prostata, calcolosi renale."
+    },
+    {
+      "anno": "2020",
+      "luogo": "Torino",
+      "titolo": "Specializzazione in Urologia",
+      "testo": "70/70, con una tesi sulla terapia focale del tumore della prostata."
+    },
+    {
+      "anno": "",
+      "luogo": "Torino",
+      "titolo": "Dottorato di ricerca (PhD)",
+      "testo": "Bioingegneria e Scienze Medico Chirurgiche, Politecnico e Università di Torino, con il massimo dei voti."
+    },
+    {
+      "anno": "Oggi",
+      "luogo": "Torino",
+      "titolo": "Ricercatore universitario",
+      "testo": "Urologo all'Ospedale Molinette e all'Università degli Studi di Torino."
+    }
+  ],
+  "miodottore": "https://www.miodottore.it/giancarlo-marra/urologo-andrologo-chirurgo/torino",
+  "orari": [
+    [
+      "Lunedì",
+      "15:00 - 19:00"
+    ],
+    [
+      "Martedì",
+      "15:00 - 19:00"
+    ],
+    [
+      "Mercoledì",
+      "15:00 - 19:00"
+    ],
+    [
+      "Giovedì",
+      "15:00 - 19:00"
+    ],
+    [
+      "Venerdì",
+      "15:00 - 19:00"
+    ],
+    [
+      "Sabato e domenica",
+      "Chiuso"
+    ]
+  ],
+  "video": {
+    "id": "5Xf_lwBJtkY",
+    "titolo": "Intervista UroONCO con il Prof. Alberto Bossi sul trial PEACE-1",
+    "fonte": "UroONCO · Società Europea di Urologia"
+  },
+  "aree": {
+    "titolo": "",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "tumore-prostata",
+    "categoria": "Prostata",
+    "titolo": "Tumore della prostata: diagnosi e opzioni di cura",
+    "img": "/marra-qbrd/img/rep-colloquio.webp",
+    "tempoLettura": "10 min",
+    "intro": "Il tumore della prostata è il tumore più frequente nell'uomo, ma non è una sola malattia: ci sono forme che non daranno mai problemi e forme che vanno curate presto. Oggi la diagnosi è molto più precisa e le opzioni di cura sono diverse. Le spiego come si arriva a una decisione, e perché la prendiamo insieme.",
+    "sezioni": [
+      {
+        "titolo": "Una malattia, molte forme",
+        "paragrafi": [
+          "La prostata è una ghiandola grande come una castagna, sotto la vescica. Con l'età può ingrossarsi in modo benigno, ma può anche sviluppare un tumore. Nella maggior parte dei casi il tumore della prostata cresce lentamente; in una parte dei pazienti invece è più aggressivo.",
+          "Distinguere queste forme è il punto più importante di tutto il percorso: da qui dipende se e come curare. Per questo parlo spesso di tumori «clinicamente significativi», cioè quelli che, se non curati, potrebbero dare problemi nel corso della vita."
+        ]
+      },
+      {
+        "titolo": "I sintomi, quando ci sono",
+        "paragrafi": [
+          "Nelle fasi iniziali il tumore della prostata di solito non dà sintomi. I disturbi urinari più comuni, come doversi alzare di notte o un getto debole, sono dovuti quasi sempre all'ingrossamento benigno della prostata.",
+          "Per questo la diagnosi precoce passa da un controllo, non dall'attesa dei sintomi: il PSA e la visita urologica, a partire dall'età indicata dal medico o prima se in famiglia ci sono stati casi."
+        ]
+      },
+      {
+        "titolo": "Il PSA",
+        "paragrafi": [
+          "Il PSA è una proteina prodotta dalla prostata e si misura con un prelievo di sangue. Un valore alto non significa tumore: il PSA può salire per un'infiammazione, un'infezione, l'ingrossamento benigno, perfino dopo un giro in bicicletta.",
+          "Il PSA va quindi interpretato: conta il valore, ma anche l'età, il volume della prostata, come cambia nel tempo. Rapportato al volume della ghiandola, si ottiene la densità del PSA, un dato utile per decidere i passi successivi."
+        ]
+      },
+      {
+        "titolo": "La risonanza magnetica multiparametrica",
+        "paragrafi": [
+          "Se il sospetto rimane, l'esame successivo è oggi la risonanza magnetica multiparametrica della prostata. Mostra le aree sospette e le classifica con un punteggio da 1 a 5, chiamato PI-RADS, che indica la probabilità di un tumore significativo.",
+          "La risonanza ha cambiato il percorso: permette di evitare biopsie inutili quando l'esame è rassicurante e di mirare la biopsia quando c'è un'area sospetta."
+        ]
+      },
+      {
+        "titolo": "La biopsia mirata",
+        "paragrafi": [
+          "La diagnosi si conferma solo con la biopsia. Eseguo biopsie di fusione, in cui le immagini della risonanza vengono fuse con l'ecografia in tempo reale per prelevare esattamente dall'area sospetta, e biopsie guidate dalla PET-PSMA in casi selezionati.",
+          "Il risultato descrive l'aggressività del tumore con il punteggio di Gleason, oggi espresso anche come gruppo ISUP da 1 a 5."
+        ]
+      },
+      {
+        "titolo": "Le opzioni di cura",
+        "paragrafi": [
+          "Per un tumore localizzato, cioè confinato alla prostata, le principali opzioni sono:"
+        ],
+        "elenco": [
+          "sorveglianza attiva: per i tumori a basso rischio, si controlla nel tempo con PSA, risonanza e biopsie, e si cura solo se cambia qualcosa",
+          "terapia focale: si tratta solo l'area malata, con HIFU o elettroporazione irreversibile, risparmiando il resto della prostata",
+          "prostatectomia radicale robotica: si asporta tutta la prostata con tecnica mininvasiva",
+          "radioterapia: un'alternativa all'intervento, che si valuta insieme al radioterapista"
+        ],
+        "chiusura": "Nelle forme più avanzate si aggiungono terapie ormonali e farmacologiche, decise con l'oncologo."
+      },
+      {
+        "titolo": "Decidere insieme",
+        "paragrafi": [
+          "Spesso più opzioni sono ragionevoli per lo stesso paziente. Ognuna ha vantaggi e conseguenze diverse su continenza, erezione, controlli e tempi di recupero. Per questo credo nella decisione condivisa: Le espongo le possibilità con i dati, Lei mi dice cosa conta di più per Lei, e scegliamo insieme la strada che concilia le Sue esigenze con il miglior risultato possibile."
+        ]
+      },
+      {
+        "titolo": "La mia esperienza",
+        "paragrafi": [
+          "Mi sono formato in centri di riferimento internazionali: un anno a Londra al King's College Hospital e al Guy's Hospital, oltre due anni a Parigi all'Institut Mutualiste Montsouris, tra i primi centri al mondo per la chirurgia robotica della prostata. Ho dedicato la tesi di specializzazione alla terapia focale e ho eseguito il primo caso in Italia di elettroporazione irreversibile di salvataggio, alle Molinette di Torino."
+        ]
+      },
+      {
+        "titolo": "Il secondo parere",
+        "paragrafi": [
+          "Davanti a una diagnosi di tumore è normale volere un secondo parere, ed è un diritto del paziente. Mi capita spesso di rivedere esami e biopsie fatti altrove: porti i referti, le immagini della risonanza su supporto digitale e, se possibile, i vetrini della biopsia. A volte il secondo parere conferma la strada proposta, altre volte apre opzioni diverse. In entrambi i casi aiuta a decidere con più serenità."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso:"
+        ],
+        "elenco": [
+          "Il PSA alto vuol dire tumore? No: le cause più frequenti sono benigne. Va interpretato e, se serve, approfondito.",
+          "La biopsia è dolorosa? Si esegue in anestesia locale; il fastidio è in genere modesto.",
+          "Tutti i tumori vanno operati? No: molti tumori a basso rischio si possono seguire con la sorveglianza attiva.",
+          "Dopo la diagnosi quanto tempo ho per decidere? Di solito c'è il tempo per informarsi e, se lo desidera, per un secondo parere."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita urologica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "psa-alto",
+      "categoria": "Prostata",
+      "titolo": "PSA alto: e adesso?",
+      "img": "/marra-qbrd/img/rep-laboratorio.webp",
+      "tempoLettura": "7 min",
+      "intro": "Il referto arriva, il PSA è sopra la norma e la prima parola che viene in mente è «tumore». Nella maggior parte dei casi non è così. Le spiego cosa significa davvero un PSA alto e quali sono i passi sensati da fare.",
+      "sezioni": [
+        {
+          "titolo": "Che cos'è il PSA",
+          "paragrafi": [
+            "Il PSA, antigene prostatico specifico, è una proteina prodotta dalle cellule della prostata. Una piccola quantità passa normalmente nel sangue. È specifico della prostata, ma non del tumore: sale per molte ragioni diverse.",
+            "Proprio per questo il PSA non fa diagnosi da solo. È un campanello, utile se interpretato bene."
+          ]
+        },
+        {
+          "titolo": "Le cause più frequenti",
+          "paragrafi": [
+            "Un PSA alto può dipendere da:"
+          ],
+          "elenco": [
+            "ingrossamento benigno della prostata, molto comune dopo i 50 anni",
+            "prostatite, cioè un'infiammazione o un'infezione della prostata",
+            "infezioni delle vie urinarie",
+            "manovre recenti, come un catetere, una cistoscopia o una biopsia",
+            "attività che comprimono la prostata nei giorni prima del prelievo, come un lungo giro in bicicletta o un rapporto sessuale"
+          ],
+          "chiusura": "Solo una parte dei PSA alti è legata a un tumore."
+        },
+        {
+          "titolo": "Il primo passo: ripetere e interpretare",
+          "paragrafi": [
+            "Spesso il primo passo è ripetere il PSA dopo qualche settimana, nelle condizioni giuste, a volte insieme al PSA libero. Se c'era un'infiammazione, si tratta e si ricontrolla.",
+            "Il valore va letto insieme all'età, al volume della prostata misurato con l'ecografia e all'andamento nel tempo. Un PSA che sale rapidamente pesa più di un valore alto ma stabile da anni."
+          ]
+        },
+        {
+          "titolo": "La visita urologica",
+          "paragrafi": [
+            "La visita comprende il colloquio sulla storia familiare e sui disturbi, l'esplorazione rettale e, se utile, un'ecografia. Sono pochi minuti, che danno informazioni importanti per decidere se serve altro."
+          ]
+        },
+        {
+          "titolo": "Quando serve la risonanza",
+          "paragrafi": [
+            "Se il sospetto rimane, l'esame successivo è la risonanza magnetica multiparametrica della prostata. Se è rassicurante, in molti casi si può evitare la biopsia e proseguire con controlli. Se mostra un'area sospetta, si programma una biopsia mirata su quell'area."
+          ]
+        },
+        {
+          "titolo": "Cosa non fare",
+          "paragrafi": [
+            "Ci sono alcuni errori comuni che vedo spesso:"
+          ],
+          "elenco": [
+            "ignorare un PSA alto sperando che si abbassi da solo",
+            "allarmarsi e fare subito una biopsia senza risonanza",
+            "prendere antibiotici «per sicurezza» senza una visita",
+            "confrontare valori fatti in laboratori diversi senza tenerne conto"
+          ]
+        },
+        {
+          "titolo": "Quando controllare il PSA",
+          "paragrafi": [
+            "Il PSA va discusso con il medico a partire dai 50 anni, o dai 45 se in famiglia ci sono stati casi di tumore della prostata o se si è portatori di alcune mutazioni genetiche, come BRCA2. Non è un esame da fare a caso, ma nemmeno da evitare: va inserito in un percorso con un urologo."
+          ]
+        },
+        {
+          "titolo": "Portare tutto alla visita",
+          "paragrafi": [
+            "Alla visita porti tutti i PSA che ha fatto negli anni, anche vecchi, con le date: l'andamento nel tempo è spesso più importante del singolo valore. Porti anche eventuali ecografie, esami delle urine e la lista dei farmaci: alcuni, come quelli per l'ingrossamento della prostata, abbassano il PSA e vanno tenuti in considerazione."
+          ]
+        },
+        {
+          "titolo": "Cosa succede se aspetto",
+          "paragrafi": [
+            "Un PSA alto non è un'urgenza, ma non va dimenticato. Ripetere l'esame e fare una visita nelle settimane successive è il modo più sereno di affrontarlo. Lasciar passare anni senza controlli, invece, rischia di far scoprire tardi un eventuale tumore, quando le opzioni di cura sono meno."
+          ]
+        },
+        {
+          "titolo": "PSA libero e altri marcatori",
+          "paragrafi": [
+            "Oltre al PSA totale si può misurare il PSA libero: il rapporto tra i due aiuta a distinguere un ingrossamento benigno da un sospetto di tumore. In casi selezionati esistono altri test del sangue e delle urine che stimano meglio il rischio. Nessuno di questi esami fa diagnosi da solo: servono a decidere se proseguire con la risonanza o se è sufficiente controllare nel tempo."
+          ]
+        },
+        {
+          "titolo": "Il ruolo della familiarità",
+          "paragrafi": [
+            "Avere avuto un padre o un fratello con un tumore della prostata, soprattutto se diagnosticato prima dei 65 anni, aumenta il rischio. Lo stesso vale per alcune mutazioni genetiche ereditarie, come BRCA2, note anche per il loro legame con il tumore della mammella e dell'ovaio nelle donne della famiglia. In questi casi conviene iniziare i controlli prima e seguirli con più regolarità."
+          ]
+        },
+        {
+          "titolo": "Un esempio pratico",
+          "paragrafi": [
+            "Un uomo di 58 anni, senza disturbi, trova un PSA di 5,2 a un controllo. Ripete l'esame dopo un mese, evitando la bicicletta nei giorni precedenti, e il valore è 4,8. Alla visita la prostata è un po' ingrossata e l'ecografia ne misura il volume: la densità del PSA è bassa. Si decide di fare comunque una risonanza, che risulta rassicurante. A quel punto non serve la biopsia: si programma un controllo del PSA a distanza. È solo un esempio, ma mostra come ogni passo aiuti a evitare esami inutili."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Qual è il valore normale? Non esiste un unico limite valido per tutti: dipende da età e volume della prostata.",
+            "Devo smettere di andare in bicicletta? No, basta evitarla nei due-tre giorni prima del prelievo.",
+            "Un PSA basso esclude il tumore? Lo rende meno probabile, ma non lo esclude del tutto: conta la visita.",
+            "Ogni quanto ripeterlo? Dipende dal valore e dal rischio: lo decidiamo insieme."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita urologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "prostatectomia-robotica",
+      "categoria": "Chirurgia",
+      "titolo": "Prostatectomia robotica: il recupero",
+      "img": "/marra-qbrd/img/equipe.webp",
+      "tempoLettura": "8 min",
+      "intro": "Quando si decide per l'intervento, le domande più frequenti riguardano il dopo: quanto resterò in ospedale, quando toglierò il catetere, come andranno continenza ed erezione. Le spiego come si svolge il recupero dopo una prostatectomia robotica.",
+      "sezioni": [
+        {
+          "titolo": "L'intervento",
+          "paragrafi": [
+            "La prostatectomia radicale consiste nell'asportazione di tutta la prostata e delle vescicole seminali, a volte insieme ai linfonodi vicini. Con la tecnica robotica il chirurgo opera attraverso piccole incisioni, con una visione tridimensionale ingrandita e strumenti molto precisi.",
+            "Quando l'estensione del tumore lo permette, si cerca di risparmiare i fasci nervosi che controllano l'erezione e le strutture della continenza."
+          ]
+        },
+        {
+          "titolo": "I giorni in ospedale",
+          "paragrafi": [
+            "In genere ci si alza già il giorno dopo l'intervento e si riprende presto ad alimentarsi. La degenza dura di solito pochi giorni. Si torna a casa con un catetere vescicale, che serve a proteggere la nuova giunzione tra vescica e uretra mentre guarisce."
+          ]
+        },
+        {
+          "titolo": "Il catetere",
+          "paragrafi": [
+            "Il catetere resta in genere per alcuni giorni, a volte un paio di settimane, secondo le indicazioni. Si rimuove in ambulatorio. In questo periodo è importante bere a sufficienza, mantenere l'igiene e camminare ogni giorno."
+          ]
+        },
+        {
+          "titolo": "La continenza",
+          "paragrafi": [
+            "Dopo la rimozione del catetere è normale perdere qualche goccia di urina, soprattutto sotto sforzo. La continenza migliora progressivamente nelle settimane e nei mesi successivi. Gli esercizi per il pavimento pelvico, meglio se iniziati già prima dell'intervento e guidati da un fisioterapista, aiutano molto.",
+            "I tempi variano da persona a persona: età, peso, condizioni della vescica e tipo di intervento contano."
+          ]
+        },
+        {
+          "titolo": "L'erezione",
+          "paragrafi": [
+            "Il recupero dell'erezione è più lento, e dipende soprattutto dalla funzione prima dell'intervento, dall'età e dalla possibilità di risparmiare i nervi. Può richiedere molti mesi. Esistono terapie che aiutano la riabilitazione e che impostiamo insieme già nelle prime settimane.",
+            "Ne parlo apertamente con ogni paziente prima di decidere: è un aspetto importante della scelta."
+          ]
+        },
+        {
+          "titolo": "I controlli",
+          "paragrafi": [
+            "Dopo l'intervento il PSA dovrebbe diventare quasi non misurabile. Lo controlliamo a intervalli regolari: è il modo più semplice per verificare che la malattia sia stata rimossa. Il referto dell'esame istologico ci dice inoltre se servono altre cure."
+          ]
+        },
+        {
+          "titolo": "Tornare alla vita di tutti i giorni",
+          "paragrafi": [
+            "Indicativamente, per la maggior parte dei pazienti:"
+          ],
+          "elenco": [
+            "si cammina dal primo giorno, e camminare fa bene",
+            "si evitano sforzi e pesi per alcune settimane",
+            "si torna alla guida quando non ci sono dolori e il catetere è stato tolto",
+            "si riprendono lavoro e sport leggero in modo graduale, secondo le indicazioni"
+          ]
+        },
+        {
+          "titolo": "Prepararsi bene",
+          "paragrafi": [
+            "Arrivare all'intervento preparati migliora il recupero. Nelle settimane prima consiglio di camminare ogni giorno, smettere di fumare, controllare il peso e iniziare gli esercizi per il pavimento pelvico. È utile anche parlare in famiglia di come organizzare le prime settimane a casa, e preparare le domande da fare in visita, comprese quelle sulla sessualità, che a volte si ha pudore a porre."
+          ]
+        },
+        {
+          "titolo": "La mia esperienza",
+          "paragrafi": [
+            "Ho eseguito oltre 700 interventi da primo e secondo operatore, tra endoscopia, laparoscopia e chirurgia robotica, e mi sono formato a Parigi all'Institut Mutualiste Montsouris, tra i primi centri al mondo per la chirurgia robotica della prostata. Nel 2022 un nostro lavoro sulla chirurgia robotica, pubblicato su European Urology, è stato premiato come miglior lavoro scientifico."
+          ]
+        },
+        {
+          "titolo": "Il colloquio prima dell'intervento",
+          "paragrafi": [
+            "Prima di decidere per l'intervento ci vediamo per un colloquio dedicato: rivediamo insieme la risonanza, la biopsia e gli eventuali esami di stadiazione, parliamo delle alternative e di cosa aspettarsi dopo. È il momento per chiarire ogni dubbio, anche con il partner. Una scelta consapevole è anche una scelta vissuta meglio nei mesi successivi."
+          ]
+        },
+        {
+          "titolo": "La riabilitazione del pavimento pelvico",
+          "paragrafi": [
+            "I muscoli del pavimento pelvico sostengono la vescica e aiutano a trattenere l'urina. Imparare a contrarli correttamente prima dell'intervento rende più veloce il recupero dopo la rimozione del catetere. Un fisioterapista esperto insegna gli esercizi giusti e come inserirli nella giornata: pochi minuti, più volte al giorno, con costanza. Nelle prime settimane si possono usare piccoli assorbenti, che si riducono man mano che la continenza migliora."
+          ]
+        },
+        {
+          "titolo": "Il ruolo della famiglia",
+          "paragrafi": [
+            "Il periodo dopo l'intervento coinvolge anche chi sta accanto al paziente. Partner e familiari possono partecipare alla visita, fare domande e capire cosa aspettarsi. Parlare apertamente di continenza e sessualità, senza imbarazzo, aiuta a vivere meglio le settimane di recupero e a riconoscere i progressi, che a volte sono lenti ma costanti."
+          ]
+        },
+        {
+          "titolo": "Quando chiamare",
+          "paragrafi": [
+            "Dopo la dimissione è bene contattare il medico in caso di febbre, dolore che aumenta, gonfiore importante delle gambe, difficoltà a urinare dopo la rimozione del catetere o perdite dalla ferita. Nella maggior parte dei casi il decorso è regolare, ma è meglio segnalare subito un dubbio."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Il robot opera da solo? No: è uno strumento guidato in ogni momento dal chirurgo.",
+            "Rimarranno cicatrici? Piccole incisioni sull'addome, che col tempo si notano poco.",
+            "Avrò ancora l'eiaculazione? No, dopo la prostatectomia l'orgasmo è possibile ma senza eiaculazione.",
+            "Ci sono alternative all'intervento? Sì, a seconda del caso: sorveglianza attiva, terapia focale, radioterapia."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita urologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "biopsia-prostatica",
+      "categoria": "Diagnosi",
+      "titolo": "Biopsia prostatica: come si fa oggi",
+      "img": "/marra-qbrd/img/rep-microscopio.webp",
+      "tempoLettura": "7 min",
+      "intro": "La biopsia prostatica fa paura a molti. Oggi però è un esame molto diverso da qualche anno fa: più mirato, spesso con meno prelievi, e in molti casi evitabile. Le spiego quando serve e come si svolge.",
+      "sezioni": [
+        {
+          "titolo": "Quando serve",
+          "paragrafi": [
+            "La biopsia è l'unico esame che permette di confermare la diagnosi di tumore della prostata. Si propone quando PSA, visita e soprattutto risonanza magnetica multiparametrica fanno sospettare un tumore significativo.",
+            "Se la risonanza è rassicurante, in molti casi si può evitare la biopsia e proseguire con controlli nel tempo."
+          ]
+        },
+        {
+          "titolo": "La biopsia di fusione",
+          "paragrafi": [
+            "Nella biopsia di fusione le immagini della risonanza vengono sovrapposte all'ecografia in tempo reale. In questo modo l'ago raggiunge con precisione l'area sospetta vista alla risonanza, anche se piccola. Ai prelievi mirati si aggiungono di solito alcuni prelievi sistematici nel resto della ghiandola."
+          ]
+        },
+        {
+          "titolo": "La biopsia guidata dalla PET-PSMA",
+          "paragrafi": [
+            "La PET-PSMA è un esame che evidenzia le cellule della prostata che esprimono una particolare proteina, il PSMA, molto presente nei tumori. In casi selezionati, per esempio quando la risonanza non è conclusiva o dopo biopsie negative con un sospetto che persiste, la biopsia può essere guidata dalle immagini della PET-PSMA."
+          ]
+        },
+        {
+          "titolo": "Per via transperineale o transrettale",
+          "paragrafi": [
+            "La prostata si può raggiungere attraverso il retto oppure attraverso il perineo, la zona di pelle tra lo scroto e l'ano. L'accesso transperineale riduce il rischio di infezioni e permette di raggiungere bene tutte le zone della ghiandola. La scelta dipende dal caso e dalla struttura."
+          ]
+        },
+        {
+          "titolo": "Come si svolge",
+          "paragrafi": [
+            "La biopsia si esegue in anestesia locale, a volte con una lieve sedazione, e dura in genere meno di mezz'ora. Si torna a casa lo stesso giorno. Prima dell'esame Le diamo indicazioni precise sui farmaci da sospendere, come gli anticoagulanti, e sull'eventuale profilassi antibiotica."
+          ]
+        },
+        {
+          "titolo": "Dopo la biopsia",
+          "paragrafi": [
+            "Nei giorni successivi è normale notare:"
+          ],
+          "elenco": [
+            "un po' di sangue nelle urine, per qualche giorno",
+            "sangue nello sperma, anche per alcune settimane",
+            "un lieve fastidio nella zona del prelievo"
+          ],
+          "chiusura": "Febbre, brividi o difficoltà a urinare vanno invece segnalati subito."
+        },
+        {
+          "titolo": "Il risultato",
+          "paragrafi": [
+            "Il patologo esamina i frammenti e descrive se c'è un tumore, quanto è esteso e quanto è aggressivo, con il punteggio di Gleason e il gruppo ISUP. Con il risultato in mano ci rivediamo per discutere insieme il significato e le opzioni, senza fretta."
+          ]
+        },
+        {
+          "titolo": "Un esame che è cambiato",
+          "paragrafi": [
+            "Qualche anno fa la biopsia si faceva quasi alla cieca, con molti prelievi sistematici. Oggi grazie alla risonanza e alla fusione delle immagini è un esame mirato, che trova più spesso i tumori che contano e meno spesso quelli che non darebbero problemi. Sulla biopsia prostatica ho presentato le ultime novità alla sessione plenaria del Congresso Nazionale della Società Italiana di Urologia, a Roma, nel 2023."
+          ]
+        },
+        {
+          "titolo": "Prepararsi all'esame",
+          "paragrafi": [
+            "Il giorno della biopsia conviene venire accompagnati, indossare abiti comodi e portare la risonanza su supporto digitale insieme al referto: le immagini servono per la fusione. Nei giorni successivi è meglio evitare sforzi intensi, bicicletta e rapporti sessuali per il tempo che Le indicheremo, e bere a sufficienza."
+          ]
+        },
+        {
+          "titolo": "Quanti prelievi",
+          "paragrafi": [
+            "Il numero di prelievi dipende dal caso: alcuni sono mirati sull'area sospetta, altri distribuiti nel resto della ghiandola per non perdere eventuali focolai non visibili alla risonanza. L'obiettivo è trovare i tumori che contano con il minor numero di prelievi utile, e con il minimo disagio per il paziente. Numero e sede dei prelievi vengono registrati con precisione, così nei controlli futuri si può tornare nelle stesse zone."
+          ]
+        },
+        {
+          "titolo": "I rischi, in modo chiaro",
+          "paragrafi": [
+            "La biopsia è un esame sicuro, ma come ogni procedura ha qualche rischio. Il più importante è l'infezione, che si riduce molto con l'accesso transperineale e con le indicazioni giuste prima dell'esame. Più raramente possono comparire una ritenzione urinaria o un sanguinamento più abbondante. Prima dell'esame Le spiego tutto e Le lascio il tempo per le domande."
+          ]
+        },
+        {
+          "titolo": "Biopsia e sorveglianza attiva",
+          "paragrafi": [
+            "Chi è in sorveglianza attiva per un tumore a basso rischio ripete la biopsia a intervalli stabiliti, guidata dalla risonanza. Lo scopo è controllare che la malattia resti stabile. Grazie alla risonanza, oggi molti pazienti in sorveglianza fanno meno biopsie di un tempo, solo quando gli esami suggeriscono un cambiamento."
+          ]
+        },
+        {
+          "titolo": "Se la biopsia è negativa",
+          "paragrafi": [
+            "Una biopsia negativa è una buona notizia, ma va letta insieme al sospetto iniziale. Se la risonanza mostrava un'area molto sospetta e la biopsia non l'ha confermata, a volte conviene ripetere gli esami o approfondire con la PET-PSMA. Se invece il sospetto era basso, si torna a controllare il PSA nel tempo."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "La biopsia può diffondere il tumore? No, non ci sono prove che la biopsia diffonda la malattia.",
+            "Fa male? In anestesia locale il fastidio è in genere modesto.",
+            "Dopo quanto arriva il risultato? Di solito in una o due settimane.",
+            "Se è negativa sono tranquillo? Dipende dal sospetto iniziale: a volte servono controlli nel tempo."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita urologica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "dr.giancarlomarra",
+    "nota": "il Dottore non ha profili Instagram: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "domanda",
+        "titolo": "PSA alto: e adesso?",
+        "risposta": "Niente panico: prima si interpreta.",
+        "didascalia": "Infiammazione, prostata ingrossata, perfino un giro in bici: il PSA sale per tante ragioni. Si ripete, si interpreta e, se serve, si fa la risonanza.",
+        "hashtag": "#PSA #prostata #urologo"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Prostatectomia robotica: il recupero",
+        "punti": [
+          "In piedi dal giorno dopo",
+          "Catetere per alcuni giorni",
+          "Continenza che migliora nelle settimane",
+          "Esercizi per il pavimento pelvico"
+        ],
+        "didascalia": "Le domande sul dopo sono le più importanti. Ne parliamo sempre prima di decidere, con tempi e aspettative realistiche.",
+        "hashtag": "#chirurgiarobotica #prostata #tumoredellaprostata"
+      },
+      {
+        "stile": "foto",
+        "immagine": "microscopio",
+        "titolo": "Biopsia prostatica",
+        "sottotitolo": "Oggi è mirata, e spesso evitabile",
+        "didascalia": "Con la risonanza e la fusione delle immagini l'ago va dove serve. E se la risonanza è rassicurante, spesso la biopsia non serve.",
+        "hashtag": "#biopsia #risonanza #urologia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Lo studio",
+    "altreLabel": "",
+    "email": "studio@drmarra.it",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio Dr. Giancarlo Marra",
+        "breve": "Via Paolini 12",
+        "indirizzo": "Via Paolini 12",
+        "citta": "Torino",
+        "cap": "10138",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di via Paolini 12, Torino"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Dal lunedì al venerdì, dalle 15 alle 19, in via Paolini 12. Porti PSA, referti e immagini degli esami che ha già fatto.",
+    "telefono": "3755754886",
+    "telefonoLabel": "375 575 4886",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "saluto": "Dottore",
+    "oggettoMail": "Richiesta di visita urologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Lo studio riceve dal lunedì al venerdì, dalle 15 alle 19. Indichi quando preferisce: La ricontattiamo per confermare.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [],
+      "pomeriggio": [
+        "15:00",
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00",
+        "18:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo",
+        "Secondo parere"
+      ],
+      "motivi": [
+        "PSA alto",
+        "Tumore della prostata",
+        "Secondo parere",
+        "Sorveglianza attiva",
+        "Prostata e disturbi urinari",
+        "Calcoli renali",
+        "Visita andrologica",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "un PSA alto",
+        "un tumore della prostata",
+        "un secondo parere",
+        "un controllo in sorveglianza attiva",
+        "disturbi urinari",
+        "calcoli renali",
+        "un problema andrologico",
+        "un problema urologico"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio di via Paolini 12",
+          "frase": "lo studio di via Paolini 12, Torino"
+        }
+      ],
+      "privacy": null,
+      "privacyTesto": "I dati inseriti servono solo a preparare la mail di richiesta allo studio: questa pagina non li salva.",
+      "notePlaceholder": "Per esempio l'ultimo valore del PSA o gli esami che ha già fatto"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F1F6FB",
+      "ink": "#0B1626",
+      "muted": "#566274",
+      "line": "#DAE3EE",
+      "brand": "#023E8A",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#175DB5",
+      "deep": "#021C3E",
+      "deep-ink": "#BFD0E6",
+      "ghiaccio": "#CAF0F8"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Newsreader",
+    "fontTesti": "Hanken Grotesk",
+    "fontUi": "Hanken Grotesk",
+    "favicon": "/marra-qbrd/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/marra-qbrd/brand/brand.json",
+    "pagine": [
+      "https://www.drmarra.it/",
+      "https://www.drmarra.it/chi-sono-2/",
+      "https://www.drmarra.it/prestazioni/",
+      "https://www.drmarra.it/urologo-torino-contatti-orari-studio/"
+    ]
+  }
+}

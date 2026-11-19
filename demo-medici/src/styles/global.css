@@ -15,6 +15,7 @@
   --color-ocra: var(--c-ocra, #8C5E12);
   --color-grigio: var(--c-grigio, #DCE0E2);
   --color-urgenza: var(--c-urgenza, #C8453B);
+  --color-ghiaccio: var(--c-ghiaccio, #CAF0F8);
   --font-head: var(--f-head);
   --font-sans: var(--f-sans);
 }
@@ -548,4 +549,35 @@ html { scroll-behavior: smooth; }
   .stile-protesi .card { border-radius: 6px; }
   .stile-protesi .campo, .stile-protesi .slot, .stile-protesi .giorno { border-radius: 6px; }
   .stile-protesi .btn { border-radius: 6px; }
+}
+
+/* Layout "condivisa": percorso, PI-RADS, opzioni a confronto */
+@layer components {
+  .tappa__pt { transition: background-color .3s, box-shadow .3s; }
+  .tappa-c.fatta .tappa__pt { background: var(--c-brand); }
+  .tappa-c[aria-selected="true"] .tappa__pt { box-shadow: 0 0 0 6px color-mix(in srgb, var(--c-brand2) 22%, transparent); }
+  .tappa-c:hover { background: var(--c-surface); }
+  .tappa-c:focus-visible { outline: 2px solid var(--c-brand2); outline-offset: 4px; }
+  .pir-r { cursor: pointer; }
+  .pir-r span { display: grid; place-items: center; height: 54px; border-radius: 16px; background: #fff; border: 1px solid var(--c-line); font: 500 1.6rem/1 var(--font-head); color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .pir-r:hover span { border-color: var(--c-deep); }
+  .pir-r input:checked + span { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .pir-r input:focus-visible + span { outline: 2px solid var(--c-brand2); outline-offset: 2px; }
+  .pir-et { font: 500 15px/1 var(--font-sans, sans-serif); fill: var(--c-muted); }
+  .pir-et--forte { fill: var(--c-deep); font-weight: 700; font-size: 17px; }
+  .lesione { fill: var(--c-brand); fill-opacity: .5; stroke: var(--c-brand); stroke-width: 2; }
+  .lesione-anello { transition: opacity .4s; }
+  .senza-moto .lesione-anello { transition: none; }
+  .pri { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .pri:hover { border-color: var(--c-deep); }
+  .pri[aria-pressed="true"] { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .nota-opz .livello { background: var(--c-surface); color: var(--c-muted); }
+  .nota-opz[data-livello="si"] .livello { background: color-mix(in srgb, var(--c-ghiaccio) 80%, #fff); color: var(--c-brand); }
+  .nota-opz[data-livello="parte"] .livello { background: #EEF0F4; color: var(--c-ink); }
+  .pr-tab { color: var(--c-muted); transition: background-color .2s, color .2s; }
+  .pr-tab:hover { color: var(--c-deep); background: #fff; }
+  .pr-tab[aria-selected="true"] { background: var(--c-deep); color: #fff; }
+  .stile-condivisa .card { border-radius: 24px; }
+  .stile-condivisa .campo, .stile-condivisa .slot, .stile-condivisa .giorno { border-radius: 14px; }
+  .stile-condivisa .btn { border-radius: 999px; }
 }
