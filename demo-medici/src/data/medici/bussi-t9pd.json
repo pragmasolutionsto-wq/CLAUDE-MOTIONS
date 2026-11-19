@@ -1,0 +1,965 @@
+{
+  "slug": "bussi-t9pd",
+  "layout": "distretto",
+  "sitoOrigine": "https://mariobussi.com/",
+  "titolo": "Prof.",
+  "nome": "Mario Bussi",
+  "specialita": "Otorinolaringoiatra, oncologia e chirurgia cervico-facciale",
+  "firma": "Otorinolaringoiatra",
+  "citta": "Torino",
+  "meta": {
+    "title": "Prof. Mario Bussi · Otorinolaringoiatra a Torino e Milano: tumori testa-collo, laringe, naso, rinoplastica, russamento",
+    "description": "Senior Consultant di Otorinolaringoiatria e Chirurgia Cervico-Cefalica dell'IRCCS San Raffaele. Oltre 20.000 interventi. Tumori testa e collo, laringe, cavo orale, naso e seni paranasali, rinoplastica, russamento, tiroide. Studi a Torino (piazza Statuto 4) e Milano."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "/bussi-t9pd/img/logo.png",
+    "logoChiaro": "/bussi-t9pd/img/logo-chiaro.png",
+    "marchio": "/bussi-t9pd/img/marchio.png",
+    "logoAlt": "Prof. Mario Bussi, Otorinolaringoiatra"
+  },
+  "foto": {
+    "ritratto": "/bussi-t9pd/img/ritratto-suit.webp",
+    "ritrattoAlt": "Il Prof. Mario Bussi",
+    "volto": "/bussi-t9pd/img/marchio.png",
+    "quadro": "/bussi-t9pd/img/quadro.webp",
+    "scrivania": "/bussi-t9pd/img/scrivania.webp",
+    "endoscopia": "/bussi-t9pd/img/endoscopia.webp",
+    "sala": "/bussi-t9pd/img/sala-casual.webp",
+    "corridoio": "/bussi-t9pd/img/corridoio.webp",
+    "vestizione": "/bussi-t9pd/img/vestizione.webp",
+    "microscopio": "/bussi-t9pd/img/microscopio.webp",
+    "naso": "/bussi-t9pd/img/rep-box8.webp",
+    "ronco": "/bussi-t9pd/img/rep-ronco.webp",
+    "tiroide": "/bussi-t9pd/img/rep-box6.webp",
+    "bambini": "/bussi-t9pd/img/rep-box7.webp"
+  },
+  "hero": {
+    "eyebrow": "Professore di Otorinolaringoiatria · Senior Consultant, IRCCS San Raffaele",
+    "titolo": "Gola, naso, orecchio. E tutto ciò che sta in mezzo.",
+    "testo": "Mi occupo delle malattie di testa e collo, dalle più comuni ai tumori: oltre 20.000 interventi, più di 18.000 da primo operatore. Visito a Torino, in piazza Statuto, e a Milano; opero all'Ospedale San Raffaele.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami"
+  },
+  "numeri": [
+    {
+      "valore": 20000,
+      "fmt": "20.000",
+      "pre": "oltre",
+      "testo": "interventi chirurgici"
+    },
+    {
+      "valore": 18000,
+      "fmt": "18.000",
+      "pre": "oltre",
+      "testo": "come primo operatore"
+    },
+    {
+      "valore": 300,
+      "fmt": "300",
+      "pre": "oltre",
+      "testo": "pubblicazioni scientifiche"
+    }
+  ],
+  "motivi": [
+    {
+      "id": "visita",
+      "nome": "Visita otorinolaringoiatrica",
+      "frase": "un controllo otorinolaringoiatrico"
+    },
+    {
+      "id": "voce",
+      "nome": "Raucedine, voce che cambia",
+      "frase": "una raucedine che non passa"
+    },
+    {
+      "id": "oncologia",
+      "nome": "Sospetto tumore testa-collo, secondo parere",
+      "frase": "una valutazione oncologica testa-collo"
+    },
+    {
+      "id": "naso",
+      "nome": "Naso chiuso, sinusite",
+      "frase": "un problema di naso e seni paranasali"
+    },
+    {
+      "id": "rinoplastica",
+      "nome": "Rinoplastica",
+      "frase": "una valutazione per rinoplastica"
+    },
+    {
+      "id": "russamento",
+      "nome": "Russamento e apnee notturne",
+      "frase": "il russamento"
+    },
+    {
+      "id": "tiroide",
+      "nome": "Noduli della tiroide",
+      "frase": "dei noduli della tiroide"
+    },
+    {
+      "id": "salivari",
+      "nome": "Ghiandole salivari",
+      "frase": "un problema alle ghiandole salivari"
+    },
+    {
+      "id": "bambino",
+      "nome": "Visita per un bambino",
+      "frase": "mio figlio"
+    }
+  ],
+  "regioni": [
+    {
+      "id": "naso",
+      "nome": "Naso e seni paranasali",
+      "testo": "Respirare, riscaldare e umidificare l'aria, sentire gli odori. I seni paranasali sono cavità collegate alle fosse nasali.",
+      "patologie": [
+        "Setto deviato e turbinati ingrossati",
+        "Sinusiti croniche e poliposi",
+        "Tumori naso-sinusali"
+      ],
+      "come": "Endoscopia nasale, chirurgia endoscopica e laser, rinoplastica funzionale ed estetica.",
+      "motivo": "naso",
+      "link": "rinoplastica"
+    },
+    {
+      "id": "orecchio",
+      "nome": "Orecchio",
+      "testo": "Udito ed equilibrio. Un dolore a un orecchio solo, con l'orecchio sano, può venire dalla gola.",
+      "patologie": [
+        "Otiti",
+        "Calo dell'udito",
+        "Dolore riferito dalla gola"
+      ],
+      "come": "Visita otorinolaringoiatrica con otoscopia e, se serve, esami dell'udito.",
+      "motivo": "visita",
+      "link": ""
+    },
+    {
+      "id": "bocca",
+      "nome": "Cavo orale",
+      "testo": "Labbra, lingua, gengive, guance, pavimento della bocca. Una ferita che non guarisce in tre settimane va vista.",
+      "patologie": [
+        "Lesioni benigne",
+        "Lesioni precancerose (macchie bianche o rosse)",
+        "Tumori del cavo orale"
+      ],
+      "come": "Visita, biopsia, chirurgia laser per le lesioni iniziali, chirurgia oncologica e ricostruttiva.",
+      "motivo": "oncologia",
+      "link": "articolo"
+    },
+    {
+      "id": "faringe",
+      "nome": "Faringe e tonsille",
+      "testo": "Il tratto che collega naso e bocca alla laringe e all'esofago: qui nascono russamento e apnee.",
+      "patologie": [
+        "Faringiti e tonsilliti",
+        "Russamento e apnee ostruttive",
+        "Tumori della faringe"
+      ],
+      "come": "Endoscopia, chirurgia laser del palato per il russamento, chirurgia oncologica.",
+      "motivo": "russamento",
+      "link": "russamento"
+    },
+    {
+      "id": "laringe",
+      "nome": "Laringe e corde vocali",
+      "testo": "L'organo crocevia: protegge le vie aeree quando deglutiamo e produce la voce.",
+      "patologie": [
+        "Laringiti e reflusso",
+        "Noduli e polipi delle corde vocali",
+        "Tumore della laringe"
+      ],
+      "come": "Laringoscopia con fibre ottiche, microchirurgia laser, chirurgia oncologica della laringe.",
+      "motivo": "voce",
+      "link": "raucedine"
+    },
+    {
+      "id": "salivari",
+      "nome": "Ghiandole salivari",
+      "testo": "Parotidi, sottomandibolari e sottolinguali producono la saliva. Una tumefazione davanti all'orecchio o sotto la mandibola va valutata.",
+      "patologie": [
+        "Infiammazioni e calcoli",
+        "Tumori benigni (per esempio della parotide)",
+        "Tumori maligni"
+      ],
+      "come": "Ecografia, ago aspirato, chirurgia delle ghiandole salivari.",
+      "motivo": "salivari",
+      "link": ""
+    },
+    {
+      "id": "tiroide",
+      "nome": "Tiroide e paratiroidi",
+      "testo": "La ghiandola alla base del collo che regola il metabolismo. I noduli sono frequenti e quasi sempre benigni.",
+      "patologie": [
+        "Noduli tiroidei",
+        "Gozzo",
+        "Tumori della tiroide"
+      ],
+      "come": "Ecografia, ago aspirato, chirurgia tiroidea.",
+      "motivo": "tiroide",
+      "link": ""
+    },
+    {
+      "id": "collo",
+      "nome": "Collo e linfonodi",
+      "testo": "Un nodulo nel collo che non scompare in tre settimane merita una visita specialistica.",
+      "patologie": [
+        "Linfonodi ingrossati",
+        "Malformazioni congenite",
+        "Metastasi di tumori testa-collo"
+      ],
+      "come": "Ecografia, TC o risonanza, chirurgia oncologica e ricostruttiva del collo.",
+      "motivo": "oncologia",
+      "link": "articolo"
+    }
+  ],
+  "segnali": [
+    "Raucedine o voce cambiata da più di 3 settimane",
+    "Una ferita o una macchia in bocca che non guarisce",
+    "Difficoltà o dolore a deglutire che persiste",
+    "Un nodulo nel collo che non scompare",
+    "Dolore a un orecchio solo, con l'orecchio sano",
+    "Naso chiuso da un lato con perdite di sangue",
+    "Fumo o ho fumato a lungo"
+  ],
+  "sediL": [
+    {
+      "id": "torino",
+      "nome": "Torino",
+      "struttura": "Studio privato",
+      "indirizzo": "Piazza Statuto 4",
+      "citta": "Torino",
+      "tel": "0115214212",
+      "telLabel": "011 521 4212",
+      "email": "segreteria@mariobussi.com",
+      "online": "",
+      "frase": "lo studio di piazza Statuto 4 a Torino",
+      "nota": "Visite specialistiche su appuntamento.",
+      "img": "/bussi-t9pd/img/torino.webp"
+    },
+    {
+      "id": "milano",
+      "nome": "Milano",
+      "struttura": "Studio privato · Centro Testa e Collo",
+      "indirizzo": "Piazza Armando Diaz 7",
+      "citta": "Milano",
+      "tel": "02875644",
+      "telLabel": "02 875 644",
+      "email": "info@centrotestaecollo.it",
+      "online": "https://www.centrotestaecollo.it/prenota-online/",
+      "frase": "lo studio di piazza Diaz 7 a Milano",
+      "nota": "Visite specialistiche su appuntamento, anche con prenotazione online.",
+      "img": "/bussi-t9pd/img/milano.webp"
+    },
+    {
+      "id": "sanraffaele",
+      "nome": "San Raffaele",
+      "struttura": "Ospedale universitario IRCCS",
+      "indirizzo": "Via Olgettina 60",
+      "citta": "Milano",
+      "tel": "0226433522",
+      "telLabel": "02 2643 3522",
+      "email": "bussi.mario@hsr.it",
+      "online": "",
+      "frase": "l'Ospedale San Raffaele di Milano",
+      "nota": "Chirurgia, attività didattica e di ricerca.",
+      "img": "/bussi-t9pd/img/sanraffaele.webp"
+    }
+  ],
+  "cv": [
+    {
+      "anno": "Torino",
+      "titolo": "Laurea e specializzazione",
+      "testo": "Medicina e Chirurgia, poi Otorinolaringoiatria e Patologia Cervico-Facciale all'Università di Torino, dove sono stato ricercatore e professore associato."
+    },
+    {
+      "anno": "Parigi",
+      "titolo": "Chirurgia maxillo-facciale e ricostruttiva",
+      "testo": "Diploma universitario in «Chirurgie Maxillo-Faciale et Chirurgie réparatrice de la Face», Université Paris VI."
+    },
+    {
+      "anno": "New York · Detroit · Parigi",
+      "titolo": "Formazione all'estero",
+      "testo": "Memorial Sloan Kettering Cancer Center e Manhattan Eye, Ear and Throat Hospital a New York, Straith Memorial Hospital a Detroit, Institut Gustave Roussy a Parigi."
+    },
+    {
+      "anno": "Milano",
+      "titolo": "IRCCS San Raffaele",
+      "testo": "Professore ordinario di Otorinolaringoiatria, direttore della Scuola di Specializzazione e della divisione di Otorinolaringoiatria."
+    },
+    {
+      "anno": "Società",
+      "titolo": "Past President",
+      "testo": "Della Società Italiana di Otorinolaringoiatria e Chirurgia Cervico-Facciale (SIOeChCF) e dell'Associazione Otorinolaringoiatri Universitari (AUORL)."
+    },
+    {
+      "anno": "Oggi",
+      "titolo": "Senior Consultant al San Raffaele",
+      "testo": "Otorinolaringoiatria e Chirurgia Cervico-Cefalica dell'Ospedale Universitario IRCCS San Raffaele di Milano."
+    }
+  ],
+  "societa": [
+    "SIOeChCF",
+    "AIOCC",
+    "SFORL",
+    "AICEFF"
+  ],
+  "urgenze": "urgenze@mariobussi.com",
+  "aree": {
+    "titolo": "",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "tumori-testa-collo",
+    "categoria": "Oncologia",
+    "titolo": "Tumori della testa e del collo: i segnali da non trascurare",
+    "img": "/bussi-t9pd/img/corridoio.webp",
+    "tempoLettura": "10 min",
+    "intro": "Bocca, gola, laringe, naso, ghiandole salivari, tiroide: sono i distretti della testa e del collo. I loro tumori, se riconosciuti presto, si curano con buoni risultati e interventi meno estesi. Le spiego quali segnali non vanno trascurati e come si arriva alla diagnosi.",
+    "sezioni": [
+      {
+        "titolo": "Di cosa parliamo",
+        "paragrafi": [
+          "Con tumori della testa e del collo si indica un gruppo di neoplasie che nascono nelle vie aeree e digestive superiori: cavo orale, faringe, laringe, fosse nasali e seni paranasali, e nelle ghiandole salivari. Spesso si includono anche i noduli della tiroide.",
+          "Sono organi piccoli e preziosi, da cui dipendono funzioni essenziali: respirare, deglutire, parlare, sentire gusti e odori. Per questo una diagnosi precoce non salva solo la vita, ma anche la qualità della vita."
+        ]
+      },
+      {
+        "titolo": "I fattori di rischio",
+        "paragrafi": [
+          "I principali fattori di rischio sono:"
+        ],
+        "elenco": [
+          "il fumo di sigaretta, la causa più importante, soprattutto per la laringe",
+          "l'alcol, che insieme al fumo moltiplica il rischio",
+          "l'infezione da papillomavirus (HPV), legata a una parte dei tumori dell'orofaringe",
+          "la cattiva igiene orale e le irritazioni croniche della bocca",
+          "l'esposizione professionale a polveri e sostanze chimiche"
+        ]
+      },
+      {
+        "titolo": "La regola delle tre settimane",
+        "paragrafi": [
+          "Molti sintomi dei tumori testa-collo assomigliano a disturbi comuni: un mal di gola, una raucedine, un'afta. La differenza è il tempo. Un disturbo che non passa entro tre settimane, nonostante le cure abituali, merita una visita otorinolaringoiatrica."
+        ]
+      },
+      {
+        "titolo": "I segnali da non trascurare",
+        "paragrafi": [
+          "In particolare, vanno valutati:"
+        ],
+        "elenco": [
+          "raucedine o voce cambiata da più di tre settimane",
+          "una ferita o una macchia bianca o rossa in bocca che non guarisce",
+          "difficoltà o dolore a deglutire che persiste",
+          "un nodulo nel collo che non scompare",
+          "dolore a un orecchio solo, senza problemi all'orecchio",
+          "naso chiuso da un lato solo, con perdite di sangue",
+          "una tumefazione davanti all'orecchio o sotto la mandibola"
+        ]
+      },
+      {
+        "titolo": "La visita e l'endoscopia",
+        "paragrafi": [
+          "La visita otorinolaringoiatrica comprende l'esame di bocca, gola e collo e, se serve, un'endoscopia con fibre ottiche flessibili: un esame rapido, eseguito in ambulatorio, che permette di vedere anche le zone più nascoste, come la laringe e la rinofaringe, e di registrare le immagini su uno schermo.",
+          "In caso di sospetto, durante l'endoscopia o in un secondo momento si può prelevare un piccolo frammento di tessuto per l'esame istologico, che chiarisce se la lesione è benigna o maligna."
+        ]
+      },
+      {
+        "titolo": "Gli esami di completamento",
+        "paragrafi": [
+          "Se la diagnosi è confermata, servono esami che definiscono l'estensione della malattia: ecografia del collo, TC, risonanza magnetica e, in alcuni casi, PET. Sulla base di questi dati il caso viene discusso da un gruppo multidisciplinare, con chirurghi, oncologi e radioterapisti."
+        ]
+      },
+      {
+        "titolo": "Le cure",
+        "paragrafi": [
+          "Le cure dipendono dalla sede e dallo stadio. Nelle fasi iniziali spesso basta un solo trattamento: chirurgia, sempre più spesso mini-invasiva con laser ed endoscopia, oppure radioterapia. Nelle fasi più avanzate si combinano chirurgia, radioterapia e terapie mediche.",
+          "Quando la chirurgia deve essere più estesa, la chirurgia ricostruttiva permette di ripristinare forma e funzione, per esempio con lembi di tessuto prelevati dal paziente stesso."
+        ]
+      },
+      {
+        "titolo": "La mia esperienza",
+        "paragrafi": [
+          "Mi occupo da sempre di oncologia testa-collo. Ho studiato e lavorato in centri come il Memorial Sloan Kettering Cancer Center di New York e l'Institut Gustave Roussy di Parigi, ho diretto la divisione di Otorinolaringoiatria dell'IRCCS San Raffaele di Milano, dove oggi sono Senior Consultant, e ho eseguito oltre 20.000 interventi, più di 18.000 come primo operatore."
+        ]
+      },
+      {
+        "titolo": "Il secondo parere",
+        "paragrafi": [
+          "Davanti a una diagnosi di tumore testa-collo è normale voler sentire un secondo parere, ed è un diritto del paziente. Porti tutti i referti, le immagini di TC e risonanza su supporto digitale e, se possibile, i vetrini della biopsia. Rivedere il caso con calma, a volte, apre opzioni diverse; altre volte conferma la strada proposta e permette di affrontarla con più fiducia."
+        ]
+      },
+      {
+        "titolo": "Dopo le cure",
+        "paragrafi": [
+          "La guarigione non si ferma all'ultimo trattamento. I controlli periodici, più frequenti nei primi due anni, servono a riconoscere presto un'eventuale ripresa della malattia o un secondo tumore, più probabile in chi ha fumato. Altrettanto importante è la riabilitazione: logopedia per la voce e la deglutizione, fisioterapia per collo e spalle, supporto nutrizionale e, quando serve, psicologico. La psico-oncologia è stata uno dei temi delle mie ricerche, perché la qualità della vita è parte della cura."
+        ]
+      },
+      {
+        "titolo": "Prevenzione",
+        "paragrafi": [
+          "Non fumare, limitare l'alcol, curare l'igiene della bocca e fare controlli dal dentista sono le prime forme di prevenzione. La vaccinazione contro il papillomavirus, oggi raccomandata a ragazze e ragazzi, contribuisce a ridurre anche i tumori dell'orofaringe legati all'HPV."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso:"
+        ],
+        "elenco": [
+          "Ho smesso di fumare: il rischio scompare? Si riduce molto con gli anni, ma i controlli restano utili.",
+          "L'endoscopia è fastidiosa? Con un leggero anestetico spray è ben tollerata e dura pochi minuti.",
+          "Un nodulo al collo è sempre un tumore? No, spesso è un linfonodo infiammato, ma se persiste va valutato.",
+          "Si può guarire? Nelle forme iniziali le probabilità di guarigione sono alte: per questo conta arrivare presto."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "raucedine",
+      "categoria": "Laringe",
+      "titolo": "Raucedine che non passa: quando farsi vedere",
+      "img": "/bussi-t9pd/img/endoscopia.webp",
+      "tempoLettura": "7 min",
+      "intro": "Una voce roca dopo un raffreddore o una serata allo stadio è normale. Una raucedine che dura settimane, invece, va capita. Le spiego cosa può esserci dietro e come si arriva a una diagnosi.",
+      "sezioni": [
+        {
+          "titolo": "La laringe, un organo crocevia",
+          "paragrafi": [
+            "La laringe si trova nel collo, all'incrocio tra la via dell'aria e quella del cibo. Protegge le vie respiratorie quando deglutiamo e ospita le corde vocali, che vibrando producono la voce. Qualsiasi alterazione delle corde vocali si traduce in un cambiamento della voce."
+          ]
+        },
+        {
+          "titolo": "Le cause più frequenti",
+          "paragrafi": [
+            "La raucedine può dipendere da:"
+          ],
+          "elenco": [
+            "laringiti acute, dopo un'infezione delle vie aeree",
+            "sforzo vocale, tipico di insegnanti, cantanti e chi parla molto per lavoro",
+            "reflusso gastroesofageo, che irrita la laringe",
+            "noduli e polipi delle corde vocali",
+            "edema di Reinke, frequente nei fumatori",
+            "paralisi di una corda vocale",
+            "tumori della laringe"
+          ]
+        },
+        {
+          "titolo": "Le tre settimane",
+          "paragrafi": [
+            "Se la raucedine dura più di tre settimane, soprattutto in chi fuma o ha fumato, va fatta una visita otorinolaringoiatrica con esame della laringe. Non per allarmismo, ma perché le lesioni della laringe, quando sono piccole, si curano con interventi molto limitati."
+          ]
+        },
+        {
+          "titolo": "Fumo e laringe",
+          "paragrafi": [
+            "I fumatori sono particolarmente esposti ai tumori della laringe, perché le sostanze cancerogene delle sigarette colpiscono direttamente questo organo. Smettere di fumare è il primo e più efficace gesto di prevenzione, a qualunque età."
+          ]
+        },
+        {
+          "titolo": "Come si esamina la laringe",
+          "paragrafi": [
+            "L'esame si chiama laringoscopia. Con un endoscopio flessibile a fibre ottiche, introdotto dal naso dopo un leggero anestetico spray, si osservano le corde vocali mentre il paziente respira e parla. L'esame dura pochi minuti, si fa in ambulatorio e le immagini si vedono in diretta sullo schermo.",
+            "La stroboscopia, quando serve, mostra la vibrazione delle corde vocali al rallentatore."
+          ]
+        },
+        {
+          "titolo": "Le cure",
+          "paragrafi": [
+            "Le laringiti e lo sforzo vocale si curano con riposo vocale, terapia medica e, spesso, logopedia. Il reflusso richiede dieta e farmaci. Noduli, polipi e lesioni sospette si trattano con la microchirurgia laringea, oggi spesso con il laser: un intervento mini-invasivo, con cicatrizzazione rapida e poco sanguinamento.",
+            "I tumori della laringe in fase iniziale si curano con la chirurgia laser endoscopica o con la radioterapia, con buone probabilità di conservare la voce."
+          ]
+        },
+        {
+          "titolo": "Proteggere la voce",
+          "paragrafi": [
+            "Qualche consiglio per chi usa molto la voce:"
+          ],
+          "elenco": [
+            "bere spesso durante la giornata",
+            "evitare di schiarirsi la gola di continuo",
+            "non urlare e non parlare a lungo in ambienti rumorosi",
+            "fare pause vocali nelle giornate impegnative",
+            "non fumare e limitare l'alcol"
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Porti eventuali referti di visite precedenti, l'elenco dei farmaci e, se ne ha, registrazioni della voce dei giorni peggiori. Mi dica da quanto tempo dura la raucedine, se peggiora durante la giornata e se fuma o ha fumato."
+          ]
+        },
+        {
+          "titolo": "La paralisi di una corda vocale",
+          "paragrafi": [
+            "A volte la raucedine dipende dal fatto che una corda vocale non si muove più. La voce diventa debole e soffiata, si stanca presto, e a volte si tossisce bevendo. Le cause sono diverse: un intervento al collo o al torace, un'infezione virale, ma anche malattie che comprimono il nervo lungo il suo percorso. Per questo una paralisi va sempre studiata, anche con esami di immagine."
+          ]
+        },
+        {
+          "titolo": "Noduli e polipi",
+          "paragrafi": [
+            "Noduli e polipi sono lesioni benigne delle corde vocali. I noduli, in genere su entrambe le corde, sono tipici di chi usa molto la voce, come insegnanti e cantanti: spesso migliorano con la logopedia. I polipi, di solito su una sola corda, possono comparire dopo uno sforzo vocale intenso e tendono a richiedere la rimozione chirurgica, oggi con tecniche microchirurgiche e laser che rispettano la struttura delle corde vocali."
+          ]
+        },
+        {
+          "titolo": "Il reflusso e la voce",
+          "paragrafi": [
+            "Il reflusso laringo-faringeo è una causa frequente e sottovalutata di raucedine. I succhi gastrici risalgono fino alla laringe, spesso di notte, senza il classico bruciore di stomaco. I sintomi sono voce roca al mattino, bisogno continuo di schiarirsi la gola, sensazione di nodo in gola, tosse secca. Si cura con piccoli cambiamenti nell'alimentazione, nei tempi dei pasti e, se serve, con farmaci."
+          ]
+        },
+        {
+          "titolo": "Quando la voce è il lavoro",
+          "paragrafi": [
+            "Per insegnanti, cantanti, attori, avvocati, operatori dei call center, la voce è uno strumento di lavoro. Una raucedine ricorrente merita una valutazione anche se dura meno di tre settimane, per individuare le abitudini vocali scorrette e impostare per tempo una rieducazione con il logopedista. Prevenire costa molto meno che curare."
+          ]
+        },
+        {
+          "titolo": "I segni che accompagnano la raucedine",
+          "paragrafi": [
+            "Chieda una visita in tempi brevi se la raucedine si accompagna a difficoltà a deglutire, dolore che si irradia all'orecchio, un nodulo nel collo, tosse con sangue o difficoltà a respirare. In caso di difficoltà respiratoria improvvisa, vada subito al pronto soccorso."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "La laringoscopia fa male? No, è un fastidio breve e ben tollerato.",
+            "Dopo l'intervento al laser posso parlare? Di solito si chiede qualche giorno di riposo vocale.",
+            "Il reflusso può dare raucedine senza bruciore di stomaco? Sì, è frequente.",
+            "Ogni quanto controllarsi se fumo? Ne parliamo in visita, in base alla Sua storia."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "russamento",
+      "categoria": "Sonno",
+      "titolo": "Russare: quando è un problema",
+      "img": "/bussi-t9pd/img/rep-ronco.webp",
+      "tempoLettura": "7 min",
+      "intro": "Il russamento viene spesso preso alla leggera, o come un problema di chi dorme accanto. In realtà può essere il segno di una vera malattia, le apnee ostruttive del sonno. Le spiego quando preoccuparsi e quali soluzioni esistono.",
+      "sezioni": [
+        {
+          "titolo": "Perché si russa",
+          "paragrafi": [
+            "Il russamento, in termini medici roncopatia, nasce quando l'aria non passa liberamente attraverso naso e gola durante il sonno. I tessuti molli, soprattutto il palato molle e l'ugola, vibrano e producono il rumore tipico.",
+            "Contribuiscono il naso chiuso, la deviazione del setto, i turbinati ingrossati, le tonsille grandi, un palato lungo, il sovrappeso, l'alcol la sera e alcuni farmaci."
+          ]
+        },
+        {
+          "titolo": "Russamento semplice o apnee?",
+          "paragrafi": [
+            "Nel russamento semplice il respiro resta regolare. Nelle apnee ostruttive del sonno, invece, la gola si chiude del tutto per alcuni secondi, molte volte a notte: l'ossigeno nel sangue scende e il sonno si frammenta, anche se la persona non se ne accorge."
+          ]
+        },
+        {
+          "titolo": "I segnali delle apnee",
+          "paragrafi": [
+            "Fanno pensare alle apnee:"
+          ],
+          "elenco": [
+            "pause del respiro notate da chi dorme accanto",
+            "risvegli con sensazione di soffocamento",
+            "sonnolenza durante il giorno, anche alla guida",
+            "mal di testa al risveglio",
+            "difficoltà di concentrazione e irritabilità",
+            "pressione alta difficile da controllare"
+          ]
+        },
+        {
+          "titolo": "Perché non va sottovalutato",
+          "paragrafi": [
+            "Le apnee notturne non trattate aumentano il rischio di ipertensione, malattie cardiovascolari e incidenti stradali per colpi di sonno. Per questo il russamento, quando si accompagna a questi segnali, va affrontato come una vera malattia."
+          ]
+        },
+        {
+          "titolo": "La diagnosi",
+          "paragrafi": [
+            "La valutazione parte dalla visita otorinolaringoiatrica con endoscopia di naso e gola, che individua i punti in cui l'aria trova ostacolo. Lo studio del sonno, con un apparecchio da portare a casa per una notte, misura respiro e ossigeno e dice se ci sono apnee e quanto sono gravi."
+          ]
+        },
+        {
+          "titolo": "Le soluzioni",
+          "paragrafi": [
+            "Il trattamento dipende dalla causa e dalla gravità:"
+          ],
+          "elenco": [
+            "calo di peso, niente alcol la sera, dormire sul fianco",
+            "cure per il naso chiuso, mediche o chirurgiche",
+            "dispositivi orali che avanzano la mandibola",
+            "CPAP, una mascherina che mantiene aperte le vie aeree, nelle apnee moderate e gravi",
+            "chirurgia del russamento, nei casi selezionati"
+          ]
+        },
+        {
+          "titolo": "La chirurgia laser del russamento",
+          "paragrafi": [
+            "I progressi della chirurgia laser permettono di intervenire sul palato molle, spesso responsabile del russamento, con strumentazione moderna, rapidità e meno dolore. Rispetto alle tecniche tradizionali, il laser riduce l'invasività, i tempi di recupero e il dolore dopo l'intervento.",
+            "Non è la soluzione per tutti: la scelta dipende da dove si trova l'ostacolo e dalla presenza e gravità delle apnee."
+          ]
+        },
+        {
+          "titolo": "Abitudini che aiutano",
+          "paragrafi": [
+            "Alcuni accorgimenti riducono il russamento in molte persone: cenare leggero e almeno tre ore prima di coricarsi, evitare alcol e sonniferi la sera, dormire sul fianco, tenere libero il naso con lavaggi e, se serve, terapie prescritte. Sono semplici, ma da soli non bastano se ci sono apnee importanti."
+          ]
+        },
+        {
+          "titolo": "Il partner di letto",
+          "paragrafi": [
+            "Spesso è chi dorme accanto ad accorgersi per primo del problema: russamento forte, pause del respiro seguite da un respiro rumoroso, movimenti agitati. Portarlo alla visita, o fargli registrare con il telefono qualche minuto di sonno, fornisce informazioni preziose che il paziente da solo non può dare."
+          ]
+        },
+        {
+          "titolo": "Il ruolo del naso",
+          "paragrafi": [
+            "Un naso che respira male costringe a respirare con la bocca, e la respirazione orale favorisce il russamento. Deviazione del setto, turbinati ingrossati, poliposi e riniti croniche sono cause frequenti, spesso trascurate. In molti pazienti correggere il naso, con terapie mediche o con un intervento endoscopico, migliora il sonno anche senza toccare la gola."
+          ]
+        },
+        {
+          "titolo": "I bambini che russano",
+          "paragrafi": [
+            "Anche i bambini possono russare, di solito per adenoidi e tonsille ingrossate. Un bambino che russa tutte le notti, respira a bocca aperta, ha un sonno agitato, si sveglia stanco o di giorno è irritabile e distratto merita una visita otorinolaringoiatrica: le apnee nei bambini possono influire sulla crescita, sul rendimento scolastico e sul comportamento."
+          ]
+        },
+        {
+          "titolo": "Lo studio del sonno",
+          "paragrafi": [
+            "Lo studio del sonno, detto polisonnografia o monitoraggio cardiorespiratorio notturno, si esegue spesso a casa propria, con un piccolo apparecchio indossato per una notte. Registra il flusso d'aria, i movimenti del respiro, l'ossigeno nel sangue e la posizione del corpo. Il risultato principale è l'indice di apnee e ipopnee, che dice quante volte all'ora il respiro si interrompe o si riduce, e quindi quanto sono gravi le apnee."
+          ]
+        },
+        {
+          "titolo": "Dopo la chirurgia laser",
+          "paragrafi": [
+            "Dopo l'intervento laser sul palato è normale avere mal di gola per alcuni giorni, controllato con gli antidolorifici. Si consiglia un'alimentazione morbida e fresca per una settimana circa. Il risultato si valuta dopo alcune settimane, quando i tessuti sono guariti, e se c'erano apnee si ripete lo studio del sonno per verificare il miglioramento."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Russare fa male alla salute? Il russamento semplice no, le apnee sì.",
+            "I cerotti nasali funzionano? Aiutano solo se il problema è il naso.",
+            "Dopo l'intervento smetterò di russare? Spesso il russamento si riduce molto; i risultati dipendono dal caso.",
+            "Anche i bambini russano? Sì, spesso per adenoidi e tonsille grandi: va valutato."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "rinoplastica",
+      "categoria": "Naso",
+      "titolo": "Rinoplastica: estetica e respiro",
+      "img": "/bussi-t9pd/img/rep-box8.webp",
+      "tempoLettura": "8 min",
+      "intro": "La rinoplastica è uno degli interventi più delicati della chirurgia del volto. Un buon risultato non è solo un naso più armonico, ma anche un naso che respira bene. Le spiego come si prepara e come si svolge.",
+      "sezioni": [
+        {
+          "titolo": "Com'è fatto il naso",
+          "paragrafi": [
+            "La piramide nasale, la parte esterna del naso, è sostenuta da un'impalcatura in parte ossea e in parte cartilaginea: le ossa nasali, la cartilagine del setto, le cartilagini triangolari e le cartilagini alari. All'interno, il setto divide le due fosse nasali, sulle cui pareti si trovano i turbinati, che riscaldano e umidificano l'aria."
+          ]
+        },
+        {
+          "titolo": "Estetica e funzione insieme",
+          "paragrafi": [
+            "Molte persone che desiderano cambiare la forma del naso hanno anche problemi di respirazione: un setto deviato, turbinati ingrossati, sinusiti ricorrenti. La rinoplastica moderna corregge insieme l'aspetto e la funzione, nello stesso intervento."
+          ]
+        },
+        {
+          "titolo": "La visita preoperatoria",
+          "paragrafi": [
+            "Una pianificazione corretta richiede:"
+          ],
+          "elenco": [
+            "l'esame della forma del naso, con documentazione fotografica eseguita durante la visita",
+            "la rinoscopia e la rinofibroscopia, per valutare setto, turbinati e seni paranasali",
+            "un colloquio sulle aspettative e sulle motivazioni",
+            "in genere una TC del massiccio facciale senza contrasto"
+          ],
+          "chiusura": "Dopo la prima visita il paziente riceve un'ipotesi grafica del risultato sul profilo: è un progetto virtuale, che serve a capire quali sono le aspettative ragionevoli."
+        },
+        {
+          "titolo": "Tecnica closed e tecnica open",
+          "paragrafi": [
+            "Nella tecnica closed tutte le incisioni sono all'interno del naso. Nella tecnica open si aggiunge una piccola incisione nella parte nascosta della columella, il ponte tra le due narici: permette una visione completa delle strutture ed è più moderna e affidabile nei casi complessi. La scelta dipende dal caso."
+          ]
+        },
+        {
+          "titolo": "Cosa si corregge",
+          "paragrafi": [
+            "Si rimodella l'impalcatura osteo-cartilaginea per correggere i difetti del dorso, come il gibbo, l'insellamento, il naso largo o storto, e della punta, globosa, troppo o poco ruotata o proiettata. Se serve si usano piccoli innesti di cartilagine prelevati dal paziente stesso.",
+            "Il risultato estetico nasce dall'armonia tra tutti gli elementi: correggerne uno solo, per esempio togliere il gibbo, può mettere in risalto difetti prima poco evidenti."
+          ]
+        },
+        {
+          "titolo": "Niente tamponi",
+          "paragrafi": [
+            "Non si usano i tamponi nasali, che un tempo rendevano il decorso fastidioso e doloroso, ma sottili lastrine in silicone tra setto e turbinati, che impediscono la formazione di aderenze. L'intervento si esegue in anestesia generale e il paziente torna a casa il mattino seguente."
+          ]
+        },
+        {
+          "titolo": "Il decorso",
+          "paragrafi": [
+            "È consigliata una convalescenza a casa di 8-10 giorni. Servono medicazioni in ambulatorio due volte a settimana, per controllare la cicatrizzazione e aspirare le secrezioni. In decima giornata si rimuovono i cerottini, il supporto esterno e le lastrine. Gonfiore e lividi si riducono nelle settimane successive; la forma definitiva si apprezza nel corso dei mesi."
+          ]
+        },
+        {
+          "titolo": "Rinoplastica secondaria",
+          "paragrafi": [
+            "Quando un naso è già stato operato e il risultato non è soddisfacente, si parla di rinoplastica secondaria o di revisione. È un intervento più complesso, perché i tessuti sono già stati modificati, e richiede ancora più esperienza nella valutazione e nella pianificazione."
+          ]
+        },
+        {
+          "titolo": "Le fotografie e il progetto",
+          "paragrafi": [
+            "Durante la visita si eseguono fotografie standardizzate del volto, di fronte, di profilo e dal basso. Sulla fotografia di profilo si prepara un'ipotesi grafica di modifica, che aiuta a parlare la stessa lingua: il paziente vede quale tipo di cambiamento è ragionevole aspettarsi, il chirurgo capisce meglio cosa il paziente desidera. Non è una promessa di risultato, ma uno strumento per decidere insieme."
+          ]
+        },
+        {
+          "titolo": "Prima dell'intervento",
+          "paragrafi": [
+            "Prepararsi bene aiuta il recupero e rende più sereni i giorni successivi. Nelle due settimane che precedono l'intervento conviene evitare aspirina e antinfiammatori, che aumentano il sanguinamento, e sospendere il fumo, che rallenta la guarigione dei tessuti. Prima di ricoverarsi si eseguono gli esami del sangue e la visita anestesiologica. È utile organizzare per tempo i giorni di convalescenza, liberi da impegni di lavoro e attività sportive."
+          ]
+        },
+        {
+          "titolo": "Il setto e i turbinati",
+          "paragrafi": [
+            "Il setto nasale deviato e i turbinati ingrossati sono le cause più comuni di naso chiuso. La settoplastica raddrizza il setto, la riduzione dei turbinati ne diminuisce il volume conservandone la funzione. Si possono eseguire da sole, quando il problema è solo respiratorio, oppure insieme alla rinoplastica estetica, con un unico intervento e un'unica convalescenza."
+          ]
+        },
+        {
+          "titolo": "Aspettative realistiche",
+          "paragrafi": [
+            "Il naso ideale non esiste: esiste il naso giusto per quel volto. Un buon risultato è armonico con fronte, zigomi, labbra e mento, e mantiene un aspetto naturale. Per questo la visita comprende sempre un colloquio sulle motivazioni e sulle aspettative: capire cosa desidera il paziente, e cosa è ragionevole ottenere, è il primo passo di un intervento ben riuscito."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Da che età si può fare? In genere a crescita del volto completata.",
+            "Resteranno cicatrici? Con la tecnica open una piccola cicatrice sotto la punta, che col tempo si vede poco.",
+            "Respirerò meglio? Se ci sono difetti funzionali, si correggono nello stesso intervento.",
+            "Quando torno al lavoro? Di solito dopo 10-14 giorni, secondo il lavoro."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "prof.mariobussi",
+    "nota": "il Professore non ha profili social: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "domanda",
+        "titolo": "Voce roca da più di 3 settimane?",
+        "risposta": "È il momento di una visita.",
+        "didascalia": "Quasi sempre è una laringite o uno sforzo vocale. Ma se dura più di tre settimane, soprattutto in chi fuma, la laringe va guardata con l'endoscopio: è veloce e non fa male.",
+        "hashtag": "#raucedine #laringe #otorino"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Russare: quando è un problema",
+        "punti": [
+          "Pause del respiro di notte",
+          "Sonnolenza di giorno",
+          "Mal di testa al risveglio",
+          "Pressione alta"
+        ],
+        "didascalia": "Il russamento può nascondere le apnee ostruttive del sonno. Si studiano con endoscopia e un esame del sonno a casa.",
+        "hashtag": "#russamento #apneenotturne #sonno"
+      },
+      {
+        "stile": "foto",
+        "immagine": "naso",
+        "titolo": "Rinoplastica",
+        "sottotitolo": "Un naso armonico che respira bene",
+        "didascalia": "Estetica e funzione si correggono insieme, nello stesso intervento: setto, turbinati e forma del naso. E senza tamponi.",
+        "hashtag": "#rinoplastica #naso #chirurgia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "segreteria@mariobussi.com",
+    "luoghi": [
+      {
+        "tipo": "Studio privato",
+        "nome": "Studio privato",
+        "breve": "Piazza Statuto 4",
+        "indirizzo": "Piazza Statuto 4",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di piazza Statuto 4 a Torino"
+      },
+      {
+        "tipo": "Studio privato · Centro Testa e Collo",
+        "nome": "Studio privato · Centro Testa e Collo",
+        "breve": "Piazza Armando Diaz 7",
+        "indirizzo": "Piazza Armando Diaz 7",
+        "citta": "Milano",
+        "mappa": true,
+        "principale": false,
+        "frase": "lo studio di piazza Diaz 7 a Milano"
+      },
+      {
+        "tipo": "Ospedale universitario IRCCS",
+        "nome": "Ospedale universitario IRCCS",
+        "breve": "Via Olgettina 60",
+        "indirizzo": "Via Olgettina 60",
+        "citta": "Milano",
+        "mappa": true,
+        "principale": false,
+        "frase": "l'Ospedale San Raffaele di Milano"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "A Torino in piazza Statuto 4 e a Milano in piazza Diaz 7, su appuntamento. Porti referti, esami e immagini che ha già.",
+    "telefono": "0115214212",
+    "telefonoLabel": "011 521 4212",
+    "chiamaLabel": "lo studio di Torino",
+    "whatsapp": null,
+    "saluto": "Professore",
+    "oggettoMail": "Richiesta di visita otorinolaringoiatrica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce: la segreteria La ricontatta per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:30",
+        "10:30",
+        "11:30"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate dalla segreteria.",
+      "tipi": [
+        "Prima visita",
+        "Controllo",
+        "Secondo parere"
+      ],
+      "motivi": [
+        "Visita otorinolaringoiatrica",
+        "Raucedine",
+        "Valutazione oncologica testa-collo",
+        "Naso e sinusite",
+        "Rinoplastica",
+        "Russamento",
+        "Tiroide",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "un controllo otorinolaringoiatrico",
+        "una raucedine che non passa",
+        "una valutazione oncologica testa-collo",
+        "un problema di naso e seni paranasali",
+        "una valutazione per rinoplastica",
+        "il russamento",
+        "dei noduli della tiroide",
+        "un problema di orecchio, naso o gola"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio di Torino · piazza Statuto 4",
+          "frase": "lo studio di piazza Statuto 4 a Torino"
+        },
+        {
+          "nome": "Studio di Milano · piazza Diaz 7",
+          "frase": "lo studio di piazza Diaz 7 a Milano"
+        }
+      ],
+      "privacy": "https://mariobussi.com/privacy-e-cookie-policy.html",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo o gli esami che ha già fatto"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#EEF6F6",
+      "ink": "#0D1B22",
+      "muted": "#566870",
+      "line": "#D5E5E6",
+      "brand": "#08767C",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#00C2C2",
+      "deep": "#0A2530",
+      "deep-ink": "#B8D2D6",
+      "urgenza": "#C8453B"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Marcellus&family=Commissioner:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Marcellus",
+    "fontTesti": "Commissioner",
+    "fontUi": "Commissioner",
+    "favicon": "/bussi-t9pd/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/bussi-t9pd/brand/brand.json",
+    "pagine": [
+      "https://mariobussi.com/",
+      "https://mariobussi.com/curriculum-vitae.html",
+      "https://mariobussi.com/studio-torino.html",
+      "https://mariobussi.com/servizi/tumore-laringe.html",
+      "https://mariobussi.com/servizi/russamento.html",
+      "https://mariobussi.com/servizi/rinoplastica.html",
+      "https://mariobussi.com/servizi/chirurgia-laser.html",
+      "https://mariobussi.com/servizi/endoscopia.html"
+    ]
+  }
+}

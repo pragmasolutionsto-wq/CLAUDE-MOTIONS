@@ -1,0 +1,357 @@
+---
+// Layout "distretto" (prima demo: Prof. Mario Bussi, otorinolaringoiatra, oncologia testa-collo, Torino e Milano). Costruito sul
+// profilo della testa del suo logo: Marcellus + Commissioner, verde acqua del logo #00C2C2 / #08767C su blu notte #0A2530.
+// Interattivi: prenotazione per sede (Torino / Milano / San Raffaele con canali diversi, prenotazione online a Milano) + motivo →
+// mail già scritta alla sede giusta; «Testa e collo, punto per punto» (profilo SVG con 8 distretti cliccabili e tab da tastiera →
+// cosa c'è, malattie, come si cura, articolo, prenota); «La regola delle tre settimane» (segnali da spuntare → indicazione sobria).
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const P = x.prenota;
+const motivi = x.motivi as any[];
+const reg = x.regioni as any[];
+const sedi = x.sediL as any[];
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const msg0 = `Buongiorno Professore, vorrei prenotare una visita per ${motivi[0].frase} presso ${sedi[0].frase}.`;
+const mailHref = (to: string, t: string) => `mailto:${to}?subject=${encodeURIComponent(P.oggettoMail)}&body=${encodeURIComponent(t)}`;
+const punti: Record<string, [number, number, number, number]> = { naso: [322, 186, 24, 30], orecchio: [176, 222, 17, 30], bocca: [300, 268, 22, 15], faringe: [248, 282, 16, 40], salivari: [206, 290, 20, 24], laringe: [270, 368, 15, 22], tiroide: [262, 430, 24, 14], collo: [200, 395, 24, 40] };
+const etichette: Record<string, [number, number, string]> = { naso: [372, 160, 'start'], orecchio: [150, 160, 'end'], bocca: [372, 272, 'start'], faringe: [248, 222, 'middle'], salivari: [150, 300, 'end'], laringe: [320, 372, 'start'], tiroide: [320, 440, 'start'], collo: [150, 410, 'end'] };
+const nomeCorto: Record<string, string> = { naso: 'Naso e seni', orecchio: 'Orecchio', bocca: 'Cavo orale', faringe: 'Faringe', salivari: 'Salivari', laringe: 'Laringe', tiroide: 'Tiroide', collo: 'Collo' };
+const nodi = reg.map((r) => { const [cx, cy, rx, ry] = punti[r.id]; const [lx, ly, a] = etichette[r.id]; return { id: r.id, cx, cy, rx, ry, lx, ly, a, nome: nomeCorto[r.id] }; });
+const linkReg = (l: string) => (l === 'articolo' ? `/${m.slug}/articolo` : l ? `/${m.slug}/blog/${l}` : '');
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <div class="bg-deep text-[13px] text-deep-ink">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-x-6 gap-y-1 px-4 py-2 sm:px-8">
+      <span>Torino · piazza Statuto 4 &nbsp;·&nbsp; Milano · piazza Diaz 7</span>
+      <a href={`mailto:${x.urgenze}`} class="font-semibold text-white hover:underline">Per urgenze gravi: {x.urgenze}</a>
+    </div>
+  </div>
+  <header class="sticky z-40 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} class="flex items-center gap-3" aria-label="Prof. Mario Bussi, Otorinolaringoiatra">
+        <img src={m.brand.marchio} alt="" width="512" height="512" class="h-10 w-10" />
+        <span class="leading-tight"><span class="block font-head text-[19px] tracking-[0.06em] text-deep sm:text-[22px]">MARIO BUSSI</span><span class="block text-[11.5px] uppercase tracking-[0.18em] text-brand">Otorinolaringoiatra</span></span>
+      </a>
+      <nav class="hidden items-center gap-6 text-[14.5px] text-ink/75 xl:flex" aria-label="Sezioni">
+        <a href="#aree" class="hover:text-brand">Testa e collo</a><a href="#segnali" class="hover:text-brand">I segnali</a><a href="#chirurgia" class="hover:text-brand">Chirurgia</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#sedi" class="hover:text-brand">Dove ricevo</a>
+      </nav>
+      <a href="#prenota-box" class="btn !min-h-[40px] shrink-0 !rounded-full bg-brand !px-5 text-[14px] text-white hover:bg-deep">Prenoti</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative" data-hero>
+      <div class="relative h-[300px] overflow-hidden bg-deep sm:h-[520px]"><img src={foto.quadro} alt="Il Prof. Mario Bussi" width="1920" height="791" fetchpriority="high" class="h-full w-full object-cover object-[78%_30%]" data-foto-hero /></div>
+      <div class="relative mx-auto -mt-16 max-w-7xl px-4 sm:-mt-40 sm:px-8">
+        <div class="max-w-3xl rounded-[28px] bg-white p-6 shadow-[0_30px_80px_-40px_rgba(10,37,48,.5)] sm:p-10" data-entra>
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand">{x.hero.eyebrow}</p>
+          <h1 class="mt-4 font-head text-[2.6rem] leading-[1.05] text-deep sm:text-[4rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-5 max-w-2xl text-[17.5px] leading-relaxed text-ink/80">{x.hero.testo}</p>
+          <dl class="mt-8 grid grid-cols-3 gap-4 border-t border-line pt-6">
+            {(x.numeri as any[]).map((n) => <div><dt class="sr-only">{n.testo}</dt><dd><span class="block text-[11px] uppercase tracking-[0.14em] text-muted">{n.pre}</span><span class="block font-head text-[1.4rem] leading-none text-brand sm:text-[2.6rem]" data-conta={n.valore} data-fmt={n.fmt}>{n.fmt}</span><span class="mt-1.5 block text-[12.5px] leading-snug text-muted">{n.testo}</span></dd></div>)}
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRENOTA PER SEDE -->
+    <section class="px-4 py-14 sm:px-8 sm:py-20">
+      <div id="prenota-box" class="mx-auto grid max-w-7xl gap-6 rounded-[28px] bg-deep p-5 text-deep-ink sm:p-8 lg:grid-cols-12" data-prenota-box data-sedi={JSON.stringify(sedi)} data-entra>
+        <div class="lg:col-span-7">
+          <p class="font-head text-[1.7rem] text-white">Dove preferisce essere visitato?</p>
+          <div class="mt-4 grid gap-3 sm:grid-cols-3" role="radiogroup" aria-label="Sede">
+            {sedi.map((s, i) => <label class="sede-b"><input type="radio" name="sede" value={s.id} checked={i === 0} class="sr-only" /><span><img src={s.img} alt="" width="313" height="313" loading="lazy" class="h-16 w-16 rounded-2xl object-cover" /><strong>{s.nome}</strong><small>{s.struttura}</small></span></label>)}
+          </div>
+          <p class="mt-4 text-[14px]" data-sede-nota>{sedi[0].nota} {sedi[0].indirizzo}, {sedi[0].citta}.</p>
+        </div>
+        <div class="flex flex-col gap-3 lg:col-span-5">
+          <label class="block"><span class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-deep-ink">Per che cosa</span>
+            <select class="campo mt-2 !rounded-2xl bg-white text-ink" data-motivo>{motivi.map((t) => <option value={t.id} data-frase={t.frase}>{t.nome}</option>)}</select></label>
+          <div class="rounded-2xl border border-white/15 bg-white/5 px-4 py-3"><p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">Il Suo messaggio</p><p class="mt-1 text-[15px] leading-snug text-white" data-anteprima aria-live="polite">{msg0}</p></div>
+          <div class="grid gap-2 sm:grid-cols-2">
+            <a href={mailHref(sedi[0].email, msg0)} class="btn !rounded-full bg-brand2 text-deep hover:bg-white" data-prenota><Icona nome="mail" /> Invii la mail</a>
+            <a href={telHref(sedi[0].tel)} class="btn !rounded-full border border-white/30 text-white hover:bg-white/10" data-tel-sede><Icona nome="tel" /> <span data-tel-label>{sedi[0].telLabel}</span></a>
+          </div>
+          <a href={sedi[1].online} target="_blank" rel="noopener" class="btn !rounded-full bg-white text-deep hover:bg-brand2" data-online hidden><Icona nome="calendario" /> Prenoti online lo studio di Milano</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTA E COLLO -->
+    <section id="aree" class="bg-surface px-4 py-16 sm:px-8 sm:py-24" data-mappa data-reg={JSON.stringify(reg)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand">Di cosa mi occupo</p><h2 class="mt-2 font-head text-[2.4rem] leading-[1.08] text-deep sm:text-[3.4rem]" data-sale>Testa e collo, punto per punto.</h2></div>
+          <p class="text-[16.5px] leading-relaxed text-ink/80 lg:col-span-5">Malattie infiammatorie, malformative e tumorali di un distretto piccolo e prezioso: respiro, voce, deglutizione, udito. Scelga un punto.</p>
+        </div>
+        <div class="mt-10 grid gap-8 lg:grid-cols-12 lg:items-start">
+          <div class="lg:col-span-6">
+            <figure class="relative rounded-[28px] bg-white p-4 sm:p-6">
+              <svg viewBox="40 20 420 500" class="mx-auto w-full max-w-[460px]" role="img" aria-labelledby="testa-tit" data-testa>
+                <title id="testa-tit">Profilo schematico di testa e collo con i distretti otorinolaringoiatrici</title>
+                <path d="M180 40 C262 30 312 72 318 132 L324 170 L362 214 L328 226 L332 252 L322 262 L336 276 L320 288 L324 314 C304 332 284 336 270 338 L294 510 L148 510 L160 404 C108 384 80 322 82 232 C84 122 112 50 180 40 Z" class="profilo" />
+                <path d="M228 250 C240 268 246 300 250 330 C254 380 262 440 266 500" class="via-aerea" />
+                {nodi.map((n) => <g class="distretto" data-distretto={n.id}><ellipse cx={n.cx} cy={n.cy} rx={n.rx} ry={n.ry} /><circle cx={n.cx} cy={n.cy} r="4.5" class="centro" /><text x={n.lx} y={n.ly} text-anchor={n.a} class="te-et">{n.nome}</text></g>)}
+              </svg>
+            </figure>
+          </div>
+          <div class="lg:col-span-6">
+            <div class="flex flex-wrap gap-2" role="tablist" aria-label="Distretti">
+              {reg.map((r, i) => <button type="button" role="tab" id={`dt-${r.id}`} aria-controls="dt-pannello" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="dt-tab rounded-full px-4 py-2 text-[14px] font-semibold" data-dt-tab={r.id}>{r.nome}</button>)}
+            </div>
+            <div id="dt-pannello" role="tabpanel" aria-labelledby={`dt-${reg[0].id}`} class="mt-5 rounded-[28px] bg-white p-6 sm:p-8" aria-live="polite">
+              <h3 class="font-head text-[2rem] leading-tight text-deep" data-dt-nome>{reg[0].nome}</h3>
+              <p class="mt-2 text-[16px] leading-relaxed text-ink/85" data-dt-testo>{reg[0].testo}</p>
+              <p class="mt-6 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Malattie di cui mi occupo</p>
+              <ul class="mt-2 space-y-2" data-dt-pat>{reg[0].patologie.map((t: string) => <li class="flex items-start gap-3 text-[15.5px] text-deep"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand2"></span>{t}</li>)}</ul>
+              <p class="mt-6 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Come si studia e si cura</p>
+              <p class="mt-1 text-[15.5px] leading-relaxed text-ink/85" data-dt-come>{reg[0].come}</p>
+              <div class="mt-6 flex flex-wrap gap-2"><button type="button" class="btn !rounded-full bg-brand text-white hover:bg-deep" data-dt-prenota data-motivo={reg[0].motivo}>Prenoti una visita</button><a href={linkReg(reg[0].link) || '#'} class="btn !rounded-full text-brand ring-1 ring-line hover:ring-brand" data-dt-link hidden={!reg[0].link}>Legga l'articolo</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEGNALI -->
+    <section id="segnali" class="bg-deep px-4 py-16 text-deep-ink sm:px-8 sm:py-24" data-segnali>
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-start">
+        <div class="lg:col-span-5">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand2">Prevenzione oncologica</p>
+          <h2 class="mt-2 font-head text-[2.4rem] leading-[1.08] text-white sm:text-[3.2rem]" data-sale>La regola delle tre settimane.</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed">Molti segnali dei tumori di testa e collo assomigliano a disturbi comuni. La differenza è il tempo: se non passano in tre settimane, vanno visti da uno specialista. Riconosciuti presto, si curano con interventi meno estesi.</p>
+          <figure class="mt-8 overflow-hidden rounded-[24px]"><img src={foto.vestizione} alt="Il Prof. Bussi si prepara in sala operatoria" width="1800" height="1200" loading="lazy" class="aspect-[16/10] w-full object-cover object-[60%_40%]" /></figure>
+        </div>
+        <form class="rounded-[28px] bg-white/[0.05] p-6 ring-1 ring-white/10 sm:p-8 lg:col-span-7" data-segnali-form onsubmit="return false">
+          <fieldset><legend class="font-head text-[1.4rem] text-white">Spunti ciò che Le succede</legend>
+            <div class="mt-4 space-y-2">{(x.segnali as string[]).map((s, i) => <label class="flex items-start gap-3 rounded-2xl bg-white/[0.04] px-4 py-3 text-[15.5px] text-white hover:bg-white/[0.08]"><input type="checkbox" value={i} class="mt-1 h-4 w-4 accent-[var(--c-brand2)]" data-segnale={i === (x.segnali.length - 1) ? 'fumo' : 'sintomo'} />{s}</label>)}</div></fieldset>
+          <div class="mt-6 rounded-2xl bg-white p-5 text-ink" aria-live="polite"><p class="font-head text-[1.3rem] text-deep" data-esito-titolo></p><p class="mt-1 text-[15px] leading-relaxed text-ink/80" data-esito-testo></p><button type="button" class="btn mt-4 !rounded-full bg-brand text-white hover:bg-deep" data-prenota-motivo="oncologia" data-esito-prenota hidden>Prenoti una visita</button></div>
+          <p class="mt-3 text-[12.5px] text-deep-ink/70">Non è una diagnosi: è un promemoria dei segnali che conviene far vedere.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CHIRURGIA -->
+    <section id="chirurgia" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand">IRCCS San Raffaele, Milano</p><h2 class="mt-2 font-head text-[2.4rem] leading-[1.08] text-deep sm:text-[3.2rem]" data-sale>Innovazione tecnologica e minore invasività.</h2></div>
+          <p class="text-[16.5px] leading-relaxed text-ink/80 lg:col-span-5">Dalla diagnosi endoscopica alla chirurgia laser, fino alla chirurgia oncologica e ricostruttiva quando serve.</p>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-12" data-galleria>
+          <figure class="overflow-hidden rounded-[24px] md:col-span-7 md:row-span-2"><img src={foto.microscopio} alt="Il Prof. Bussi in sala operatoria al microscopio" width="1800" height="1195" loading="lazy" class="h-full w-full object-cover" /></figure>
+          {[['Endoscopia', 'Con fibre ottiche si vedono anche le zone più nascoste, come laringe e rinofaringe, e si può prelevare un frammento per l\'esame istologico.', foto.endoscopia], ['Chirurgia laser', 'Laringe, naso, cavo orale e chirurgia del sonno: interventi mini-invasivi, cicatrizzazione più rapida, meno sanguinamento.', foto.sala]].map(([t, d, img]) => <article class="flex overflow-hidden rounded-[24px] bg-surface md:col-span-5"><img src={img} alt="" width="1800" height="1200" loading="lazy" class="w-[42%] shrink-0 object-cover" /><div class="p-5"><h3 class="font-head text-[1.35rem] text-deep">{t}</h3><p class="mt-1 text-[14.5px] leading-relaxed text-ink/80">{d}</p></div></article>)}
+        </div>
+        <ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{[['Oncologia testa e collo', 'Laringe, cavo orale, faringe, ghiandole salivari.'], ['Chirurgia ricostruttiva', 'Per ripristinare forma e funzione dopo la chirurgia oncologica.'], ['Chirurgia tiroidea', 'Noduli, gozzo e tumori della tiroide.'], ['Rinoplastica', 'Funzionale ed estetica, senza tamponi.']].map(([t, d]) => <li class="rounded-2xl p-5 ring-1 ring-line"><h3 class="font-head text-[1.2rem] text-deep">{t}</h3><p class="mt-1 text-[14px] leading-relaxed text-ink/75">{d}</p></li>)}</ul>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <figure class="overflow-hidden rounded-[28px] bg-white"><img src={foto.ritratto} alt="Il Prof. Mario Bussi" width="960" height="648" loading="lazy" class="w-full" /></figure>
+          <p class="mt-6 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Socio di</p>
+          <ul class="mt-2 flex flex-wrap gap-2">{(x.societa as string[]).map((s) => <li class="rounded-full bg-white px-4 py-2 font-semibold text-[14px] text-deep">{s}</li>)}</ul>
+        </div>
+        <div class="lg:col-span-7">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand">Chi sono</p>
+          <h2 class="mt-2 font-head text-[2.4rem] leading-[1.08] text-deep sm:text-[3rem]" data-sale>Torinese, chirurgo, professore.</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-ink/80">Sono nato e mi sono formato a Torino. Le mie ricerche riguardano soprattutto i tumori della testa e del collo, la loro chirurgia demolitiva e ricostruttiva, l'immunologia delle vie aeree superiori e la psico-oncologia. Sono autore di oltre 300 pubblicazioni scientifiche.</p>
+          <ol class="relative mt-10 space-y-7 pl-8" data-storia>
+            <span class="absolute bottom-2 left-[7px] top-2 w-0.5 bg-line" aria-hidden="true"></span>
+            <span class="absolute left-[7px] top-2 w-0.5 origin-top bg-brand" style="bottom:.5rem" aria-hidden="true" data-storia-linea></span>
+            {(x.cv as any[]).map((s) => <li class="relative"><span class="absolute -left-8 top-1 h-4 w-4 rounded-full border-[3px] border-surface bg-brand ring-1 ring-brand" aria-hidden="true"></span><p class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand">{s.anno}</p><h3 class="mt-0.5 font-head text-[1.3rem] text-deep">{s.titolo}</h3><p class="mt-1 text-[15.5px] leading-relaxed text-ink/80">{s.testo}</p></li>)}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] leading-[1.08] text-deep sm:text-[3rem]" data-sale>Dove ricevo</h2>
+        <div class="mt-8 grid gap-5 md:grid-cols-3">
+          {sedi.map((s) => <article class="flex flex-col overflow-hidden rounded-[24px] ring-1 ring-line"><img src={s.img} alt="" width="313" height="313" loading="lazy" class="aspect-[16/9] w-full object-cover" /><div class="flex flex-1 flex-col p-6"><p class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand">{s.struttura}</p><h3 class="mt-1 font-head text-[1.6rem] text-deep">{s.nome}</h3><p class="mt-1 text-[15px] text-ink/80">{s.indirizzo}, {s.citta}</p><p class="mt-2 text-[14px] text-muted">{s.nota}</p><p class="mt-4 text-[14.5px]"><a href={telHref(s.tel)} class="font-semibold text-brand hover:underline">{s.telLabel}</a><br /><a href={`mailto:${s.email}`} class="font-semibold text-brand hover:underline">{s.email}</a></p><div class="mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-5 text-[14px] font-semibold"><button type="button" class="text-deep hover:underline" data-scegli-sede={s.id}>Prenoti qui</button><a href={mapsHref(s.indirizzo, s.citta)} target="_blank" rel="noopener" class="text-muted hover:text-deep">Mappa</a></div></div></article>)}
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-distretto bg-surface"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] leading-tight text-deep sm:text-[3rem]" data-sale>Da leggere prima della visita</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group flex flex-col">
+              <span class="block overflow-hidden rounded-[22px]"><img src={b.img} alt="" width="900" height="560" loading="lazy" class="aspect-[4/3] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="mt-4 text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">{b.categoria} · {b.tempoLettura}</span>
+              <span class="mt-1.5 block font-head text-[1.35rem] leading-snug text-deep group-hover:text-brand">{b.titolo}</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.1rem] text-deep" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-[22px] ring-1 ring-line sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={m.brand.marchio} alt="" width="32" height="32" class="h-8 w-8 rounded-full" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="900" height="560" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-3 bottom-3 rounded-2xl bg-white px-5 py-4"><p class="font-head text-[1.55rem] leading-tight text-deep">{p.titolo}</p><p class="mt-0.5 text-sm font-semibold text-brand">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="relative flex aspect-square flex-col justify-end overflow-hidden bg-deep p-7 text-white">
+                  <img src={m.brand.marchio} alt="" width="512" height="512" class="absolute right-6 top-6 h-20 w-20 opacity-90" />
+                  <p class="relative font-head text-[2.1rem] leading-[1.08]">{p.titolo}</p><p class="relative mt-4 w-fit rounded-full bg-brand2 px-4 py-2 text-[14px] font-semibold text-deep">{p.risposta}</p>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.9rem] leading-[1.1]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full border-2 border-white"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-[2.4rem] sm:text-5xl">{P.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{P.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(P.telefono)} class="btn !rounded-full bg-white text-deep hover:bg-surface"><Icona nome="tel" /> Torino {P.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-full border border-white/50 text-white hover:bg-white/10">Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    let lenis: Lenis | null = null;
+    const vaiA = (sel: string) => { const el = document.querySelector<HTMLElement>(sel)!; const y = el.getBoundingClientRect().top + window.scrollY - 110; if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'auto' }); };
+
+    // --- Prenotazione per sede ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const SEDI = JSON.parse(box.dataset.sedi!) as { id: string; frase: string; email: string; tel: string; telLabel: string; online: string; nota: string; indirizzo: string; citta: string }[];
+    const selM = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const aggiorna = () => {
+      const s = SEDI.find((k) => k.id === box.querySelector<HTMLInputElement>('input[name="sede"]:checked')!.value)!;
+      const t = `Buongiorno Professore, vorrei prenotare una visita per ${selM.selectedOptions[0].dataset.frase} presso ${s.frase}.`;
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${s.email}?subject=${encodeURIComponent('Richiesta di visita otorinolaringoiatrica')}&body=${encodeURIComponent(t)}`;
+      box.querySelector<HTMLAnchorElement>('[data-tel-sede]')!.href = `tel:${s.tel}`; box.querySelector('[data-tel-label]')!.textContent = s.telLabel;
+      box.querySelector('[data-sede-nota]')!.textContent = `${s.nota} ${s.indirizzo}, ${s.citta}.`;
+      const on = box.querySelector<HTMLAnchorElement>('[data-online]')!; on.hidden = !s.online; if (s.online) on.href = s.online;
+      box.dataset.sedeAttiva = s.id;
+    };
+    selM.addEventListener('change', aggiorna);
+    box.querySelectorAll('input[name="sede"]').forEach((r) => r.addEventListener('change', aggiorna));
+    const scegli = (id: string) => { selM.value = id; aggiorna(); vaiA('#prenota-box'); selM.focus({ preventScroll: true }); };
+    document.querySelectorAll<HTMLElement>('[data-prenota-motivo]').forEach((b) => b.addEventListener('click', () => scegli(b.dataset.prenotaMotivo!)));
+    document.querySelectorAll<HTMLElement>('[data-scegli-sede]').forEach((b) => b.addEventListener('click', () => { const r = box.querySelector<HTMLInputElement>(`input[value="${b.dataset.scegliSede}"]`)!; r.checked = true; aggiorna(); vaiA('#prenota-box'); r.focus({ preventScroll: true }); }));
+    aggiorna();
+
+    // --- Testa e collo ---
+    const mp = document.querySelector<HTMLElement>('[data-mappa]')!;
+    const REG = JSON.parse(mp.dataset.reg!) as { id: string; nome: string; testo: string; patologie: string[]; come: string; motivo: string; link: string }[];
+    const slug = location.pathname.split('/').filter(Boolean)[0];
+    const tabs = Array.from(mp.querySelectorAll<HTMLElement>('[data-dt-tab]'));
+    const mostra = (id: string) => {
+      const r = REG.find((k) => k.id === id)!;
+      tabs.forEach((t) => { const s = t.dataset.dtTab === id; t.setAttribute('aria-selected', String(s)); t.tabIndex = s ? 0 : -1; });
+      mp.querySelectorAll<SVGGElement>('[data-distretto]').forEach((g) => g.classList.toggle('scelto', g.dataset.distretto === id));
+      mp.querySelector('[data-dt-nome]')!.textContent = r.nome; mp.querySelector('[data-dt-testo]')!.textContent = r.testo; mp.querySelector('[data-dt-come]')!.textContent = r.come;
+      const ul = mp.querySelector('[data-dt-pat]')!;
+      ul.replaceChildren(...r.patologie.map((t) => { const li = document.createElement('li'); li.className = 'flex items-start gap-3 text-[15.5px] text-deep'; li.innerHTML = '<span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand2"></span><span></span>'; li.lastElementChild!.textContent = t; return li; }));
+      const ln = mp.querySelector<HTMLAnchorElement>('[data-dt-link]')!; ln.hidden = !r.link; ln.href = r.link === 'articolo' ? `/${slug}/articolo` : `/${slug}/blog/${r.link}`;
+      mp.querySelector<HTMLElement>('[data-dt-prenota]')!.dataset.motivo = r.motivo;
+      mp.querySelector('#dt-pannello')!.setAttribute('aria-labelledby', `dt-${id}`);
+      mp.dataset.distrettoAttivo = id;
+      if (!ridotto) gsap.fromTo('#dt-pannello > *', { opacity: 0.3, y: 6 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.03 });
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => mostra(t.dataset.dtTab!));
+      t.addEventListener('keydown', (e) => {
+        const k = (e as KeyboardEvent).key; let j = -1;
+        if (k === 'ArrowRight' || k === 'ArrowDown') j = (i + 1) % tabs.length; else if (k === 'ArrowLeft' || k === 'ArrowUp') j = (i - 1 + tabs.length) % tabs.length; else if (k === 'Home') j = 0; else if (k === 'End') j = tabs.length - 1;
+        if (j >= 0) { e.preventDefault(); tabs[j].focus(); mostra(tabs[j].dataset.dtTab!); }
+      });
+    });
+    mp.querySelectorAll<SVGGElement>('[data-distretto]').forEach((g) => g.addEventListener('click', () => mostra(g.dataset.distretto!)));
+    mp.querySelector<HTMLElement>('[data-dt-prenota]')!.addEventListener('click', (e) => scegli((e.currentTarget as HTMLElement).dataset.motivo!));
+    mostra(REG[0].id);
+
+    // --- Segnali ---
+    const sg = document.querySelector<HTMLFormElement>('[data-segnali-form]')!;
+    const valuta = () => {
+      const sint = sg.querySelectorAll('input[data-segnale="sintomo"]:checked').length, fumo = !!sg.querySelector('input[data-segnale="fumo"]:checked');
+      const [t, d] = sint > 0 ? ['Le consiglio una visita in tempi brevi.', `Ha indicato ${sint === 1 ? 'un segnale' : sint + ' segnali'} da far valutare a uno specialista otorinolaringoiatra, con un esame endoscopico se serve. Nella maggior parte dei casi la causa è benigna, ma è importante saperlo presto.`]
+        : fumo ? ['Un controllo periodico ha senso.', 'Senza sintomi non c\'è urgenza, ma il fumo è il principale fattore di rischio per laringe e cavo orale. Smettere è il primo passo; una visita di controllo può essere utile.']
+        : ['Nessun segnale indicato.', 'Se uno di questi disturbi compare e dura più di tre settimane, ne parli con il Suo medico o con uno specialista.'];
+      sg.querySelector('[data-esito-titolo]')!.textContent = t; sg.querySelector('[data-esito-testo]')!.textContent = d;
+      sg.querySelector<HTMLElement>('[data-esito-prenota]')!.hidden = !(sint > 0 || fumo);
+      sg.dataset.esitoLivello = sint > 0 ? 'visita' : fumo ? 'controllo' : 'nessuno';
+    };
+    sg.addEventListener('change', valuta); valuta();
+
+    if (!ridotto) {
+      lenis = new Lenis({ anchors: { offset: -110 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis!.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.1em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= 4 ? 'text-brand' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('[data-foto-hero]', { scale: 1.12, duration: 1.8, ease: 'power2.out' }, 0)
+        .from('[data-entra]', { y: 40, opacity: 0, duration: 0.9, stagger: 0.12 }, 0.2)
+        .from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.9, stagger: 0.06 }, 0.4);
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.8, delay: 1, ease: 'power2.out', onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString('it-IT'); }, onComplete: () => { el.textContent = el.dataset.fmt!; } });
+      });
+      gsap.to('[data-foto-hero]', { yPercent: 12, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.from('[data-testa] .distretto', { opacity: 0, scale: 0.6, transformOrigin: 'center', duration: 0.6, stagger: 0.07, ease: 'back.out(1.6)', scrollTrigger: { trigger: '[data-testa]', start: 'top 75%', once: true } });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 30, opacity: 0, duration: 0.8, scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      gsap.from('[data-galleria] > *', { y: 30, opacity: 0, duration: 0.7, stagger: 0.1, scrollTrigger: { trigger: '[data-galleria]', start: 'top 85%', once: true } });
+      gsap.fromTo('[data-storia-linea]', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '[data-storia]', start: 'top 75%', end: 'bottom 60%', scrub: true } });
+      gsap.from('[data-blog] > a', { y: 40, opacity: 0, duration: 0.7, stagger: 0.1, scrollTrigger: { trigger: '[data-blog]', start: 'top 88%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>

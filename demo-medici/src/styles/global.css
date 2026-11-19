@@ -657,3 +657,31 @@ html { scroll-behavior: smooth; }
   .stile-sezione .campo, .stile-sezione .slot, .stile-sezione .giorno { border-radius: 14px; }
   .stile-sezione .btn { border-radius: 999px; }
 }
+
+/* Layout "distretto": prenotazione per sede, testa e collo, segnali */
+@layer components {
+  .sede-b { cursor: pointer; }
+  .sede-b span { display: flex; height: 100%; flex-direction: column; gap: .35rem; border-radius: 20px; border: 1px solid rgb(255 255 255 / .18); padding: .8rem; transition: background-color .2s, border-color .2s, color .2s; }
+  .sede-b strong { font-size: 16px; color: #fff; }
+  .sede-b small { font-size: 12.5px; line-height: 1.3; color: var(--c-deep-ink); }
+  .sede-b:hover span { border-color: rgb(255 255 255 / .5); }
+  .sede-b input:checked + span { background: #fff; border-color: #fff; }
+  .sede-b input:checked + span strong { color: var(--c-deep); }
+  .sede-b input:checked + span small { color: var(--c-brand); }
+  .sede-b input:focus-visible + span { outline: 2px solid var(--c-brand2); outline-offset: 2px; }
+  .profilo { fill: var(--c-surface); stroke: color-mix(in srgb, var(--c-brand) 60%, #fff); stroke-width: 2.5; }
+  .via-aerea { fill: none; stroke: color-mix(in srgb, var(--c-brand2) 55%, #fff); stroke-width: 10; stroke-linecap: round; opacity: .55; }
+  .distretto { cursor: pointer; }
+  .distretto ellipse { fill: color-mix(in srgb, var(--c-brand2) 18%, transparent); stroke: var(--c-brand2); stroke-width: 1.5; stroke-dasharray: 4 4; transition: fill .3s, stroke .3s; }
+  .distretto .centro { fill: var(--c-brand); }
+  .distretto:hover ellipse { fill: color-mix(in srgb, var(--c-brand2) 32%, transparent); }
+  .distretto.scelto ellipse { fill: color-mix(in srgb, var(--c-brand2) 50%, transparent); stroke: var(--c-brand); stroke-width: 2.5; stroke-dasharray: none; }
+  .te-et { font: 600 14px/1 var(--font-sans, sans-serif); fill: var(--c-muted); pointer-events: none; }
+  .distretto.scelto .te-et { fill: var(--c-deep); font-weight: 700; }
+  .dt-tab { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s; }
+  .dt-tab:hover { box-shadow: inset 0 0 0 1px var(--c-deep); }
+  .dt-tab[aria-selected="true"] { background: var(--c-deep); color: #fff; }
+  .stile-distretto .card { border-radius: 24px; }
+  .stile-distretto .campo, .stile-distretto .slot, .stile-distretto .giorno { border-radius: 14px; }
+  .stile-distretto .btn { border-radius: 999px; }
+}

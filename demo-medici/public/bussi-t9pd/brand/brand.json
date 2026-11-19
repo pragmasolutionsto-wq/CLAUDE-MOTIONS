@@ -1,0 +1,68 @@
+{
+  "medico": "Prof. Mario Bussi",
+  "specialita": "Otorinolaringoiatra, oncologia e chirurgia cervico-facciale; Senior Consultant IRCCS San Raffaele",
+  "sito": "https://mariobussi.com/ (IT/EN/FR/RU)",
+  "logo": {
+    "marchio": "img/marchio.png (profilo di testa verde acqua)",
+    "logo": "img/logo.png 228x47 (troppo piccolo: in demo logotipo di testo)"
+  },
+  "colori": {
+    "verde acqua": "#00CCCB"
+  },
+  "font_demo": "Marcellus + Commissioner",
+  "foto": [
+    "2.jpg",
+    "ADT_2763.jpg",
+    "ADT_2804.jpg",
+    "ADT_2846.jpg",
+    "ADT_2858.jpg",
+    "ADT_2893.jpg",
+    "ADT_2931.jpg",
+    "cropped-logo_top.png",
+    "hp_contacts_01.jpeg",
+    "hp_contacts_02.jpeg",
+    "hp_contacts_03.jpeg",
+    "hp_slide_01.jpeg",
+    "ico_box_spec_01.png",
+    "ico_box_spec_02.png",
+    "ico_box_spec_03.png",
+    "ico_box_spec_04.png",
+    "ico_box_spec_05.png",
+    "ico_box_spec_06.png",
+    "img_box_hp_01.jpeg",
+    "img_box_hp_02.jpeg",
+    "img_box_hp_03.jpeg",
+    "img_box_hp_04.jpeg",
+    "img_box_hp_05.jpeg",
+    "img_box_hp_06.jpeg",
+    "img_box_hp_07.jpeg",
+    "img_box_hp_08.jpeg",
+    "img_round_hp.png",
+    "logo_footer.png",
+    "logo_top.png",
+    "slide_main_01.jpeg",
+    "slide_main_02.jpeg",
+    "slide_main_03.jpeg"
+  ],
+  "contatti": {
+    "torino": "Piazza Statuto 4 · 011 521 4212 · segreteria@mariobussi.com",
+    "milano": "Piazza Diaz 7 · 02 875 644 · info@centrotestaecollo.it · prenotazione online centrotestaecollo.it/prenota-online/",
+    "san_raffaele": "Via Olgettina 60 · 02 2643 3522 · bussi.mario@hsr.it",
+    "urgenze": "urgenze@mariobussi.com",
+    "whatsapp": null
+  },
+  "dati": [
+    "oltre 20.000 interventi, oltre 18.000 da primo operatore",
+    "oltre 300 pubblicazioni",
+    "ex ordinario e direttore ORL San Raffaele; oggi Senior Consultant",
+    "Past President SIOeChCF e AUORL",
+    "diploma Paris VI chirurgia maxillo-facciale",
+    "formazione MSKCC, Manhattan EET, Straith Detroit, Gustave Roussy",
+    "società SIOeChCF, AIOCC, SFORL, AICEFF"
+  ],
+  "aggancio": [
+    "menu duplicati e struttura confusa",
+    "shortcode non renderizzato '[/vc_column_text]' visibile in home",
+    "nessun blog, nessun social"
+  ]
+}
