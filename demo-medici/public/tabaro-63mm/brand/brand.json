@@ -1,0 +1,35 @@
+{
+  "medico": "Dott. Giuseppe Tabaro",
+  "specialita": "Otorinolaringoiatra, Patologia cervico-facciale e Audiologia; acufeni e TRT (certificato Jastreboff Hearing Disorders Foundation, Full Member TRT Association)",
+  "sito": "https://otorino-torino.it/ (WordPress, tema Divi)",
+  "logo": "logo vero: spirale (coclea) + «Dott Giuseppe Tabaro · Medical Care in Otorhinolaryngology & Audiology» → img/logo.png, logo-chiaro.png (bianco per il footer), marchio.png (spirale); firma → img/firma.png",
+  "colori": {
+    "petrolio": "#12708F",
+    "azzurro_logo": "#38AFD3",
+    "blu_notte": "#0A2533",
+    "rosso_urgenze": "#C8453B"
+  },
+  "font": {
+    "sito": "tema Divi",
+    "demo": [
+      "Red Hat Display",
+      "Red Hat Text"
+    ]
+  },
+  "contatti": {
+    "telefono": "011 745845 · 011 7412097",
+    "whatsapp_urgenze": "366 632 2012 (wa.me/393666322012 presente sul sito, verificato; è anche il numero del servizio di pronta disponibilità)",
+    "email": "info@orlteam.it",
+    "orari": "lun-ven 9-12, 14-19",
+    "studio": "Via Cigna 13, Torino, presso Centro multidisciplinare VED",
+    "chirurgia": "Clinica Fornaca di Sessant"
+  },
+  "team": "Audio & Tinnitus Team: Dott. Giuseppe Tabaro, Dott. Emanuele Gilli (tecniche audiometriche e audioprotesiche), Dott.ssa Cristina Tabaro (psicologa psicoterapeuta) — nomi dal suo sito; nelle foto di gruppo nessuno è nominato singolarmente",
+  "foto": [
+    "Servizio fotografico vero nello studio: lui in piedi accanto alla poltrona ORL (ritratto), alla scrivania, in cabina audiometrica, al microscopio, con l'endoscopio; team; sala d'attesa e ambulatorio.",
+    "Escluse le foto in cui si vede in viso una paziente durante la visita.",
+    "Repertorio: solo foto stock già presenti sul suo sito (acufene, apnea, naso, orecchio, voce, gola, bambina con otorino, ronco)."
+  ],
+  "problemi_sito": "sette articoli caricati tutti l'11/02/2025 e poi più nulla; icone Facebook e Instagram nell'header che puntano a «#» (non portano da nessuna parte); hero con testo generico e foto scontornata; urgenze e visita ordinaria su due pulsanti senza spiegare cosa è urgente; le prestazioni sono pagine lunghe e ripetitive",
+  "note": "Ha già pagato per un blog e l'ha abbandonato (Trello): proporre la continuità."
+}

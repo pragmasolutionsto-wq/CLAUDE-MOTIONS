@@ -14,6 +14,7 @@
   --color-deep-ink: var(--c-deep-ink);
   --color-ocra: var(--c-ocra, #8C5E12);
   --color-grigio: var(--c-grigio, #DCE0E2);
+  --color-urgenza: var(--c-urgenza, #C8453B);
   --font-head: var(--f-head);
   --font-sans: var(--f-sans);
 }
@@ -439,4 +440,40 @@ html { scroll-behavior: smooth; }
   .stile-donna .card { border-radius: 26px; }
   .stile-donna .campo, .stile-donna .slot, .stile-donna .giorno { border-radius: 14px; }
   .stile-donna .btn { border-radius: 999px; }
+}
+
+/* Layout "spirale": urgenze, modello dell'acufene, visita, chirurgia */
+@layer components {
+  .modo-tab { color: var(--c-muted); background: var(--c-surface); border-bottom: 3px solid transparent; transition: background-color .2s, color .2s, border-color .2s; }
+  .modo-tab[aria-selected="true"] { background: #fff; color: var(--c-deep); border-color: var(--c-brand); }
+  .modo-tab.urg[aria-selected="true"] { border-color: var(--c-urgenza); }
+  .urg-opz { background: #fff; color: var(--c-deep); transition: background-color .2s, border-color .2s; }
+  .urg-opz:hover { border-color: var(--c-deep); }
+  .urg-opz[aria-checked="true"] { border-color: var(--c-urgenza); background: color-mix(in srgb, var(--c-urgenza) 7%, #fff); box-shadow: inset 0 0 0 1px var(--c-urgenza); }
+  .liv-118 { background: var(--c-urgenza); color: #fff; }
+  .liv-oggi { background: color-mix(in srgb, var(--c-urgenza) 14%, #fff); color: var(--c-urgenza); }
+  .liv-48 { background: var(--c-surface); color: var(--c-brand); }
+  [data-urg-box] { background: var(--c-surface); color: var(--c-ink); }
+  [data-urg-box][data-livello="118"] { background: var(--c-urgenza); color: #fff; }
+  [data-urg-box][data-livello="118"] [data-urg-118] { background: #fff; color: var(--c-urgenza); }
+  [data-urg-box][data-livello="oggi"] { background: color-mix(in srgb, var(--c-urgenza) 8%, #fff); }
+  [data-urg-box][data-livello="oggi"] [data-urg-livello] { color: var(--c-urgenza); }
+  .vista-btn { color: var(--c-deep-ink); transition: background-color .2s, color .2s; }
+  .vista-btn[aria-pressed="true"] { background: var(--c-brand2); color: var(--c-deep); }
+  .nodo { cursor: pointer; outline: none; }
+  .nodo .nodo-c { fill: var(--c-deep); stroke: var(--c-brand2); stroke-width: 2.5; transition: fill .25s, stroke-width .25s; }
+  .nodo .nodo-t { fill: #fff; pointer-events: none; }
+  .nodo:hover .nodo-c, .nodo:focus-visible .nodo-c { stroke-width: 4; }
+  .nodo.attivo .nodo-c { fill: var(--c-brand2); }
+  .nodo.attivo .nodo-t { fill: var(--c-deep); }
+  .arco-trt { transition: stroke-opacity .4s; }
+  .con-trt .arco-trt.circolo { stroke-opacity: .2; stroke-dasharray: 5 7; }
+  .cura { display: none; }
+  .con-trt .cura { display: inline; }
+  .dist-chip { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .dist-chip:hover { border-color: var(--c-brand); }
+  .dist-chip[aria-pressed="true"] { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .passo-v.senza-foto { border-top: 4px solid var(--c-brand2); }
+  .stile-spirale .card { border-radius: 22px; }
+  .stile-spirale .campo, .stile-spirale .btn, .stile-spirale .slot, .stile-spirale .giorno { border-radius: 12px; }
 }

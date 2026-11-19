@@ -1,0 +1,1027 @@
+{
+  "slug": "tabaro-63mm",
+  "layout": "spirale",
+  "sitoOrigine": "https://otorino-torino.it/",
+  "titolo": "Dott.",
+  "nome": "Giuseppe Tabaro",
+  "specialita": "Otorinolaringoiatra e audiologo",
+  "firma": "Otorinolaringoiatra e audiologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Giuseppe Tabaro · Otorinolaringoiatra e audiologo a Torino: acufeni e TRT, sordità, naso, russamento",
+    "description": "Otorino e audiologo a Torino, via Cigna 13. Acufeni e Tinnitus Retraining Therapy, sordità improvvisa, vertigini, naso chiuso, russamento e apnee, chirurgia alla Clinica Fornaca. Visite urgenti entro 24-48 ore, prenotazione su WhatsApp."
+  },
+  "brand": {
+    "header": "logo",
+    "logoScuro": "/tabaro-63mm/img/logo.png",
+    "logoChiaro": "/tabaro-63mm/img/logo-chiaro.png",
+    "marchio": "/tabaro-63mm/img/marchio.png",
+    "logoAlt": "Dott. Giuseppe Tabaro, Medical Care in Otorhinolaryngology & Audiology"
+  },
+  "foto": {
+    "ritratto": "/tabaro-63mm/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Giuseppe Tabaro nel suo studio",
+    "volto": "/tabaro-63mm/img/marchio.png",
+    "firma": "/tabaro-63mm/img/firma.png",
+    "team": "/tabaro-63mm/img/team.webp",
+    "team2": "/tabaro-63mm/img/team2.webp",
+    "sala": "/tabaro-63mm/img/sala.webp",
+    "ambulatorio": "/tabaro-63mm/img/ambulatorio.webp",
+    "studio": "/tabaro-63mm/img/studio-poltrona.webp",
+    "scrivania": "/tabaro-63mm/img/scrivania.webp",
+    "microscopio": "/tabaro-63mm/img/microscopio.webp",
+    "audiometria": "/tabaro-63mm/img/audiometria.webp",
+    "acufene": "/tabaro-63mm/img/rep-acufene.webp",
+    "apnea": "/tabaro-63mm/img/rep-apnea.webp",
+    "naso": "/tabaro-63mm/img/rep-naso.webp",
+    "sordita": "/tabaro-63mm/img/rep-sordita.webp"
+  },
+  "hero": {
+    "eyebrow": "Otorinolaringoiatra e audiologo · Torino",
+    "titolo": "Quando l'orecchio fischia, il naso si chiude, la voce cede.",
+    "testo": "Sono otorinolaringoiatra e audiologo dal 1980. Nel mio studio di via Cigna ogni visita dura dai 30 ai 60 minuti e la faccio sempre insieme a un collaboratore laureato in tecniche audiometriche. Per i problemi che non possono aspettare, c'è un numero dedicato.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Urgenze"
+  },
+  "numeri": [
+    {
+      "valore": 1980,
+      "testo": "specialista in otorinolaringoiatria",
+      "pre": "dal"
+    },
+    {
+      "valore": 100,
+      "testo": "congressi e corsi di aggiornamento",
+      "piu": true
+    },
+    {
+      "valore": 48,
+      "testo": "ore al massimo per una visita urgente",
+      "pre": "entro"
+    }
+  ],
+  "motivi": [
+    {
+      "id": "udito",
+      "nome": "Sento meno",
+      "frase": "un calo dell'udito"
+    },
+    {
+      "id": "acufene",
+      "nome": "Acufeni (fischi, ronzii)",
+      "frase": "degli acufeni"
+    },
+    {
+      "id": "vertigine",
+      "nome": "Vertigini",
+      "frase": "delle vertigini o disturbi dell'equilibrio"
+    },
+    {
+      "id": "naso",
+      "nome": "Naso chiuso",
+      "frase": "il naso chiuso"
+    },
+    {
+      "id": "sinusite",
+      "nome": "Sinusite o polipi",
+      "frase": "una sinusite o dei polipi nasali"
+    },
+    {
+      "id": "russamento",
+      "nome": "Russamento e apnee",
+      "frase": "il russamento o le apnee notturne"
+    },
+    {
+      "id": "voce",
+      "nome": "Voce rauca",
+      "frase": "un problema di voce"
+    },
+    {
+      "id": "bambino",
+      "nome": "Un bambino: orecchie, adenoidi, tonsille",
+      "frase": "mio figlio, per orecchie, adenoidi o tonsille"
+    },
+    {
+      "id": "cerume",
+      "nome": "Tappo di cerume o controllo",
+      "frase": "un controllo delle orecchie"
+    },
+    {
+      "id": "chirurgia",
+      "nome": "Valutazione per un intervento",
+      "frase": "valutare un intervento"
+    }
+  ],
+  "urgenze": [
+    {
+      "id": "sordita",
+      "nome": "Ho perso l'udito all'improvviso",
+      "livello": "oggi",
+      "frase": "un calo improvviso dell'udito",
+      "testo": "Può essere una sordità improvvisa: va valutata entro 24-72 ore, perché la terapia funziona meglio se iniziata presto. Non provi gocce o lavaggi."
+    },
+    {
+      "id": "vertigine",
+      "nome": "Vertigine forte, con nausea",
+      "livello": "oggi",
+      "frase": "una vertigine forte",
+      "testo": "Spesso è labirintica e si cura bene. Ma se compaiono difficoltà a parlare, debolezza di un braccio o di una gamba, visione doppia o un forte mal di testa, chiami subito il 118."
+    },
+    {
+      "id": "dolore",
+      "nome": "Dolore forte all'orecchio",
+      "livello": "48",
+      "frase": "un dolore forte all'orecchio",
+      "testo": "Un'otite acuta va vista entro 24-48 ore: con l'otomicroscopia valuto il timpano e imposto la terapia giusta."
+    },
+    {
+      "id": "epistassi",
+      "nome": "Sangue dal naso",
+      "livello": "48",
+      "frase": "delle perdite di sangue dal naso",
+      "testo": "Comprima le narici per 10-15 minuti, a testa in avanti. Se il sangue non si ferma dopo 20 minuti, vada al pronto soccorso; se si ripete spesso, prenoti una visita urgente."
+    },
+    {
+      "id": "corpo",
+      "nome": "Un corpo estraneo in orecchio o naso",
+      "livello": "oggi",
+      "frase": "un corpo estraneo nell'orecchio o nel naso",
+      "testo": "Succede spesso ai bambini. Non provi a toglierlo da solo: si rischia di spingerlo più in fondo. Con il microscopio si estrae in sicurezza."
+    },
+    {
+      "id": "gola",
+      "nome": "Mal di gola forte, fatico ad aprire la bocca",
+      "livello": "oggi",
+      "frase": "un mal di gola forte con difficoltà ad aprire la bocca",
+      "testo": "Con febbre alta e voce «da patata in bocca» può essere un ascesso peritonsillare: va visto in giornata."
+    },
+    {
+      "id": "respiro",
+      "nome": "Faccio fatica a respirare o a deglutire",
+      "livello": "118",
+      "frase": "",
+      "testo": "È un'emergenza: chiami subito il 118. Non aspetti la visita in studio."
+    }
+  ],
+  "trt": [
+    {
+      "id": "coclea",
+      "nome": "Orecchio interno",
+      "testo": "Tutto parte spesso da un danno della via acustica, nella coclea o più in profondità: un calo uditivo, a volte minimo, a volte non ancora noto."
+    },
+    {
+      "id": "via",
+      "nome": "Via uditiva",
+      "testo": "Meno informazioni arrivano al cervello. La via uditiva «alza il volume» e comincia a rilevare l'attività spontanea del nervo acustico."
+    },
+    {
+      "id": "corteccia",
+      "nome": "Percezione",
+      "testo": "Quell'attività diventa un suono percepito: l'acufene. Da solo sarebbe un rumore neutro, come il ronzio di un frigorifero."
+    },
+    {
+      "id": "limbico",
+      "nome": "Emozioni",
+      "testo": "Ma la via uditiva è collegata al sistema limbico, che elabora le emozioni. Se l'acufene viene vissuto come una minaccia, scattano ansia e preoccupazione."
+    },
+    {
+      "id": "autonomo",
+      "nome": "Reazioni del corpo",
+      "testo": "Il sistema nervoso autonomo risponde: tensione, batticuore, sonno disturbato. E più si reagisce, più il cervello «ascolta» l'acufene: il circolo si chiude."
+    }
+  ],
+  "trtCura": {
+    "counselling": "Il counselling spiega come nasce l'acufene e perché non è pericoloso: toglie l'allarme alle emozioni e alle reazioni del corpo.",
+    "suono": "La terapia del suono, con generatori di suono o apparecchi acustici, arricchisce l'ambiente sonoro e aiuta il cervello ad abituarsi, fino a non notarlo più."
+  },
+  "esami": {
+    "colloquio": {
+      "nome": "Colloquio",
+      "testo": "Raccolgo la storia e i sintomi, con calma.",
+      "img": "/tabaro-63mm/img/colloquio.webp"
+    },
+    "otomicroscopia": {
+      "nome": "Otomicroscopia",
+      "testo": "Il microscopio mostra il condotto e il timpano a forte ingrandimento; si possono rimuovere cerume o secrezioni.",
+      "img": "/tabaro-63mm/img/microscopio.webp"
+    },
+    "audiometria": {
+      "nome": "Esame audiometrico",
+      "testo": "In cabina silente, con un collaboratore laureato in tecniche audiometriche: misura la soglia uditiva con toni puri.",
+      "img": "/tabaro-63mm/img/audiometria.webp"
+    },
+    "impedenzometria": {
+      "nome": "Impedenzometria",
+      "testo": "Valuta l'elasticità del timpano, la ventilazione dell'orecchio medio e il riflesso di un piccolo muscolo dell'orecchio.",
+      "img": "/tabaro-63mm/img/audiometria.webp"
+    },
+    "acufenometria": {
+      "nome": "Valutazione dell'acufene",
+      "testo": "Caratteristiche psico-acustiche dell'acufene e tolleranza ai suoni: la base per la TRT.",
+      "img": "/tabaro-63mm/img/audiometria.webp"
+    },
+    "vestibolare": {
+      "nome": "Esame vestibolare clinico",
+      "testo": "Test di equilibrio e manovre di posizionamento, che diagnosticano e spesso curano la vertigine da otoliti.",
+      "img": "/tabaro-63mm/img/studio-poltrona.webp"
+    },
+    "endoscopia": {
+      "nome": "Endoscopia nasale",
+      "testo": "Fibre ottiche rigide o flessibili mostrano setto, turbinati e polipi.",
+      "img": "/tabaro-63mm/img/endoscopia.webp"
+    },
+    "rinomanometria": {
+      "nome": "Rinomanometria anteriore",
+      "testo": "Misura il flusso d'aria nelle due narici in modo oggettivo.",
+      "img": "/tabaro-63mm/img/endoscopia.webp"
+    },
+    "fibroscopia": {
+      "nome": "Fibro-naso-faringo-laringoscopia",
+      "testo": "Un endoscopio flessibile sottile, anche pediatrico, per naso, faringe, laringe e corde vocali.",
+      "img": "/tabaro-63mm/img/endoscopia.webp"
+    },
+    "spiegazione": {
+      "nome": "Diagnosi e piano",
+      "testo": "Le spiego cosa ho trovato e cosa fare: terapia, esami di secondo livello o intervento.",
+      "img": "/tabaro-63mm/img/scrivania.webp"
+    }
+  },
+  "percorsi": {
+    "udito": [
+      "colloquio",
+      "otomicroscopia",
+      "audiometria",
+      "impedenzometria",
+      "spiegazione"
+    ],
+    "acufene": [
+      "colloquio",
+      "otomicroscopia",
+      "audiometria",
+      "impedenzometria",
+      "acufenometria",
+      "spiegazione"
+    ],
+    "vertigine": [
+      "colloquio",
+      "otomicroscopia",
+      "audiometria",
+      "vestibolare",
+      "spiegazione"
+    ],
+    "naso": [
+      "colloquio",
+      "endoscopia",
+      "rinomanometria",
+      "spiegazione"
+    ],
+    "russamento": [
+      "colloquio",
+      "endoscopia",
+      "fibroscopia",
+      "spiegazione"
+    ],
+    "voce": [
+      "colloquio",
+      "fibroscopia",
+      "spiegazione"
+    ],
+    "bambino": [
+      "colloquio",
+      "otomicroscopia",
+      "impedenzometria",
+      "fibroscopia",
+      "spiegazione"
+    ]
+  },
+  "percorsiNomi": [
+    [
+      "udito",
+      "Sento meno"
+    ],
+    [
+      "acufene",
+      "Acufeni"
+    ],
+    [
+      "vertigine",
+      "Vertigini"
+    ],
+    [
+      "naso",
+      "Naso chiuso"
+    ],
+    [
+      "russamento",
+      "Russamento"
+    ],
+    [
+      "voce",
+      "Voce"
+    ],
+    [
+      "bambino",
+      "Un bambino"
+    ]
+  ],
+  "chirurgia": [
+    {
+      "id": "orecchio",
+      "distretto": "Orecchio",
+      "nome": "Chirurgia dell'orecchio medio",
+      "testo": "Timpano, catena degli ossicini, orecchio medio e mastoide.",
+      "img": "/tabaro-63mm/img/rep-sordita.webp"
+    },
+    {
+      "id": "setto",
+      "distretto": "Naso",
+      "nome": "Chirurgia del naso",
+      "testo": "Setto e turbinati con tecnica endoscopica laser-assistita, senza tamponamento; anche chirurgia estetica del naso.",
+      "img": "/tabaro-63mm/img/rep-setto.webp"
+    },
+    {
+      "id": "seni",
+      "distretto": "Naso",
+      "nome": "Chirurgia dei seni paranasali",
+      "testo": "Microchirurgia endoscopica per sinusiti croniche e poliposi.",
+      "img": "/tabaro-63mm/img/rep-naso.webp"
+    },
+    {
+      "id": "ronco",
+      "distretto": "Sonno",
+      "nome": "Roncochirurgia",
+      "testo": "Chirurgia non invasiva del russamento e delle apnee da ostruzione delle vie aeree.",
+      "img": "/tabaro-63mm/img/rep-ronco.webp"
+    },
+    {
+      "id": "fono",
+      "distretto": "Voce",
+      "nome": "Fonochirurgia",
+      "testo": "Micro-fonochirurgia e fonochirurgia fibroendoscopica delle corde vocali.",
+      "img": "/tabaro-63mm/img/rep-voce.webp"
+    },
+    {
+      "id": "tonsille",
+      "distretto": "Gola",
+      "nome": "Tonsillectomia",
+      "testo": "Rimozione delle tonsille ingrossate o con infezioni ricorrenti.",
+      "img": "/tabaro-63mm/img/rep-gola.webp"
+    },
+    {
+      "id": "adenoidi",
+      "distretto": "Bambini",
+      "nome": "Adenoidectomia",
+      "testo": "Rimozione delle adenoidi nei bambini che respirano a bocca aperta, russano o hanno otiti frequenti.",
+      "img": "/tabaro-63mm/img/rep-bambini.webp"
+    },
+    {
+      "id": "ambulatoriale",
+      "distretto": "Day surgery",
+      "nome": "Chirurgia ambulatoriale",
+      "testo": "Interventi mini-invasivi con fibre ottiche e laser, in ambulatorio o in day surgery.",
+      "img": "/tabaro-63mm/img/ambulatorio.webp"
+    }
+  ],
+  "team": [
+    [
+      "Dott. Giuseppe Tabaro",
+      "Medico specialista audiologo e otorinolaringoiatra"
+    ],
+    [
+      "Dott. Emanuele Gilli",
+      "Specialista in tecniche audiometriche e audioprotesiche"
+    ],
+    [
+      "Dott.ssa Cristina Tabaro",
+      "Psicologa psicoterapeuta, counselling comportamentale"
+    ]
+  ],
+  "partner": [
+    [
+      "Studio Scienze Motorie",
+      "Disturbi dell'equilibrio, vertigini e problemi posturali"
+    ],
+    [
+      "Psicologia e psicoterapia",
+      "Individuale, di coppia e familiare; valutazione di bambini e adolescenti"
+    ],
+    [
+      "Centro Ipnosi Nicoletta Gava",
+      "Terapia degli acufeni"
+    ]
+  ],
+  "bioTappe": [
+    {
+      "anno": "1976",
+      "titolo": "Laurea a Torino",
+      "testo": "Medicina e Chirurgia all'Università di Torino."
+    },
+    {
+      "anno": "1980",
+      "titolo": "Specializzazione",
+      "testo": "Otorinolaringoiatria e Patologia Cervico-Facciale. Ricercatore e poi assistente alla Clinica Otorinolaringoiatrica dell'Università, su progetti del CNR."
+    },
+    {
+      "anno": "1985-1996",
+      "titolo": "Ospedale Gradenigo",
+      "testo": "Assistente e poi aiuto: chirurgia dell'orecchio medio, chirurgia endoscopica del naso e dei seni paranasali. Nel 1993 la specializzazione in Audiologia."
+    },
+    {
+      "anno": "1996-2015",
+      "titolo": "Koelliker e Cellini",
+      "testo": "Attività ambulatoriale e chirurgica all'Ospedale Koelliker, poi responsabile del Servizio di Otorinolaringoiatria della Casa di Cura Cellini."
+    },
+    {
+      "anno": "2004-oggi",
+      "titolo": "Clinica Fornaca",
+      "testo": "Chirurgia funzionale ed estetica del naso, microchirurgia endoscopica dei seni paranasali, chirurgia del russamento."
+    },
+    {
+      "anno": "2012",
+      "titolo": "Certificazione TRT",
+      "testo": "Tinnitus Retraining Therapy secondo il modello originale del prof. Jastreboff (Jastreboff Hearing Disorders Foundation)."
+    }
+  ],
+  "orari": "Dal lunedì al venerdì, 9-12 e 14-19",
+  "aree": {
+    "titolo": "",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "acufeni",
+    "categoria": "Acufeni",
+    "titolo": "Acufeni: cause e trattamenti, dalla diagnosi alla TRT",
+    "img": "/tabaro-63mm/img/rep-acufene.webp",
+    "tempoLettura": "8 min",
+    "intro": "Un fischio, un ronzio, un fruscio che solo Lei sente. L'acufene è un disturbo molto diffuso e spesso frustrante, perché per anni ci si è sentiti dire «deve conviverci». Oggi sappiamo di più su come nasce e su come si può ridurre il fastidio. Le spiego come lo affronto nel mio studio.",
+    "sezioni": [
+      {
+        "titolo": "Che cos'è un acufene",
+        "paragrafi": [
+          "La definizione più recente di acufene è quella di una «percezione uditiva fantasma»: la sensazione di un suono, come un fischio, un ronzio o un soffio, in assenza di qualsiasi suono esterno. In pratica, il cervello percepisce come suono l'attività elettrica del nervo acustico.",
+          "Può essere continuo o intermittente, in un orecchio, in entrambi o «in testa». Per molte persone è un rumore di fondo che si nota appena; per altre diventa un disturbo che pesa sul sonno, sulla concentrazione e sull'umore."
+        ]
+      },
+      {
+        "titolo": "Come nasce: il modello neurofisiologico",
+        "paragrafi": [
+          "Secondo il modello neurofisiologico elaborato dal neurofisiologo americano Pawel Jastreboff, l'acufene prende origine da un danno della via acustica, nell'orecchio interno (la coclea) o più in profondità. Il danno crea una mancanza di informazioni che arrivano alla corteccia uditiva, la quale «alza il volume» e comincia a percepire l'attività spontanea del nervo acustico, prima inavvertita.",
+          "Il punto chiave è un altro: la via uditiva è collegata al sistema limbico, che elabora le emozioni, e al sistema nervoso autonomo, responsabile delle reazioni del corpo, come il batticuore o la tensione. Quando l'acufene viene associato ad ansia, apprensione e preoccupazione, queste connessioni si rinforzano e il fastidio aumenta. Si crea un circolo vizioso, alimentato anche dal non sapere da dove venga quel suono."
+        ]
+      },
+      {
+        "titolo": "Prima di tutto, la diagnosi",
+        "paragrafi": [
+          "Un corretto percorso diagnostico va sempre fatto: l'acufene può essere il primo sintomo di problemi dell'udito, del sistema nervoso, della circolazione o di altre malattie di interesse internistico.",
+          "Il percorso ha due direttrici. La diagnostica internistica cerca le possibili cause del danno uditivo. La diagnostica audiologica valuta la sede del danno lungo la via acustica, le caratteristiche dell'acufene, la soglia uditiva e l'eventuale ridotta tolleranza ai suoni.",
+          "C'è anche un valore in più: per il paziente, sapere di aver fatto indagini complete e di aver escluso molte malattie è già un primo passo per guardare all'acufene con meno paura."
+        ]
+      },
+      {
+        "titolo": "Le terapie che non funzionano",
+        "paragrafi": [
+          "Molti pazienti arrivano da me dopo aver provato integratori, vasodilatatori e altri farmaci. Ad oggi non c'è evidenza scientifica che i farmaci siano utili nell'acufene cronico. Le cure vanno invece rivolte alle eventuali cause trattabili, se ci sono, e alla riduzione del fastidio."
+        ]
+      },
+      {
+        "titolo": "La Tinnitus Retraining Therapy",
+        "paragrafi": [
+          "La TRT, Tinnitus Retraining Therapy, è un protocollo terapeutico multidisciplinare con un'ampia letteratura scientifica a supporto. L'obiettivo è ridurre e progressivamente eliminare la percezione cosciente dell'acufene, interrompendo il circolo vizioso tra suono ed emozioni negative.",
+          "Si basa su due pilastri. Il counselling, cioè colloqui strutturati che spiegano come nasce l'acufene e perché non è pericoloso, per «disinnescare» la reazione di allarme. E la terapia del suono, con generatori di suono o apparecchi acustici, quando c'è un calo uditivo, che arricchiscono l'ambiente sonoro e aiutano il cervello ad abituarsi.",
+          "Nel 2012 ho ottenuto la certificazione per la TRT secondo il modello originale del prof. Jastreboff, e sono Full Member della TRT Association."
+        ]
+      },
+      {
+        "titolo": "Il lavoro di squadra",
+        "paragrafi": [
+          "Nel mio studio la terapia degli acufeni è affidata all'Audio & Tinnitus Team: insieme a me lavorano uno specialista in tecniche audiometriche e audioprotesiche e una psicologa psicoterapeuta specialista in counselling comportamentale, tutti certificati dalla Jastreboff Hearing Disorders Foundation.",
+          "Quando serve, collaboriamo con centri acustici qualificati per la terapia del suono e con professionisti di mindfulness e ipnosi, che possono aiutare nella gestione dello stress legato all'acufene."
+        ]
+      },
+      {
+        "titolo": "Quanto tempo serve",
+        "paragrafi": [
+          "La TRT non è una cura istantanea: il cervello ha bisogno di tempo per «riabituarsi». I primi miglioramenti si notano di solito nei primi mesi, e il percorso completo può durare un anno o più, con controlli periodici. La maggior parte dei pazienti riferisce che l'acufene diventa meno invasivo e smette di condizionare la giornata."
+        ]
+      },
+      {
+        "titolo": "Quando è un'urgenza",
+        "paragrafi": [
+          "Un acufene comparso all'improvviso, soprattutto se insieme a un calo dell'udito o a una sensazione di orecchio ovattato, va valutato subito: può essere il segno di una sordità improvvisa, che va curata entro pochi giorni. In questi casi può usare il servizio di pronta disponibilità del mio studio."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso:"
+        ],
+        "elenco": [
+          "L'acufene può sparire? In alcuni casi sì; più spesso, con la TRT, smette di disturbare e passa in secondo piano.",
+          "Devo evitare il silenzio? Sì: il silenzio assoluto rende l'acufene più evidente. Un suono di fondo leggero aiuta.",
+          "Gli apparecchi acustici servono? Se c'è un calo uditivo, spesso sì: migliorano l'udito e riducono la percezione dell'acufene.",
+          "Lo stress peggiora l'acufene? Sì, ed è proprio il legame tra acufene ed emozioni che la TRT aiuta a sciogliere."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "sordita-improvvisa",
+      "categoria": "Udito",
+      "titolo": "Sordità improvvisa: perché è un'urgenza",
+      "img": "/tabaro-63mm/img/rep-sordita.webp",
+      "tempoLettura": "7 min",
+      "intro": "Ci si sveglia con un orecchio ovattato, come dopo un viaggio in aereo, ma la sensazione non passa. A volte c'è un fischio, a volte un capogiro. Può essere una sordità improvvisa: un disturbo che non va sottovalutato, perché il tempo conta.",
+      "sezioni": [
+        {
+          "titolo": "Che cos'è",
+          "paragrafi": [
+            "La sordità improvvisa è un calo dell'udito che si instaura nel giro di poche ore o al massimo di tre giorni, di solito in un solo orecchio. Riguarda l'orecchio interno o il nervo acustico, non il condotto o il timpano: per questo si parla di ipoacusia neurosensoriale improvvisa.",
+            "Spesso viene notata al risveglio o durante una telefonata, quando ci si accorge di sentire peggio da un lato."
+          ]
+        },
+        {
+          "titolo": "I sintomi",
+          "paragrafi": [
+            "Oltre al calo dell'udito, possono comparire:"
+          ],
+          "elenco": [
+            "sensazione di orecchio pieno o ovattato",
+            "acufene, cioè un fischio o un ronzio",
+            "vertigine o instabilità",
+            "fastidio per i suoni forti o distorsione dei suoni"
+          ]
+        },
+        {
+          "titolo": "Perché è un'urgenza",
+          "paragrafi": [
+            "Nella maggior parte dei casi la causa non si trova con certezza: si pensa a problemi di circolazione dell'orecchio interno, a infezioni virali o a meccanismi infiammatori. Quello che sappiamo bene è che la terapia funziona meglio se iniziata presto, idealmente nei primi giorni.",
+            "Per questo una sordità improvvisa va valutata da un otorinolaringoiatra entro 24-72 ore. Aspettare che «passi da sola» può far perdere il momento migliore per curarla."
+          ]
+        },
+        {
+          "titolo": "Non confonderla con un tappo",
+          "paragrafi": [
+            "Molte persone pensano a un tappo di cerume o a un raffreddore e provano gocce o lavaggi. Un tappo e una sordità improvvisa possono dare sensazioni simili, ma si distinguono subito con l'otoscopia o l'otomicroscopia, cioè guardando dentro l'orecchio.",
+            "Il consiglio è di non provare rimedi fai da te e di farsi vedere: in pochi minuti si capisce se si tratta di un problema banale o di qualcosa da trattare con urgenza."
+          ]
+        },
+        {
+          "titolo": "Come si fa la diagnosi",
+          "paragrafi": [
+            "Dopo la visita con l'otomicroscopia, eseguo l'esame audiometrico in cabina silente, che misura la soglia uditiva, e l'impedenzometria, che valuta il timpano e l'orecchio medio. Questi esami confermano che si tratta di un danno dell'orecchio interno e ne misurano l'entità.",
+            "Successivamente può essere utile una risonanza magnetica, per escludere cause rare ma importanti, come un neurinoma del nervo acustico."
+          ]
+        },
+        {
+          "titolo": "La terapia",
+          "paragrafi": [
+            "La terapia più usata è a base di cortisonici, per bocca o con iniezioni attraverso il timpano direttamente nell'orecchio medio. In alcuni casi si associa l'ossigenoterapia iperbarica. La scelta dipende dalla situazione, dagli altri problemi di salute e dal tempo trascorso.",
+            "Durante la terapia ripetiamo l'esame audiometrico per verificare il recupero."
+          ]
+        },
+        {
+          "titolo": "Cosa aspettarsi",
+          "paragrafi": [
+            "Molti pazienti recuperano l'udito, in tutto o in parte, soprattutto quando la terapia inizia presto e il calo non è grave. Se rimane un deficit, si può valutare un apparecchio acustico; se resta un acufene fastidioso, la Tinnitus Retraining Therapy può aiutare a ridurne l'impatto."
+          ]
+        },
+        {
+          "titolo": "Il servizio di pronta disponibilità",
+          "paragrafi": [
+            "Proprio per situazioni come questa, nel mio studio c'è un servizio di pronta disponibilità, con un numero dedicato: permette di prenotare visite urgenti, di avere una consulenza telefonica e di essere visitati nel più breve tempo possibile, comunque non oltre le 24-48 ore.",
+            "Se non riesce a contattarci in tempi brevi, si rivolga al pronto soccorso otorinolaringoiatrico: la cosa importante è non aspettare."
+          ]
+        },
+        {
+          "titolo": "Chi rischia di più",
+          "paragrafi": [
+            "La sordità improvvisa può colpire a qualsiasi età, ma è più frequente tra i 40 e i 60 anni. Alcune condizioni sembrano favorirla: ipertensione, diabete, colesterolo alto, fumo, malattie autoimmuni, un'infezione virale recente. Spesso, però, colpisce persone senza alcun fattore di rischio noto, e proprio per questo coglie di sorpresa."
+          ]
+        },
+        {
+          "titolo": "Cosa fare nelle prime ore",
+          "paragrafi": [
+            "Se si accorge di sentire peggio da un orecchio all'improvviso, non metta gocce, non faccia lavaggi e non usi cotton fioc. Annoti quando se n'è accorto e se ci sono altri sintomi, come fischio, vertigine o dolore. Poi chiami lo studio: la data di inizio dei sintomi è una delle informazioni più importanti per scegliere la terapia.",
+            "Se ha anche sintomi neurologici, come difficoltà a parlare, debolezza di un braccio o di una gamba, o un forte mal di testa improvviso, chiami subito il 118."
+          ]
+        },
+        {
+          "titolo": "I controlli successivi",
+          "paragrafi": [
+            "Dopo la fase acuta, ripetiamo l'esame audiometrico a distanza di alcune settimane e di alcuni mesi, per valutare il recupero definitivo. È anche l'occasione per controllare l'altro orecchio e, se necessario, impostare la terapia dell'acufene o la scelta di un apparecchio acustico. Un udito ben curato protegge anche la concentrazione e la vita sociale."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Può succedere anche ai giovani? Sì, la sordità improvvisa colpisce anche persone giovani e in salute.",
+            "Può tornare? È raro, ma possibile: per questo è utile un controllo periodico dell'udito.",
+            "Posso volare? Durante la fase acuta è meglio evitarlo: ne parliamo in visita.",
+            "Il cortisone è pericoloso? In cicli brevi e controllati è in genere ben tollerato; valuto sempre glicemia, pressione e altri farmaci."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "naso-chiuso",
+      "categoria": "Naso",
+      "titolo": "Naso chiuso cronico: setto, turbinati e polipi",
+      "img": "/tabaro-63mm/img/rep-naso.webp",
+      "tempoLettura": "7 min",
+      "intro": "Respirare con la bocca, russare, dormire male, usare lo spray decongestionante tutti i giorni: il naso chiuso cronico pesa sulla qualità della vita più di quanto si pensi. Ha cause diverse, e quasi sempre una soluzione.",
+      "sezioni": [
+        {
+          "titolo": "Le cause più comuni",
+          "paragrafi": [
+            "Un naso che resta chiuso per mesi può dipendere da:"
+          ],
+          "elenco": [
+            "deviazione del setto nasale, la parete che divide le due narici",
+            "ipertrofia dei turbinati, le strutture che riscaldano e umidificano l'aria",
+            "rinite allergica o vasomotoria",
+            "rinite da farmaci, dovuta all'uso prolungato di spray vasocostrittori",
+            "poliposi nasale, spesso associata a sinusite cronica",
+            "nei bambini, le adenoidi ingrossate"
+          ]
+        },
+        {
+          "titolo": "L'abuso di spray",
+          "paragrafi": [
+            "Gli spray decongestionanti funzionano in pochi minuti, ed è proprio questo il problema: dopo alcuni giorni di uso continuo il naso si abitua, e quando l'effetto finisce si chiude ancora di più. Si entra in un circolo vizioso, la cosiddetta rinite da farmaci.",
+            "Uscirne è possibile, con una terapia di sostituzione guidata dal medico e, se serve, trattando la causa che aveva fatto iniziare l'uso dello spray."
+          ]
+        },
+        {
+          "titolo": "Come si fa la diagnosi",
+          "paragrafi": [
+            "In visita osservo le cavità nasali con l'endoscopia, usando fibre ottiche rigide o flessibili: si vedono direttamente il setto, i turbinati, eventuali polipi e lo sbocco dei seni paranasali.",
+            "La rinomanometria anteriore misura in modo oggettivo il flusso d'aria e la resistenza al passaggio nelle due narici. Quando serve, si completano gli accertamenti con test allergologici o una TC dei seni paranasali."
+          ]
+        },
+        {
+          "titolo": "Le cure mediche",
+          "paragrafi": [
+            "Molti casi migliorano con le cure mediche: lavaggi nasali con soluzione fisiologica, spray cortisonici topici, che a differenza dei decongestionanti si possono usare a lungo, e la terapia dell'allergia quando presente. Anche la poliposi nasale si cura prima di tutto con le terapie mediche."
+          ]
+        },
+        {
+          "titolo": "Quando serve l'intervento",
+          "paragrafi": [
+            "Se il problema è strutturale, come un setto molto deviato o turbinati che non rispondono alle cure, si valuta la chirurgia. Correggo il setto e riduco i turbinati con tecnica endoscopica laser-assistita, che permette di ripristinare la funzione nasale senza ricorrere al tamponamento.",
+            "Per la poliposi e la sinusite cronica che non migliorano con le cure, la chirurgia endoscopica dei seni paranasali rimuove i polipi e riapre le vie di drenaggio. Opero alla Clinica Fornaca di Sessant, a Torino."
+          ]
+        },
+        {
+          "titolo": "Dopo l'intervento",
+          "paragrafi": [
+            "Nei primi giorni il naso è un po' chiuso per il gonfiore, ed è normale. Lavaggi nasali e controlli in studio aiutano la guarigione. Nella maggior parte dei casi, dopo alcune settimane si respira meglio di prima, si dorme meglio e spesso si russa meno."
+          ]
+        },
+        {
+          "titolo": "Naso chiuso e sonno",
+          "paragrafi": [
+            "Chi respira male dal naso dorme spesso a bocca aperta, russa di più e si sveglia con la bocca secca e la sensazione di non aver riposato. A volte il naso chiuso contribuisce anche alle apnee notturne. Per questo, quando un paziente mi parla di naso chiuso, chiedo sempre anche del sonno."
+          ]
+        },
+        {
+          "titolo": "Nei bambini",
+          "paragrafi": [
+            "Nei bambini che respirano sempre a bocca aperta, russano o hanno otiti frequenti, la causa più comune sono le adenoidi ingrossate. Una visita con endoscopia pediatrica, fatta con strumenti di piccolo diametro, permette di valutarle con delicatezza."
+          ]
+        },
+        {
+          "titolo": "Allergia o no?",
+          "paragrafi": [
+            "Se il naso chiuso si accompagna a starnuti a raffica, prurito e naso che cola, soprattutto in certe stagioni o in presenza di polvere e animali, la causa può essere allergica. In questo caso i test allergologici aiutano a capire a cosa si è sensibili e a impostare la terapia giusta, che a volte include anche il vaccino per l'allergia.",
+            "Esiste poi la rinite vasomotoria, non allergica, che peggiora con gli sbalzi di temperatura, gli odori forti o l'aria condizionata."
+          ]
+        },
+        {
+          "titolo": "Quando il naso chiuso è da un lato solo",
+          "paragrafi": [
+            "Un naso chiuso sempre dallo stesso lato, soprattutto se accompagnato da perdite di sangue o da secrezioni maleodoranti, va sempre valutato con l'endoscopia. Nella grande maggioranza dei casi si tratta di un setto deviato o di un polipo, ma è importante escludere altre cause."
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Porti gli eventuali esami già fatti, come una TC dei seni paranasali o i test allergologici, e l'elenco dei farmaci e degli spray che usa, con da quanto tempo. Se usa spray decongestionanti, non li sospenda da solo prima della visita: imposteremo insieme come ridurli."
+          ]
+        },
+        {
+          "titolo": "Respirare bene conta",
+          "paragrafi": [
+            "Il naso non serve solo a far passare l'aria: la filtra, la riscalda e la umidifica prima che arrivi ai polmoni. Chi respira a bocca aperta ha più spesso gola secca, mal di gola al risveglio e un sonno meno riposante. Ritrovare una buona respirazione nasale migliora la qualità della vita più di quanto ci si aspetti."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "L'intervento al setto cambia l'aspetto del naso? La correzione funzionale del setto non modifica la forma esterna, salvo che non sia previsto un intervento estetico.",
+            "Dopo l'intervento c'è il tampone? Con la tecnica laser-assistita in genere no.",
+            "Gli spray cortisonici fanno male? Usati come prescritto, sono sicuri anche per periodi lunghi.",
+            "Il setto deviato va sempre operato? No: solo se causa disturbi che non migliorano con le cure."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "russamento-apnee",
+      "categoria": "Sonno",
+      "titolo": "Russamento e apnee notturne: quando preoccuparsi",
+      "img": "/tabaro-63mm/img/rep-apnea.webp",
+      "tempoLettura": "7 min",
+      "intro": "Il russamento è spesso motivo di battute, o di notti insonni per chi dorme accanto. Ma a volte è il primo segnale di un problema più serio: la sindrome delle apnee ostruttive nel sonno. Ecco come riconoscerla e cosa si può fare.",
+      "sezioni": [
+        {
+          "titolo": "Perché si russa",
+          "paragrafi": [
+            "Durante il sonno i muscoli della gola si rilassano. Se le vie aeree sono strette, per esempio per un naso chiuso, un palato molle lungo, tonsille grosse o una lingua che scivola indietro, l'aria passando fa vibrare i tessuti: è il russamento.",
+            "Peso in eccesso, alcol la sera, alcuni farmaci e il fumo peggiorano la situazione."
+          ]
+        },
+        {
+          "titolo": "Quando diventa apnea",
+          "paragrafi": [
+            "In alcune persone le vie aeree non vibrano soltanto, ma si chiudono del tutto per alcuni secondi: è l'apnea. Il respiro si ferma, l'ossigeno nel sangue cala e il cervello provoca un breve risveglio, spesso non ricordato, per far ripartire il respiro. Questo può accadere decine di volte all'ora.",
+            "È la sindrome delle apnee ostruttive nel sonno, in sigla OSAS."
+          ]
+        },
+        {
+          "titolo": "I segnali da non ignorare",
+          "paragrafi": [
+            "Conviene parlarne con uno specialista se:"
+          ],
+          "elenco": [
+            "chi dorme con Lei nota pause nel respiro seguite da un russare forte",
+            "si sveglia stanco anche dopo molte ore di sonno",
+            "ha sonnolenza durante il giorno, anche alla guida",
+            "si sveglia con mal di testa o bocca secca",
+            "si alza spesso di notte per urinare",
+            "ha pressione alta difficile da controllare"
+          ]
+        },
+        {
+          "titolo": "Perché è importante",
+          "paragrafi": [
+            "Le apnee non trattate affaticano il cuore e la circolazione: aumentano il rischio di ipertensione, aritmie, infarto e ictus. La sonnolenza diurna, inoltre, aumenta il rischio di incidenti, alla guida e sul lavoro. Il russamento può essere quindi il primo sintomo di una cattiva ossigenazione notturna."
+          ]
+        },
+        {
+          "titolo": "Come si fa la diagnosi",
+          "paragrafi": [
+            "La visita otorinolaringoiatrica serve a capire dove si trova l'ostruzione: con la fibro-naso-faringo-laringoscopia, un sottile endoscopio flessibile, osservo naso, faringe e laringe. Mi occupo da anni della diagnostica approfondita delle apnee del sonno.",
+            "Per misurare quante apnee ci sono e quanto scende l'ossigeno si esegue un monitoraggio notturno, a casa, con un piccolo apparecchio che registra respiro, ossigenazione e posizione durante il sonno."
+          ]
+        },
+        {
+          "titolo": "Le terapie",
+          "paragrafi": [
+            "La terapia dipende dalla gravità e dalla sede dell'ostruzione. Spesso si parte dalle misure generali: calo di peso, niente alcol la sera, dormire sul fianco. Nelle apnee moderate e gravi la terapia di riferimento è la CPAP, un apparecchio che durante il sonno mantiene aperte le vie aeree con una lieve pressione d'aria.",
+            "In casi selezionati si usano apparecchi ortodontici che avanzano la mandibola, oppure si interviene chirurgicamente: la roncochirurgia riduce il russamento e le apnee causate da ostruzioni delle vie aeree superiori, e la correzione del naso, del palato o delle tonsille può migliorare molto la respirazione notturna."
+          ]
+        },
+        {
+          "titolo": "E nei bambini?",
+          "paragrafi": [
+            "Anche i bambini possono russare e avere apnee, soprattutto per adenoidi e tonsille ingrossate. Segnali come respiro a bocca aperta, sonno agitato, enuresi o difficoltà di attenzione a scuola meritano una visita. Spesso l'intervento di adenotonsillectomia risolve il problema."
+          ]
+        },
+        {
+          "titolo": "Le piccole abitudini che aiutano",
+          "paragrafi": [
+            "Alcuni accorgimenti riducono il russamento: evitare alcol e pasti abbondanti la sera, non fumare, mantenere un peso adeguato, dormire sul fianco e curare il naso chiuso. Anche alcuni farmaci per dormire possono peggiorare le apnee: ne parli con il Suo medico prima di usarli.",
+            "Non sono la cura delle apnee, ma spesso migliorano il quadro e rendono più efficaci le terapie."
+          ]
+        },
+        {
+          "titolo": "Il ruolo del partner",
+          "paragrafi": [
+            "Chi russa spesso non se ne accorge: è il partner a notare il russamento, le pause nel respiro e i risvegli improvvisi. Se possibile, venga in visita con lui o con lei, oppure porti una breve registrazione audio della notte: è un'informazione molto utile per capire la situazione."
+          ]
+        },
+        {
+          "titolo": "Russamento e guida",
+          "paragrafi": [
+            "La sonnolenza diurna dovuta alle apnee è una causa riconosciuta di incidenti stradali, tanto che le apnee gravi non curate sono considerate nelle visite per il rinnovo della patente. Se si sente spesso assonnato alla guida, è un motivo in più per farsi valutare."
+          ]
+        },
+        {
+          "titolo": "Dopo la diagnosi",
+          "paragrafi": [
+            "Una volta chiarito il quadro, il percorso si costruisce insieme e spesso coinvolge più specialisti: lo pneumologo o il medico del sonno per la CPAP, l'odontoiatra per gli apparecchi orali, il nutrizionista per il peso. Il mio compito è capire dove si trova l'ostruzione e, quando la chirurgia è indicata, scegliere l'intervento più adatto. Nei controlli successivi verifichiamo con un nuovo monitoraggio notturno che le apnee si siano davvero ridotte."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Chi russa ha sempre le apnee? No: molte persone russano senza apnee, ma solo un monitoraggio notturno può dirlo con certezza.",
+            "Il cuscino anti-russamento funziona? Può aiutare chi russa solo da supino; non cura le apnee.",
+            "La CPAP va usata per sempre? Finché persiste il problema; se si perde peso o si corregge l'ostruzione, si rivaluta.",
+            "L'intervento è doloroso? Dipende dalla tecnica: molte procedure moderne sono mini-invasive e si fanno in day surgery."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "otorino.tabaro",
+    "nota": "il Dottore non ha profili social: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Acufeni: come funziona la TRT",
+        "punti": [
+          "Diagnosi audiologica completa",
+          "Counselling: capire per non temere",
+          "Terapia del suono",
+          "Controlli nei mesi successivi"
+        ],
+        "didascalia": "L'acufene nasce nell'orecchio, ma il fastidio lo decide il cervello. La Tinnitus Retraining Therapy lavora proprio lì.",
+        "hashtag": "#acufeni #tinnitus #otorinotorino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Orecchio ovattato da stamattina?",
+        "risposta": "Non aspetti: è un'urgenza.",
+        "didascalia": "Una sordità improvvisa va vista entro 24-72 ore. Il servizio di pronta disponibilità dello studio risponde al 366 632 2012.",
+        "hashtag": "#sorditàimprovvisa #udito #torino"
+      },
+      {
+        "stile": "foto",
+        "immagine": "naso",
+        "titolo": "Naso sempre chiuso?",
+        "sottotitolo": "Setto, turbinati o spray di troppo",
+        "didascalia": "Lo spray decongestionante usato ogni giorno peggiora il naso chiuso. Con endoscopia e rinomanometria si trova la causa vera.",
+        "hashtag": "#nasochiuso #rinite #otorino"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "Opero presso",
+    "email": "info@orlteam.it",
+    "luoghi": [
+      {
+        "tipo": "Studio medico",
+        "nome": "Studio del Dott. Tabaro, Centro VED",
+        "breve": "Via Cigna 13",
+        "indirizzo": "Via Cigna 13",
+        "citta": "Torino",
+        "cap": "",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di via Cigna 13, Torino"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Visite ordinarie su WhatsApp o al telefono. Per le urgenze, il servizio di pronta disponibilità: visita entro 24-48 ore.",
+    "telefono": "011745845",
+    "telefonoLabel": "011 745845",
+    "telefono2Label": "011 7412097",
+    "chiamaLabel": "lo studio",
+    "whatsapp": "393666322012",
+    "whatsappLabel": "366 632 2012",
+    "oggettoMail": "Richiesta di visita otorinolaringoiatrica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi il giorno e l'orario che preferisce: lo studio La ricontatta su WhatsApp per confermare.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00"
+      ],
+      "pomeriggio": [
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari dello studio: dal lunedì al venerdì, 9-12 e 14-19. Data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo",
+        "Visita con esame audiometrico"
+      ],
+      "motivi": [
+        "Sento meno",
+        "Acufeni (fischi, ronzii)",
+        "Vertigini",
+        "Naso chiuso",
+        "Sinusite o polipi",
+        "Russamento e apnee",
+        "Voce rauca",
+        "Un bambino: orecchie, adenoidi, tonsille",
+        "Tappo di cerume o controllo",
+        "Valutazione per un intervento"
+      ],
+      "motiviFrase": [
+        "un calo dell'udito",
+        "degli acufeni",
+        "delle vertigini o disturbi dell'equilibrio",
+        "il naso chiuso",
+        "una sinusite o dei polipi nasali",
+        "il russamento o le apnee notturne",
+        "un problema di voce",
+        "mio figlio, per orecchie, adenoidi o tonsille",
+        "un controllo delle orecchie",
+        "valutare un intervento"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio di via Cigna 13 · Centro VED",
+          "frase": "lo studio di via Cigna 13, Torino"
+        }
+      ],
+      "privacy": "https://otorino-torino.it/privacy-policy/",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#EEF6F9",
+      "ink": "#0D2330",
+      "muted": "#506572",
+      "line": "#D6E6ED",
+      "brand": "#12708F",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#38AFD3",
+      "deep": "#0A2533",
+      "deep-ink": "#C4DCE6",
+      "urgenza": "#C8453B"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;800&family=Red+Hat+Text:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Red Hat Display",
+    "fontTesti": "Red Hat Text",
+    "fontUi": "Red Hat Text",
+    "favicon": "/tabaro-63mm/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/tabaro-63mm/brand/brand.json",
+    "pagine": [
+      "https://otorino-torino.it/",
+      "https://otorino-torino.it/otorinolaringoiatria-otorino-torino/",
+      "https://otorino-torino.it/contatti/",
+      "https://otorino-torino.it/urgenze/",
+      "https://otorino-torino.it/visita-otorinolaringoiatrica-audiologica/",
+      "https://otorino-torino.it/audiologo-torino-patologie-trattate/",
+      "https://otorino-torino.it/chirurgia-otorinolaringoiatrica/",
+      "https://otorino-torino.it/2025/02/11/acufeni-e-trt-otorino-torino/",
+      "https://otorino-torino.it/2025/02/11/audio-e-tinnitus-team-torino/"
+    ]
+  }
+}
