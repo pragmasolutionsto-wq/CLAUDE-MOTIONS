@@ -1,0 +1,43 @@
+{
+  "studio": "Studio ORL Dott. Dagna",
+  "medici": [
+    "Dott. Guglielmo Dagna: Otorinolaringoiatria e Patologia cervico-facciale, Audiologia; oltre 10.000 interventi ORL; già primario U.O.C. ORL Ospedale di Rivoli; oggi libero professionista",
+    "Dott. Federico Dagna: Otorinolaringoiatria (Università di Torino), Audiologia e Foniatria (Università di Milano); Dirigente medico S.C. ORL Ospedale Santa Croce di Moncalieri, ASL TO5; ricerca con pubblicazioni internazionali"
+  ],
+  "parentela": "il sito NON dice che siano padre e figlio: in demo «due specialisti», nessuna parentela dichiarata",
+  "sito": "https://www.o-torino.it/",
+  "logo": "logo.png (512x515): tre tessere orecchio / naso / gola. Usato intero in header e CTA; le tre tessere ritagliate (img/tessera-*.png) come icone di prenotazione, schede, esami e sedi",
+  "colori": {
+    "blu": "#324F6D",
+    "azzurro": "#69A4D8",
+    "blu_notte": "#1F324B",
+    "sito_accento": "#009696 (tema Elementor, non usato)"
+  },
+  "font": {
+    "sito": "font di default del tema Elementor",
+    "demo": ["Lexend", "Atkinson Hyperlegible"]
+  },
+  "contatti": {
+    "rivoli": "380 645 22 24 (prenotazioni e informazioni, lun-sab) · 011 953 22 93",
+    "torino": "329 847 3583 (lun-ven 9-19) · 011 195 17887 (assistente digitale 24h)",
+    "email": "dagna.orl@gmail.com",
+    "social": "nessuno"
+  },
+  "sedi": [
+    "Studio di Rivoli, Via Nizza 9 (principale)",
+    "Studio di Torino, Via Vespucci 69",
+    "Centro Diagnostico Fornaca, Corso Vittorio Emanuele II 87, Torino (telefono non indicato sul sito)"
+  ],
+  "whatsapp": "nessun numero WhatsApp verificato: prenotazione via mail già compilata",
+  "privacy": "nessuna pagina privacy sul sito: nota apribile nel form",
+  "foto": [
+    "foto-01-guglielmo-dagna.jpg (2560x2560)",
+    "foto-02-federico-dagna.jpg (2923x2923)",
+    "audiogramma.jpg: audiogramma vuoto del sito (non usato in pagina)",
+    "stock-sito-otoscopio.jpg: foto stock del suo sito (otoscopio), usata come repertorio"
+  ],
+  "numeri": "10.000+ interventi (Guglielmo, dal sito), 3 sedi, 2 specialisti",
+  "approfondimenti_sito": "acufeni, apnee/OSAS (cita la scala di Epworth), cerume, vertigini, fibroscopia, audiometria, otomicroscopia: riscritti in 4 articoli (russamento-apnee principale, acufeni, tappo di cerume, vertigini)",
+  "problemi_sito": "home ferma a novembre 2021 (Trello), WordPress/Elementor, nessun blog vero (solo pagine statiche), nessun social, nessuna prenotazione online, nessuna pagina privacy, «Le nostri sedi» refuso nel menu",
+  "repertorio": "brand/repertorio/: Unsplash gratuiti (licenza Unsplash, non Plus): otoscopio blu e audiometria (Mark Paton), bambino che dorme (Darla Bethea), uomo che dorme (Fernando Valero; ritagliata a sinistra per togliere una striscia arancione)"
+}

@@ -4,6 +4,7 @@ import { nomeCompleto, telHref, type Medico } from '../lib/medici';
 interface Props { m: Medico }
 const { m } = Astro.props;
 const base = `/${m.slug}`;
+const pl = (m as any).plurale === true; // studio con più medici: «Chi siamo», «Dove riceviamo»
 ---
 <footer class="bg-deep pb-28 text-sm text-deep-ink/70 sm:pb-10">
   <div class="mx-auto grid max-w-7xl gap-10 px-5 pt-14 sm:px-8 md:grid-cols-12">
@@ -14,7 +15,7 @@ const base = `/${m.slug}`;
       <p class="mt-5 max-w-xs leading-relaxed">{m.specialita}, {m.citta}.</p>
     </div>
     <div class="md:col-span-3">
-      <p class="font-head text-[15px] font-semibold text-white">Dove ricevo</p>
+      <p class="font-head text-[15px] font-semibold text-white">{pl ? 'Dove riceviamo' : 'Dove ricevo'}</p>
       {(m.sedi.luoghi as any[]).filter((l, i, a) => a.some((x) => x.principale) ? l.principale : true).map((l) => <p class="mt-3 leading-relaxed">{l.tipo}<br /><span class="text-deep-ink/90">{l.indirizzo}, {l.citta}</span></p>)}
     </div>
     <div class="md:col-span-3">
@@ -25,10 +26,10 @@ const base = `/${m.slug}`;
     <div class="md:col-span-2">
       <p class="font-head text-[15px] font-semibold text-white">Pagine</p>
       <ul class="mt-3 space-y-2">
-        <li><a href={`${base}#chi-sono`} class="hover:text-white">Chi sono</a></li>
-        <li><a href={`${base}#aree`} class="hover:text-white">Di cosa mi occupo</a></li>
+        <li><a href={`${base}#${pl ? 'chi-siamo' : 'chi-sono'}`} class="hover:text-white">{pl ? 'Chi siamo' : 'Chi sono'}</a></li>
+        <li><a href={`${base}#aree`} class="hover:text-white">{pl ? 'Cosa facciamo' : 'Di cosa mi occupo'}</a></li>
         <li><a href={(m as any).blog ? `${base}/blog` : `${base}/articolo`} class="hover:text-white">{(m as any).blog ? 'Blog' : 'Articoli'}</a></li>
-        <li><a href={`${base}#sedi`} class="hover:text-white">Dove ricevo</a></li>
+        <li><a href={`${base}#sedi`} class="hover:text-white">{pl ? 'Dove riceviamo' : 'Dove ricevo'}</a></li>
       </ul>
     </div>
   </div>

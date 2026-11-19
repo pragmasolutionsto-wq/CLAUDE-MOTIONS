@@ -1,0 +1,1099 @@
+{
+  "slug": "dagna-c75u",
+  "layout": "ascolto",
+  "plurale": true,
+  "sitoOrigine": "https://www.o-torino.it/",
+  "titolo": "Studio ORL",
+  "nome": "Dott. Dagna",
+  "specialita": "Otorinolaringoiatria, Patologia cervico-facciale e Audiologia",
+  "firma": "Otorinolaringoiatria",
+  "citta": "Rivoli e Torino",
+  "meta": {
+    "title": "Studio ORL Dott. Dagna · Otorino a Rivoli e Torino, adulti e bambini",
+    "description": "Studio otorinolaringoiatrico a Rivoli e Torino: udito, acufeni, vertigini, naso, russamento e apnee, voce. Visite per adulti e bambini, anche nei primi mesi di vita."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "/dagna-c75u/img/logo.png",
+    "logoChiaro": "",
+    "marchio": "/dagna-c75u/img/logo.png",
+    "logoAlt": "Studio ORL Dott. Dagna"
+  },
+  "foto": {
+    "ritratto": "/dagna-c75u/img/guglielmo.webp",
+    "ritrattoAlt": "Il Dott. Guglielmo Dagna",
+    "guglielmo": "/dagna-c75u/img/guglielmo.webp",
+    "federico": "/dagna-c75u/img/federico.webp",
+    "voltoG": "/dagna-c75u/img/volto-guglielmo.webp",
+    "voltoF": "/dagna-c75u/img/volto-federico.webp",
+    "volto": "/dagna-c75u/img/logo.png",
+    "logo": "/dagna-c75u/img/logo.png",
+    "audiogramma": "/dagna-c75u/img/audiogramma.webp",
+    "otoscopio": "/dagna-c75u/img/rep-otoscopio.webp",
+    "otoscopioLargo": "/dagna-c75u/img/rep-otoscopio-largo.webp",
+    "audiometria": "/dagna-c75u/img/rep-audiometria.webp",
+    "sonno": "/dagna-c75u/img/rep-sonno.webp",
+    "sonnoLargo": "/dagna-c75u/img/rep-sonno-largo.webp",
+    "sonnoBimbo": "/dagna-c75u/img/rep-sonno-bimbo.webp",
+    "strumento": "/dagna-c75u/img/rep-strumento.webp"
+  },
+  "medici": [
+    {
+      "nome": "Dott. Guglielmo Dagna",
+      "foto": "/dagna-c75u/img/guglielmo.webp",
+      "ruolo": "Otorinolaringoiatria, Patologia cervico-facciale e Audiologia",
+      "testo": "Mi occupo di diagnosi e cura di tutti i disturbi di orecchie, naso e gola, funzionali o organici, infiammatori e tumorali. Sono stato primario dell'Otorinolaringoiatria dell'Ospedale di Rivoli; oggi lavoro in libera professione, in studio e in sala operatoria, presso diverse strutture.",
+      "fatti": [
+        "Oltre 10.000 interventi in campo ORL",
+        "Già primario ORL all'Ospedale di Rivoli"
+      ]
+    },
+    {
+      "nome": "Dott. Federico Dagna",
+      "foto": "/dagna-c75u/img/federico.webp",
+      "ruolo": "Otorinolaringoiatria, Audiologia e Foniatria",
+      "testo": "Mi sono specializzato in Otorinolaringoiatria all'Università di Torino e in Audiologia e Foniatria all'Università di Milano. Sono Dirigente medico nell'Otorinolaringoiatria dell'Ospedale Santa Croce di Moncalieri (ASL TO5). Seguo bambini e adulti e faccio ricerca, con pubblicazioni scientifiche internazionali.",
+      "fatti": [
+        "Bambini e adulti",
+        "Ricerca e pubblicazioni internazionali"
+      ]
+    }
+  ],
+  "hero": {
+    "eyebrow": "Studio ORL · Rivoli e Torino",
+    "titolo": "Orecchie, naso e gola. Per adulti e bambini.",
+    "testo": "Siamo specialisti in Otorinolaringoiatria e Audiologia. Visitiamo adulti e bambini, anche nei primi mesi di vita, con audiometria, fibroscopia e otomicroscopia direttamente in studio.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti una visita",
+      "motivi": [
+        "Calo dell'udito",
+        "Acufeni",
+        "Vertigini",
+        "Tappo di cerume",
+        "Otite",
+        "Naso chiuso",
+        "Sinusite o polipi",
+        "Russamento e apnee",
+        "Controllo generale",
+        "Voce rauca",
+        "Tonsille",
+        "Ghiandole salivari",
+        "Bambino: orecchie e udito",
+        "Bambino: russa o respira a bocca aperta",
+        "Bambino: adenoidi e tonsille",
+        "Bambino: controllo"
+      ],
+      "motiviFrase": [
+        "un calo dell'udito",
+        "acufeni (fischi o ronzii)",
+        "vertigini o disturbi dell'equilibrio",
+        "un tappo di cerume",
+        "un'otite",
+        "naso chiuso",
+        "sinusite o polipi nasali",
+        "russamento o apnee notturne",
+        "un controllo di orecchie, naso e gola",
+        "un problema di voce",
+        "le tonsille",
+        "le ghiandole salivari",
+        "mio figlio, per orecchie o udito",
+        "mio figlio, che russa o respira a bocca aperta",
+        "mio figlio, per adenoidi o tonsille",
+        "un controllo ORL per mio figlio"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Dove"
+    }
+  },
+  "gruppi": [
+    {
+      "id": "orecchio",
+      "nome": "Orecchio",
+      "tessera": "/dagna-c75u/img/tessera-orecchio.png",
+      "motivi": [
+        [
+          "Calo dell'udito",
+          "un calo dell'udito"
+        ],
+        [
+          "Acufeni",
+          "acufeni (fischi o ronzii)"
+        ],
+        [
+          "Vertigini",
+          "vertigini o disturbi dell'equilibrio"
+        ],
+        [
+          "Tappo di cerume",
+          "un tappo di cerume"
+        ],
+        [
+          "Otite",
+          "un'otite"
+        ]
+      ]
+    },
+    {
+      "id": "naso",
+      "nome": "Naso",
+      "tessera": "/dagna-c75u/img/tessera-naso.png",
+      "motivi": [
+        [
+          "Naso chiuso",
+          "naso chiuso"
+        ],
+        [
+          "Sinusite o polipi",
+          "sinusite o polipi nasali"
+        ],
+        [
+          "Russamento e apnee",
+          "russamento o apnee notturne"
+        ],
+        [
+          "Controllo generale",
+          "un controllo di orecchie, naso e gola"
+        ]
+      ]
+    },
+    {
+      "id": "gola",
+      "nome": "Gola e collo",
+      "tessera": "/dagna-c75u/img/tessera-gola.png",
+      "motivi": [
+        [
+          "Voce rauca",
+          "un problema di voce"
+        ],
+        [
+          "Tonsille",
+          "le tonsille"
+        ],
+        [
+          "Ghiandole salivari",
+          "le ghiandole salivari"
+        ],
+        [
+          "Controllo generale",
+          "un controllo di orecchie, naso e gola"
+        ]
+      ]
+    },
+    {
+      "id": "bambino",
+      "nome": "Un bambino",
+      "tessera": "",
+      "motivi": [
+        [
+          "Orecchie e udito",
+          "mio figlio, per orecchie o udito"
+        ],
+        [
+          "Russa o respira a bocca aperta",
+          "mio figlio, che russa o respira a bocca aperta"
+        ],
+        [
+          "Adenoidi e tonsille",
+          "mio figlio, per adenoidi o tonsille"
+        ],
+        [
+          "Controllo",
+          "un controllo ORL per mio figlio"
+        ]
+      ]
+    }
+  ],
+  "numeri": [
+    {
+      "valore": 10000,
+      "suffisso": "+",
+      "testo": "interventi in campo ORL del Dott. Guglielmo Dagna"
+    },
+    {
+      "valore": 3,
+      "suffisso": "",
+      "testo": "sedi tra Rivoli e Torino"
+    },
+    {
+      "valore": 2,
+      "suffisso": "",
+      "testo": "specialisti ORL nello studio"
+    }
+  ],
+  "esplora": [
+    {
+      "id": "orecchio",
+      "nome": "Orecchio",
+      "tessera": "/dagna-c75u/img/tessera-orecchio.png",
+      "diagnosi": [
+        "Disturbi dell'udito: audiometria tonale e vocale, impedenzometria, acufenometria",
+        "Vertigini e disturbi dell'equilibrio: malattia di Menière, vertigine posizionale, riabilitazione vestibolare",
+        "Acufeni: counselling e Tinnitus Retraining Therapy (TRT)",
+        "Otomicroscopia per i disturbi più complessi"
+      ],
+      "chirurgia": [
+        "Otite sierosa cronica e otite media cronica",
+        "Otite colesteatomatosa",
+        "Otosclerosi"
+      ]
+    },
+    {
+      "id": "naso",
+      "nome": "Naso",
+      "tessera": "/dagna-c75u/img/tessera-naso.png",
+      "diagnosi": [
+        "Ostruzione respiratoria nasale",
+        "Riniti, sinusiti acute e croniche, poliposi",
+        "Russamento e apnee notturne (OSAS), nell'adulto e nel bambino"
+      ],
+      "chirurgia": [
+        "Turbinoplastica con radiofrequenze, in anestesia locale",
+        "Settoplastica funzionale",
+        "F.E.S.S.: chirurgia endoscopica dei seni paranasali"
+      ]
+    },
+    {
+      "id": "gola",
+      "nome": "Gola e collo",
+      "tessera": "/dagna-c75u/img/tessera-gola.png",
+      "diagnosi": [
+        "Disturbi della voce",
+        "Fibroendoscopia delle vie aereo-digestive superiori",
+        "Ghiandole salivari: infiammazioni croniche e tumori"
+      ],
+      "chirurgia": [
+        "Fonochirurgia: polipi, noduli, edema di Reinke, cisti delle corde vocali",
+        "Chirurgia delle ghiandole salivari maggiori"
+      ]
+    },
+    {
+      "id": "bambini",
+      "nome": "Bambini",
+      "tessera": "",
+      "diagnosi": [
+        "Visita con strumentazione dedicata, anche nei primi mesi di vita",
+        "Audiologia infantile",
+        "Apnee notturne e russamento nel bambino"
+      ],
+      "chirurgia": [
+        "Tonsillectomia e adenoidectomia",
+        "Paracentesi con drenaggio transtimpanico"
+      ]
+    }
+  ],
+  "esami": [
+    {
+      "id": "audiometria",
+      "nome": "Audiometria",
+      "tessera": "/dagna-c75u/img/tessera-orecchio.png",
+      "img": "/dagna-c75u/img/rep-audiometria.webp",
+      "testo": "In cabina silente, con le cuffie, Le inviamo suoni di frequenza e intensità diverse: a ogni suono che sente preme un pulsante. Il risultato è l'audiogramma, separato per ciascun orecchio.",
+      "fatti": [
+        "Non invasiva",
+        "Frequenze da 125 a 8000 Hz",
+        "Anche vocale: si ripetono parole"
+      ]
+    },
+    {
+      "id": "fibroscopia",
+      "nome": "Fibroscopia",
+      "tessera": "/dagna-c75u/img/tessera-gola.png",
+      "img": "/dagna-c75u/img/rep-strumento.webp",
+      "testo": "Una fibra ottica flessibile di 2,5-3,5 mm entra da una narice e ci mostra naso, faringe e corde vocali. Può dare un po' di solletico all'inizio, poi si tollera bene.",
+      "fatti": [
+        "Dura pochi minuti",
+        "Nessuna preparazione",
+        "Anche nei bambini di pochi mesi"
+      ]
+    },
+    {
+      "id": "otomicroscopia",
+      "nome": "Otomicroscopia",
+      "tessera": "/dagna-c75u/img/tessera-orecchio.png",
+      "img": "/dagna-c75u/img/rep-otoscopio.webp",
+      "testo": "Con il microscopio vediamo il condotto e il timpano in profondità e ingranditi. Possiamo anche pulire, medicare o drenare il catarro in caso di otite sierosa.",
+      "fatti": [
+        "Visione con entrambi gli occhi",
+        "Può dare fastidio, non dolore",
+        "Utile nelle otiti croniche"
+      ]
+    },
+    {
+      "id": "vestibolare",
+      "nome": "Prove dell'equilibrio",
+      "tessera": "/dagna-c75u/img/tessera-orecchio.png",
+      "img": "/dagna-c75u/img/rep-otoscopio-largo.webp",
+      "testo": "Per le vertigini cerchiamo il nistagmo e facciamo le manovre diagnostiche (Dix-Hallpike, Pagnini-McClure, Semont), l'head shaking test e l'head impulse test.",
+      "fatti": [
+        "Esame otoneurologico completo",
+        "Spesso con audiometria",
+        "Riabilitazione vestibolare"
+      ]
+    }
+  ],
+  "epworth": [
+    "Seduto mentre leggo",
+    "Guardando la televisione",
+    "Seduto, senza fare nulla, in un luogo pubblico (a teatro, a una riunione)",
+    "Passeggero in auto per un'ora, senza soste",
+    "Sdraiato per riposare nel pomeriggio, quando posso",
+    "Seduto mentre parlo con qualcuno",
+    "Seduto tranquillo dopo pranzo, senza aver bevuto alcolici",
+    "In auto, fermo per qualche minuto nel traffico"
+  ],
+  "frequenze": [
+    {
+      "hz": 250,
+      "nome": "250 Hz",
+      "testo": "Suoni gravi: le vocali più cupe, il ronzio di un elettrodomestico."
+    },
+    {
+      "hz": 500,
+      "nome": "500 Hz",
+      "testo": "Le vocali e gran parte della voce maschile."
+    },
+    {
+      "hz": 1000,
+      "nome": "1000 Hz",
+      "testo": "Il cuore della voce parlata: è la frequenza da cui spesso parte l'esame."
+    },
+    {
+      "hz": 2000,
+      "nome": "2000 Hz",
+      "testo": "Consonanti come «t», «p», «k»: servono a distinguere le parole."
+    },
+    {
+      "hz": 4000,
+      "nome": "4000 Hz",
+      "testo": "Consonanti come «s» e «f». È una zona in cui il rumore e l'età lasciano spesso il primo segno."
+    },
+    {
+      "hz": 8000,
+      "nome": "8000 Hz",
+      "testo": "Suoni molto acuti, come un fruscio sottile: la fine del campo che si esplora con l'audiometria."
+    }
+  ],
+  "aree": {
+    "titolo": "Cosa facciamo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi siamo",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "russamento-apnee",
+    "categoria": "Naso e sonno",
+    "titolo": "Russamento e apnee notturne: come si diagnosticano",
+    "img": "/dagna-c75u/img/rep-sonno-largo.webp",
+    "tempoLettura": "7 min",
+    "intro": "Russare non è solo un fastidio per chi dorme accanto. Se il respiro si interrompe durante il sonno, si parla di apnee notturne: nell'adulto sono un fattore di rischio per il cuore, nel bambino possono pesare sulla crescita e sulla scuola. Ecco come le valutiamo, passo dopo passo.",
+    "sezioni": [
+      {
+        "titolo": "Russamento, apnee, OSAS: le parole",
+        "paragrafi": [
+          "Il russamento è il rumore prodotto dalle vibrazioni dei tessuti delle vie aeree durante il sonno. Le apnee sono pause del respiro; le ipopnee sono respiri ridotti. Quando sono frequenti e importanti si parla di sindrome delle apnee ostruttive nel sonno, in inglese OSAS.",
+          "Le apnee riducono, in modo variabile, l'ossigeno nel sangue. Si distinguono in centrali, ostruttive e miste. Le forme centrali sono rare: dipendono dai centri nervosi che comandano il respiro. Le ostruttive sono le più frequenti: il flusso d'aria che dal naso o dalla bocca deve raggiungere i polmoni trova un ostacolo."
+        ]
+      },
+      {
+        "titolo": "Perché è importante",
+        "paragrafi": [
+          "Nell'adulto, se di entità e frequenza rilevanti, le apnee notturne sono un fattore di rischio per eventi cardiovascolari acuti, come infarto e ictus.",
+          "Nel bambino possono causare scarso rendimento scolastico, uno sviluppo non adeguato delle capacità cognitive e una crescita ridotta. Per questo non vanno sottovalutate, a nessuna età."
+        ]
+      },
+      {
+        "titolo": "I segnali da non ignorare",
+        "paragrafi": [
+          "Nell'adulto, i segni indiretti più comuni sono:"
+        ],
+        "elenco": [
+          "risvegli frequenti durante la notte;",
+          "russamento forte e abituale;",
+          "mal di testa al mattino;",
+          "sonnolenza durante il giorno;",
+          "pressione alta senza un'altra spiegazione."
+        ],
+        "chiusura": "Nel bambino possono comparire sonnolenza di giorno oppure, al contrario, irritabilità e agitazione eccessiva. Spesso il bambino dorme a bocca aperta e russa."
+      },
+      {
+        "titolo": "Cosa può favorire le apnee",
+        "paragrafi": [
+          "Molti fattori possono concorrere, spesso insieme:"
+        ],
+        "elenco": [
+          "un peso corporeo superiore a quello desiderabile;",
+          "un'alimentazione disordinata, con pasti molto calorici soprattutto a cena;",
+          "alcolici e caffè alla sera;",
+          "abitudini del sonno scorrette;",
+          "un'anatomia che predispone, per esempio nel naso o nella gola."
+        ],
+        "chiusura": "Alcuni di questi fattori si possono correggere: è già una parte della cura."
+      },
+      {
+        "titolo": "Una prima autovalutazione: la scala di Epworth",
+        "paragrafi": [
+          "Per misurare la sonnolenza di giorno si usa spesso la scala di Epworth: otto situazioni quotidiane, per ciascuna si indica quanto è probabile appisolarsi, da 0 a 3. Un punteggio sopra 10 indica una sonnolenza diurna aumentata.",
+          "Nella pagina principale trova la scala da compilare: è uno strumento utile per parlarne in visita, non una diagnosi."
+        ]
+      },
+      {
+        "titolo": "Il ruolo dell'otorinolaringoiatra",
+        "paragrafi": [
+          "Il contributo dell'otorino è capire dove si trova l'ostruzione che causa le apnee e se ci sono indicazioni a un trattamento chirurgico per rimuoverla.",
+          "La visita comprende un'anamnesi attenta, con domande sia generali sia specifiche sul sonno e sui disturbi, e un esame obiettivo completo di fibroscopia: una fibra ottica sottile e flessibile che, entrando da una narice, ci mostra naso, faringe e laringe in pochi minuti."
+        ]
+      },
+      {
+        "titolo": "Il monitoraggio notturno",
+        "paragrafi": [
+          "Se al termine della visita c'è un fondato sospetto di OSAS, programmiamo, se non è già stato fatto, l'esame diagnostico specifico: il monitoraggio cardio-respiratorio notturno.",
+          "A seconda dell'età e delle caratteristiche della persona, l'esame registra più o meno parametri durante il sonno. Permette di confermare la diagnosi, di misurare la gravità del disturbo e di riconoscere caratteristiche particolari, come una forte componente legata alla posizione."
+        ]
+      },
+      {
+        "titolo": "La sleep endoscopy",
+        "paragrafi": [
+          "Nell'adulto, quando si valuta una soluzione chirurgica, serve una fibroscopia eseguita in condizioni il più possibile vicine a quelle del sonno spontaneo: la sleep endoscopy.",
+          "Ci permette di confermare l'entità e la sede dell'ostruzione e di programmare correttamente il piano di cura."
+        ]
+      },
+      {
+        "titolo": "Le cure: adulti e bambini sono diversi",
+        "paragrafi": [
+          "Nel bambino il trattamento più spesso indicato e risolutivo in caso di OSAS è quello chirurgico, di solito sulle adenoidi e sulle tonsille ingrossate.",
+          "Nell'adulto, in genere, il trattamento di primo livello è ventilatorio, cioè con un apparecchio che durante la notte tiene aperte le vie aeree. Solo se questa terapia non funziona si propongono altre soluzioni, comprese quelle chirurgiche, sempre dopo uno studio accurato della sede dell'ostruzione."
+        ]
+      },
+      {
+        "titolo": "Cosa può fare già da domani",
+        "paragrafi": [
+          "In attesa della visita, alcune abitudini aiutano: cenare in modo leggero e non troppo tardi, evitare alcolici e caffè la sera, mantenere orari regolari per andare a letto e svegliarsi. Se russa soprattutto a pancia in su, dormire su un fianco può ridurre il disturbo.",
+          "Sono accorgimenti utili per tutti, ma non sostituiscono la diagnosi: se le apnee ci sono, vanno misurate e curate."
+        ]
+      },
+      {
+        "titolo": "Cosa portare alla visita",
+        "paragrafi": [
+          "Per sfruttare al meglio la visita è utile avere con sé:"
+        ],
+        "elenco": [
+          "la scala di Epworth compilata;",
+          "il racconto di chi dorme con Lei: quanto russa, se nota pause del respiro;",
+          "l'elenco dei farmaci che assume;",
+          "eventuali esami del sonno già eseguiti."
+        ]
+      },
+      {
+        "titolo": "Quando prenotare una visita",
+        "paragrafi": [
+          "Se russa ogni notte, se chi dorme con Lei nota pause nel respiro, se di giorno si sente spesso stanco o si addormenta facilmente, vale la pena di fare una valutazione. Lo stesso se Suo figlio russa, dorme a bocca aperta o è molto agitato.",
+          "Riceviamo a Rivoli, in via Nizza 9, e a Torino, in via Vespucci 69 e al Centro Diagnostico Fornaca. Può prenotare al 380 645 22 24 o scrivere a dagna.orl@gmail.com."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "acufeni",
+      "categoria": "Orecchio",
+      "titolo": "Acufeni: un sintomo da capire, non da sopportare",
+      "img": "/dagna-c75u/img/rep-audiometria.webp",
+      "tempoLettura": "6 min",
+      "intro": "Un fischio, un ronzio, un fruscio che sente solo Lei. Gli acufeni sono molto comuni e quasi tutti ne fanno esperienza almeno una volta nella vita. Ma un acufene è un sintomo, non una malattia: per questo va sempre capito da dove nasce.",
+      "sezioni": [
+        {
+          "titolo": "Cosa sono",
+          "paragrafi": [
+            "Nella maggior parte dei casi l'acufene è la percezione di un suono in assenza di una stimolazione acustica esterna. Può essere un fischio, un ronzio o un fruscio, in un solo orecchio o in entrambi.",
+            "Può essere continuo o comparire a tratti, più evidente nel silenzio, per esempio la sera quando si va a letto. Il fastidio che provoca è molto diverso da persona a persona."
+          ]
+        },
+        {
+          "titolo": "Un sintomo, non una malattia",
+          "paragrafi": [
+            "Considerare l'acufene un sintomo significa una cosa precisa: bisogna sempre approfondire quali ne siano le cause. Solo dopo averle individuate è possibile scegliere una terapia corretta.",
+            "Per questo diffidiamo dei rimedi «per tutti»: ciò che aiuta una persona può essere inutile per un'altra, se la causa è diversa."
+          ]
+        },
+        {
+          "titolo": "Le cause possibili",
+          "paragrafi": [
+            "Le cause possono essere molte. Oltre a tutte le malattie dell'orecchio, possono dare acufeni:"
+          ],
+          "elenco": [
+            "le malattie cardiovascolari, come l'ipertensione;",
+            "i disturbi della colonna cervicale;",
+            "le alterazioni dell'articolazione temporo-mandibolare, spesso legate a problemi della masticazione;",
+            "alcune malattie neurologiche;",
+            "i farmaci: la lista di sostanze che possono provocare acufeni è molto lunga."
+          ],
+          "chiusura": "Il ruolo dei farmaci è tanto importante quanto spesso trascurato: in visita è utile portare l'elenco di tutto ciò che assume."
+        },
+        {
+          "titolo": "La visita e gli esami",
+          "paragrafi": [
+            "Dal punto di vista otorinolaringoiatrico e audiologico, oltre a un'anamnesi accurata, ci sono alcuni esami essenziali: l'otoscopia, cioè l'osservazione del condotto e del timpano, e l'audiometria tonale, che misura la soglia uditiva di ciascun orecchio.",
+            "A questi si possono aggiungere l'audiometria vocale, l'impedenzometria, l'acufenometria, che misura frequenza e intensità dell'acufene, i test di mascherabilità e di inibizione, le prove vestibolari e i potenziali evocati uditivi."
+          ]
+        },
+        {
+          "titolo": "I questionari",
+          "paragrafi": [
+            "Esistono questionari che misurano quanto l'acufene disturba la vita di tutti i giorni: il sonno, la concentrazione, l'umore. Sono utili per capire il peso reale del sintomo e per seguirne l'andamento nel tempo.",
+            "Due persone con un acufene simile all'esame possono viverlo in modo molto diverso: il questionario ci aiuta a tenerne conto."
+          ]
+        },
+        {
+          "titolo": "Quando serve la risonanza",
+          "paragrafi": [
+            "Non è raro che, in base all'esito della visita e degli esami, venga richiesta anche una risonanza magnetica dell'encefalo, con attenzione alle strutture dell'orecchio interno e alle prime porzioni delle vie acustiche centrali.",
+            "Serve soprattutto quando l'acufene è in un solo orecchio o si accompagna a un calo dell'udito asimmetrico."
+          ]
+        },
+        {
+          "titolo": "Le cure",
+          "paragrafi": [
+            "Se la causa dell'acufene si può risolvere, la trattiamo: in genere, risolta la causa, il sintomo scompare.",
+            "Se invece la causa non si può risolvere, questo non significa che il sintomo non possa essere alleviato. Tra le possibilità ci sono la terapia con apparecchi acustici, la Tinnitus Retraining Therapy (TRT), la terapia farmacologica e quella con nutraceutici."
+          ]
+        },
+        {
+          "titolo": "La Tinnitus Retraining Therapy",
+          "paragrafi": [
+            "La TRT combina il counselling, cioè colloqui che spiegano cosa succede nell'orecchio e nel cervello, con una terapia sonora. L'obiettivo è che il cervello impari a dare meno importanza all'acufene, fino a non accorgersene più nella maggior parte del tempo.",
+            "Richiede tempo e costanza, e funziona meglio quando la persona ha capito bene il proprio sintomo: per questo la prima visita è così importante."
+          ]
+        },
+        {
+          "titolo": "Acufeni e sonno",
+          "paragrafi": [
+            "Gli acufeni si sentono di più nel silenzio, per questo la sera disturbano di più. Un suono di sottofondo leggero, come un ventilatore o una musica a basso volume, può aiutare ad addormentarsi.",
+            "Ansia e stanchezza tendono ad amplificare il fastidio: è anche per questo che il colloquio fa parte della cura."
+          ]
+        },
+        {
+          "titolo": "Acufeni e udito",
+          "paragrafi": [
+            "Molto spesso l'acufene si accompagna a un calo dell'udito, anche lieve e non ancora avvertito dalla persona. Per questo l'audiometria è quasi sempre il primo esame: misura la soglia uditiva di ogni orecchio, frequenza per frequenza.",
+            "Quando l'audiometria mostra un calo, curarlo, per esempio con un apparecchio acustico adatto, può ridurre anche la percezione dell'acufene: il cervello torna a ricevere i suoni che gli mancavano."
+          ]
+        },
+        {
+          "titolo": "Il rumore",
+          "paragrafi": [
+            "L'esposizione a rumori forti, al lavoro, in discoteca, con le cuffie ad alto volume, è una causa frequente sia di acufeni sia di calo dell'udito. Dopo un concerto molti hanno un fischio che passa in qualche ora: è un segnale che l'orecchio è stato messo sotto sforzo.",
+            "Proteggere l'udito con tappi adatti e moderare il volume delle cuffie è la prevenzione più semplice."
+          ]
+        },
+        {
+          "titolo": "Cosa portare in visita",
+          "paragrafi": [
+            "Per la prima visita è utile avere con sé:"
+          ],
+          "elenco": [
+            "l'elenco completo dei farmaci e degli integratori che assume;",
+            "eventuali esami dell'udito già fatti;",
+            "qualche nota su quando l'acufene è iniziato, se è sempre presente e cosa lo peggiora."
+          ]
+        },
+        {
+          "titolo": "Quando prenotare",
+          "paragrafi": [
+            "Vale la pena di fare una visita se l'acufene dura da più di qualche giorno, se è in un solo orecchio, se si accompagna a un calo dell'udito o a vertigini, o semplicemente se Le toglie il sonno.",
+            "Riceviamo a Rivoli e a Torino. Può prenotare al 380 645 22 24 o scrivere a dagna.orl@gmail.com."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "tappo-di-cerume",
+      "categoria": "Orecchio",
+      "titolo": "Tappo di cerume: cosa fare e cosa non fare",
+      "img": "/dagna-c75u/img/rep-otoscopio-largo.webp",
+      "tempoLettura": "5 min",
+      "intro": "Orecchio ovattato, la propria voce che rimbomba, un fischio: spesso è solo un tappo di cerume. È un disturbo banale, ma va trattato nel modo giusto. Ecco perché si forma e come si rimuove in sicurezza.",
+      "sezioni": [
+        {
+          "titolo": "Cos'è il cerume",
+          "paragrafi": [
+            "Il cerume è una sostanza grassa prodotta normalmente da alcune ghiandole sudoripare modificate, presenti nella pelle che riveste il condotto uditivo esterno.",
+            "Non è sporcizia: ha una funzione protettiva contro infezioni e infiammazioni del condotto."
+          ]
+        },
+        {
+          "titolo": "Come si forma un tappo",
+          "paragrafi": [
+            "Di norma il rinnovo della pelle del condotto spinge il cerume verso l'esterno, da solo. In alcune condizioni, però, il cerume si accumula fino a creare un vero e proprio tappo.",
+            "La formazione del tappo è favorita da fattori anatomici, come condotti uditivi stretti, da fattori biologici, come una produzione eccessiva o una forte desquamazione della pelle, e da fattori legati alle abitudini."
+          ]
+        },
+        {
+          "titolo": "I sintomi",
+          "paragrafi": [
+            "Quando c'è un tappo di cerume:"
+          ],
+          "elenco": [
+            "l'udito di solito è ridotto, con una sensazione di orecchio chiuso;",
+            "si può sentire il rimbombo della propria voce dentro l'orecchio (autofonia);",
+            "spesso compaiono acufeni, come fischi o ronzii;",
+            "ci può essere un lieve senso di instabilità;",
+            "più raramente, dolore all'orecchio."
+          ],
+          "chiusura": "Questi sintomi però non sono esclusivi del cerume: per questo è utile una visita prima di qualsiasi manovra."
+        },
+        {
+          "titolo": "Cosa non fare",
+          "paragrafi": [
+            "Alcune abitudini comuni fanno più male che bene:"
+          ],
+          "elenco": [
+            "non usare i cotton fioc nel condotto: spingono il cerume in profondità e sono una delle cause più frequenti di tappo;",
+            "non infilare oggetti nell'orecchio, come forcine o chiavi;",
+            "non fare lavaggi da soli se ha avuto perforazioni del timpano o interventi all'orecchio;",
+            "non usare candele auricolari o rimedi improvvisati."
+          ],
+          "chiusura": "Per pulire l'orecchio basta la parte esterna, con un asciugamano, dopo la doccia."
+        },
+        {
+          "titolo": "I prodotti in farmacia",
+          "paragrafi": [
+            "In commercio ci sono prodotti per l'igiene delle orecchie. Possono aiutare a mantenere il cerume morbido, ma spesso non bastano a risolvere del tutto i disturbi quando il tappo si è già formato.",
+            "Usarli per qualche giorno prima della visita, se il medico lo consiglia, può rendere più semplice la rimozione."
+          ]
+        },
+        {
+          "titolo": "Come si rimuove",
+          "paragrafi": [
+            "Tradizionalmente il tappo si rimuove con un lavaggio, usando una siringa chiamata schizzettone: l'acqua tiepida stacca il cerume e lo porta fuori.",
+            "Nei casi in cui ci siano dubbi sullo stato del timpano, o quando c'è una perforazione o una maggiore fragilità, usiamo altre tecniche: strumenti adatti e aspiratori, anche in otomicroscopia, cioè guardando l'orecchio al microscopio."
+          ]
+        },
+        {
+          "titolo": "Perché il microscopio fa la differenza",
+          "paragrafi": [
+            "Con l'otomicroscopio vediamo il condotto e il timpano in profondità, con entrambi gli occhi e con ingrandimenti diversi. Possiamo usare micro-strumenti per rimuovere croste di cerume e secrezioni sotto controllo diretto.",
+            "La manovra può dare un po' di fastidio, non dolore: per questo spieghiamo sempre cosa stiamo per fare."
+          ]
+        },
+        {
+          "titolo": "Dopo la rimozione",
+          "paragrafi": [
+            "Nella maggior parte dei casi l'udito torna subito normale. Se il tappo tende a riformarsi, possiamo consigliarLe come prevenirlo e ogni quanto fare un controllo.",
+            "Se invece l'udito non migliora, può esserci un altro problema: in quel caso l'audiometria ci aiuta a capirlo."
+          ]
+        },
+        {
+          "titolo": "Il cerume nei bambini",
+          "paragrafi": [
+            "Anche nei bambini il cerume ha una funzione protettiva e, di norma, esce da solo. Pulire solo la parte esterna dell'orecchio è sufficiente.",
+            "Se il bambino sembra sentire meno, alza il volume della televisione o si tocca spesso un orecchio, una visita chiarisce se si tratta di cerume, di catarro dietro il timpano o di altro. In studio abbiamo strumentazione dedicata anche ai più piccoli, fin dai primi mesi di vita."
+          ]
+        },
+        {
+          "titolo": "A chi capita più spesso",
+          "paragrafi": [
+            "Il tappo di cerume è più frequente in chi ha condotti uditivi stretti o tortuosi, in chi produce molto cerume, negli anziani, in cui il cerume tende a essere più secco, e in chi usa apparecchi acustici o auricolari per molte ore al giorno, perché ostacolano la naturale uscita del cerume.",
+            "Anche i bambini possono avere tappi, spesso favoriti dall'uso dei cotton fioc da parte degli adulti."
+          ]
+        },
+        {
+          "titolo": "Tappo o qualcos'altro?",
+          "paragrafi": [
+            "Orecchio chiuso, fischi e calo dell'udito non sono sempre colpa del cerume. Gli stessi sintomi possono dipendere da un'otite sierosa, da un problema della tuba di Eustachio, da un improvviso calo dell'udito dell'orecchio interno.",
+            "In particolare, un calo dell'udito improvviso in un solo orecchio, senza una causa evidente, va valutato in tempi brevi: in questi casi il tempo conta."
+          ]
+        },
+        {
+          "titolo": "Ogni quanto controllare",
+          "paragrafi": [
+            "Chi tende a formare tappi può fare un controllo periodico, per esempio una o due volte all'anno, prima che il cerume si accumuli del tutto. È una visita rapida che evita di arrivare all'orecchio completamente chiuso.",
+            "Per chi porta apparecchi acustici, il controllo regolare del condotto aiuta anche il buon funzionamento dell'apparecchio."
+          ]
+        },
+        {
+          "titolo": "Dove riceviamo",
+          "paragrafi": [
+            "Riceviamo a Rivoli, in via Nizza 9, e a Torino, in via Vespucci 69 e al Centro Diagnostico Fornaca. Per prenotare può chiamare il 380 645 22 24 o scrivere a dagna.orl@gmail.com."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "vertigini",
+      "categoria": "Equilibrio",
+      "titolo": "Vertigini: quando il problema è l'orecchio",
+      "img": "/dagna-c75u/img/rep-strumento.webp",
+      "tempoLettura": "6 min",
+      "intro": "La stanza che gira, oppure la sensazione di essere in barca. Le vertigini spaventano, ma molto spesso hanno una causa precisa che si può riconoscere con una visita accurata. Ecco come lavoriamo.",
+      "sezioni": [
+        {
+          "titolo": "Equilibrio e vertigine",
+          "paragrafi": [
+            "Equilibrio e vertigine sono l'uno il contrario dell'altro: quando l'equilibrio manca, compare la vertigine.",
+            "L'equilibrio è garantito da una complessa interazione di sistemi diversi: la vista, l'udito e il sistema vestibolare dell'orecchio interno, i muscoli, le articolazioni e i tendini, il sistema nervoso centrale e periferico. La vertigine può nascere dal cattivo funzionamento, temporaneo o permanente, di uno o più di questi sistemi."
+          ]
+        },
+        {
+          "titolo": "Un problema di più specialisti",
+          "paragrafi": [
+            "Le vertigini sono un terreno comune tra otorinolaringoiatria, neurologia, fisiatria, medicina interna e oculistica.",
+            "Spesso serve una visita otorinolaringoiatrica per diagnosticare o escludere un'origine vestibolare dei sintomi: il sistema vestibolare, infatti, è l'unico dedicato in modo specifico all'equilibrio."
+          ]
+        },
+        {
+          "titolo": "Vertigine oggettiva o soggettiva",
+          "paragrafi": [
+            "In generale si distinguono le vertigini oggettive, in cui la persona vede ruotare la stanza e gli oggetti intorno a sé, e quelle soggettive, descritte come instabilità, sensazione di essere ubriachi o di essere in barca.",
+            "Questa distinzione, che emerge già dal racconto, orienta molto la ricerca della causa."
+          ]
+        },
+        {
+          "titolo": "Le vertigini che nascono dall'orecchio",
+          "paragrafi": [
+            "I disturbi vestibolari periferici più frequenti sono:"
+          ],
+          "elenco": [
+            "la cupololitiasi, chiamata anche canalolitiasi o vertigine parossistica posizionale benigna;",
+            "la malattia di Menière;",
+            "la neurite vestibolare;",
+            "la vertigine emicranica."
+          ],
+          "chiusura": "Hanno in comune vertigini oggettive con nistagmo, cioè movimenti involontari degli occhi, ma si differenziano per durata, modo di comparire e sintomi associati. Molto spesso si accompagnano nausea e vomito."
+        },
+        {
+          "titolo": "Le cause più comuni di instabilità",
+          "paragrafi": [
+            "Le vertigini soggettive hanno spesso altre origini:"
+          ],
+          "elenco": [
+            "l'ipotensione ortostatica, cioè il calo di pressione quando ci si alza;",
+            "contratture cervicali e cervicoartrosi;",
+            "esiti non compensati di vecchi disturbi vestibolari;",
+            "farmaci;",
+            "malattie del sistema nervoso centrale e periferico."
+          ]
+        },
+        {
+          "titolo": "La visita",
+          "paragrafi": [
+            "Per inquadrare correttamente una vertigine servono un'anamnesi approfondita e un esame otoneurologico completo, con prove statiche e dinamiche e la ricerca del nistagmo spontaneo e provocato.",
+            "Eseguiamo le manovre diagnostiche per la cupololitiasi, come la Dix-Hallpike, la Pagnini-McClure e la Semont, oltre all'head shaking test e all'head impulse test."
+          ]
+        },
+        {
+          "titolo": "Gli esami",
+          "paragrafi": [
+            "Spesso è necessario un esame audiometrico tonale, perché alcune malattie, come la Menière, coinvolgono anche l'udito. Talvolta servono accertamenti strumentali vestibolari.",
+            "Più raramente può essere utile una risonanza magnetica dell'encefalo e dell'orecchio interno."
+          ]
+        },
+        {
+          "titolo": "La riabilitazione vestibolare",
+          "paragrafi": [
+            "Per alcune forme, come la vertigine posizionale, esistono manovre che riportano in sede i piccoli cristalli dell'orecchio interno responsabili dei sintomi. Per altre è utile la riabilitazione vestibolare: esercizi mirati che aiutano il sistema dell'equilibrio a compensare.",
+            "Ogni percorso parte dalla diagnosi: è lei che decide la cura."
+          ]
+        },
+        {
+          "titolo": "Vertigini e anziani",
+          "paragrafi": [
+            "Con l'età i sistemi che garantiscono l'equilibrio, vista, orecchio interno, muscoli e articolazioni, tendono a funzionare meno bene, e spesso si sommano più cause insieme, compresi i farmaci.",
+            "Nell'anziano l'instabilità aumenta il rischio di cadute: per questo merita una valutazione accurata, che consideri tutte le possibili cause e non solo l'orecchio."
+          ]
+        },
+        {
+          "titolo": "Cosa fare durante una crisi",
+          "paragrafi": [
+            "Durante una crisi di vertigine conviene mettersi seduti o sdraiati in un luogo sicuro, tenere la testa ferma e fissare un punto. Non è il momento di guidare né di salire su scale.",
+            "Se la crisi è la prima, è molto forte o si accompagna ad altri sintomi, è giusto rivolgersi al medico. Annotare quando è iniziata, quanto è durata e cosa la scatenava ci sarà molto utile in visita."
+          ]
+        },
+        {
+          "titolo": "La vertigine posizionale",
+          "paragrafi": [
+            "La vertigine parossistica posizionale benigna è una delle cause più frequenti. Compare cambiando posizione della testa, per esempio girandosi nel letto, alzandosi o guardando in alto, e dura pochi secondi, ma può essere molto intensa.",
+            "Nasce da piccoli cristalli dell'orecchio interno che si spostano in un canale sbagliato. La diagnosi si fa con le manovre in visita e, spesso, con le stesse manovre si cura."
+          ]
+        },
+        {
+          "titolo": "La malattia di Menière",
+          "paragrafi": [
+            "Nella malattia di Menière le crisi di vertigine durano da minuti a ore e si accompagnano a calo dell'udito, acufeni e senso di orecchio pieno, di solito da un lato. Tra una crisi e l'altra la persona può stare bene.",
+            "Per seguirla nel tempo è importante l'audiometria, che mostra come cambia l'udito durante la malattia."
+          ]
+        },
+        {
+          "titolo": "Cosa portare in visita",
+          "paragrafi": [
+            "Per la visita è utile avere con sé:"
+          ],
+          "elenco": [
+            "l'elenco dei farmaci che assume;",
+            "una descrizione delle crisi: quando, quanto durano, cosa le scatena;",
+            "eventuali esami già fatti, come audiometrie o risonanze."
+          ]
+        },
+        {
+          "titolo": "Quando prenotare",
+          "paragrafi": [
+            "Se ha avuto un episodio di vertigine, soprattutto se si ripete, se si accompagna a calo dell'udito, fischi o senso di orecchio pieno, è utile una visita. Se invece compaiono sintomi neurologici improvvisi, come difficoltà a parlare, perdita di forza o visione doppia, serve chiamare subito il 112.",
+            "Riceviamo a Rivoli, in via Nizza 9, e a Torino, in via Vespucci 69: 380 645 22 24, dagna.orl@gmail.com."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita otorinolaringoiatrica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "studio.orl.dagna",
+    "nota": "lo studio non ha un profilo: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Tappo di cerume: cosa non fare",
+        "punti": [
+          "Niente cotton fioc nel condotto",
+          "Niente forcine o oggetti",
+          "Niente lavaggi fai-da-te dopo un'operazione all'orecchio",
+          "Niente candele auricolari"
+        ],
+        "didascalia": "Il cerume protegge l'orecchio. Quando forma un tappo si rimuove in studio, con un lavaggio o in otomicroscopia se il timpano è fragile.",
+        "hashtag": "#cerume #otorino #rivoli"
+      },
+      {
+        "stile": "foto",
+        "immagine": "otoscopio",
+        "titolo": "Acufeni: le cause",
+        "sottotitolo": "Un sintomo, non una malattia",
+        "didascalia": "Orecchio, pressione, cervicale, mandibola, farmaci: le cause di un fischio possono essere tante. Prima si capisce da dove nasce, poi si sceglie la cura.",
+        "hashtag": "#acufeni #udito #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Il Suo bambino russa?",
+        "risposta": "Ne parliamo in visita.",
+        "didascalia": "Nei bambini le apnee notturne possono pesare su crescita e rendimento scolastico. Spesso dipendono da adenoidi e tonsille: una visita con fibroscopia pediatrica chiarisce.",
+        "hashtag": "#apneenotturne #pediatria #otorino"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove riceviamo",
+    "altreLabel": "Riceviamo anche presso",
+    "email": "dagna.orl@gmail.com",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio di Rivoli",
+        "indirizzo": "Via Nizza 9",
+        "citta": "Rivoli",
+        "cap": "",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di via Nizza 9, Rivoli",
+        "breve": "Rivoli",
+        "telefoni": [
+          {
+            "label": "Prenotazioni e informazioni",
+            "numero": "380 645 22 24"
+          },
+          {
+            "label": "Studio",
+            "numero": "011 953 22 93"
+          }
+        ],
+        "orari": "Prenotazioni dal lunedì al sabato",
+        "tessera": "orecchio"
+      },
+      {
+        "tipo": "Studio",
+        "nome": "Studio di Torino",
+        "indirizzo": "Via Vespucci 69",
+        "citta": "Torino",
+        "cap": "",
+        "mappa": true,
+        "principale": false,
+        "frase": "lo studio di via Vespucci 69, Torino",
+        "breve": "Torino",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "329 847 3583"
+          },
+          {
+            "label": "Assistente digitale, 24 ore su 24",
+            "numero": "011 195 17887"
+          }
+        ],
+        "orari": "Prenotazioni dal lunedì al venerdì, 9-19",
+        "tessera": "naso"
+      },
+      {
+        "tipo": "Centro diagnostico",
+        "nome": "Centro Diagnostico Fornaca",
+        "indirizzo": "Corso Vittorio Emanuele II 87",
+        "citta": "Torino",
+        "cap": "",
+        "mappa": true,
+        "principale": false,
+        "frase": "il Centro Diagnostico Fornaca, Torino",
+        "breve": "Fornaca",
+        "telefoni": [],
+        "orari": "",
+        "tessera": "gola"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Riceviamo su appuntamento a Rivoli e a Torino. Cerchiamo di dare appuntamenti in tempi brevi a chi ha bisogno di un consulto urgente.",
+    "telefono": "3806452224",
+    "telefonoLabel": "380 645 22 24",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "oggettoMail": "Richiesta di visita ORL",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi sede, giorno e orario che preferisce: La ricontattiamo per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30",
+        "18:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "motivi": [
+        "Calo dell'udito",
+        "Acufeni",
+        "Vertigini",
+        "Tappo di cerume",
+        "Otite",
+        "Naso chiuso",
+        "Sinusite o polipi",
+        "Russamento e apnee",
+        "Controllo generale",
+        "Voce rauca",
+        "Tonsille",
+        "Ghiandole salivari",
+        "Bambino: orecchie e udito",
+        "Bambino: russa o respira a bocca aperta",
+        "Bambino: adenoidi e tonsille",
+        "Bambino: controllo"
+      ],
+      "motiviFrase": [
+        "un calo dell'udito",
+        "acufeni (fischi o ronzii)",
+        "vertigini o disturbi dell'equilibrio",
+        "un tappo di cerume",
+        "un'otite",
+        "naso chiuso",
+        "sinusite o polipi nasali",
+        "russamento o apnee notturne",
+        "un controllo di orecchie, naso e gola",
+        "un problema di voce",
+        "le tonsille",
+        "le ghiandole salivari",
+        "mio figlio, per orecchie o udito",
+        "mio figlio, che russa o respira a bocca aperta",
+        "mio figlio, per adenoidi o tonsille",
+        "un controllo ORL per mio figlio"
+      ],
+      "luoghi": [
+        {
+          "nome": "Rivoli · Via Nizza 9",
+          "frase": "lo studio di via Nizza 9, Rivoli"
+        },
+        {
+          "nome": "Torino · Via Vespucci 69",
+          "frase": "lo studio di via Vespucci 69, Torino"
+        },
+        {
+          "nome": "Fornaca · Corso Vittorio Emanuele II 87",
+          "frase": "il Centro Diagnostico Fornaca, Torino"
+        }
+      ],
+      "privacy": null,
+      "privacyTesto": "I dati che inserisce servono solo a ricontattarLa per fissare la visita e non vengono usati per altri scopi.",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F1F6FB",
+      "ink": "#15202B",
+      "muted": "#566472",
+      "line": "#DCE5EE",
+      "brand": "#324F6D",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#69A4D8",
+      "deep": "#1F324B",
+      "deep-ink": "#D5E3F1"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap",
+    "fontTitoli": "Lexend",
+    "fontTesti": "Atkinson Hyperlegible",
+    "fontUi": "Lexend",
+    "favicon": "/dagna-c75u/img/tessera-orecchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/dagna-c75u/brand/brand.json",
+    "pagine": [
+      "https://www.o-torino.it/",
+      "https://www.o-torino.it/dagna-chi-siamo-equipe",
+      "https://www.o-torino.it/cosa-facciamo",
+      "https://www.o-torino.it/le-nostri-sedi",
+      "https://www.o-torino.it/contatti-e-informazioni",
+      "https://www.o-torino.it/approfondimenti-orl"
+    ]
+  }
+}

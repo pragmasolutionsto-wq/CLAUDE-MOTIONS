@@ -262,3 +262,24 @@ html { scroll-behavior: smooth; }
   .stile-profilo .card { border-radius: 24px; }
   .senza-moto .pannello { transition: none; }
 }
+
+/* Layout "ascolto": tessere del logo, chip, frequenze, schede, Epworth */
+@layer components {
+  .gruppo-tessera { transition: border-color .2s, background-color .2s; }
+  .gruppo-tessera:hover { background: var(--c-surface); }
+  .gruppo-tessera[aria-pressed="true"] { border-color: var(--c-brand2); background: color-mix(in srgb, var(--c-brand2) 14%, #fff); }
+  .chip-ascolto { background: #fff; transition: background-color .2s, color .2s, border-color .2s; }
+  .chip-ascolto:hover { border-color: var(--c-brand2); }
+  .chip-ascolto[aria-pressed="true"] { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+  .chip-ascolto[aria-pressed="true"] .text-muted { color: rgb(255 255 255 / .75) !important; }
+  .freq-tasto { transition: background-color .2s, color .2s; }
+  .freq-tasto:hover { background: rgb(255 255 255 / .08); }
+  .freq-tasto[aria-pressed="true"] { background: var(--c-brand2); border-color: var(--c-brand2); color: var(--c-deep); }
+  .esplora-tab { background: #fff; transition: background-color .2s, color .2s, border-color .2s; }
+  .esplora-tab[aria-selected="true"] { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+  .scelta-epworth { cursor: pointer; }
+  .scelta-epworth > span { transition: background-color .15s, color .15s, border-color .15s; }
+  .scelta-epworth:hover > span { border-color: var(--c-brand2); }
+  .esame-punto { transition: width .4s, opacity .4s; }
+  .stile-ascolto .card { border-radius: 28px; }
+}

@@ -1,0 +1,558 @@
+---
+// Layout "ascolto" (prima demo: Studio ORL Dott. Dagna, Rivoli e Torino). Costruito sulle tre tessere del logo (orecchio, naso, gola)
+// e sull'interattività: prenotazione in tre passi (dove sente il disturbo → motivo → sede, con telefono della sede); esploratore
+// "Cosa facciamo" a schede; "Ascolti le frequenze" (audiogramma con toni veri via Web Audio e onda che si disegna); esami raccontati
+// con un pannello fisso che cambia allo scroll; scala di Epworth compilabile con esito; due specialisti. Lexend + Atkinson Hyperlegible.
+// Con prefers-reduced-motion: tutto fermo e visibile.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const sedi = m.sedi.luoghi as any[];
+const gruppi = x.gruppi as any[];
+const mail = emailRichieste(m);
+const testo = (mo: string, se: string) => `Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${se}.`;
+const m0 = gruppi[0].motivi[0][1];
+const href0 = `mailto:${mail}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(testo(m0, sedi[0].frase))}`;
+const telSede = (s: any) => (s.telefoni[0]?.numero ?? m.prenota.telefonoLabel);
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const esami = x.esami as any[];
+const freq = x.frequenze as any[];
+// audiogramma: x logaritmica 125-8000 Hz, y da -10 a 120 dB
+const AW = 560, AH = 380, PL = 46, PT = 20, PR = 16, PB = 34;
+const fx = (hz: number) => PL + ((Math.log2(hz) - Math.log2(125)) / (Math.log2(8000) - Math.log2(125))) * (AW - PL - PR);
+const fy = (db: number) => PT + ((db + 10) / 130) * (AH - PT - PB);
+const grigliaHz = [125, 250, 500, 1000, 2000, 4000, 8000];
+const grigliaDb = [-10, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120];
+const scelte = ['Mai', 'Poco', 'Abbastanza', 'Molto'];
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/90 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-8">
+      <a href={`/${m.slug}`} class="flex min-w-0 items-center gap-3 leading-none">
+        <img src={foto.logo} alt="" width="512" height="515" class="h-11 w-11 shrink-0" />
+        <span class="min-w-0"><span class="block font-head text-[18px] font-semibold text-brand sm:text-[21px]">Studio ORL Dott. Dagna</span><span class="mt-1 block text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Rivoli · Torino</span></span>
+      </a>
+      <nav class="hidden items-center gap-6 font-head text-[14px] font-medium text-ink/70 xl:flex">
+        <a href="#aree" class="hover:text-brand">Cosa facciamo</a><a href="#udito" class="hover:text-brand">Udito</a><a href="#esami" class="hover:text-brand">Esami</a><a href="#sonno" class="hover:text-brand">Sonno</a><a href="#chi-siamo" class="hover:text-brand">Chi siamo</a><a href="#articoli" class="hover:text-brand">Blog</a><a href="#sedi" class="hover:text-brand">Sedi</a>
+      </nav>
+      <a href={telHref(m.prenota.telefono)} class="btn !min-h-[42px] shrink-0 !rounded-2xl bg-brand !px-5 font-head text-sm text-white hover:opacity-90"><Icona nome="tel" class="h-4 w-4" /> <span class="hidden sm:inline">{m.prenota.telefonoLabel}</span><span class="sm:hidden">Chiami</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-surface" data-hero>
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-32 pt-10 sm:px-8 lg:grid-cols-12 lg:pb-40 lg:pt-16">
+        <div class="lg:col-span-6">
+          <p class="flex items-center gap-2 font-head text-[13px] font-semibold uppercase tracking-[0.18em] text-brand" data-entra><span class="h-2 w-2 rounded-sm bg-brand2"></span>{x.hero.eyebrow}</p>
+          <h1 class="mt-4 font-head text-[2.6rem] font-semibold leading-[1.04] tracking-tight text-ink sm:text-[4rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-ink/80" data-entra>{x.hero.testo}</p>
+          <dl class="mt-8 grid max-w-lg grid-cols-3 gap-4" data-entra>
+            {x.numeri.map((n: any) => <div class="rounded-2xl bg-white p-3 shadow-[0_6px_18px_rgb(31_50_75/.08)] sm:p-4"><dt class="sr-only">{n.testo}</dt><dd class="font-head text-[1.45rem] font-semibold leading-none text-brand sm:text-[2.3rem]"><span data-conta={n.valore}>{n.valore.toLocaleString('it-IT')}</span>{n.suffisso}</dd><p class="mt-2 text-[12.5px] leading-snug text-muted" aria-hidden="true">{n.testo}</p></div>)}
+          </dl>
+        </div>
+        <div class="relative order-first lg:order-none lg:col-span-6">
+          <div class="relative mx-auto grid max-w-[560px] grid-cols-2 gap-4 sm:gap-6" style="perspective: 1200px">
+            {(x.medici as any[]).map((d, i) => (
+              <figure class={`tessera-foto ${i ? 'mt-14 sm:mt-20' : ''}`} data-tessera-foto>
+                <div class="overflow-hidden rounded-[1.6rem] shadow-[0_18px_40px_rgb(31_50_75/.25)] sm:rounded-[2.2rem]"><img src={d.foto} alt={d.nome.replace('Dott.', 'Il Dott.')} width="760" height="950" class="aspect-[4/5] w-full object-cover" /></div>
+                <figcaption class="mt-3 px-1"><span class="block font-head text-[15px] font-semibold text-ink sm:text-[17px]">{d.nome}</span><span class="block text-[12.5px] leading-snug text-muted">{d.ruolo}</span></figcaption>
+              </figure>
+            ))}
+            <img src={gruppi[0].tessera} alt="" width="250" height="258" class="tessera-volante absolute -left-3 top-[44%] w-14 sm:-left-8 sm:w-20" data-volante />
+            <img src={gruppi[1].tessera} alt="" width="258" height="258" class="tessera-volante absolute -top-5 right-[8%] w-12 sm:w-16" data-volante />
+            <img src={gruppi[2].tessera} alt="" width="258" height="260" class="tessera-volante absolute -right-2 bottom-[18%] w-14 sm:-right-6 sm:w-20" data-volante />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRENOTAZIONE IN TRE PASSI -->
+    <section id="prenota-box" class="relative z-10 -mt-24 px-4 sm:px-8 lg:-mt-28" data-prenota-box data-mail={mail} data-oggetto={m.prenota.oggettoMail}>
+      <div class="mx-auto max-w-7xl rounded-[2rem] bg-white p-5 shadow-[0_24px_60px_rgb(31_50_75/.16)] ring-1 ring-line sm:p-8 lg:p-10">
+        <div class="grid gap-8 lg:grid-cols-12">
+          <div class="lg:col-span-7">
+            <h2 class="font-head text-[1.8rem] font-semibold leading-tight sm:text-[2.2rem]">Prenoti una visita</h2>
+            <p class="mt-4 flex items-center gap-2 font-head text-[13px] font-semibold uppercase tracking-[0.14em] text-muted"><span class="grid h-6 w-6 place-items-center rounded-md bg-brand text-[12px] text-white">1</span> Dove sente il disturbo?</p>
+            <div class="mt-3 grid grid-cols-4 gap-2 sm:gap-3" role="group" aria-label="Dove sente il disturbo">
+              {gruppi.map((g, i) => (
+                <button type="button" class="gruppo-tessera flex flex-col items-center gap-2 rounded-2xl border-2 border-transparent p-2 text-center sm:p-3" data-gruppo={g.id} aria-pressed={i === 0 ? 'true' : 'false'}>
+                  {g.tessera ? <img src={g.tessera} alt="" width="250" height="258" class="h-14 w-14 sm:h-20 sm:w-20" /> : <span class="grid h-14 w-14 place-items-center rounded-[22%] bg-brand2 text-white shadow-[2px_3px_4px_rgb(0_0_0/.18)] sm:h-[4.6rem] sm:w-[4.6rem]"><Icona nome="persone" class="h-7 w-7 sm:h-9 sm:w-9" /></span>}
+                  <span class="font-head text-[13px] font-semibold leading-tight sm:text-[15px]">{g.nome}</span>
+                </button>
+              ))}
+            </div>
+            <p class="mt-6 flex items-center gap-2 font-head text-[13px] font-semibold uppercase tracking-[0.14em] text-muted"><span class="grid h-6 w-6 place-items-center rounded-md bg-brand text-[12px] text-white">2</span> Il motivo</p>
+            {gruppi.map((g, i) => (
+              <div class={`mt-3 flex flex-wrap gap-2 ${i ? 'hidden' : ''}`} role="group" aria-label={`Motivo: ${g.nome}`} data-motivi-gruppo={g.id}>
+                {g.motivi.map((mo: string[], k: number) => <button type="button" class="chip-ascolto rounded-xl border border-line px-3.5 py-2 text-[15px]" data-chip="motivo" data-frase={mo[1]} aria-pressed={i === 0 && k === 0 ? 'true' : 'false'}>{mo[0]}</button>)}
+              </div>
+            ))}
+            <p class="mt-6 flex items-center gap-2 font-head text-[13px] font-semibold uppercase tracking-[0.14em] text-muted"><span class="grid h-6 w-6 place-items-center rounded-md bg-brand text-[12px] text-white">3</span> La sede</p>
+            <div class="mt-3 grid grid-cols-3 gap-2" role="group" aria-label="Sede">
+              {sedi.map((s, i) => <button type="button" class="chip-ascolto rounded-xl border border-line px-2 py-2.5 text-center" data-chip="sede" data-frase={s.frase} data-tel={telSede(s)} data-indirizzo={`${s.indirizzo}, ${s.citta}`} aria-pressed={i === 0 ? 'true' : 'false'}><span class="block font-head text-[15px] font-semibold">{s.breve}</span><span class="block text-[12px] leading-snug text-muted">{s.indirizzo}</span></button>)}
+            </div>
+          </div>
+          <div class="flex flex-col justify-between gap-5 rounded-3xl bg-deep p-6 text-white sm:p-8 lg:col-span-5">
+            <div>
+              <p class="flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.14em] text-brand2"><Icona nome="mail" class="h-4 w-4" /> Il Suo messaggio</p>
+              <p class="mt-4 font-head text-[1.3rem] leading-snug sm:text-[1.45rem]" data-anteprima aria-live="polite">{testo(m0, sedi[0].frase)}</p>
+              <p class="mt-4 flex items-center gap-2 text-[14px] text-deep-ink/80"><Icona nome="pin" class="h-4 w-4 shrink-0" /><span data-indirizzo-testo>{sedi[0].indirizzo}, {sedi[0].citta}</span></p>
+            </div>
+            <div class="flex flex-col gap-3">
+              <a href={href0} data-prenota class="btn !rounded-2xl bg-brand2 font-head text-deep hover:opacity-90"><Icona nome="mail" /> Invii la mail</a>
+              <a href={telHref(telSede(sedi[0]))} data-tel-link class="btn !rounded-2xl border border-white/30 font-head text-white hover:bg-white/10"><Icona nome="tel" /> <span data-tel-testo>{telSede(sedi[0])}</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COSA FACCIAMO: esploratore -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.2rem] font-semibold leading-tight tracking-tight sm:text-[3rem]" data-sale>Cosa facciamo</h2>
+        <p class="mt-2 max-w-xl text-[17px] text-muted">Scelga un'area: Le mostriamo cosa valutiamo in studio e quali interventi eseguiamo.</p>
+        <div class="mt-8 flex gap-2 overflow-x-auto pb-2 sm:gap-3" role="tablist" aria-label="Aree" data-esplora-tabs>
+          {(x.esplora as any[]).map((e, i) => (
+            <button type="button" role="tab" id={`tab-${e.id}`} aria-controls={`pan-${e.id}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="esplora-tab flex shrink-0 items-center gap-3 rounded-2xl border border-line py-2 pl-2 pr-5 font-head text-[16px] font-semibold" data-esplora-tab={i}>
+              {e.tessera ? <img src={e.tessera} alt="" width="250" height="258" class="h-11 w-11" /> : <span class="grid h-10 w-10 place-items-center rounded-[22%] bg-brand2 text-white"><Icona nome="persone" class="h-5 w-5" /></span>}{e.nome}
+            </button>
+          ))}
+        </div>
+        <div class="mt-6">
+          {(x.esplora as any[]).map((e, i) => (
+            <div role="tabpanel" id={`pan-${e.id}`} aria-labelledby={`tab-${e.id}`} class="grid gap-5 rounded-[2rem] bg-surface p-6 sm:p-10 md:grid-cols-2" hidden={i !== 0} data-esplora-pan={i}>
+              <div data-esplora-col>
+                <h3 class="flex items-center gap-2 font-head text-[13px] font-semibold uppercase tracking-[0.16em] text-brand"><Icona nome="lente" class="h-4 w-4" /> In studio</h3>
+                <ul class="mt-4 space-y-3">{e.diagnosi.map((t: string) => <li class="flex items-start gap-3 text-[16.5px] leading-snug"><span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-[3px] bg-brand2"></span>{t}</li>)}</ul>
+              </div>
+              <div class="rounded-3xl bg-white p-6" data-esplora-col>
+                <h3 class="flex items-center gap-2 font-head text-[13px] font-semibold uppercase tracking-[0.16em] text-brand"><Icona nome="ospedale" class="h-4 w-4" /> In sala operatoria</h3>
+                <ul class="mt-4 space-y-3">{e.chirurgia.map((t: string) => <li class="flex items-start gap-3 text-[16.5px] leading-snug"><Icona nome="check" class="mt-0.5 h-5 w-5 shrink-0 text-brand" />{t}</li>)}</ul>
+                <button type="button" class="mt-6 inline-flex items-center gap-2 font-head font-semibold text-brand hover:underline" data-vai-gruppo={e.id === 'bambini' ? 'bambino' : e.id}>Prenoti per quest'area <Icona nome="freccia" class="h-4 w-4" /></button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ASCOLTI LE FREQUENZE -->
+    <section id="udito" class="bg-deep px-4 py-16 text-white sm:px-8 sm:py-24" data-udito data-frequenze={JSON.stringify(freq)}>
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-5">
+          <p class="font-head text-[13px] font-semibold uppercase tracking-[0.18em] text-brand2">Audiologia</p>
+          <h2 class="mt-2 font-head text-[2.2rem] font-semibold leading-tight tracking-tight sm:text-[3rem]" data-sale>Ascolti le frequenze</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-deep-ink/85">Con l'audiometria misuriamo quanto deve essere forte un suono, frequenza per frequenza, perché Lei lo senta. Tocchi una frequenza per ascoltarla e vedere dove si trova sull'audiogramma.</p>
+          <div class="mt-6 grid grid-cols-3 gap-2" role="group" aria-label="Frequenze">
+            {freq.map((f, i) => <button type="button" class="freq-tasto rounded-xl border border-white/20 px-2 py-3 font-head text-[15px] font-semibold" data-freq={i} aria-pressed="false"><Icona nome="invia" class="mr-1 inline h-3.5 w-3.5" />{f.nome}</button>)}
+          </div>
+          <label class="mt-5 flex items-center gap-3 text-[14px] text-deep-ink/80"><span class="shrink-0">Volume</span><input type="range" min="0" max="100" value="35" class="w-full accent-[var(--c-brand2)]" data-volume aria-label="Volume del suono" /></label>
+          <p class="mt-5 min-h-[3.5rem] rounded-2xl bg-white/5 p-4 text-[16px] leading-relaxed ring-1 ring-white/10" data-freq-testo aria-live="polite">Scelga una frequenza: partirà un suono breve. Tenga il volume basso.</p>
+          <p class="mt-3 text-[13px] leading-relaxed text-deep-ink/60">Non è un esame dell'udito: per misurarlo servono una cabina silente e cuffie tarate.</p>
+        </div>
+        <div class="lg:col-span-7">
+          <figure class="rounded-[2rem] bg-white p-3 text-ink sm:p-6">
+            <svg viewBox={`0 0 ${AW} ${AH}`} class="w-full" role="img" aria-label="Audiogramma vuoto: frequenze da 125 a 8000 Hz in orizzontale, intensità da -10 a 120 dB in verticale" data-audiogramma>
+              <rect x={fx(250) - 22} y={PT} width="44" height={AH - PT - PB} rx="8" fill="var(--c-brand2)" opacity="0" data-colonna />
+              {grigliaDb.map((db) => <g><line x1={PL} x2={AW - PR} y1={fy(db)} y2={fy(db)} stroke={db === 20 ? 'var(--c-brand2)' : '#DCE5EE'} stroke-width={db === 20 ? 1.6 : 1} stroke-dasharray={db === 20 ? '5 4' : undefined} data-riga /><text x={PL - 8} y={fy(db) + 4} text-anchor="end" font-size="11" fill="#566472">{db}</text></g>)}
+              {grigliaHz.map((hz) => <g><line y1={PT} y2={AH - PB} x1={fx(hz)} x2={fx(hz)} stroke="#DCE5EE" data-riga /><text x={fx(hz)} y={AH - PB + 18} text-anchor="middle" font-size="11" fill="#566472">{hz >= 1000 ? `${hz / 1000}k` : hz}</text></g>)}
+              <text x={AW - PR} y={fy(20) - 6} text-anchor="end" font-size="11" fill="var(--c-brand)">entro 20 dB: udito nella norma</text>
+              <path d="" fill="none" stroke="var(--c-brand)" stroke-width="2.5" stroke-linecap="round" data-onda />
+            </svg>
+            <figcaption class="mt-3 flex flex-wrap items-center justify-between gap-2 px-2 text-[13px] text-muted"><span>Frequenza (Hz) →</span><span>↓ Intensità (dB): più in basso, più forte deve essere il suono</span></figcaption>
+            <p class="mt-2 px-2 text-[13px] text-muted">Per convenzione l'orecchio destro si segna in <span class="font-semibold text-[#C8323C]">rosso</span>, il sinistro in <span class="font-semibold text-brand">blu</span>.</p>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESAMI: pannello fisso che cambia -->
+    <section id="esami" class="px-4 py-16 sm:px-8 sm:py-24" data-esami>
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.2rem] font-semibold leading-tight tracking-tight sm:text-[3rem]" data-sale>Gli esami, direttamente in studio</h2>
+        <p class="mt-2 max-w-xl text-[17px] text-muted">Le spieghiamo prima come si svolgono: così arriva tranquillo.</p>
+        <div class="mt-10 grid gap-10 lg:grid-cols-12">
+          <div class="hidden lg:col-span-5 lg:block">
+            <div class="sticky top-36 overflow-hidden rounded-[2rem] bg-surface">
+              <div class="relative aspect-[4/5]">
+                {esami.map((e, i) => <img src={e.img} alt="" width="1200" height="1500" loading="lazy" class={`absolute inset-0 h-full w-full object-cover ${i ? 'opacity-0' : ''}`} data-esame-img={i} />)}
+                <div class="absolute bottom-4 left-4 flex gap-2" aria-hidden="true">{esami.map((_, i) => <span class={`esame-punto h-2.5 rounded-full bg-white ${i ? 'w-2.5 opacity-60' : 'w-8'}`} data-esame-punto={i}></span>)}</div>
+              </div>
+            </div>
+          </div>
+          <ol class="space-y-6 lg:col-span-7 lg:space-y-0">
+            {esami.map((e, i) => (
+              <li class="esame-blocco rounded-[2rem] border border-line p-6 sm:p-8 lg:flex lg:min-h-[62vh] lg:flex-col lg:justify-center lg:border-0 lg:p-0 lg:pl-4" data-esame={i}>
+                <img src={e.img} alt="" width="1200" height="1500" loading="lazy" class="mb-5 aspect-[16/10] w-full rounded-2xl object-cover lg:hidden" />
+                <div class="flex items-center gap-4"><img src={e.tessera} alt="" width="250" height="258" class="h-12 w-12" /><h3 class="font-head text-[1.8rem] font-semibold leading-tight sm:text-[2.4rem]">{e.nome}</h3></div>
+                <p class="mt-4 max-w-xl text-[17.5px] leading-relaxed text-ink/85">{e.testo}</p>
+                <ul class="mt-5 flex flex-wrap gap-2">{e.fatti.map((t: string) => <li class="rounded-xl bg-surface px-3 py-1.5 text-[14px] font-semibold text-brand">{t}</li>)}</ul>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- SONNO: scala di Epworth -->
+    <section id="sonno" class="bg-surface" data-sonno>
+      <div class="relative h-[44vh] min-h-[280px] overflow-hidden">
+        <img src={foto.sonnoLargo} alt="" width="1500" height="1000" loading="lazy" class="absolute inset-0 h-full w-full object-cover object-[40%_30%]" data-parallasse />
+        <div class="absolute inset-0 bg-deep/55"></div>
+        <div class="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-10 text-white sm:px-8">
+          <p class="font-head text-[13px] font-semibold uppercase tracking-[0.18em] text-brand2">Russamento e apnee notturne</p>
+          <h2 class="mt-2 max-w-3xl font-head text-[2.2rem] font-semibold leading-tight tracking-tight sm:text-[3.2rem]" data-sale>Quanto sonno Le resta di giorno?</h2>
+        </div>
+      </div>
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-8 sm:py-20 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:gap-x-10">
+        <p class="text-[17px] leading-relaxed text-ink/85 lg:col-span-4 lg:col-start-1 lg:row-start-1">È la scala di Epworth, che usiamo anche in visita. Per ogni situazione indichi quanto Le capita di appisolarsi. Il punteggio si calcola da solo.</p>
+        <ol class="space-y-3 lg:col-span-8 lg:col-start-5 lg:row-span-2 lg:row-start-1" data-epworth>
+          {(x.epworth as string[]).map((q, i) => (
+            <li class="rounded-3xl bg-white p-5 sm:p-6" data-epworth-voce>
+              <fieldset>
+                <legend class="flex items-start gap-3 font-head text-[17px] font-medium leading-snug"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-surface text-[13px] font-semibold text-brand">{i + 1}</span>{q}</legend>
+                <div class="mt-4 grid grid-cols-4 gap-2">
+                  {scelte.map((s, v) => <label class="scelta-epworth"><input type="radio" name={`ep${i}`} value={v} class="peer sr-only" /><span class="block rounded-xl border border-line px-1 py-2.5 text-center text-[14px] font-semibold peer-checked:border-brand peer-checked:bg-brand peer-checked:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-brand2"><span class="block font-head text-[18px] leading-none">{v}</span>{s}</span></label>)}
+                </div>
+              </fieldset>
+            </li>
+          ))}
+        </ol>
+        <div class="lg:col-span-4 lg:col-start-1 lg:row-start-2">
+          <div class="sticky top-36 rounded-[2rem] bg-white p-6 shadow-[0_14px_40px_rgb(31_50_75/.1)]" data-epworth-esito>
+            <p class="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">Il Suo punteggio</p>
+            <p class="mt-1 font-head text-[3.6rem] font-semibold leading-none text-brand"><span data-epworth-totale>0</span><span class="text-[1.4rem] text-muted"> / 24</span></p>
+            <div class="relative mt-4 h-3 rounded-full bg-surface" aria-hidden="true">
+              <div class="absolute inset-y-0 left-0 w-0 rounded-full bg-brand2" data-epworth-barra></div>
+              <span class="absolute -top-1 h-5 w-0.5 bg-ink/50" style={`left:${(10 / 24) * 100}%`}></span>
+            </div>
+            <p class="mt-1 text-right text-[12px] text-muted" aria-hidden="true">soglia 10</p>
+            <p class="mt-3 text-[13px] text-muted"><span data-epworth-risposte>0</span> risposte su 8</p>
+            <p class="mt-4 font-head text-[1.25rem] font-semibold leading-snug" data-epworth-titolo aria-live="polite">Risponda alle 8 domande</p>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink/80" data-epworth-testo>Il risultato non è una diagnosi: serve a parlarne meglio in visita.</p>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <button type="button" class="btn !min-h-[44px] !rounded-2xl bg-brand font-head text-sm text-white hover:opacity-90" data-epworth-prenota><Icona nome="calendario" class="h-4 w-4" /> Ne parliamo in visita</button>
+              <button type="button" class="font-head text-sm font-semibold text-muted underline-offset-4 hover:underline" data-epworth-azzera>Ricominci</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 pb-16 sm:px-8 sm:pb-24">
+        <div class="grid overflow-hidden rounded-[2rem] bg-white lg:grid-cols-2">
+          <img src={foto.sonnoBimbo} alt="" width="1500" height="1000" loading="lazy" class="h-full min-h-[240px] w-full object-cover" />
+          <div class="flex flex-col justify-center p-8 sm:p-12">
+            <h3 class="font-head text-[1.8rem] font-semibold leading-tight">E se russa un bambino?</h3>
+            <p class="mt-3 text-[17px] leading-relaxed text-ink/85">Nei bambini le apnee notturne possono pesare sul rendimento scolastico, sullo sviluppo e sulla crescita. Possono dare sonnolenza di giorno, ma anche irritabilità e agitazione. Spesso la causa sono adenoidi e tonsille: la visita, con fibroscopia pediatrica, chiarisce.</p>
+            <button type="button" class="mt-5 inline-flex w-fit items-center gap-2 font-head font-semibold text-brand hover:underline" data-vai-gruppo="bambino">Prenoti per Suo figlio <Icona nome="freccia" class="h-4 w-4" /></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SIAMO -->
+    <section id="chi-siamo" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.2rem] font-semibold leading-tight tracking-tight sm:text-[3rem]" data-sale>Chi siamo</h2>
+        <p class="mt-2 max-w-xl text-[17px] text-muted">Due specialisti in Otorinolaringoiatria, con una formazione anche in Audiologia.</p>
+        <div class="mt-10 grid gap-6 md:grid-cols-2" data-medici>
+          {(x.medici as any[]).map((d) => (
+            <article class="overflow-hidden rounded-[2rem] bg-surface">
+              <div class="grid sm:grid-cols-5">
+                <img src={d.foto} alt={d.nome.replace('Dott.', 'Il Dott.')} width="760" height="950" loading="lazy" class="aspect-[4/5] h-full w-full object-cover sm:col-span-2" />
+                <div class="flex flex-col p-6 sm:col-span-3 sm:p-8">
+                  <h3 class="font-head text-[1.6rem] font-semibold leading-tight">{d.nome}</h3>
+                  <p class="mt-1 text-[14px] font-semibold text-brand">{d.ruolo}</p>
+                  <p class="mt-4 text-[16px] leading-relaxed text-ink/85">{d.testo}</p>
+                  <ul class="mt-auto flex flex-wrap gap-2 pt-5">{d.fatti.map((t: string) => <li class="rounded-xl bg-white px-3 py-1.5 text-[13.5px] font-semibold text-brand">{t}</li>)}</ul>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-ascolto bg-surface"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-semibold leading-tight tracking-tight sm:text-[3rem]" data-sale>Approfondimenti ORL</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-head font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 lg:grid-cols-12" data-blog>
+          <a href={blog[0].href} class="group overflow-hidden rounded-[2rem] bg-deep text-white lg:col-span-7">
+            <span class="block overflow-hidden"><img src={blog[0].img} alt="" width="1500" height="1000" loading="lazy" class="aspect-[16/10] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+            <span class="block p-7"><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">{blog[0].categoria} · {blog[0].tempoLettura}</span><span class="mt-2 block font-head text-[1.8rem] font-semibold leading-tight">{blog[0].titolo}</span></span>
+          </a>
+          <div class="flex flex-col gap-4 lg:col-span-5">
+            {blog.slice(1).map((b) => (
+              <a href={b.href} class="group flex items-center gap-4 rounded-3xl border border-line bg-white p-3 pr-5">
+                <span class="block h-24 w-28 shrink-0 overflow-hidden rounded-2xl"><img src={b.img} alt="" width="1200" height="800" loading="lazy" class="h-full w-full object-cover transition-[scale] duration-700 group-hover:scale-110" /></span>
+                <span class="min-w-0"><span class="text-[12px] font-semibold uppercase tracking-[0.12em] text-muted">{b.categoria} · {b.tempoLettura}</span><span class="mt-1 block font-head text-[1.15rem] font-semibold leading-snug group-hover:text-brand">{b.titolo}</span></span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-semibold tracking-tight" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-3xl border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.logo} alt="" width="32" height="32" class="h-8 w-8" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="1200" height="1500" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-3 bottom-3 rounded-2xl bg-white/95 px-5 py-4"><p class="font-head text-[1.6rem] font-semibold leading-tight text-ink">{p.titolo}</p><p class="mt-0.5 text-sm font-semibold text-brand">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-brand2 p-7 text-deep">
+                  <img src={gruppi[1].tessera} alt="" width="258" height="258" class="h-14 w-14" />
+                  <div><p class="font-head text-[2rem] font-semibold leading-[1.05]">{p.titolo}</p><p class="mt-4 w-fit rounded-xl bg-deep px-4 py-2 text-[14px] font-semibold text-white">{p.risposta}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-deep p-7 text-white">
+                  <img src={gruppi[0].tessera} alt="" width="250" height="258" class="mb-4 h-12 w-12" />
+                  <p class="font-head text-[1.8rem] font-semibold leading-[1.05]">{p.titolo}</p>
+                  <ul class="mt-4 space-y-2">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-[3px] bg-brand2"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.2rem] font-semibold leading-tight tracking-tight sm:text-[3rem]" data-sale>{m.sedi.titolo}</h2>
+        <div class="mt-10 grid gap-5 md:grid-cols-3" data-stagger>
+          {sedi.map((s) => (
+            <article class="flex flex-col rounded-[2rem] bg-white p-7">
+              <img src={`/${m.slug}/img/tessera-${s.tessera}.png`} alt="" width="250" height="258" class="h-14 w-14" />
+              <h3 class="mt-5 font-head text-[1.5rem] font-semibold leading-tight">{s.nome}</h3>
+              <p class="mt-1 text-[16px] text-muted">{s.indirizzo}, {s.citta}</p>
+              {s.orari && <p class="mt-3 text-[14px] text-ink/75">{s.orari}</p>}
+              <ul class="mt-4 space-y-2">{s.telefoni.map((t: any) => <li><a href={telHref(t.numero)} class="flex items-center gap-2 font-head font-semibold text-brand hover:underline"><Icona nome="tel" class="h-4 w-4" />{t.numero}</a><span class="ml-6 block text-[13px] text-muted">{t.label}</span></li>)}</ul>
+              {!s.telefoni.length && <p class="mt-4 text-[14px] text-ink/75">Per informazioni: <a href={`mailto:${m.sedi.email}`} class="font-semibold text-brand hover:underline">{m.sedi.email}</a></p>}
+              <a href={mapsHref(s.indirizzo, s.citta)} target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-brand hover:underline"><Icona nome="pin" class="h-4 w-4" /> Apra la mappa</a>
+            </article>
+          ))}
+        </div>
+        <p class="mt-6 text-[16px]">Scriva a <a href={`mailto:${m.sedi.email}`} class="font-semibold text-brand hover:underline">{m.sedi.email}</a>. Cerchiamo di dare appuntamenti in tempi brevi a chi ha bisogno di un consulto urgente.</p>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex items-center gap-5"><img src={foto.logo} alt="" width="512" height="515" class="hidden h-20 w-20 rounded-2xl bg-white p-1 sm:block" /><div><h2 class="font-head text-[2.2rem] font-semibold sm:text-5xl">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{m.prenota.testo}</p></div></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(m.prenota.telefono)} class="btn !rounded-2xl bg-brand2 font-head text-deep hover:opacity-90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-2xl border border-white/50 font-head text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    let lenis: Lenis | null = null;
+    const vaiA = (sel: string) => { const el = document.querySelector<HTMLElement>(sel)!; if (lenis) lenis.scrollTo(el, { offset: -110 }); else el.scrollIntoView({ behavior: 'auto', block: 'start' }); };
+
+    // --- Prenotazione in tre passi ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const premuto = (sel: string) => box.querySelector<HTMLElement>(`${sel}[aria-pressed="true"]`)!;
+    const aggiorna = () => {
+      const g = premuto('[data-gruppo]').dataset.gruppo!;
+      const mo = box.querySelector<HTMLElement>(`[data-motivi-gruppo="${g}"] [data-chip="motivo"][aria-pressed="true"]`)!;
+      const s = premuto('[data-chip="sede"]');
+      const t = `Buongiorno Dottore, vorrei prenotare una visita per ${mo.dataset.frase} presso ${s.dataset.frase}.`;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(box.dataset.oggetto!)}&body=${encodeURIComponent(t)}`;
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector('[data-indirizzo-testo]')!.textContent = s.dataset.indirizzo!;
+      box.querySelector<HTMLAnchorElement>('[data-tel-link]')!.href = `tel:${s.dataset.tel!.replace(/[^\d+]/g, '')}`;
+      box.querySelector('[data-tel-testo]')!.textContent = s.dataset.tel!;
+      if (!ridotto) gsap.fromTo('[data-anteprima]', { opacity: 0.3, y: 6 }, { opacity: 1, y: 0, duration: 0.3 });
+    };
+    const scegliGruppo = (id: string) => {
+      box.querySelectorAll<HTMLElement>('[data-gruppo]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.gruppo === id)));
+      box.querySelectorAll<HTMLElement>('[data-motivi-gruppo]').forEach((c) => {
+        const on = c.dataset.motiviGruppo === id; c.classList.toggle('hidden', !on);
+        if (on && !c.querySelector('[aria-pressed="true"]')) c.querySelector('[data-chip="motivo"]')!.setAttribute('aria-pressed', 'true');
+        if (on && !ridotto) gsap.from(c.children, { y: 10, opacity: 0, duration: 0.3, stagger: 0.04 });
+      });
+      aggiorna();
+    };
+    box.querySelectorAll<HTMLElement>('[data-gruppo]').forEach((b) => b.addEventListener('click', () => {
+      scegliGruppo(b.dataset.gruppo!);
+      if (!ridotto) gsap.fromTo(b.querySelector('img, span'), { rotateY: 0 }, { rotateY: 360, duration: 0.6, ease: 'power2.out' });
+    }));
+    box.querySelectorAll<HTMLElement>('[data-motivi-gruppo]').forEach((c) => c.querySelectorAll<HTMLElement>('[data-chip="motivo"]').forEach((b) => b.addEventListener('click', () => {
+      c.querySelectorAll('[data-chip="motivo"]').forEach((k) => k.setAttribute('aria-pressed', String(k === b))); aggiorna();
+    })));
+    box.querySelectorAll<HTMLElement>('[data-chip="sede"]').forEach((b) => b.addEventListener('click', () => {
+      box.querySelectorAll('[data-chip="sede"]').forEach((k) => k.setAttribute('aria-pressed', String(k === b))); aggiorna();
+    }));
+    // dai link "Prenoti per...": sceglie il gruppo (ed eventualmente il motivo) e porta al box
+    const prenotaPer = (gruppo: string, frase?: string) => {
+      scegliGruppo(gruppo);
+      if (frase) { const c = box.querySelector(`[data-motivi-gruppo="${gruppo}"]`)!; c.querySelectorAll<HTMLElement>('[data-chip="motivo"]').forEach((k) => k.setAttribute('aria-pressed', String(k.dataset.frase === frase))); aggiorna(); }
+      vaiA('#prenota-box');
+      box.querySelector<HTMLElement>(`[data-gruppo="${gruppo}"]`)!.focus({ preventScroll: true });
+    };
+    document.querySelectorAll<HTMLElement>('[data-vai-gruppo]').forEach((b) => b.addEventListener('click', () => prenotaPer(b.dataset.vaiGruppo!)));
+
+    // --- Cosa facciamo: schede ---
+    const etab = [...document.querySelectorAll<HTMLElement>('[data-esplora-tab]')];
+    const epan = [...document.querySelectorAll<HTMLElement>('[data-esplora-pan]')];
+    let eAtt = 0;
+    const esplora = (i: number, focus = false) => {
+      etab.forEach((t, k) => { t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1; });
+      epan.forEach((p, k) => { p.hidden = k !== i; });
+      if (!ridotto) gsap.from(epan[i].querySelectorAll('[data-esplora-col], li'), { y: 18, opacity: 0, duration: 0.45, stagger: 0.04, ease: 'power3.out' });
+      if (focus) etab[i].focus();
+      eAtt = i;
+    };
+    etab.forEach((t, i) => {
+      t.addEventListener('click', () => esplora(i));
+      t.addEventListener('keydown', (e) => { const k = (e as KeyboardEvent).key; const n = etab.length; if (k === 'ArrowRight') { e.preventDefault(); esplora((eAtt + 1) % n, true); } if (k === 'ArrowLeft') { e.preventDefault(); esplora((eAtt + n - 1) % n, true); } });
+    });
+
+    // --- Ascolti le frequenze ---
+    const ud = document.querySelector<HTMLElement>('[data-udito]')!;
+    const fq = JSON.parse(ud.dataset.frequenze!) as { hz: number; nome: string; testo: string }[];
+    const AW = 560, PL = 46, PR = 16;
+    const fx = (hz: number) => PL + ((Math.log2(hz) - Math.log2(125)) / (Math.log2(8000) - Math.log2(125))) * (AW - PL - PR);
+    const col = ud.querySelector<SVGRectElement>('[data-colonna]')!;
+    const onda = ud.querySelector<SVGPathElement>('[data-onda]')!;
+    const vol = ud.querySelector<HTMLInputElement>('[data-volume]')!;
+    let ctx: AudioContext | null = null, osc: OscillatorNode | null = null, raf = 0, hzAtt = 0, t0 = 0;
+    const disegna = (now: number) => {
+      // onda reale della frequenza scelta: più è acuta, più le creste sono fitte (scala logaritmica per renderla leggibile)
+      const cicli = 1.5 * Math.pow(2, Math.log2(hzAtt / 125));
+      const amp = 18 + (Number(vol.value) / 100) * 22, y0 = 52, w = AW - PL - PR;
+      const fase = ridotto ? 0 : ((now - t0) / 1000) * 2;
+      let d = '';
+      for (let i = 0; i <= 220; i++) { const xx = PL + (i / 220) * w; const yy = y0 + Math.sin((i / 220) * cicli * Math.PI * 2 - fase * Math.PI) * amp * Math.min(1, (now - t0) / 300 || 1); d += `${i ? 'L' : 'M'}${xx.toFixed(1)},${yy.toFixed(1)}`; }
+      onda.setAttribute('d', d);
+      if (!ridotto && now - t0 < 1400) raf = requestAnimationFrame(disegna);
+    };
+    const suona = (i: number) => {
+      const f = fq[i];
+      ud.querySelectorAll<HTMLElement>('[data-freq]').forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
+      ud.querySelector('[data-freq-testo]')!.textContent = `${f.nome}: ${f.testo}`;
+      col.setAttribute('x', String(fx(f.hz) - 22));
+      if (ridotto) col.setAttribute('opacity', '0.25'); else gsap.fromTo(col, { attr: { opacity: 0 } }, { attr: { opacity: 0.25 }, duration: 0.4 });
+      hzAtt = f.hz; t0 = performance.now(); cancelAnimationFrame(raf); disegna(t0);
+      try {
+        ctx = ctx ?? new AudioContext();
+        if (osc) { try { osc.stop(); } catch {} }
+        const g = ctx.createGain(); osc = ctx.createOscillator();
+        osc.type = 'sine'; osc.frequency.value = f.hz;
+        const v = (Number(vol.value) / 100) * 0.12, t = ctx.currentTime;
+        g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v, t + 0.06); g.gain.setValueAtTime(v, t + 1.0); g.gain.linearRampToValueAtTime(0, t + 1.2);
+        osc.connect(g).connect(ctx.destination); osc.start(t); osc.stop(t + 1.25);
+        ud.dataset.ultimo = String(f.hz);
+      } catch { /* audio non disponibile: resta la parte visiva */ }
+    };
+    ud.querySelectorAll<HTMLElement>('[data-freq]').forEach((b, i) => b.addEventListener('click', () => suona(i)));
+
+    // --- Esami: il pannello fisso segue il blocco attivo ---
+    const eImg = [...document.querySelectorAll<HTMLElement>('[data-esame-img]')];
+    const ePunti = [...document.querySelectorAll<HTMLElement>('[data-esame-punto]')];
+    const mostraEsame = (i: number) => {
+      if (ridotto) eImg.forEach((im, k) => { im.style.opacity = k === i ? '1' : '0'; });
+      else gsap.to(eImg, { opacity: (k) => (k === i ? 1 : 0), duration: 0.6 });
+      ePunti.forEach((p, k) => { p.classList.toggle('w-8', k === i); p.classList.toggle('w-2.5', k !== i); p.classList.toggle('opacity-60', k !== i); });
+      document.querySelector<HTMLElement>('[data-esami]')!.dataset.attivo = String(i);
+    };
+    document.querySelectorAll<HTMLElement>('[data-esame]').forEach((b, i) => ScrollTrigger.create({ trigger: b, start: 'top 55%', end: 'bottom 55%', onToggle: (s) => { if (s.isActive) mostraEsame(i); } }));
+
+    // --- Scala di Epworth ---
+    const ep = document.querySelector<HTMLElement>('[data-epworth]')!;
+    const esito = document.querySelector<HTMLElement>('[data-epworth-esito]')!;
+    const calcola = () => {
+      const scelti = [...ep.querySelectorAll<HTMLInputElement>('input:checked')];
+      const tot = scelti.reduce((a, i) => a + Number(i.value), 0), n = scelti.length;
+      esito.querySelector('[data-epworth-totale]')!.textContent = String(tot);
+      esito.querySelector('[data-epworth-risposte]')!.textContent = String(n);
+      const barra = esito.querySelector<HTMLElement>('[data-epworth-barra]')!;
+      if (ridotto) barra.style.width = `${(tot / 24) * 100}%`; else gsap.to(barra, { width: `${(tot / 24) * 100}%`, duration: 0.4 });
+      barra.classList.toggle('!bg-[#C8323C]', tot > 10);
+      const [tit, txt] = n < 8 ? [`Mancano ${8 - n} risposte`, 'Il risultato non è una diagnosi: serve a parlarne meglio in visita.']
+        : tot <= 10 ? ['Sonnolenza di giorno nella norma', 'Se però russa forte o chi dorme con Lei nota pause nel respiro, vale comunque la pena di parlarne.']
+        : tot <= 15 ? ['Sonnolenza di giorno aumentata', 'Un punteggio sopra 10 merita una valutazione: in visita cerchiamo con la fibroscopia dove si ostruisce il respiro.']
+        : ['Sonnolenza di giorno elevata', 'Ne parli presto con noi o con il Suo medico: potrebbe servire un monitoraggio del sonno.'];
+      esito.querySelector('[data-epworth-titolo]')!.textContent = tit;
+      esito.querySelector('[data-epworth-testo]')!.textContent = txt;
+      esito.dataset.totale = String(tot);
+    };
+    ep.addEventListener('change', calcola);
+    esito.querySelector('[data-epworth-azzera]')!.addEventListener('click', () => { ep.querySelectorAll<HTMLInputElement>('input').forEach((i) => { i.checked = false; }); calcola(); });
+    esito.querySelector('[data-epworth-prenota]')!.addEventListener('click', () => prenotaPer('naso', 'russamento o apnee notturne'));
+
+    if (!ridotto) {
+      lenis = new Lenis({ anchors: { offset: -100 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis!.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.1em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= 4 ? 'text-brand' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('[data-tessera-foto]', { rotateY: -80, opacity: 0, transformOrigin: '0% 50%', duration: 1.1, stagger: 0.18, ease: 'power4.out' })
+        .from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.8, stagger: 0.05 }, 0.1)
+        .from('[data-entra]', { y: 24, opacity: 0, duration: 0.7, stagger: 0.08 }, '-=0.5')
+        .from('[data-volante]', { scale: 0, rotate: -40, duration: 0.7, stagger: 0.12, ease: 'back.out(2)' }, 0.6)
+        .from('[data-prenota-box] > div', { y: 60, opacity: 0, duration: 0.9 }, 0.5)
+        .from('[data-gruppo]', { y: 20, opacity: 0, rotateX: -60, duration: 0.6, stagger: 0.07 }, 0.9);
+      gsap.utils.toArray<HTMLElement>('[data-volante]').forEach((el, i) => gsap.to(el, { y: i % 2 ? 10 : -10, rotate: i % 2 ? 4 : -4, duration: 2.6 + i * 0.4, ease: 'sine.inOut', yoyo: true, repeat: -1, delay: 1.5 }));
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.8, delay: 0.8, ease: 'power2.out', onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString('it-IT'); } });
+      });
+      gsap.to('[data-tessera-foto]', { yPercent: (i) => (i ? -8 : 4), ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      gsap.from('[data-esplora-tab]', { y: 30, opacity: 0, duration: 0.6, stagger: 0.08, scrollTrigger: { trigger: '[data-esplora-tabs]', start: 'top 88%', once: true } });
+      // l'audiogramma si disegna
+      const righe = gsap.utils.toArray<SVGLineElement>('[data-riga]');
+      righe.forEach((r) => { const l = Math.hypot(+r.getAttribute('x2')! - +r.getAttribute('x1')!, +r.getAttribute('y2')! - +r.getAttribute('y1')!); r.style.strokeDasharray = r.getAttribute('stroke-dasharray') ?? `${l}`; if (!r.getAttribute('stroke-dasharray')) { r.style.strokeDashoffset = `${l}`; } });
+      gsap.to(righe.filter((r) => !r.getAttribute('stroke-dasharray')), { strokeDashoffset: 0, duration: 1.2, stagger: 0.03, ease: 'power2.out', scrollTrigger: { trigger: '[data-audiogramma]', start: 'top 80%', once: true } });
+      gsap.from('[data-freq]', { y: 20, opacity: 0, duration: 0.5, stagger: 0.06, scrollTrigger: { trigger: '[data-udito]', start: 'top 70%', once: true } });
+      gsap.from('[data-epworth-voce]', { x: 40, opacity: 0, duration: 0.6, stagger: 0.06, ease: 'power3.out', scrollTrigger: { trigger: '[data-epworth]', start: 'top 85%', once: true } });
+      gsap.from('[data-medici] > article', { y: 60, opacity: 0, rotateX: -12, duration: 0.9, stagger: 0.15, ease: 'power3.out', scrollTrigger: { trigger: '[data-medici]', start: 'top 85%', once: true } });
+      gsap.utils.toArray<HTMLElement>('[data-parallasse]').forEach((im) => gsap.fromTo(im, { scale: 1.15, yPercent: -8 }, { scale: 1.15, yPercent: 8, ease: 'none', scrollTrigger: { trigger: im, start: 'top bottom', end: 'bottom top', scrub: true } }));
+      gsap.from('[data-blog] > *', { y: 60, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: '[data-blog]', start: 'top 85%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>
