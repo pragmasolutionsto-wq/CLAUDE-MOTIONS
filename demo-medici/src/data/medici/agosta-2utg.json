@@ -1,0 +1,1515 @@
+{
+  "slug": "agosta-2utg",
+  "layout": "lente",
+  "sitoOrigine": "https://www.danieleagostadermatologo.com/",
+  "titolo": "Dott.",
+  "nome": "Daniele Agosta",
+  "specialita": "Dermatologo e venereologo, medico estetico",
+  "firma": "Dermatologo e venereologo",
+  "citta": "Alba e Torino",
+  "meta": {
+    "title": "Dott. Daniele Agosta · Dermatologo e venereologo ad Alba e Torino: nei, capelli, acne, medicina estetica",
+    "description": "Dermatologo e venereologo ad Alba (piazza Ferrero) e Torino (via Valeggio). Controllo dei nei in epiluminescenza, visita tricologica, acne, psoriasi, infezioni sessualmente trasmesse, medicina estetica. Prezzi chiari e prenotazione online."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "",
+    "logoAlt": "Dott. Daniele Agosta"
+  },
+  "foto": {
+    "ritratto": "/agosta-2utg/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Daniele Agosta, dermatologo",
+    "volto": "/agosta-2utg/img/volto.webp",
+    "studio": "/agosta-2utg/img/foto-studio.webp",
+    "capelli": "/agosta-2utg/img/rep-capelli.webp",
+    "nei": "/agosta-2utg/img/rep-nei.webp",
+    "pelle": "/agosta-2utg/img/rep-pelle.webp",
+    "dermatoscopio": "/agosta-2utg/img/rep-dermatoscopio.webp",
+    "attesa": "/agosta-2utg/img/rep-attesa.webp"
+  },
+  "hero": {
+    "eyebrow": "Dermatologia · Venereologia · Medicina estetica",
+    "titolo": "La pelle, vista da vicino.",
+    "testo": "Sono dermatologo e venereologo. Ricevo ad Alba e a Torino e lavoro anche negli ambulatori dell'ASL CN2. In visita guardo la pelle da vicino, con il dermatoscopio, e Le spiego con calma cosa vedo e cosa fare.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami"
+  },
+  "mioDottore": "https://www.miodottore.it/daniele-agosta/dermatologo-medico-estetico/alba",
+  "recensioniMioDottore": 403,
+  "aree": {
+    "titolo": "Prestazioni e prezzi",
+    "intro": "",
+    "voci": []
+  },
+  "areePrezzi": [
+    {
+      "id": "visite",
+      "nome": "Visite"
+    },
+    {
+      "id": "nei",
+      "nome": "Nei"
+    },
+    {
+      "id": "capelli",
+      "nome": "Capelli"
+    },
+    {
+      "id": "venereologia",
+      "nome": "Venereologia"
+    },
+    {
+      "id": "trattamenti",
+      "nome": "Piccoli interventi"
+    },
+    {
+      "id": "estetica",
+      "nome": "Medicina estetica"
+    }
+  ],
+  "servizi": [
+    {
+      "id": "visita",
+      "area": "visite",
+      "nome": "Visita dermatologica",
+      "prezzo": "120 €",
+      "frase": "una visita dermatologica",
+      "nota": "Esame completo della pelle, diagnosi e terapia.",
+      "discreto": false
+    },
+    {
+      "id": "controllo",
+      "area": "visite",
+      "nome": "Visita dermatologica di controllo",
+      "prezzo": "80 €",
+      "frase": "una visita dermatologica di controllo",
+      "nota": "Per rivedere una terapia già impostata.",
+      "discreto": false
+    },
+    {
+      "id": "pediatrica",
+      "area": "visite",
+      "nome": "Visita dermatologica pediatrica",
+      "prezzo": "120 €",
+      "frase": "una visita dermatologica per mio figlio",
+      "nota": "Dermatiti, nei, verruche e molluschi nei bambini.",
+      "discreto": false
+    },
+    {
+      "id": "nei",
+      "area": "nei",
+      "nome": "Controllo dei nei",
+      "prezzo": "120 €",
+      "frase": "un controllo dei nei",
+      "nota": "Esame di tutta la pelle e dei nei con il dermatoscopio.",
+      "discreto": false
+    },
+    {
+      "id": "epiluminescenza",
+      "area": "nei",
+      "nome": "Osservazione in epiluminescenza",
+      "prezzo": "150 €",
+      "frase": "un'osservazione dei nei in epiluminescenza",
+      "nota": "Studio dettagliato dei nei sospetti con la luce polarizzata.",
+      "discreto": false
+    },
+    {
+      "id": "asportazione-nei",
+      "area": "nei",
+      "nome": "Asportazione di nei",
+      "prezzo": "da concordare",
+      "frase": "l'asportazione di un neo",
+      "nota": "Con esame istologico. Il preventivo si fa in visita.",
+      "discreto": false
+    },
+    {
+      "id": "neoformazioni",
+      "area": "nei",
+      "nome": "Asportazione di neoformazioni cutanee",
+      "prezzo": "da concordare",
+      "frase": "l'asportazione di una neoformazione cutanea",
+      "nota": "Fibromi, cheratosi e altre lesioni benigne.",
+      "discreto": false
+    },
+    {
+      "id": "tricologica",
+      "area": "capelli",
+      "nome": "Visita tricologica",
+      "prezzo": "120 €",
+      "frase": "una visita tricologica",
+      "nota": "Caduta e diradamento dei capelli, con tricoscopia.",
+      "discreto": false
+    },
+    {
+      "id": "venereologica",
+      "area": "venereologia",
+      "nome": "Prima visita venereologica",
+      "prezzo": "120 €",
+      "frase": "una prima visita venereologica",
+      "nota": "Infezioni sessualmente trasmesse: diagnosi e cura, con riservatezza.",
+      "discreto": true
+    },
+    {
+      "id": "condilomi",
+      "area": "venereologia",
+      "nome": "Asportazione di condilomi",
+      "prezzo": "da concordare",
+      "frase": "l'asportazione di condilomi",
+      "nota": "Trattamento dei condilomi da HPV.",
+      "discreto": true
+    },
+    {
+      "id": "crioterapia",
+      "area": "trattamenti",
+      "nome": "Crioterapia",
+      "prezzo": "da concordare",
+      "frase": "un trattamento di crioterapia",
+      "nota": "Azoto liquido per verruche e cheratosi.",
+      "discreto": false
+    },
+    {
+      "id": "diatermo",
+      "area": "trattamenti",
+      "nome": "Diatermocoagulazione",
+      "prezzo": "da concordare",
+      "frase": "un trattamento di diatermocoagulazione",
+      "nota": "Per piccole lesioni benigne della pelle.",
+      "discreto": false
+    },
+    {
+      "id": "biorivitalizzazione",
+      "area": "estetica",
+      "nome": "Biorivitalizzazione",
+      "prezzo": "da 150 €",
+      "frase": "una biorivitalizzazione",
+      "nota": "Idratazione profonda e qualità della pelle del viso.",
+      "discreto": false
+    },
+    {
+      "id": "peeling",
+      "area": "estetica",
+      "nome": "Peeling chimico",
+      "prezzo": "da 100 €",
+      "frase": "un peeling chimico",
+      "nota": "Uniforma il colorito e la grana della pelle.",
+      "discreto": false
+    },
+    {
+      "id": "peeling-acne",
+      "area": "estetica",
+      "nome": "Peeling per l'acne",
+      "prezzo": "da 100 €",
+      "frase": "un peeling per l'acne",
+      "nota": "Insieme alla terapia, per acne attiva e segni.",
+      "discreto": false
+    },
+    {
+      "id": "microneedling",
+      "area": "estetica",
+      "nome": "Microneedling",
+      "prezzo": "da 200 €",
+      "frase": "un trattamento di microneedling",
+      "nota": "Per cicatrici da acne e texture della pelle.",
+      "discreto": false
+    },
+    {
+      "id": "mesoterapia",
+      "area": "estetica",
+      "nome": "Mesoterapia",
+      "prezzo": "da 150 €",
+      "frase": "un trattamento di mesoterapia",
+      "nota": "Microiniezioni mirate, anche per il cuoio capelluto.",
+      "discreto": false
+    },
+    {
+      "id": "filler-labbra",
+      "area": "estetica",
+      "nome": "Filler labbra",
+      "prezzo": "300 €",
+      "frase": "un filler alle labbra",
+      "nota": "Acido ialuronico, risultato naturale.",
+      "discreto": false
+    },
+    {
+      "id": "filler",
+      "area": "estetica",
+      "nome": "Filler con acido ialuronico",
+      "prezzo": "300 €",
+      "frase": "un filler con acido ialuronico",
+      "nota": "Volumi e solchi del viso.",
+      "discreto": false
+    },
+    {
+      "id": "tossina",
+      "area": "estetica",
+      "nome": "Tossina botulinica",
+      "prezzo": "300 €",
+      "frase": "un trattamento con tossina botulinica",
+      "nota": "Rughe d'espressione della fronte e degli occhi.",
+      "discreto": false
+    }
+  ],
+  "abcde": [
+    {
+      "id": "A",
+      "nome": "Asimmetria",
+      "ok": "Le due metà si somigliano",
+      "ko": "Le due metà sono diverse",
+      "testo": "Se immagina una linea al centro del neo, le due metà di un neo comune si somigliano. Quando sono molto diverse per forma, è bene farlo vedere."
+    },
+    {
+      "id": "B",
+      "nome": "Bordi",
+      "ok": "Bordi netti e regolari",
+      "ko": "Bordi frastagliati o sfumati",
+      "testo": "I nei comuni hanno di solito un contorno regolare e netto. Bordi irregolari, frastagliati o che sfumano nella pelle intorno sono un segnale da valutare."
+    },
+    {
+      "id": "C",
+      "nome": "Colore",
+      "ok": "Un solo colore, uniforme",
+      "ko": "Più colori nello stesso neo",
+      "testo": "Un colore uniforme, marrone chiaro o scuro, è rassicurante. Più colori insieme, come marrone, nero, rosso o grigio-bluastro, meritano un controllo."
+    },
+    {
+      "id": "D",
+      "nome": "Dimensione",
+      "ok": "Diametro sotto i 6 mm",
+      "ko": "Diametro oltre i 6 mm",
+      "testo": "Un diametro superiore a 6 millimetri, più o meno la gomma di una matita, è un segnale da valutare. Ma esistono anche melanomi più piccoli: la dimensione da sola non basta."
+    },
+    {
+      "id": "E",
+      "nome": "Evoluzione",
+      "ok": "Uguale nel tempo",
+      "ko": "Cambia nel tempo",
+      "testo": "È il segnale più importante: un neo che cambia forma, colore o dimensione, che si solleva, prude o sanguina. Lo stesso vale per un neo nuovo che compare in età adulta."
+    }
+  ],
+  "bioTappe": [
+    {
+      "anno": "2016",
+      "titolo": "Laurea in Medicina e Chirurgia",
+      "testo": "All'Università degli Studi di Palermo."
+    },
+    {
+      "anno": "2021",
+      "titolo": "La libera professione",
+      "testo": "Inizio l'attività di dermatologo e venereologo in libera professione."
+    },
+    {
+      "anno": "2022",
+      "titolo": "Specializzazione con lode",
+      "testo": "Dermatologia e Venereologia all'Università di Cagliari, 50/50 e lode, con una tesi sperimentale sulle mutazioni epigenetiche nel melanoma. Da settembre sono specialista ambulatoriale interno all'ASL CN2, ad Alba e Canale."
+    },
+    {
+      "anno": "2022-2024",
+      "titolo": "Salute sessuale a Torino",
+      "testo": "Dermatologo e venereologo al Centro Multidisciplinare per la Salute Sessuale (Ce.Mu.SS) dell'Ospedale Oftalmico di Torino, con una borsa di studio sulla prevenzione e la cura delle infezioni sessualmente trasmesse."
+    },
+    {
+      "anno": "2024",
+      "titolo": "L'incarico stabile",
+      "testo": "Da maggio 2024 il mio incarico è a tempo indeterminato."
+    }
+  ],
+  "pubblicazioni": [
+    "Agosta D, et al. A lumpy back: extensive cutaneous collagenomas. Dermatol Online J. 2020.",
+    "Mugheddu C, et al., Agosta D. Successful guselkumab treatment in a psoriatic patient affected with Cornelia de Lange syndrome. Dermatol Ther. 2020.",
+    "Agosta D, et al. Efficacy and tolerability of an antiperspirant cream in hidradenitis suppurativa patients. J Appl Cosmetol. 2019.",
+    "Anedda J, et al., Agosta D. Annually recurring acro-erythema. Ital J Dermatol Venerol. 2021.",
+    "Agosta D, et al. Figurate eczema of the forearm in a hairdresser. J Appl Cosmetol. 2022.",
+    "Atzori L, et al., Agosta D. Generalized scleroderma-like induration associated with D-penicillamine elastosis perforans serpiginosa in Wilson's disease. Int J Dermatol. 2023."
+  ],
+  "patologie": [
+    "Acne",
+    "Alopecia",
+    "Psoriasi",
+    "Verruche",
+    "Verruche genitali",
+    "Micosi",
+    "Onicomicosi",
+    "Lichen planus",
+    "Mollusco contagioso",
+    "Malattie sessualmente trasmissibili",
+    "Melanoma",
+    "Epitelioma",
+    "Cheratosi attinica",
+    "Dermatite atopica",
+    "Dermatite",
+    "Pitiriasi versicolor",
+    "Condilomi acuminati",
+    "Orticaria",
+    "Eczema",
+    "Eritema",
+    "Fibroma"
+  ],
+  "ist": [
+    "Sifilide",
+    "Gonorrea",
+    "Clamidia",
+    "Condilomi (HPV)",
+    "Molluschi contagiosi",
+    "Herpes genitale",
+    "Pediculosi",
+    "Scabbia"
+  ],
+  "temi": [
+    {
+      "id": "spiegazioni",
+      "nome": "Spiegazioni chiare",
+      "n": 24
+    },
+    {
+      "id": "empatia",
+      "nome": "Gentilezza ed empatia",
+      "n": 42
+    },
+    {
+      "id": "accuratezza",
+      "nome": "Visita accurata",
+      "n": 31
+    },
+    {
+      "id": "nei",
+      "nome": "Controllo dei nei",
+      "n": 4
+    },
+    {
+      "id": "segreteria",
+      "nome": "Segreteria",
+      "n": 7
+    }
+  ],
+  "recensioniSito": [
+    {
+      "testo": "Esperienza positiva in quanto a professionalità e trasparenza nelle spiegazioni del trattamento.",
+      "temi": [
+        "spiegazioni"
+      ]
+    },
+    {
+      "testo": "Mi sono sentito accolto sin da subito. Lavoro impeccabile sia allo sportello sia in sala con il medico. Informazioni chiare, complete e dettagliate. Tutto il personale è molto preparato",
+      "temi": [
+        "spiegazioni",
+        "segreteria"
+      ]
+    },
+    {
+      "testo": "Il miglior dermatologo. Professionale, attento e sensibile.",
+      "temi": [
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Dottore molto gentile, disponibile e preparato. Molto consigliato.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Il Dottor Agosta gentile,estremamente empatico e molto competente. Mi sento tranquilla e soddisfatta. Un riferimento prezioso per me e per i miei famigliari. Ambiente rilassato e un’organizzazione accurata",
+      "temi": [
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "D.Agosta sempre dettagliato e preciso nella diagnosi e cura,la sua cordialità e professionalità non ha equali. Entrare in studio e sentirsi a casa. La Segretaria Sabrina,ha un tocco empatico raro da trovare. Sempre con il sorriso.",
+      "temi": [
+        "spiegazioni",
+        "empatia",
+        "accuratezza",
+        "segreteria"
+      ]
+    },
+    {
+      "testo": "È andato tutto benissimo e oltre alla professionalità mi ha colpito l' ordine, la pulizia, l' educazione e la gentilezza del professionista. Complimenti!",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Dottore e segretaria persone eccezionali, prima di tutto eccezionale empatia con il paziente. Curano sia il corpo che l'anima. Visita attenta e spiegazioni ottime su come procedere e su che cura fare.",
+      "temi": [
+        "spiegazioni",
+        "empatia",
+        "accuratezza",
+        "segreteria"
+      ]
+    },
+    {
+      "testo": "Il Dottore è molto competente ed empatico, così come la segreteria che lo supporta.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Il dottor Agosta è un professionista molto valido, molto paziente e delicato. Estremamente soddisfatta!",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Professionale, puntuale e gentile consiglio a tutti",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Gentilezza e professionalità. Spiegazioni chiare della terapia. Gentilezza anche della segretaria.",
+      "temi": [
+        "spiegazioni",
+        "empatia",
+        "segreteria"
+      ]
+    },
+    {
+      "testo": "Professionalità e cortesia. La segreteria molto disponibile e gentile",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Dottore molto gentile e disponibile! Attento alla problematica!",
+      "temi": [
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Serietà e professionalità. Per quanto mi riguarda il Dottor Agosta ha soddisfatto e chiarito ogni mio dubbio e problematica.",
+      "temi": [
+        "spiegazioni"
+      ]
+    },
+    {
+      "testo": "ottimo e professionale in tutto. Non ho altro da aggiungere. Consiglio vivamente",
+      "temi": []
+    },
+    {
+      "testo": "Persona squisita e visita al top. Dolcissima la sua assistente e lui super attento e sensibile",
+      "temi": [
+        "empatia",
+        "accuratezza",
+        "segreteria"
+      ]
+    },
+    {
+      "testo": "Gentili e professionali.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Visita accurata e spiegazioni chiare e dettagliate",
+      "temi": [
+        "spiegazioni",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Tutto bene. Molto professionale e capace. Consigliatissimo.",
+      "temi": []
+    },
+    {
+      "testo": "Il dottore è molto disponibile. Ha risposto a tutte le mie domande. Molto meticoloso. Lo consiglio",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Approccio professionale ottimo. Accuratezza della visita.",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Super preparato e molto gentile il migliore in assoluto lo consiglio a tutti.Mi ha fatto una visita super complimenti",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Il dottore è stato molto gentile e scrupoloso, la visita era per un controllo nei per la mia bambina e l’ha fatta sentire a suo agio. Ringrazio ancora il dottore",
+      "temi": [
+        "empatia",
+        "accuratezza",
+        "nei"
+      ]
+    },
+    {
+      "testo": "Il dottor Agosta è assolutamente competente, attento alle esigenze e alle richieste del paziente. Lo studio è moderno, pulito e molto accogliente.",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Massima professionalità e chiarezza nella diagnosi",
+      "temi": [
+        "spiegazioni"
+      ]
+    },
+    {
+      "testo": "Mi sono trovata benissimo: visita accurata, grande professionalità e tanta attenzione. Consigliatissimo!",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "È stato molto esplicativo e preciso e mi ha fatto sentire a mio agio",
+      "temi": [
+        "spiegazioni",
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Gentilezza disponibilità e preparazione al massimo.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Dottore molto competente, attento ai dettagli, si percepisce importanza che attribuisce al paziente e interesse che mostra.",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Dottore molto preparato e professionale. Mi ha spiegato molto bene il mio problema in modo semplice e dettagliato.",
+      "temi": [
+        "spiegazioni"
+      ]
+    },
+    {
+      "testo": "Molto cortese ed esaustivo nelle spiegazioni davvero soddisfatta.",
+      "temi": [
+        "spiegazioni"
+      ]
+    },
+    {
+      "testo": "Mi sono state tolte delle cheratosi seborroiche del collo e del tronco trattamento di 60 minuti circa nessun dolore ottima prestazione",
+      "temi": []
+    },
+    {
+      "testo": "Come sempre empatico, disponibile, preciso nelle spiegazioni, paziente e sempre sorridente.",
+      "temi": [
+        "spiegazioni",
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Il Dott. Agosta è molto gentile, sa mettere a proprio agio i pazienti ed è attento e scrupoloso. Ottimo professionista da cui continuerò a farmi seguire sia per la mappatura dei nei che per il mio problema di dermatite. Ha saputo liberarmi dal cortisone e sono migliorata tantissimo.",
+      "temi": [
+        "empatia",
+        "accuratezza",
+        "nei"
+      ]
+    },
+    {
+      "testo": "Massima professionalità, cortesia e disponibilità. Attenzione e delicatezza impeccabili soprattutto coi più piccoli.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Competenza e professionalità Molto attento alle esigenze del paziente",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Ho trovato la diagnosi esatta e una cura risolutiva",
+      "temi": []
+    },
+    {
+      "testo": "La visita è andata molto bene a livello professionale e umano. Il Dottore mette a proprio agio ed è molto gentile, empatico e rassicurante.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Sempre cordiale e gentile come al solito. Spiegazione chiara e dettagliata. Molto cordiale anche l accoglienza da parte della segretaria.",
+      "temi": [
+        "spiegazioni",
+        "empatia",
+        "segreteria"
+      ]
+    },
+    {
+      "testo": "Ho apprezzato molto la puntualità e le spiegazioni sono state formali e semplici",
+      "temi": [
+        "spiegazioni"
+      ]
+    },
+    {
+      "testo": "Consiglierei a chiunque questo studio medico per professionalità, gentilezza e soprattutto per l'umanità e la competenza dimostrata dal Dott. Agosta. Mi sono trovata benissimo.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Tutto perfetto Lo consiglio ai miei colleghi medici",
+      "temi": []
+    },
+    {
+      "testo": "E' stato accogliente ed esauriente nelle spiegazioni.",
+      "temi": [
+        "spiegazioni"
+      ]
+    },
+    {
+      "testo": "Specialista giovane ma preciso e professionale. Mi sono sentita a mio agio da subito. Consigliato",
+      "temi": [
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Visita accurata e spiegazioni dettagliate. Medico gentile ed empatico",
+      "temi": [
+        "spiegazioni",
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Ho riscontrato cortesia, tatto e competenza. Inoltre ambiente gradevole.",
+      "temi": []
+    },
+    {
+      "testo": "Mi sono trova bene, medico gentile e disponibile, spiega molto bene senza mettere fretta",
+      "temi": [
+        "spiegazioni",
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Controllo nevi. Ha controllato ogni neo con attenzione! Professionale e meticoloso.",
+      "temi": [
+        "accuratezza",
+        "nei"
+      ]
+    },
+    {
+      "testo": "Specialista accurato e professionale. Visita di controllo generico eseguito molto bene.",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Visita di controllo molto approfondita. Spiegazioni precise. Altamente raccomandabile.",
+      "temi": [
+        "spiegazioni",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Il dottore è stato molto attento, empatico, corretto. Visita completa ed esaustiva, senza fretta.",
+      "temi": [
+        "spiegazioni",
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Oggi ho fatto la mia prima visita per la salute dei capelli con il Dottore e non potevo chiedere un’esperienza migliore. È stato un professionista estremamente attento, empatico e scrupoloso. Ha analizzato la mia situazione nei minimi dettagli, spiegandomi ogni passaggio con grande chiarezza e mettendomi subito a mio agio. Si percepisce la passione per il suo lavoro e la profonda competenza. Consiglio vivamente a chiunque cerchi un punto di riferimento",
+      "temi": [
+        "spiegazioni",
+        "empatia",
+        "accuratezza",
+        "nei"
+      ]
+    },
+    {
+      "testo": "Grande empatia che tranquillizza, a dimostrazione di professionalità.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Professionale, attento e preciso. trattamento veloce ed efficace",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Il Dottore Agosta alla serietà professionale accompagna una grande gentilezza",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Molto disponibili e gentili sia lui che la segretaria",
+      "temi": [
+        "empatia",
+        "segreteria"
+      ]
+    },
+    {
+      "testo": "Il dottor Agosta si è dimostrato estremamente competente e dotato di grande empatia. Lo consiglio vivamente a chiunque cerchi un professionista d’eccellenza.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Ci siamo trovati benissimo, dottore disponibile e molto attento",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Molto attento al problema, preparato,educato e gentile!",
+      "temi": [
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Mi sono trovata a mio agio durante la visita il dottore è stato professionale e competente.",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Mi è piaciuta molto la visita. Dottore molto gentile, chiaro nelle spiegazioni, risultato ottenuto al 100%. Non è facile trovare specialisti come il Dottor Agosta. Lo consiglio a chiunque. Vale la pena partire da Bra per una visita dermatologica.",
+      "temi": [
+        "spiegazioni",
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Mi sono trovato a mio agio, spiegazione dettagliata di tutto. Piano chiaro. Mi ha lascito scritto quello che ha detto. Eccezionale",
+      "temi": [
+        "spiegazioni",
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Professionale.....ottimo rapporto col paziente.....puntuale nella visita e non sbrigativo",
+      "temi": []
+    },
+    {
+      "testo": "Ottima esperienza, ho incontrato un professionista attento, con una grande capacità di ascolto, felice di averlo conosciuto",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Persona piacevole, molto cordiale e gentile.mi sono trovata benissimo",
+      "temi": [
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Dott.Agosta è molto professionale,lo ringrazio per la cura dimostrata",
+      "temi": []
+    },
+    {
+      "testo": "Ottimo dermatologo, molto attento, preparato. Giovane ma molto competente",
+      "temi": [
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Educato professionale competente spiegazioni esaudienti",
+      "temi": [
+        "spiegazioni"
+      ]
+    },
+    {
+      "testo": "Ormai sono 3 anni che vado dal dottore Agosta e penso sia il migliore in Alba. Gentile, preparato, si prende cura del paziente ed è mega esaustivo nelle risposte. Consiglio vivamente",
+      "temi": [
+        "spiegazioni",
+        "empatia"
+      ]
+    },
+    {
+      "testo": "Ottimo medico. Gentile. Professionale. Preciso. Puntuale.",
+      "temi": [
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Mi sono trovata benissimo. Peccato non averlo trovato prima, mi sarei evitata tanta negligenza ad opera di altri \"professionisti\". Ancora Grazie.",
+      "temi": []
+    },
+    {
+      "testo": "Il dottore e' molto gentile e la visita e' stata accurata.",
+      "temi": [
+        "empatia",
+        "accuratezza"
+      ]
+    },
+    {
+      "testo": "Persona molto gentile e serio professionista. Lo consiglio",
+      "temi": [
+        "empatia"
+      ]
+    }
+  ],
+  "sediDati": [
+    {
+      "id": "alba",
+      "tipo": "Studio",
+      "nome": "Studio di Alba",
+      "breve": "Piazza Ferrero",
+      "indirizzo": "Piazza Michele Ferrero 8",
+      "piano": "2° piano",
+      "citta": "Alba",
+      "cap": "12051",
+      "provincia": "CN",
+      "telefono": "328 028 3852",
+      "online": true,
+      "mappa": true,
+      "principale": true,
+      "frase": "lo studio di Alba, piazza Michele Ferrero 8",
+      "testo": "Il mio studio principale. Qui può prenotare anche online, su MioDottore, vedendo subito gli orari liberi."
+    },
+    {
+      "id": "torino",
+      "tipo": "Studio",
+      "nome": "Studio di Torino",
+      "breve": "Via Valeggio",
+      "indirizzo": "Via Valeggio 26",
+      "piano": "",
+      "citta": "Torino",
+      "cap": "10128",
+      "provincia": "TO",
+      "telefono": "345 415 6718",
+      "online": false,
+      "mappa": true,
+      "principale": false,
+      "frase": "lo studio di Torino, via Valeggio 26",
+      "testo": "Zona Crocetta, vicino a Porta Nuova. Le visite si prenotano per telefono."
+    },
+    {
+      "id": "sanpaolo",
+      "tipo": "Poliambulatorio",
+      "nome": "Poliambulatorio San Paolo",
+      "breve": "Via Vivaro",
+      "indirizzo": "Via Vivaro 27",
+      "piano": "",
+      "citta": "Alba",
+      "cap": "12051",
+      "provincia": "CN",
+      "telefono": "0173 290851",
+      "online": false,
+      "mappa": true,
+      "principale": false,
+      "frase": "il Poliambulatorio San Paolo di Alba",
+      "testo": "Poliambulatorio del gruppo Cidimu. Prenotazioni al numero del centro."
+    }
+  ],
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "alopecia",
+    "categoria": "Capelli",
+    "titolo": "Alopecia: cause e trattamenti della caduta dei capelli",
+    "img": "/agosta-2utg/img/rep-capelli.webp",
+    "tempoLettura": "8 min",
+    "intro": "Perdere qualche capello ogni giorno è normale. Quando però sul cuscino o nella spazzola se ne trovano molti, o la chioma si dirada, è naturale preoccuparsi. Le cause sono diverse e ognuna ha la sua cura: per questo il primo passo è capire che tipo di caduta è.",
+    "sezioni": [
+      {
+        "titolo": "Quanti capelli è normale perdere",
+        "paragrafi": [
+          "Ogni capello ha un ciclo di vita: cresce per alcuni anni, poi si ferma, cade e viene sostituito da uno nuovo. In ogni momento una piccola parte dei capelli è nella fase di caduta: per questo perderne alcune decine al giorno, anche un centinaio nei giorni in cui si lavano, è del tutto normale.",
+          "In autunno, e in misura minore in primavera, molte persone notano una caduta più abbondante. È un fenomeno stagionale che di solito si esaurisce da solo in qualche settimana."
+        ]
+      },
+      {
+        "titolo": "Le forme più frequenti",
+        "paragrafi": [
+          "Con il termine alopecia si indica la perdita di capelli. Le forme che vedo più spesso in visita sono:"
+        ],
+        "elenco": [
+          "alopecia androgenetica: il diradamento progressivo legato alla predisposizione e agli ormoni, che nell'uomo inizia di solito da tempie e vertice e nella donna sulla parte centrale della testa",
+          "telogen effluvium: una caduta improvvisa e diffusa, che compare circa due o tre mesi dopo un evento stressante per l'organismo, come una febbre alta, un intervento, un parto, una dieta drastica o un periodo molto difficile",
+          "alopecia areata: chiazze rotonde senza capelli, a volte anche nella barba o nelle sopracciglia, dovute a un meccanismo autoimmune",
+          "alopecie cicatriziali: più rare, in cui l'infiammazione distrugge il follicolo; vanno riconosciute presto perché il danno non è reversibile"
+        ],
+        "chiusura": "A queste si aggiungono le cadute legate a carenze, a problemi della tiroide, ad alcuni farmaci o a malattie del cuoio capelluto come la dermatite seborroica o la psoriasi."
+      },
+      {
+        "titolo": "Come si svolge la visita tricologica",
+        "paragrafi": [
+          "La visita parte dalla storia: da quando cadono i capelli, se la caduta è diffusa o a chiazze, se ci sono stati eventi particolari nei mesi precedenti, quali farmaci assume, se in famiglia ci sono casi di calvizie.",
+          "Poi esamino il cuoio capelluto con la tricoscopia, cioè con il dermatoscopio: un ingrandimento che mostra lo spessore dei capelli, lo stato dei follicoli e della pelle. Spesso basta questo esame, semplice e indolore, per distinguere una forma dall'altra.",
+          "Quando serve, chiedo alcuni esami del sangue, per esempio il ferro e la ferritina, la tiroide o la vitamina D. Più raramente, nei casi dubbi, può essere utile una piccola biopsia."
+        ]
+      },
+      {
+        "titolo": "Le cure",
+        "paragrafi": [
+          "Ogni forma di alopecia ha la sua terapia, e per questo il fai da te funziona poco.",
+          "Nell'alopecia androgenetica le terapie più efficaci sono quelle che rallentano la miniaturizzazione dei capelli, come il minoxidil e, nell'uomo, i farmaci che agiscono sugli ormoni. Si possono affiancare trattamenti come la mesoterapia del cuoio capelluto. I risultati si valutano dopo almeno tre-sei mesi: il ciclo del capello è lento.",
+          "Il telogen effluvium nella maggior parte dei casi si risolve da solo nel giro di alcuni mesi, una volta passata la causa. Il mio compito è confermarlo, correggere eventuali carenze e rassicurare.",
+          "Nell'alopecia areata si usano cortisonici locali o infiltrazioni nelle chiazze e, nelle forme più estese, terapie più recenti che si prescrivono dopo una valutazione accurata.",
+          "Gli integratori sono utili solo se c'è una carenza da correggere: prenderli a caso non fa ricrescere i capelli."
+        ]
+      },
+      {
+        "titolo": "Quando prenotare una visita",
+        "paragrafi": [
+          "È utile farsi visitare se:"
+        ],
+        "elenco": [
+          "la caduta dura da più di due o tre mesi",
+          "nota un diradamento visibile o la riga che si allarga",
+          "compaiono chiazze senza capelli",
+          "il cuoio capelluto prude, brucia, si arrossa o desquama",
+          "la caduta è iniziata dopo un nuovo farmaco"
+        ],
+        "chiusura": "Prima si interviene, più capelli si possono conservare: nell'alopecia androgenetica le terapie servono soprattutto a mantenere, e funzionano meglio se si comincia presto."
+      },
+      {
+        "titolo": "Piccole attenzioni quotidiane",
+        "paragrafi": [
+          "Alcune abitudini aiutano i capelli: un'alimentazione varia, con proteine e ferro a sufficienza, evitare diete drastiche, non stringere troppo code e trecce, limitare piastre e decolorazioni aggressive. Non fanno ricrescere i capelli, ma evitano di aggiungere danni a una caduta già in corso. Se la caduta La preoccupa, il consiglio è sempre lo stesso: meglio una visita in più che mesi di prodotti scelti a caso."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso in visita:"
+        ],
+        "elenco": [
+          "Lavare spesso i capelli li fa cadere? No: lavandoli cadono quelli che sarebbero caduti comunque. Lo shampoo frequente non peggiora la caduta.",
+          "Lo stress fa cadere i capelli? Sì, uno stress intenso può causare un telogen effluvium, che di solito si risolve con il tempo.",
+          "Le donne possono soffrire di alopecia androgenetica? Sì, con un diradamento diverso da quello maschile: si cura, ma con terapie adatte alla donna.",
+          "Cosa devo portare alla visita? Gli esami del sangue recenti, se li ha, e l'elenco dei farmaci che assume. Venga con i capelli lavati da uno o due giorni, senza lacche o gel."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita dermatologica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "controllo-nei",
+      "categoria": "Nei",
+      "titolo": "Controllo dei nei: ogni quanto farlo e cosa aspettarsi",
+      "img": "/agosta-2utg/img/rep-dermatoscopio.webp",
+      "tempoLettura": "7 min",
+      "intro": "Il controllo dei nei è la visita dermatologica più richiesta, e una delle più utili: il melanoma, se riconosciuto presto, si cura nella grande maggioranza dei casi. Vediamo chi dovrebbe farlo, ogni quanto e come si svolge.",
+      "sezioni": [
+        {
+          "titolo": "Perché controllare i nei",
+          "paragrafi": [
+            "La maggior parte dei nei è e resta benigna per tutta la vita. Il controllo serve a riconoscere per tempo quei pochi che cambiano, e a individuare un melanoma quando è ancora sottile e superficiale.",
+            "Durante la mia specializzazione ho dedicato la tesi sperimentale proprio al melanoma, studiandone le alterazioni epigenetiche: è un tumore che conosco da vicino, e per questo dico sempre che la prevenzione funziona davvero."
+          ]
+        },
+        {
+          "titolo": "Chi dovrebbe farlo più spesso",
+          "paragrafi": [
+            "Tutti possono beneficiare di un controllo periodico, ma alcune persone dovrebbero farlo con più regolarità:"
+          ],
+          "elenco": [
+            "chi ha molti nei, indicativamente più di cinquanta",
+            "chi ha nei atipici, cioè grandi, irregolari o di colori diversi",
+            "chi ha familiari di primo grado con un melanoma",
+            "chi ha la pelle chiara, i capelli rossi o biondi e si scotta facilmente",
+            "chi ha preso molte scottature, soprattutto da bambino",
+            "chi ha avuto in passato un melanoma o un altro tumore della pelle",
+            "chi segue terapie che riducono le difese immunitarie"
+          ]
+        },
+        {
+          "titolo": "Ogni quanto",
+          "paragrafi": [
+            "Non esiste una regola uguale per tutti. Per molte persone un controllo all'anno è sufficiente; per chi ha più fattori di rischio può essere indicato ogni sei mesi; per chi ha pochi nei regolari e nessun fattore di rischio, anche ogni due anni.",
+            "La frequenza giusta la decidiamo insieme dopo la prima visita, in base a quello che vedo sulla Sua pelle."
+          ]
+        },
+        {
+          "titolo": "Come si svolge la visita",
+          "paragrafi": [
+            "Le chiedo di spogliarsi rimanendo in biancheria intima: esamino tutta la pelle, compreso il cuoio capelluto, le pieghe, le piante dei piedi e le unghie, perché i nei possono comparire ovunque, anche nelle zone che non si vedono allo specchio.",
+            "I nei li osservo con il dermatoscopio, uno strumento che li ingrandisce e, grazie alla luce polarizzata, permette di vedere le strutture sotto la superficie della pelle. È l'esame chiamato epiluminescenza: non fa male, non usa radiazioni e dura pochi minuti.",
+            "Alla fine Le spiego cosa ho visto, quali nei tenere d'occhio e quando ricontrollarli. Se un neo mi sembra sospetto, Le propongo di asportarlo."
+          ]
+        },
+        {
+          "titolo": "Se un neo va tolto",
+          "paragrafi": [
+            "L'asportazione si esegue in ambulatorio, in anestesia locale, e dura in genere pochi minuti. Il neo viene inviato al laboratorio per l'esame istologico, che dà la diagnosi definitiva.",
+            "Nei giorni successivi basta medicare la ferita come Le indico; i punti si tolgono di solito dopo una o due settimane, a seconda della sede. Togliere un neo non è pericoloso e non «risveglia» nulla: è un falso mito."
+          ]
+        },
+        {
+          "titolo": "Il controllo a casa",
+          "paragrafi": [
+            "Tra una visita e l'altra è utile osservare la propria pelle una volta al mese, con l'aiuto di uno specchio o di una persona di fiducia. La regola dell'ABCDE aiuta a notare i segnali: asimmetria, bordi irregolari, colori diversi, dimensione superiore a 6 millimetri, evoluzione nel tempo.",
+            "C'è anche il segno del «brutto anatroccolo»: un neo diverso da tutti gli altri, per forma o colore, merita attenzione anche se non rispetta le altre regole. Qualsiasi neo nuovo in età adulta, o che cambia, va fatto vedere senza aspettare il controllo successivo."
+          ]
+        },
+        {
+          "titolo": "Proteggersi dal sole",
+          "paragrafi": [
+            "La prevenzione migliore resta la protezione dal sole: evitare le ore centrali, usare indumenti e cappello, applicare una crema ad alta protezione e rinnovarla spesso. Le lampade abbronzanti aumentano il rischio di melanoma e andrebbero evitate, soprattutto da giovani.",
+            "Nei bambini la protezione è ancora più importante: le scottature dell'infanzia pesano sul rischio di tutta la vita."
+          ]
+        },
+        {
+          "titolo": "Quanto dura e come prepararsi",
+          "paragrafi": [
+            "Un controllo completo dei nei dura in genere tra i quindici e i trenta minuti, a seconda di quanti nei ci sono da osservare. Non serve alcuna preparazione particolare.",
+            "Se ha già fatto controlli in passato, porti i referti e gli eventuali esami istologici di nei asportati: mi permettono di confrontare e di capire meglio la Sua storia. Mi segnali anche i nei che ha notato cambiare, o che La preoccupano: sono informazioni preziose, perché Lei vede la Sua pelle ogni giorno."
+          ]
+        },
+        {
+          "titolo": "Nei e bambini",
+          "paragrafi": [
+            "Anche i bambini hanno nei, che compaiono e crescono con loro: nella grande maggioranza dei casi è del tutto normale. Un controllo è utile se i nei sono molti, se c'è un neo congenito grande o se uno cambia in fretta. Faccio sempre in modo che la visita sia tranquilla e senza fretta."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Devo struccarmi o togliere lo smalto? Sì, se possibile: mi permette di vedere bene il viso e le unghie.",
+            "Il controllo dei nei si può fare ai bambini? Sì, ed è utile soprattutto se ci sono molti nei o nei congeniti grandi.",
+            "Un neo che prude è pericoloso? Non per forza, ma è un cambiamento: va fatto vedere.",
+            "In gravidanza i nei cambiano? Possono scurirsi un po', ma un neo che cambia va comunque controllato."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita dermatologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "acne-adulti",
+      "categoria": "Acne",
+      "titolo": "Acne da adulti: cosa fare e cosa non fare",
+      "img": "/agosta-2utg/img/rep-pelle.webp",
+      "tempoLettura": "7 min",
+      "intro": "L'acne non è solo un problema dell'adolescenza. Molte persone, soprattutto donne tra i 25 e i 40 anni, la vedono comparire o tornare da adulte. Si cura, ma con pazienza e con i prodotti giusti: ecco cosa fare, e soprattutto cosa evitare.",
+      "sezioni": [
+        {
+          "titolo": "Perché compare da adulti",
+          "paragrafi": [
+            "L'acne nasce nel follicolo pilifero, dove il sebo, le cellule morte della pelle e un batterio che vive normalmente sulla cute creano un ambiente favorevole all'infiammazione.",
+            "Nell'acne dell'adulto entrano spesso in gioco gli ormoni: i brufoli si concentrano sulla mandibola, sul mento e sul collo e peggiorano prima del ciclo. Contano anche la predisposizione, lo stress, alcuni farmaci e, a volte, cosmetici troppo ricchi che chiudono i pori."
+          ]
+        },
+        {
+          "titolo": "Cosa non fare",
+          "paragrafi": [
+            "Alcuni errori sono molto comuni e peggiorano l'acne o i suoi segni:"
+          ],
+          "elenco": [
+            "schiacciare o tormentare i brufoli: spinge l'infiammazione più in profondità e lascia macchie e cicatrici",
+            "usare scrub aggressivi tutti i giorni: irritano la pelle senza curare l'acne",
+            "applicare molti prodotti insieme, cambiandoli di continuo",
+            "usare rimedi casalinghi come dentifricio, alcol o limone",
+            "interrompere la terapia dopo due settimane perché «non funziona»",
+            "prendere il sole per «asciugare» i brufoli: il miglioramento è temporaneo e le macchie peggiorano"
+          ]
+        },
+        {
+          "titolo": "Cosa fare",
+          "paragrafi": [
+            "Detergere la pelle mattina e sera con un prodotto delicato, usare una crema idratante leggera non comedogenica e una protezione solare adatta alla pelle grassa. Struccarsi sempre la sera.",
+            "Le terapie efficaci esistono: retinoidi topici, perossido di benzoile, acido azelaico, a volte antibiotici per periodi limitati. Nelle donne con una componente ormonale può essere utile una terapia condivisa con il ginecologo. Nei casi più ostinati o che lasciano cicatrici, si valuta l'isotretinoina, un farmaco molto efficace che richiede controlli regolari.",
+            "Il punto chiave è la costanza: la maggior parte delle cure mostra i primi risultati dopo sei-otto settimane."
+          ]
+        },
+        {
+          "titolo": "I segni dell'acne",
+          "paragrafi": [
+            "Quando l'acne è sotto controllo, si possono trattare i segni che ha lasciato. Le macchie scure tendono a schiarirsi da sole con il tempo e con la protezione solare; i peeling chimici possono accelerare il processo e aiutano anche nell'acne attiva.",
+            "Le cicatrici vere, quelle che lasciano piccole depressioni nella pelle, migliorano con trattamenti come il microneedling, che stimola la produzione di nuovo collagene. Di solito servono alcune sedute, a distanza di qualche settimana."
+          ]
+        },
+        {
+          "titolo": "Alimentazione e acne",
+          "paragrafi": [
+            "Il legame tra cibo e acne è stato a lungo sopravvalutato. Oggi sappiamo che in alcune persone una dieta ricca di zuccheri semplici e di latte può peggiorarla, ma non esiste un alimento proibito per tutti. Più che eliminare cibi a caso, conviene seguire un'alimentazione varia ed equilibrata e osservare se qualcosa, nel Suo caso, sembra peggiorare la pelle."
+          ]
+        },
+        {
+          "titolo": "Quando rivolgersi al dermatologo",
+          "paragrafi": [
+            "Conviene farsi visitare quando l'acne dura da mesi nonostante i prodotti da banco, quando lascia macchie o cicatrici, quando compaiono noduli profondi e dolorosi, o semplicemente quando La fa sentire a disagio. L'acne non è un problema estetico da sopportare: è una condizione della pelle che si cura.",
+            "In visita valuto il tipo di acne, i prodotti che usa e la Sua storia, e imposto una terapia su misura, con controlli per adattarla nel tempo."
+          ]
+        },
+        {
+          "titolo": "Il trucco si può usare?",
+          "paragrafi": [
+            "Sì. Non è necessario rinunciare al trucco durante la terapia: basta scegliere prodotti leggeri, non comedogenici, e struccarsi con cura ogni sera. Un buon fondotinta adatto alla pelle grassa può anzi aiutare a sentirsi a proprio agio mentre la cura fa effetto."
+          ]
+        },
+        {
+          "titolo": "Una routine semplice",
+          "paragrafi": [
+            "Una routine semplice funziona meglio di dieci prodotti. Al mattino: detergente delicato, idratante leggero, protezione solare. La sera: struccante se serve, detergente delicato e il trattamento prescritto, applicato in uno strato sottile su tutta la zona, non solo sui brufoli.",
+            "Nelle prime settimane alcune cure possono seccare o arrossare un po' la pelle: è normale, e di solito si risolve riducendo la frequenza di applicazione per qualche giorno. Non interrompa la cura senza averne parlato: spesso basta un piccolo aggiustamento."
+          ]
+        },
+        {
+          "titolo": "L'acne negli uomini adulti",
+          "paragrafi": [
+            "Anche gli uomini possono avere acne da adulti, a volte sul viso e spesso sulla schiena e sul torace. Contano il sudore, gli indumenti sintetici, alcuni integratori per la palestra. Le cure sono simili, con qualche attenzione in più alle zone del corpo."
+          ]
+        },
+        {
+          "titolo": "Quanto tempo serve",
+          "paragrafi": [
+            "Il primo controllo dopo l'inizio della cura si fa di solito dopo due o tre mesi: è il tempo necessario per capire se la terapia funziona e se va adattata."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Il sole fa bene all'acne? Sembra migliorarla per qualche giorno, ma dopo l'estate spesso peggiora e le macchie si scuriscono.",
+            "Devo smettere di truccarmi? No, scelga prodotti non comedogenici e si strucchi sempre la sera.",
+            "La pillola cura l'acne? In alcune donne aiuta, ma la scelta va fatta con il ginecologo.",
+            "Quanto dura la terapia? Di solito alcuni mesi, poi una terapia di mantenimento più leggera."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita dermatologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "infezioni-sessuali",
+      "categoria": "Venereologia",
+      "titolo": "Infezioni sessualmente trasmesse: quando fare i controlli",
+      "img": "/agosta-2utg/img/rep-attesa.webp",
+      "tempoLettura": "7 min",
+      "intro": "Le infezioni sessualmente trasmesse sono più frequenti di quanto si pensi e spesso non danno sintomi. Parlarne con un medico può mettere in imbarazzo, ma è il modo più semplice per stare tranquilli. Ecco quando è utile un controllo e come si svolge una visita venereologica.",
+      "sezioni": [
+        {
+          "titolo": "Chi è il venereologo",
+          "paragrafi": [
+            "Il venereologo è il medico specialista delle infezioni sessualmente trasmesse, le IST. La venereologia fa parte della specializzazione in dermatologia, perché molte di queste infezioni si manifestano sulla pelle e sulle mucose.",
+            "Dal 2022 al 2024 ho lavorato al Centro Multidisciplinare per la Salute Sessuale dell'Ospedale Oftalmico di Torino, occupandomi proprio di prevenzione, diagnosi e cura di queste infezioni. È un ambito in cui la discrezione e l'assenza di giudizio sono importanti quanto la competenza."
+          ]
+        },
+        {
+          "titolo": "Le infezioni più comuni",
+          "paragrafi": [
+            "Tra le infezioni che vedo più spesso:"
+          ],
+          "elenco": [
+            "clamidia e gonorrea, che possono dare bruciore e perdite ma spesso non danno alcun sintomo",
+            "sifilide, che è tornata a diffondersi negli ultimi anni e può manifestarsi con una piccola ulcera indolore o con macchie sulla pelle",
+            "condilomi, causati dal papillomavirus (HPV), piccole escrescenze nella zona genitale o anale",
+            "herpes genitale, con vescicole dolorose che tendono a ripresentarsi",
+            "molluschi contagiosi, pediculosi e scabbia, che si trasmettono anche con il contatto stretto"
+          ]
+        },
+        {
+          "titolo": "Quando fare un controllo",
+          "paragrafi": [
+            "È utile un controllo dopo un rapporto a rischio, cioè non protetto o con un preservativo che si è rotto, quando si inizia una nuova relazione, se il partner ha ricevuto una diagnosi di infezione, o semplicemente periodicamente se si hanno più partner.",
+            "Va fatta una visita, senza aspettare, se compaiono bruciore urinario, perdite insolite, piccole ferite, vescicole, escrescenze o macchie sulla pelle dei genitali o in altre zone."
+          ]
+        },
+        {
+          "titolo": "I tempi giusti dei test",
+          "paragrafi": [
+            "Ogni infezione ha i suoi tempi: alcuni test sono affidabili già dopo poche settimane, altri richiedono più tempo e vanno ripetuti a distanza. Fare tutti gli esami il giorno dopo un rapporto a rischio può dare risultati falsamente rassicuranti.",
+            "Per questo in visita ricostruiamo insieme quando è avvenuto il contatto e quali sintomi ci sono, e Le indico quali esami fare e quando.",
+            "Una precisazione importante: se il rapporto a rischio è avvenuto da meno di 72 ore, si può valutare la profilassi post-esposizione per l'HIV. In questo caso non aspetti: si rivolga subito a un centro di malattie infettive o al pronto soccorso."
+          ]
+        },
+        {
+          "titolo": "Come si svolge la visita",
+          "paragrafi": [
+            "La visita inizia con un colloquio riservato: Le farò alcune domande sulla Sua salute e sulle abitudini sessuali, senza giudizio, solo per capire quali infezioni cercare. Poi esamino la pelle e le mucose interessate.",
+            "Se servono, prescrivo gli esami: del sangue, delle urine o dei tamponi. Alcuni trattamenti, come quelli per i condilomi, si possono eseguire in ambulatorio. Al termine Le spiego la terapia, cosa fare con il partner e quando ricontrollarsi."
+          ]
+        },
+        {
+          "titolo": "Prevenire",
+          "paragrafi": [
+            "Il preservativo, usato correttamente e dall'inizio alla fine del rapporto, riduce molto il rischio di molte infezioni, anche se non le esclude tutte. La vaccinazione contro l'HPV protegge dai tipi di virus che causano la maggior parte dei condilomi e alcuni tumori, ed è consigliata anche ai maschi.",
+            "Controlli periodici e un dialogo aperto con il partner sono, insieme, la forma di prevenzione più efficace."
+          ]
+        },
+        {
+          "titolo": "Riservatezza",
+          "paragrafi": [
+            "Capisco che per molte persone sia difficile anche solo telefonare per prenotare. Per questo, quando prenota, può semplicemente chiedere una visita specialistica, senza specificare il motivo: ne parliamo di persona, in studio."
+          ]
+        },
+        {
+          "titolo": "Se compaiono sintomi",
+          "paragrafi": [
+            "Bruciore, perdite, piccole ulcere o escrescenze non vanno ignorati, anche se passano da soli. Alcune infezioni, come la sifilide, possono dare una prima lesione che guarisce spontaneamente mentre l'infezione resta e prosegue in silenzio.",
+            "Fino a quando non ha fatto la visita, è prudente evitare i rapporti o usare sempre il preservativo, per non trasmettere un'eventuale infezione al partner. Eviti invece di applicare creme o assumere antibiotici di propria iniziativa: possono nascondere i sintomi e rendere più difficile la diagnosi."
+          ]
+        },
+        {
+          "titolo": "Un luogo senza giudizio",
+          "paragrafi": [
+            "Molte persone rimandano la visita per imbarazzo. In studio sentirà solo domande utili alla diagnosi: le IST sono infezioni come le altre, non una colpa, e riguardano persone di ogni età e di ogni orientamento. Più ci si controlla, più si interrompe la catena dei contagi."
+          ]
+        },
+        {
+          "titolo": "Dopo la cura",
+          "paragrafi": [
+            "Per alcune infezioni è previsto un controllo dopo la terapia, per essere sicuri che sia guarita. Le indico io quando farlo e quali esami ripetere."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Serve l'impegnativa? No, per la visita privata si prenota direttamente.",
+            "Devo dirlo al partner? Se viene trovata un'infezione, di solito anche il partner va controllato e curato: Le spiego come fare.",
+            "Le IST si curano? Molte guariscono completamente con la terapia giusta; altre si tengono sotto controllo.",
+            "I condilomi tornano? Possono ripresentarsi: per questo sono utili i controlli dopo il trattamento."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita dermatologica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "dermatologo.agosta",
+    "nota": "il Dottore non ha un profilo professionale: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Acne: cosa non fare",
+        "punti": [
+          "Schiacciare i brufoli",
+          "Scrub aggressivi ogni giorno",
+          "Dieci prodotti insieme",
+          "Interrompere la cura dopo due settimane"
+        ],
+        "didascalia": "Schiacciare un brufolo lascia segni che durano più del brufolo. L'acne si cura con costanza e con i prodotti giusti per la Sua pelle.",
+        "hashtag": "#acne #dermatologo #alba"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Unghie gialle e ispessite?",
+        "risposta": "Può essere una micosi. Ma non sempre.",
+        "didascalia": "L'onicomicosi è frequente, ma psoriasi e piccoli traumi possono darle un aspetto simile. Prima di curarla, va riconosciuta.",
+        "hashtag": "#onicomicosi #unghie #dermatologia"
+      },
+      {
+        "stile": "foto",
+        "immagine": "capelli",
+        "titolo": "Più capelli sul cuscino?",
+        "sottotitolo": "In autunno è spesso normale",
+        "didascalia": "La caduta stagionale d'autunno di solito si esaurisce in qualche settimana. Se dura di più, o i capelli si diradano, ne parliamo in visita tricologica.",
+        "hashtag": "#capelli #caduta #tricologia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "Ricevo anche presso",
+    "email": null,
+    "luoghi": [
+      {
+        "id": "alba",
+        "tipo": "Studio",
+        "nome": "Studio di Alba",
+        "breve": "Piazza Ferrero",
+        "indirizzo": "Piazza Michele Ferrero 8",
+        "piano": "2° piano",
+        "citta": "Alba",
+        "cap": "12051",
+        "provincia": "CN",
+        "telefono": "328 028 3852",
+        "online": true,
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di Alba, piazza Michele Ferrero 8",
+        "testo": "Il mio studio principale. Qui può prenotare anche online, su MioDottore, vedendo subito gli orari liberi."
+      },
+      {
+        "id": "torino",
+        "tipo": "Studio",
+        "nome": "Studio di Torino",
+        "breve": "Via Valeggio",
+        "indirizzo": "Via Valeggio 26",
+        "piano": "",
+        "citta": "Torino",
+        "cap": "10128",
+        "provincia": "TO",
+        "telefono": "345 415 6718",
+        "online": false,
+        "mappa": true,
+        "principale": false,
+        "frase": "lo studio di Torino, via Valeggio 26",
+        "testo": "Zona Crocetta, vicino a Porta Nuova. Le visite si prenotano per telefono."
+      },
+      {
+        "id": "sanpaolo",
+        "tipo": "Poliambulatorio",
+        "nome": "Poliambulatorio San Paolo",
+        "breve": "Via Vivaro",
+        "indirizzo": "Via Vivaro 27",
+        "piano": "",
+        "citta": "Alba",
+        "cap": "12051",
+        "provincia": "CN",
+        "telefono": "0173 290851",
+        "online": false,
+        "mappa": true,
+        "principale": false,
+        "frase": "il Poliambulatorio San Paolo di Alba",
+        "testo": "Poliambulatorio del gruppo Cidimu. Prenotazioni al numero del centro."
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Ad Alba può prenotare online su MioDottore; negli altri studi per telefono. Prezzi indicati prima della visita.",
+    "telefono": "3280283852",
+    "telefonoLabel": "328 028 3852",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "emailRichieste": "pragmasolutions.to@gmail.com",
+    "notaRichieste": "Anteprima: le richieste inviate da questa demo arrivano a Pragma Solutions, non al medico.",
+    "oggettoMail": "Richiesta di visita dermatologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi studio, giorno e orario che preferisce: La ricontattiamo per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30",
+        "18:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e studio vengono confermati dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo",
+        "Trattamento"
+      ],
+      "motivi": [
+        "Problema della pelle",
+        "Controllo dei nei",
+        "Caduta dei capelli",
+        "Acne",
+        "Dermatite o eczema",
+        "Psoriasi",
+        "Micosi della pelle o delle unghie",
+        "Verruche",
+        "Consulenza riservata (venereologia)",
+        "Medicina estetica",
+        "Visita per un bambino",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "un problema della pelle",
+        "un controllo dei nei",
+        "la caduta dei capelli",
+        "l'acne",
+        "una dermatite o un eczema",
+        "la psoriasi",
+        "una micosi della pelle o delle unghie",
+        "delle verruche",
+        "una consulenza riservata",
+        "un trattamento di medicina estetica",
+        "mio figlio",
+        "un problema della pelle"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio di Alba · Piazza Michele Ferrero 8",
+          "frase": "lo studio di Alba, piazza Michele Ferrero 8"
+        },
+        {
+          "nome": "Studio di Torino · Via Valeggio 26",
+          "frase": "lo studio di Torino, via Valeggio 26"
+        },
+        {
+          "nome": "Poliambulatorio San Paolo · Via Vivaro 27",
+          "frase": "il Poliambulatorio San Paolo di Alba"
+        }
+      ],
+      "privacy": null,
+      "privacyTesto": "I dati inseriti servono solo a preparare il messaggio di richiesta: non vengono salvati da questa pagina.",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F0F6F6",
+      "ink": "#0E2326",
+      "muted": "#53686B",
+      "line": "#D5E3E3",
+      "brand": "#1A7A7C",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#E8664A",
+      "deep": "#0C2A2D",
+      "deep-ink": "#BFDCDA",
+      "pelle": "#F2D8CC"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Bricolage Grotesque",
+    "fontTesti": "Public Sans",
+    "fontUi": "Public Sans",
+    "favicon": "/agosta-2utg/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/agosta-2utg/brand/brand.json",
+    "pagine": [
+      "https://www.danieleagostadermatologo.com/",
+      "https://www.miodottore.it/daniele-agosta/dermatologo-medico-estetico/alba",
+      "https://cidimu.it/medici/visite-ed-esami/dermatologia/daniele-agosta/",
+      "https://www.poliambulatoriosanpaolo.it/medici/dott-agosta-daniele/",
+      "https://www.alberosrl.it/daniele-agosta/"
+    ]
+  }
+}

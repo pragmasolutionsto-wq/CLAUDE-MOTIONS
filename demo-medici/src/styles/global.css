@@ -383,3 +383,27 @@ html { scroll-behavior: smooth; }
   .stile-trattato .card { border-radius: 3px; box-shadow: none; border: 1px solid var(--c-line); }
   .stile-trattato .campo, .stile-trattato .btn, .stile-trattato .slot, .stile-trattato .giorno { border-radius: 3px; }
 }
+
+/* Layout "lente": dermatoscopio, prezzi, ABCDE, recensioni */
+@layer components {
+  .sede-pill { color: var(--c-muted); transition: background-color .2s, color .2s, box-shadow .2s; }
+  .sede-pill:hover { color: var(--c-deep); }
+  .sede-pill[aria-pressed="true"] { background: #fff; color: var(--c-deep); box-shadow: 0 4px 14px rgb(12 42 45 / .12); }
+  .area-tab, .tema-chip { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .area-tab:hover, .tema-chip:hover { border-color: var(--c-brand); }
+  .area-tab[aria-selected="true"], .tema-chip[aria-pressed="true"] { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .lettera { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .lettera:hover { border-color: var(--c-brand); }
+  .lettera[aria-pressed="true"] { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+  .stato-btn { color: var(--c-muted); transition: background-color .2s, color .2s; }
+  .stato-btn[aria-pressed="true"][data-stato="ok"] { background: #fff; color: var(--c-brand); box-shadow: 0 3px 10px rgb(12 42 45 / .1); }
+  .stato-btn[aria-pressed="true"][data-stato="ko"] { background: var(--c-brand2); color: #fff; }
+  [data-tel-link].principale { background: var(--c-brand); color: #fff; border-color: var(--c-brand); }
+  .pubbl summary { list-style: none; }
+  .pubbl summary::-webkit-details-marker { display: none; }
+  .pubbl summary::after { content: '+'; float: right; color: var(--c-brand); font-weight: 700; }
+  .pubbl[open] summary::after { content: '−'; }
+  .stile-lente .card { border-radius: 24px; }
+  .stile-lente .campo, .stile-lente .slot, .stile-lente .giorno { border-radius: 14px; }
+  .stile-lente .btn { border-radius: 999px; }
+}

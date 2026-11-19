@@ -1,0 +1,39 @@
+{
+  "medico": "Dott. Daniele Agosta",
+  "specialita": "Dermatologo e venereologo, medico estetico",
+  "sito": "https://www.danieleagostadermatologo.com/ (template di sito MioDottore/Docplanner a pagina singola)",
+  "logo": "nessun logo: in header una piccola lente (anello verde acqua + punto corallo) e il nome in testo",
+  "colori": {
+    "verde_acqua_divisa": "#1A7A7C (dalla maglia verde acqua delle sue foto)",
+    "corallo_segnali": "#E8664A",
+    "blu_notte": "#0C2A2D",
+    "pelle_illustrazioni": "#F2D8CC"
+  },
+  "font": {
+    "sito": "tema MioDottore",
+    "demo": [
+      "Bricolage Grotesque",
+      "Public Sans"
+    ]
+  },
+  "contatti": {
+    "alba_studio": "Piazza Michele Ferrero 8, 2° piano, Alba · 328 028 3852 · prenotazione online MioDottore",
+    "torino": "Via Valeggio 26, Torino · 345 415 6718 (MioDottore: niente prenotazione online a questo indirizzo)",
+    "poliambulatorio": "Poliambulatorio San Paolo, Via Vivaro 27, Alba · 0173 290851",
+    "email": "nessuna email pubblica: le richieste della demo vanno a Pragma (dichiarato in pagina)",
+    "whatsapp": "nessun WhatsApp verificato",
+    "miodottore": "https://www.miodottore.it/daniele-agosta/dermatologo-medico-estetico/alba"
+  },
+  "foto": [
+    "Il suo sito e MioDottore hanno solo un avatar disegnato: nessuna foto vera.",
+    "foto/Dermatologo-Daniele-Agosta-ok.jpg: foto vera dal sito del Poliambulatorio L'Albero di Roddi (alberosrl.it), scontornata → img/ritratto.webp (hero)",
+    "foto/Dermatologo-Daniele-Agosta.jpg: foto vera dal sito del Poliambulatorio San Paolo di Alba (sua sede) → img/foto-studio.webp, volto.webp",
+    "foto/Dr.-Agosta.png: foto da Cidimu (stesso scatto, non usata in pagina)",
+    "FOTO DI TERZI usate con ok di Meme (19/11/2026)"
+  ],
+  "recensioni": "74 recensioni vere pubblicate sul suo sito (riportate testualmente, senza nomi); 403 recensioni su MioDottore (conteggio del 19/11/2026)",
+  "prezzi": "listino dal suo sito e da MioDottore (visita 120 €, controllo 80 €, nei 120 €, epiluminescenza 150 €, tricologica 120 €, venereologica 120 €, estetica da 100 a 300 €)",
+  "repertorio": "Unsplash gratuito già usato nelle demo Licciardello e Goitre: capelli, nei con lente, viso con crema, controllo nei con guanti, sala d'attesa. Solo blog, articolo e un post",
+  "problemi_sito": "sito-template MioDottore a pagina singola con avatar disegnato al posto della foto, nessun blog, nessun social professionale, curriculum in terza persona come blocco di testo, listino nascosto in fondo, 74 recensioni in un carosello che pochi vedono",
+  "note": "Lavora anche all'ASL CN2 (Alba, Canale); 2022-2024 Ce.Mu.SS Ospedale Oftalmico Torino. Ha un Instagram personale (@_daniele.agosta_), non professionale."
+}
