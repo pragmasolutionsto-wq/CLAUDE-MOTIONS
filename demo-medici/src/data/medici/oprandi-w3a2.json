@@ -1,0 +1,292 @@
+{
+  "slug": "oprandi-w3a2",
+  "layout": "social",
+  "titolo": "Dr.",
+  "nome": "Gianmosé Oprandi",
+  "specialita": "Ortopedico e traumatologo, ortopedia sportiva e chirurgia protesica",
+  "firma": "Ortopedico e traumatologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dr. Gianmosé Oprandi · Proposta Instagram di Pragma Solutions",
+    "description": "Anteprima di un profilo Instagram per il Dr. Gianmosé Oprandi, ortopedico a Collegno e Torino: tre post pronti e il piano del primo mese."
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#EEF4F5",
+      "ink": "#0E1C21",
+      "muted": "#566A70",
+      "line": "#D6E3E6",
+      "brand": "#3E7686",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#E08A3C",
+      "deep": "#14303A",
+      "deep-ink": "#BDD3D9"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Mulish:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Zilla Slab",
+    "fontTesti": "Mulish",
+    "fontUi": "Mulish",
+    "favicon": "/oprandi-w3a2/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "foto": {
+    "ritratto": "/oprandi-w3a2/img/ritratto.webp",
+    "volto": "/oprandi-w3a2/img/volto.webp",
+    "menisco": "/oprandi-w3a2/img/blog-menisco.webp",
+    "stile": "/oprandi-w3a2/img/blog-stile.webp",
+    "sonno": "/oprandi-w3a2/img/blog-sonno.webp",
+    "ginocchio": "/oprandi-w3a2/img/rep-ginocchio.webp",
+    "fisio": "/oprandi-w3a2/img/rep-fisio.webp"
+  },
+  "logo": "/oprandi-w3a2/img/logo.png",
+  "sito": "https://droprandi.it/",
+  "intro": {
+    "titolo": "Dottore, il Suo blog merita un pubblico.",
+    "testo": "Scrive con costanza: l'ultimo articolo è di questo mese, con temi forti come il Metodo GOAL e la preparazione alla protesi. Ma nessun social li porta ai pazienti. Abbiamo trasformato i Suoi contenuti in tre post e nel piano del primo mese."
+  },
+  "dati": [
+    [
+      "20+",
+      "anni di esperienza"
+    ],
+    [
+      "13 novembre",
+      "l'ultimo articolo del blog"
+    ],
+    [
+      "0",
+      "profili social collegati"
+    ]
+  ],
+  "profilo": {
+    "handle": "dr.gianmoseoprandi",
+    "nome": "Dr. Gianmosé Oprandi · Ortopedico",
+    "bio": [
+      "Ginocchio, anca, spalla · protesi e sport",
+      "Collegno · Humanitas Cellini Torino",
+      "Il blog per i pazienti ⤵"
+    ],
+    "link": "droprandi.it",
+    "evidenza": [
+      "Prenota",
+      "Ginocchio",
+      "Protesi",
+      "GOAL",
+      "Video"
+    ]
+  },
+  "post": [
+    {
+      "id": "crociato",
+      "titolo": "Crociato: quando operare",
+      "tipo": "Carosello · 5 immagini",
+      "slides": [
+        {
+          "tipo": "copertina",
+          "titolo": "Crociato rotto: devo operarmi?",
+          "sotto": "Non sempre. Ecco da cosa dipende",
+          "img": "ginocchio"
+        },
+        {
+          "tipo": "testo",
+          "titolo": "Il legamento crociato anteriore",
+          "testo": "Tiene stabile il ginocchio nei cambi di direzione. Quando si rompe, il ginocchio può «cedere», soprattutto negli sport con perni e salti."
+        },
+        {
+          "tipo": "lista",
+          "titolo": "Si valuta l'intervento se",
+          "punti": [
+            "Il ginocchio cede nella vita di tutti i giorni",
+            "Si vuole tornare a sport con cambi di direzione",
+            "Ci sono lesioni associate del menisco",
+            "Si è giovani e attivi"
+          ]
+        },
+        {
+          "tipo": "testo",
+          "titolo": "La ricostruzione",
+          "testo": "Si esegue in artroscopia, con un tendine del paziente. Poi la riabilitazione: il ritorno allo sport richiede in genere diversi mesi, con tappe precise."
+        },
+        {
+          "tipo": "cta",
+          "titolo": "Ogni ginocchio è una storia.",
+          "testo": "Visita, test di stabilità e risonanza per decidere insieme. Link in bio."
+        }
+      ],
+      "didascalia": "Rottura del crociato anteriore: non tutti devono operarsi. Contano l'instabilità, lo sport che vuole fare, le lesioni associate. Lo valutiamo insieme, con obiettivi chiari: è il cuore del Metodo GOAL.",
+      "hashtag": "#crociato #ginocchio #ortopediasportiva"
+    },
+    {
+      "id": "menisco",
+      "titolo": "Menisco o artrosi?",
+      "tipo": "Carosello · 4 immagini",
+      "slides": [
+        {
+          "tipo": "copertina",
+          "titolo": "Menisco o artrosi?",
+          "sotto": "Due dolori diversi, due strade diverse",
+          "img": "menisco"
+        },
+        {
+          "tipo": "lista",
+          "titolo": "Fa pensare al menisco",
+          "punti": [
+            "Dolore dopo una torsione",
+            "Ginocchio che si blocca o «scatta»",
+            "Dolore preciso sulla rima articolare"
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titolo": "Fa pensare all'artrosi",
+          "punti": [
+            "Dolore che cresce negli anni",
+            "Rigidità al mattino",
+            "Gonfiore dopo lo sforzo"
+          ]
+        },
+        {
+          "tipo": "cta",
+          "titolo": "La differenza cambia la cura.",
+          "testo": "Nell'artrosi l'artroscopia del menisco spesso non aiuta. L'articolo completo è sul blog: link in bio."
+        }
+      ],
+      "didascalia": "Artrosi, lesione del menisco o instabilità? Riconoscerle evita interventi inutili. Ne ho scritto sul blog: lo trova dal link in bio.",
+      "hashtag": "#menisco #artrosi #ginocchio"
+    },
+    {
+      "id": "protesi",
+      "titolo": "Prepararsi alla protesi",
+      "tipo": "Carosello · 5 immagini",
+      "slides": [
+        {
+          "tipo": "copertina",
+          "titolo": "Prepararsi alla protesi",
+          "sotto": "Il risultato comincia prima dell'intervento",
+          "img": "fisio"
+        },
+        {
+          "tipo": "lista",
+          "titolo": "Le settimane prima",
+          "punti": [
+            "Esercizi per i muscoli della coscia",
+            "Stop al fumo",
+            "Alcol al minimo",
+            "Alimentazione ricca di proteine"
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titolo": "La preparazione invisibile",
+          "punti": [
+            "Dormire bene",
+            "Bere a sufficienza",
+            "Integratori solo se servono"
+          ]
+        },
+        {
+          "tipo": "testo",
+          "titolo": "Un obiettivo, non solo un intervento",
+          "testo": "Tornare a camminare in montagna, giocare con i nipoti, viaggiare: con il Metodo GOAL l'obiettivo del paziente diventa il percorso di cura."
+        },
+        {
+          "tipo": "recensione",
+          "titolo": "«Presta particolare attenzione alla persona, spiegando con calma tutto.»",
+          "testo": "Sara F. · recensione Google"
+        }
+      ],
+      "didascalia": "Fumo, alcol, alimentazione, sonno: quello che fa nelle settimane prima della protesi conta per il risultato. Tre articoli del blog in un solo post.",
+      "hashtag": "#protesi #ginocchio #anca #chirurgiarobotica"
+    }
+  ],
+  "piano": [
+    {
+      "sett": 1,
+      "giorno": "Lunedì",
+      "formato": "Carosello",
+      "titolo": "Crociato: quando operare"
+    },
+    {
+      "sett": 1,
+      "giorno": "Mercoledì",
+      "formato": "Reel",
+      "titolo": "Il Metodo GOAL in 45 secondi"
+    },
+    {
+      "sett": 1,
+      "giorno": "Venerdì",
+      "formato": "Recensione",
+      "titolo": "La voce di una paziente"
+    },
+    {
+      "sett": 2,
+      "giorno": "Lunedì",
+      "formato": "Carosello",
+      "titolo": "Menisco o artrosi?"
+    },
+    {
+      "sett": 2,
+      "giorno": "Mercoledì",
+      "formato": "Reel",
+      "titolo": "Chirurgia robotica: cosa fa il robot"
+    },
+    {
+      "sett": 2,
+      "giorno": "Venerdì",
+      "formato": "Blog",
+      "titolo": "Cosa aspettarsi davvero dopo la protesi"
+    },
+    {
+      "sett": 3,
+      "giorno": "Lunedì",
+      "formato": "Carosello",
+      "titolo": "Prepararsi alla protesi"
+    },
+    {
+      "sett": 3,
+      "giorno": "Mercoledì",
+      "formato": "Reel",
+      "titolo": "Esercizio del giorno per il quadricipite"
+    },
+    {
+      "sett": 3,
+      "giorno": "Venerdì",
+      "formato": "Domanda",
+      "titolo": "Quanto dura una protesi?"
+    },
+    {
+      "sett": 4,
+      "giorno": "Lunedì",
+      "formato": "Carosello",
+      "titolo": "Spalla instabile: cosa fare"
+    },
+    {
+      "sett": 4,
+      "giorno": "Mercoledì",
+      "formato": "Reel",
+      "titolo": "Il Metodo IARA Care"
+    },
+    {
+      "sett": 4,
+      "giorno": "Venerdì",
+      "formato": "Blog",
+      "titolo": "Sonno e integratori prima dell'intervento"
+    }
+  ],
+  "perche": [
+    [
+      "Il blog c'è già",
+      "Ogni articolo diventa un carosello e un reel: niente da inventare, solo da far arrivare ai pazienti."
+    ],
+    [
+      "Metodi riconoscibili",
+      "GOAL e IARA Care sono idee forti e personali: su Instagram diventano il Suo marchio."
+    ],
+    [
+      "Sport e protesi parlano ai social",
+      "Sportivi e famiglie dei pazienti cercano risposte sul telefono: il profilo porta al blog e alla prenotazione."
+    ]
+  ],
+  "nota": "Proposta di Pragma Solutions: handle, testi e grafiche sono esempi preparati per questa anteprima. I contenuti medici vanno rivisti e approvati dal Dottore prima della pubblicazione."
+}

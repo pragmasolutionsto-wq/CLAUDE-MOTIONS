@@ -1,0 +1,185 @@
+---
+// Layout "social" (proposte solo Instagram: Dott. Gabriele Vasario, Dr. Gianmosé Oprandi). Pagina di Pragma, non sito del medico:
+// anteprima del profilo in un telefono (foto vera, bio, evidenze, griglia), tre caroselli sfogliabili (frecce, puntini, tastiera,
+// scorrimento col dito), didascalie, piano del primo mese a schede per settimana, perché funziona. Colori e font dal brand del medico.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import type { Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const pr = x.profilo;
+const post = x.post as any[];
+const piano = x.piano as any[];
+const settimane = [1, 2, 3, 4];
+const griglia = [...post.map((p) => ({ id: p.id, titolo: p.titolo, img: foto[p.slides[0].img], vero: true })), ...piano.filter((p) => !post.some((q) => q.titolo === p.titolo)).slice(0, 6).map((p, i) => ({ id: `piano-${i}`, titolo: p.titolo, formato: p.formato, vero: false }))];
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <img src={x.logo} alt={`${m.titolo} ${m.nome}`} width="720" height="138" class="h-8 w-auto sm:h-10" />
+      <span class="inline-flex items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-[12.5px] font-semibold text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Instagram</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="px-4 pb-16 pt-10 sm:px-8 lg:pt-16" data-hero>
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-6">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand" data-entra>{m.titolo} {m.nome} · {m.firma}</p>
+          <h1 class="mt-4 font-head text-[2.6rem] font-bold leading-[1.08] text-deep sm:text-[3.6rem]" data-entra>{x.intro.titolo}</h1>
+          <p class="mt-5 max-w-xl text-[17.5px] leading-relaxed text-ink/80" data-entra>{x.intro.testo}</p>
+          <dl class="mt-8 grid max-w-xl grid-cols-3 gap-3" data-entra>{(x.dati as string[][]).map(([v, t]) => <div class="rounded-2xl bg-surface p-4"><dt class="sr-only">{t}</dt><dd><span class="block font-head text-[1.5rem] font-bold leading-none text-deep sm:text-[1.9rem]">{v}</span><span class="mt-1.5 block text-[12.5px] leading-snug text-muted">{t}</span></dd></div>)}</dl>
+          <p class="mt-6 text-[14px] text-muted" data-entra>Tocchi un post nel telefono per sfogliarlo.</p>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="telefono mx-auto" data-telefono data-post={JSON.stringify(post)} data-foto={JSON.stringify(foto)}>
+            <div class="telefono__schermo">
+              <div class="flex items-center justify-between px-4 pt-3 text-[13px] font-semibold text-ink"><span>9:41</span><span class="flex gap-1"><span class="h-2.5 w-4 rounded-sm bg-ink/80"></span></span></div>
+              <div data-vista="profilo">
+                <div class="flex items-center justify-between px-4 pt-3"><span class="font-semibold text-[15px] text-ink">{pr.handle}</span><Icona nome="puntini" class="h-5 w-5 text-ink" /></div>
+                <div class="flex items-center gap-5 px-4 pt-4">
+                  <span class="anello-storia shrink-0"><img src={foto.volto} alt={`${m.titolo} ${m.nome}`} width="320" height="320" class="h-[76px] w-[76px] rounded-full object-cover" /></span>
+                  <dl class="grid flex-1 grid-cols-3 text-center"><div><dd class="font-semibold text-ink">{griglia.length}</dd><dt class="text-[11.5px] text-muted">post</dt></div><div class="col-span-2 self-center text-[11.5px] leading-snug text-muted">Profilo di esempio, prima della pubblicazione</div></dl>
+                </div>
+                <div class="px-4 pt-3 text-[13px] leading-snug text-ink"><p class="font-semibold">{pr.nome}</p>{(pr.bio as string[]).map((b) => <p>{b}</p>)}<p class="font-semibold text-[#00376b]">{pr.link}</p></div>
+                <div class="flex gap-3 overflow-hidden px-4 pt-3">{(pr.evidenza as string[]).map((e) => <span class="flex w-14 shrink-0 flex-col items-center gap-1"><span class="grid h-12 w-12 place-items-center rounded-full border border-line bg-surface text-[10px] font-semibold text-brand">{e.slice(0, 2).toUpperCase()}</span><span class="w-full truncate text-center text-[10.5px] text-ink">{e}</span></span>)}</div>
+                <div class="mt-3 grid grid-cols-3 gap-0.5 border-t border-line pt-0.5">
+                  {griglia.map((g) => g.vero
+                    ? <button type="button" class="cella relative aspect-square overflow-hidden" data-apri={g.id} aria-label={`Apri il post: ${g.titolo}`}><img src={g.img} alt="" width="300" height="300" class="absolute inset-0 h-full w-full object-cover" /><span class="absolute inset-0 bg-deep/45"></span><span class="relative grid h-full place-items-center p-1.5 text-center font-head text-[11.5px] font-bold leading-tight text-white">{g.titolo}</span><Icona nome="foto" class="absolute right-1 top-1 h-3.5 w-3.5 text-white" /></button>
+                    : <span class="cella cella--piano relative grid aspect-square place-items-center p-1.5 text-center"><span class="text-[9px] font-semibold uppercase tracking-wider text-brand2">{g.formato}</span><span class="font-head text-[10.5px] font-bold leading-tight text-deep">{g.titolo}</span></span>)}
+                </div>
+              </div>
+              <div data-vista="post" hidden>
+                <div class="flex items-center gap-2 px-3 pt-3"><button type="button" class="grid h-8 w-8 place-items-center rounded-full hover:bg-surface" data-chiudi aria-label="Torna al profilo"><Icona nome="sx" class="h-5 w-5 text-ink" /></button><img src={foto.volto} alt="" width="320" height="320" class="h-7 w-7 rounded-full object-cover" /><span class="text-[13px] font-semibold text-ink">{pr.handle}</span></div>
+                <div class="relative mt-2" data-carosello tabindex="0" aria-roledescription="carosello" aria-label="Immagini del post">
+                  <div class="relative aspect-square overflow-hidden" data-slide aria-live="polite"></div>
+                  <button type="button" class="freccia freccia--sx" data-prec aria-label="Immagine precedente"><Icona nome="sx" class="h-4 w-4" /></button>
+                  <button type="button" class="freccia freccia--dx" data-succ aria-label="Immagine successiva"><Icona nome="dx" class="h-4 w-4" /></button>
+                  <span class="absolute right-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-[11px] font-semibold text-white" data-contatore>1/1</span>
+                </div>
+                <div class="flex justify-center gap-1 pt-2" data-puntini></div>
+                <p class="px-4 pt-2 text-[12.5px] leading-snug text-ink"><span class="font-semibold">{pr.handle}</span> <span data-didascalia></span> <span class="text-[#00376b]" data-hashtag></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- I TRE POST -->
+    <section class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.2rem] font-bold leading-tight text-deep sm:text-[3rem]" data-sale>Tre post pronti.</h2>
+        <p class="mt-3 max-w-2xl text-[16.5px] text-ink/80">Caroselli che spiegano, con il Suo linguaggio e i Suoi contenuti. Si aprono nel telefono qui sopra.</p>
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+          {post.map((p) => <article class="flex flex-col overflow-hidden rounded-[24px] bg-white"><div class="relative aspect-[4/3] overflow-hidden"><img src={foto[p.slides[0].img]} alt="" width="900" height="600" loading="lazy" class="h-full w-full object-cover" /></div><div class="flex flex-1 flex-col p-6"><p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">{p.tipo}</p><h3 class="mt-1 font-head text-[1.45rem] font-bold leading-snug text-deep">{p.titolo}</h3><p class="mt-2 text-[14.5px] leading-relaxed text-ink/80">{p.didascalia}</p><p class="mt-2 text-[13.5px] text-brand">{p.hashtag}</p><button type="button" class="btn mt-auto !rounded-full bg-deep text-white hover:bg-brand" data-apri={p.id} data-apri-scorri>Sfogli il post</button></div></article>)}
+        </div>
+      </div>
+    </section>
+
+    <!-- PIANO -->
+    <section class="px-4 py-16 sm:px-8 sm:py-24" data-piano>
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div><h2 class="font-head text-[2.2rem] font-bold leading-tight text-deep sm:text-[3rem]" data-sale>Il primo mese.</h2><p class="mt-3 max-w-2xl text-[16.5px] text-ink/80">Tre contenuti a settimana: un carosello che spiega, un reel breve, un contenuto di fiducia.</p></div>
+          <div class="grid grid-cols-4 gap-1 rounded-full bg-surface p-1" role="tablist" aria-label="Settimane">{settimane.map((s, i) => <button type="button" role="tab" id={`sett-${s}`} aria-controls="piano-pannello" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="sett-tab rounded-full px-4 py-2 text-[14px] font-semibold" data-sett={s}>Sett. {s}</button>)}</div>
+        </div>
+        <div id="piano-pannello" role="tabpanel" aria-labelledby="sett-1" class="mt-8 grid gap-4 md:grid-cols-3">
+          {piano.map((p) => <article class="rounded-[22px] p-6 ring-1 ring-line" data-voce-sett={p.sett} hidden={p.sett !== 1}><p class="flex items-center justify-between text-[12.5px] font-semibold uppercase tracking-[0.14em]"><span class="text-muted">{p.giorno}</span><span class="rounded-full bg-surface px-2.5 py-1 text-brand">{p.formato}</span></p><h3 class="mt-3 font-head text-[1.35rem] font-bold leading-snug text-deep">{p.titolo}</h3>{post.some((q) => q.titolo === p.titolo) && <button type="button" class="mt-3 text-[14px] font-semibold text-brand hover:underline" data-apri={post.find((q) => q.titolo === p.titolo).id} data-apri-scorri>Già pronto: lo sfogli</button>}</article>)}
+        </div>
+      </div>
+    </section>
+
+    <!-- PERCHE -->
+    <section class="bg-deep px-4 py-16 text-deep-ink sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-4"><img src={foto.ritratto} alt={`${m.titolo} ${m.nome}`} width="800" height="1000" loading="lazy" class="mx-auto max-h-[460px] w-auto rounded-[24px] bg-white/5" /></div>
+        <div class="lg:col-span-8">
+          <h2 class="font-head text-[2.2rem] font-bold leading-tight text-white sm:text-[2.8rem]" data-sale>Perché funziona per Lei.</h2>
+          <div class="mt-8 grid gap-4 sm:grid-cols-3">{(x.perche as string[][]).map(([t, d]) => <div class="rounded-[22px] bg-white/[0.06] p-5"><h3 class="font-head text-[1.2rem] font-bold text-white">{t}</h3><p class="mt-2 text-[14.5px] leading-relaxed">{d}</p></div>)}</div>
+          <p class="mt-8 text-[14px]">Sito attuale: <a href={x.sito} target="_blank" rel="noopener" class="font-semibold text-white underline">{x.sito.replace('https://', '')}</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white px-4 py-10 text-[13px] text-muted sm:px-8">
+    <div class="mx-auto max-w-7xl space-y-2">
+      <p class="flex items-start gap-2"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="mt-0.5 h-3.5 w-3.5" /> {x.nota}</p>
+      <p>Anteprima non ufficiale realizzata da Pragma Solutions, Torino. {x.repertorio}</p>
+    </div>
+  </footer>
+
+  <script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    type Slide = { tipo: string; titolo: string; sotto?: string; testo?: string; punti?: string[]; img?: string };
+    const tel = document.querySelector<HTMLElement>('[data-telefono]')!;
+    const POST = JSON.parse(tel.dataset.post!) as { id: string; titolo: string; slides: Slide[]; didascalia: string; hashtag: string }[];
+    const FOTO = JSON.parse(tel.dataset.foto!) as Record<string, string>;
+    const vProf = tel.querySelector<HTMLElement>('[data-vista="profilo"]')!, vPost = tel.querySelector<HTMLElement>('[data-vista="post"]')!;
+    const slideEl = tel.querySelector<HTMLElement>('[data-slide]')!, puntini = tel.querySelector<HTMLElement>('[data-puntini]')!;
+    let cur: (typeof POST)[number] | null = null, i = 0;
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+    const disegna = (s: Slide) => {
+      if (s.tipo === 'copertina') return `<img src="${FOTO[s.img!]}" alt="" class="absolute inset-0 h-full w-full object-cover"><div class="absolute inset-x-3 bottom-3 rounded-2xl bg-white p-4"><p class="font-head text-[1.35rem] font-bold leading-tight text-deep">${esc(s.titolo)}</p><p class="mt-1 text-[12.5px] font-semibold text-brand">${esc(s.sotto || '')}</p></div>`;
+      if (s.tipo === 'lista') return `<div class="flex h-full flex-col justify-center bg-brand p-6 text-white"><p class="font-head text-[1.4rem] font-bold leading-tight">${esc(s.titolo)}</p><ul class="mt-4 space-y-2">${s.punti!.map((p) => `<li class="flex gap-2 text-[13.5px] leading-snug"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-white"></span>${esc(p)}</li>`).join('')}</ul></div>`;
+      if (s.tipo === 'recensione') return `<div class="flex h-full flex-col justify-center bg-surface p-6"><p class="text-brand2 text-[15px]">★★★★★</p><p class="mt-3 font-head text-[1.25rem] font-bold leading-snug text-deep">${esc(s.titolo)}</p><p class="mt-3 text-[12.5px] text-muted">${esc(s.testo || '')}</p></div>`;
+      if (s.tipo === 'cta') return `<div class="flex h-full flex-col justify-end bg-deep p-6 text-white"><p class="font-head text-[1.5rem] font-bold leading-tight">${esc(s.titolo)}</p><p class="mt-3 text-[13.5px] leading-snug text-white/85">${esc(s.testo || '')}</p></div>`;
+      return `<div class="flex h-full flex-col justify-center bg-white p-6"><p class="font-head text-[1.35rem] font-bold leading-tight text-deep">${esc(s.titolo)}</p><p class="mt-3 text-[13.5px] leading-relaxed text-ink">${esc(s.testo || '')}</p></div>`;
+    };
+    const mostra = (k: number) => {
+      if (!cur) return;
+      i = Math.max(0, Math.min(cur.slides.length - 1, k));
+      slideEl.innerHTML = disegna(cur.slides[i]);
+      tel.querySelector('[data-contatore]')!.textContent = `${i + 1}/${cur.slides.length}`;
+      puntini.querySelectorAll('span').forEach((p, j) => p.classList.toggle('attivo', j === i));
+      tel.querySelector<HTMLButtonElement>('[data-prec]')!.disabled = i === 0;
+      tel.querySelector<HTMLButtonElement>('[data-succ]')!.disabled = i === cur.slides.length - 1;
+      tel.dataset.slide = String(i);
+      if (!ridotto) gsap.fromTo(slideEl.firstElementChild, { opacity: 0.4, x: 12 }, { opacity: 1, x: 0, duration: 0.3 });
+    };
+    const apri = (id: string, fuoco = true) => {
+      cur = POST.find((p) => p.id === id)!;
+      vProf.hidden = true; vPost.hidden = false;
+      puntini.innerHTML = cur.slides.map(() => '<span class="puntino"></span>').join('');
+      tel.querySelector('[data-didascalia]')!.textContent = cur.didascalia; tel.querySelector('[data-hashtag]')!.textContent = cur.hashtag;
+      tel.dataset.aperto = id; mostra(0);
+      if (fuoco) tel.querySelector<HTMLElement>('[data-carosello]')!.focus({ preventScroll: true });
+    };
+    const chiudi = () => { vPost.hidden = true; vProf.hidden = false; cur = null; delete tel.dataset.aperto; };
+    document.querySelectorAll<HTMLElement>('[data-apri]').forEach((b) => b.addEventListener('click', () => {
+      apri(b.dataset.apri!);
+      if (b.hasAttribute('data-apri-scorri')) { const y = tel.getBoundingClientRect().top + window.scrollY - 120; window.scrollTo({ top: y, behavior: ridotto ? 'auto' : 'smooth' }); }
+    }));
+    tel.querySelector('[data-chiudi]')!.addEventListener('click', chiudi);
+    tel.querySelector('[data-prec]')!.addEventListener('click', () => mostra(i - 1));
+    tel.querySelector('[data-succ]')!.addEventListener('click', () => mostra(i + 1));
+    const car = tel.querySelector<HTMLElement>('[data-carosello]')!;
+    car.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') { e.preventDefault(); mostra(i + 1); } else if (e.key === 'ArrowLeft') { e.preventDefault(); mostra(i - 1); } else if (e.key === 'Escape') chiudi(); });
+    let x0 = 0;
+    car.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    car.addEventListener('touchend', (e) => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) mostra(i + (dx < 0 ? 1 : -1)); });
+
+    // piano
+    const pt = Array.from(document.querySelectorAll<HTMLElement>('[data-sett]'));
+    const sett = (t: HTMLElement) => { pt.forEach((k) => { const s = k === t; k.setAttribute('aria-selected', String(s)); k.tabIndex = s ? 0 : -1; }); document.querySelectorAll<HTMLElement>('[data-voce-sett]').forEach((v) => { v.hidden = v.dataset.voceSett !== t.dataset.sett; }); document.querySelector('#piano-pannello')!.setAttribute('aria-labelledby', t.id); document.querySelector<HTMLElement>('[data-piano]')!.dataset.settimana = t.dataset.sett!; };
+    pt.forEach((t, k) => { t.addEventListener('click', () => sett(t)); t.addEventListener('keydown', (e) => { const key = (e as KeyboardEvent).key; let j = -1; if (key === 'ArrowRight') j = (k + 1) % pt.length; else if (key === 'ArrowLeft') j = (k - 1 + pt.length) % pt.length; if (j >= 0) { e.preventDefault(); pt[j].focus(); sett(pt[j]); } }); });
+
+    if (!ridotto) {
+      gsap.from('[data-entra]', { y: 24, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out' });
+      gsap.from('[data-telefono]', { y: 60, opacity: 0, rotate: 3, duration: 1.1, delay: 0.3, ease: 'power3.out' });
+      gsap.from('.cella', { scale: 0.8, opacity: 0, duration: 0.5, stagger: 0.05, delay: 0.9 });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 30, opacity: 0, duration: 0.8, scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      // apre da solo il primo post una volta, se l'utente non ha toccato nulla
+      window.setTimeout(() => { if (!tel.dataset.aperto && !tel.dataset.toccato) { apri(POST[0].id, false); let k = 0; const t = window.setInterval(() => { if (!cur || tel.dataset.toccato || ++k >= POST[0].slides.length) { window.clearInterval(t); return; } mostra(k); }, 1800); } }, 2600);
+      tel.addEventListener('pointerdown', () => { tel.dataset.toccato = '1'; });
+      document.querySelectorAll('[data-apri]').forEach((b) => b.addEventListener('click', () => { tel.dataset.toccato = '1'; }));
+    }
+  </script>
+</Base>

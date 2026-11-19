@@ -1,0 +1,282 @@
+{
+  "slug": "vasario-55dx",
+  "layout": "social",
+  "titolo": "Dott.",
+  "nome": "Gabriele Vasario",
+  "specialita": "Ortopedico, chirurgia della spalla e del gomito",
+  "firma": "Ortopedico della spalla",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Gabriele Vasario · Proposta Instagram di Pragma Solutions",
+    "description": "Anteprima di un profilo Instagram per il Dott. Gabriele Vasario, ortopedico della spalla a Torino: tre post pronti e il piano del primo mese."
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F1F3F8",
+      "ink": "#101828",
+      "muted": "#5B6475",
+      "line": "#DDE2EC",
+      "brand": "#1F2E5C",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#B7273A",
+      "deep": "#121B38",
+      "deep-ink": "#C3CBE0"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Figtree:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Libre Baskerville",
+    "fontTesti": "Figtree",
+    "fontUi": "Figtree",
+    "favicon": "/vasario-55dx/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "foto": {
+    "ritratto": "/vasario-55dx/img/ritratto.webp",
+    "volto": "/vasario-55dx/img/volto.webp",
+    "artroscopia": "/vasario-55dx/img/artroscopia.webp",
+    "strutture": "/vasario-55dx/img/strutture.webp",
+    "instabilita": "/vasario-55dx/img/rep-instabilita.webp",
+    "spalla": "/vasario-55dx/img/rep-spalla.webp"
+  },
+  "logo": "/vasario-55dx/img/logo.png",
+  "sito": "https://www.gabrielevasario.com/it/",
+  "intro": {
+    "titolo": "Dottore, ecco come potrebbe essere il Suo Instagram.",
+    "testo": "Il Suo sito è già ottimo: guide, FAQ, strumenti per i pazienti, 118 recensioni Google con 4,9 su 5. Manca il canale dove i pazienti passano ogni giorno. Abbiamo preparato tre post con i Suoi contenuti e il piano del primo mese."
+  },
+  "dati": [
+    [
+      "4,9 su 5",
+      "118 recensioni Google"
+    ],
+    [
+      "dal 2006",
+      "dedicato alla spalla"
+    ],
+    [
+      "0",
+      "post su Instagram oggi"
+    ]
+  ],
+  "profilo": {
+    "handle": "dr.gabrielevasario",
+    "nome": "Dr. Gabriele Vasario · Ortopedico della spalla",
+    "bio": [
+      "Chirurgia artroscopica e protesica della spalla",
+      "Humanitas Cellini · Clinica Fornaca · Torino",
+      "Guide per i pazienti e prenotazioni ⤵"
+    ],
+    "link": "gabrielevasario.com",
+    "evidenza": [
+      "Prenota",
+      "Cuffia",
+      "Lussazioni",
+      "FAQ",
+      "Recensioni"
+    ]
+  },
+  "post": [
+    {
+      "id": "latarjet",
+      "titolo": "Latarjet o Bankart?",
+      "tipo": "Carosello · 5 immagini",
+      "slides": [
+        {
+          "tipo": "copertina",
+          "titolo": "Latarjet o Bankart?",
+          "sotto": "Dopo una lussazione di spalla: come si sceglie l'intervento",
+          "img": "instabilita"
+        },
+        {
+          "tipo": "testo",
+          "titolo": "La spalla che esce",
+          "testo": "Dopo la prima lussazione, soprattutto nei giovani sportivi, il rischio che la spalla esca di nuovo è alto. Se l'instabilità si ripete, si valuta l'intervento."
+        },
+        {
+          "tipo": "lista",
+          "titolo": "Bankart artroscopica",
+          "punti": [
+            "Ripara il labbro e i legamenti staccati",
+            "Mini-invasiva, in artroscopia",
+            "Indicata se l'osso della glena è integro"
+          ]
+        },
+        {
+          "tipo": "lista",
+          "titolo": "Latarjet",
+          "punti": [
+            "Trasferisce un piccolo blocco osseo sulla glena",
+            "Indicata se manca osso o dopo più recidive",
+            "Spesso preferita negli sport di contatto"
+          ]
+        },
+        {
+          "tipo": "cta",
+          "titolo": "La scelta dipende da osso, sport ed età.",
+          "testo": "Si decide dopo la visita e una TAC o risonanza. Link in bio per prenotare."
+        }
+      ],
+      "didascalia": "Bankart o Latarjet? Non esiste l'intervento migliore in assoluto: esiste quello giusto per la Sua spalla. Conta quanto osso manca, che sport pratica, quante volte la spalla è uscita. Ne parliamo in visita, con gli esami davanti.",
+      "hashtag": "#spalla #lussazione #ortopedia #torino"
+    },
+    {
+      "id": "calcificazioni",
+      "titolo": "Calcificazioni della spalla",
+      "tipo": "Carosello · 4 immagini",
+      "slides": [
+        {
+          "tipo": "copertina",
+          "titolo": "Calcificazioni della spalla",
+          "sotto": "Il dolore che sveglia di notte",
+          "img": "spalla"
+        },
+        {
+          "tipo": "testo",
+          "titolo": "Che cosa sono",
+          "testo": "Depositi di calcio dentro i tendini della cuffia dei rotatori. Possono restare silenziosi per anni e poi dare un dolore acuto, forte soprattutto di notte."
+        },
+        {
+          "tipo": "lista",
+          "titolo": "Come si curano",
+          "punti": [
+            "Terapia medica e fisioterapia nella fase acuta",
+            "Onde d'urto",
+            "Lavaggio ecoguidato della calcificazione",
+            "Artroscopia solo nei casi resistenti"
+          ]
+        },
+        {
+          "tipo": "cta",
+          "titolo": "Quasi sempre senza bisturi.",
+          "testo": "Ecografia e radiografia dicono che tipo di calcificazione è. Link in bio."
+        }
+      ],
+      "didascalia": "La tendinopatia calcifica fa male, a volte moltissimo, ma nella maggior parte dei casi si risolve senza intervento. Il primo passo è capire in che fase si trova la calcificazione.",
+      "hashtag": "#tendinopaticalcifica #spalla #ondedurto"
+    },
+    {
+      "id": "nuotatore",
+      "titolo": "Spalla del nuotatore",
+      "tipo": "Carosello · 4 immagini",
+      "slides": [
+        {
+          "tipo": "copertina",
+          "titolo": "Spalla del nuotatore",
+          "sotto": "Quando l'allenamento diventa dolore",
+          "img": "artroscopia"
+        },
+        {
+          "tipo": "testo",
+          "titolo": "Migliaia di bracciate",
+          "testo": "Il nuotatore ripete lo stesso gesto migliaia di volte. Tendini della cuffia, capsula e muscoli della scapola si sovraccaricano: compare un dolore davanti o sopra la spalla."
+        },
+        {
+          "tipo": "lista",
+          "titolo": "Per prevenirlo",
+          "punti": [
+            "Rinforzo della cuffia dei rotatori",
+            "Controllo della scapola",
+            "Tecnica di bracciata corretta",
+            "Carichi di allenamento graduali"
+          ]
+        },
+        {
+          "tipo": "recensione",
+          "titolo": "«Mi ha diagnosticato la patologia giusta dove altri avevano sbagliato.»",
+          "testo": "Fabrizio Z. · recensione Google"
+        }
+      ],
+      "didascalia": "Dolore alla spalla dopo l'allenamento in piscina? Spesso è sovraccarico, a volte una microinstabilità. Riconoscerlo presto permette di tornare in acqua senza fermarsi a lungo.",
+      "hashtag": "#nuoto #spalla #medicinadellosport"
+    }
+  ],
+  "piano": [
+    {
+      "sett": 1,
+      "giorno": "Lunedì",
+      "formato": "Carosello",
+      "titolo": "Latarjet o Bankart?"
+    },
+    {
+      "sett": 1,
+      "giorno": "Mercoledì",
+      "formato": "Reel",
+      "titolo": "Il test della cuffia in 30 secondi"
+    },
+    {
+      "sett": 1,
+      "giorno": "Venerdì",
+      "formato": "Recensione",
+      "titolo": "La voce di un paziente"
+    },
+    {
+      "sett": 2,
+      "giorno": "Lunedì",
+      "formato": "Carosello",
+      "titolo": "Calcificazioni della spalla"
+    },
+    {
+      "sett": 2,
+      "giorno": "Mercoledì",
+      "formato": "Reel",
+      "titolo": "Spalla congelata: le tre fasi"
+    },
+    {
+      "sett": 2,
+      "giorno": "Venerdì",
+      "formato": "Domanda",
+      "titolo": "FAQ: quando serve la risonanza?"
+    },
+    {
+      "sett": 3,
+      "giorno": "Lunedì",
+      "formato": "Carosello",
+      "titolo": "Spalla del nuotatore"
+    },
+    {
+      "sett": 3,
+      "giorno": "Mercoledì",
+      "formato": "Reel",
+      "titolo": "Dietro le quinte: la sala di artroscopia"
+    },
+    {
+      "sett": 3,
+      "giorno": "Venerdì",
+      "formato": "Guida",
+      "titolo": "Dopo l'intervento: il tutore"
+    },
+    {
+      "sett": 4,
+      "giorno": "Lunedì",
+      "formato": "Carosello",
+      "titolo": "Protesi inversa: per chi è"
+    },
+    {
+      "sett": 4,
+      "giorno": "Mercoledì",
+      "formato": "Reel",
+      "titolo": "Il capo lungo del bicipite"
+    },
+    {
+      "sett": 4,
+      "giorno": "Venerdì",
+      "formato": "Recensione",
+      "titolo": "4,9 su 5: grazie"
+    }
+  ],
+  "perche": [
+    [
+      "I contenuti ci sono già",
+      "Guide, FAQ e schede delle patologie del Suo sito diventano post e reel, senza riscriverli da zero."
+    ],
+    [
+      "Le recensioni parlano per Lei",
+      "118 recensioni Google con 4,9 su 5: le più belle diventano post, sempre alla lettera."
+    ],
+    [
+      "Chi cerca «spalla» scorre",
+      "Sportivi e giovani pazienti cercano il medico anche su Instagram: il profilo porta al Suo sito e alla prenotazione."
+    ]
+  ],
+  "nota": "Proposta di Pragma Solutions: handle, testi e grafiche sono esempi preparati per questa anteprima. I contenuti medici vanno rivisti e approvati dal Dottore prima della pubblicazione."
+}

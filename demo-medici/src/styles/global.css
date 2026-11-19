@@ -685,3 +685,22 @@ html { scroll-behavior: smooth; }
   .stile-distretto .campo, .stile-distretto .slot, .stile-distretto .giorno { border-radius: 14px; }
   .stile-distretto .btn { border-radius: 999px; }
 }
+
+/* Layout "social": telefono con profilo e caroselli */
+@layer components {
+  .telefono { width: min(100%, 360px); border-radius: 46px; background: #0b0b0c; padding: 12px; box-shadow: 0 40px 80px -40px rgba(0,0,0,.55), inset 0 0 0 2px #2a2a2c; }
+  .telefono__schermo { min-height: 640px; overflow: hidden; border-radius: 36px; background: #fff; padding-bottom: 14px; }
+  .anello-storia { border-radius: 999px; padding: 3px; background: var(--c-brand2); }
+  .anello-storia img { border: 3px solid #fff; }
+  .cella { cursor: pointer; }
+  .cella--piano { cursor: default; background: var(--c-surface); }
+  .cella:focus-visible { outline: 3px solid var(--c-brand2); outline-offset: -3px; }
+  .freccia { position: absolute; top: 50%; translate: 0 -50%; display: grid; place-items: center; height: 28px; width: 28px; border-radius: 999px; background: rgb(255 255 255 / .9); color: #111; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+  .freccia:disabled { opacity: 0; pointer-events: none; }
+  .freccia--sx { left: 8px; } .freccia--dx { right: 8px; }
+  .puntino { height: 6px; width: 6px; border-radius: 999px; background: #c7c7cc; transition: background-color .2s; }
+  .puntino.attivo { background: var(--c-brand); }
+  [data-carosello]:focus-visible { outline: 3px solid var(--c-brand2); outline-offset: 2px; }
+  .sett-tab { color: var(--c-muted); transition: background-color .2s, color .2s; }
+  .sett-tab[aria-selected="true"] { background: var(--c-deep); color: #fff; }
+}
