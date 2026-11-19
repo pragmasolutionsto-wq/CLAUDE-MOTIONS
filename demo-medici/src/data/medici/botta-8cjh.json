@@ -1,0 +1,1109 @@
+{
+  "slug": "botta-8cjh",
+  "layout": "donna",
+  "sitoOrigine": "https://www.danielabotta-ginecologa.it/",
+  "titolo": "Dott.ssa",
+  "nome": "Daniela Botta",
+  "specialita": "Ginecologa, esperta in menopausa e procreazione assistita",
+  "firma": "Ginecologa",
+  "citta": "Torino, Moncalieri, Pinerolo e Bra",
+  "meta": {
+    "title": "Dott.ssa Daniela Botta · Ginecologa a Torino: menopausa, procreazione assistita, social freezing",
+    "description": "Ginecologa dal 1986 a Torino, Moncalieri, Pinerolo e Bra: menopausa e ormoni bioidentici, PMA di 1°-2°-3° livello, social freezing, ovaio policistico, laser vulvo-vaginale. Sette sedi, prenotazione diretta."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "",
+    "logoAlt": "Dott.ssa Daniela Botta"
+  },
+  "foto": {
+    "ritratto": "/botta-8cjh/img/ritratto.webp",
+    "ritrattoAlt": "La Dott.ssa Daniela Botta",
+    "volto": "/botta-8cjh/img/volto.webp",
+    "studio": "/botta-8cjh/img/studio.webp",
+    "video": "/botta-8cjh/img/video.webp",
+    "laser": "/botta-8cjh/img/rep-laser.webp",
+    "freezing": "/botta-8cjh/img/rep-freezing.webp",
+    "menopausa": "/botta-8cjh/img/rep-menopausa.webp",
+    "donna": "/botta-8cjh/img/rep-donna.webp",
+    "passeggiata": "/botta-8cjh/img/rep-passeggiata.webp"
+  },
+  "hero": {
+    "eyebrow": "Ginecologa · Torino, Moncalieri, Pinerolo, Bra",
+    "titolo": "Medicina della donna, da una donna, per le donne.",
+    "testo": "Prendere in carico la donna, prima ancora della paziente, con tutto il suo bagaglio di vita: ascoltarla e aiutarla a mantenersi in forma, sana e felice. Lo faccio dal 1986, tra menopausa, ormoni e procreazione assistita.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami"
+  },
+  "numeri": [
+    {
+      "valore": 1986,
+      "testo": "visito come ginecologa",
+      "pre": "dal"
+    },
+    {
+      "valore": 52,
+      "testo": "lavori scientifici pubblicati"
+    },
+    {
+      "valore": 7,
+      "testo": "sedi tra Torino e provincia"
+    }
+  ],
+  "areeDonna": [
+    {
+      "id": "menopausa",
+      "nome": "Menopausa",
+      "img": "/botta-8cjh/img/rep-menopausa.webp",
+      "titolo": "Premenopausa e menopausa",
+      "testo": "Sbalzi d'umore, cicli che cambiano, vampate, sonno disturbato, peso che sale: li curo con terapie ormonali, anche con ormoni bioidentici, o con alternative non ormonali quando gli ormoni non sono indicati o non sono graditi.",
+      "voci": [
+        "Terapia ormonale e ormoni bioidentici",
+        "Terapie alternative e naturali",
+        "Secchezza vaginale e rapporti dolorosi",
+        "Prevenzione dell'osteoporosi e screening"
+      ],
+      "motivo": "menopausa",
+      "link": "/blog/menopausa-terapie"
+    },
+    {
+      "id": "pma",
+      "nome": "Procreazione assistita",
+      "img": "/botta-8cjh/img/rep-ecografia.webp",
+      "titolo": "PMA di 1°, 2° e 3° livello",
+      "testo": "Valuto la coppia e scelgo il trattamento partendo dal più semplice: correzione degli squilibri ormonali, induzione dell'ovulazione, inseminazione, fino alla FIVET e alla ICSI, omologa ed eterologa, al centro A.B.R.A. di Bra.",
+      "voci": [
+        "Studio della fertilità di coppia",
+        "Induzione dell'ovulazione e inseminazione",
+        "FIVET e ICSI",
+        "Fecondazione eterologa"
+      ],
+      "motivo": "pma",
+      "link": ""
+    },
+    {
+      "id": "freezing",
+      "nome": "Social freezing",
+      "img": "/botta-8cjh/img/rep-freezing.webp",
+      "titolo": "Conservare la fertilità per il futuro",
+      "testo": "Per chi desidera un figlio ma non adesso, o deve affrontare cure che danneggiano le ovaie: congelare gli ovociti quando la fertilità è ancora alta, per usarli più avanti.",
+      "voci": [
+        "Valutazione della riserva ovarica (AMH)",
+        "Stimolazione e prelievo degli ovociti",
+        "Endometriosi e preservazione prima delle terapie oncologiche"
+      ],
+      "motivo": "freezing",
+      "link": "/blog/social-freezing-eta"
+    },
+    {
+      "id": "endocrinologia",
+      "nome": "Ormoni e nutrizione",
+      "img": "/botta-8cjh/img/rep-endocrinologia.webp",
+      "titolo": "Ginecologia endocrinologica",
+      "testo": "Cicli irregolari o assenti, ovaio policistico, acne e peli in eccesso, problemi di tiroide che si riflettono sul ciclo. Con un'attenzione particolare all'alimentazione e alla composizione corporea.",
+      "voci": [
+        "Ovaio policistico (PCOS) e insulino-resistenza",
+        "Irregolarità del ciclo",
+        "Diete personalizzate",
+        "Emicrania legata agli ormoni"
+      ],
+      "motivo": "ormoni",
+      "link": "/blog/ovaio-policistico"
+    },
+    {
+      "id": "laser",
+      "nome": "Laser vulvo-vaginale",
+      "img": "/botta-8cjh/img/rep-laser.webp",
+      "titolo": "Ringiovanimento vulvo-vaginale",
+      "testo": "Laser CO2 Monnalisa Touch per secchezza, bruciore e dolore nei rapporti, anche nelle donne operate di tumore al seno che non possono assumere ormoni. Da 3 a 6 sedute mensili.",
+      "voci": [
+        "Secchezza e atrofia vulvo-vaginale",
+        "Rapporti dolorosi",
+        "Esiti di episiotomia"
+      ],
+      "motivo": "laser",
+      "link": "/articolo"
+    }
+  ],
+  "motivi": [
+    {
+      "id": "ginecologica",
+      "nome": "Visita ginecologica",
+      "frase": "una visita ginecologica"
+    },
+    {
+      "id": "menopausa",
+      "nome": "Menopausa",
+      "frase": "una visita per la menopausa"
+    },
+    {
+      "id": "pma",
+      "nome": "Fertilità e PMA",
+      "frase": "una visita per la fertilità di coppia"
+    },
+    {
+      "id": "freezing",
+      "nome": "Social freezing",
+      "frase": "una visita per il social freezing"
+    },
+    {
+      "id": "ormoni",
+      "nome": "Ciclo e ormoni",
+      "frase": "una visita di ginecologia endocrinologica"
+    },
+    {
+      "id": "laser",
+      "nome": "Laser vulvo-vaginale",
+      "frase": "una valutazione per il laser vulvo-vaginale"
+    },
+    {
+      "id": "gravidanza",
+      "nome": "Gravidanza",
+      "frase": "una visita ostetrica"
+    }
+  ],
+  "sintomi": [
+    {
+      "id": "ciclo",
+      "nome": "Il ciclo è cambiato",
+      "dett": "più breve, più lungo, più abbondante o irregolare",
+      "consiglio": "È spesso il primo segno della premenopausa: un inquadramento ormonale ora permette di regolarizzare gli squilibri e impostare la prevenzione."
+    },
+    {
+      "id": "vampate",
+      "nome": "Vampate e sudorazioni",
+      "dett": "anche di notte",
+      "consiglio": "Sono il disturbo che risponde meglio alla terapia ormonale, anche con ormoni bioidentici; se gli ormoni non sono indicati, esistono alternative non ormonali."
+    },
+    {
+      "id": "sonno",
+      "nome": "Dormo male, sono più nervosa",
+      "dett": "sonno, umore, concentrazione",
+      "consiglio": "Sonno e umore risentono molto del calo ormonale: spesso migliorano insieme alle vampate, con la terapia giusta."
+    },
+    {
+      "id": "secchezza",
+      "nome": "Secchezza o rapporti dolorosi",
+      "dett": "bruciore, fastidio, calo del desiderio",
+      "consiglio": "Si cura con terapie locali, ormonali o non ormonali, o con il laser vulvo-vaginale, che non usa ormoni."
+    },
+    {
+      "id": "peso",
+      "nome": "Il peso sale",
+      "dett": "soprattutto sull'addome",
+      "consiglio": "Una dieta personalizzata, l'attività fisica e, se indicata, la terapia ormonale aiutano a controllare la redistribuzione del grasso."
+    },
+    {
+      "id": "testa",
+      "nome": "Mal di testa legato al ciclo",
+      "dett": "emicrania che va e viene con gli ormoni",
+      "consiglio": "L'emicrania femminile può avere una componente ormonale: va valutata anche dal ginecologo, insieme al neurologo."
+    },
+    {
+      "id": "urine",
+      "nome": "Piccole perdite di urina",
+      "dett": "con la tosse o lo sforzo",
+      "consiglio": "Esistono trattamenti medici e, quando serve, chirurgici mirati: non è un disturbo da sopportare."
+    }
+  ],
+  "fertilita": {
+    "freezing": [
+      {
+        "da": 25,
+        "a": 30,
+        "titolo": "Fertilità al massimo",
+        "testo": "È la fascia in cui la fertilità è più alta. Se pensa di rimandare la maternità, è il momento ideale per informarsi e fare un primo controllo della riserva ovarica (AMH ed ecografia)."
+      },
+      {
+        "da": 31,
+        "a": 34,
+        "titolo": "L'età migliore per congelare",
+        "testo": "Gli ovociti sono ancora numerosi e di buona qualità. Con circa 15 ovociti congelati prima dei 35 anni, la probabilità di successo stimata è intorno al 60%."
+      },
+      {
+        "da": 35,
+        "a": 38,
+        "titolo": "Ancora possibile, con più ovociti",
+        "testo": "Dopo i 35 anni la probabilità stimata con 15 ovociti scende a circa il 38%. Spesso conviene programmare una seconda stimolazione per avere più ovociti a disposizione."
+      },
+      {
+        "da": 39,
+        "a": 42,
+        "titolo": "Da valutare caso per caso",
+        "testo": "Le possibilità si riducono sensibilmente: la decisione si prende dopo gli esami della riserva ovarica, parlando apertamente delle probabilità reali."
+      },
+      {
+        "da": 43,
+        "a": 45,
+        "titolo": "Risultati molto limitati",
+        "testo": "Il congelamento dei propri ovociti offre possibilità molto basse. In visita valutiamo insieme le alternative, compresa la fecondazione eterologa."
+      }
+    ],
+    "ricerca": "Conviene rivolgersi a uno specialista della fertilità se la gravidanza non arriva dopo un anno di tentativi. Ma se si hanno più di 35 anni, o se l'AMH è inferiore a 1,5, non conviene aspettare più di 3-6 mesi."
+  },
+  "bioTappe": [
+    {
+      "anno": "1982",
+      "titolo": "Laurea a Torino",
+      "testo": "Medicina e Chirurgia con 110/110, con una tesi sui tumori ovarici."
+    },
+    {
+      "anno": "1987",
+      "titolo": "Specializzazione a Milano",
+      "testo": "Ostetricia e Ginecologia, con una tesi sul trattamento della sterilità da ipogonadismo ipotalamico."
+    },
+    {
+      "anno": "1986-1993",
+      "titolo": "Ricerca al Sant'Anna",
+      "testo": "Due borse di studio nel reparto di Ginecologia Endocrinologica dell'Ospedale Sant'Anna di Torino: menopausa, endocrinologia ginecologica e sterilità di coppia. 52 lavori pubblicati."
+    },
+    {
+      "anno": "1991-2021",
+      "titolo": "Trent'anni nel pubblico",
+      "testo": "Specialista ambulatoriale convenzionata in Ostetricia e Ginecologia della Regione Piemonte; dal 2008 al 2021 al Centro di Procreazione Assistita dell'Ospedale Maria Vittoria di Torino."
+    },
+    {
+      "anno": "Dal 2004",
+      "titolo": "La PMA a Bra",
+      "testo": "Ginecologia e procreazione assistita di 1°, 2° e 3° livello alla Casa di Cura Città di Bra, oggi al centro A.B.R.A."
+    }
+  ],
+  "relazioni": [
+    "2007 · «Celiachia, BMI e loro influenza sulle tecniche di PMA»",
+    "2010 · «La nutrizione, il corretto apporto calorico alla base dei processi riproduttivi» (Save Fertility, Torino)",
+    "2014 · «Inquadramento e percorso diagnostico terapeutico della coppia infertile» (ASL To2)",
+    "2016 · relatrice al convegno Save Fertility"
+  ],
+  "sediDati": [
+    {
+      "id": "curtatone",
+      "citta": "Torino",
+      "zona": "Gran Madre",
+      "nome": "Studio medico Gran Madre",
+      "indirizzo": "Via Curtatone 18/A",
+      "telefono": "011 538236",
+      "telefono2": "011 542522",
+      "lat": 45.0606,
+      "lng": 7.6998,
+      "principale": true,
+      "frase": "lo studio di via Curtatone 18/A, Torino",
+      "nota": "Il mio studio in città, a due passi dalla Gran Madre.",
+      "cap": "",
+      "tipo": "Studio",
+      "mappa": true
+    },
+    {
+      "id": "santacaterina",
+      "citta": "Torino",
+      "zona": "Gran Madre",
+      "nome": "Clinica Santa Caterina da Siena",
+      "indirizzo": "Via Villa della Regina 19",
+      "telefono": "011 8199211",
+      "lat": 45.0589,
+      "lng": 7.7043,
+      "principale": false,
+      "frase": "la Clinica Santa Caterina da Siena, Torino",
+      "nota": "Casa di cura in collina, zona Gran Madre.",
+      "cap": "",
+      "tipo": "Studio",
+      "mappa": true
+    },
+    {
+      "id": "dedamed",
+      "citta": "Torino",
+      "zona": "Crocetta",
+      "nome": "Dedamed",
+      "indirizzo": "Via La Marmora 35",
+      "telefono": "011 5682237",
+      "lat": 45.0577,
+      "lng": 7.6721,
+      "principale": false,
+      "frase": "Dedamed, via La Marmora 35, Torino",
+      "nota": "Centro medico in Crocetta.",
+      "cap": "",
+      "tipo": "Studio",
+      "mappa": true
+    },
+    {
+      "id": "cfr",
+      "citta": "Moncalieri",
+      "zona": "",
+      "nome": "Studio medico C.F.R.",
+      "indirizzo": "Via Bruno Buozzi 19",
+      "telefono": "011 6407788",
+      "lat": 44.9986,
+      "lng": 7.6862,
+      "principale": false,
+      "frase": "lo Studio C.F.R. di Moncalieri",
+      "nota": "Moncalieri centro.",
+      "cap": "10024",
+      "tipo": "Studio",
+      "mappa": true
+    },
+    {
+      "id": "sanfrancesco",
+      "citta": "Pinerolo",
+      "zona": "",
+      "nome": "Studio medico San Francesco",
+      "indirizzo": "Via Bogliette 3/c",
+      "telefono": "0121 396464",
+      "lat": 44.892,
+      "lng": 7.341,
+      "principale": false,
+      "frase": "lo Studio San Francesco di Pinerolo",
+      "nota": "Per chi arriva dal Pinerolese e dalle valli.",
+      "cap": "",
+      "tipo": "Studio",
+      "mappa": true
+    },
+    {
+      "id": "abra",
+      "citta": "Bra",
+      "zona": "",
+      "nome": "A.B.R.A. Centro PMA, Casa di Cura Città di Bra",
+      "indirizzo": "Strada Montenero 1",
+      "telefono": "338 4622384",
+      "lat": 44.702,
+      "lng": 7.867,
+      "principale": false,
+      "pma": true,
+      "frase": "il centro PMA A.B.R.A. della Casa di Cura Città di Bra",
+      "nota": "Centro di procreazione assistita di 1°, 2° e 3° livello.",
+      "cap": "12042",
+      "tipo": "Studio",
+      "mappa": true
+    },
+    {
+      "id": "santachiara",
+      "citta": "Bra",
+      "zona": "",
+      "nome": "Centro Medico Santa Chiara",
+      "indirizzo": "Viale Rimembranze 2",
+      "telefono": "0172 430804",
+      "lat": 44.6995,
+      "lng": 7.853,
+      "principale": false,
+      "frase": "il Centro Medico Santa Chiara di Bra",
+      "nota": "Bra centro.",
+      "cap": "12042",
+      "tipo": "Studio",
+      "mappa": true
+    }
+  ],
+  "video": {
+    "id": "J3sl4SdLKK0",
+    "titolo": "Parliamo di menopausa",
+    "testo": "La mia intervista in televisione: cosa cambia in menopausa e quali sono le cure di oggi."
+  },
+  "telDiretto": "336 215065",
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "laser-vulvo-vaginale",
+    "categoria": "Menopausa",
+    "titolo": "Ringiovanimento vulvo-vaginale con il laser: per chi è e come funziona",
+    "img": "/botta-8cjh/img/rep-laser.webp",
+    "tempoLettura": "8 min",
+    "intro": "Secchezza, bruciore, dolore durante i rapporti: sono disturbi molto frequenti dopo la menopausa, ma se ne parla poco, spesso per pudore. Oggi esistono cure efficaci, e tra queste il laser CO2 vulvo-vaginale. Le spiego come funziona, a chi può essere utile e cosa aspettarsi.",
+    "sezioni": [
+      {
+        "titolo": "Un disturbo comune, di cui si parla poco",
+        "paragrafi": [
+          "Con la menopausa gli estrogeni calano, e i tessuti della vulva e della vagina ne risentono: diventano più sottili, meno elastici, meno idratati. Il risultato è una sensazione di secchezza, bruciore, prurito, a volte piccoli fastidi urinari, e soprattutto dolore durante i rapporti, fino a doverli evitare.",
+          "Oggi questo insieme di disturbi ha un nome preciso, sindrome genito-urinaria della menopausa, e riguarda una donna su due dopo i cinquant'anni. Non è qualcosa da sopportare in silenzio: è una condizione medica, e come tale si cura.",
+          "Gli stessi sintomi possono comparire anche prima della menopausa: dopo il parto, durante l'allattamento, o nelle donne operate di tumore al seno che seguono terapie antiestrogeniche."
+        ]
+      },
+      {
+        "titolo": "Come funziona il laser",
+        "paragrafi": [
+          "Il trattamento con laser CO2, come il Monnalisa Touch che utilizzo, agisce con energia luminosa che, attraverso l'effetto del calore, riattiva le cellule del tessuto, i fibroblasti, che producono collagene e acido ialuronico.",
+          "Sono proprio queste cellule a perdere la loro attività quando mancano gli estrogeni. Stimolandole, il tessuto ritrova progressivamente vascolarizzazione, elasticità, idratazione, lubrificazione e spessore, sia nella vulva sia all'ingresso e all'interno della vagina.",
+          "È un trattamento che non usa ormoni: per questo può essere proposto anche alle donne che non possono o non vogliono assumerli."
+        ]
+      },
+      {
+        "titolo": "A chi può essere utile",
+        "paragrafi": [
+          "Il laser vulvo-vaginale può essere indicato in diverse situazioni:"
+        ],
+        "elenco": [
+          "secchezza, bruciore e prurito vulvo-vaginali dopo la menopausa",
+          "dolore o impossibilità ad avere rapporti sessuali",
+          "donne operate di tumore al seno, in terapia antiestrogenica, per le quali gli ormoni sono sconsigliati",
+          "esiti cicatriziali dell'episiotomia dopo il parto",
+          "piccoli disturbi urinari legati all'assottigliamento dei tessuti"
+        ],
+        "chiusura": "Prima di proporlo, faccio sempre una visita ginecologica completa, per escludere altre cause dei sintomi e valutare se il laser è davvero la scelta giusta, da solo o insieme ad altre terapie."
+      },
+      {
+        "titolo": "Come si svolge il trattamento",
+        "paragrafi": [
+          "Il trattamento si esegue in ambulatorio, senza anestesia generale. Un'ora prima si applica una crema anestetica, che rende la seduta ben tollerabile. La seduta dura pochi minuti.",
+          "Si ripete una volta al mese, per un numero di sedute che va in media da tre a sei, a seconda dei casi. La potenza dello strumento viene regolata sulla sensibilità di ogni paziente.",
+          "Nei giorni successivi si può avvertire un lieve fastidio o bruciore, che dura di solito 24-48 ore e si controlla bene con creme lenitive. Si torna subito alle normali attività; per qualche giorno conviene evitare i rapporti e gli sforzi intensi."
+        ]
+      },
+      {
+        "titolo": "Precauzioni",
+        "paragrafi": [
+          "Una controindicazione relativa è un'infezione da herpes genitale in passato: in questo caso si fa una profilassi antivirale nei giorni precedenti il trattamento, e il problema si risolve.",
+          "Il laser non si esegue in presenza di infezioni in atto, lesioni sospette non ancora valutate o in gravidanza. Per questo la visita preliminare è sempre necessaria."
+        ]
+      },
+      {
+        "titolo": "I risultati",
+        "paragrafi": [
+          "Il Centro Laser di Torino presso il quale opero ha trattato, in dieci anni, più di 950 pazienti, con una risoluzione dei sintomi che va dall'80 al 100% a seconda dei casi.",
+          "Al di là dei numeri, quello che vedo è che le donne che avevano dovuto rinunciare ai rapporti per il dolore tornano a sentirsi a proprio agio, recuperando serenità nella vita di coppia. I benefici durano in genere molti mesi; a distanza di tempo si può programmare una seduta di mantenimento."
+        ]
+      },
+      {
+        "titolo": "Le altre possibilità",
+        "paragrafi": [
+          "Il laser non è l'unica cura. A seconda della situazione, si possono usare idratanti e lubrificanti vaginali, terapie ormonali locali a basso dosaggio, oppure una terapia ormonale generale se ci sono anche altri sintomi della menopausa, come le vampate.",
+          "Spesso la soluzione migliore è una combinazione di trattamenti, scelta insieme dopo la visita, in base alla salute, alle preferenze e alle esigenze di ciascuna donna."
+        ]
+      },
+      {
+        "titolo": "Cosa aspettarsi alla prima visita",
+        "paragrafi": [
+          "Alla prima visita raccolgo la storia dei disturbi, le terapie che segue e la storia ginecologica, poi eseguo una visita completa con ecografia. Se il laser è indicato, Le spiego il programma delle sedute e fissiamo la prima. Porti gli esami recenti, in particolare il Pap test o l'HPV test, e, se è stata operata al seno, le indicazioni del Suo oncologo."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso:"
+        ],
+        "elenco": [
+          "Fa male? La maggior parte delle donne avverte solo un modico fastidio, ridotto dalla crema anestetica.",
+          "Quando si vedono i risultati? Spesso già dopo la prima o la seconda seduta; il risultato completo si apprezza alla fine del ciclo.",
+          "Posso farlo se ho avuto un tumore al seno? Sì, è proprio una delle situazioni in cui è più utile, perché non usa ormoni: ne parliamo anche con il Suo oncologo.",
+          "Serve l'impegnativa? No, è una prestazione privata: si prenota direttamente."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ginecologica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "social-freezing-eta",
+      "categoria": "Fertilità",
+      "titolo": "Social freezing: a che età conservare gli ovociti",
+      "img": "/botta-8cjh/img/rep-freezing.webp",
+      "tempoLettura": "8 min",
+      "intro": "«Vorrei un figlio nella mia vita, ma non adesso.» È una frase che sento spesso. Oggi esiste un modo per mettere da parte la propria fertilità quando è ancora al massimo: il social freezing, cioè il congelamento degli ovociti. L'età però conta molto. Ecco cosa sapere.",
+      "sezioni": [
+        {
+          "titolo": "Perché l'età conta",
+          "paragrafi": [
+            "L'età ideale per cercare una gravidanza è fra i 20 e i 35 anni: è la fascia in cui la fertilità è massima e gravidanza e parto, in assenza di problemi di salute, si svolgono di solito senza complicazioni.",
+            "La difficoltà a concepire comincia a manifestarsi già dieci-quindici anni prima della menopausa. Con il passare del tempo diminuiscono sia il numero degli ovociti sia la loro qualità, ed è proprio la qualità a pesare di più sulle possibilità di gravidanza."
+          ]
+        },
+        {
+          "titolo": "Per chi è pensato",
+          "paragrafi": [
+            "Il social freezing può essere una scelta per molte donne:"
+          ],
+          "elenco": [
+            "donne giovani ancora impegnate negli studi o alla ricerca di una stabilità lavorativa",
+            "donne che non hanno ancora un partner con cui condividere un progetto di famiglia",
+            "donne con endometriosi, una malattia che può danneggiare gradualmente il tessuto ovarico sano",
+            "donne che devono affrontare chemioterapia o radioterapia",
+            "donne che devono essere operate alle ovaie",
+            "donne con familiarità per menopausa precoce o con una riserva ovarica che cala presto"
+          ]
+        },
+        {
+          "titolo": "Come si fa",
+          "paragrafi": [
+            "Il percorso dura circa quindici giorni. Si eseguono iniezioni sottocutanee giornaliere di gonadotropine, le stesse sostanze che in natura stimolano la maturazione di un ovocita al mese, ma a dosaggio più alto, per ottenerne possibilmente dieci-quindici.",
+            "Durante la stimolazione si fanno circa tre ecografie a settimana, per scegliere il momento giusto del prelievo. Il prelievo degli ovociti avviene in anestesia, con un'ecografia operativa, in una mattinata di day hospital.",
+            "Subito dopo, gli ovociti vengono valutati in laboratorio e quelli idonei vengono congelati. Possono restare conservati per un tempo indefinito, fino a quando si desidera utilizzarli."
+          ]
+        },
+        {
+          "titolo": "Le probabilità, in numeri",
+          "paragrafi": [
+            "La possibilità di avere un bambino dipende da molti fattori: la qualità del liquido seminale che verrà usato, la salute generale della donna, la recettività dell'utero e, soprattutto, l'età in cui gli ovociti sono stati congelati.",
+            "Gli studi stimano che la conservazione di circa quindici ovociti prima dei 35 anni offra una probabilità di successo intorno al 60%; dopo i 35 anni scende a circa il 38%. Quando il tempo lo consente, si può programmare una seconda stimolazione per aumentare il numero di ovociti disponibili.",
+            "Sono numeri medi: in visita li adattiamo alla Sua situazione, partendo dagli esami della riserva ovarica."
+          ]
+        },
+        {
+          "titolo": "Gli esami prima di decidere",
+          "paragrafi": [
+            "Il primo passo è una visita con ecografia transvaginale, per contare i follicoli presenti nelle ovaie, e un esame del sangue, l'AMH, che dà un'indicazione della riserva ovarica.",
+            "Questi due dati, insieme all'età, ci permettono di stimare quanti ovociti si possono ottenere con una stimolazione e quindi quante possibilità concrete offre il percorso."
+          ]
+        },
+        {
+          "titolo": "Quando utilizzarli",
+          "paragrafi": [
+            "Quando arriverà il momento, gli ovociti verranno scongelati e fecondati in laboratorio con gli spermatozoi del partner. L'embrione ottenuto viene poi trasferito nell'utero dopo pochi giorni di sviluppo, con un procedimento ambulatoriale semplice e indolore, che non richiede anestesia.",
+            "Nei dieci-quindici giorni precedenti, la donna assume estrogeni per preparare l'utero ad accogliere l'embrione, come in un ciclo naturale."
+          ]
+        },
+        {
+          "titolo": "Il mio consiglio",
+          "paragrafi": [
+            "Non aspettare: se sta pensando di rimandare la maternità, ne parli con un ginecologo esperto di fertilità prima dei 35 anni. Anche solo una visita e un esame dell'AMH Le daranno informazioni preziose per decidere con serenità, con o senza congelamento.",
+            "Mi occupo di procreazione assistita da oltre trent'anni, e lavoro presso il centro di PMA della Casa di Cura Città di Bra: posso seguirla in tutto il percorso, dalla prima visita al congelamento."
+          ]
+        },
+        {
+          "titolo": "Endometriosi e terapie oncologiche",
+          "paragrafi": [
+            "Per alcune donne la conservazione degli ovociti non è una scelta legata ai tempi della vita, ma una necessità medica. L'endometriosi, presente nel 10-15% delle donne in età fertile, è una malattia progressiva che può distruggere gradualmente il tessuto ovarico sano: conservare gli ovociti prima che la riserva si riduca può fare la differenza.",
+            "Lo stesso vale per le donne che devono affrontare chemioterapia, radioterapia o interventi alle ovaie. In questi casi i tempi sono stretti, e il percorso si organizza in fretta, in accordo con l'oncologo."
+          ]
+        },
+        {
+          "titolo": "Quanto costa e quanto tempo richiede",
+          "paragrafi": [
+            "Il percorso si svolge in poco più di due settimane e richiede alcune visite ravvicinate per le ecografie. In visita Le spiego nel dettaglio i passaggi, i tempi e i costi, compresa la conservazione degli ovociti negli anni successivi, così da poter decidere con tutte le informazioni."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Il congelamento garantisce una gravidanza? No: aumenta le possibilità future, ma non le garantisce.",
+            "La stimolazione anticipa la menopausa? No, utilizza ovociti che quel mese andrebbero comunque persi.",
+            "È doloroso? Le iniezioni sono sottocutanee e si fanno a casa; il prelievo avviene in anestesia.",
+            "Fino a quando si possono usare gli ovociti? Possono restare congelati a lungo; per la gravidanza valgono i limiti di età previsti dalla legge e dalla salute della donna."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ginecologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "menopausa-terapie",
+      "categoria": "Menopausa",
+      "titolo": "Menopausa: le terapie di oggi, ormonali e naturali",
+      "img": "/botta-8cjh/img/rep-menopausa.webp",
+      "tempoLettura": "8 min",
+      "intro": "La menopausa non è una malattia, ma una fase della vita che può portare disturbi anche pesanti. Il segreto è non aspettare: già negli anni che la precedono si può fare molto per stare bene oggi e proteggere la salute di domani.",
+      "sezioni": [
+        {
+          "titolo": "Quando comincia l'età «critica»",
+          "paragrafi": [
+            "L'inizio della premenopausa è subdolo e spesso non viene riconosciuto: sbalzi d'umore, piccoli cambiamenti del ciclo, un aumento di peso difficile da gestire, disturbi del sonno. Sono segnali che di solito vengono sottovalutati.",
+            "È invece proprio in questi anni che un buon inquadramento della salute generale, ormonale e ginecologica permette di vivere meglio la premenopausa e la postmenopausa. La buona salute è un continuum, che va mantenuto."
+          ]
+        },
+        {
+          "titolo": "I disturbi più frequenti",
+          "paragrafi": [
+            "I sintomi variano molto da donna a donna:"
+          ],
+          "elenco": [
+            "vampate di calore e sudorazioni, anche notturne",
+            "disturbi del sonno, dell'umore e della concentrazione",
+            "calo del desiderio",
+            "secchezza vaginale e dolore durante i rapporti",
+            "aumento di peso, soprattutto sull'addome",
+            "piccole perdite di urina",
+            "dolori articolari e, nel tempo, perdita di massa ossea"
+          ]
+        },
+        {
+          "titolo": "La terapia ormonale",
+          "paragrafi": [
+            "La terapia ormonale sostitutiva è la cura più efficace per vampate, sudorazioni, disturbi del sonno e dell'umore. Per anni ha fatto paura; oggi i più recenti e accreditati studi indicano che, se prescritta alla donna giusta e gestita correttamente, è sicura.",
+            "Esistono anche gli ormoni bioidentici, cioè con una struttura chimica identica a quella degli ormoni prodotti dall'organismo, come l'associazione di estradiolo e progesterone in un'unica capsula. La scelta del farmaco, della dose e della via di somministrazione, per bocca, cerotto o gel, si fa caso per caso.",
+            "Prima di iniziare valuto la storia personale e familiare, la pressione, gli esami del sangue, la mammografia e l'ecografia pelvica."
+          ]
+        },
+        {
+          "titolo": "Quando gli ormoni non sono indicati",
+          "paragrafi": [
+            "Per alcune donne la terapia ormonale è controindicata, per esempio dopo un tumore al seno, oppure semplicemente non è gradita. In questi casi esistono terapie alternative: alcuni farmaci non ormonali che riducono le vampate, e rimedi di origine naturale, come alcuni fitoterapici, che possono dare sollievo nei disturbi più lievi.",
+            "Anche i rimedi naturali vanno scelti con il medico: «naturale» non significa sempre adatto a tutte."
+          ]
+        },
+        {
+          "titolo": "Alimentazione e movimento",
+          "paragrafi": [
+            "L'aumento di peso è uno dei disturbi che pesano di più sulle donne in menopausa. Oltre alle terapie, aiutano molto una dieta personalizzata, costruita sulle abitudini di ciascuna, e un'attività fisica regolare.",
+            "Mi occupo da molti anni anche degli aspetti nutrizionali: un'alimentazione corretta aiuta a controllare il peso, protegge le ossa e il cuore e migliora il benessere generale."
+          ]
+        },
+        {
+          "titolo": "La salute intima",
+          "paragrafi": [
+            "La secchezza vaginale e il dolore durante i rapporti si possono curare con terapie locali, ormonali o non ormonali, oppure con il laser vulvo-vaginale, che riattiva i tessuti senza usare ormoni. Non sono disturbi da sopportare: parlarne in visita è il primo passo."
+          ]
+        },
+        {
+          "titolo": "Prevenzione",
+          "paragrafi": [
+            "La menopausa è anche il momento giusto per la prevenzione: screening dei tumori ginecologici e della mammella, valutazione del rischio di osteoporosi e, se necessario, una terapia per proteggere le ossa, controllo della pressione, del colesterolo e della glicemia.",
+            "Il mio approccio è quello di prendere in carico la donna nella sua interezza, ascoltandola, e di aiutarla a mantenersi in forma, sana e serena."
+          ]
+        },
+        {
+          "titolo": "Quando prenotare una visita",
+          "paragrafi": [
+            "Non serve aspettare che i disturbi diventino pesanti. Una visita è utile già quando il ciclo comincia a cambiare, intorno ai 45 anni, per capire in che fase si trova e impostare la prevenzione. È utile anche dopo la menopausa, se compaiono disturbi nuovi o se vuole rivalutare una terapia che segue da anni."
+          ]
+        },
+        {
+          "titolo": "Gli esami utili",
+          "paragrafi": [
+            "Prima di scegliere una terapia sono utili alcuni esami: un'ecografia pelvica, la mammografia, gli esami del sangue con il profilo lipidico e la glicemia e, quando indicato, la densitometria ossea. Le indico io quali fare e quando, in base alla Sua storia e all'età."
+          ]
+        },
+        {
+          "titolo": "Un approccio su misura",
+          "paragrafi": [
+            "Non esiste una terapia uguale per tutte le donne. Due donne della stessa età possono avere disturbi, rischi e desideri completamente diversi: per questo la terapia si costruisce insieme, si prova, e si aggiusta nei controlli successivi, finché non si trova l'equilibrio giusto."
+          ]
+        },
+        {
+          "titolo": "Menopausa precoce",
+          "paragrafi": [
+            "Quando la menopausa arriva prima dei 40 anni, spontaneamente o dopo un intervento o una terapia oncologica, si parla di menopausa precoce. In questi casi, salvo controindicazioni, la terapia ormonale è particolarmente importante, perché protegge ossa, cuore e cervello fino all'età della menopausa naturale. Va impostata presto e seguita con controlli regolari."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "La terapia ormonale fa ingrassare? No: anzi, aiuta a controllare la redistribuzione del grasso tipica della menopausa.",
+            "Per quanto tempo si può fare? Si rivaluta ogni anno: la durata dipende dai sintomi e dal profilo di rischio.",
+            "Gli integratori funzionano? Alcuni possono aiutare nei disturbi lievi; vanno scelti con il medico.",
+            "A che età arriva la menopausa? In media intorno ai 50-51 anni, ma ogni donna ha i suoi tempi."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ginecologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "ovaio-policistico",
+      "categoria": "Endocrinologia",
+      "titolo": "Ovaio policistico: cicli irregolari, acne e fertilità",
+      "img": "/botta-8cjh/img/rep-ormoni.webp",
+      "tempoLettura": "7 min",
+      "intro": "Cicli irregolari o assenti, acne, peli in eccesso, difficoltà a perdere peso: sono i segnali più comuni della sindrome dell'ovaio policistico, una delle condizioni ormonali più frequenti nelle donne giovani. Riconoscerla è importante per la fertilità e per la salute futura.",
+      "sezioni": [
+        {
+          "titolo": "Che cos'è",
+          "paragrafi": [
+            "La sindrome dell'ovaio policistico, in sigla PCOS, è una condizione endocrina che riguarda circa una donna su dieci in età fertile. Il nome può trarre in inganno: non si tratta di vere cisti, ma di molti piccoli follicoli che non arrivano a maturare, ben visibili all'ecografia.",
+            "Alla base c'è uno squilibrio ormonale, con un eccesso di ormoni androgeni, spesso associato a un difetto metabolico chiamato insulino-resistenza."
+          ]
+        },
+        {
+          "titolo": "I segnali",
+          "paragrafi": [
+            "I sintomi possono essere diversi da donna a donna:"
+          ],
+          "elenco": [
+            "cicli irregolari, molto distanziati o assenti",
+            "acne, soprattutto se persistente dopo l'adolescenza",
+            "peli in eccesso su viso, petto o addome",
+            "aumento di peso e difficoltà a perderlo",
+            "difficoltà a ottenere una gravidanza",
+            "a volte, diradamento dei capelli"
+          ]
+        },
+        {
+          "titolo": "Non solo ovaie",
+          "paragrafi": [
+            "Le irregolarità del ciclo possono dipendere non solo dalle ovaie, ma anche da altre ghiandole, come la tiroide, le surreni o l'ipofisi. Per questo, prima di parlare di ovaio policistico, è importante escludere altre cause.",
+            "La diagnosi si basa sulla storia, sulla visita, sull'ecografia e su alcuni esami del sangue ormonali e metabolici, da fare nei giorni giusti del ciclo."
+          ]
+        },
+        {
+          "titolo": "Perché è importante curarla",
+          "paragrafi": [
+            "L'insulino-resistenza va diagnosticata e curata non solo per la fertilità, ma anche per la salute futura: le donne con PCOS hanno una maggiore predisposizione a diabete, ipertensione e malattie cardiovascolari.",
+            "La buona notizia è che, con le cure giuste e qualche cambiamento nello stile di vita, molti di questi rischi si riducono in modo importante."
+          ]
+        },
+        {
+          "titolo": "Il ruolo dell'alimentazione",
+          "paragrafi": [
+            "Un'accurata analisi della composizione corporea e del tipo di alimentazione, sia in eccesso sia in difetto di peso, può in alcuni casi svelare le cause delle irregolarità mestruali.",
+            "Nelle donne con PCOS e sovrappeso, anche un calo di peso moderato, del 5-10%, può bastare a far tornare cicli più regolari e l'ovulazione. Mi occupo da molti anni degli aspetti nutrizionali legati agli ormoni e alla fertilità, e imposto un piano alimentare personalizzato."
+          ]
+        },
+        {
+          "titolo": "Le terapie",
+          "paragrafi": [
+            "La terapia dipende dagli obiettivi della donna. Se il problema principale sono i cicli irregolari, l'acne o i peli, si possono usare terapie ormonali mirate. Se c'è insulino-resistenza, si interviene su alimentazione e movimento e, quando serve, con farmaci o integratori che migliorano la sensibilità all'insulina.",
+            "Se invece si desidera una gravidanza, si può indurre l'ovulazione con farmaci specifici e, se necessario, ricorrere alle tecniche di procreazione assistita, partendo sempre dalle più semplici."
+          ]
+        },
+        {
+          "titolo": "PCOS e gravidanza",
+          "paragrafi": [
+            "Molte donne con ovaio policistico riescono ad avere figli, spontaneamente o con un aiuto. Il consiglio è di non aspettare troppo: se i cicli sono molto irregolari, è utile una valutazione già prima di iniziare a cercare una gravidanza, per arrivare preparate.",
+            "Durante la gravidanza, poi, è importante controllare con attenzione la glicemia, perché il rischio di diabete gestazionale è più alto."
+          ]
+        },
+        {
+          "titolo": "Nelle ragazze",
+          "paragrafi": [
+            "Nelle adolescenti la diagnosi va fatta con cautela: nei primi anni dopo il menarca è normale avere cicli irregolari. Se però l'irregolarità persiste oltre due o tre anni, o si accompagna ad acne importante e peli in eccesso, una visita ginecologica è utile per capire e, se serve, iniziare presto le cure."
+          ]
+        },
+        {
+          "titolo": "Movimento e stile di vita",
+          "paragrafi": [
+            "Oltre all'alimentazione, l'attività fisica regolare migliora la sensibilità all'insulina anche senza un grande calo di peso. Bastano camminate a passo svelto e un po' di esercizio di forza alcune volte alla settimana. Anche il sonno e la gestione dello stress hanno un ruolo: sono piccoli cambiamenti che, sommati, si vedono sul ciclo e sulla pelle."
+          ]
+        },
+        {
+          "titolo": "Come si svolge la visita",
+          "paragrafi": [
+            "In visita raccolgo la storia del ciclo, del peso e della pelle, eseguo un'ecografia, preferibilmente transvaginale, e prescrivo gli esami ormonali e metabolici. Al controllo successivo, con i risultati, imposto la terapia e un piano alimentare personalizzato, che rivediamo nel tempo."
+          ]
+        },
+        {
+          "titolo": "Quando preoccuparsi",
+          "paragrafi": [
+            "Non ogni ciclo irregolare è ovaio policistico, e non ogni ovaio «multifollicolare» all'ecografia è una malattia. È la combinazione di sintomi, esami ed ecografia a fare la diagnosi: per questo è importante non affidarsi a un solo esame o a una sola immagine, ma a una valutazione completa.",
+            "Se però i cicli saltano per più di tre mesi, se compaiono peli in eccesso in poco tempo o se c'è un desiderio di gravidanza che non arriva, conviene non rimandare la visita."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "L'ovaio policistico si guarisce? Si cura e si tiene sotto controllo; spesso i sintomi migliorano molto.",
+            "La pillola è l'unica cura? No: dipende dagli obiettivi; a volte alimentazione e movimento sono la prima terapia.",
+            "Avrò difficoltà ad avere figli? Non necessariamente: molte donne concepiscono, a volte con un aiuto all'ovulazione.",
+            "Devo fare esami particolari? Esami ormonali, glicemia e insulina, e un'ecografia: Le indico io quali e quando."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ginecologica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "ginecologa.danielabotta",
+    "nota": "la Dottoressa non ha un profilo Instagram: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "domanda",
+        "titolo": "Rapporti dolorosi? Se ne parla poco.",
+        "risposta": "Ma si curano.",
+        "didascalia": "Secchezza e dolore dopo la menopausa riguardano una donna su due. Terapie locali, ormoni o laser: la soluzione si sceglie insieme.",
+        "hashtag": "#menopausa #salutefemminile #torino"
+      },
+      {
+        "stile": "foto",
+        "immagine": "freezing",
+        "titolo": "Social freezing",
+        "sottotitolo": "Meglio prima dei 35 anni",
+        "didascalia": "Con circa 15 ovociti congelati prima dei 35 anni la probabilità stimata di successo è intorno al 60%; dopo, circa il 38%.",
+        "hashtag": "#socialfreezing #fertilità #pma"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Menopausa: le terapie naturali",
+        "punti": [
+          "Alimentazione su misura",
+          "Attività fisica regolare",
+          "Fitoterapici scelti con il medico",
+          "Cure locali per la secchezza"
+        ],
+        "didascalia": "Quando gli ormoni non sono indicati o non sono graditi, esistono alternative. Naturale non vuol dire adatto a tutte: si sceglie in visita.",
+        "hashtag": "#menopausa #benessere #ginecologa"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "Ricevo anche presso",
+    "email": null,
+    "luoghi": [
+      {
+        "id": "curtatone",
+        "citta": "Torino",
+        "zona": "Gran Madre",
+        "nome": "Studio medico Gran Madre",
+        "indirizzo": "Via Curtatone 18/A",
+        "telefono": "011 538236",
+        "telefono2": "011 542522",
+        "lat": 45.0606,
+        "lng": 7.6998,
+        "principale": true,
+        "frase": "lo studio di via Curtatone 18/A, Torino",
+        "nota": "Il mio studio in città, a due passi dalla Gran Madre.",
+        "cap": "",
+        "tipo": "Studio",
+        "mappa": true
+      },
+      {
+        "id": "santacaterina",
+        "citta": "Torino",
+        "zona": "Gran Madre",
+        "nome": "Clinica Santa Caterina da Siena",
+        "indirizzo": "Via Villa della Regina 19",
+        "telefono": "011 8199211",
+        "lat": 45.0589,
+        "lng": 7.7043,
+        "principale": false,
+        "frase": "la Clinica Santa Caterina da Siena, Torino",
+        "nota": "Casa di cura in collina, zona Gran Madre.",
+        "cap": "",
+        "tipo": "Studio",
+        "mappa": true
+      },
+      {
+        "id": "dedamed",
+        "citta": "Torino",
+        "zona": "Crocetta",
+        "nome": "Dedamed",
+        "indirizzo": "Via La Marmora 35",
+        "telefono": "011 5682237",
+        "lat": 45.0577,
+        "lng": 7.6721,
+        "principale": false,
+        "frase": "Dedamed, via La Marmora 35, Torino",
+        "nota": "Centro medico in Crocetta.",
+        "cap": "",
+        "tipo": "Studio",
+        "mappa": true
+      },
+      {
+        "id": "cfr",
+        "citta": "Moncalieri",
+        "zona": "",
+        "nome": "Studio medico C.F.R.",
+        "indirizzo": "Via Bruno Buozzi 19",
+        "telefono": "011 6407788",
+        "lat": 44.9986,
+        "lng": 7.6862,
+        "principale": false,
+        "frase": "lo Studio C.F.R. di Moncalieri",
+        "nota": "Moncalieri centro.",
+        "cap": "10024",
+        "tipo": "Studio",
+        "mappa": true
+      },
+      {
+        "id": "sanfrancesco",
+        "citta": "Pinerolo",
+        "zona": "",
+        "nome": "Studio medico San Francesco",
+        "indirizzo": "Via Bogliette 3/c",
+        "telefono": "0121 396464",
+        "lat": 44.892,
+        "lng": 7.341,
+        "principale": false,
+        "frase": "lo Studio San Francesco di Pinerolo",
+        "nota": "Per chi arriva dal Pinerolese e dalle valli.",
+        "cap": "",
+        "tipo": "Studio",
+        "mappa": true
+      },
+      {
+        "id": "abra",
+        "citta": "Bra",
+        "zona": "",
+        "nome": "A.B.R.A. Centro PMA, Casa di Cura Città di Bra",
+        "indirizzo": "Strada Montenero 1",
+        "telefono": "338 4622384",
+        "lat": 44.702,
+        "lng": 7.867,
+        "principale": false,
+        "pma": true,
+        "frase": "il centro PMA A.B.R.A. della Casa di Cura Città di Bra",
+        "nota": "Centro di procreazione assistita di 1°, 2° e 3° livello.",
+        "cap": "12042",
+        "tipo": "Studio",
+        "mappa": true
+      },
+      {
+        "id": "santachiara",
+        "citta": "Bra",
+        "zona": "",
+        "nome": "Centro Medico Santa Chiara",
+        "indirizzo": "Viale Rimembranze 2",
+        "telefono": "0172 430804",
+        "lat": 44.6995,
+        "lng": 7.853,
+        "principale": false,
+        "frase": "il Centro Medico Santa Chiara di Bra",
+        "nota": "Bra centro.",
+        "cap": "12042",
+        "tipo": "Studio",
+        "mappa": true
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Ogni sede ha la sua segreteria. Per le domande può chiamare anche il mio numero diretto, 336 215065.",
+    "telefono": "336215065",
+    "telefonoLabel": "336 215065",
+    "chiamaLabel": "la Dottoressa",
+    "whatsapp": null,
+    "saluto": "Dottoressa",
+    "emailRichieste": "pragmasolutions.to@gmail.com",
+    "notaRichieste": "Anteprima: le richieste inviate da questa demo arrivano a Pragma Solutions, non alla Dottoressa.",
+    "oggettoMail": "Richiesta di visita ginecologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi sede, giorno e orario che preferisce: La ricontattiamo per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30",
+        "18:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate dalla segreteria.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo",
+        "Ecografia"
+      ],
+      "motivi": [
+        "Visita ginecologica di controllo",
+        "Menopausa",
+        "Fertilità e PMA",
+        "Social freezing",
+        "Ciclo irregolare o ovaio policistico",
+        "Laser vulvo-vaginale",
+        "Rapporti dolorosi o secchezza",
+        "Gravidanza",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "un controllo ginecologico",
+        "la menopausa",
+        "la ricerca di una gravidanza",
+        "il social freezing",
+        "un ciclo irregolare",
+        "il laser vulvo-vaginale",
+        "secchezza o rapporti dolorosi",
+        "la gravidanza",
+        "un problema ginecologico"
+      ],
+      "luoghi": [
+        {
+          "nome": "Torino · Studio medico Gran Madre",
+          "frase": "lo studio di via Curtatone 18/A, Torino"
+        },
+        {
+          "nome": "Torino · Clinica Santa Caterina da Siena",
+          "frase": "la Clinica Santa Caterina da Siena, Torino"
+        },
+        {
+          "nome": "Torino · Dedamed",
+          "frase": "Dedamed, via La Marmora 35, Torino"
+        },
+        {
+          "nome": "Moncalieri · Studio medico C.F.R.",
+          "frase": "lo Studio C.F.R. di Moncalieri"
+        },
+        {
+          "nome": "Pinerolo · Studio medico San Francesco",
+          "frase": "lo Studio San Francesco di Pinerolo"
+        },
+        {
+          "nome": "Bra · A.B.R.A. Centro PMA, Casa di Cura Città di Bra",
+          "frase": "il centro PMA A.B.R.A. della Casa di Cura Città di Bra"
+        },
+        {
+          "nome": "Bra · Centro Medico Santa Chiara",
+          "frase": "il Centro Medico Santa Chiara di Bra"
+        }
+      ],
+      "privacy": null,
+      "privacyTesto": "I dati inseriti servono solo a preparare il messaggio di richiesta: non vengono salvati da questa pagina.",
+      "notePlaceholder": "Per esempio il motivo della visita o gli esami che ha già"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F6F2F7",
+      "ink": "#24141F",
+      "muted": "#685A66",
+      "line": "#E7DDE7",
+      "brand": "#A0307F",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#E3A3D8",
+      "deep": "#2A1428",
+      "deep-ink": "#E8D3E3",
+      "grigio": "#DCE0E2"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,50&family=Karla:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Fraunces",
+    "fontTesti": "Karla",
+    "fontUi": "Karla",
+    "favicon": "/botta-8cjh/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/botta-8cjh/brand/brand.json",
+    "pagine": [
+      "https://www.danielabotta-ginecologa.it/",
+      "https://www.danielabotta-ginecologa.it/curriculum/",
+      "https://www.danielabotta-ginecologa.it/contatti/",
+      "https://www.danielabotta-ginecologa.it/portfolio-items/terapie-per-la-menopausa/",
+      "https://www.danielabotta-ginecologa.it/portfolio-items/procreazione-medico-assistita-pma/",
+      "https://www.danielabotta-ginecologa.it/portfolio-items/ginecologia-endocrinologica/",
+      "https://www.danielabotta-ginecologa.it/portfolio-items/social-freezing-torino/",
+      "https://www.danielabotta-ginecologa.it/2026/01/12/ringiovanimento-vaginale-laser/"
+    ]
+  }
+}

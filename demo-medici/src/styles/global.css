@@ -13,6 +13,7 @@
   --color-deep: var(--c-deep);
   --color-deep-ink: var(--c-deep-ink);
   --color-ocra: var(--c-ocra, #8C5E12);
+  --color-grigio: var(--c-grigio, #DCE0E2);
   --font-head: var(--f-head);
   --font-sans: var(--f-sans);
 }
@@ -406,4 +407,36 @@ html { scroll-behavior: smooth; }
   .stile-lente .card { border-radius: 24px; }
   .stile-lente .campo, .stile-lente .slot, .stile-lente .giorno { border-radius: 14px; }
   .stile-lente .btn { border-radius: 999px; }
+}
+
+/* Layout "donna": archi, città e sedi, sintomi, fertilità */
+@layer components {
+  .arco { border-radius: 999px 999px 28px 28px; }
+  .citta-pill { color: var(--c-deep-ink); transition: background-color .2s, color .2s; }
+  .citta-pill[aria-pressed="true"] { background: #fff; color: var(--c-deep); }
+  .sede-chip { transition: background-color .2s, border-color .2s; }
+  .sede-chip:hover { border-color: var(--c-brand2); }
+  .sede-chip[aria-pressed="true"] { background: var(--c-brand); border-color: var(--c-brand); }
+  .area-tab { background: #fff; color: var(--c-muted); transition: background-color .2s, color .2s; }
+  .area-tab:hover { color: var(--c-deep); }
+  .area-tab[aria-selected="true"] { background: var(--c-deep); color: #fff; }
+  .sintomo, .filtro-citta { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .sintomo:hover, .filtro-citta:hover { border-color: var(--c-brand); }
+  .sintomo[aria-pressed="true"] { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+  .filtro-citta[aria-pressed="true"] { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .modo-btn { color: var(--c-deep-ink); transition: background-color .2s, color .2s; }
+  .modo-btn[aria-pressed="true"] { background: var(--c-brand2); color: var(--c-deep); }
+  .cursore-bt { accent-color: var(--c-brand2); height: 28px; cursor: pointer; }
+  .citta-punto { cursor: pointer; outline: none; }
+  .citta-punto .alone { fill: var(--c-brand2); fill-opacity: .35; transition: fill-opacity .25s; }
+  .citta-punto .nucleo { fill: var(--c-brand); transition: fill .25s; }
+  .citta-punto:hover .alone, .citta-punto:focus-visible .alone, .citta-punto.attivo .alone { fill-opacity: .7; }
+  .citta-punto.attivo .nucleo, .citta-punto:focus-visible .nucleo { fill: var(--c-deep); }
+  .relaz summary { list-style: none; }
+  .relaz summary::-webkit-details-marker { display: none; }
+  .relaz summary::after { content: '+'; float: right; color: var(--c-brand); font-weight: 700; }
+  .relaz[open] summary::after { content: '−'; }
+  .stile-donna .card { border-radius: 26px; }
+  .stile-donna .campo, .stile-donna .slot, .stile-donna .giorno { border-radius: 14px; }
+  .stile-donna .btn { border-radius: 999px; }
 }

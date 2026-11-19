@@ -1,0 +1,44 @@
+{
+  "medico": "Dott.ssa Daniela Botta",
+  "specialita": "Ginecologa: menopausa, procreazione assistita (PMA 1°-2°-3° livello), social freezing, ginecologia endocrinologica, nutrizione, laser vulvo-vaginale",
+  "sito": "https://www.danielabotta-ginecologa.it/ (WordPress + Slider Revolution, tema Avada)",
+  "logo": "nessun logo vero (favicon generica): nome in testo, Fraunces",
+  "colori": {
+    "orchidea": "#A0307F (dalla sedia orchidea della sua foto e dal rosa del suo sito)",
+    "rosa": "#E3A3D8",
+    "prugna": "#2A1428",
+    "grigio_foto": "#DCE0E2"
+  },
+  "font": {
+    "sito": "tema WordPress",
+    "demo": [
+      "Fraunces (mai corsivo)",
+      "Karla"
+    ]
+  },
+  "contatti": {
+    "telefono_diretto": "336 215065",
+    "email": "nessuna email pubblica (solo modulo): richieste della demo a Pragma, dichiarato in pagina",
+    "whatsapp": "non verificato",
+    "youtube": "intervista TV «Parliamo di menopausa» J3sl4SdLKK0"
+  },
+  "sedi": [
+    "Studio Gran Madre, Via Curtatone 18/A Torino · 011 538236 / 011 542522",
+    "Clinica Santa Caterina da Siena, Via Villa della Regina 19 Torino · 011 8199211",
+    "Dedamed, Via La Marmora 35 Torino · 011 5682237",
+    "Studio C.F.R., Via Bruno Buozzi 19 Moncalieri · 011 6407788",
+    "Studio San Francesco, Via Bogliette 3/c Pinerolo · 0121 396464",
+    "A.B.R.A. Centro PMA Casa di Cura Città di Bra, Strada Montenero 1 · 338 4622384",
+    "Centro Medico Santa Chiara, Viale Rimembranze 2 Bra · 0172 430804"
+  ],
+  "foto": [
+    "FOTO-Dott.ssa-Daniela-BOTTA.jpg: foto professionale sulla sedia orchidea (1188x1000) → ritratto.webp, volto.webp",
+    "Copia-di-20190418_105004_2.jpg: nel suo studio alla scrivania → studio.webp",
+    "yt.jpg: miniatura della sua intervista TV (i.ytimg.com) → video.webp"
+  ],
+  "repertorio": "solo foto stock già presenti sul suo sito: laser, ovocita (social freezing), donna con ventaglio (menopausa), donna sorridente (ormoni), ecografia, endocrinologia, passeggiata",
+  "dati_citati": "Social freezing: ~60% di successo con 15 ovociti congelati prima dei 35 anni, ~38% dopo (Ubaldi 2016, Tsampras 2017) e quando rivolgersi allo specialista (1 anno; 3-6 mesi se >35 anni o AMH <1,5): tutto dal suo sito",
+  "privacy": "Il curriculum sul suo sito riporta data di nascita e indirizzo di casa: NON riportati nella demo (il test lo verifica)",
+  "problemi_sito": "slider vecchio stile e sezioni duplicate (sedi ripetute due volte in home e contatti), testi in maiuscolo, blog a singhiozzo (2022, 2023, 2025, 2 articoli a gennaio 2026), titolo «HOME», nessun Instagram/Facebook, nessuna prenotazione: 7 sedi con 7 numeri diversi e nessuna guida su quale chiamare",
+  "note": "Stesso studio di Russo e Castelli (Trello). Dal 1986 in attività; 1991-2021 specialista ambulatoriale pubblica, 2008-2021 Centro PMA Ospedale Maria Vittoria."
+}
