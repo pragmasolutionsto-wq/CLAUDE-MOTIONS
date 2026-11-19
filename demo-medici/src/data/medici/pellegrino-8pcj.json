@@ -1,0 +1,885 @@
+{
+  "slug": "pellegrino-8pcj",
+  "layout": "radiografia",
+  "sitoOrigine": "https://pietropellegrino.it/",
+  "titolo": "Dott.",
+  "nome": "Pietro Pellegrino",
+  "specialita": "Ortopedia e Traumatologia, Chirurgia ortopedica oncologica",
+  "firma": "Ortopedia oncologica",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Pietro Pellegrino · Ortopedico oncologo a Torino: tumori ossei, sarcomi, metastasi",
+    "description": "Chirurgia ortopedica oncologica al CTO di Torino: tumori ossei benigni e maligni, sarcomi dei tessuti molli, metastasi ossee, protesi custom made e ricostruzione degli arti. Visite all'Istituto Fisicoterapico."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "/pellegrino-8pcj/img/volto.webp",
+    "logoAlt": "Dott. Pietro Pellegrino"
+  },
+  "foto": {
+    "ritratto": "/pellegrino-8pcj/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Pietro Pellegrino",
+    "volto": "/pellegrino-8pcj/img/volto.webp",
+    "sala": "/pellegrino-8pcj/img/rep-sala.webp",
+    "chirurgo": "/pellegrino-8pcj/img/rep-chirurgo.webp",
+    "microscopio": "/pellegrino-8pcj/img/rep-microscopio.webp",
+    "laboratorio": "/pellegrino-8pcj/img/rep-laboratorio.webp",
+    "cammino": "/pellegrino-8pcj/img/rep-cammino.webp",
+    "passeggiata": "/pellegrino-8pcj/img/rep-passeggiata.webp"
+  },
+  "hero": {
+    "eyebrow": "Ortopedia oncologica · CTO di Torino",
+    "titolo": "Tumori delle ossa e dei tessuti molli.",
+    "testo": "Sono chirurgo ortopedico e mi occupo di tumori dell'apparato muscolo-scheletrico, benigni e maligni, e di metastasi ossee. Opero al CTO di Torino come Dirigente Medico; ricevo all'Istituto Fisicoterapico.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti una visita",
+      "motivi": [
+        "Dolore osseo che non passa",
+        "Una massa o un gonfiore",
+        "Un esame da valutare",
+        "Seconda opinione",
+        "Metastasi ossee",
+        "Sarcoma dei tessuti molli",
+        "Controllo dopo l'intervento",
+        "Protesi da rivedere",
+        "Ortopedia e traumatologia"
+      ],
+      "motiviFrase": [
+        "un dolore osseo che non passa",
+        "una massa o un gonfiore",
+        "un esame (radiografia, TC o risonanza) da valutare",
+        "una seconda opinione",
+        "metastasi ossee",
+        "un sarcoma dei tessuti molli",
+        "un controllo dopo l'intervento",
+        "una protesi da rivedere",
+        "un problema ortopedico"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Dove"
+    }
+  },
+  "numeri": [
+    {
+      "valore": 20,
+      "suffisso": "+",
+      "testo": "pubblicazioni scientifiche"
+    },
+    {
+      "valore": 40,
+      "suffisso": "",
+      "testo": "comunicazioni e poster, circa"
+    },
+    {
+      "valore": 3,
+      "suffisso": "",
+      "testo": "fellowship: Rizzoli, Berna, Reus"
+    }
+  ],
+  "regioni": [
+    {
+      "id": "spalla",
+      "nome": "Spalla e omero",
+      "titolo": "Spalla e parte alta dell'omero",
+      "testo": "È una delle sedi più frequenti dei tumori primitivi dell'osso, come l'osteosarcoma e il condrosarcoma, e delle metastasi.",
+      "faccio": "Asportazione del tumore e ricostruzione con protesi modulari o su misura, cercando di conservare il più possibile il movimento."
+    },
+    {
+      "id": "colonna",
+      "nome": "Colonna vertebrale",
+      "titolo": "Colonna vertebrale",
+      "testo": "È la sede più frequente delle metastasi ossee. Un dolore alla schiena che non passa con il riposo, in chi ha avuto un tumore, va sempre approfondito.",
+      "faccio": "Valutazione con l'équipe multidisciplinare per scegliere tra radioterapia, farmaci e stabilizzazione chirurgica."
+    },
+    {
+      "id": "bacino",
+      "nome": "Bacino",
+      "titolo": "Bacino",
+      "testo": "Può essere sede di condrosarcoma e sarcoma di Ewing, oltre che di metastasi. I sintomi sono spesso sfumati e la diagnosi tardiva.",
+      "faccio": "Chirurgia complessa, pianificata sulla TC, anche con protesi custom made progettate sul singolo paziente."
+    },
+    {
+      "id": "femore",
+      "nome": "Anca e femore",
+      "titolo": "Anca e parte alta del femore",
+      "testo": "È una sede frequente di metastasi e di fratture patologiche, cioè fratture di un osso indebolito dalla malattia, anche dopo un trauma minimo.",
+      "faccio": "Stabilizzazione preventiva o protesi; mezzi di sintesi anche in fibra di carbonio, che non disturbano i controlli radiologici."
+    },
+    {
+      "id": "ginocchio",
+      "nome": "Ginocchio",
+      "titolo": "Ginocchio: femore distale e tibia prossimale",
+      "testo": "È la sede più frequente dell'osteosarcoma e del tumore a cellule giganti, che riguardano spesso adolescenti e giovani adulti.",
+      "faccio": "Chirurgia di salvataggio dell'arto e ricostruzione con megaprotesi modulari o su misura."
+    },
+    {
+      "id": "diafisi",
+      "nome": "Gamba e coscia",
+      "titolo": "Ossa lunghe: diafisi di femore e tibia",
+      "testo": "La parte centrale delle ossa lunghe può essere sede di sarcoma di Ewing, di tumori benigni e di metastasi.",
+      "faccio": "Resezione e ricostruzione con tecniche biologiche o protesiche, a seconda dell'età e del tipo di tumore."
+    },
+    {
+      "id": "molli",
+      "nome": "Muscoli della coscia",
+      "titolo": "Tessuti molli: muscoli e fasce",
+      "testo": "I sarcomi dei tessuti molli colpiscono più spesso gli arti, soprattutto la coscia. Una massa profonda, che cresce o più grande di 5 cm va valutata con una risonanza prima di qualsiasi intervento.",
+      "faccio": "Asportazione con margini adeguati, in accordo con oncologo e radioterapista, e ricostruzione dei tessuti."
+    }
+  ],
+  "segnali": [
+    "Il dolore c'è anche di notte o a riposo, e non passa",
+    "Il dolore aumenta da settimane, senza un trauma",
+    "C'è un gonfiore o una massa che cresce",
+    "La massa è profonda o più grande di una pallina da golf (5 cm)",
+    "Un osso si è rotto dopo un trauma minimo",
+    "Ho avuto un tumore in passato"
+  ],
+  "percorso": [
+    {
+      "nome": "Visita",
+      "testo": "Ascolto la storia, visito la zona e guardo gli esami che ha già. Spesso il primo esame è una semplice radiografia."
+    },
+    {
+      "nome": "Esami",
+      "testo": "Se serve completo con TC e risonanza, e con gli esami di stadiazione: definiscono la lesione e l'estensione della malattia."
+    },
+    {
+      "name": "",
+      "nome": "Biopsia",
+      "testo": "Quando è necessaria, la biopsia si pianifica nel centro dove si opererà: il tragitto dell'ago va poi asportato con il tumore."
+    },
+    {
+      "nome": "Équipe",
+      "testo": "Il caso si discute con oncologo, radioterapista, radiologo e anatomopatologo: la cura dei sarcomi è sempre multidisciplinare."
+    },
+    {
+      "nome": "Chirurgia",
+      "testo": "Asportazione del tumore con margini adeguati e ricostruzione: protesi modulari o su misura, innesti, mezzi in fibra di carbonio."
+    },
+    {
+      "nome": "Controlli",
+      "testo": "Riabilitazione e controlli periodici nel tempo, con esami programmati insieme agli altri specialisti."
+    }
+  ],
+  "tecniche": [
+    {
+      "nome": "Protesi custom made",
+      "testo": "Progettate su misura a partire dalla TC del paziente, quando la sede o la forma dell'osso non permettono una protesi standard, per esempio nel bacino."
+    },
+    {
+      "nome": "Fibra di carbonio",
+      "testo": "Placche, chiodi e viti in fibra di carbonio sono trasparenti ai raggi X: permettono di vedere meglio l'osso nei controlli con radiografia, TC e risonanza e aiutano la pianificazione della radioterapia."
+    },
+    {
+      "nome": "Tecniche mini-invasive",
+      "testo": "Quando la malattia lo consente, incisioni più piccole e tempi di recupero più brevi, sempre senza rinunciare alla radicalità dell'intervento."
+    }
+  ],
+  "cv": [
+    {
+      "anno": "2011",
+      "titolo": "Laurea in Medicina",
+      "testo": "Università degli Studi di Torino.",
+      "luogo": "Torino"
+    },
+    {
+      "anno": "2012-17",
+      "titolo": "Specializzazione",
+      "testo": "Ortopedia e Traumatologia: Mauriziano, San Luigi di Orbassano, CTO e Regina Margherita, Città della Salute, Sant'Andrea di Vercelli.",
+      "luogo": "Torino"
+    },
+    {
+      "anno": "2015",
+      "titolo": "Visiting Fellow a Reus",
+      "testo": "Hospital Universitari Sant Joan de Reus, Spagna.",
+      "luogo": "Reus"
+    },
+    {
+      "anno": "2017",
+      "titolo": "Visiting Fellow al Rizzoli",
+      "testo": "IRCCS Istituto Ortopedico Rizzoli di Bologna.",
+      "luogo": "Bologna"
+    },
+    {
+      "anno": "",
+      "titolo": "Fellowship a Berna",
+      "testo": "Inselspital, Università di Berna.",
+      "luogo": "Berna"
+    },
+    {
+      "anno": "2017",
+      "titolo": "Specialista",
+      "testo": "Specializzazione in Ortopedia e Traumatologia, Università di Torino; consulente al CTO.",
+      "luogo": "Torino"
+    },
+    {
+      "anno": "2018-oggi",
+      "titolo": "Dirigente Medico al CTO",
+      "testo": "Chirurgia ortopedica oncologica, Centro Traumatologico Ortopedico di Torino.",
+      "luogo": "Torino"
+    },
+    {
+      "anno": "2025-26",
+      "titolo": "Executive Master EMMAS",
+      "testo": "Management delle Aziende Sanitarie, SDA Bocconi.",
+      "luogo": "Milano"
+    }
+  ],
+  "societa": [
+    "SIOT",
+    "ISOLS",
+    "ISG",
+    "EMSOS",
+    "AO Trauma"
+  ],
+  "recensioniTd": {
+    "media": 5,
+    "numero": 2,
+    "fonte": "Top Doctors",
+    "url": "https://www.topdoctors.it/dottor/pietro-pellegrino"
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "tumori-ossei",
+    "categoria": "Ortopedia oncologica",
+    "titolo": "Tumori ossei: diagnosi e chirurgia a Torino",
+    "img": "/pellegrino-8pcj/img/rep-sala.webp",
+    "tempoLettura": "7 min",
+    "intro": "Sentire le parole «tumore dell'osso» spaventa. Eppure la maggior parte delle lesioni che si trovano nelle ossa è benigna, e anche per i tumori maligni la chirurgia di oggi permette quasi sempre di conservare l'arto. Le spiego come lavoro, dal primo dolore alla ricostruzione.",
+    "sezioni": [
+      {
+        "titolo": "Di cosa parliamo",
+        "paragrafi": [
+          "L'ortopedia oncologica si occupa della diagnosi e della cura dei tumori delle ossa e dei tessuti molli dell'apparato muscolo-scheletrico: muscoli, tendini, grasso, vasi e nervi.",
+          "I tumori ossei possono nascere dall'osso stesso, e allora si chiamano primitivi, oppure arrivare da un tumore di un altro organo: sono le metastasi ossee. Nell'adulto le metastasi sono molto più frequenti dei tumori primitivi."
+        ]
+      },
+      {
+        "titolo": "Benigni e maligni",
+        "paragrafi": [
+          "I tumori benigni sono fatti di cellule simili a quelle normali, crescono lentamente e non invadono le strutture vicine. Sono i più comuni: molti vengono scoperti per caso, durante una radiografia fatta per altri motivi, e spesso basta tenerli sotto controllo.",
+          "I tumori maligni dell'osso, i sarcomi, sono invece rari. Crescono più rapidamente, invadono i tessuti vicini e possono dare metastasi a distanza. Proprio perché rari, vanno curati in centri che ne vedono molti."
+        ]
+      },
+      {
+        "titolo": "I più frequenti",
+        "paragrafi": [
+          "Tra i tumori maligni primitivi dell'osso i più conosciuti sono:"
+        ],
+        "elenco": [
+          "l'osteosarcoma, che colpisce soprattutto adolescenti e giovani adulti, spesso intorno al ginocchio o alla spalla;",
+          "il sarcoma di Ewing, anch'esso tipico dei giovani, più spesso nel bacino o nella parte centrale delle ossa lunghe;",
+          "il condrosarcoma, che nasce dalla cartilagine ed è più frequente negli adulti, nel bacino, nel femore e nella spalla."
+        ],
+        "chiusura": "Esiste poi un gruppo di tumori «intermedi», come il tumore a cellule giganti, benigno ma aggressivo localmente."
+      },
+      {
+        "titolo": "I sintomi",
+        "paragrafi": [
+          "Il sintomo più comune è il dolore: all'inizio può andare e venire, poi diventa continuo, presente anche a riposo e di notte. Può comparire un gonfiore o una massa, a volte una zoppia o una riduzione del movimento.",
+          "A volte il primo segno è una frattura dopo un trauma minimo: l'osso, indebolito dalla malattia, si rompe più facilmente. È quella che chiamiamo frattura patologica."
+        ]
+      },
+      {
+        "titolo": "Come si fa la diagnosi",
+        "paragrafi": [
+          "Il primo esame è quasi sempre una radiografia. Se mostra una lesione sospetta, si completa con la TC, che studia l'osso, e con la risonanza magnetica, che mostra i tessuti molli e l'estensione all'interno dell'osso. Esami come la scintigrafia o la PET servono a valutare se la malattia è presente in altre sedi.",
+          "La diagnosi definitiva arriva dalla biopsia: un piccolo prelievo di tessuto analizzato al microscopio dall'anatomopatologo."
+        ]
+      },
+      {
+        "titolo": "La biopsia si fa dove si opera",
+        "paragrafi": [
+          "È una regola fondamentale: la biopsia di una sospetta lesione maligna va pianificata dal chirurgo che eseguirà l'intervento, nel centro di riferimento. Il tragitto dell'ago, infatti, dovrà essere asportato insieme al tumore.",
+          "Una biopsia fatta nel punto sbagliato può complicare molto la chirurgia successiva. Per questo, davanti a un sospetto, è meglio rivolgersi subito a un centro specializzato."
+        ]
+      },
+      {
+        "titolo": "Una cura di squadra",
+        "paragrafi": [
+          "I sarcomi si curano in équipe. Ogni caso viene discusso con l'oncologo, il radioterapista, il radiologo e l'anatomopatologo, e il piano di cura può prevedere chemioterapia, radioterapia e chirurgia in un ordine preciso.",
+          "Al CTO di Torino lavoro in una struttura dedicata alla chirurgia oncologica ortopedica, in collaborazione con gli altri specialisti. Sono socio dell'Italian Sarcoma Group e di società internazionali come ISOLS ed EMSOS."
+        ]
+      },
+      {
+        "titolo": "La chirurgia e la ricostruzione",
+        "paragrafi": [
+          "Lo scopo dell'intervento è asportare il tumore con margini adeguati, cioè con uno strato di tessuto sano intorno. Oggi, nella grande maggioranza dei casi, è possibile farlo conservando l'arto: si parla di chirurgia di salvataggio dell'arto.",
+          "Dopo l'asportazione, l'osso va ricostruito. Uso megaprotesi modulari, protesi custom made progettate sulla TC del paziente, innesti ossei e mezzi di sintesi in fibra di carbonio, che non disturbano i controlli radiologici."
+        ]
+      },
+      {
+        "titolo": "Cosa portare alla visita",
+        "paragrafi": [
+          "Per una prima valutazione è utile avere con sé tutte le immagini su CD o tramite link, non solo i referti, e qualche nota su quando è comparso il disturbo e come è cambiato."
+        ]
+      },
+      {
+        "titolo": "Dopo l'intervento",
+        "paragrafi": [
+          "La riabilitazione comincia presto, spesso già nei primi giorni, ed è parte integrante della cura: l'obiettivo è tornare a camminare, a usare il braccio, a fare una vita il più possibile normale.",
+          "I controlli continuano nel tempo, con esami programmati insieme agli altri specialisti, per verificare la protesi o la ricostruzione e per escludere che la malattia si ripresenti."
+        ]
+      },
+      {
+        "titolo": "La seconda opinione",
+        "paragrafi": [
+          "Davanti a una diagnosi rara è normale voler sentire un altro parere. Una seconda opinione serve a confermare la diagnosi, capire le alternative e affrontare le scelte con più serenità.",
+          "Porti con sé tutte le immagini, i referti e, se c'è, il referto istologico della biopsia."
+        ]
+      },
+      {
+        "titolo": "Dove ricevo",
+        "paragrafi": [
+          "Ricevo privatamente all'Istituto Fisicoterapico di Torino, in via Paolo Sacchi 24, e opero al CTO di Torino. Se ha un esame che mostra una lesione dell'osso o una massa che La preoccupa, porti con sé le immagini e i referti: li guardiamo insieme.",
+          "Per prenotare può chiamare lo 011 1927 4275."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita specialistica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "metastasi-ossee",
+      "categoria": "Metastasi",
+      "titolo": "Metastasi ossee: cosa si può fare",
+      "img": "/pellegrino-8pcj/img/rep-chirurgo.webp",
+      "tempoLettura": "6 min",
+      "intro": "Quando un tumore raggiunge le ossa, l'obiettivo diventa proteggere lo scheletro: controllare il dolore, prevenire le fratture e conservare l'autonomia. Oggi le possibilità sono molte, e spesso si combinano.",
+      "sezioni": [
+        {
+          "titolo": "Cosa sono",
+          "paragrafi": [
+            "Si parla di metastasi ossea quando cellule tumorali partite da un altro organo, dove c'è già un tumore primitivo, raggiungono l'osso e vi crescono. Possono colpire qualsiasi osso, ma le sedi più frequenti sono la colonna vertebrale, il bacino, il cranio e le ossa lunghe di braccia e gambe.",
+            "Nell'adulto sono molto più frequenti dei tumori nati nell'osso."
+          ]
+        },
+        {
+          "titolo": "Da dove arrivano",
+          "paragrafi": [
+            "Alcuni tumori raggiungono le ossa più spesso di altri. A seconda dell'origine, le metastasi tendono a:"
+          ],
+          "elenco": [
+            "distruggere l'osso (metastasi osteolitiche), come accade spesso con i tumori di polmone, rene, tiroide e colon;",
+            "addensarlo in modo disordinato (metastasi osteoaddensanti), come accade spesso con i tumori della prostata, dello stomaco o della vescica;",
+            "avere entrambe le componenti, come accade per esempio nel tumore della mammella."
+          ],
+          "chiusura": "In entrambi i casi l'osso diventa meno resistente."
+        },
+        {
+          "titolo": "I sintomi",
+          "paragrafi": [
+            "Il sintomo più frequente è il dolore, che tende a essere continuo, a peggiorare di notte e a non passare con il riposo. A volte il primo segno è una frattura dopo un trauma minimo.",
+            "Nella colonna, una metastasi può comprimere il midollo o le radici nervose: debolezza alle gambe, formicolii o difficoltà a urinare sono segnali da non trascurare e richiedono una valutazione urgente."
+          ]
+        },
+        {
+          "titolo": "Il rischio di frattura",
+          "paragrafi": [
+            "Una delle valutazioni più importanti riguarda il rischio di frattura. Si considerano la sede, il tipo di lesione, quanta parte dell'osso è coinvolta e quanto dolore dà con il carico.",
+            "Quando il rischio è alto, è meglio intervenire prima che l'osso si rompa: un intervento programmato è più semplice e il recupero più rapido rispetto alla cura di una frattura già avvenuta."
+          ]
+        },
+        {
+          "titolo": "Le cure possibili",
+          "paragrafi": [
+            "Le opzioni si scelgono insieme all'oncologo e al radioterapista e spesso si combinano:"
+          ],
+          "elenco": [
+            "la terapia del tumore di origine, con farmaci che agiscono anche sulle metastasi;",
+            "la radioterapia, molto efficace sul dolore e sul controllo locale;",
+            "i farmaci che rinforzano l'osso;",
+            "la chirurgia, per stabilizzare un osso a rischio, trattare una frattura o sostituire un'articolazione con una protesi."
+          ]
+        },
+        {
+          "titolo": "La chirurgia",
+          "paragrafi": [
+            "L'intervento ha lo scopo di restituire un osso solido e permettere di camminare e muoversi senza dolore il prima possibile. Può essere una stabilizzazione con chiodi o placche, oppure una protesi quando l'articolazione è coinvolta.",
+            "Uso anche mezzi di sintesi in fibra di carbonio: sono trasparenti ai raggi X, permettono di controllare meglio l'osso nel tempo e non disturbano la pianificazione della radioterapia."
+          ]
+        },
+        {
+          "titolo": "Un lavoro di squadra",
+          "paragrafi": [
+            "Le metastasi ossee si curano in équipe. Ogni decisione tiene conto dello stato generale della persona, delle altre cure in corso e di cosa è più importante per lei: camminare, essere autonoma, ridurre il dolore.",
+            "Non esiste un percorso uguale per tutti, ed è giusto che il paziente e la famiglia partecipino alle scelte."
+          ]
+        },
+        {
+          "titolo": "Muoversi in sicurezza",
+          "paragrafi": [
+            "Finché l'osso non è stato valutato, qualche accorgimento aiuta a ridurre il rischio di fratture: eviti di sollevare pesi e di fare sforzi improvvisi con l'arto dolente, usi un appoggio se il dolore compare camminando e segnali subito un dolore che cambia all'improvviso."
+          ]
+        },
+        {
+          "titolo": "Il dolore si può controllare",
+          "paragrafi": [
+            "Il dolore delle metastasi ossee si può trattare in molti modi: con i farmaci analgesici, con la radioterapia, con la stabilizzazione chirurgica dell'osso. Spesso la combinazione dà i risultati migliori.",
+            "Non è necessario sopportarlo: parlarne apertamente con i medici che La seguono è il primo passo per stare meglio."
+          ]
+        },
+        {
+          "titolo": "Le domande più frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Una metastasi ossea significa che non c'è più niente da fare? No: molte persone convivono a lungo con metastasi ossee, e le cure possono ridurre molto il dolore e il rischio di fratture.",
+            "La radioterapia basta? Spesso è molto efficace sul dolore, ma se l'osso è a rischio di rottura può essere necessaria anche la chirurgia.",
+            "Dopo l'intervento si cammina? L'obiettivo è proprio questo: un osso stabile che permetta di caricare il prima possibile."
+          ]
+        },
+        {
+          "titolo": "Il ruolo della famiglia",
+          "paragrafi": [
+            "Le decisioni sulle metastasi ossee toccano la vita quotidiana: la casa, gli spostamenti, il lavoro, l'assistenza. Coinvolgere la famiglia o chi si prende cura del paziente aiuta a scegliere il percorso più adatto.",
+            "In visita c'è sempre spazio per le domande di chi accompagna."
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Per una valutazione completa è utile avere con sé:"
+          ],
+          "elenco": [
+            "le immagini recenti (radiografie, TC, risonanza, PET o scintigrafia) e i referti;",
+            "la relazione dell'oncologo con le cure in corso;",
+            "l'elenco dei farmaci, compresi quelli per l'osso."
+          ]
+        },
+        {
+          "titolo": "Quando chiedere una valutazione",
+          "paragrafi": [
+            "Se ha avuto un tumore e compare un dolore osseo che non passa, soprattutto di notte, ne parli con il Suo oncologo e chieda una valutazione ortopedica. Lo stesso se una radiografia o una TC mostrano una lesione dell'osso.",
+            "Ricevo all'Istituto Fisicoterapico di Torino, in via Paolo Sacchi 24, e opero al CTO di Torino. Per prenotare: 011 1927 4275."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita specialistica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "sarcomi-tessuti-molli",
+      "categoria": "Sarcomi",
+      "titolo": "Sarcomi dei tessuti molli: i segnali da non sottovalutare",
+      "img": "/pellegrino-8pcj/img/rep-microscopio.webp",
+      "tempoLettura": "6 min",
+      "intro": "La maggior parte delle masse sotto la pelle è benigna, come i lipomi. Alcuni segnali però devono far pensare a un sarcoma, un tumore raro che va curato in un centro specializzato. Ecco quali sono e perché è importante non operare «al buio».",
+      "sezioni": [
+        {
+          "titolo": "Cosa sono",
+          "paragrafi": [
+            "I sarcomi dei tessuti molli sono tumori maligni che nascono nei tessuti di sostegno del corpo: muscoli, tessuto connettivo, grasso, vasi sanguigni e linfatici, nervi e legamenti. Ne esistono molti tipi diversi, che prendono il nome dal tessuto da cui hanno origine.",
+            "Sono tumori rari. Si sviluppano più spesso negli arti, in particolare nella coscia, ma possono comparire anche nel tronco, nell'addome, nella testa e nel collo."
+          ]
+        },
+        {
+          "titolo": "Lipoma o sarcoma?",
+          "paragrafi": [
+            "Il lipoma è un tumore benigno del grasso, molto comune, morbido, superficiale e di solito stabile nel tempo. Un sarcoma può somigliargli all'inizio, ed è proprio questo il rischio: essere sottovalutato.",
+            "Distinguerli con la sola visita non è sempre possibile. Per questo alcune caratteristiche devono portare ad approfondire."
+          ]
+        },
+        {
+          "titolo": "I segnali d'allarme",
+          "paragrafi": [
+            "Una massa dei tessuti molli va valutata da uno specialista se:"
+          ],
+          "elenco": [
+            "è più grande di 5 centimetri, circa una pallina da golf;",
+            "è profonda, cioè sotto la fascia muscolare;",
+            "cresce nel tempo;",
+            "è dolorosa;",
+            "si è ripresentata dopo essere stata asportata."
+          ],
+          "chiusura": "Anche uno solo di questi segnali è sufficiente per chiedere un approfondimento."
+        },
+        {
+          "titolo": "Prima la risonanza, poi la biopsia",
+          "paragrafi": [
+            "L'esame fondamentale è la risonanza magnetica, che mostra la sede, le dimensioni e i rapporti con vasi e nervi. Se il sospetto rimane, la diagnosi si conferma con una biopsia, pianificata dal chirurgo che eseguirà l'intervento.",
+            "Asportare una massa «per vedere cos'è», senza esami e senza biopsia, è un errore frequente: se si tratta di un sarcoma, l'intervento andrà rifatto in modo più ampio, con più difficoltà e talvolta con un rischio maggiore."
+          ]
+        },
+        {
+          "titolo": "La cura",
+          "paragrafi": [
+            "La chirurgia è il cardine della cura: il sarcoma va asportato con margini adeguati di tessuto sano intorno. A seconda del tipo e delle dimensioni, l'intervento può essere preceduto o seguito da radioterapia e, in alcuni casi, da chemioterapia.",
+            "Oggi quasi sempre si riesce a conservare l'arto e la sua funzione. Quando l'asportazione è ampia, si ricostruiscono i tessuti, anche in collaborazione con il chirurgo plastico."
+          ]
+        },
+        {
+          "titolo": "Perché un centro di riferimento",
+          "paragrafi": [
+            "I sarcomi sono rari e molto diversi tra loro. Per questo le linee guida raccomandano che vengano curati in centri con esperienza, dove ogni caso viene discusso da un'équipe multidisciplinare: chirurgo ortopedico oncologo, oncologo, radioterapista, radiologo e anatomopatologo.",
+            "Sono socio dell'Italian Sarcoma Group e lavoro al CTO di Torino in una struttura dedicata alla chirurgia oncologica ortopedica."
+          ]
+        },
+        {
+          "titolo": "Dopo l'intervento",
+          "paragrafi": [
+            "Il percorso continua con la riabilitazione e con controlli periodici, programmati con gli altri specialisti, per verificare che la malattia non si ripresenti né nella sede dell'intervento né a distanza.",
+            "Ogni controllo è anche l'occasione per parlare di come va la vita di tutti i giorni: il lavoro, lo sport, il movimento."
+          ]
+        },
+        {
+          "titolo": "Non aspettare che faccia male",
+          "paragrafi": [
+            "Molte persone rimandano la visita perché la massa non dà fastidio. È comprensibile, ma con i sarcomi il tempo conta: una diagnosi precoce rende l'intervento più semplice e aumenta le possibilità di conservare l'arto e la sua funzione."
+          ]
+        },
+        {
+          "titolo": "La ricostruzione dei tessuti",
+          "paragrafi": [
+            "Quando l'asportazione è ampia, è importante ricostruire bene i tessuti per conservare la funzione dell'arto e favorire la guarigione, soprattutto se è prevista la radioterapia.",
+            "Si possono usare lembi muscolari o cutanei, in collaborazione con il chirurgo plastico, e protesi quando è coinvolto l'osso vicino.",
+            "La riabilitazione, con il fisioterapista, completa il percorso e aiuta a riprendere le attività di ogni giorno."
+          ]
+        },
+        {
+          "titolo": "Chi colpiscono",
+          "paragrafi": [
+            "I sarcomi dei tessuti molli possono comparire a qualsiasi età, dai bambini agli anziani, anche se alcuni tipi sono più frequenti in determinate fasce d'età. Nella maggior parte dei casi non c'è una causa evidente.",
+            "Un trauma recente non provoca un sarcoma, ma a volte richiama l'attenzione su una massa che c'era già: anche per questo una tumefazione che non si riassorbe va controllata."
+          ]
+        },
+        {
+          "titolo": "Le domande più frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Il sarcoma fa male? Spesso no, soprattutto all'inizio: proprio per questo l'assenza di dolore non deve rassicurare.",
+            "Basta un'ecografia? L'ecografia può essere un primo esame, ma per studiare una massa sospetta serve la risonanza magnetica.",
+            "Si può togliere in day hospital? Una massa sospetta non va asportata prima di avere gli esami e, se serve, la biopsia."
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Porti con sé:"
+          ],
+          "elenco": [
+            "le immagini su CD o tramite link, non solo i referti;",
+            "qualche informazione su quando ha notato la massa e se è cambiata;",
+            "eventuali referti di interventi o biopsie precedenti."
+          ]
+        },
+        {
+          "titolo": "Quando prenotare",
+          "paragrafi": [
+            "Se ha una massa che cresce, è profonda o supera i 5 centimetri, non aspetti: porti con sé gli esami che ha già e prenoti una visita.",
+            "Ricevo all'Istituto Fisicoterapico di Torino, in via Paolo Sacchi 24. Per prenotare: 011 1927 4275."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita specialistica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "dolore-osseo-notturno",
+      "categoria": "Sintomi",
+      "titolo": "Dolore osseo notturno: quando indagare",
+      "img": "/pellegrino-8pcj/img/rep-cammino.webp",
+      "tempoLettura": "5 min",
+      "intro": "Quasi tutti, prima o poi, hanno un dolore a un osso o a un'articolazione. Nella grande maggioranza dei casi dipende da traumi, sforzi o artrosi. Ma un dolore che compare di notte e non passa con il riposo merita attenzione.",
+      "sezioni": [
+        {
+          "titolo": "Il dolore meccanico e quello che non dorme",
+          "paragrafi": [
+            "Il dolore legato a sforzi, traumi o artrosi è di solito meccanico: aumenta con il movimento e il carico e migliora con il riposo.",
+            "Il dolore di una lesione dell'osso, invece, tende a essere continuo: è presente anche a riposo, spesso peggiora di notte e può svegliare dal sonno. È questa caratteristica che deve far approfondire."
+          ]
+        },
+        {
+          "titolo": "I segnali che meritano un esame",
+          "paragrafi": [
+            "È utile chiedere una valutazione se il dolore:"
+          ],
+          "elenco": [
+            "compare di notte o a riposo e non passa;",
+            "aumenta di settimana in settimana senza un trauma;",
+            "si accompagna a un gonfiore o a una massa;",
+            "si associa a zoppia o a una riduzione del movimento;",
+            "compare in una persona che ha avuto un tumore."
+          ],
+          "chiusura": "Nessuno di questi segnali, da solo, significa tumore. Ma insieme indicano che è il momento di fare un esame."
+        },
+        {
+          "titolo": "Nei bambini e nei ragazzi",
+          "paragrafi": [
+            "I cosiddetti dolori della crescita sono comuni: compaiono la sera, spesso a entrambe le gambe, non lasciano zoppia e al mattino sono passati.",
+            "Diverso è un dolore sempre nello stesso punto, da un solo lato, che sveglia di notte, fa zoppicare o si accompagna a gonfiore. In questi casi è giusto fare una radiografia, soprattutto intorno al ginocchio e alla spalla, sedi tipiche dei tumori ossei dei giovani."
+          ]
+        },
+        {
+          "titolo": "Non solo tumori",
+          "paragrafi": [
+            "Un dolore osseo notturno può avere molte cause: infezioni, fratture da stress, malattie infiammatorie, tumori benigni. Uno dei più tipici è l'osteoma osteoide, un piccolo tumore benigno che dà un dolore notturno che spesso migliora con gli antinfiammatori.",
+            "Per questo la diagnosi si fa con gli esami, non con le ipotesi."
+          ]
+        },
+        {
+          "titolo": "Il primo esame: la radiografia",
+          "paragrafi": [
+            "Una radiografia della zona dolorosa è semplice, rapida e spesso sufficiente per orientare la diagnosi. Se mostra un'alterazione, si completa con la TC e la risonanza magnetica.",
+            "Un consiglio: se il dolore è a un'anca o a un ginocchio, la radiografia va estesa a tutto l'osso, perché a volte il dolore viene riferito lontano dalla sede della lesione."
+          ]
+        },
+        {
+          "titolo": "Se la radiografia mostra una lesione",
+          "paragrafi": [
+            "Non si allarmi: la maggior parte delle lesioni scoperte con una radiografia è benigna. Quello che conta è farla valutare da chi si occupa di tumori dell'osso, prima di qualsiasi intervento o biopsia.",
+            "Spesso basta un controllo nel tempo; in altri casi servono altri esami. In ogni caso, è una decisione da prendere con calma e con le informazioni giuste."
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Per sfruttare al meglio la visita porti con sé:"
+          ],
+          "elenco": [
+            "tutte le immagini, su CD o tramite link, oltre ai referti;",
+            "le informazioni su quando è iniziato il dolore e cosa lo peggiora;",
+            "l'elenco dei farmaci e delle malattie importanti, comprese quelle passate."
+          ]
+        },
+        {
+          "titolo": "Sport e dolore",
+          "paragrafi": [
+            "Negli sportivi un dolore che peggiora con l'attività è spesso una frattura da stress o un sovraccarico, e migliora con il riposo. Se invece il dolore resta anche a riposo, o compare di notte, è prudente fermarsi e fare una radiografia prima di riprendere l'allenamento."
+          ]
+        },
+        {
+          "titolo": "Il ruolo del medico di famiglia",
+          "paragrafi": [
+            "Il medico di famiglia è il primo riferimento: conosce la Sua storia, può prescrivere la radiografia e valutare gli esami del sangue. Se compare un'immagine sospetta, La indirizza allo specialista.",
+            "Un passaggio rapido tra medico di famiglia e ortopedico oncologo evita settimane di attesa e di incertezza.",
+            "Se ha già una radiografia o una risonanza con una lesione descritta nel referto, può prenotare direttamente una visita specialistica."
+          ]
+        },
+        {
+          "titolo": "Cosa fare nell'attesa",
+          "paragrafi": [
+            "Finché la causa non è chiara, eviti di forzare l'arto dolente con sport o carichi pesanti, soprattutto se il dolore aumenta con il peso: un osso indebolito può rompersi più facilmente.",
+            "Non sottovaluti un dolore che non passa solo perché gli antidolorifici lo calmano: il farmaco cura il sintomo, non la causa."
+          ]
+        },
+        {
+          "titolo": "Le domande più frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Serve subito una risonanza? Di solito si parte dalla radiografia: è il medico a decidere se e quali esami aggiungere.",
+            "Il dolore notturno è sempre grave? No: anche un'infiammazione o un sovraccarico possono dare dolore di notte. Ma se persiste, va indagato.",
+            "A chi devo rivolgermi? Al Suo medico di famiglia, che potrà prescrivere la radiografia e, se serve, indirizzarLa allo specialista."
+          ]
+        },
+        {
+          "titolo": "Quando è urgente",
+          "paragrafi": [
+            "Alcune situazioni richiedono una valutazione rapida: un dolore improvviso e fortissimo dopo un piccolo trauma, l'impossibilità di caricare su una gamba, o debolezza e formicolii alle gambe in chi ha mal di schiena e una storia di tumore.",
+            "In questi casi non aspetti la visita programmata: si rivolga al Pronto Soccorso."
+          ]
+        },
+        {
+          "titolo": "Dove ricevo",
+          "paragrafi": [
+            "Ricevo all'Istituto Fisicoterapico di Torino, in via Paolo Sacchi 24, e opero al CTO di Torino. Per prenotare può chiamare lo 011 1927 4275."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita specialistica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "dott.pietropellegrino",
+    "nota": "il Dottore non ha un profilo: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Dolore osseo notturno: quando indagare",
+        "punti": [
+          "Non passa con il riposo",
+          "Ti sveglia di notte",
+          "Aumenta da settimane senza un trauma",
+          "C'è un gonfiore che cresce"
+        ],
+        "didascalia": "La maggior parte dei dolori ossei è meccanica e migliora con il riposo. Quando non è così, il primo passo è semplice: una radiografia.",
+        "hash": "",
+        "hashtag": "#ortopedia #doloreosseo #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Metastasi ossee: cosa si può fare?",
+        "risposta": "Molto, e in squadra.",
+        "didascalia": "Radioterapia, farmaci che rinforzano l'osso, chirurgia per prevenire le fratture: l'obiettivo è meno dolore e più autonomia.",
+        "hashtag": "#metastasiossee #oncologia #CTOtorino"
+      },
+      {
+        "stile": "foto",
+        "immagine": "microscopio",
+        "titolo": "Sarcoma: i segnali",
+        "sottotitolo": "Più di 5 cm, profondo, che cresce",
+        "didascalia": "Una massa dei tessuti molli con anche uno solo di questi segnali va studiata con la risonanza prima di qualsiasi intervento.",
+        "hashtag": "#sarcoma #ItalianSarcomaGroup #torino"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": null,
+    "luoghi": [
+      {
+        "tipo": "Istituto Fisicoterapico di Torino",
+        "nome": "Istituto Fisicoterapico di Torino",
+        "indirizzo": "Via Paolo Sacchi 24",
+        "citta": "Torino",
+        "cap": "10128",
+        "mappa": true,
+        "principale": true,
+        "frase": "l'Istituto Fisicoterapico di Torino, via Paolo Sacchi 24",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "011 1927 4275"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "ospedale": {
+    "nome": "CTO · Città della Salute e della Scienza di Torino",
+    "reparto": "Chirurgia Oncologica Ortopedica",
+    "indirizzo": "Via Zuretti 29, Torino"
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Porti con sé gli esami che ha già, immagini e referti: li guardiamo insieme durante la visita.",
+    "telefono": "01119274275",
+    "telefonoLabel": "011 1927 4275",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "emailRichieste": "pragmasolutions.to@gmail.com",
+    "notaRichieste": "Anteprima: le richieste inviate da questa demo arrivano a Pragma Solutions, non al medico.",
+    "oggettoMail": "Richiesta di visita di ortopedia oncologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi il giorno e l'orario che preferisce: La ricontattiamo per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [],
+      "pomeriggio": [
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo",
+        "Seconda opinione"
+      ],
+      "motivi": [
+        "Dolore osseo che non passa",
+        "Una massa o un gonfiore",
+        "Un esame da valutare",
+        "Seconda opinione",
+        "Metastasi ossee",
+        "Sarcoma dei tessuti molli",
+        "Controllo dopo l'intervento",
+        "Protesi da rivedere",
+        "Ortopedia e traumatologia"
+      ],
+      "motiviFrase": [
+        "un dolore osseo che non passa",
+        "una massa o un gonfiore",
+        "un esame (radiografia, TC o risonanza) da valutare",
+        "una seconda opinione",
+        "metastasi ossee",
+        "un sarcoma dei tessuti molli",
+        "un controllo dopo l'intervento",
+        "una protesi da rivedere",
+        "un problema ortopedico"
+      ],
+      "luoghi": [
+        {
+          "nome": "Istituto Fisicoterapico · Via Paolo Sacchi 24",
+          "frase": "l'Istituto Fisicoterapico di Torino, via Paolo Sacchi 24"
+        }
+      ],
+      "privacy": null,
+      "privacyTesto": "I dati che inserisce servono solo a ricontattarLa per fissare la visita e non vengono usati per altri scopi.",
+      "notePlaceholder": "Per esempio quali esami ha già fatto"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#EEF3FB",
+      "ink": "#0B1220",
+      "muted": "#566176",
+      "line": "#DCE3EE",
+      "brand": "#1C64F2",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#7CC8FF",
+      "deep": "#0B1220",
+      "deep-ink": "#C9D6EA"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Archivo",
+    "fontTesti": "Public Sans",
+    "fontUi": "Public Sans",
+    "favicon": "/pellegrino-8pcj/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/pellegrino-8pcj/brand/brand.json",
+    "pagine": [
+      "https://pietropellegrino.it/",
+      "https://www.topdoctors.it/dottor/pietro-pellegrino"
+    ]
+  }
+}

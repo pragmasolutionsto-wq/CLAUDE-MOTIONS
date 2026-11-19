@@ -1,0 +1,29 @@
+{
+  "medico": "Dott. Pietro Pellegrino",
+  "specialita": "Ortopedia e Traumatologia, chirurgia ortopedica oncologica",
+  "sito": "https://pietropellegrino.it/ (template TopDoctors in Nuxt; il contenuto si carica da TopDoctors)",
+  "incarico": "Dirigente Medico, Chirurgia Oncologica Ortopedica, CTO di Torino (2018-oggi)",
+  "logo": "nessun logo: logotipo di testo",
+  "colori": {
+    "sito": "blu del template TopDoctors #1C64F2",
+    "demo": "blu #1C64F2 + azzurro raggi X #7CC8FF su blu notte #0B1220"
+  },
+  "font": { "sito": "template TopDoctors", "demo": ["Archivo", "Public Sans"] },
+  "contatti": {
+    "telefono": "+39 011 19274275 (numero TopDoctors)",
+    "email": "nessuna email pubblicata: prenotazione demo verso Pragma, dichiarato in pagina",
+    "linkedin": "https://www.linkedin.com/in/pietro-pellegrino-07079433/",
+    "researchgate": "https://www.researchgate.net/profile/Pietro-Pellegrino-2"
+  },
+  "sedi": ["Istituto Fisicoterapico di Torino, Via Paolo Sacchi 24, 10128 Torino (visite private)", "CTO, Via Zuretti 29, Torino (ospedale, dove opera)"],
+  "whatsapp": "nessuno",
+  "foto": [
+    "foto-01-profilo.png: foto del profilo del suo sito (già scontornata, 488x511), scaricata dal CDN objects-it.cdn-topdoctors.com perché il CDN del sito (staticnew-prod.topdoctors.it) risponde con la sfida anti-bot di Cloudflare, che non è stata aggirata"
+  ],
+  "foto_non_usate": "foto su MioDottore, IFT, ResearchGate, LinkedIn (siti terzi, non necessarie)",
+  "cv": "laurea Torino 2011; specializzazione Torino 2017; fellowship Reus 2015, Rizzoli 2017, Inselspital Berna; Dirigente CTO dal 2018; EMMAS Bocconi 2025-26; socio SIOT, ISOLS, ISG, EMSOS, AO Trauma; oltre 20 pubblicazioni e circa 40 comunicazioni e poster",
+  "recensioni": "Top Doctors: media 5/5 su 2 recensioni, senza testo (nomi dei pazienti non riportati)",
+  "articolo_sito": "un solo articolo, pubblicato su TopDoctors e non sul suo sito: «Ortopedia oncologica: diagnosi precoce e trattamenti personalizzati»",
+  "problemi_sito": "template TopDoctors uguale a migliaia di altri, foto di stock (stetoscopio) in hero e sua foto non visibile, nessuna email, nessun articolo sul suo sito, contenuti delle prestazioni generici (es. fibroscopia, protesi mammarie nel testo 'sostituzione di protesi'), banner cookie, contenuto caricato in JavaScript (poco visibile ai motori di ricerca)",
+  "repertorio": "Unsplash gratuito già usato in altre demo: sala operatoria, chirurgo, microscopio, laboratorio, coppie che camminano"
+}
