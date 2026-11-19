@@ -283,3 +283,25 @@ html { scroll-behavior: smooth; }
   .esame-punto { transition: width .4s, opacity .4s; }
   .stile-ascolto .card { border-radius: 28px; }
 }
+
+/* Layout "percorso": lingua, dove, fasi, gravidanza, stanze, équipe, storia */
+@layer components {
+  .lingua-chip { color: var(--c-muted); transition: background-color .2s, color .2s; }
+  .lingua-chip[aria-pressed="true"] { background: var(--c-brand); color: #fff; }
+  .dove-chip { background: #fff; transition: background-color .2s, border-color .2s; }
+  .dove-chip[aria-pressed="true"] { border-color: var(--c-brand2); background: color-mix(in srgb, var(--c-brand2) 16%, #fff); }
+  .fase-tab { background: #fff; color: var(--c-brand); transition: background-color .2s, color .2s; }
+  .fase-tab:hover { background: color-mix(in srgb, var(--c-brand2) 14%, #fff); }
+  .fase-tab[aria-selected="true"] { background: var(--c-brand); color: #fff; }
+  .fase-tab[aria-selected="true"] .text-muted { color: var(--c-brand2) !important; }
+  .grav-finestra { background: rgb(255 255 255 / .14); transition: background-color .3s; }
+  .grav-finestra.attiva { background: var(--c-brand2); }
+  .grav-range { accent-color: var(--c-brand2); height: 28px; }
+  .stanza-chip, .filtro-chip { background: #fff; transition: background-color .2s, color .2s, border-color .2s; }
+  .stanza-chip[aria-pressed="true"], .filtro-chip[aria-pressed="true"] { background: var(--c-brand); border-color: var(--c-brand); color: #fff; }
+  .membro { transition: opacity .35s, filter .35s; }
+  .membro.spento { opacity: .28; filter: grayscale(1); }
+  .tappa-punto { transition: background-color .4s; }
+  [data-tappa].accesa .tappa-punto { background: var(--c-brand2); }
+  .stile-percorso .card { border-radius: 28px; }
+}

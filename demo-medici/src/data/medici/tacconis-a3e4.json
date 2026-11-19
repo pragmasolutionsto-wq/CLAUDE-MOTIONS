@@ -1,0 +1,1225 @@
+{
+  "slug": "tacconis-a3e4",
+  "layout": "percorso",
+  "sitoOrigine": "https://www.ginecologapaolatacconis.com/",
+  "titolo": "Dott.ssa",
+  "nome": "Paola Tacconis",
+  "specialita": "Specialista in Ginecologia e Ostetricia, Master in Sessuologia",
+  "firma": "Ginecologa",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott.ssa Paola Tacconis · Ginecologa a Torino, Centro Ginecologico",
+    "description": "Ginecologia e ostetricia a Torino: controllo annuale con ecografia, gravidanza, NT e test del DNA, endometriosi, menopausa e ormoni bioidentici. Visite anche in francese e inglese."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "/tacconis-a3e4/img/volto.webp",
+    "logoAlt": "Dottoressa Paola Tacconis"
+  },
+  "foto": {
+    "ritratto": "/tacconis-a3e4/img/ritratto.webp",
+    "ritrattoAlt": "La Dott.ssa Paola Tacconis nel suo studio",
+    "volto": "/tacconis-a3e4/img/volto.webp",
+    "scrivania": "/tacconis-a3e4/img/scrivania.webp",
+    "insieme": "/tacconis-a3e4/img/insieme.webp",
+    "cartella": "/tacconis-a3e4/img/cartella.webp",
+    "ecografia": "/tacconis-a3e4/img/ecografia.webp",
+    "sala": "/tacconis-a3e4/img/sala.webp",
+    "sorce": "/tacconis-a3e4/img/sorce.webp",
+    "utero": "/tacconis-a3e4/img/rep-utero.webp",
+    "estradiolo": "/tacconis-a3e4/img/rep-estradiolo.webp",
+    "isteroscopia": "/tacconis-a3e4/img/isteroscopia.webp"
+  },
+  "hero": {
+    "eyebrow": "Ginecologa a Torino · Centro Ginecologico",
+    "titolo": "Al fianco di ogni donna, in ogni fase della vita.",
+    "testo": "Da più di 30 anni mi occupo di prevenzione, cura e consulenza in ginecologia e ostetricia. Nel mio Centro la visita è sempre accompagnata dall'ecografia.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti una visita",
+      "motivi": [
+        "Controllo annuale",
+        "Pap test o HPV test",
+        "Gravidanza",
+        "Ecografia NT o test del DNA",
+        "Desiderio di gravidanza",
+        "Fertilità e PMA",
+        "Endometriosi o ciclo doloroso",
+        "Menopausa",
+        "Contraccezione",
+        "Disturbi vaginali",
+        "Controllo al seno",
+        "Isteroscopia"
+      ],
+      "motiviFrase": [
+        "il controllo ginecologico annuale",
+        "un Pap test o un HPV test",
+        "la mia gravidanza",
+        "l'ecografia NT o il test del DNA fetale",
+        "una consulenza preconcezionale",
+        "una consulenza sulla fertilità",
+        "dolori mestruali o sospetta endometriosi",
+        "la menopausa",
+        "la contraccezione",
+        "disturbi vaginali",
+        "un controllo al seno",
+        "un'isteroscopia"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Dove"
+    }
+  },
+  "lingue": [
+    {
+      "id": "it",
+      "nome": "Italiano",
+      "saluto": "Buongiorno Dottoressa, vorrei prenotare una visita per {m} presso {s}.",
+      "oggetto": "Richiesta di visita ginecologica"
+    },
+    {
+      "id": "fr",
+      "nome": "Français",
+      "saluto": "Bonjour Docteur, je souhaiterais prendre rendez-vous pour {m} {s}.",
+      "oggetto": "Demande de rendez-vous gynécologique"
+    },
+    {
+      "id": "en",
+      "nome": "English",
+      "saluto": "Good morning Doctor, I would like to book an appointment for {m} {s}.",
+      "oggetto": "Gynaecological appointment request"
+    }
+  ],
+  "motivi4": [
+    [
+      "Controllo annuale",
+      "il controllo ginecologico annuale",
+      "le contrôle gynécologique annuel",
+      "my annual gynaecological check-up"
+    ],
+    [
+      "Pap test o HPV test",
+      "un Pap test o un HPV test",
+      "un frottis ou un test HPV",
+      "a Pap smear or an HPV test"
+    ],
+    [
+      "Gravidanza",
+      "la mia gravidanza",
+      "le suivi de ma grossesse",
+      "my pregnancy"
+    ],
+    [
+      "Ecografia NT o test del DNA",
+      "l'ecografia NT o il test del DNA fetale",
+      "l'échographie de la clarté nucale ou le test ADN fœtal",
+      "the NT scan or the fetal DNA test"
+    ],
+    [
+      "Desiderio di gravidanza",
+      "una consulenza preconcezionale",
+      "une consultation préconceptionnelle",
+      "a preconception consultation"
+    ],
+    [
+      "Fertilità e PMA",
+      "una consulenza sulla fertilità",
+      "une consultation sur la fertilité",
+      "a fertility consultation"
+    ],
+    [
+      "Endometriosi o ciclo doloroso",
+      "dolori mestruali o sospetta endometriosi",
+      "des règles douloureuses ou une suspicion d'endométriose",
+      "painful periods or suspected endometriosis"
+    ],
+    [
+      "Menopausa",
+      "la menopausa",
+      "la ménopause",
+      "menopause"
+    ],
+    [
+      "Contraccezione",
+      "la contraccezione",
+      "la contraception",
+      "contraception"
+    ],
+    [
+      "Disturbi vaginali",
+      "disturbi vaginali",
+      "des troubles vaginaux",
+      "vaginal symptoms"
+    ],
+    [
+      "Controllo al seno",
+      "un controllo al seno",
+      "un contrôle des seins",
+      "a breast check-up"
+    ],
+    [
+      "Isteroscopia",
+      "un'isteroscopia",
+      "une hystéroscopie",
+      "a hysteroscopy"
+    ]
+  ],
+  "dove": [
+    {
+      "id": "studio",
+      "nome": "In studio",
+      "sotto": "Corso Galileo Ferraris 51",
+      "it": "lo studio di corso Galileo Ferraris 51, Torino",
+      "fr": "au cabinet du corso Galileo Ferraris 51, à Turin",
+      "en": "at your practice in Corso Galileo Ferraris 51, Turin"
+    },
+    {
+      "id": "domicilio",
+      "nome": "A domicilio",
+      "sotto": "Torino, da 450 €",
+      "it": "il mio domicilio, a Torino",
+      "fr": "à mon domicile, à Turin",
+      "en": "at my home in Turin"
+    }
+  ],
+  "numeri": [
+    {
+      "valore": 30,
+      "suffisso": "+",
+      "testo": "anni al fianco delle donne"
+    },
+    {
+      "valore": 3,
+      "suffisso": "",
+      "testo": "lingue: italiano, francese, inglese"
+    },
+    {
+      "valore": 9,
+      "suffisso": "",
+      "testo": "professionisti nel Centro"
+    }
+  ],
+  "fasi": [
+    {
+      "id": "adolescenza",
+      "nome": "Adolescenza",
+      "eta": "fino ai 20 anni",
+      "motivo": 6,
+      "testo": "La prima visita ginecologica andrebbe fatta entro i 20 anni, anche nelle ragazze che non hanno ancora avuto rapporti: già il colloquio può indirizzare su rischi come l'endometriosi.",
+      "controlli": [
+        "Prima visita, con ecografia transaddominale nelle ragazze vergini",
+        "Ciclo irregolare o molto doloroso",
+        "Una volta al mese, nel Centro, visite per l'infanzia e l'adolescenza"
+      ]
+    },
+    {
+      "id": "fertile",
+      "nome": "Età fertile",
+      "eta": "dai 20 anni",
+      "motivo": 0,
+      "testo": "Anche se sta bene, faccia una visita di controllo ogni anno. In studio la visita è sempre accompagnata dall'ecografia.",
+      "controlli": [
+        "Visita annuale con ecografia",
+        "Pap test ogni anno, al massimo entro tre anni dal precedente, o HPV test",
+        "Contraccezione su misura: pillola, spirale, impianto sottocutaneo",
+        "Endometriosi, PCO e irregolarità del ciclo"
+      ]
+    },
+    {
+      "id": "desiderio",
+      "nome": "Cercare un figlio",
+      "eta": "prima del concepimento",
+      "motivo": 4,
+      "testo": "Se programma una gravidanza, la visita preconcezionale fa un bilancio della Sua salute e riduce i rischi per il bambino.",
+      "controlli": [
+        "Esami del sangue per Lei e per il partner, vaccinazioni, stili di vita",
+        "Test al portatore in studio: fibrosi cistica, AMS, DMD, X fragile",
+        "Consulenza sulla fertilità con la Dr.ssa Sorce e centri PMA in Italia e all'estero",
+        "Preservazione della fertilità (social freezing)"
+      ]
+    },
+    {
+      "id": "gravidanza",
+      "nome": "Gravidanza",
+      "eta": "40 settimane",
+      "motivo": 2,
+      "testo": "Con la Dr.ssa Silvia Sorce e la Dr.ssa Martina Mazzoli La seguo durante e dopo la gravidanza, dalla prima ecografia alla nascita.",
+      "controlli": [
+        "Ecografie ostetriche in studio",
+        "Ecografia NT e test del DNA fetale (NIPT)",
+        "Ecografia morfologica per le pazienti che seguo",
+        "Più sotto: la gravidanza settimana per settimana"
+      ]
+    },
+    {
+      "id": "menopausa",
+      "nome": "Perimenopausa e menopausa",
+      "eta": "intorno ai 50 anni",
+      "motivo": 7,
+      "testo": "È una fase delicata, che richiede prima di tutto ascolto. Con la visita, l'ecografia e gli esami ormonali costruiamo una terapia su misura.",
+      "controlli": [
+        "Terapia ormonale anche con ormoni bioidentici, al dosaggio minimo efficace",
+        "Vampate, sonno, umore, desiderio",
+        "Secchezza vaginale",
+        "Salute delle ossa"
+      ]
+    },
+    {
+      "id": "dopo",
+      "nome": "Dopo la menopausa",
+      "eta": "la prevenzione non ha età",
+      "motivo": 0,
+      "testo": "La prevenzione dei tumori dell'apparato genitale e del seno continua per tutta la vita. E se spostarsi è difficile, la visito a casa.",
+      "controlli": [
+        "Controllo annuale e prevenzione dei tumori femminili",
+        "Pavimento pelvico e incontinenza urinaria con la Dr.ssa Rita Brero",
+        "Visite a domicilio a Torino, con ecografo portatile"
+      ]
+    }
+  ],
+  "gravidanza": [
+    {
+      "da": 6,
+      "a": 10,
+      "titolo": "Prima ecografia",
+      "testo": "Già dalla sesta settimana vediamo la corretta evoluzione della gravidanza ed escludiamo una gravidanza extrauterina."
+    },
+    {
+      "da": 11,
+      "a": 13,
+      "titolo": "Ecografia NT e test combinato",
+      "testo": "Tra 11 e 13 settimane misuriamo la translucenza nucale; si può associare un prelievo per il test combinato. La consiglio sempre, anche a chi fa il test del DNA."
+    },
+    {
+      "da": 11,
+      "a": 13,
+      "titolo": "Test del DNA fetale (NIPT)",
+      "testo": "Si può eseguire dalla 11ª settimana: è un prelievo di sangue materno. Un esito positivo va confermato con villocentesi o amniocentesi."
+    },
+    {
+      "da": 12,
+      "a": 13,
+      "titolo": "Primo studio dell'anatomia",
+      "testo": "Dalla dodicesima settimana iniziamo a studiare l'anatomia del bambino, per via addominale o vaginale."
+    },
+    {
+      "da": 14,
+      "a": 22,
+      "titolo": "Il sesso del bambino",
+      "testo": "Dipende dalla posizione del bambino: si vede tra 14 e 22 settimane."
+    },
+    {
+      "da": 19,
+      "a": 21,
+      "titolo": "Ecografia morfologica",
+      "testo": "Tra 19 e 21 settimane studiamo l'anatomia del bambino. La eseguo solo alle pazienti che seguo: la continuità riduce l'errore."
+    },
+    {
+      "da": 28,
+      "a": 41,
+      "titolo": "Terzo trimestre",
+      "testo": "L'ecografia valuta crescita, benessere e posizione del bambino, e ci aiuta a scegliere insieme la modalità del parto."
+    }
+  ],
+  "team": [
+    {
+      "nome": "Dott.ssa Paola Tacconis",
+      "ruolo": "Ginecologia e Ostetricia, Master in Sessuologia",
+      "testo": "Guido il Centro e seguo la donna in ogni fase della vita.",
+      "foto": "/tacconis-a3e4/img/volto.webp",
+      "tag": [
+        "gravidanza",
+        "fertilita",
+        "endometriosi",
+        "seno",
+        "pavimento",
+        "adolescenza",
+        "chirurgia",
+        "pelle"
+      ]
+    },
+    {
+      "nome": "Dr.ssa Silvia Sorce",
+      "ruolo": "Ginecologia e Ostetricia",
+      "testo": "Diagnosi prenatale, gravidanza patologica, poliabortività e Procreazione Medicalmente Assistita (Clinica Eugin Torino).",
+      "foto": "/tacconis-a3e4/img/sorce.webp",
+      "tag": [
+        "gravidanza",
+        "fertilita"
+      ]
+    },
+    {
+      "nome": "Dr.ssa Martina Mazzoli",
+      "ruolo": "Ginecologia e Ostetricia",
+      "testo": "Segue la donna in gravidanza insieme a me.",
+      "foto": "",
+      "tag": [
+        "gravidanza"
+      ]
+    },
+    {
+      "nome": "Prof. Turco e Dr.ssa Alberghetti",
+      "ruolo": "INOC Istituto Nazionale Oncologico Candiolo",
+      "testo": "Patologie maligne ginecologiche ed endometriosi complessa. La Dr.ssa Alberghetti ha studio nel Centro.",
+      "foto": "",
+      "tag": [
+        "endometriosi",
+        "chirurgia"
+      ]
+    },
+    {
+      "nome": "Dr.ssa Giada Pozzi",
+      "ruolo": "Chirurgia senologica",
+      "testo": "Visita nel Centro e opera all'INOC di Candiolo o in cliniche private.",
+      "foto": "",
+      "tag": [
+        "seno",
+        "chirurgia"
+      ]
+    },
+    {
+      "nome": "Dr. Davide Bosco",
+      "ruolo": "Radiologo",
+      "testo": "Ecografia senologica; lavora anche all'INOC di Candiolo.",
+      "foto": "",
+      "tag": [
+        "seno"
+      ]
+    },
+    {
+      "nome": "Dr. Antonio Camarda",
+      "ruolo": "Ginecologia",
+      "testo": "Una volta al mese: visite per l'infanzia e l'adolescenza ed ecografia ginecologica di secondo livello.",
+      "foto": "",
+      "tag": [
+        "adolescenza",
+        "endometriosi"
+      ]
+    },
+    {
+      "nome": "Dr.ssa Rita Brero",
+      "ruolo": "Fisioterapia del pavimento pelvico, osteopata",
+      "testo": "Incontinenza urinaria, postura in gravidanza, trattamento delle cicatrici. Ha lavorato per oltre 15 anni al Centro dell'Unità Spinale.",
+      "foto": "",
+      "tag": [
+        "pavimento",
+        "gravidanza"
+      ]
+    },
+    {
+      "nome": "Dr.ssa Carola Aquino",
+      "ruolo": "Dermatologia, Ospedale San Lazzaro",
+      "testo": "Controllo dei nei, patologie vulvari, rimozione di lesioni cutanee e medicina estetica.",
+      "foto": "",
+      "tag": [
+        "pelle"
+      ]
+    },
+    {
+      "nome": "Chirurghi a chiamata",
+      "ruolo": "Consulenza in studio su richiesta",
+      "testo": "Chirurgia ginecologica: Prof. Turco e Dr.ssa Brokaj. Chirurgia senologica: Dr.ssa Pozzi e Dr.ssa Grilz.",
+      "foto": "",
+      "tag": [
+        "chirurgia",
+        "seno"
+      ]
+    }
+  ],
+  "filtri": [
+    [
+      "tutti",
+      "Tutto il Centro"
+    ],
+    [
+      "gravidanza",
+      "Gravidanza"
+    ],
+    [
+      "fertilita",
+      "Fertilità"
+    ],
+    [
+      "endometriosi",
+      "Endometriosi e oncologia"
+    ],
+    [
+      "seno",
+      "Seno"
+    ],
+    [
+      "pavimento",
+      "Pavimento pelvico"
+    ],
+    [
+      "pelle",
+      "Pelle"
+    ],
+    [
+      "adolescenza",
+      "Adolescenza"
+    ],
+    [
+      "chirurgia",
+      "Chirurgia"
+    ]
+  ],
+  "centro": [
+    {
+      "img": "/tacconis-a3e4/img/centro-cortile.webp",
+      "nome": "Il cortile",
+      "testo": "Si entra da un cortile luminoso, in pieno centro."
+    },
+    {
+      "img": "/tacconis-a3e4/img/centro-ingresso.webp",
+      "nome": "L'ingresso",
+      "testo": "Il Centro Ginecologico di Torino, uno spazio dedicato solo alla salute della donna."
+    },
+    {
+      "img": "/tacconis-a3e4/img/centro-accoglienza.webp",
+      "nome": "L'accoglienza",
+      "testo": "Qui fissiamo gli appuntamenti e La accogliamo."
+    },
+    {
+      "img": "/tacconis-a3e4/img/centro-attesa.webp",
+      "nome": "La sala d'attesa",
+      "testo": "Un ambiente accogliente, pensato per stare tranquille."
+    },
+    {
+      "img": "/tacconis-a3e4/img/centro-ambulatorio.webp",
+      "nome": "L'ambulatorio",
+      "testo": "Ecografi di ultima generazione: la visita è sempre accompagnata dall'ecografia."
+    }
+  ],
+  "storia": [
+    {
+      "titolo": "Torino, Francia, Belgio",
+      "testo": "Sono nata a Torino e fino a 18 anni ho vissuto all'estero, in Francia e in Belgio, dove ho preso la maturità scientifica. Per questo visito anche in francese e in inglese."
+    },
+    {
+      "titolo": "Medicina a Torino",
+      "testo": "Mi sono laureata a pieni voti all'Università di Torino. Durante gli studi ho frequentato la medicina interna delle Molinette, con indirizzo endocrinologico."
+    },
+    {
+      "titolo": "Il Mauriziano e il Sant'Anna",
+      "testo": "Mi sono formata nella divisione di Ginecologia e Ostetricia del Mauriziano diretta dal Prof. M. Massobrio e alla clinica universitaria del Sant'Anna."
+    },
+    {
+      "titolo": "L'American Hospital of Paris",
+      "testo": "Durante la specializzazione mi sono dedicata allo studio e alla ricerca sulla fertilità e sulla fecondazione in vitro."
+    },
+    {
+      "titolo": "Specialista e dirigente medico",
+      "testo": "Specializzata a pieni voti, ho vinto una borsa di studio per l'ostetricia al Mauriziano e ho lavorato come dirigente medico in diversi ospedali di Torino e provincia."
+    },
+    {
+      "titolo": "Master in Sessuologia",
+      "testo": "All'Università di Torino. E i miei studi non finiscono mai: continuo a frequentare congressi e corsi in Italia e all'estero."
+    },
+    {
+      "titolo": "Il Centro Ginecologico di Torino",
+      "testo": "Oggi lavoro nel mio studio, diventato un Centro con un'équipe dedicata alla donna, e collaboro con ospedali e case di cura. Oltre alla professione, sono una donna e una mamma."
+    }
+  ],
+  "testimonianza": {
+    "testo": "Alla cortese attenzione della Dott.ssa Paola Tacconis per la sua capacità di capire i mali che l'anima comunica al corpo. Con gratitudine.",
+    "firma": "Paola Alessandra T."
+  },
+  "aree": {
+    "titolo": "Di cosa mi occupo",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "endometriosi",
+    "categoria": "Endometriosi",
+    "titolo": "Endometriosi: sintomi, diagnosi e cure",
+    "img": "/tacconis-a3e4/img/rep-utero.webp",
+    "tempoLettura": "7 min",
+    "intro": "L'endometriosi è una malattia cronica e infiammatoria che riguarda milioni di donne in età fertile. È molto diffusa, eppure spesso viene diagnosticata con anni di ritardo. Riconoscere presto i sintomi può fare la differenza per il dolore, la qualità di vita e la fertilità.",
+    "sezioni": [
+      {
+        "titolo": "Che cos'è",
+        "paragrafi": [
+          "L'endometriosi è la presenza di un tessuto simile all'endometrio, cioè al rivestimento interno dell'utero, fuori dalla sua sede normale: sulle ovaie, sulle tube, sul peritoneo, sulla vescica, sull'intestino e, nei casi più complessi, in altre zone della pelvi.",
+          "Come l'endometrio, anche questo tessuto risponde agli ormoni del ciclo: provoca infiammazione, sanguinamento e dolore. Nel tempo può favorire aderenze, cisti ovariche (gli endometriomi) e alterazioni che peggiorano la qualità di vita e la fertilità."
+        ]
+      },
+      {
+        "titolo": "I sintomi",
+        "paragrafi": [
+          "L'intensità cambia molto da donna a donna. I sintomi più frequenti sono:"
+        ],
+        "elenco": [
+          "dolore mestruale intenso (dismenorrea);",
+          "dolore pelvico cronico;",
+          "dolore durante i rapporti (dispareunia);",
+          "dolore a urinare o a evacuare;",
+          "gonfiore addominale e stanchezza cronica;",
+          "irregolarità intestinali o del ciclo;",
+          "difficoltà ad avere una gravidanza."
+        ],
+        "chiusura": "Un dolore mestruale che limita le attività di ogni giorno o richiede spesso antidolorifici non è normale: merita sempre una visita."
+      },
+      {
+        "titolo": "Le forme senza sintomi",
+        "paragrafi": [
+          "Esistono anche forme di endometriosi senza sintomi. Per questo il controllo ginecologico annuale, sempre con l'ecografia, è importante anche come prevenzione.",
+          "Consiglio una prima visita ginecologica entro i 20 anni, anche nelle ragazze che non hanno ancora avuto rapporti: il colloquio può già indirizzare sul rischio di questa malattia."
+        ]
+      },
+      {
+        "titolo": "Perché la diagnosi arriva tardi",
+        "paragrafi": [
+          "Molte donne convivono per anni con un forte dolore mestruale pensando che sia normale, prima di fare una visita. Inoltre non sempre l'estensione della malattia corrisponde all'intensità del dolore.",
+          "La visita andrebbe sempre accompagnata dall'ecografia, che ne aumenta molto l'accuratezza. Un'ecografia pelvica eseguita da mani esperte, eventualmente con la risonanza magnetica, riduce il ritardo diagnostico."
+        ]
+      },
+      {
+        "titolo": "Come si fa la diagnosi",
+        "paragrafi": [
+          "Si parte da una storia clinica accurata e dalla visita ginecologica. L'ecografia transvaginale è oggi uno degli strumenti più importanti, soprattutto per le forme che coinvolgono le ovaie e alcune strutture profonde della pelvi. Nelle ragazze vergini si esegue un'ecografia transaddominale, eventualmente associata a quella transrettale."
+        ],
+        "elenco": [
+          "ecografia di secondo livello;",
+          "risonanza magnetica pelvica;",
+          "esami del sangue;",
+          "valutazione con altri specialisti."
+        ],
+        "chiusura": "Questi accertamenti, quando servono, definiscono l'estensione della malattia e il piano di cura."
+      },
+      {
+        "titolo": "Le terapie con i farmaci",
+        "paragrafi": [
+          "Nella maggior parte dei casi si comincia con una terapia farmacologica personalizzata, che riduce l'attività delle lesioni, l'infiammazione e il dolore. Le possibilità comprendono la pillola combinata, i progestinici, i dispositivi intrauterini medicati e i farmaci che modulano l'attività delle ovaie.",
+          "La scelta dipende dall'età, dai sintomi, dall'estensione della malattia e dal desiderio di gravidanza. Non esiste una terapia valida per tutte: ogni percorso va costruito su misura e controllato nel tempo."
+        ]
+      },
+      {
+        "titolo": "Quando serve l'intervento",
+        "paragrafi": [
+          "La chirurgia si valuta quando:"
+        ],
+        "elenco": [
+          "il dolore è molto forte;",
+          "ci sono endometriomi ovarici di dimensioni importanti, con rischio di torsione;",
+          "sono coinvolti intestino, vescica o altri organi;",
+          "la malattia compromette la fertilità;",
+          "i sintomi non migliorano con le terapie."
+        ],
+        "chiusura": "Oggi la laparoscopia, mini-invasiva, è il trattamento di riferimento nella maggior parte dei casi. Va sempre pianificata tenendo conto del desiderio di gravidanza e della riserva ovarica."
+      },
+      {
+        "titolo": "Endometriosi e fertilità",
+        "paragrafi": [
+          "L'endometriosi è una delle principali cause ginecologiche di infertilità: può alterare tube e ovaie, creare infiammazione e aderenze, ridurre la qualità degli ovociti e la riserva ovarica.",
+          "Una diagnosi di endometriosi però non significa infertilità. Molte donne hanno una gravidanza spontanea, altre possono essere aiutate dalla procreazione medicalmente assistita. In alcuni casi, per esempio prima di un intervento sulle ovaie o con una riserva già ridotta, valutiamo il congelamento degli ovociti."
+        ]
+      },
+      {
+        "titolo": "Un diario del dolore",
+        "paragrafi": [
+          "Prima della visita può essere utile tenere per due o tre cicli un piccolo diario: in quali giorni compare il dolore, quanto è forte da 0 a 10, quali antidolorifici prende e se il dolore c'è anche durante i rapporti, a urinare o a evacuare.",
+          "Sono informazioni preziose: mi aiutano a capire meglio la malattia e, nel tempo, a valutare se la terapia sta funzionando."
+        ]
+      },
+      {
+        "titolo": "Non solo dolore",
+        "paragrafi": [
+          "L'endometriosi può pesare sul lavoro, sullo studio, sulla vita di coppia e sull'umore. La stanchezza cronica è un sintomo reale, non una debolezza.",
+          "Parlarne apertamente in visita fa parte della cura: insieme cerchiamo la terapia che Le permetta di stare meglio nella vita di tutti i giorni, al lavoro, nello sport e nella vita di coppia."
+        ]
+      },
+      {
+        "titolo": "Un percorso con più specialisti",
+        "paragrafi": [
+          "Nei casi complessi lavoro con altri specialisti: radiologi, chirurghi, esperti di fertilità e, quando serve, psicologi. Nel Centro collaboriamo con l'INOC di Candiolo, con il Prof. Turco e la Dr.ssa Alberghetti, per l'endometriosi complessa.",
+          "Se ha dolori mestruali molto forti, dolore pelvico che non passa, dolore nei rapporti o difficoltà a rimanere incinta, prenoti una visita: prima si capisce, prima si può scegliere la cura giusta."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ginecologica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "menopausa-ormoni-bioidentici",
+      "categoria": "Menopausa",
+      "titolo": "Menopausa e ormoni bioidentici: cosa sono e quando usarli",
+      "img": "/tacconis-a3e4/img/rep-estradiolo.webp",
+      "tempoLettura": "6 min",
+      "intro": "La menopausa è una tappa naturale, ma anche un momento di grande trasformazione fisica ed emotiva. I cambiamenti ormonali possono toccare il sonno, l'umore, la pelle, la sessualità, le ossa e il cuore. Ecco come la affronto con le mie pazienti.",
+      "sezioni": [
+        {
+          "titolo": "Perimenopausa: la fase di passaggio",
+          "paragrafi": [
+            "Prima della menopausa vera e propria, gli estrogeni e il progesterone cominciano a oscillare. È una fase delicata, che richiede prima di tutto di ascoltare la paziente.",
+            "Con la visita e l'ecografia, ed eventualmente con esami del sangue e ormonali, facciamo un bilancio della salute fisica e psichica. In questa fase vanno valutate anche la contraccezione o l'eventuale desiderio di una gravidanza."
+          ]
+        },
+        {
+          "titolo": "I sintomi più frequenti",
+          "paragrafi": [
+            "Le oscillazioni ormonali possono dare:"
+          ],
+          "elenco": [
+            "vampate di calore e sudorazioni notturne;",
+            "insonnia e irritabilità;",
+            "calo del desiderio sessuale;",
+            "secchezza vaginale;",
+            "riduzione della densità delle ossa."
+          ],
+          "chiusura": "Quando questi disturbi diventano difficili da gestire, la terapia ormonale può essere un valido aiuto."
+        },
+        {
+          "titolo": "Cosa sono gli ormoni bioidentici",
+          "paragrafi": [
+            "Gli ormoni bioidentici hanno una struttura chimica identica a quella degli ormoni prodotti dal corpo femminile, in particolare l'estradiolo, un estrogeno, e il progesterone.",
+            "I loro principi attivi sono prodotti dall'industria farmaceutica: sono farmaci a tutti gli effetti, e come tali vanno prescritti e controllati."
+          ]
+        },
+        {
+          "titolo": "I possibili benefici",
+          "paragrafi": [
+            "Con una terapia costruita su misura si può ottenere:"
+          ],
+          "elenco": [
+            "meno vampate e un sonno migliore;",
+            "più energia e stabilità emotiva;",
+            "una migliore lubrificazione vaginale e una vita sessuale più serena;",
+            "protezione delle ossa e minor rischio di osteoporosi;",
+            "un aiuto contro l'invecchiamento della pelle e per il tono muscolare."
+          ],
+          "chiusura": "Ogni piano va seguito nel tempo, con controlli periodici e dosaggi calibrati."
+        },
+        {
+          "titolo": "Sicurezza: la terapia si personalizza",
+          "paragrafi": [
+            "Anche se identici agli ormoni naturali, gli ormoni bioidentici non sono privi di effetti collaterali e vanno prescritti solo dopo un'attenta valutazione.",
+            "Imposto la terapia a partire dalla storia familiare e personale e dagli esami ormonali. Può essere locale, con creme o ovuli vaginali, o sistemica, con cerotti, gel o compresse. L'obiettivo è il massimo beneficio con la minima quantità di ormone necessaria."
+          ]
+        },
+        {
+          "titolo": "La secchezza vaginale",
+          "paragrafi": [
+            "La secchezza vaginale è uno dei disturbi più comuni e meno raccontati. Può dare bruciore, prurito, fastidio nei rapporti e sintomi simili a quelli di una vaginite.",
+            "In visita valuto l'idratazione e il pH vaginale per capire se si tratta di secchezza e come trattarla. Spesso una terapia locale, a basso dosaggio, è già di grande aiuto."
+          ]
+        },
+        {
+          "titolo": "Non solo ormoni",
+          "paragrafi": [
+            "Affrontare la menopausa con consapevolezza significa prendersi cura del corpo e della mente. Un'alimentazione equilibrata, l'attività fisica regolare, le tecniche di rilassamento e il supporto emotivo contano quanto la terapia.",
+            "Anche dopo la menopausa la prevenzione continua: il controllo annuale, l'ecografia e la prevenzione dei tumori del seno e dell'apparato genitale non vanno sospesi."
+          ]
+        },
+        {
+          "titolo": "Menopausa e sessualità",
+          "paragrafi": [
+            "Il calo degli ormoni può cambiare il desiderio e rendere i rapporti meno piacevoli o dolorosi. Non è un argomento da tacere: con il Master in Sessuologia, è un tema che affronto spesso con le mie pazienti, anche insieme al partner quando lo desiderano."
+          ]
+        },
+        {
+          "titolo": "Quando inizia la menopausa",
+          "paragrafi": [
+            "Si parla di menopausa quando le mestruazioni mancano da dodici mesi consecutivi. In Italia arriva in media intorno ai 50 anni, ma l'età varia molto da donna a donna.",
+            "Gli anni che la precedono, la perimenopausa, possono durare a lungo: i cicli diventano irregolari e compaiono i primi disturbi, anche quando le mestruazioni ci sono ancora."
+          ]
+        },
+        {
+          "titolo": "Prima di iniziare una terapia",
+          "paragrafi": [
+            "Prima di proporre una terapia ormonale valuto con attenzione:"
+          ],
+          "elenco": [
+            "la storia personale e familiare, per esempio di tumori, trombosi o malattie del cuore;",
+            "la visita con l'ecografia;",
+            "gli esami del sangue e ormonali;",
+            "la prevenzione del seno, che deve essere aggiornata."
+          ],
+          "chiusura": "Solo dopo questa valutazione scegliamo insieme se e come iniziare."
+        },
+        {
+          "titolo": "Ossa e cuore",
+          "paragrafi": [
+            "Con il calo degli estrogeni le ossa perdono densità più rapidamente e aumenta il rischio di osteoporosi. Anche il rischio cardiovascolare cambia.",
+            "Movimento regolare, un'alimentazione ricca di calcio e vitamina D e il controllo di pressione e colesterolo aiutano a proteggere ossa e cuore, con o senza terapia ormonale."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Gli ormoni bioidentici sono «naturali» e quindi senza rischi? No: sono identici a quelli del corpo, ma restano farmaci e vanno controllati.",
+            "Per quanto tempo si prendono? Dipende dalla persona: rivalutiamo la terapia nel tempo, con controlli periodici.",
+            "Esistono alternative agli ormoni? Sì: per alcuni disturbi ci sono terapie locali o non ormonali, e lo stile di vita conta molto."
+          ]
+        },
+        {
+          "titolo": "Quando prenotare una visita",
+          "paragrafi": [
+            "Se i sintomi Le pesano, se dorme male, se i rapporti sono diventati dolorosi o se vuole semplicemente capire cosa sta succedendo al Suo corpo, ne parliamo con calma.",
+            "Ricevo nel Centro Ginecologico di Torino, in corso Galileo Ferraris 51. Può chiamare lo 011 502 001 o lo 011 088 0823, oppure scrivere a studiotacconis@gmail.com."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ginecologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "isteroscopia",
+      "categoria": "Esami",
+      "titolo": "Isteroscopia: cos'è, quando serve e come si svolge",
+      "img": "/tacconis-a3e4/img/isteroscopia.webp",
+      "tempoLettura": "6 min",
+      "intro": "L'isteroscopia permette di guardare direttamente dentro l'utero e, spesso, di trattare il problema nella stessa seduta, senza incisioni. Con gli strumenti di oggi è in genere ben tollerata e i tempi di recupero sono rapidi.",
+      "sezioni": [
+        {
+          "titolo": "Che cos'è",
+          "paragrafi": [
+            "Si introduce un sottile strumento, l'isteroscopio, attraverso la vagina e il collo dell'utero, senza incisioni. Una microcamera ad alta definizione mostra in tempo reale la cavità uterina.",
+            "L'isteroscopia può essere diagnostica, per capire la causa di un sintomo o di un'alterazione vista in altri esami, oppure operativa, quando oltre alla diagnosi si esegue anche il trattamento."
+          ]
+        },
+        {
+          "titolo": "Quando la consiglio",
+          "paragrafi": [
+            "Le indicazioni più frequenti sono:"
+          ],
+          "elenco": [
+            "sanguinamenti uterini anomali o mestruazioni molto abbondanti o irregolari;",
+            "sanguinamenti in menopausa;",
+            "polipi endometriali e fibromi sottomucosi;",
+            "ispessimento dell'endometrio;",
+            "malformazioni dell'utero;",
+            "infertilità o aborti spontanei ripetuti;",
+            "sospette aderenze dentro l'utero;",
+            "spirali difficili da rimuovere."
+          ],
+          "chiusura": "Spesso è l'esame più accurato per valutare direttamente la cavità uterina."
+        },
+        {
+          "titolo": "Diagnostica e operativa",
+          "paragrafi": [
+            "L'isteroscopia diagnostica dura in genere pochi minuti e nella maggior parte dei casi si esegue senza anestesia o con una semplice anestesia locale.",
+            "Quella operativa permette, con strumenti miniaturizzati, di rimuovere polipi, fibromi sottomucosi, setti uterini, aderenze e, in casi selezionati, residui endometriali o placentari, rispettando i tessuti sani."
+          ]
+        },
+        {
+          "titolo": "Fa male?",
+          "paragrafi": [
+            "È la domanda più frequente. L'isteroscopia diagnostica dà di solito un fastidio simile a un crampo mestruale, breve. L'intensità cambia da donna a donna e dipende anche dall'anatomia e dal motivo dell'esame.",
+            "Per le procedure operative più complesse si può usare l'anestesia locale, la sedazione o, in alcuni casi, l'anestesia generale o peridurale, per esempio per una miomectomia complessa."
+          ]
+        },
+        {
+          "titolo": "Come prepararsi",
+          "paragrafi": [
+            "In genere basta:"
+          ],
+          "elenco": [
+            "eseguirla nei giorni dopo la fine della mestruazione, salvo diversa indicazione;",
+            "informarmi di una possibile gravidanza, di allergie e dei farmaci che assume;",
+            "seguire le istruzioni ricevute se è prevista una sedazione."
+          ]
+        },
+        {
+          "titolo": "Dopo l'esame",
+          "paragrafi": [
+            "Dopo una isteroscopia diagnostica si torna di solito alle normali attività nella stessa giornata. Nelle ore successive possono comparire lievi perdite di sangue, qualche crampo e un po' di stanchezza: è normale.",
+            "Dopo un'isteroscopia operativa il recupero può richiedere qualche giorno in più, ma resta molto più rapido rispetto alla chirurgia tradizionale."
+          ]
+        },
+        {
+          "titolo": "I vantaggi",
+          "paragrafi": [
+            "Rispetto ad altre metodiche, l'isteroscopia:"
+          ],
+          "elenco": [
+            "permette di vedere direttamente la cavità uterina;",
+            "consente una diagnosi molto accurata;",
+            "evita incisioni;",
+            "può unire diagnosi e trattamento nella stessa seduta;",
+            "garantisce in genere un recupero rapido;",
+            "preserva, quando possibile, l'utero e la fertilità."
+          ]
+        },
+        {
+          "titolo": "Il giorno dell'esame",
+          "paragrafi": [
+            "Arrivi con qualche minuto di anticipo e porti con sé gli esami, le ecografie precedenti e l'elenco dei farmaci. Prima di iniziare Le spiego di nuovo i passaggi e rispondo alle Sue domande: sapere cosa succede riduce molto la tensione.",
+            "Durante l'esame può vedere anche Lei sul monitor l'interno dell'utero, se lo desidera. Alla fine commentiamo subito insieme quello che abbiamo visto e decidiamo i passi successivi."
+          ]
+        },
+        {
+          "titolo": "Polipi e fibromi: cosa sono",
+          "paragrafi": [
+            "I polipi endometriali sono piccole escrescenze della mucosa che riveste l'utero. Sono frequenti e quasi sempre benigni, ma possono dare perdite di sangue tra un ciclo e l'altro, cicli abbondanti o difficoltà a rimanere incinta.",
+            "I fibromi, o miomi, sono noduli del muscolo dell'utero. Quelli che sporgono nella cavità, detti sottomucosi, possono causare mestruazioni molto abbondanti e anemia. In entrambi i casi l'isteroscopia permette spesso di vederli e di rimuoverli."
+          ]
+        },
+        {
+          "titolo": "Isteroscopia e fertilità",
+          "paragrafi": [
+            "Quando una gravidanza non arriva o si ripetono gli aborti spontanei, l'isteroscopia aiuta a escludere o correggere problemi della cavità uterina, come polipi, setti, aderenze o malformazioni.",
+            "Correggere questi problemi può migliorare le possibilità di gravidanza: per questo l'esame fa spesso parte del percorso di fertilità."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Si può fare in menopausa? Sì: anzi, un sanguinamento in menopausa è una delle indicazioni più importanti.",
+            "Posso guidare dopo l'esame? Dopo un'isteroscopia diagnostica senza sedazione, in genere sì; se è prevista una sedazione è meglio farsi accompagnare.",
+            "Se viene prelevato un campione? Viene analizzato in laboratorio e ne discutiamo insieme l'esito."
+          ],
+          "chiusura": "Per qualsiasi dubbio prima dell'esame, mi chiami: è importante arrivare tranquille."
+        },
+        {
+          "titolo": "In studio o in sala operatoria",
+          "paragrafi": [
+            "Le isteroscopie diagnostiche e molte procedure semplici, come la rimozione di piccoli polipi, si eseguono in regime ambulatoriale, in strutture a norma, senza ricovero. Gli interventi più complessi, come la rimozione di fibromi grandi, si programmano in sala operatoria.",
+            "In ogni caso Le spiego prima cosa faremo, come prepararsi e cosa aspettarsi dopo, e Le lascio un recapito per qualsiasi dubbio nei giorni successivi all'esame."
+          ]
+        },
+        {
+          "titolo": "Quando rivolgersi alla ginecologa",
+          "paragrafi": [
+            "Non sottovaluti sanguinamenti anomali, perdite di sangue dopo la menopausa, cicli molto abbondanti o la difficoltà a rimanere incinta. La visita, con l'ecografia, serve a capire se l'isteroscopia è l'esame giusto per Lei.",
+            "Per gli interventi ambulatoriali ci appoggiamo a strutture a norma; per quelli più complessi valuto con colleghe chirurghe la sede più adatta. Può prenotare allo 011 502 001."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ginecologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "test-dna-fetale",
+      "categoria": "Gravidanza",
+      "titolo": "Test del DNA fetale ed ecografia NT: cosa sapere",
+      "img": "/tacconis-a3e4/img/ecografia.webp",
+      "tempoLettura": "6 min",
+      "intro": "Nel primo trimestre arrivano le prime grandi domande: come sta il bambino? Che esami fare, e quando? Le spiego la differenza tra ecografia della translucenza nucale e test del DNA fetale, e perché li considero complementari.",
+      "sezioni": [
+        {
+          "titolo": "La prima ecografia",
+          "paragrafi": [
+            "Già dalla sesta settimana l'ecografia ostetrica permette di vedere la corretta evoluzione della gravidanza e di escludere una gravidanza extrauterina. Nel primo trimestre si può eseguire per via transvaginale o transaddominale.",
+            "È anche il momento in cui datiamo con precisione la gravidanza: un'informazione importante per programmare gli esami successivi."
+          ]
+        },
+        {
+          "titolo": "L'ecografia della translucenza nucale (NT)",
+          "paragrafi": [
+            "Si esegue tra 11 e 13 settimane, di solito con un'ecografia addominale e, in casi particolari, transvaginale. Si misura uno spazio nella regione del collo del bambino per stimare il rischio di anomalie cromosomiche, genetiche o strutturali.",
+            "Può essere associata a un prelievo di sangue per il test combinato. La consiglio sempre, anche alle pazienti che scelgono direttamente il test del DNA, e la eseguo anche a pazienti che non seguo in studio."
+          ]
+        },
+        {
+          "titolo": "Il test del DNA fetale",
+          "paragrafi": [
+            "Il test del DNA fetale, o NIPT, è un test prenatale non invasivo: un semplice prelievo di sangue della mamma, nel quale si analizza il DNA fetale di origine placentare. Si esegue dalla 11ª settimana.",
+            "Valuta il rischio delle trisomie 21, 18 e 13, con un'attendibilità che varia dal 95 al 99% in base alla frazione fetale: più è alta, più il risultato è attendibile. Permette anche di conoscere il sesso del bambino, con una sensibilità del 97%."
+          ]
+        },
+        {
+          "titolo": "Quali test",
+          "paragrafi": [
+            "Esistono diversi test, con metodiche diverse: in studio eseguiamo G-Test, UltraNIPT e OmniPT. Sono esami che sequenziano il genoma; per la sindrome di Down l'attendibilità è superiore al 99%, con falsi positivi dello 0,05%.",
+            "Possono essere eseguiti anche in caso di ovodonazione o di gravidanza gemellare. Si può approfondire il risultato con l'analisi di alcune microdelezioni, come la sindrome di DiGeorge, di Angelman o di Prader-Willi."
+          ]
+        },
+        {
+          "titolo": "NT prima o dopo il test del DNA?",
+          "paragrafi": [
+            "Il test del DNA può entrare nel percorso in due modi: prima dei test classici oppure dopo il test combinato, se il rischio risulta intermedio, cioè tra 1/100 e 1/1000.",
+            "Dal 14 settembre 2026 il Servizio Sanitario Nazionale permette di eseguire il test del DNA fetale di base proprio nelle fasce di rischio intermedio."
+          ]
+        },
+        {
+          "titolo": "Un test di screening, non una diagnosi",
+          "paragrafi": [
+            "È importante saperlo: il test del DNA, come l'NT, stima un rischio. Un esito positivo va sempre confermato con un esame diagnostico invasivo, la villocentesi o l'amniocentesi.",
+            "Per questo, prima e dopo l'esame, ne parliamo con calma: capire cosa dice e cosa non dice un risultato è parte della cura."
+          ]
+        },
+        {
+          "titolo": "Dopo il primo trimestre",
+          "paragrafi": [
+            "Dalla dodicesima settimana iniziamo lo studio dell'anatomia del bambino. Il sesso si vede di solito tra 14 e 22 settimane, a seconda della sua posizione.",
+            "Tra 19 e 21 settimane eseguo l'ecografia morfologica, solo alle pazienti che seguo: la continuità riduce l'errore. Nel terzo trimestre l'ecografia valuta crescita, benessere e posizione del bambino, e ci aiuta a scegliere la modalità del parto."
+          ]
+        },
+        {
+          "titolo": "Come scegliere",
+          "paragrafi": [
+            "Non esiste una scelta giusta per tutte. Dipende dalla Sua età, dalla storia personale e familiare, da come ha concepito e da quanto desidera sapere già nel primo trimestre.",
+            "Ne parliamo nella prima visita in gravidanza: Le spiego vantaggi e limiti di ogni esame, così può decidere con serenità e con tutte le informazioni."
+          ]
+        },
+        {
+          "titolo": "Il test combinato",
+          "paragrafi": [
+            "Il test combinato unisce la misura della translucenza nucale a un prelievo di sangue materno e all'età della mamma. Il risultato è una stima del rischio di alcune anomalie cromosomiche, espressa come probabilità.",
+            "Se il rischio risulta basso, in genere non servono altri esami; se è alto si propone un esame diagnostico; se è intermedio, il test del DNA fetale è un ottimo passo successivo."
+          ]
+        },
+        {
+          "titolo": "Villocentesi e amniocentesi",
+          "paragrafi": [
+            "Sono esami diagnostici invasivi: si preleva una piccola quantità di tessuto della placenta (villocentesi) o di liquido amniotico (amniocentesi) per analizzare direttamente i cromosomi del bambino.",
+            "Danno una risposta definitiva, ma comportano un piccolo rischio. Per questo si propongono quando uno screening lo indica o in situazioni particolari, dopo un colloquio approfondito."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Il test del DNA fa male? No: è un normale prelievo di sangue.",
+            "Posso sapere il sesso del bambino? Sì, con una sensibilità del 97%.",
+            "Si può fare con i gemelli o dopo ovodonazione? Sì, con i test che eseguiamo in studio.",
+            "Sostituisce l'ecografia NT? No: sono esami complementari e consiglio di farli entrambi."
+          ]
+        },
+        {
+          "titolo": "Come prenotare",
+          "paragrafi": [
+            "Con la Dr.ssa Silvia Sorce e la Dr.ssa Martina Mazzoli seguo la donna durante e dopo la gravidanza. Nella pagina principale trova uno strumento per vedere, settimana per settimana, quali esami Le spettano.",
+            "Per prenotare chiami lo 011 502 001 o lo 011 088 0823, oppure scriva a studiotacconis@gmail.com."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ginecologica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "dott.ssa.paolatacconis",
+    "nota": "la Dottoressa non ha un profilo: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Endometriosi: 5 dolori che non sono normali",
+        "punti": [
+          "Mestruazioni che La fermano",
+          "Dolore pelvico che non passa",
+          "Dolore durante i rapporti",
+          "Dolore a urinare",
+          "Dolore a evacuare"
+        ],
+        "didascalia": "Il dolore mestruale che limita la vita di ogni giorno non è normale. La diagnosi di endometriosi arriva spesso con anni di ritardo: la visita con ecografia aiuta ad anticiparla.",
+        "hashtag": "#endometriosi #ginecologia #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Menopausa: ormoni bioidentici sì o no?",
+        "risposta": "Dipende da Lei: ne parliamo in visita.",
+        "didascalia": "Gli ormoni bioidentici sono identici a quelli prodotti dal corpo, ma restano farmaci: si prescrivono dopo una valutazione attenta, al dosaggio minimo efficace.",
+        "hashtag": "#menopausa #ormonibioidentici #torino"
+      },
+      {
+        "stile": "foto",
+        "immagine": "ecografia",
+        "titolo": "Test del DNA fetale",
+        "sottotitolo": "Dalla 11ª settimana, con un prelievo",
+        "didascalia": "Stima il rischio delle trisomie 21, 18 e 13. Lo consiglio insieme all'ecografia NT: sono esami complementari. Un esito positivo va sempre confermato.",
+        "hashtag": "#gravidanza #NIPT #ecografia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": "studiotacconis@gmail.com",
+    "luoghi": [
+      {
+        "tipo": "Centro Ginecologico di Torino",
+        "nome": "Centro Ginecologico di Torino",
+        "indirizzo": "Corso Galileo Ferraris 51",
+        "citta": "Torino",
+        "cap": "10128",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di corso Galileo Ferraris 51, Torino",
+        "telefoni": [
+          {
+            "label": "Studio",
+            "numero": "011 502 001"
+          },
+          {
+            "label": "Studio",
+            "numero": "011 088 0823"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "orari": [
+    [
+      "Lunedì",
+      "9.45-13.00 · 15.00-19.00"
+    ],
+    [
+      "Martedì",
+      "15.00-19.00"
+    ],
+    [
+      "Mercoledì",
+      "9.45-13.00 · 15.00-19.00"
+    ],
+    [
+      "Giovedì",
+      "9.45-13.00 · 15.00-19.00"
+    ],
+    [
+      "Venerdì",
+      "9.45-13.00 · 15.00-19.00"
+    ],
+    [
+      "Sabato e domenica",
+      "chiuso"
+    ]
+  ],
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Anche se sta bene, si ricordi della visita annuale di controllo. Mi chiami o mi scriva indicando il motivo: così posso darLe un appuntamento mirato.",
+    "telefono": "011502001",
+    "telefonoLabel": "011 502 001",
+    "telefono2": "0110880823",
+    "telefono2Label": "011 088 0823",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "saluto": "Dottoressa",
+    "oggettoMail": "Richiesta di visita ginecologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi il giorno e l'orario che preferisce: La ricontattiamo per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: il martedì ricevo solo il pomeriggio. Data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo"
+      ],
+      "motivi": [
+        "Controllo annuale",
+        "Pap test o HPV test",
+        "Gravidanza",
+        "Ecografia NT o test del DNA",
+        "Desiderio di gravidanza",
+        "Fertilità e PMA",
+        "Endometriosi o ciclo doloroso",
+        "Menopausa",
+        "Contraccezione",
+        "Disturbi vaginali",
+        "Controllo al seno",
+        "Isteroscopia"
+      ],
+      "motiviFrase": [
+        "il controllo ginecologico annuale",
+        "un Pap test o un HPV test",
+        "la mia gravidanza",
+        "l'ecografia NT o il test del DNA fetale",
+        "una consulenza preconcezionale",
+        "una consulenza sulla fertilità",
+        "dolori mestruali o sospetta endometriosi",
+        "la menopausa",
+        "la contraccezione",
+        "disturbi vaginali",
+        "un controllo al seno",
+        "un'isteroscopia"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio · Corso Galileo Ferraris 51",
+          "frase": "lo studio di corso Galileo Ferraris 51, Torino"
+        },
+        {
+          "nome": "A domicilio · Torino",
+          "frase": "il mio domicilio, a Torino"
+        }
+      ],
+      "privacy": "https://www.ginecologapaolatacconis.com/privacy-e-cookie/",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio la data dell'ultima mestruazione"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#EEF7F6",
+      "ink": "#0F1730",
+      "muted": "#566079",
+      "line": "#D9E7E6",
+      "brand": "#000E44",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#54B8B0",
+      "deep": "#000E44",
+      "deep-ink": "#CFE6E3"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Encode Sans Semi Condensed",
+    "fontTesti": "Instrument Sans",
+    "fontUi": "Instrument Sans",
+    "favicon": "/tacconis-a3e4/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/tacconis-a3e4/brand/brand.json",
+    "pagine": [
+      "https://www.ginecologapaolatacconis.com/",
+      "https://www.ginecologapaolatacconis.com/biografia/",
+      "https://www.ginecologapaolatacconis.com/contatti/",
+      "https://www.ginecologapaolatacconis.com/endometriosi-diagnosi-trattamento/",
+      "https://www.ginecologapaolatacconis.com/menopausa-e-ormoni-bioidentici/",
+      "https://www.ginecologapaolatacconis.com/isteroscopia-cos-e-e-come-si-svolge/",
+      "https://www.ginecologapaolatacconis.com/test-dna-fetale-torino/"
+    ]
+  }
+}

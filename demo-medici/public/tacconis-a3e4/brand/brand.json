@@ -1,0 +1,39 @@
+{
+  "medico": "Dott.ssa Paola Tacconis",
+  "specialita": "Specialista in Ginecologia e Ostetricia, Master in Sessuologia",
+  "sito": "https://www.ginecologapaolatacconis.com/",
+  "struttura": "Centro Ginecologico di Torino (nuovo, con équipe), Corso Galileo Ferraris 51, 10128 Torino",
+  "logo": "logo testuale «DOTTORESSA PAOLA TACCONIS» in tre versioni (verde, blu, bianco), bassa risoluzione: in demo logotipo di testo nello stesso stile (condensato, maiuscolo, verde acqua)",
+  "colori": {
+    "verde_acqua": "#54B8B0 (logo)",
+    "blu_notte": "#000E44 (logo scuro)"
+  },
+  "font": {
+    "sito": "tema Elementor; logo in sans condensato bold",
+    "demo": ["Encode Sans Semi Condensed", "Instrument Sans"]
+  },
+  "contatti": {
+    "telefoni": "011 502 001 · 011 088 0823 (Chiama ora: pomeriggi lun-ven 15-19, mattino 10-13)",
+    "email": "studiotacconis@gmail.com",
+    "orari": "Lun, Mer, Gio, Ven 9.45-13 / 15-19; Mar 15-19; sab e dom chiuso",
+    "privacy": "https://www.ginecologapaolatacconis.com/privacy-e-cookie/",
+    "social": "nessuno (solo pulsanti di condivisione)"
+  },
+  "whatsapp": "nessun numero WhatsApp: prenotazione con mail già compilata",
+  "lingue": "visita anche in francese e in inglese (biografia): il messaggio di prenotazione si compone nella lingua scelta",
+  "domicilio": "visite a domicilio a Torino con ecografo portatile, da 450 € (pagina nuova, novembre 2026)",
+  "equipe": "Dr.ssa Silvia Sorce (foto), Dr.ssa Martina Mazzoli, Prof. Turco e Dr.ssa Alberghetti (INOC Candiolo), Dr.ssa Giada Pozzi, Dr. Davide Bosco, Dr. Antonio Camarda, Dr.ssa Rita Brero, Dr.ssa Carola Aquino; a chiamata Dr.ssa Brokaj, Dr.ssa Grilz",
+  "foto": [
+    "foto-01..04: servizio fotografico professionale del 2025 (scrivania, con collaboratrice, cartella, ecografia)",
+    "foto-05-sala-operatoria.jpg: in sala operatoria (2023)",
+    "centro-01..06: il nuovo Centro (cortile, ingresso, accoglienza, attesa, corridoio, ambulatorio)",
+    "dr-silvia-sorce.jpg",
+    "isteroscopia-immagine.jpg: immagine isteroscopica del suo articolo (nessun dato della paziente, solo data e ora)"
+  ],
+  "non_usate": "foto di neonati e di famiglia (pazienti e vita privata), foto COVID, ritratti di due medici non identificati, immagine «ecografia domiciliare» dall'aspetto generato con AI",
+  "recensioni": "una sola testimonianza reale (pagina Biografia), firmata con nome e cognome: in demo nome abbreviato «Paola Alessandra T.»",
+  "articoli_sito": "WordPress posts: 2026-07-30 Isteroscopia, 2026-06-10 Endometriosi, 2026-04-27 Menopausa e ormoni bioidentici, 2023 e 2022 altri 4. Titoli in maiuscolo, nessuna data visibile in pagina",
+  "problemi_sito": "copyright 2021; menu con decine di voci; pagina «Dicono di me» che mostra il testo sulla vaginite; nessun social; prenotazione solo telefono/mail/form; titoli articoli in maiuscolo senza date",
+  "dati_esclusi": "partita IVA del footer non riportata",
+  "repertorio": "foto stock già presenti sul suo sito: estradiolo (blog menopausa), modello di utero (articolo endometriosi)"
+}

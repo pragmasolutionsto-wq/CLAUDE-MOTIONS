@@ -1,0 +1,519 @@
+---
+// Layout "percorso" (prima demo: Dott.ssa Paola Tacconis, ginecologa, Centro Ginecologico di Torino). Costruito sulle fasi della vita
+// della donna e sull'interattività: prenotazione con il messaggio in italiano, francese o inglese (visita anche in quelle lingue),
+// in studio o a domicilio; "Ogni fase, i suoi controlli" (nastro con punto che scorre lungo una curva); "La gravidanza settimana per
+// settimana" (cursore 4-41 con gli esami e le loro finestre); "Entri nel Centro" (stanze a storie con avanzamento, frecce e tastiera);
+// équipe filtrabile per bisogno; storia con linea che si disegna. Encode Sans Semi Condensed + Instrument Sans, blu notte + verde acqua.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const mail = emailRichieste(m);
+const lingue = x.lingue as any[];
+const motivi4 = x.motivi4 as string[][];
+const dove = x.dove as any[];
+const msg = (li: number, mo: number, dv: number) => lingue[li].saluto.replace('{m}', motivi4[mo][li + 1]).replace('{s}', dove[dv][lingue[li].id]);
+const href0 = `mailto:${mail}?subject=${encodeURIComponent(lingue[0].oggetto)}&body=${encodeURIComponent(msg(0, 0, 0))}`;
+const fasi = x.fasi as any[];
+const grav = x.gravidanza as any[];
+const team = x.team as any[];
+const centro = x.centro as any[];
+const storia = x.storia as any[];
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const sede = (m.sedi.luoghi as any[])[0];
+// nastro delle fasi: una curva morbida con 6 punti
+const NW = 1000, NH = 120;
+const curva = `M 20 80 C 160 10, 260 10, 360 60 S 560 120, 660 60 S 860 0, 980 50`;
+// gravidanza: posizioni sulla barra 4-41 settimane
+const W0 = 4, W1 = 41;
+const pct = (w: number) => ((w - W0) / (W1 - W0)) * 100;
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/90 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} class="min-w-0 leading-none">
+        <span class="block whitespace-nowrap font-head text-[15px] font-bold uppercase tracking-[0.01em] text-brand2 sm:text-[22px]">Dottoressa Paola Tacconis</span>
+        <span class="mt-1 block whitespace-nowrap text-[9.5px] font-semibold uppercase tracking-[0.12em] text-brand sm:text-[11.5px] sm:tracking-[0.18em]">Centro Ginecologico di Torino</span>
+      </a>
+      <nav class="hidden items-center gap-6 text-[14px] font-medium text-ink/70 xl:flex">
+        <a href="#aree" class="hover:text-brand">Le fasi della vita</a><a href="#gravidanza" class="hover:text-brand">Gravidanza</a><a href="#centro" class="hover:text-brand">Il Centro</a><a href="#equipe" class="hover:text-brand">Équipe</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#articoli" class="hover:text-brand">Blog</a><a href="#sedi" class="hover:text-brand">Contatti</a>
+      </nav>
+      <a href={telHref(m.prenota.telefono)} class="btn !min-h-[42px] shrink-0 !rounded-full bg-brand !px-5 text-sm text-white hover:opacity-90"><Icona nome="tel" class="h-4 w-4" /> <span class="hidden sm:inline">{m.prenota.telefonoLabel}</span><span class="sm:hidden">Chiami</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO con prenotazione -->
+    <section class="relative overflow-hidden" data-hero>
+      <div class="pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full border-[56px] border-surface" aria-hidden="true" data-anello></div>
+      <div class="relative mx-auto grid max-w-7xl gap-10 px-4 pb-14 pt-8 sm:px-8 lg:grid-cols-12 lg:gap-12 lg:pb-20 lg:pt-14">
+        <div class="lg:col-span-7">
+          <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2" data-entra>{x.hero.eyebrow}</p>
+          <h1 class="mt-4 font-head text-[2.8rem] font-bold leading-[1.02] tracking-tight text-brand sm:text-[4.4rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-5 max-w-xl text-[18px] leading-relaxed text-ink/80" data-entra>{x.hero.testo}</p>
+
+          <div class="mt-8 rounded-[1.75rem] bg-white p-5 shadow-[0_22px_60px_rgb(0_14_68/.12)] ring-1 ring-line sm:p-7" id="prenota-box" data-prenota-box data-mail={mail} data-lingue={JSON.stringify(lingue)} data-motivi={JSON.stringify(motivi4)} data-dove={JSON.stringify(dove)} data-entra>
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h2 class="font-head text-[1.6rem] font-bold leading-tight text-brand">Prenoti una visita</h2>
+              <div class="flex rounded-full bg-surface p-1" role="group" aria-label="Lingua del messaggio">
+                {lingue.map((l, i) => <button type="button" class="lingua-chip rounded-full px-3 py-1.5 text-[13px] font-semibold" data-lingua={i} aria-pressed={i === 0 ? 'true' : 'false'} lang={l.id}>{l.nome}</button>)}
+              </div>
+            </div>
+            <div class="mt-5 grid gap-4 sm:grid-cols-2">
+              <label class="block"><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-muted">Motivo</span>
+                <select class="campo mt-1.5" data-motivo>{motivi4.map((mo, i) => <option value={i}>{mo[0]}</option>)}</select></label>
+              <div><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-muted" id="dove-label">Dove</span>
+                <div class="mt-1.5 grid grid-cols-2 gap-2" role="group" aria-labelledby="dove-label">
+                  {dove.map((d, i) => <button type="button" class="dove-chip rounded-2xl border border-line px-3 py-2 text-left" data-dove-i={i} aria-pressed={i === 0 ? 'true' : 'false'}><span class="block text-[14.5px] font-semibold">{d.nome}</span><span class="block text-[12px] text-muted">{d.sotto}</span></button>)}
+                </div></div>
+            </div>
+            <p class="mt-5 rounded-2xl bg-surface p-4 font-head text-[1.12rem] font-medium leading-snug text-brand" data-anteprima aria-live="polite" lang="it">{msg(0, 0, 0)}</p>
+            <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+              <a href={href0} data-prenota class="btn flex-1 !rounded-full bg-brand text-white hover:opacity-90"><Icona nome="mail" /> Invii la mail</a>
+              <a href={telHref(m.prenota.telefono)} class="btn flex-1 !rounded-full border border-line text-brand hover:bg-surface"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+            </div>
+          </div>
+        </div>
+        <div class="relative order-first lg:order-none lg:col-span-5">
+          <div class="relative mx-auto max-w-[460px]">
+            <div class="overflow-hidden rounded-[2.5rem] shadow-[0_30px_70px_rgb(0_14_68/.22)]" data-svela>
+              <img src={foto.ritratto} alt={foto.ritrattoAlt} width="960" height="1200" class="aspect-[4/5] w-full object-cover" data-ritratto />
+            </div>
+            <dl class="relative -mt-12 mx-4 grid grid-cols-3 gap-2 rounded-3xl bg-brand p-4 text-white shadow-xl sm:mx-6 sm:p-5" data-numeri>
+              {x.numeri.map((n: any) => <div><dt class="sr-only">{n.testo}</dt><dd class="font-head text-[2rem] font-bold leading-none text-brand2 sm:text-[2.4rem]"><span data-conta={n.valore}>{n.valore}</span>{n.suffisso}</dd><p class="mt-1 text-[12px] leading-snug text-deep-ink" aria-hidden="true">{n.testo}</p></div>)}
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LE FASI DELLA VITA -->
+    <section id="aree" class="bg-surface px-4 py-16 sm:px-8 sm:py-24" data-fasi data-dati={JSON.stringify(fasi)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div><p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2">Le fasi della vita</p>
+          <h2 class="mt-2 font-head text-[2.4rem] font-bold leading-tight tracking-tight text-brand sm:text-[3.4rem]" data-sale>Ogni fase, i suoi controlli</h2></div>
+          <p class="max-w-md text-[16px] text-muted">Dall'adolescenza a dopo la menopausa. Scelga una fase o faccia scorrere il punto lungo il percorso.</p>
+        </div>
+        <div class="relative mt-10">
+          <svg viewBox={`0 0 ${NW} ${NH}`} class="hidden w-full md:block" aria-hidden="true">
+            <path d={curva} fill="none" stroke="var(--c-line)" stroke-width="10" stroke-linecap="round" />
+            <path d={curva} fill="none" stroke="var(--c-brand2)" stroke-width="10" stroke-linecap="round" data-nastro />
+            <circle r="16" fill="var(--c-brand)" stroke="#fff" stroke-width="5" data-punto cx="20" cy="80" />
+          </svg>
+          <div class="-mx-4 mt-2 flex gap-2 overflow-x-auto px-4 pb-2 md:mx-0 md:grid md:grid-cols-6 md:overflow-visible md:px-0" role="tablist" aria-label="Fasi della vita">
+            {fasi.map((f, i) => <button type="button" role="tab" id={`fase-${f.id}`} aria-controls="fase-pannello" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="fase-tab shrink-0 rounded-2xl px-3 py-2.5 text-left md:text-center" data-fase-tab={i}><span class="block font-head text-[16px] font-bold leading-tight">{f.nome}</span><span class="block text-[12px] text-muted">{f.eta}</span></button>)}
+          </div>
+          <label class="mt-4 block md:hidden"><span class="sr-only">Fase della vita</span><input type="range" min="0" max={fasi.length - 1} step="1" value="0" class="w-full accent-[var(--c-brand2)]" data-fase-range /></label>
+        </div>
+        <div id="fase-pannello" role="tabpanel" class="mt-8 grid gap-8 rounded-[2rem] bg-white p-6 sm:p-10 lg:grid-cols-12" data-fase-pannello>
+          <div class="lg:col-span-5">
+            <p class="text-[13px] font-semibold uppercase tracking-[0.18em] text-brand2" data-fase-eta>{fasi[0].eta}</p>
+            <h3 class="mt-1 font-head text-[2.2rem] font-bold leading-tight text-brand" data-fase-nome>{fasi[0].nome}</h3>
+            <p class="mt-3 text-[17px] leading-relaxed text-ink/85" data-fase-testo>{fasi[0].testo}</p>
+            <button type="button" class="btn mt-6 !rounded-full bg-brand text-white hover:opacity-90" data-fase-prenota><Icona nome="calendario" /> Prenoti per questa fase</button>
+          </div>
+          <ul class="space-y-3 lg:col-span-7" data-fase-controlli aria-live="polite">
+            {fasi[0].controlli.map((c: string) => <li class="flex items-start gap-3 rounded-2xl bg-surface p-4 text-[16px] leading-snug"><Icona nome="check" class="mt-0.5 h-5 w-5 shrink-0 text-brand2" />{c}</li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRAVIDANZA SETTIMANA PER SETTIMANA -->
+    <section id="gravidanza" class="relative overflow-hidden bg-deep px-4 py-16 text-white sm:px-8 sm:py-24" data-grav data-dati={JSON.stringify(grav)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7">
+            <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2">Gravidanza</p>
+            <h2 class="mt-2 font-head text-[2.4rem] font-bold leading-tight tracking-tight sm:text-[3.4rem]" data-sale>Settimana per settimana</h2>
+            <p class="mt-3 max-w-xl text-[17px] text-deep-ink/85">Sposti il cursore sulla Sua settimana: Le mostro gli esami di questo periodo e il prossimo appuntamento.</p>
+          </div>
+          <div class="flex items-end gap-4 lg:col-span-5 lg:justify-end">
+            <button type="button" class="grid h-12 w-12 place-items-center rounded-full border border-white/25 hover:bg-white/10" data-grav-meno aria-label="Settimana precedente"><Icona nome="sx" /></button>
+            <p class="text-center leading-none"><span class="block font-head text-[5rem] font-bold text-brand2 sm:text-[6rem]" data-grav-sett>12</span><span class="mt-1 block text-[13px] font-semibold uppercase tracking-[0.16em] text-deep-ink" data-grav-trim>settimana · primo trimestre</span></p>
+            <button type="button" class="grid h-12 w-12 place-items-center rounded-full border border-white/25 hover:bg-white/10" data-grav-piu aria-label="Settimana successiva"><Icona nome="dx" /></button>
+          </div>
+        </div>
+        <div class="relative mt-10">
+          <div class="relative" style={`height:${grav.length * 16 + 10}px`} aria-hidden="true">
+            {grav.map((e, i) => <span class="grav-finestra absolute h-2.5 rounded-full" style={`top:${i * 16}px;left:${pct(e.da)}%;width:${Math.max(Math.min(pct(e.a + 1), 100) - pct(e.da), 1.5)}%`} title={e.titolo} data-finestra={i}></span>)}
+            <span class="absolute -top-2 bottom-0 w-0.5 -translate-x-1/2 rounded-full bg-white/80" style={`left:${pct(12)}%`} data-grav-cursore></span>
+          </div>
+          <label class="block"><span class="sr-only">Settimana di gravidanza</span><input type="range" min={W0} max={W1} step="1" value="12" class="grav-range w-full" data-grav-range /></label>
+          <div class="relative mt-2 h-5 text-[12px] text-deep-ink/70" aria-hidden="true">{[4, 8, 12, 16, 20, 24, 28, 32, 36, 40].map((w) => <span class="absolute -translate-x-1/2" style={`left:${pct(w)}%`}>{w}</span>)}</div>
+          <div class="mt-1 grid grid-cols-3 text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2" aria-hidden="true"><span>1° trimestre</span><span class="text-center">2° trimestre</span><span class="text-right">3° trimestre</span></div>
+        </div>
+        <div class="mt-10 grid gap-5 lg:grid-cols-2" aria-live="polite">
+          <div class="rounded-[1.75rem] bg-white/5 p-6 ring-1 ring-white/10 sm:p-8">
+            <p class="text-[13px] font-semibold uppercase tracking-[0.16em] text-brand2">In questo periodo</p>
+            <ul class="mt-4 space-y-4" data-grav-ora></ul>
+            <p class="mt-2 hidden text-[16px] text-deep-ink/80" data-grav-vuoto>Nessun esame particolare in questa settimana: la seguiamo con le visite di controllo.</p>
+          </div>
+          <div class="rounded-[1.75rem] bg-brand2 p-6 text-deep sm:p-8">
+            <p class="text-[13px] font-semibold uppercase tracking-[0.16em]">Il prossimo appuntamento</p>
+            <p class="mt-3 font-head text-[1.8rem] font-bold leading-tight" data-grav-prossimo>Ecografia morfologica</p>
+            <p class="mt-2 text-[16px] leading-relaxed" data-grav-quando>fra 7 settimane</p>
+            <button type="button" class="btn mt-5 !rounded-full bg-deep text-white hover:opacity-90" data-grav-prenota><Icona nome="calendario" /> Prenoti in gravidanza</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IL CENTRO a storie -->
+    <section id="centro" class="px-4 py-16 sm:px-8 sm:py-24" data-centro>
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div><p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2">Corso Galileo Ferraris 51</p>
+          <h2 class="mt-2 font-head text-[2.4rem] font-bold leading-tight tracking-tight text-brand sm:text-[3.4rem]" data-sale>Entri nel Centro</h2></div>
+          <p class="max-w-md text-[16px] text-muted">Uno spazio dedicato alla salute e al benessere della donna a 360°. Le stanze scorrono da sole: può anche usare le frecce.</p>
+        </div>
+        <div class="relative mt-10 overflow-hidden rounded-[2rem] bg-deep" tabindex="0" aria-roledescription="carosello" aria-label="Le stanze del Centro" data-storie>
+          <div class="absolute inset-x-4 top-4 z-10 flex gap-1.5" aria-hidden="true">{centro.map((_, i) => <span class="h-1 flex-1 overflow-hidden rounded-full bg-white/35"><span class="block h-full w-0 bg-white" data-barra={i}></span></span>)}</div>
+          <div class="relative aspect-[4/5] sm:aspect-[16/9]">
+            {centro.map((c, i) => <img src={c.img} alt={c.nome} width="1600" height="1000" loading="lazy" class={`absolute inset-0 h-full w-full object-cover ${i ? 'opacity-0' : ''}`} data-stanza={i} data-testo={c.testo} />)}
+            <div class="absolute inset-x-0 bottom-0 bg-deep/75 p-6 text-white backdrop-blur-sm sm:p-8">
+              <p class="font-head text-[1.8rem] font-bold leading-tight sm:text-[2.4rem]" data-stanza-nome aria-live="polite">{centro[0].nome}</p>
+              <p class="mt-1 max-w-xl text-[16px] text-deep-ink" data-stanza-testo>{centro[0].testo}</p>
+            </div>
+            <button type="button" class="absolute left-3 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-brand hover:bg-white" data-stanza-prev aria-label="Stanza precedente"><Icona nome="sx" /></button>
+            <button type="button" class="absolute right-3 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full bg-white/90 text-brand hover:bg-white" data-stanza-next aria-label="Stanza successiva"><Icona nome="dx" /></button>
+          </div>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-2">{centro.map((c, i) => <button type="button" class="stanza-chip rounded-full border border-line px-4 py-1.5 text-[14px] font-semibold" data-stanza-vai={i} aria-pressed={i === 0 ? 'true' : 'false'}>{c.nome}</button>)}</div>
+      </div>
+    </section>
+
+    <!-- ÉQUIPE filtrabile -->
+    <section id="equipe" class="bg-surface px-4 py-16 sm:px-8 sm:py-24" data-equipe>
+      <div class="mx-auto max-w-7xl">
+        <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2">L'équipe</p>
+        <h2 class="mt-2 font-head text-[2.4rem] font-bold leading-tight tracking-tight text-brand sm:text-[3.4rem]" data-sale>Di chi ha bisogno?</h2>
+        <p class="mt-2 max-w-2xl text-[16px] text-muted">Nel Centro lavoro con colleghe e colleghi, alcune anche mie ex allieve. Scelga un tema: Le mostro chi La segue.</p>
+        <div class="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filtra l'équipe">{(x.filtri as string[][]).map(([id, n], i) => <button type="button" class="filtro-chip rounded-full border border-line px-4 py-2 text-[14.5px] font-semibold" data-filtro={id} aria-pressed={i === 0 ? 'true' : 'false'}>{n}</button>)}</div>
+        <p class="mt-4 text-[14px] text-muted" aria-live="polite">Ne mostro <span data-equipe-n>{team.length}</span> su {team.length}</p>
+        <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-equipe-griglia>
+          {team.map((t) => (
+            <article class={`membro flex gap-4 rounded-3xl bg-white p-5 ${t.foto ? 'sm:col-span-2 lg:col-span-1' : ''}`} data-membro data-tag={t.tag.join(' ')}>
+              {t.foto && <img src={t.foto} alt={t.nome} width="320" height="400" loading="lazy" class="h-28 w-24 shrink-0 rounded-2xl object-cover object-top" />}
+              <div><h3 class="font-head text-[1.25rem] font-bold leading-tight text-brand">{t.nome}</h3><p class="mt-0.5 text-[13px] font-semibold text-brand2">{t.ruolo}</p><p class="mt-2 text-[14.5px] leading-relaxed text-ink/80">{t.testo}</p></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO: linea che si disegna -->
+    <section id="chi-sono" class="px-4 py-16 sm:px-8 sm:py-24" data-storia>
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <div class="lg:sticky lg:top-32">
+            <p class="text-[13px] font-semibold uppercase tracking-[0.2em] text-brand2">Chi sono</p>
+            <h2 class="mt-2 font-head text-[2.4rem] font-bold leading-tight tracking-tight text-brand sm:text-[3.4rem]" data-sale>Da Parigi a Torino, sempre dalla parte delle donne</h2>
+            <div class="mt-8 grid grid-cols-2 gap-3">
+              <img src={foto.sala} alt="La Dott.ssa Tacconis in sala operatoria" width="768" height="960" loading="lazy" class="aspect-[4/5] w-full rounded-3xl object-cover" />
+              <img src={foto.cartella} alt="La Dott.ssa Tacconis con una collaboratrice del Centro" width="1200" height="1000" loading="lazy" class="mt-10 aspect-[4/5] w-full rounded-3xl object-cover" />
+            </div>
+          </div>
+        </div>
+        <ol class="relative lg:col-span-7" data-tappe>
+          <span class="absolute bottom-3 left-[11px] top-3 w-0.5 bg-line" aria-hidden="true"></span>
+          <span class="absolute left-[11px] top-3 w-0.5 origin-top bg-brand2" style="bottom: 0.75rem" aria-hidden="true" data-linea></span>
+          {storia.map((s) => (
+            <li class="relative pb-10 pl-12 last:pb-0" data-tappa>
+              <span class="tappa-punto absolute left-0 top-1 h-6 w-6 rounded-full border-4 border-white bg-line shadow" aria-hidden="true"></span>
+              <h3 class="font-head text-[1.5rem] font-bold leading-tight text-brand">{s.titolo}</h3>
+              <p class="mt-2 max-w-xl text-[16.5px] leading-relaxed text-ink/85">{s.testo}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <figure class="mx-auto mt-16 max-w-4xl rounded-[2rem] bg-brand p-8 text-center text-white sm:p-12" data-sale>
+        <p class="font-head text-[1.1rem] font-semibold uppercase tracking-[0.2em] text-brand2">Dicono di me</p>
+        <blockquote class="mt-4 font-head text-[1.6rem] font-semibold leading-snug sm:text-[2rem]">«{x.testimonianza.testo}»</blockquote>
+        <figcaption class="mt-4 text-deep-ink">{x.testimonianza.firma}</figcaption>
+      </figure>
+    </section>
+
+    <div class="stile-percorso bg-surface"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-bold leading-tight tracking-tight text-brand sm:text-[3.4rem]" data-sale>Dal mio blog</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 lg:grid-cols-12" data-blog>
+          {blog.map((b, i) => (
+            <a href={b.href} class={`group overflow-hidden rounded-[1.75rem] border border-line bg-white ${i === 0 ? 'flex flex-col lg:col-span-7 lg:row-span-3' : 'grid grid-cols-[8.5rem_1fr] items-center lg:col-span-5'}`}>
+              <span class={`block overflow-hidden bg-surface ${i ? 'h-full' : ''}`}><img src={b.img} alt="" width="1500" height="1000" loading="lazy" class={`w-full object-cover transition-[scale] duration-700 group-hover:scale-105 ${i === 0 ? 'aspect-[16/10]' : 'h-full min-h-[8rem]'}`} /></span>
+              <span class={`block ${i ? 'p-5' : 'p-7'}`}><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">{b.categoria} · {b.tempoLettura}</span><span class={`mt-2 block font-head font-bold leading-tight text-brand ${i === 0 ? 'text-[2rem]' : 'text-[1.3rem]'}`}>{b.titolo}</span>{i === 0 && <span class="mt-3 block text-[16px] leading-relaxed text-muted">{b.intro}</span>}</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-bold tracking-tight text-brand" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-3xl border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.volto} alt="" width="32" height="32" class="h-8 w-8 rounded-full object-cover" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="1500" height="1000" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-brand/95 px-5 py-4 text-white"><p class="font-head text-[1.7rem] font-bold leading-tight">{p.titolo}</p><p class="mt-0.5 text-sm text-brand2">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-between bg-brand2 p-7 text-brand">
+                  <span class="font-head text-7xl font-bold leading-none text-white">?</span>
+                  <div><p class="font-head text-[2rem] font-bold leading-[1.05]">{p.titolo}</p><p class="mt-4 w-fit rounded-full bg-brand px-4 py-2 text-[14px] font-semibold text-white">{p.risposta}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.85rem] font-bold leading-[1.05]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-brand2"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand2">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="sedi" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-bold leading-tight tracking-tight text-brand sm:text-[3.4rem]" data-sale>{m.sedi.titolo}</h2>
+        <div class="mt-10 grid gap-5 lg:grid-cols-3" data-stagger>
+          <article class="overflow-hidden rounded-[1.75rem] bg-white lg:col-span-2">
+            <div class="grid md:grid-cols-2">
+              <img src={centro[1].img} alt="L'ingresso del Centro Ginecologico di Torino" width="1600" height="1000" loading="lazy" class="h-full min-h-[220px] w-full object-cover" />
+              <div class="p-7">
+                <h3 class="font-head text-[1.6rem] font-bold leading-tight text-brand">{sede.nome}</h3>
+                <p class="mt-1 text-[16px] text-muted">{sede.indirizzo}, {sede.cap} {sede.citta}</p>
+                <dl class="mt-5 space-y-1.5 text-[15px]">{(x.orari as string[][]).map(([g, o]) => <div class="flex justify-between gap-4 border-b border-line pb-1.5"><dt class="font-semibold">{g}</dt><dd class="text-ink/75">{o}</dd></div>)}</dl>
+                <div class="mt-5 flex flex-wrap gap-x-5 gap-y-2"><a href={telHref(m.prenota.telefono)} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="tel" class="h-4 w-4" />{m.prenota.telefonoLabel}</a><a href={telHref(x.prenota.telefono2)} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="tel" class="h-4 w-4" />{x.prenota.telefono2Label}</a><a href={mapsHref(sede.indirizzo, sede.citta)} target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="pin" class="h-4 w-4" /> Apra la mappa</a></div>
+              </div>
+            </div>
+          </article>
+          <article class="flex flex-col rounded-[1.75rem] bg-brand p-7 text-white">
+            <h3 class="font-head text-[1.6rem] font-bold leading-tight">Visite a domicilio</h3>
+            <p class="mt-3 leading-relaxed text-deep-ink">Per le donne che, per salute o fragilità, non riescono a raggiungere lo studio: allettate, con disabilità motorie o anziane. Porto a casa l'ecografo portatile e, se servono, i tamponi vaginali.</p>
+            <p class="mt-4 font-head text-[1.3rem] font-bold text-brand2">Visita completa da 450 €</p>
+            <button type="button" class="btn mt-auto !rounded-full bg-brand2 text-brand hover:opacity-90" data-vai-domicilio><Icona nome="mail" /> La richieda</button>
+          </article>
+        </div>
+        <p class="mt-6 text-[16px]">Scriva a <a href={`mailto:${m.sedi.email}`} class="font-semibold text-brand hover:underline">{m.sedi.email}</a> indicando il motivo della visita: così posso darLe un appuntamento mirato. Visito anche in francese e in inglese.</p>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-[2.4rem] font-bold sm:text-5xl">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(m.prenota.telefono)} class="btn !rounded-full bg-brand2 text-brand hover:opacity-90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-full border border-white/50 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    let lenis: Lenis | null = null;
+    const vaiA = (sel: string) => { const el = document.querySelector<HTMLElement>(sel)!; const y = el.getBoundingClientRect().top + window.scrollY - 110; if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'auto' }); };
+
+    // --- Prenotazione: lingua + motivo + dove ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const L = JSON.parse(box.dataset.lingue!) as { id: string; saluto: string; oggetto: string }[];
+    const MO = JSON.parse(box.dataset.motivi!) as string[][];
+    const DV = JSON.parse(box.dataset.dove!) as Record<string, string>[];
+    const sel = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const indice = (attr: string) => Number(box.querySelector<HTMLElement>(`[${attr}][aria-pressed="true"]`)!.getAttribute(attr));
+    const aggiorna = () => {
+      const li = indice('data-lingua'), mo = Number(sel.value), dv = indice('data-dove-i');
+      const t = L[li].saluto.replace('{m}', MO[mo][li + 1]).replace('{s}', DV[dv][L[li].id]);
+      const a = box.querySelector<HTMLElement>('[data-anteprima]')!;
+      a.textContent = t; a.lang = L[li].id;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(L[li].oggetto)}&body=${encodeURIComponent(t)}`;
+      if (!ridotto) gsap.fromTo(a, { opacity: 0.3, y: 6 }, { opacity: 1, y: 0, duration: 0.3 });
+    };
+    const premi = (attr: string, el: HTMLElement) => { box.querySelectorAll(`[${attr}]`).forEach((k) => k.setAttribute('aria-pressed', String(k === el))); aggiorna(); };
+    box.querySelectorAll<HTMLElement>('[data-lingua]').forEach((b) => b.addEventListener('click', () => premi('data-lingua', b)));
+    box.querySelectorAll<HTMLElement>('[data-dove-i]').forEach((b) => b.addEventListener('click', () => premi('data-dove-i', b)));
+    sel.addEventListener('change', aggiorna);
+    const prenotaCon = (motivo: number | null, dove?: number) => {
+      if (motivo !== null) sel.value = String(motivo);
+      if (dove !== undefined) premi('data-dove-i', box.querySelector<HTMLElement>(`[data-dove-i="${dove}"]`)!); else aggiorna();
+      vaiA('#prenota-box'); sel.focus({ preventScroll: true });
+    };
+    document.querySelector('[data-vai-domicilio]')!.addEventListener('click', () => prenotaCon(null, 1));
+
+    // --- Le fasi della vita ---
+    const fs = document.querySelector<HTMLElement>('[data-fasi]')!;
+    const FA = JSON.parse(fs.dataset.dati!) as { nome: string; eta: string; testo: string; controlli: string[]; motivo: number }[];
+    const ftab = [...fs.querySelectorAll<HTMLElement>('[data-fase-tab]')];
+    const frange = fs.querySelector<HTMLInputElement>('[data-fase-range]')!;
+    const nastro = fs.querySelector<SVGPathElement>('[data-nastro]')!;
+    const punto = fs.querySelector<SVGCircleElement>('[data-punto]')!;
+    const lung = nastro.getTotalLength();
+    nastro.style.strokeDasharray = `${lung}`;
+    const posa = (f: number) => { const p = nastro.getPointAtLength(lung * f); punto.setAttribute('cx', String(p.x)); punto.setAttribute('cy', String(p.y)); nastro.style.strokeDashoffset = String(lung * (1 - f)); };
+    let fAtt = 0; const st = { f: 0 };
+    posa(0.02);
+    const fase = (i: number, focus = false) => {
+      const d = FA[i];
+      ftab.forEach((t, k) => { t.setAttribute('aria-selected', String(k === i)); t.tabIndex = k === i ? 0 : -1; });
+      frange.value = String(i);
+      fs.querySelector('[data-fase-eta]')!.textContent = d.eta;
+      fs.querySelector('[data-fase-nome]')!.textContent = d.nome;
+      fs.querySelector('[data-fase-testo]')!.textContent = d.testo;
+      fs.querySelector<HTMLElement>('[data-fase-pannello]')!.setAttribute('aria-labelledby', ftab[i].id);
+      const ul = fs.querySelector<HTMLElement>('[data-fase-controlli]')!;
+      ul.innerHTML = '';
+      d.controlli.forEach((c) => { const li = document.createElement('li'); li.className = 'flex items-start gap-3 rounded-2xl bg-surface p-4 text-[16px] leading-snug'; li.innerHTML = '<svg viewBox="0 0 24 24" class="mt-0.5 h-5 w-5 shrink-0 text-brand2" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'; li.append(c); ul.append(li); });
+      const fine = 0.02 + (i / (FA.length - 1)) * 0.96;
+      if (ridotto) posa(fine); else gsap.to(st, { f: fine, duration: 0.9, ease: 'power3.inOut', onUpdate: () => posa(st.f) });
+      st.f = ridotto ? fine : st.f;
+      if (!ridotto) gsap.from(ul.children, { y: 16, opacity: 0, duration: 0.4, stagger: 0.06 });
+      fs.dataset.attiva = String(i);
+      if (focus) ftab[i].focus();
+      fAtt = i;
+    };
+    ftab.forEach((t, i) => {
+      t.addEventListener('click', () => fase(i));
+      t.addEventListener('keydown', (e) => { const k = (e as KeyboardEvent).key, n = ftab.length; if (k === 'ArrowRight') { e.preventDefault(); fase((fAtt + 1) % n, true); } if (k === 'ArrowLeft') { e.preventDefault(); fase((fAtt + n - 1) % n, true); } });
+    });
+    frange.addEventListener('input', () => fase(Number(frange.value)));
+    fs.querySelector('[data-fase-prenota]')!.addEventListener('click', () => prenotaCon(FA[fAtt].motivo, FA[fAtt].nome === 'Dopo la menopausa' ? undefined : 0));
+
+    // --- Gravidanza settimana per settimana ---
+    const gv = document.querySelector<HTMLElement>('[data-grav]')!;
+    const EV = JSON.parse(gv.dataset.dati!) as { da: number; a: number; titolo: string; testo: string }[];
+    const grange = gv.querySelector<HTMLInputElement>('[data-grav-range]')!;
+    const W0 = 4, W1 = 41;
+    const settimana = (w: number) => {
+      w = Math.min(W1, Math.max(W0, w));
+      grange.value = String(w); grange.setAttribute('aria-valuetext', `${w}ª settimana`);
+      gv.querySelector('[data-grav-sett]')!.textContent = String(w);
+      gv.querySelector('[data-grav-trim]')!.textContent = `settimana · ${w <= 13 ? 'primo' : w <= 27 ? 'secondo' : 'terzo'} trimestre`;
+      const c = gv.querySelector<HTMLElement>('[data-grav-cursore]')!; c.style.left = `${((w - W0) / (W1 - W0)) * 100}%`;
+      const ora = EV.filter((e) => e.da <= w && w <= e.a);
+      gv.querySelectorAll<HTMLElement>('[data-finestra]').forEach((f, i) => f.classList.toggle('attiva', EV[i].da <= w && w <= EV[i].a));
+      const ul = gv.querySelector<HTMLElement>('[data-grav-ora]')!; ul.innerHTML = '';
+      ora.forEach((e) => { const li = document.createElement('li'); const h = document.createElement('p'); h.className = 'font-head text-[1.3rem] font-bold leading-tight text-white'; h.textContent = `${e.titolo} · ${e.da === e.a ? `${e.da}ª` : `${e.da}ª-${e.a}ª`} settimana`; const p = document.createElement('p'); p.className = 'mt-1 text-[15.5px] leading-relaxed text-deep-ink'; p.textContent = e.testo; li.append(h, p); ul.append(li); });
+      gv.querySelector('[data-grav-vuoto]')!.classList.toggle('hidden', ora.length > 0);
+      const pr = EV.filter((e) => e.da > w).sort((a, b) => a.da - b.da)[0];
+      gv.querySelector('[data-grav-prossimo]')!.textContent = pr ? pr.titolo : 'Il parto';
+      gv.querySelector('[data-grav-quando]')!.textContent = pr ? `dalla ${pr.da}ª settimana: fra ${pr.da - w} ${pr.da - w === 1 ? 'settimana' : 'settimane'}` : 'Nelle ultime settimane ci vediamo spesso: siamo quasi alla fine.';
+      if (!ridotto) gsap.fromTo(ul.children, { x: 14, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, stagger: 0.05 });
+      gv.dataset.settimana = String(w);
+    };
+    grange.addEventListener('input', () => settimana(Number(grange.value)));
+    gv.querySelector('[data-grav-meno]')!.addEventListener('click', () => settimana(Number(grange.value) - 1));
+    gv.querySelector('[data-grav-piu]')!.addEventListener('click', () => settimana(Number(grange.value) + 1));
+    gv.querySelector('[data-grav-prenota]')!.addEventListener('click', () => { const w = Number(grange.value); prenotaCon(w >= 10 && w <= 13 ? 3 : 2, 0); });
+    settimana(12);
+
+    // --- Il Centro a storie ---
+    const sto = document.querySelector<HTMLElement>('[data-storie]')!;
+    const STANZE = [...sto.querySelectorAll<HTMLElement>('[data-stanza]')];
+    const barre = [...sto.querySelectorAll<HTMLElement>('[data-barra]')];
+    const chip = [...document.querySelectorAll<HTMLElement>('[data-stanza-vai]')];
+    const testiStanze = chip.map((c) => c.textContent!);
+    let sAtt = 0, tw: gsap.core.Tween | null = null, inVista = false, ferma = false;
+    const stanza = (i: number, auto = false) => {
+      const n = STANZE.length; i = (i + n) % n;
+      if (ridotto) STANZE.forEach((s, k) => { s.style.opacity = k === i ? '1' : '0'; });
+      else { gsap.to(STANZE, { opacity: (k) => (k === i ? 1 : 0), duration: 0.8 }); gsap.fromTo(STANZE[i], { scale: 1.08 }, { scale: 1, duration: 6, ease: 'none' }); }
+      sto.querySelector('[data-stanza-nome]')!.textContent = testiStanze[i];
+      sto.querySelector('[data-stanza-testo]')!.textContent = STANZE[i].dataset.testo ?? '';
+      chip.forEach((c, k) => c.setAttribute('aria-pressed', String(k === i)));
+      barre.forEach((b, k) => { gsap.killTweensOf(b); b.style.width = k < i ? '100%' : '0%'; });
+      sAtt = i; sto.dataset.attiva = String(i);
+      tw?.kill(); tw = null;
+      if (!ridotto && inVista && !ferma) tw = gsap.to(barre[i], { width: '100%', duration: 5, ease: 'none', onComplete: () => stanza(sAtt + 1, true) });
+      else barre[i].style.width = '100%';
+    };
+    sto.querySelector('[data-stanza-next]')!.addEventListener('click', () => stanza(sAtt + 1));
+    sto.querySelector('[data-stanza-prev]')!.addEventListener('click', () => stanza(sAtt - 1));
+    chip.forEach((c, i) => c.addEventListener('click', () => stanza(i)));
+    sto.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') { e.preventDefault(); stanza(sAtt + 1); } if (e.key === 'ArrowLeft') { e.preventDefault(); stanza(sAtt - 1); } });
+    const pausa = () => { ferma = true; tw?.pause(); };
+    const riprendi = () => { ferma = false; if (tw) tw.resume(); else if (inVista) stanza(sAtt); };
+    sto.addEventListener('pointerenter', pausa);
+    sto.addEventListener('pointerleave', riprendi);
+    sto.addEventListener('focusin', pausa);
+    sto.addEventListener('focusout', riprendi);
+    new IntersectionObserver((es) => es.forEach((en) => { inVista = en.isIntersecting; if (inVista && !tw) stanza(sAtt); else if (!inVista) { tw?.kill(); tw = null; } }), { threshold: 0.4 }).observe(sto);
+
+    // --- Équipe filtrabile ---
+    const membri = [...document.querySelectorAll<HTMLElement>('[data-membro]')];
+    document.querySelectorAll<HTMLElement>('[data-filtro]').forEach((b) => b.addEventListener('click', () => {
+      document.querySelectorAll('[data-filtro]').forEach((k) => k.setAttribute('aria-pressed', String(k === b)));
+      const f = b.dataset.filtro!; let n = 0;
+      membri.forEach((el) => { const ok = f === 'tutti' || el.dataset.tag!.split(' ').includes(f); el.classList.toggle('spento', !ok); el.setAttribute('aria-hidden', String(!ok)); if (ok) n++; });
+      document.querySelector('[data-equipe-n]')!.textContent = String(n);
+      document.querySelector<HTMLElement>('[data-equipe]')!.dataset.filtro = f;
+      if (!ridotto) gsap.fromTo(membri.filter((el) => !el.classList.contains('spento')), { y: 12 }, { y: 0, duration: 0.4, stagger: 0.04 });
+    }));
+
+    if (!ridotto) {
+      lenis = new Lenis({ anchors: { offset: -100 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis!.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.08em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= 4 ? 'text-brand2' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('[data-svela]', { clipPath: 'circle(8% at 58% 26%)', duration: 1.5, ease: 'power3.inOut' })
+        .from('[data-ritratto]', { scale: 1.25, duration: 1.8 }, '<')
+        .from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.8, stagger: 0.05 }, 0.2)
+        .from('[data-entra]', { y: 30, opacity: 0, duration: 0.8, stagger: 0.1 }, '-=0.5')
+        .from('[data-numeri]', { y: 40, opacity: 0, duration: 0.7 }, 1.1)
+        .from('[data-anello]', { scale: 0.4, opacity: 0, duration: 1.6 }, 0);
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.6, delay: 1.2, ease: 'power2.out', onUpdate: () => { el.textContent = String(Math.round(o.v)); } });
+      });
+      gsap.to('[data-anello]', { rotate: 90, yPercent: 30, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.to('[data-ritratto]', { yPercent: 6, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      gsap.from('[data-fase-tab]', { y: 30, opacity: 0, duration: 0.6, stagger: 0.07, scrollTrigger: { trigger: '[data-fasi]', start: 'top 70%', once: true } });
+      gsap.from('[data-finestra]', { scaleX: 0, transformOrigin: '0% 50%', duration: 0.8, stagger: 0.08, ease: 'power3.out', scrollTrigger: { trigger: '[data-grav]', start: 'top 70%', once: true } });
+      gsap.from('[data-membro]', { y: 40, scale: 0.96, duration: 0.6, stagger: 0.05, scrollTrigger: { trigger: '[data-equipe-griglia]', start: 'top 85%', once: true } });
+      // la linea della storia si disegna con lo scroll e accende le tappe
+      gsap.fromTo('[data-linea]', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '[data-tappe]', start: 'top 70%', end: 'bottom 70%', scrub: true } });
+      gsap.utils.toArray<HTMLElement>('[data-tappa]').forEach((t) => ScrollTrigger.create({ trigger: t, start: 'top 70%', onEnter: () => t.classList.add('accesa'), onLeaveBack: () => t.classList.remove('accesa') }));
+      gsap.from('[data-blog] > a', { y: 60, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out', scrollTrigger: { trigger: '[data-blog]', start: 'top 85%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    } else {
+      document.querySelectorAll<HTMLElement>('[data-tappa]').forEach((t) => t.classList.add('accesa'));
+    }
+  </script>
+</Base>
