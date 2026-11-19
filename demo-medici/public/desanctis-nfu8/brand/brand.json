@@ -1,0 +1,35 @@
+{
+  "medico": "Prof. Ugo de Sanctis",
+  "specialita": "Oculista, Professore Associato di Oculistica all'Università di Torino: chirurgia refrattiva (PRK, LASIK, SMILE, ICL), cataratta (circa 10.000 interventi), cornea (trapianti lamellari DALK, DMEK, DSAEK; cross-linking)",
+  "sito": "https://www.ugodesanctis.com/ (WordPress, tema del 2017)",
+  "logo": "logotipo di testo bianco su nero «UGO DE SANCTIS / OCULISTA» (258x35, troppo piccolo): ricostruito in testo, Bodoni Moda spaziato, nella testata nera",
+  "colori": {
+    "nero_logo": "#0A0E14",
+    "blu_cornea": "#1D4F82",
+    "azzurro": "#6CB8E6"
+  },
+  "font": {
+    "sito": "tema 2017 (serif nei titoli)",
+    "demo": [
+      "Bodoni Moda (mai corsivo)",
+      "Onest"
+    ]
+  },
+  "contatti": {
+    "telefono": "011 562 3620",
+    "email": "info@ugodesanctis.com (prenotazione via mail già scritta)",
+    "whatsapp": "nessuno",
+    "studio": "Corso Matteotti 28, 10121 Torino"
+  },
+  "foto": [
+    "Prof.-Ugo-De-Sanctis-Oculista.jpg: banner 1600x560 → ritratto 460x560 (piccolo, usato in un cerchio medio)",
+    "slide-hp-de-sanctis-cecilia.jpg: lui con una collaboratrice davanti alla tomografia corneale",
+    "slide-hp-2.jpg: assistente alla biometria (paziente con il viso nascosto dallo strumento)",
+    "facciata del palazzo, foto per la cataratta (nonno e nipote, dal suo sito), immagini cliniche di cheratocono e tomografia (anonime), schema delle tre generazioni laser",
+    "Escluse le slide con pazienti in viso alla lampada a fessura."
+  ],
+  "recensioni": "87 recensioni Google pubblicate sul suo sito (2024-2026), mostrate con nome e iniziale del cognome",
+  "convenzioni": "24 enti (dai loghi della pagina Convenzioni)",
+  "problemi_sito": "home fatta solo di uno slider e una frase; sito del 2017 mai rinnovato; tabella delle tecniche e numeri forti (10.000 cataratte, professore associato, oltre 100 articoli) sepolti nelle pagine interne; prenotazione solo con un modulo generico; nessun blog e nessun social",
+  "note": "Alto valore: chirurgia refrattiva a pagamento, utile anche per ADV."
+}

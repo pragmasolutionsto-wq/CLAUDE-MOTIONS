@@ -477,3 +477,31 @@ html { scroll-behavior: smooth; }
   .stile-spirale .card { border-radius: 22px; }
   .stile-spirale .campo, .stile-spirale .btn, .stile-spirale .slot, .stile-spirale .giorno { border-radius: 12px; }
 }
+
+/* Layout "placido": orientatore delle tecniche, tabella, simulatore, recensioni */
+@layer components {
+  .pill-r { cursor: pointer; }
+  .pill-r span { display: inline-flex; min-height: 42px; align-items: center; border-radius: 999px; border: 1px solid var(--c-line); background: #fff; padding: .4rem 1rem; font-size: 15px; font-weight: 600; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .pill-r:hover span { border-color: var(--c-deep); }
+  .pill-r input:checked + span { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .pill-r input:focus-visible + span { outline: 2px solid var(--c-brand2); outline-offset: 2px; }
+  .cursore-ds { accent-color: var(--c-brand); height: 28px; cursor: pointer; }
+  [data-esiti] { display: flex; flex-direction: column; }
+  .esito { background: #fff; transition: border-color .3s, background-color .3s; }
+  .esito.ok { border-color: var(--c-brand); box-shadow: inset 4px 0 0 var(--c-brand); }
+  .esito.ok .badge { background: var(--c-brand); color: #fff; }
+  .esito.no { background: var(--c-surface); }
+  .esito.no h3 { color: var(--c-muted); }
+  .esito.no .badge { background: #fff; color: var(--c-muted); }
+  .esito.no .dettagli { display: none; }
+  .confronto [data-col] { transition: background-color .3s; }
+  .confronto .evidenza { background: color-mix(in srgb, var(--c-brand2) 14%, #fff); }
+  .lente-btn { color: var(--c-muted); transition: background-color .2s, color .2s; }
+  .lente-btn[aria-pressed="true"] { background: var(--c-deep); color: #fff; }
+  .pill { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .pill:hover { border-color: var(--c-deep); }
+  .pill[aria-pressed="true"] { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .stile-placido .card { border-radius: 24px; }
+  .stile-placido .campo, .stile-placido .slot, .stile-placido .giorno { border-radius: 14px; }
+  .stile-placido .btn { border-radius: 999px; }
+}

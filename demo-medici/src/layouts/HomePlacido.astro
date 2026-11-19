@@ -1,0 +1,480 @@
+---
+// Layout "placido" (prima demo: Prof. Ugo de Sanctis, oculista: chirurgia refrattiva, cornea, cataratta). Gli anelli di Placido della
+// topografia corneale come motivo, il nero e il bianco del suo logo (testata nera con logotipo spaziato), Bodoni Moda (mai corsivo) +
+// Onest, blu cornea #1D4F82 + azzurro #6CB8E6. Interattivi: «Quale tecnica per Lei?» (difetto, diottrie, età, cornea sottile, cataratta,
+// recupero rapido → tecniche indicate e non indicate con il perché, secondo i criteri pubblicati sul suo sito); tabella a confronto con
+// colonna evidenziata; simulatore della cataratta (opacità + dopo l'intervento con lente monofocale o multifocale, lontano e vicino);
+// recensioni Google vere a carosello con filtro per intervento; prenotazione via mail/telefono.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const P = x.prenota;
+const mail = emailRichieste(m);
+const motivi = x.motivi as any[];
+const tec = x.tecniche as any[];
+const rec = x.recensioniGoogle as any[];
+const temiR = x.temiRecensioni as any[];
+const sede = m.sedi.luoghi[0] as any;
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const msg0 = `Buongiorno Professore, vorrei prenotare ${motivi[0].frase}.`;
+const mailHref = (t: string) => `mailto:${mail}?subject=${encodeURIComponent(P.oggettoMail)}&body=${encodeURIComponent(t)}`;
+const anelli = Array.from({ length: 14 }, (_, i) => 26 + i * 21);
+const righe = [['Difetto trattabile', 'difetti'], ['Laser utilizzato', 'laser'], ['Disturbi dopo l\'intervento', 'disturbi'], ['Recupero visivo', 'recupero'], ['Ritorno al lavoro', 'lavoro']];
+const difetti = [['miopia', 'Miopia'], ['astigmatismo', 'Astigmatismo'], ['ipermetropia', 'Ipermetropia'], ['presbiopia', 'Presbiopia'], ['cataratta', 'Cataratta']];
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 bg-deep text-white" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} class="leading-none" aria-label="Prof. Ugo de Sanctis, Oculista">
+        <span class="block whitespace-nowrap font-head text-[19px] font-semibold tracking-[0.14em] sm:text-[23px]">UGO DE SANCTIS</span>
+        <span class="mt-1 flex items-center gap-2 text-[10.5px] font-medium tracking-[0.5em] text-deep-ink"><span class="h-px w-6 bg-white/40"></span>OCULISTA</span>
+      </a>
+      <nav class="hidden items-center gap-6 text-[14.5px] text-white/75 xl:flex" aria-label="Sezioni">
+        <a href="#aree" class="hover:text-white">Quale tecnica</a><a href="#tecniche" class="hover:text-white">A confronto</a><a href="#cataratta" class="hover:text-white">Cataratta</a><a href="#cornea" class="hover:text-white">Cornea</a><a href="#recensioni" class="hover:text-white">Recensioni</a><a href="#sedi" class="hover:text-white">Lo studio</a>
+      </nav>
+      <a href="#prenota-box" class="btn !min-h-[40px] shrink-0 !rounded-full bg-white !px-5 text-[14px] text-deep hover:bg-brand2">Prenoti</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-deep text-white" data-hero>
+      <div class="relative mx-auto grid max-w-7xl gap-12 px-4 pb-14 pt-10 sm:px-8 lg:grid-cols-12 lg:items-center lg:pb-20 lg:pt-14">
+        <div class="lg:col-span-7">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.22em] text-brand2" data-entra>{x.hero.eyebrow}</p>
+          <h1 class="mt-5 font-head text-[3rem] font-medium leading-[1.02] tracking-[-0.01em] sm:text-[5rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-deep-ink" data-entra>{x.hero.testo}</p>
+          <dl class="mt-9 grid max-w-xl grid-cols-3 gap-4 border-t border-white/15 pt-6" data-entra>
+            {(x.numeri as any[]).map((n) => <div><dt class="sr-only">{n.testo}</dt><dd><span class="block text-[11.5px] uppercase tracking-[0.14em] text-white/50">{n.pre}</span><span class="block font-head text-[2.1rem] font-semibold leading-none sm:text-[2.7rem]" data-conta={n.valore} data-fmt={n.fmt}>{n.fmt}</span><span class="mt-1.5 block text-[13px] leading-snug text-deep-ink">{n.testo}</span></dd></div>)}
+          </dl>
+        </div>
+        <div class="relative lg:col-span-5">
+          <div class="relative mx-auto aspect-square w-full max-w-[480px]">
+            <svg viewBox="0 0 640 640" class="absolute inset-0 h-full w-full" aria-hidden="true" data-anelli>
+              {anelli.map((r, i) => <circle cx="320" cy="320" r={r} fill="none" stroke="#fff" stroke-opacity={i % 2 ? 0.08 : 0.2} stroke-width={i % 2 ? 6 : 1.5} />)}
+            </svg>
+            <div class="absolute inset-[17%] overflow-hidden rounded-full ring-1 ring-white/30" data-foto-hero><img src={foto.ritratto} alt={foto.ritrattoAlt} width="460" height="560" fetchpriority="high" class="h-full w-full object-cover object-top" data-foto-img /></div>
+          </div>
+        </div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 pb-16 sm:px-8">
+        <div id="prenota-box" class="grid gap-5 rounded-[28px] bg-white p-5 text-ink sm:p-7 lg:grid-cols-12 lg:items-end" data-prenota-box data-mail={mail} data-oggetto={P.oggettoMail} data-entra>
+          <label class="block lg:col-span-4"><span class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Prenoti una visita per</span>
+            <select class="campo mt-2 !rounded-2xl" data-motivo>{motivi.map((t) => <option value={t.id} data-frase={t.frase}>{t.nome}</option>)}</select></label>
+          <div class="rounded-2xl bg-surface px-4 py-3 lg:col-span-5"><p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">Il Suo messaggio</p><p class="mt-1 text-[15.5px] leading-snug text-deep" data-anteprima aria-live="polite">{msg0}</p></div>
+          <div class="flex flex-col gap-2 lg:col-span-3">
+            <a href={mailHref(msg0)} class="btn !rounded-full bg-deep text-white hover:bg-brand" data-prenota><Icona nome="mail" /> Invii la mail</a>
+            <a href={telHref(P.telefono)} class="btn !rounded-full border border-line text-deep hover:border-deep"><Icona nome="tel" /> {P.telefonoLabel}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUALE TECNICA -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24" data-orientatore data-tecniche={JSON.stringify(tec.map((t) => ({ id: t.id, nome: t.nome })))}>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.22em] text-brand">Elimina occhiali e lenti a contatto</p><h2 class="mt-2 font-head text-[2.6rem] font-medium leading-[1.04] text-deep sm:text-[3.6rem]" data-sale>Quale tecnica fa per Lei?</h2></div>
+          <p class="text-[16.5px] leading-relaxed text-ink/80 lg:col-span-5">Un primo orientamento con i criteri che uso in studio. La scelta vera si fa dopo gli esami: tomografia della cornea, misura della vista a tutte le distanze, superficie oculare.</p>
+        </div>
+        <div class="mt-10 grid gap-8 lg:grid-cols-12">
+          <form class="space-y-6 rounded-[28px] bg-surface p-6 sm:p-8 lg:col-span-5" data-orient-form onsubmit="return false">
+            <fieldset><legend class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Che cosa vorrebbe correggere</legend>
+              <div class="mt-3 flex flex-wrap gap-2">{difetti.map(([id, n], i) => <label class="pill-r"><input type="radio" name="difetto" value={id} checked={i === 0} class="sr-only" /><span>{n}</span></label>)}</div></fieldset>
+            <div data-diottrie-box><label for="ds-d" class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Diottrie: <span class="font-head text-[1.4rem] normal-case tracking-normal text-deep" data-d-val>4</span></label>
+              <input id="ds-d" type="range" min="0.5" max="20" step="0.5" value="4" class="cursore-ds mt-2 w-full" data-d /></div>
+            <div><label for="ds-eta" class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Età: <span class="font-head text-[1.4rem] normal-case tracking-normal text-deep" data-eta-val>32</span> <span class="normal-case tracking-normal">anni</span></label>
+              <input id="ds-eta" type="range" min="14" max="85" step="1" value="32" class="cursore-ds mt-2 w-full" data-eta /></div>
+            <div class="space-y-2.5">
+              <label class="flex items-start gap-3 text-[15px]"><input type="checkbox" class="mt-1 h-4 w-4 accent-[var(--c-brand)]" data-sottile />Mi hanno detto che ho la cornea sottile</label>
+              <label class="flex items-start gap-3 text-[15px]"><input type="checkbox" class="mt-1 h-4 w-4 accent-[var(--c-brand)]" data-rapido />Mi serve un recupero rapido (lavoro, sport)</label>
+            </div>
+          </form>
+          <div class="lg:col-span-7" aria-live="polite">
+            <p class="hidden rounded-2xl bg-deep px-5 py-4 text-[15.5px] text-white" data-avviso></p>
+            <div class="grid gap-3" data-esiti>
+              {tec.map((t) => (
+                <article class="esito rounded-[22px] border border-line p-5" data-esito-t={t.id}>
+                  <div class="flex items-start justify-between gap-4"><div><h3 class="font-head text-[1.45rem] font-semibold text-deep">{t.nome}</h3><p class="text-[13px] text-muted">{t.esteso}</p></div><span class="badge shrink-0 rounded-full px-3 py-1 text-[12px] font-semibold" data-badge-t></span></div>
+                  <p class="mt-2 text-[15px] leading-relaxed text-ink/85" data-perche></p>
+                  <dl class="dettagli mt-3 grid grid-cols-3 gap-3 border-t border-line pt-3 text-[13px]"><div><dt class="text-muted">Recupero</dt><dd class="font-semibold text-deep">{t.recupero}</dd></div><div><dt class="text-muted">Al lavoro</dt><dd class="font-semibold text-deep">{t.lavoro}</dd></div><div><dt class="text-muted">Disturbi</dt><dd class="font-semibold text-deep">{t.disturbi.split(',')[0]}</dd></div></dl>
+                </article>
+              ))}
+            </div>
+            <div class="mt-5 flex flex-wrap gap-3"><button type="button" class="btn !rounded-full bg-deep text-white hover:bg-brand" data-orient-prenota>Prenoti la valutazione</button><a href="#tecniche" class="btn !rounded-full text-brand hover:bg-surface">Confronti le tecniche</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A CONFRONTO -->
+    <section id="tecniche" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.6rem] font-medium leading-[1.04] text-deep sm:text-[3.4rem]" data-sale>Le tecniche a confronto</h2>
+        <p class="mt-3 max-w-2xl text-[16.5px] leading-relaxed text-ink/80">Procedure ambulatoriali, con anestesia in collirio, per trattare entrambi gli occhi nella stessa seduta. Uso la piattaforma Carl Zeiss Meditec per tecniche di superficie, LASIK e SMILE.</p>
+        <div class="-mx-4 mt-8 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+          <table class="confronto w-full min-w-[760px] border-separate border-spacing-0 overflow-hidden rounded-[22px] bg-white text-left text-[14.5px] ring-1 ring-line" data-tabella>
+            <thead><tr><th class="w-[18%] p-4"></th>{tec.slice(0, 4).map((t) => <th class="p-4 align-bottom" data-col={t.id}><span class="block font-head text-[1.4rem] font-semibold text-deep">{t.nome}</span><span class="text-[12px] font-normal text-muted">{t.esteso}</span></th>)}</tr></thead>
+            <tbody>{righe.map(([n, k]) => <tr><th class="border-t border-line p-4 font-semibold text-muted">{n}</th>{tec.slice(0, 4).map((t) => <td class="border-t border-line p-4 align-top text-ink/85" data-col={t.id}>{t[k]}</td>)}</tr>)}</tbody>
+          </table>
+        </div>
+        <figure class="mt-8 max-w-3xl"><img src={foto.generazioni} alt="Le tre generazioni della chirurgia laser: PRK, LASIK, SMILE" width="1200" height="720" loading="lazy" class="w-full rounded-[22px] bg-white" /><figcaption class="mt-2 text-[13px] text-muted">PRK in superficie, LASIK con il lembo, SMILE con una piccola incisione: tre generazioni di chirurgia laser.</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- CATARATTA -->
+    <section id="cataratta" class="px-4 py-16 sm:px-8 sm:py-24" data-simulatore>
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-5">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.22em] text-brand">Cataratta</p>
+          <h2 class="mt-2 font-head text-[2.6rem] font-medium leading-[1.04] text-deep sm:text-[3.4rem]" data-sale>Come la vede, e come potrebbe vederla.</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-ink/80">Con gli anni il cristallino si ingiallisce e perde trasparenza: i colori si spengono, le immagini si appannano. L'intervento, veloce e non doloroso, è l'unica cura. Ne ho eseguiti circa 10.000, anche con il laser a femtosecondi e con lenti avanzate.</p>
+          <label for="ds-op" class="mt-8 block text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Opacità del cristallino: <span class="text-deep" data-op-val>media</span></label>
+          <input id="ds-op" type="range" min="0" max="100" value="55" class="cursore-ds mt-2 w-full" data-op />
+          <p class="mt-6 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted" id="dopo-label">Dopo l'intervento</p>
+          <div class="mt-2 grid grid-cols-3 gap-1 rounded-full bg-surface p-1" role="group" aria-labelledby="dopo-label">
+            <button type="button" class="lente-btn rounded-full px-2 py-2 text-[13.5px] font-semibold" data-lente="prima" aria-pressed="true">Prima</button>
+            <button type="button" class="lente-btn rounded-full px-2 py-2 text-[13.5px] font-semibold" data-lente="mono" aria-pressed="false">Monofocale</button>
+            <button type="button" class="lente-btn rounded-full px-2 py-2 text-[13.5px] font-semibold" data-lente="multi" aria-pressed="false">Multifocale</button>
+          </div>
+          <p class="mt-4 text-[15px] leading-relaxed text-ink/85" data-lente-testo aria-live="polite">Sposti il cursore per vedere come cambia la visione con il progredire della cataratta.</p>
+          <button type="button" class="btn mt-6 !rounded-full bg-deep text-white hover:bg-brand" data-prenota-motivo="cataratta">Prenoti una visita per la cataratta</button>
+        </div>
+        <figure class="lg:col-span-7">
+          <div class="relative overflow-hidden rounded-[28px] bg-deep" data-scena>
+            <img src={foto.scena} alt="Un nonno e un nipote guardano una cartina" width="800" height="560" loading="lazy" class="w-full" data-scena-img />
+            <div class="pointer-events-none absolute inset-0 bg-[#f4e7c5]" data-velo></div>
+            <div class="absolute bottom-4 left-4 w-[46%] rounded-2xl bg-white p-4 shadow-xl" data-vicino>
+              <p class="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-muted">Da vicino</p>
+              <p class="mt-1 font-head text-[15px] leading-snug text-deep sm:text-[17px]">Sentiero 4 · Rifugio del Lago · 2 h 30 · dislivello 450 m</p>
+            </div>
+            <span class="absolute right-4 top-4 rounded-full bg-black/55 px-3 py-1 text-[12px] font-semibold text-white" data-stato-lente>Con la cataratta</span>
+          </div>
+          <figcaption class="mt-2 text-[13px] text-muted">Simulazione indicativa: ogni occhio e ogni lente sono diversi. Ne parliamo in visita.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CORNEA -->
+    <section id="cornea" class="bg-deep px-4 py-16 text-deep-ink sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-10 lg:grid-cols-12">
+          <div class="lg:col-span-6">
+            <p class="text-[12.5px] font-semibold uppercase tracking-[0.22em] text-brand2">Cornea</p>
+            <h2 class="mt-2 font-head text-[2.6rem] font-medium leading-[1.04] text-white sm:text-[3.4rem]" data-sale>La cornea è la mia specialità dal 1997.</h2>
+            <p class="mt-4 text-[16.5px] leading-relaxed">Responsabile del Servizio di Patologia Corneale della Clinica Oculistica di Torino e consulente scientifico della Banca delle Cornee della Regione Piemonte. Tra i primi in Italia a usare i trapianti lamellari, che sostituiscono solo lo strato malato della cornea.</p>
+            <div class="mt-6 flex flex-wrap gap-2">{['DALK', 'DMEK', 'DSAEK', 'Cross-linking', 'Anelli intrastromali'].map((t) => <span class="rounded-full border border-white/20 px-4 py-1.5 text-[14px] text-white">{t}</span>)}</div>
+            <ol class="mt-10 space-y-5">
+              {[['Diagnosi precoce', "Il cheratocono inizia prima dei 20 anni, spesso con un astigmatismo che cresce in fretta. La tomografia corneale lo riconosce quando i disturbi sono ancora lievi."], ['Cross-linking', "L'unico intervento che ferma la progressione: riboflavina e luce ultravioletta irrigidiscono la cornea. In ambulatorio, con anestesia in collirio."], ['Migliorare la vista', "Lenti a contatto specifiche, anelli intrastromali e, nei casi gravi, trapianto lamellare."]].map(([t, d]) => <li class="border-l-2 border-brand2 pl-5"><h3 class="font-head text-[1.3rem] font-semibold text-white">{t}</h3><p class="mt-1 text-[15.5px] leading-relaxed">{d}</p></li>)}
+            </ol>
+            <a href={`/${m.slug}/blog/cheratocono`} class="btn mt-8 !rounded-full bg-white text-deep hover:bg-brand2">Cheratocono: i primi segnali</a>
+          </div>
+          <div class="grid grid-cols-2 gap-4 lg:col-span-6">
+            <figure><img src={foto.placido} alt="Cheratocono avanzato: topografia e anelli di Placido deformati" width="800" height="1124" loading="lazy" class="w-full rounded-[20px]" /><figcaption class="mt-2 text-[12.5px] text-deep-ink/70">Cheratocono avanzato: gli anelli riflessi sulla cornea si deformano.</figcaption></figure>
+            <figure class="self-end"><img src={foto.pachimetria} alt="Tomografia della cornea con l'area di massimo assottigliamento" width="400" height="472" loading="lazy" class="w-full rounded-[20px] bg-white" /><figcaption class="mt-2 text-[12.5px] text-deep-ink/70">La tomografia mostra l'area di massimo assottigliamento.</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENSIONI -->
+    <section id="recensioni" class="px-4 py-16 sm:px-8 sm:py-24" data-recensioni data-rec={JSON.stringify(rec)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.22em] text-brand">Recensioni</p><h2 class="mt-2 font-head text-[2.6rem] font-medium leading-[1.04] text-deep sm:text-[3.4rem]" data-sale>{rec.length} pazienti, su Google.</h2></div>
+          <p class="text-[15.5px] text-muted lg:col-span-5">Le recensioni che lo studio pubblica sul suo sito, dal 2024 a oggi. Le filtri per intervento.</p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-2" role="group" aria-label="Filtra per intervento">
+          <button type="button" class="pill rounded-full border border-line px-4 py-2 text-[14.5px] font-semibold" data-tema="" aria-pressed="true">Tutte <span class="opacity-60">{rec.length}</span></button>
+          {temiR.filter((t) => t.n > 0).map((t) => <button type="button" class="pill rounded-full border border-line px-4 py-2 text-[14.5px] font-semibold" data-tema={t.id} aria-pressed="false">{t.nome} <span class="opacity-60">{t.n}</span></button>)}
+        </div>
+        <div class="mt-8 grid gap-6 lg:grid-cols-12 lg:items-center">
+          <blockquote class="relative overflow-hidden rounded-[28px] bg-surface p-7 sm:p-10 lg:col-span-9" aria-live="polite">
+            <svg viewBox="0 0 640 640" class="pointer-events-none absolute -right-20 -top-20 w-72 opacity-60" aria-hidden="true">{anelli.slice(0, 9).map((r, i) => <circle cx="320" cy="320" r={r} fill="none" stroke="var(--c-line)" stroke-width={i % 2 ? 5 : 1.2} />)}</svg>
+            <p class="relative font-head text-[1.35rem] leading-[1.45] text-deep sm:text-[1.6rem]" data-rec-testo>«{rec[0].testo}»</p>
+            <footer class="relative mt-5 text-[14px] text-muted"><span class="font-semibold text-deep" data-rec-nome>{rec[0].nome}</span> · <span data-rec-data>{rec[0].data}</span> · Google</footer>
+          </blockquote>
+          <div class="flex items-center gap-3 lg:col-span-3 lg:flex-col lg:items-start">
+            <p class="font-head text-[2.2rem] font-semibold text-deep"><span data-rec-i>1</span><span class="text-[0.55em] text-muted"> / <span data-rec-n>{rec.length}</span></span></p>
+            <div class="flex gap-2"><button type="button" class="grid h-12 w-12 place-items-center rounded-full border border-line hover:border-deep" data-rec-prec aria-label="Recensione precedente"><Icona nome="sx" /></button><button type="button" class="grid h-12 w-12 place-items-center rounded-full bg-deep text-white hover:bg-brand" data-rec-succ aria-label="Recensione successiva"><Icona nome="dx" /></button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO E TEAM -->
+    <section id="chi-sono" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="overflow-hidden rounded-[28px]"><img src={foto.monitor} alt="Il Prof. de Sanctis con una collaboratrice davanti a una tomografia della cornea" width="1600" height="560" loading="lazy" class="w-full" data-foto-team /></div>
+        <div class="mt-12 grid gap-12 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <p class="text-[12.5px] font-semibold uppercase tracking-[0.22em] text-brand">Chi sono</p>
+            <h2 class="mt-2 font-head text-[2.4rem] font-medium leading-[1.06] text-deep" data-sale>Un chirurgo del segmento anteriore, con un team dedicato.</h2>
+            <ol class="relative mt-8 space-y-6 pl-8" data-storia>
+              <span class="absolute bottom-2 left-[7px] top-2 w-0.5 bg-line" aria-hidden="true"></span>
+              <span class="absolute left-[7px] top-2 w-0.5 origin-top bg-brand" style="bottom:.5rem" aria-hidden="true" data-storia-linea></span>
+              {(x.bioTappe as any[]).map((s) => <li class="relative"><span class="absolute -left-8 top-1.5 h-4 w-4 rounded-full border-[3px] border-surface bg-brand" aria-hidden="true"></span><p class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand">{s.anno}</p><h3 class="mt-0.5 font-head text-[1.25rem] font-semibold text-deep">{s.titolo}</h3><p class="mt-1 text-[15px] leading-relaxed text-ink/80">{s.testo}</p></li>)}
+            </ol>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="grid gap-3 sm:grid-cols-2">{(x.team as string[][]).map(([n, d]) => <div class="rounded-[22px] bg-white p-5 ring-1 ring-line"><h3 class="font-head text-[1.2rem] font-semibold text-deep">{n}</h3><p class="mt-1 text-[14.5px] leading-relaxed text-ink/80">{d}</p></div>)}</div>
+            <div class="mt-4 overflow-hidden rounded-[22px]"><img src={foto.esame} alt="Un'assistente in oftalmologia esegue la biometria" width="1000" height="560" loading="lazy" class="w-full" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LO STUDIO -->
+    <section id="sedi" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="overflow-hidden rounded-[28px]"><img src={foto.studio} alt="Il palazzo dello studio in corso Matteotti 28" width="1600" height="560" loading="lazy" class="w-full" /></div>
+        <div class="mt-10 grid gap-10 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <h2 class="font-head text-[2.4rem] font-medium leading-[1.06] text-deep" data-sale>Corso Matteotti 28, Torino.</h2>
+            <p class="mt-3 text-[16px] text-ink/80">Nel centro, fuori dalla ZTL.</p>
+            <p class="mt-6 text-[15.5px]"><a href={telHref(P.telefono)} class="font-semibold text-brand hover:underline">{P.telefonoLabel}</a><br /><a href={`mailto:${m.sedi.email}`} class="font-semibold text-brand hover:underline">{m.sedi.email}</a></p>
+            <a href={mapsHref(sede.indirizzo, sede.citta)} target="_blank" rel="noopener" class="btn mt-6 !rounded-full bg-deep text-white hover:bg-brand"><Icona nome="pin" /> Indicazioni</a>
+          </div>
+          <dl class="grid gap-4 sm:grid-cols-2 lg:col-span-8">{(x.arrivare as string[][]).map(([t, d]) => <div class="border-t border-line pt-3"><dt class="font-head text-[1.15rem] font-semibold text-deep">{t}</dt><dd class="mt-1 text-[14.5px] leading-relaxed text-ink/80">{d}</dd></div>)}</dl>
+        </div>
+        <div class="mt-12 rounded-[28px] bg-surface p-6 sm:p-8">
+          <p class="font-head text-[1.3rem] font-semibold text-deep">Convenzioni per gli interventi chirurgici</p>
+          <ul class="mt-4 flex flex-wrap gap-2">{(x.convenzioni as string[]).map((c) => <li class="rounded-full bg-white px-3.5 py-1.5 text-[14px] ring-1 ring-line">{c}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-placido bg-surface"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.6rem] font-medium leading-tight text-deep sm:text-[3.2rem]" data-sale>Da leggere prima della visita</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group flex flex-col">
+              <span class="block overflow-hidden rounded-[22px]"><img src={b.img} alt="" width="900" height="560" loading="lazy" class="aspect-[4/3] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="mt-4 text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">{b.categoria} · {b.tempoLettura}</span>
+              <span class="mt-1.5 block font-head text-[1.3rem] font-semibold leading-snug text-deep group-hover:text-brand">{b.titolo}</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-medium text-deep" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-[22px] ring-1 ring-line sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.volto} alt="" width="32" height="32" class="h-8 w-8 rounded-full object-cover" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="900" height="560" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-3 bottom-3 rounded-2xl bg-white px-5 py-4"><p class="font-head text-[1.5rem] font-semibold leading-tight text-deep">{p.titolo}</p><p class="mt-0.5 text-sm font-semibold text-brand">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="relative flex aspect-square flex-col justify-end overflow-hidden bg-deep p-7 text-white">
+                  <svg viewBox="0 0 640 640" class="absolute -right-24 -top-24 w-80" aria-hidden="true">{anelli.map((r, i) => <circle cx="320" cy="320" r={r} fill="none" stroke="#fff" stroke-opacity={i % 2 ? 0.08 : 0.22} stroke-width={i % 2 ? 6 : 1.5} />)}</svg>
+                  <p class="relative font-head text-[2.1rem] font-medium leading-[1.05]">{p.titolo}</p><p class="relative mt-4 w-fit rounded-full bg-white px-4 py-2 text-[14px] font-semibold text-deep">{p.risposta}</p>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.9rem] font-medium leading-[1.05]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full border-2 border-white"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-deep px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-[2.4rem] font-medium sm:text-5xl">{P.titolo}</h2><p class="mt-2 max-w-xl text-deep-ink">{P.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(P.telefono)} class="btn !rounded-full bg-white text-deep hover:bg-brand2"><Icona nome="tel" /> {P.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-full border border-white/40 text-white hover:bg-white/10">Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    let lenis: Lenis | null = null;
+    const vaiA = (sel: string) => { const el = document.querySelector<HTMLElement>(sel)!; const y = el.getBoundingClientRect().top + window.scrollY - 100; if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'auto' }); };
+
+    // --- Prenotazione ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const selM = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const aggiorna = () => {
+      const t = `Buongiorno Professore, vorrei prenotare ${selM.selectedOptions[0].dataset.frase}.`;
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(box.dataset.oggetto!)}&body=${encodeURIComponent(t)}`;
+    };
+    selM.addEventListener('change', aggiorna);
+    const scegli = (id: string) => { selM.value = id; aggiorna(); vaiA('#prenota-box'); selM.focus({ preventScroll: true }); };
+    document.querySelectorAll<HTMLElement>('[data-prenota-motivo]').forEach((b) => b.addEventListener('click', () => scegli(b.dataset.prenotaMotivo!)));
+    aggiorna();
+
+    // --- Quale tecnica ---
+    const or = document.querySelector<HTMLElement>('[data-orientatore]')!;
+    const fo = or.querySelector<HTMLFormElement>('[data-orient-form]')!;
+    const rD = fo.querySelector<HTMLInputElement>('[data-d]')!, rE = fo.querySelector<HTMLInputElement>('[data-eta]')!;
+    const cS = fo.querySelector<HTMLInputElement>('[data-sottile]')!, cR = fo.querySelector<HTMLInputElement>('[data-rapido]')!;
+    type Es = { id: string; ok: boolean; perche: string };
+    const valuta = (dif: string, d: number, eta: number, sottile: boolean): { avviso: string; esiti: Es[] } => {
+      const E = (id: string, ok: boolean, perche: string) => ({ id, ok, perche });
+      if (eta < 18) return { avviso: 'Prima dei 18 anni il difetto visivo non è ancora stabile: la chirurgia refrattiva non si esegue. Una visita serve comunque a controllarlo e, se serve, a escludere un cheratocono.', esiti: ['smile', 'lasik', 'prk', 'icl', 'iol'].map((id) => E(id, false, 'Non prima dei 18 anni, con un difetto stabile da almeno un anno.')) };
+      const sott = 'Con una cornea sottile il laser in profondità non è indicato.';
+      const cristallino = eta >= 55;
+      if (dif === 'cataratta') return { avviso: '', esiti: [E('iol', true, 'La cataratta si cura solo sostituendo il cristallino. Con una lente multifocale o torica si corregge anche il difetto visivo.'), E('lasik', false, 'Il laser sulla cornea non cura la cataratta.'), E('smile', false, 'Il laser sulla cornea non cura la cataratta.'), E('prk', false, 'Il laser sulla cornea non cura la cataratta.'), E('icl', false, 'Le ICL si aggiungono al cristallino: con la cataratta si sostituisce.')] };
+      if (dif === 'presbiopia') return { avviso: '', esiti: [
+        E('iol', cristallino, cristallino ? 'Dopo i 55 anni le lenti multifocali correggono la presbiopia e prevengono la cataratta.' : 'Di solito si valuta dopo i 55 anni, quando il cristallino perde trasparenza.'),
+        E('lasik', !sottile, sottile ? sott : 'La FEMTO-LASIK corregge la presbiopia con profili di trattamento dedicati.'),
+        E('smile', !sottile, sottile ? sott : 'Utilizzabile in alcuni casi di presbiopia.'),
+        E('prk', true, sottile ? 'Con una cornea sottile è la tecnica laser di riferimento, con recupero più lento.' : 'Possibile, ma con un recupero di alcune settimane.'),
+        E('icl', false, 'Le ICL non correggono la presbiopia.')] };
+      if (dif === 'miopia') return { avviso: '', esiti: [
+        E('smile', !sottile && d <= 10, sottile ? sott : d <= 10 ? 'Corregge la miopia fino a 10 diottrie, con recupero in pochi giorni.' : 'La SMILE corregge la miopia fino a 10 diottrie.'),
+        E('lasik', !sottile && d <= 10, sottile ? sott : d <= 10 ? 'La tecnica più versatile: vista recuperata in poche ore.' : 'Oltre le 10 diottrie il laser toglierebbe troppo tessuto alla cornea.'),
+        E('prk', d <= 8, d <= 8 ? (sottile ? 'Con una cornea sottile è la tecnica laser di riferimento.' : 'Stessa precisione, ma recupero di alcune settimane.') : 'Per miopie così elevate la PRK non è indicata.'),
+        E('icl', d <= 20 && (d > 6 || sottile), d > 20 ? 'Le ICL correggono la miopia fino a 20 diottrie.' : d > 6 || sottile ? 'Corregge fino a 20 diottrie senza togliere tessuto alla cornea.' : 'Con un difetto moderato e una cornea adatta, di solito si preferisce il laser.'),
+        E('iol', cristallino, cristallino ? 'Dopo i 55 anni si può sostituire il cristallino, correggendo anche la presbiopia.' : 'Di solito si valuta dopo i 55 anni.')] };
+      if (dif === 'ipermetropia') return { avviso: '', esiti: [
+        E('lasik', !sottile && d <= 5, sottile ? sott : d <= 5 ? 'Tra le tecniche laser è quella che corregge l\'ipermetropia.' : "Per un'ipermetropia così elevata il laser non è la scelta migliore."),
+        E('smile', false, "La SMILE non corregge l'ipermetropia."),
+        E('prk', false, "Nello studio la PRK si usa per miopia, astigmatismo e presbiopia."),
+        E('icl', d <= 10, d <= 10 ? "Corregge l'ipermetropia fino a 10 diottrie." : "Le ICL correggono l'ipermetropia fino a 10 diottrie."),
+        E('iol', cristallino, cristallino ? 'Dopo i 55 anni la sostituzione del cristallino corregge ipermetropia e presbiopia.' : 'Di solito si valuta dopo i 55 anni.')] };
+      return { avviso: '', esiti: [
+        E('smile', !sottile && d <= 5, sottile ? sott : d <= 5 ? "Corregge l'astigmatismo fino a 5 diottrie." : "La SMILE corregge l'astigmatismo fino a 5 diottrie."),
+        E('lasik', !sottile && d <= 6, sottile ? sott : d <= 6 ? "La tecnica più versatile per l'astigmatismo." : "Per un astigmatismo così elevato va valutata un'altra soluzione."),
+        E('prk', d <= 5, d <= 5 ? (sottile ? 'Con una cornea sottile è la tecnica laser di riferimento.' : 'Stessa precisione, recupero più lento.') : 'Per un astigmatismo così elevato la PRK non è indicata.'),
+        E('icl', d <= 6, d <= 6 ? "Le ICL toriche correggono l'astigmatismo fino a 6 diottrie." : "Oltre 6 diottrie serve una valutazione specifica, a volte con più tecniche combinate."),
+        E('iol', cristallino, cristallino ? 'Dopo i 55 anni una lente torica corregge l\'astigmatismo insieme alla presbiopia.' : 'Di solito si valuta dopo i 55 anni.')] };
+    };
+    const ORD_RAP = ['smile', 'lasik', 'icl', 'iol', 'prk'];
+    const disegna = () => {
+      const dif = fo.querySelector<HTMLInputElement>('input[name="difetto"]:checked')!.value;
+      const d = Number(rD.value), eta = Number(rE.value);
+      or.querySelector('[data-d-val]')!.textContent = String(d).replace('.', ',');
+      or.querySelector('[data-eta-val]')!.textContent = String(eta);
+      rD.setAttribute('aria-valuetext', `${d} diottrie`); rE.setAttribute('aria-valuetext', `${eta} anni`);
+      fo.querySelector<HTMLElement>('[data-diottrie-box]')!.hidden = dif === 'presbiopia' || dif === 'cataratta';
+      const { avviso, esiti } = valuta(dif, d, eta, cS.checked);
+      const av = or.querySelector<HTMLElement>('[data-avviso]')!; av.textContent = avviso; av.classList.toggle('hidden', !avviso); av.classList.toggle('mb-3', !!avviso);
+      const ordine = esiti.slice().sort((a, b) => (Number(b.ok) - Number(a.ok)) || (cR.checked ? ORD_RAP.indexOf(a.id) - ORD_RAP.indexOf(b.id) : 0));
+      const cont = or.querySelector<HTMLElement>('[data-esiti]')!;
+      ordine.forEach((e, i) => {
+        const card = cont.querySelector<HTMLElement>(`[data-esito-t="${e.id}"]`)!;
+        card.style.order = String(i); card.classList.toggle('ok', e.ok); card.classList.toggle('no', !e.ok);
+        card.querySelector('[data-badge-t]')!.textContent = e.ok ? 'Da valutare in visita' : 'Non indicata';
+        card.querySelector('[data-perche]')!.textContent = e.perche + (e.ok && e.id === 'prk' && cR.checked ? ' Attenzione: il recupero richiede alcune settimane.' : '');
+      });
+      const oks = ordine.filter((e) => e.ok).map((e) => e.id);
+      or.dataset.ok = oks.join(','); or.dataset.difetto = dif;
+      document.querySelectorAll<HTMLElement>('[data-tabella] [data-col]').forEach((c) => c.classList.toggle('evidenza', oks[0] === c.dataset.col));
+      if (!ridotto) gsap.fromTo(cont.querySelectorAll('.esito.ok'), { y: 8, opacity: 0.4 }, { y: 0, opacity: 1, duration: 0.3, stagger: 0.04 });
+    };
+    fo.addEventListener('input', disegna); fo.addEventListener('change', disegna);
+    or.querySelector('[data-orient-prenota]')!.addEventListener('click', () => { const dif = or.dataset.difetto!; scegli(dif); });
+    disegna();
+
+    // --- Simulatore cataratta ---
+    const si = document.querySelector<HTMLElement>('[data-simulatore]')!;
+    const op = si.querySelector<HTMLInputElement>('[data-op]')!;
+    const img = si.querySelector<HTMLImageElement>('[data-scena-img]')!, velo = si.querySelector<HTMLElement>('[data-velo]')!, vic = si.querySelector<HTMLElement>('[data-vicino]')!;
+    let lente = 'prima';
+    const LT: Record<string, string> = {
+      prima: 'Con la cataratta i colori si spengono e virano al giallo, i contrasti si riducono e tutto appare appannato, da lontano e da vicino.',
+      mono: 'Con una lente monofocale la visione da lontano torna nitida e i colori brillanti; per leggere da vicino serve di solito un occhiale.',
+      multi: 'Con una lente multifocale si vede nitido sia da lontano sia da vicino: nella maggior parte delle attività gli occhiali non servono più.'
+    };
+    const simula = () => {
+      const o = lente === 'prima' ? Number(op.value) / 100 : 0;
+      img.style.filter = `blur(${(o * 4).toFixed(2)}px) sepia(${(o * 0.75).toFixed(2)}) contrast(${(1 - o * 0.35).toFixed(2)}) saturate(${(1 - o * 0.4).toFixed(2)})`;
+      velo.style.opacity = (o * 0.4).toFixed(2);
+      const vb = lente === 'prima' ? o * 3 : lente === 'mono' ? 2.4 : 0;
+      vic.style.filter = `blur(${vb.toFixed(2)}px)`;
+      si.querySelector('[data-op-val]')!.textContent = Number(op.value) < 25 ? 'lieve' : Number(op.value) < 65 ? 'media' : 'avanzata';
+      si.querySelector('[data-lente-testo]')!.textContent = LT[lente];
+      si.querySelector('[data-stato-lente]')!.textContent = lente === 'prima' ? 'Con la cataratta' : lente === 'mono' ? 'Dopo: lente monofocale' : 'Dopo: lente multifocale';
+      op.disabled = lente !== 'prima'; si.dataset.lenteAttiva = lente; si.dataset.blur = String(o * 4);
+    };
+    op.addEventListener('input', simula);
+    si.querySelectorAll<HTMLElement>('[data-lente]').forEach((b) => b.addEventListener('click', () => { lente = b.dataset.lente!; si.querySelectorAll('[data-lente]').forEach((k) => k.setAttribute('aria-pressed', String(k === b))); simula(); }));
+    simula();
+
+    // --- Recensioni ---
+    const rs = document.querySelector<HTMLElement>('[data-recensioni]')!;
+    const RE = JSON.parse(rs.dataset.rec!) as { nome: string; data: string; testo: string; temi: string[] }[];
+    let lista = RE, pos = 0;
+    const mostra = () => {
+      const r = lista[pos];
+      rs.querySelector('[data-rec-testo]')!.textContent = `«${r.testo}»`; rs.querySelector('[data-rec-nome]')!.textContent = r.nome; rs.querySelector('[data-rec-data]')!.textContent = r.data;
+      rs.querySelector('[data-rec-i]')!.textContent = String(pos + 1); rs.querySelector('[data-rec-n]')!.textContent = String(lista.length);
+      rs.dataset.pos = String(pos);
+      if (!ridotto) gsap.fromTo('[data-rec-testo]', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.35 });
+    };
+    rs.querySelector('[data-rec-succ]')!.addEventListener('click', () => { pos = (pos + 1) % lista.length; mostra(); });
+    rs.querySelector('[data-rec-prec]')!.addEventListener('click', () => { pos = (pos - 1 + lista.length) % lista.length; mostra(); });
+    rs.querySelectorAll<HTMLElement>('[data-tema]').forEach((b) => b.addEventListener('click', () => {
+      const t = b.dataset.tema!; lista = t ? RE.filter((r) => r.temi.includes(t)) : RE; pos = 0;
+      rs.querySelectorAll('[data-tema]').forEach((k) => k.setAttribute('aria-pressed', String(k === b))); rs.dataset.filtro = t; mostra();
+    }));
+
+    if (!ridotto) {
+      lenis = new Lenis({ anchors: { offset: -100 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis!.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.1em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= 2 ? 'text-brand2' : ''}">${w}</span></span>`).join(' ');
+      const cerchi = gsap.utils.toArray<SVGCircleElement>('[data-anelli] circle');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from(cerchi, { attr: { r: 0 }, opacity: 0, duration: 1.4, stagger: 0.05, ease: 'power2.out' }, 0)
+        .from('[data-foto-hero]', { scale: 0.6, opacity: 0, duration: 1.2 }, 0.4)
+        .from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.9, stagger: 0.07 }, 0.1)
+        .from('[data-entra]', { y: 22, opacity: 0, duration: 0.7, stagger: 0.1 }, 0.5);
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.8, delay: 0.9, ease: 'power2.out', onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString('it-IT'); }, onComplete: () => { el.textContent = el.dataset.fmt!; } });
+      });
+      gsap.to('[data-anelli]', { scale: 1.18, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 32, opacity: 0, duration: 0.8, scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      ScrollTrigger.create({ trigger: '[data-simulatore]', start: 'top 65%', once: true, onEnter: () => { if (lente !== 'prima' || op.value !== '55') return; const o = { v: 5 }; gsap.to(o, { v: 70, duration: 2.2, ease: 'power1.inOut', onUpdate: () => { op.value = String(Math.round(o.v)); simula(); } }); } });
+      gsap.fromTo('[data-storia-linea]', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '[data-storia]', start: 'top 75%', end: 'bottom 60%', scrub: true } });
+      gsap.from('[data-foto-team]', { scale: 1.08, ease: 'none', scrollTrigger: { trigger: '[data-foto-team]', start: 'top bottom', end: 'bottom top', scrub: true } });
+      gsap.from('[data-blog] > a', { y: 40, opacity: 0, duration: 0.7, stagger: 0.1, scrollTrigger: { trigger: '[data-blog]', start: 'top 88%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>

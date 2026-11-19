@@ -1,0 +1,1569 @@
+{
+  "slug": "desanctis-nfu8",
+  "layout": "placido",
+  "sitoOrigine": "https://www.ugodesanctis.com/",
+  "titolo": "Prof.",
+  "nome": "Ugo de Sanctis",
+  "specialita": "Oculista, chirurgia refrattiva, della cornea e della cataratta",
+  "firma": "Oculista",
+  "citta": "Torino",
+  "meta": {
+    "title": "Prof. Ugo de Sanctis · Oculista a Torino: chirurgia refrattiva LASIK, SMILE, PRK, lenti ICL, cataratta e cornea",
+    "description": "Professore associato di Oculistica all'Università di Torino. Correzione laser di miopia, astigmatismo, ipermetropia e presbiopia (LASIK, SMILE, PRK), lenti ICL, cataratta con lenti avanzate, cheratocono e trapianti di cornea. Corso Matteotti 28."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "",
+    "logoAlt": "Ugo de Sanctis Oculista"
+  },
+  "foto": {
+    "ritratto": "/desanctis-nfu8/img/ritratto.webp",
+    "ritrattoAlt": "Il Prof. Ugo de Sanctis",
+    "volto": "/desanctis-nfu8/img/volto.webp",
+    "monitor": "/desanctis-nfu8/img/monitor.webp",
+    "esame": "/desanctis-nfu8/img/esame.webp",
+    "studio": "/desanctis-nfu8/img/studio.webp",
+    "scena": "/desanctis-nfu8/img/scena.webp",
+    "placido": "/desanctis-nfu8/img/placido.webp",
+    "pachimetria": "/desanctis-nfu8/img/pachimetria.webp",
+    "generazioni": "/desanctis-nfu8/img/generazioni.webp",
+    "occhiali": "/desanctis-nfu8/img/rep-occhiali.webp",
+    "laser": "/desanctis-nfu8/img/rep-laser.webp",
+    "occhio": "/desanctis-nfu8/img/rep-occhio.webp"
+  },
+  "hero": {
+    "eyebrow": "Professore associato di Oculistica · Università di Torino",
+    "titolo": "Vedere bene. Anche senza occhiali.",
+    "testo": "Da oltre 25 anni mi occupo di chirurgia refrattiva, della cornea e della cataratta. Nel mio studio di corso Matteotti ogni percorso parte da un esame completo, eseguito con i miei ortottisti, e da una scelta fatta insieme.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami"
+  },
+  "numeri": [
+    {
+      "valore": 10000,
+      "fmt": "10.000",
+      "pre": "circa",
+      "testo": "interventi di cataratta"
+    },
+    {
+      "valore": 25,
+      "fmt": "25",
+      "pre": "oltre",
+      "testo": "anni di chirurgia refrattiva e della cornea"
+    },
+    {
+      "valore": 100,
+      "fmt": "100",
+      "pre": "oltre",
+      "testo": "articoli scientifici"
+    }
+  ],
+  "motivi": [
+    {
+      "id": "visita",
+      "nome": "Visita oculistica completa",
+      "frase": "una visita oculistica completa"
+    },
+    {
+      "id": "miopia",
+      "nome": "Togliere gli occhiali: miopia",
+      "frase": "una valutazione per correggere la miopia"
+    },
+    {
+      "id": "astigmatismo",
+      "nome": "Astigmatismo",
+      "frase": "una valutazione per correggere l'astigmatismo"
+    },
+    {
+      "id": "ipermetropia",
+      "nome": "Ipermetropia",
+      "frase": "una valutazione per correggere l'ipermetropia"
+    },
+    {
+      "id": "presbiopia",
+      "nome": "Presbiopia (occhiali da lettura)",
+      "frase": "una valutazione per correggere la presbiopia"
+    },
+    {
+      "id": "cataratta",
+      "nome": "Cataratta",
+      "frase": "una visita per la cataratta"
+    },
+    {
+      "id": "cheratocono",
+      "nome": "Cheratocono",
+      "frase": "una visita per il cheratocono"
+    },
+    {
+      "id": "cornea",
+      "nome": "Malattie della cornea e trapianto",
+      "frase": "una visita per una malattia della cornea"
+    }
+  ],
+  "tecniche": [
+    {
+      "id": "smile",
+      "nome": "SMILE",
+      "esteso": "Small Incision Lenticule Extraction",
+      "difetti": "miopia, astigmatismo e presbiopia",
+      "laser": "Femtosecondi",
+      "disturbi": "minimi, spesso limitati alle prime ore",
+      "recupero": "pochi giorni",
+      "lavoro": "1-2 giorni",
+      "testo": "Il laser ritaglia un lenticolo dentro la cornea, estratto da una piccola incisione: niente lembo. Miopia fino a 10 diottrie, astigmatismo fino a 5."
+    },
+    {
+      "id": "lasik",
+      "nome": "LASIK",
+      "esteso": "Laser-Assisted in situ Keratomileusis",
+      "difetti": "miopia, astigmatismo, ipermetropia e presbiopia",
+      "laser": "Femtosecondi + eccimeri",
+      "disturbi": "minimi, spesso limitati alle prime ore",
+      "recupero": "poche ore",
+      "lavoro": "1-2 giorni",
+      "testo": "Il laser lavora sotto un sottile lembo di cornea, riposizionato al termine. È la più versatile; oltre il 95% dei pazienti raggiunge 10/10 senza occhiali."
+    },
+    {
+      "id": "prk",
+      "nome": "PRK",
+      "esteso": "Photorefractive Keratectomy",
+      "difetti": "miopia, astigmatismo e presbiopia",
+      "laser": "Eccimeri",
+      "disturbi": "bruciore, lacrimazione e corpo estraneo, talvolta intensi per 48-72 ore",
+      "recupero": "alcune settimane",
+      "lavoro": "1 settimana",
+      "testo": "Il laser lavora in superficie, dopo aver rimosso l'epitelio. Stessa precisione, recupero più lento: è la scelta quando la cornea è sottile o la superficie non permette LASIK o SMILE."
+    },
+    {
+      "id": "icl",
+      "nome": "Lenti ICL",
+      "esteso": "Lenti intraoculari fachiche",
+      "difetti": "miopia fino a 20 D, ipermetropia fino a 10 D, astigmatismo fino a 6 D",
+      "laser": "Nessun laser: lente tra iride e cristallino",
+      "disturbi": "minimi",
+      "recupero": "dal giorno dopo",
+      "lavoro": "1-2 giorni",
+      "testo": "Una lente ultrasottile in Collamero, inserita da un'incisione di 3 mm senza punti. Non toglie tessuto alla cornea: per difetti elevati o cornee sottili."
+    },
+    {
+      "id": "iol",
+      "nome": "Lenti intraoculari avanzate",
+      "esteso": "Chirurgia del cristallino e della cataratta",
+      "difetti": "cataratta, presbiopia, e insieme miopia, ipermetropia, astigmatismo",
+      "laser": "Anche con laser a femtosecondi",
+      "disturbi": "minimi",
+      "recupero": "pochi giorni",
+      "lavoro": "pochi giorni",
+      "testo": "Il cristallino viene sostituito da una lente multifocale o torica: si corregge la cataratta e insieme il difetto visivo, spesso eliminando gli occhiali."
+    }
+  ],
+  "convenzioni": [
+    "Allianz",
+    "Aon Hewitt",
+    "Assirete",
+    "Blue Assistance",
+    "Casagit",
+    "Caspie",
+    "Cesare Pozzo",
+    "Coopsalute",
+    "Europ Assistance",
+    "Faschim",
+    "Fasdac",
+    "Fasi",
+    "Fasi Open",
+    "Filo Diretto",
+    "Fisdaf",
+    "Galeno",
+    "Generali",
+    "Mapfre",
+    "My Assistance",
+    "My Rete",
+    "Poste Welfare",
+    "Previmedical",
+    "Sara",
+    "UniSalute"
+  ],
+  "team": [
+    [
+      "Prof. Ugo de Sanctis",
+      "Chirurgo del segmento anteriore: chirurgia refrattiva, cornea e cataratta."
+    ],
+    [
+      "Assistenti in oftalmologia (ortottisti)",
+      "Laureati, eseguono un esame oftalmico tra i più completi: funzione visiva a tutte le distanze e in diverse condizioni di luce."
+    ],
+    [
+      "Front desk",
+      "Programmano gli appuntamenti e La seguono in tutto il percorso, dalla prima visita ai controlli."
+    ],
+    [
+      "Tecnici laser e infermieri strumentisti",
+      "Affiancano il Professore nelle sedute laser e in sala operatoria."
+    ]
+  ],
+  "bioTappe": [
+    {
+      "anno": "1991",
+      "titolo": "Laurea a Torino",
+      "testo": "Medicina e Chirurgia con 110/110."
+    },
+    {
+      "anno": "1995",
+      "titolo": "Specializzazione",
+      "testo": "Oftalmologia all'Università degli Studi di Torino."
+    },
+    {
+      "anno": "1997",
+      "titolo": "Patologia corneale",
+      "testo": "Responsabile del Servizio di Patologia Corneale della Clinica Oculistica di Torino. Consulente scientifico della Banca delle Cornee della Regione Piemonte."
+    },
+    {
+      "anno": "2017-2020",
+      "titolo": "Auxologico, Milano",
+      "testo": "Responsabile del servizio di Chirurgia Corneale dell'IRCCS Istituto Auxologico Italiano."
+    },
+    {
+      "anno": "Oggi",
+      "titolo": "Professore associato",
+      "testo": "Professore Associato di Oculistica all'Università di Torino; oltre cento articoli scientifici, più di 250 congressi e corsi come relatore o moderatore."
+    }
+  ],
+  "arrivare": [
+    [
+      "Metropolitana M1",
+      "Fermate Vinzaglio e XVIII Dicembre, a 400 metri."
+    ],
+    [
+      "In treno",
+      "Porta Susa a 5 minuti a piedi, Porta Nuova a 15."
+    ],
+    [
+      "In auto",
+      "Fuori dalla ZTL. Parcheggi in corso Vinzaglio, corso Bolzano e corso Galileo Ferraris."
+    ],
+    [
+      "Autobus e tram",
+      "Corso Vinzaglio 8, 10, 19 · Piazza XVIII Dicembre 13, 29, 46, 49, 56, 59, 71, 72 · Corso Matteotti 60 · Corso Vittorio Emanuele II 9, 68."
+    ],
+    [
+      "Aereo",
+      "Caselle a 15 km, in auto o in navetta."
+    ]
+  ],
+  "recensioniGoogle": [
+    {
+      "nome": "Luca B.",
+      "data": "20/10/2026",
+      "testo": "Consiglio lo studio del Professor De Sanctis. Mi sono sottoposto all’intervento LASIK qualche giorno fa per correggere il mio difetto visivo e posso confermare di essermi trovato bene sin dalla prima visita. Tutto il personale dello studio è estremamente disponibile e gentile, sempre pronto a rispondere alle esigenze dei pazienti e a risolvere qualsiasi dubbio o richiesta. Le dottoresse e il professore si distinguono per la loro capacità di entrare in empatia con il paziente, metterlo a proprio agio e alleviare le preoccupazioni, sia durante le prime visite sia nel giorno dell’intervento. Ho apprezzato anche il percorso proposto, strutturato in diverse visite e attento al paziente sia nella fase preoperatoria sia in quella postoperatoria. Un’esperienza  positiva, che consiglio a chiunque stia valutando un intervento di questo tipo.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Saveria R.",
+      "data": "11/08/2026",
+      "testo": "Desidero condividere la mia esperienza  estremamente positiva con il Prof.Ugo De Sanctis e tutti i suoi preparatissimi  collaboratori.. Il mio problema di Distrofia di Fuchs ad un livello di gravità fortemente invalidante, lo ha trattato in modo eccellente. L'intervento di CHERATOPLASICA ENDOTELIALE DMEK in entrambi gli occhi, mi ha regalato un risultato visivo eccezionale, ben oltre le mie aspettative, già dopo pochissime ore. A distanza di 18 mesi dall'intervento, non finirò  mai di ringraziare a sufficienza  il Prof.De Sanctis per la sua scrupolosità, esperienza, competenza, e attenzione anche nel seguire il post operatorio. Saveria Russo.",
+      "temi": [
+        "cornea"
+      ]
+    },
+    {
+      "nome": "Donatella D.",
+      "data": "03/08/2026",
+      "testo": "Professionalità eccelsa e strumentazione all'avanguardia. Decisamente consigliato.",
+      "temi": []
+    },
+    {
+      "nome": "Paziente",
+      "data": "16/06/2026",
+      "testo": "Beh che dire: parto nel dire che la prima volta che sono entrato in studio, Si ero molto agitato, ma poi il dottore mi ha a tranquillizzato, e spiegato il percorso che avrei dovuto fare. E adesso a distanza di tre anni, e con due trapianti di cornea, devo ringraziare il dottore, le dottoresse e tutte le persone che lavorano con lui. Posso dire che se un mio conoscente avesse bisogno di una visita specialistica sulla vista, consiglierei il dottor De Sanctis... Io un una parole dico solo:  GRAZIE Il vostro paziente, che prima non riusciva a fare un esame, e ora, e tutta un' altra cosa... DAVIDE C.",
+      "temi": [
+        "cornea",
+        "team"
+      ]
+    },
+    {
+      "nome": "Monica O.",
+      "data": "15/06/2026",
+      "testo": "Desidero esprimere la mia più sincera gratitudine e il mio pieno apprezzamento per tutto il team dello Studio Oculistico del Prof. Ugo De Sanctis, che mi ha seguita nell’intervento LASIK all’occhio sinistro. Lo studio coniuga molto bene tecnologia all’avanguardia, professionalità, gentilezza, competenza e attenzione verso il paziente. Ogni fase del percorso è stata spiegata con chiarezza, facendomi sentire sempre tranquilla e in ottime mani. L’intervento è stato eseguito con estrema precisione e il risultato è stato eccellente! Consiglio questo studio senza alcuna esitazione a chiunque stia valutando un intervento di chirurgia refrattiva. Un servizio di assoluta eccellenza, che merita il massimo delle valutazioni.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Silvia M.",
+      "data": "11/05/2026",
+      "testo": "Grazie al prof. De Sanctis per la sua professionalità!",
+      "temi": []
+    },
+    {
+      "nome": "Annabella P.",
+      "data": "08/05/2026",
+      "testo": "Ho effettuato l’intervento LASIK a febbraio con il dottore Ugo De Sanctis e sono molto contenta di averlo fatto. Equipe medica e personale estremamente professionali e gentili. Intervento rapido, indolore e seguito con grande attenzione anche nel post-operatorio.  L'aspetto che mi preoccupava di più riguardo all'intervento era la parte del laser in cui bisogna tenere gli occhi fermi, ma il dottore è stato bravissimo: mi parlava e mi chiamava continuamente aiutandomi a rimanere concentrata e tranquilla. Consiglio assolutamente a chi sta pensando alla chirurgia refrattiva!",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Alessia",
+      "data": "06/05/2026",
+      "testo": "Ho effettuato un intervento LASIK circa un mese fa presso lo Studio Oculistico De Sanctis per correggere la miopia e l’esperienza è stata eccellente. Staff professionale e disponibile, intervento rapido e indolore, risultato oltre le aspettative. Vedere bene senza occhiali è davvero la svolta! Consigliatissimo.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Davide R.",
+      "data": "27/04/2026",
+      "testo": "Dopo due diverse visite specialistiche con attente valutazioni presso lo studio De Sanctis, sono stato ritenuto idoneo per l'intervento Lasik indolore e risolutivo. Presso lo studio tutti gentili e professionali, i miei occhi come nuovi, grazie ancora. Davide",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Matteo F.",
+      "data": "24/04/2026",
+      "testo": "Ho recentemente effettuato un intervento LASIK presso questo studio oculistico e non posso che esprimere la mia totale soddisfazione. Fin dal primo appuntamento, il personale si è dimostrato estremamente professionale, accogliente e disponibile a rispondere a ogni mia domanda, mettendomi subito a mio agio. Il prof. De Sanctis è stato impeccabile: competente, chiaro nelle spiegazioni e molto attento a ogni dettaglio. Mi ha guidato passo dopo passo, spiegandomi bene sia la procedura che il decorso post-operatorio, trasmettendomi grande fiducia. L’intervento è stato rapido, indolore e perfettamente organizzato. Le tecnologie utilizzate sono all’avanguardia e si percepisce subito l’alta qualità dello studio. Già poche ore dopo l’operazione ho notato un miglioramento incredibile della vista, e nei giorni successivi il recupero è stato veloce e senza complicazioni. Un ringraziamento speciale anche allo staff per la gentilezza e la cura dimostrata durante i controlli post-operatori. Mi sono sentito seguito in ogni fase del percorso.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Michele R.",
+      "data": "20/04/2026",
+      "testo": "Grandissima professionalità, disponibilità e attenzione. Decisamente consigliato. Eccellente.",
+      "temi": []
+    },
+    {
+      "nome": "Giacomo M.",
+      "data": "17/04/2026",
+      "testo": "Uno studio estremamente professionale e molto bene attrezzato. Consiglio caldamente",
+      "temi": []
+    },
+    {
+      "nome": "Nicholas G.",
+      "data": "13/04/2026",
+      "testo": "Ho recentemente effettuato un intervento di FemtoLASIK presso questo studio oculistico e non potrei essere più soddisfatto della mia esperienza. Fin dal primo consulto, ho trovato un team altamente professionale, disponibile e attento a ogni dettaglio. Mi sono state fornite spiegazioni chiare e complete sull’intervento, sui benefici e sui possibili rischi, il che mi ha permesso di affrontare il percorso con grande serenità e consapevolezza. L’intervento è stato rapido, indolore e gestito con grande competenza. Lo staff mi ha messo subito a mio agio, dimostrando empatia e grande attenzione nei confronti del paziente. Anche il post-operatorio è stato seguito con cura: controlli puntuali, disponibilità per qualsiasi dubbio e indicazioni precise per una corretta guarigione. A distanza di poco tempo, la mia qualità visiva è migliorata notevolmente e posso finalmente fare a meno di occhiali e lenti a contatto.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Adriana M.",
+      "data": "31/03/2026",
+      "testo": "Ho effettuato l’intervento di correzione della miopia con tecnica SMILE dal dott. De Sanctis e la mia esperienza è stata eccellente sotto ogni punto di vista. Partivo da una miopia molto elevata (oltre -8) e, a distanza di una sola settimana dall’intervento, vedo perfettamente: un risultato che ha superato ogni aspettativa! L’operazione è stata rapidissima e completamente indolore, molto più semplice di quanto immaginassi. Il dott. De Sanctis si è dimostrato estremamente competente, preciso e rassicurante, spiegandomi tutto con grande chiarezza e professionalità. Un ringraziamento speciale anche a tutto il team: gentili, organizzati e sempre disponibili, mi hanno fatto sentire seguito e tranquillo in ogni fase del percorso. Consiglio vivamente questo studio a chiunque stia pensando di risolvere definitivamente il problema della miopia!",
+      "temi": [
+        "smile",
+        "team"
+      ]
+    },
+    {
+      "nome": "Marta L.",
+      "data": "30/03/2026",
+      "testo": "Ho deciso di sottopormi a un intervento LASIK e non potrei essere più soddisfatta della mia esperienza. Fin dal primo contatto, l’intera equipe si è dimostrata estremamente professionale, disponibile e rassicurante, seguendomi passo passo in ogni fase del percorso. L’intervento stesso è stato completamente indolore e ben organizzato, con tutte le spiegazioni necessarie fornite in modo chiaro. Anche il post-operatorio è stato gestito con grande attenzione, con controlli puntuali e consigli preziosi per il recupero. Mi sono sentita davvero supportata e sicura in ogni momento. Consiglio caldamente questa equipe a chiunque stia valutando la LASIK!",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Emanuele P.",
+      "data": "13/03/2026",
+      "testo": "All’inizio ero molto impaurito all’idea di sottopormi all’intervento LASIK agli occhi, perché non sapevo bene cosa aspettarmi. In realtà si è rivelato tutto molto più semplice e veloce di quanto immaginassi. Il personale è stato molto professionale e rassicurante, spiegandomi ogni passaggio e facendomi sentire tranquillo. L’intervento dura pochi minuti e non è stato doloroso, solo un leggero fastidio momentaneo. Già dopo i primi giorni ho iniziato a vedere chiaramente i risultati: la vista è migliorata rapidamente e la differenza nella vita quotidiana si nota subito. Sono davvero contento di aver preso questa decisione.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Gianfranco B.",
+      "data": "13/03/2026",
+      "testo": "Ho eseguito l'intervento lasik a dicembre, oggi ho fatto la visita di controllo dopo 3 mesi e mi trovo benissimo, sempre estremamente cortesi e competenti 😊",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Riccardo D.",
+      "data": "06/03/2026",
+      "testo": "ho fatto l’intervento laser presso questo studio ed è stata una scelta eccezionale. Tutto il personale è molto disponibile e cordiale. Il prof. De Sanctis è una persona molto preparata e gentile. A distanza di 6 mesi dall’intervento il risultato è meraviglioso. Tornassi indietro sceglierei comunque lo studio Oculistico De Sanctis. Consiglio vivamente!",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Gianmarco B.",
+      "data": "23/02/2026",
+      "testo": "Ho effettuato l’intervento di LASIK pochi giorni fa per poter finalmente correggere i difetti visivi (miopia + astigmatismo). Il team del prof. De Sanctis si è dimostrato molto competente, professionale e disponibile!  L’intervento è stato rapido e completamente indolore. Il giorno dell’operazione ho avuto un leggero fastidio solo per le prime 4-5 ore (e comunque più che sopportabile). Il giorno dopo ho effettuato il primo controllo e avevo gia recuperato tutte le diottrie. Il mio feedback è assolutamente positivo.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Luigi Z.",
+      "data": "20/02/2026",
+      "testo": "Tutto il personale è molto professionale, preciso e cortese. Informazioni e spiegazioni molto chiare riguardo all'intervento. Ottima assistenza post operatoria.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Sharon M.",
+      "data": "24/01/2026",
+      "testo": "Esperienza  positiva sotto ogni punto di vista, che rifarei con serenità e che consiglio. Sono pienamente soddisfatta del risultato ottenuto e felice di essermi affidata al Prof. De Sanctis, che ringrazio ancora. Uno staff professionale, capace di farti sentire tranquilla e davvero in ottime mani.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Daniele C.",
+      "data": "20/01/2026",
+      "testo": "Ho scoperto poco più di un anno fa di avere il cheratocono, una malattia degenerativa della cornea. Mi sono recato dal Prof. De Sanctis per ulteriori approfondimenti e in seguito ho deciso di effettuare un intervento di ICRS all'occhio sinistro. Recentemente ho effettuato lo stesso intervento all'occhio destro. L'intervento è veloce, non doloroso e consente un rapido recupero visivo. Mi sono trovato benissimo sia con il professore che con tutta la sua equipe.",
+      "temi": [
+        "cornea",
+        "team"
+      ]
+    },
+    {
+      "nome": "Cetty B.",
+      "data": "20/01/2026",
+      "testo": "L'esperienza avuta con il Dott. De Sanctis ed il suo staff è stata eccellente: altissima professionalità, serietà e competenza. Consigliatissimo!",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Giada F.",
+      "data": "19/01/2026",
+      "testo": "Ho eseguito dal Professore De Sanctis l’intervento LASIK per correggere i miei difetti visivi. Che dire?? Venerdì mi hanno operato e la sera sono tornata alla mia regolare quotidianitá, grazie per la gentilezza disponibilitá e super professionalitá… intervento indolore e recupero rapidissimo, molto più del previsto. Grazie ancora, per me è un sogno riuscire a vedere finalmente come non ho mai visto!",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Cris",
+      "data": "09/01/2026",
+      "testo": "Ho effettuato l’operazione Smile dal dottor de Sanctis e mi sono trovato benissimo. Sono molto efficienti.",
+      "temi": [
+        "smile"
+      ]
+    },
+    {
+      "nome": "Valeria M.",
+      "data": "09/01/2026",
+      "testo": "Sono molto soddisfatta del risultato. L’intervento è stato rapido e per nulla doloroso, e il recupero visivo è stato velocissimo. Lo staff è stato sempre disponibile e professionale. Consiglio assolutamente a chi sta pensando di correggere i propri difetti visivi.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Annaclara I.",
+      "data": "15/12/2025",
+      "testo": "Eccellenza e professionalità in ogni fase, pre e post intervento. Il mio intervento lasik è andato benissimo, il tempo di recupero è stato estremamente veloce. Consiglio vivamente di rivolgersi allo studio De Sanctis, i cui professionisti sono di altissimo livello, estremamente disponibili e gentili.",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Valentina P.",
+      "data": "05/12/2025",
+      "testo": "Intervento che mi ha ridato la vista. Il Professore competente e tutto lo staff dello studio disponibile e accogliente. Qualche fastidio il pomeriggio dell’intervento ma sopportabile e poi dalla mattina dopo ho ricominciato a vedere dopo 38 anni di occhiali!",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Paolo P.",
+      "data": "28/11/2025",
+      "testo": "Buongiorno sono Paolo da circa un mese ho fatto intervento di lasik lbv sono soddisfatto dell'intervento non vedevo bene da lontano e da vicino dovevo mettere sempre gli occhiali già subito dopo intervento ho visto il miglioramento che è indolore consiglio vivamente saluti buona giornata.",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Nicolò S.",
+      "data": "28/11/2025",
+      "testo": "Ho effettuato un intervento correttivo per miopia con il Prof De Sanctis e sono molto soddisfatto. Tutto il team è stato professionale e meticoloso sia alle visite e il giorno dell'intervento. Consiglio caldamente.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Leo I.",
+      "data": "25/11/2025",
+      "testo": "Correzione di miopia con Lasik - risultato molto buono in tempi rapidissimi, senza dolore, processo tutto molto facile",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Roberto P.",
+      "data": "24/11/2025",
+      "testo": "estremamente soddisfatto. Visita con successiva operazione con laser che ha risolto in modo pressoche' immediato i problemi di vista. al momento nessuna controindicazione, anzi....",
+      "temi": []
+    },
+    {
+      "nome": "Fabio M.",
+      "data": "10/11/2025",
+      "testo": "Un trattamento irreprensibile, dalla prima visita fino al controllo finale. Il team, coordinato dal dottor de Sanctis, è molto gentile e oltremodo competente, sempre pronto a rispondere a qualsiasi domanda o evenienza. Un anno fa mi sono sottoposto a un intervento di CHIRURGIA REFRATTIVA per una miopia medio-lieve e un lieve astigmatismo con tecnica LASIK. L'operazione è totalmente indolore. Seguendo i consigli per un buon decorso post operatorio, mi sono ripreso subito e nel migliore dei modi. Già da poche ore dopo l'intervento, seppur con le dovute accortezze e in maniera graduale, si possono riprendere le attività quotidiane. Non ho avuto alcun tipo di problema se non i classici fastidi che svaniscono nel lungo periodo, come ricordato dal dottore e dalle dottoresse più volte. Oltre alla meticolosità e alla professionalità con cui sono state svolte le visite pre e post operatorie, in sala il dottore e il suo team hanno fatto un lavoro eccellente. Oltre al successo dell'operazione, ci tengo a sottolineare la calma e la serenità trasmessa dal dottore durante tutta la mia permanenza in sala, un aspetto per niente scontato che mi ha permesso di tranquillizzarmi e affrontare al meglio l'intervento. Mi sento di consigliare al 100% sia l'intervento che l'equipe che mi ha accompagnato durante questo percorso.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Matteo S.",
+      "data": "07/11/2025",
+      "testo": "Ho eseguito l’intervento di chirurgia refrattiva a Maggio 2025. Desidero segnalare la grande professionalità del professore e di tutto il suo staff",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Martino T.",
+      "data": "06/11/2025",
+      "testo": "L'esperienza avuta con il Dott. De Sanctis ed il suo staff è stata eccellente: altissima professionalità, serietà e competenza. Mi sono rivolto al Dott. De Sanctis per un intervento di correzione miopica mediante tecnica Laser, in particolare la tecnica LASIK. I risultato è stato notevole, potendo finalmente rinunciare all'uso di occhiali e lenti a contatto. Probabilmente, l'unico rammarico è quello di aver temporeggiato troppo a lungo, prima di decidermi a procedere con l'intervento.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Andrea T.",
+      "data": "30/10/2025",
+      "testo": "Effettuato intervento Lasik per correzione presbipoia. Al momento risultati perfetti. Personale preparato, cordiale ed efficiente.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Marta M.",
+      "data": "28/10/2025",
+      "testo": "Ho fatto l'intervento Laser Smile per miopia presso questo studio, e mi ha cambiato la vita. Era da circa 20 anni che non vedevo con i miei stessi occhi ed è una sensazione indescrivibile. Consiglio a tutte le persone con difetti visivi come il mio di recarsi alla studio del Prof De Sanctis: ho trovato estrema gentilezza e professionalità da parte di tutte le persone che lavorano nello studio sia durante le visite pre e post operatorie, sia durante l'operazione stessa. Consiglio assolutamente a tutti anche solo di provare a chiamare per informarsi riguardo alle varie tecniche disponibili. L'operazione laser allo studio De Sanctis è una delle cose migliori che io abbia mai fatto per me stessa.",
+      "temi": [
+        "smile"
+      ]
+    },
+    {
+      "nome": "Rebecca P.",
+      "data": "22/09/2025",
+      "testo": "Ho effettuato l intervento correttivo per la miopia e mi sono trovata molto bene con il personale e con il Professore, persona stupenda. Lo consiglio a chiunque.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Natalia N.",
+      "data": "10/06/2025",
+      "testo": "Un’esperienza più che positiva! La professionalità e la gentilezza di tutto il team hanno reso l’intero percorso – a partire dalla prima visita – un vero piacere. L’attenzione dedicata al paziente è davvero notevole, e non è affatto scontata. Mi sono sottoposta a un intervento LASIK per correggere una miopia medio-alta e un lieve astigmatismo. L’operazione è semplice e totalmente indolore; subito dopo si avverte solo un po’ di fastidio e bruciore, ma dura un paio d’ore al massimo. Finora il decorso post-operatorio è stato facilissimo, ovviamente seguendo scrupolosamente la terapia indicata dal team. Esperienza estremamente consigliata! Un elogio particolare al professor De Sanctis.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Luciana P.",
+      "data": "07/06/2025",
+      "testo": "Mi sono sottoposta ieri a un intervento di femto-LASIK con il Professor Ugo De Sanctis e non posso che ritenermi entusiasta dell’esperienza. Il Professore così come tutta la sua equipe sono stati semplicemente fantastici: estremamente professionali, chiari nelle spiegazioni, sempre gentili ed empatici. Mi sono sentita seguita e rassicurata in ogni fase. Dopo un solo giorno posso dire di sentirmi rinata: ci vedo benissimo e non potrei essere più felice della scelta fatta. Consiglio vivamente il Professor De Sanctis a chiunque stia valutando un intervento agli occhi.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Caterina M.",
+      "data": "19/05/2025",
+      "testo": "Una rinascita. Non ci sono altre parole. Mi sono affidata al Dottor De Sanctis  per l’intervento LASIK e posso dire che è stata una delle scelte migliori della mia vita. La sua competenza, precisione e umanità mi hanno subito trasmesso fiducia. L’intervento è stato completamente indolore, il recupero sbalorditivo: dopo poche ore vedevo già nitidamente senza alcun fastidio. Un grazie speciale anche alla sua equipe, attenta e preparata, e soprattutto a Sonia, la segretaria, che con professionalità e pazienza ha reso tutto il percorso semplice, chiaro e organizzato alla perfezione. Non si può capire quanto cambi la vita, finché non lo vivi. Sono profondamente grata per questo risultato e per la cura ricevuta in ogni fase. Consiglio questo studio con assoluta convinzione.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Elisabetta G.",
+      "data": "16/04/2025",
+      "testo": "Eseguito intervento in data 11 aprile, con il Prof. De Sanctis per la correzione della presbiopia e ipermetropia e, da subito ero in grado di leggere l'ora sul piccolo quadrante del mio orologio!! Intervento che, nonostante le rassicurazioni del Prof. e dello staff, mi incuteva non poca paura e, invece tutto perfetto.Non ho avvertito alcun dolore, zero durante il trattamento; solo la voce rassicurante del dottore che mi guidava. Professore e staff molto gentili, empatici e professionali. Tocco il cielo con un dito, tale la mia felicità! Grazie.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Andre C.",
+      "data": "22/03/2025",
+      "testo": "Molto soddisfatto dell'intervento. Il prof. De Sanctis e il suo staff sono molto professionali e attenti alle necessità del paziente. Riuscire a correggere una miopia con un breve intervento e per nulla doloroso ti permette di liberarti definitivamente di occhiali e lenti a contatto per tornare a vedere con i tuoi occhi.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Valentina L.",
+      "data": "22/03/2025",
+      "testo": "Professionali, veloci, rassicuranti, non posso che consigliare a tutti. Per un’operazione così importante, che ti cambia la vita, bisogna affidarsi a professionisti ed io sono felicissima di averlo fatto.",
+      "temi": []
+    },
+    {
+      "nome": "Anastasia D.",
+      "data": "04/03/2025",
+      "testo": "Soffro di forte miopia da molti anni e mi sono rivolta al prof De Sanctis per un'eventuale risoluzione del problema. Lo scorso venerdì ho fatto il femto-lasik, procedura che è stata particolarmente veloce e indolore. Tutto il personale è stato disponibile fin da subito anche a spiegare ogni eventuale mia domanda. È stata una vera svolta nella mia vita!",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Maruska M.",
+      "data": "04/03/2025",
+      "testo": "...ho eseguito da poco un intervento di Keraring; è stato rapido, non doloroso e da subito ho ridotto il mio astigmatismo ed anche il decorso post operatorio è stato agevole ed indolore. È un team ben coordinato ed organizzato. Accogliente e professionale sotto tutti i profili. I miei deficit visivi pur essendo diversi tra i due occhi sono stati seguiti attentamente e messi in un quadro di sistema e correlazione finalizzato ad un benessere generale.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Lavinia C.",
+      "data": "04/03/2025",
+      "testo": "Qualche giorno fa ho effettuato l’intervento LASIK per correggere miopia e astigmatismo su entrambi gli occhi. L’operazione è stata un successo, completamente indolore, e il fastidio è scomparso dopo appena tre ore. Già alla prima visita post-operatoria, il giorno successivo, vedevo perfettamente. Durante l’intervento mi è stato spiegato ogni passaggio nei minimi dettagli, e sono stata seguita con grande empatia e attenzione. Un sentito grazie al Prof. Ugo de Sanctis e al suo staff per la professionalità, la gentilezza e la competenza dimostrate.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Stefano C.",
+      "data": "03/03/2025",
+      "testo": "Semplicemente stupefacente. Sono affetto da Cheratocono e da oltre 20 anni utilizzo le lenti a contatto con tutti i fastidi e le problematiche del caso. Il 28 febbraio mi sono sottoposto ad un intervento di Keraring, e grazie a questi anelli ho raggiunto lo stesso grado di correzione del difetto visivo delle lenti/occhaile! L'intervento è rapido e completamente indolore e praticamente non ci sono disagi post operatori. già dal giorno seguente sono potuto tornare alla normale attività, senza lenti! Consiglio vivamente di sottoporsi a questo tipo di intervento e soprattutto di affidarsi alla competenza e professionalità dello Studio De Sanctis.",
+      "temi": [
+        "cornea"
+      ]
+    },
+    {
+      "nome": "Gabriele G.",
+      "data": "03/03/2025",
+      "testo": "Intervento con il laser perfetto e nessun dolore; il Professore, l'equipe e la struttura sono davvero un'eccellenza.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Silvia B.",
+      "data": "03/03/2025",
+      "testo": "È stato bellissimo vedere come non avevo mai visto un vita mia",
+      "temi": []
+    },
+    {
+      "nome": "Patrizia B.",
+      "data": "13/02/2025",
+      "testo": "Sono veramente dispiaciuta di non poter dare 5 stelle ,avrei tanto voluto. Sono consapevole di essermi rivolta al dottore de Sanctis in una situazione molto dolorosa per me ,creata da un altro professionista, però leggendo le varie recensioni positive,la pagina del suo sito ,dove diceva 5 motivi per scegliere il nostro studio,(noi risolviamo problemi difficili che altri collegi non fanno ,seguiamo il paziente in tutto il suo percorso ecc) , nella disperazione ho deciso di prenotarmi una visita in studio,nulla da ridire sulla prima visita dove mi è stato proposto un intervento di innesto di membrana amniotica a scopo antalgico, ovviamente ho riposto la mia più grande aspettativa nel risolvere il mio scompenso corneale doloroso ,mi faccio operare da lì in poi controlli a lunga data e molto sbrigativi ,ore di attesa ,quasi nulle le spiegazioni ,e la mia situazione iniziale dolorosa non è cambiata ,io non metto assolutamente in dubbio le sue capacità ed esperienza,e che a volte viene dimenticato che siamo persone che stiamo soffrendo , magari un po' di empatia ,considerazione ,gentilezza , umanità, non guasterebbe. Grazie comunque per aver provato a risolvere il mio problema",
+      "temi": [
+        "cornea"
+      ]
+    },
+    {
+      "nome": "Alessandro V.",
+      "data": "12/02/2025",
+      "testo": "Con gradi di miopia e astigmatismo molto elevati fin dall'età dei 6 anni ho cercato, raggiunta l'età adulta, svariate volte di effettuare un intervento correttivo tramite le tecniche più tradizionali, ma è sempre stato impossibile causa la gravità delle mie condizioni. Sono venuto a conoscenza della tecnica icl torica a 45 anni tramite passaparola di amici che avevano già subito lo stesso intervento e come loro sono rimasto molto soddisfatto. Ho trovato grande competenza, professionalità e molta disponibilità. Personalmente dopo gli interventi non ho avvertito dolori ma solo leggeri fastidi e il recupero è stato buono e veloce. Sicuramente lo consiglio per chi si trovasse in situazioni simili.",
+      "temi": []
+    },
+    {
+      "nome": "Marina G.",
+      "data": "25/01/2025",
+      "testo": "Tutta la nostra famiglia è seguita dal professor De Sanctis da anni. Il professore è molto scrupoloso e attento a suggerire soluzioni adatte alle esigenze dei singoli pazienti. La sottoscritta ad esempio si è sottoposta ad intervento laser Lasik per correggere la presbiopia in quanto trovavo un intralcio dover utilizzare gli occhiali ogni volta che dovevo leggere da vicino. Ad una settimana di distanza dall'intervento sono molto contenta di aver seguito il suggerimento del professor De Sanctis. L'intervento di per sé non è assolutamente invasivo, viene eseguito in meno di mezz'ora e fin da subito si può vedere. Unica attenzione da prestare è quella di applicare il collirio regolarmente ed utilizzare gli occhiali da sole quando c'è molta luce almeno per il primo giorno. La vista da vicino è nettamente migliorata, ho ancora un po' di secchezza oculare che porta un leggero senso di annebbiamento quando guardo lontano, ma mi è stato assicurato che passerà con i giorni. Anche i miei figli si sono sottoposti ad intervento Lasik e ne sono estremamente soddisfatti. Consiglio senza dubbio lo studio del professor Ugo De Sanctis e ringrazio di cuore tutto lo staff che è sempre stato molto disponibile e professionale.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Paolo M.",
+      "data": "20/01/2025",
+      "testo": "Intervento risolutivo, consigliato a tutti. Servizio e trattamento eccellente",
+      "temi": []
+    },
+    {
+      "nome": "Federico T.",
+      "data": "10/01/2025",
+      "testo": "Operazione che consiglierei assolutamente sia per come è andata l’operazione che per come sono stato seguito post operazione. Operazione di per sé molto veloce e indolore che oltre ad alcuni accorgimenti non mi ha dato nessun problema sin dai primi momenti.",
+      "temi": []
+    },
+    {
+      "nome": "Lorenza P.",
+      "data": "17/12/2024",
+      "testo": "Ho deciso di sottopormi all’intervento con tecnica Lasik perché i miei disturbi visivi erano molteplici e speravo di ottenere un risultato che migliorasse la mia qualità di vita, come infatti è avvenuto, anche se sono passati pochi giorni ed i miglioramenti sono ancora in corso. Consiglio assolutamente questo studio per la professionalità’ e la cortesia di tutto lo staff del Professor De Sanctis. Il mio caso era più complicato di altri in quanto mi ero già sottoposta molti anni fa ad un intervento simile e non era scontato poterlo ripetere,  ma il Professore  mi ha seguito in maniera scrupolosa ed attenta, ed il risultato è stato molto soddisfacente. Un sentito ringraziamento a lui e ai suoi collaboratori.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Luigi C.",
+      "data": "03/12/2024",
+      "testo": "Ottima esperienza. Ho effettuato l’intervento per correggere la miopia, le visite sono state veramente scrupolose, il Prof De Sanctis è stato molto disponibile e mi ha spiegato molto bene tutte le opzioni terapeutiche possibli. Intervento veloce e indolore. Il personale dello studio è stato cordiale e disponibile.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Sara C.",
+      "data": "19/11/2024",
+      "testo": "Mi sono sottoposta all’intervento Lasik e, a pochi giorni di distanza, sono entusiasta del risultato. La vista è migliorata immediatamente: subito dopo l'intervento vedevo già nitidamente, a parte un lieve appannamento scomparso in meno di un’ora. Finora il decorso è stato praticamente indolore, con solo un po’ di secchezza oculare a fine giornata e un leggero bruciore legato all’uso dei colliri. Credo che questo intervento rappresenterà un vero miglioramento per la mia qualità della vita. Un ringraziamento speciale al dottor De Sanctis e alla sua équipe per la competenza, la professionalità e l’atmosfera serena e amichevole che hanno saputo creare.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Alessandra V.",
+      "data": "18/11/2024",
+      "testo": "Lasik entrambi gli occhi. Come molti commenti che lessi prima di sottopormi all'intervento, anche io non posso che dire  \"l'avessi fatto prima!\". Il fastidio post-operatorio è stato sovrapponibile a quello di lenti a contatto portate troppo a lungo! Un'inezia.... Tutto il personale è super preparato e professionale. In testa il professor De Sanctis che, non solo eccelle in competenze e  maestria, ma anche in empatia, delicatezza e gentilezza. Soddisfatissima!",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Patrizia L.",
+      "data": "18/11/2024",
+      "testo": "Ci ho messo circa 15 anni prima di convincermi a fare l'operazione, ma quando ho conosciuto il dott. De Sanctis non ho avuto dubbi. Professione di una professionalità e gentilezza oltre ogni misura. Intervento totalmente indolore e con risultati subito ottimali. Ottimo staff anche.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Davide N.",
+      "data": "21/10/2024",
+      "testo": "Ambiente estremamente professionale e nello stesso tempo cordiale e amichevole. Sanno metterti a tuo agio e consigliarti al meglio sulle terapie da applicarsi. Risultati ottimi da subito che non hanno deluso le aspettative di chi sta scrivendo ...ormai senza più il peso degli occhiali. Un grazie e un saluto",
+      "temi": []
+    },
+    {
+      "nome": "Fabio C.",
+      "data": "21/10/2024",
+      "testo": "Intervento Lasik per entrambe gli occhi, uno dei due con un forte astigmatismo. Il prof. De Sanctis è stato impeccabile. Intervento indolore, un po' di fastidio le prime ore post intervento che passa già in serata, vale assolutamente la pena visto l'entità della correzione.",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Bruno B.",
+      "data": "02/10/2024",
+      "testo": "Ringrazio il Prof. Ugo De Santis per la sua grande professionalità; ha eseguito un intervento di cataratta e correzione di difetto visivo con tecniche all'avanguardia. Esprimo la mia soddisfazione e gratitudine per il risultato raggiunto. Ringrazio anche il suo team per la competenza e la preparazione dimostrata.",
+      "temi": [
+        "cataratta",
+        "team"
+      ]
+    },
+    {
+      "nome": "Piergiorgio",
+      "data": "24/09/2024",
+      "testo": "Sono passati 10 gg dall' intervento LASIK  sono entusiasta del risultato, Il professore e tutto sil suo equipe sono stati gentilissimi e disponibilissimi Consiglio questo studio per la professionalità dimostrata",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Elena M.",
+      "data": "16/09/2024",
+      "testo": "Mi sono sottoposta solo pochi giorni fa all'intervento Lasik e sono già molto soddisfatta e contenta del risultato, ancora fatico a credere agli ottimi risultati in così poco tempo. Ringrazio il dottor De Sanctis e tutta l'equipe che collabora con lui, ognuno di loro è stato cordiale e preciso.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Alice N.",
+      "data": "23/07/2024",
+      "testo": "Circa due settimane fa mi sono sottoposta all’intervento LASIK per correggere una miopia alquanto rilevante che mi ha sempre creato non pochi disagi. Posso dire sia stata la scelta migliore sia farlo che affidarmi al Prof. Ugo de Sanctis, molto capace e di una cordialità unica. Le prime 5/6 ore sono state le più fastidiose ma di dolore non parlerei assolutamente. Già alla visita del giorno dopo avevo dieci decimi con giusto qualche fastidio nel guardare fonti di luce e bruciore nel mettere il collirio. Una ripresa oltre le mie più rosee aspettative! È un cambiamento di vita vero e proprio, sono contenta di essermi affidata alle mani giuste.",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Antonella T.",
+      "data": "22/07/2024",
+      "testo": "Ho effettuato in questo studio l'operazione di cataratta ed impianto lente Iol su entrambi gli occhi a luglio 2023, arrivando però con delle cornee provate dagli interventi di cheratotomia radiale effettuati due volte nel 1989 e 1990: altri oculisti mi avevano prospettato difficoltà nella realizzazione dell'intervento il Prof. De Sanctis mi ha indicato la possibilità di un buon esito senza minimizzare ma agendo con padronanza e professionalità. Se posso dare un consiglio effettuate una visita così potrete apprezzare anche lo staff che si contraddistingue per gentilezza e cortesia",
+      "temi": [
+        "cataratta",
+        "team"
+      ]
+    },
+    {
+      "nome": "Annamaria M.",
+      "data": "12/06/2024",
+      "testo": "Buongiorno mi sono sottoposta all’intervento di LASIK BLENDED VISION venerdì scorso i risultati sono stati immediati grazie alla bravura del Prof.De Sanctis devo anche riconoscere la professionalità ,cordialità e accoglienza dei sue collaboratrice/i grazie",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Edoardo A.",
+      "data": "11/06/2024",
+      "testo": "\"Avrei dovuto farlo prima\", la frase che ho detto a tutti coloro con cui ho parlato del mio intervento. Esperienza ottima, il Dottor De Sanctis e la sua equipe sono veramente bravi e preparati. Mi sono operato venerdì 7 al mattino, l'intervento non è per niente invasivo o doloroso, si sente solo un po di fastidio nelle prime ore post intervento, ma già dal pomeriggio vedevo molto bene e senza dolore, oggi ho 15/10 e non ho mai visto così bene. Intervento superconsigliato",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Maria E.",
+      "data": "11/06/2024",
+      "testo": "Che dire.. un grande professionista. Un Dottore serio ed empatico. Mi sono operata venerdì 07/06/24 con la tecnica Lasik blended e fin da subito la mia vista è stata nitida e perfetta.  Una sensazione emozionante di rinascita. Grazie Dottor De Sanctis e grazie a tutto il Suo team!",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Virginia B.",
+      "data": "11/06/2024",
+      "testo": "Mi sono affidata al professor De Sanctis per la correzione della miopia con l'intervento laser e mi sono trovata benissimo. Il team che lavora con lui è super professionale e sempre prontamente disponibile a rispondere ad ogni dubbio e domanda. Consiglio assolutamente, ti cambia la vita!!",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Fabio A.",
+      "data": "29/05/2024",
+      "testo": "Desidero esprimere un sentito ringraziamento al Prof. Ugo De Sanctis e a tutto il suo team per l'intervento di cataratta bilaterale a cui mi sono sottoposto una settimana fa. Il Prof. De Sanctis mi ha consigliato e installato una lente multifocale/trifocale, grazie alla quale sono estremamente soddisfatto dell'eccezionale risultato ottenuto. Non ho provato alcun dolore e ho iniziato a vedere chiaramente subito dopo l'intervento; già il giorno successivo, la mia vista era perfetta e senza disturbi. Ora, a 73 anni, percepisco le immagini in modo vivido e nitido, con una visibilità migliorata a 12/10 su entrambi gli occhi, mentre prima dell'intervento avevo una visibilità di 5-6/10. Ricordo che da giovane la mia vista era di 10/10 su entrambi gli occhi. Sono profondamente grato al Prof. De Sanctis per il suo lavoro svolto con grande professionalità, gentilezza e disponibilità. Un ringraziamento va anche a tutto il personale, altrettanto gentile e competente. Raccomando vivamente il Prof. De Sanctis a chiunque abbia problemi di vista. - Carmine Aversa",
+      "temi": [
+        "cataratta",
+        "team"
+      ]
+    },
+    {
+      "nome": "Antonio B.",
+      "data": "28/05/2024",
+      "testo": "l’ intervento su cataratta con impianto di lente multifocale / trifocale è andato benissimo. Sono molto soddisfatto del risultato ora non devo usare piu gli occhiali.",
+      "temi": [
+        "cataratta"
+      ]
+    },
+    {
+      "nome": "Michela D.",
+      "data": "08/05/2024",
+      "testo": "Volevo ringraziare il Professor De Sanctis, arrivato nella mia vita come un Angelo. Sono andata da lui per un problema che nessuno aveva compreso. Il Prof. Nella sua profonda conoscenza ha capito subito che si trattava di un problema che riguardava la cornea. Dopo vari esami strumentali eseguiti con molta accuratezza, la diagnosi e stata DISTROFIA DI FUCHS in entrambi le cornee. Mi ha subito rassicurata spiegandomi alla perfezione di che cosa si trattava, proponendomi l’intervento in DMEK( cheratoplastica lamellare). Occhio sinistro operato a marzo 2023 occhio destro operato a gennaio 2024. Lunedì 6 maggio ho fatto la visita di controllo, recuperato 12/decimi!! Finalmente dopo anni rivedo colori meravigliosi, nitidezza assoluta, posso di nuovo guidare senza alcun tipo di problema. Oltre all altissima professionalità, devo parlare anche del lato umano ,sempre disponibile per ogni chiarimento. Non vivendo a Torino, lo staff si È sempre messo a disposizione per venirmi incontro con gli orari . Grazie di cuore a tutti voi. Grazie Prof.",
+      "temi": [
+        "cornea",
+        "team"
+      ]
+    },
+    {
+      "nome": "S F.",
+      "data": "30/04/2024",
+      "testo": "buongiorno, nel mese di marzo mi sono sottoposta all' intervento  laser agli occhi per ipermetropia e astigmatismo .Non ho avvertito alcun fastidio durante l' operazione, il recupero e' stato ottimale.Pertanto  consiglierei questo tipo di intervento  senza alcuna remora.Ringrazio il prof De Sanctis  e la sua equipe  .",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Gianluigi L.",
+      "data": "28/04/2024",
+      "testo": "Il prof. De Sanctis mi  ha operato con successo in un difficile caso di entropion già operato con scarsi risultati da un altro  oculista.",
+      "temi": []
+    },
+    {
+      "nome": "Alessandro C.",
+      "data": "25/04/2024",
+      "testo": "Il Professor De Sanctis e il suo staff, in particolare la Dott.ssa Alessia (che ha curato la realizzazione delle lenti), meritano tutta la mia gratitudine e il mio elogio per l'eccellenza dimostrata nel mio intervento per l'impianto di lenti intraoculari miotiche (ICL). Grazie alla loro competenza e dedizione, le lenti sono state costruite su misura per i miei occhi, consentendomi di vedere meglio di quanto avessi mai immaginato, persino superando la qualità visiva degli occhiali. È importante sottolineare che l'intervento è stato completamente indolore, questo non può che essere un ulteriore punto a favore. La tecnologia ICL ha cambiato la mia vita e il mio modo di vedere, e non potrei essere più soddisfatto dei risultati ottenuti grazie al lavoro del Dottor De Sanctis e del suo eccezionale team. Li consiglio vivamente a chiunque abbia bisogno di correggere i propri difetti visivi e cerchi un trattamento occhi di alta qualità e personalizzato.",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Massimiliano D.",
+      "data": "09/04/2024",
+      "testo": "Sono grato al Dottor Ugo De Sanctis e al suo staff per l'esperienza che ho avuto durante il mio intervento di LASIK per l'ipermetropia. Dopo anni di dipendenza dagli occhiali ho finalmente preso la decisione di sottopormi all'intervento e non potrei essere più soddisfatto dei risultati. Prima dell'intervento, ha spiegato chiaramente ogni fase del processo e ha risposto a tutte le mie domande con pazienza e chiarezza. Ora, dopo l'intervento, posso finalmente godere di una visione nitida e libera da occhiali. È un vero cambiamento di vita. Consiglio vivamente il dottor Ugo De Sanctis a chiunque stia considerando un intervento di chirurgia refrattiva.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Stefano C.",
+      "data": "08/04/2024",
+      "testo": "Studio oculistico composto da personale molto professionale, qualificato e disponibile. Operazione eseguita perfettamente e senza alcun discomfort post operatorio. Visite estremamente scrupolose. Molto soddisfatto dell'esperienza",
+      "temi": [
+        "team"
+      ]
+    },
+    {
+      "nome": "Federico G.",
+      "data": "08/04/2024",
+      "testo": "Sono ormai più di 15 anni che il Prof. De Sanctis e il suo staff si occupano delle mie visite oculistiche e, superati i 20 anni e con un difetto di astigmatismo e ipermetropia stabile, mi è stato proposto di effettuare l'intervento chirurgico FEMTO-LASIK per avere l'opportunità di eliminare il difetto e togliere gli occhiali. Dopo una chiara spiegazione e chiariti i vari dubbi da parte del Prof. De Sanctis ho deciso di sottopormi a tale intervento, il quale è avvenuto dopo un'ulteriore visita di controllo per verificare l'idoneità del soggetto. Durante l'intervento, di brevissima durata (qualche minuto in totale per entrambi gli occhi), non ho avvertito alcun dolore, i medici mi dicevano passo passo ciò che avrei dovuto fare e nell'arco di un'oretta e mezza ero già fuori dalla clinica. Le prime tre/quattro ore successive ho avvertito qualche fastidio agli occhi, come mi era stato anticipato, ma nulla di insopportabile per quanto mi riguarda. Nonostante ciò, la sera ero già in grado di leggere senza occhiali qualche pagina di un libro. Il giorno successivo è avvenuto il primo controllo, nel quale, dopo la visita, mi è stato comunicato che i difetti erano corretti come previsto. A qualche giorno dall'intervento sto proseguendo la terapia (fondamentale) per il decorso e la vista migliora pian piano (con oscillazioni di giorno in giorno come mi era stato preventivato). Data la mia esperienza mi sento dunque di consigliare questo studio oculistico e l'intervento a cui sono stato sottoposto.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Francesca B.",
+      "data": "08/04/2024",
+      "testo": "Ho effettuato l’intervento di LASIK per correggere ipermetropia e astigmatismo. Utilizzavo occhiali e lenti a contatto da sempre e, a pochi giorni dall’intervento,  posso solo dire di non aver mai visto così bene in tutta la vita!!! Sembra un miracolo!",
+      "temi": [
+        "lasik"
+      ]
+    },
+    {
+      "nome": "Enza E.",
+      "data": "29/03/2024",
+      "testo": "La mia esperienza è assolutamente positiva. Ho trovato un medico competente che svolge il suo lavoro con passione, due caratteristiche fondamentali che ti permettono di affidarti a lui in estrema tranquillità.",
+      "temi": []
+    },
+    {
+      "nome": "Cristina B.",
+      "data": "22/03/2024",
+      "testo": "Intervento miopia riuscito , professore e assistenti molto gentili e competenti , mettono a proprio agio e disponibili . Recupero visivo già il giorno successivo senza problemi . Consiglio l'intervento per risolvere problematiche visive",
+      "temi": []
+    },
+    {
+      "nome": "Lorenzo G.",
+      "data": "21/03/2024",
+      "testo": "Mi sono rivolto allo studio del Dott. De Sanctis per risolvere il problema di miopia ed astigmatismo e dopo aver portato gli occhiali per 15 anni sono molto contento del risultato. In particolare sono stato sottoposto ad un intervento laser con la tecnica SMILE senza provare alcun dolore durante e dopo ma solo un leggero fastidio nelle ore successivo durante le quali ho già notato un miglioramento notevole che mi ha subito permesso di dimenticare gli occhiali. Nei giorni successivi, come ben spiegato inizialmente dal dottore e dal suo staff, il recupero avviene a giorni alterni ma di settimana in settimana si può notare un netto miglioramento fino ad arrivare un un ottimo risultato dopo le 3 settimane. Ora, in attesa del controllo ad un mese dall'intervento, posso dire di aver praticamente recuperato totalmente la vista se non per un lieve problema della messa a fuoco delle immagini sugli schermi ma recuperabili come da decorso post-operatorio con le dovute tempistiche. Professionalità, precisione ed ordine riscontrate sia nelle due visite precedenti l'intervento che nell'intervento stesso, viene spiegato il perché si sceglie una tecnica piuttosto che un'altra e come avviene il prima e il dopo intervento, coinvolgendo il paziente in tutto il percorso.",
+      "temi": [
+        "smile",
+        "team"
+      ]
+    },
+    {
+      "nome": "Simona P.",
+      "data": "20/03/2024",
+      "testo": "Conosciuto il Prof. De Sanctis tramite una mia amica, dopo due visite molto accurate sono risultata idonea per l'intervento. Il 15 Marzo sono stata sottoposta ad intervento laser con la tecnica LASIK Blended con l’obiettivo di poter eliminare completamente gli occhiali sia per la vista da vicino sia da lontano, l'intervento è stato rapido e indolore, solo nelle 3 ore successive un pò di bruciore (come mi era stato comunicato), ma già nel pomeriggio era svanito. A distanza di quasi una settimana il risultato è più che buono. Consiglio veramente lo studio, il Professore e tutto il suo Staff sono persone molto professionali, disponibili e competenti, non potevo trovarmi meglio. VERAMENTE CONTENTA.",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Federica G.",
+      "data": "25/02/2024",
+      "testo": "Ho usato occhiali e lenti a contatto per 22 dei miei 36 anni, e mi sembra tuttora una magia poter vedere così bene senza alcun supporto esterno! L'avessi fatto prima! Avevo una forte miopia da entrambi gli occhi, con una grande differenza tra i due (-7 a sx e -4,25 a dx) e una condizione di secchezza oculare più pronunciata della media. Ultimamente facevo fatica anche a tenere le lenti a contatto per via della secchezza che esse stesse contribuivano a peggiorare. Il dottore ha suggerito l'intervento di Femtolasik, che sarà durato in tutto un quarto d'ora. Lo staff della clinica gentilissimo e l'equipe in sala operatoria efficientissima e in grado di accogliere timori e richieste. In 90 minuti ero già fuori in direzione di casa. Le prime 4 ore sono state le peggiori, per via del bruciore e della quasi impossibilità a tenere gli occhi aperti anche al buio. Ma dopo 4 ore, il bruciore era quasi sparito del tutto e potevo vedere normalmente! Ho seguito alla lettera tutte le indicazioni sull'uso di colliri, salviette e protezioni notturne, e oggi, poco più di un mese dopo l'intervento, ancora stento a credere in questo risultato e spero che duri il più a lungo possibile! Do 5 stelline perché di più non si può!",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    },
+    {
+      "nome": "Antonella C.",
+      "data": "23/02/2024",
+      "testo": "Mi sono rivolta al Prof. Ugo De Sanctis per correggere un difetto di miopia e presbiopia.Dopo avermi spiegato in maniera dettagliata l’intervento e il post operatorio (ero terrorizzata perché soffro di occhio secco)mi sono sottoposta ad intervento.Ho effettuato ieri l’intervento con la tecnica LASIK LBV completamente indolore.Nelle ore successive non ho avuto nessun problema di bruciore, secchezza o sensazione di sabbia nell’occhio.Già ieri in giornata riuscivo a leggere senza occhiali e anche da lontano la mia vista era perfetta.Consiglio a tutti il Professore per la sua competenza e professionalità.Ringrazio il Professore e tutto il suo staff Carica di più Studio Oculistico de Sanctis Corso Matteotti 28, 10121 Torino – Tel. +39 011 5623620 – Email: info@ugodesanctis.com Cookie Policy   |   Privacy Policy   |   P.iva 06565370019 Powered by Blulab Questo sito o gli strumenti terzi da questo utilizzati si avvalgono di cookie necessari al funzionamento ed utili alle finalità illustrate nella cookie policy. Cliccando su Accetto acconsenti all'utilizzo dei cookie da parte nostra. AccettaConsulta la Cookie policy",
+      "temi": [
+        "lasik",
+        "team"
+      ]
+    }
+  ],
+  "temiRecensioni": [
+    {
+      "id": "lasik",
+      "nome": "LASIK",
+      "n": 39
+    },
+    {
+      "id": "smile",
+      "nome": "SMILE",
+      "n": 4
+    },
+    {
+      "id": "cataratta",
+      "nome": "Cataratta",
+      "n": 4
+    },
+    {
+      "id": "cornea",
+      "nome": "Cornea e trapianti",
+      "n": 6
+    },
+    {
+      "id": "team",
+      "nome": "Lo staff",
+      "n": 57
+    }
+  ],
+  "aree": {
+    "titolo": "",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "chirurgia-refrattiva",
+    "categoria": "Chirurgia refrattiva",
+    "titolo": "Chirurgia refrattiva: quale tecnica scegliere tra PRK, LASIK, SMILE e ICL",
+    "img": "/desanctis-nfu8/img/rep-laser.webp",
+    "tempoLettura": "9 min",
+    "intro": "Liberarsi di occhiali e lenti a contatto è oggi un intervento sicuro, rapido e consolidato da decenni di esperienza. Ma «il laser» non è uno solo: PRK, LASIK e SMILE funzionano in modo diverso, e per alcuni occhi la soluzione migliore è una lente intraoculare. Le spiego le differenze e come scegliamo insieme.",
+    "sezioni": [
+      {
+        "titolo": "Come si corregge un difetto visivo",
+        "paragrafi": [
+          "Miopia, ipermetropia e astigmatismo dipendono da come la luce viene messa a fuoco dentro l'occhio. Le tecniche laser correggono il difetto modificando la curvatura della cornea, la «finestra» trasparente davanti all'occhio, in modo che le immagini arrivino nitide sulla retina.",
+          "Le lenti intraoculari, invece, aggiungono una lente dentro l'occhio, senza togliere tessuto alla cornea: sono la soluzione per i difetti molto elevati o quando la cornea non è adatta al laser.",
+          "Tutte le procedure laser sono ambulatoriali e permettono di trattare entrambi gli occhi nella stessa seduta. L'anestesia si ottiene con qualche goccia di collirio, e il trattamento dura pochi minuti."
+        ]
+      },
+      {
+        "titolo": "PRK: la tecnica di superficie",
+        "paragrafi": [
+          "Nella PRK il laser ad eccimeri lavora direttamente sulla superficie della cornea, dopo aver rimosso lo strato più esterno, l'epitelio, che poi si rigenera da solo.",
+          "La precisione e la sicurezza sono paragonabili alle altre tecniche, ma il recupero è più lento: nelle prime 48-72 ore si possono avere bruciore, lacrimazione e sensazione di corpo estraneo anche intensi, e per vedere bene servono alcune settimane. Il ritorno al lavoro è di solito dopo circa una settimana.",
+          "Per questo la uso soprattutto quando lo spessore della cornea o alcune alterazioni della superficie oculare non permettono di eseguire in sicurezza la LASIK o la SMILE."
+        ]
+      },
+      {
+        "titolo": "LASIK: la più versatile",
+        "paragrafi": [
+          "Nella LASIK si prepara prima un sottile lembo di cornea, il flap, che viene sollevato; il laser ad eccimeri lavora nello spessore della cornea, poi il flap viene riposizionato. Con la FEMTO-LASIK il flap è creato con il laser a femtosecondi invece che con una lama meccanica, con maggiore precisione e sicurezza.",
+          "È la tecnica più versatile: corregge miopia, astigmatismo, ipermetropia e presbiopia. I disturbi postoperatori sono minimi, spesso limitati alle prime ore, e la vista si recupera in poche ore. Si torna al lavoro in 1-2 giorni.",
+          "Secondo la nostra esperienza e gli studi scientifici, oltre il 95% dei pazienti sottoposti a LASIK raggiunge un'acuità visiva senza occhiali di 10/10 o superiore."
+        ]
+      },
+      {
+        "titolo": "SMILE: senza lembo, con una piccola incisione",
+        "paragrafi": [
+          "Nella SMILE il laser a femtosecondi ritaglia all'interno della cornea un sottile lenticolo di tessuto, che viene estratto attraverso una piccola incisione. Non serve preparare un flap.",
+          "La SMILE corregge miopia fino a 10 diottrie e astigmatismo fino a 5 diottrie, oltre alla presbiopia. È particolarmente adatta alle miopie medio-elevate e alle persone dinamiche che vogliono riprendere in fretta tutte le attività, comprese quelle sportive: i disturbi sono minimi e la vista si recupera in pochi giorni."
+        ]
+      },
+      {
+        "titolo": "Le lenti intraoculari ICL",
+        "paragrafi": [
+          "Quando il difetto è troppo elevato per il laser o la cornea è sottile, si può impiantare una lente intraoculare fachica, come la Visian ICL. È una lente ultrasottile in Collamero, un materiale altamente biocompatibile, che si posiziona tra iride e cristallino attraverso una piccola incisione di 3 millimetri, senza punti.",
+          "Corregge miopia fino a 20 diottrie, ipermetropia fino a 10 e astigmatismo fino a 6. Non è visibile dall'esterno, e il recupero è molto rapido: dal giorno dopo si riprendono le normali attività."
+        ]
+      },
+      {
+        "titolo": "Le differenze in sintesi",
+        "paragrafi": [
+          "Riassumendo, le principali differenze riguardano:"
+        ],
+        "elenco": [
+          "i difetti trattabili: la LASIK è la più versatile; SMILE e PRK correggono miopia, astigmatismo e presbiopia",
+          "il laser usato: femtosecondi per la SMILE, femtosecondi ed eccimeri per la LASIK, eccimeri per la PRK",
+          "i disturbi dopo l'intervento: minimi per SMILE e LASIK, più intensi per 48-72 ore con la PRK",
+          "il recupero visivo: poche ore con la LASIK, pochi giorni con la SMILE, alcune settimane con la PRK",
+          "il ritorno al lavoro: 1-2 giorni per SMILE e LASIK, circa una settimana per la PRK"
+        ]
+      },
+      {
+        "titolo": "Come scegliamo insieme",
+        "paragrafi": [
+          "La scelta non si fa sul sito, ma dopo una valutazione completa. I miei assistenti in oftalmologia, ortottisti laureati, eseguono un esame tra i più completi: misurano la funzione visiva a tutte le distanze e in diverse condizioni di luce, la forma e lo spessore della cornea con la tomografia, la superficie oculare.",
+          "Con questi dati, e conoscendo le Sue esigenze di lavoro, sport e vita quotidiana, Le propongo la tecnica più adatta. A volte la risposta è che il laser non è indicato: anche questo fa parte di una buona chirurgia refrattiva.",
+          "Uso la piattaforma refrattiva Carl Zeiss Meditec per tutte le tecniche: di superficie, LASIK e SMILE."
+        ]
+      },
+      {
+        "titolo": "Chi può operarsi",
+        "paragrafi": [
+          "In genere si opera dopo i 18 anni, con un difetto stabile da almeno un anno. Prima della visita va sospeso l'uso delle lenti a contatto per alcuni giorni, perché modificano temporaneamente la forma della cornea: Le diamo le indicazioni precise al momento della prenotazione.",
+          "Alcune condizioni, come il cheratocono, certe malattie della superficie oculare o la gravidanza, controindicano o rimandano l'intervento."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso:"
+        ],
+        "elenco": [
+          "Fa male? No: l'anestesia con collirio elimina il dolore; si avverte solo una lieve pressione.",
+          "Si operano entrambi gli occhi insieme? Con le tecniche laser sì, nella stessa seduta.",
+          "Il risultato è definitivo? La correzione è stabile; con l'età può comparire la presbiopia, che si può a sua volta correggere.",
+          "Dopo potrò fare sport? Sì; con SMILE e LASIK si riprende in pochi giorni, con qualche precauzione per gli sport di contatto."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "presbiopia",
+      "categoria": "Presbiopia",
+      "titolo": "Presbiopia: togliere gli occhiali da lettura dopo i 45 anni",
+      "img": "/desanctis-nfu8/img/rep-occhiali.webp",
+      "tempoLettura": "7 min",
+      "intro": "Allungare il braccio per leggere il menu, cercare gli occhiali per guardare lo smartphone: dopo i 40 anni succede a tutti. È la presbiopia. Oggi esistono soluzioni chirurgiche che permettono di ridurre o eliminare gli occhiali da vicino.",
+      "sezioni": [
+        {
+          "titolo": "Che cos'è la presbiopia",
+          "paragrafi": [
+            "La presbiopia non è una malattia, ma un difetto legato all'età. Il cristallino, la lente naturale dell'occhio, perde progressivamente la sua flessibilità e non riesce più a cambiare forma per mettere a fuoco gli oggetti vicini.",
+            "Inizia di solito dopo i 40 anni e peggiora fino ai 60. Si manifesta con la visione sfocata da vicino, durante la lettura e l'uso del computer o dello smartphone, e può comparire prima in chi è ipermetrope."
+          ]
+        },
+        {
+          "titolo": "Le soluzioni senza chirurgia",
+          "paragrafi": [
+            "Gli occhiali da lettura, i progressivi e le lenti a contatto multifocali sono le soluzioni più comuni. Funzionano, ma per molte persone diventano una dipendenza scomoda: gli occhiali da cercare, da indossare e togliere, da portare sempre con sé."
+          ]
+        },
+        {
+          "titolo": "La correzione con il laser",
+          "paragrafi": [
+            "La FEMTO-LASIK, cioè la LASIK eseguita con il laser a femtosecondi, consente di correggere la presbiopia modificando la curvatura della cornea con particolari profili di trattamento. Può correggere anche un eventuale difetto per lontano già presente, come miopia, ipermetropia o astigmatismo.",
+            "Anche la SMILE può essere usata in alcuni casi di presbiopia. La scelta del profilo dipende dalle esigenze visive: chi legge molto, chi guida spesso di sera, chi lavora al computer ha bisogni diversi."
+          ]
+        },
+        {
+          "titolo": "Le lenti intraoculari multifocali",
+          "paragrafi": [
+            "Una valida alternativa al laser è l'impianto di lenti intraoculari multifocali, che sostituiscono il cristallino. È una soluzione particolarmente indicata dopo i 55-60 anni, quando il cristallino comincia a perdere trasparenza, o se è già presente una cataratta iniziale.",
+            "Il vantaggio è doppio: si corregge la presbiopia e si previene la cataratta futura, perché il cristallino viene rimosso. Con queste tecniche è possibile eliminare o ridurre in modo permanente la necessità degli occhiali."
+          ]
+        },
+        {
+          "titolo": "Come scegliere",
+          "paragrafi": [
+            "Età, difetto visivo, stato del cristallino, abitudini e aspettative: sono questi gli elementi che guidano la scelta tra laser e lenti intraoculari. Per questo la valutazione preoperatoria è molto accurata e comprende la misura della vista a tutte le distanze e in diverse condizioni di luce.",
+            "È importante anche parlare di aspettative realistiche: l'obiettivo è l'indipendenza dagli occhiali nella maggior parte delle attività quotidiane. In alcune situazioni, come la lettura prolungata con poca luce, può restare utile un occhiale leggero."
+          ]
+        },
+        {
+          "titolo": "Il recupero",
+          "paragrafi": [
+            "Dopo la FEMTO-LASIK il recupero visivo è rapido: la vista da lontano migliora già nelle prime ore e quella da vicino si stabilizza nelle settimane successive, mentre il cervello si adatta. Dopo l'impianto di lenti multifocali si riprendono le attività normali in pochi giorni."
+          ]
+        },
+        {
+          "titolo": "Chi non è un buon candidato",
+          "paragrafi": [
+            "Non tutti sono candidati ideali. Un occhio secco importante, alcune malattie della retina o della cornea, o esigenze visive particolari possono orientare verso soluzioni diverse. Anche questo si chiarisce in visita."
+          ]
+        },
+        {
+          "titolo": "Monovisione: una vecchia idea, ancora valida",
+          "paragrafi": [
+            "Una delle strategie più usate per la presbiopia è la monovisione: un occhio viene corretto per vedere bene da lontano e l'altro per vedere meglio da vicino. Il cervello impara presto a usare l'occhio giusto per ogni distanza.",
+            "Non piace a tutti: per questo, quando è possibile, la proviamo prima con le lenti a contatto, così da capire se si adatta bene alle Sue abitudini prima di renderla definitiva con il laser."
+          ]
+        },
+        {
+          "titolo": "Presbiopia e lavoro al computer",
+          "paragrafi": [
+            "Chi passa molte ore al computer sente spesso la presbiopia prima degli altri, perché la distanza dello schermo è proprio quella in cui il cristallino fatica di più. Occhiali progressivi poco adatti, mal di testa a fine giornata e occhi stanchi sono segnali comuni. In visita valutiamo anche le Sue distanze di lavoro, per scegliere la correzione più adatta alla Sua giornata."
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Porti gli occhiali che usa, sia per lontano sia per vicino, e se usa lenti a contatto le indicazioni del Suo contattologo. Le lenti a contatto vanno sospese per qualche giorno prima della valutazione per la chirurgia: Le diamo le indicazioni precise al momento della prenotazione."
+          ]
+        },
+        {
+          "titolo": "Un percorso in più visite",
+          "paragrafi": [
+            "La correzione della presbiopia non si decide in una sola visita. Dopo il primo esame completo, ci rivediamo per gli esami preoperatori e per discutere insieme la soluzione, con il tempo di fare tutte le domande. Dopo l'intervento La seguiamo con controlli programmati, finché la visione non si è stabilizzata."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "A che età si può correggere la presbiopia? Di solito dopo i 45 anni, quando il difetto è ben definito.",
+            "Il laser per la presbiopia è definitivo? La correzione è stabile, ma la presbiopia può progredire negli anni successivi.",
+            "E se poi viene la cataratta? Si può operare normalmente: anzi, con le lenti multifocali si risolvono entrambi i problemi.",
+            "Si vede bene anche di sera? In genere sì; aloni e abbagliamenti, se presenti, si riducono nei primi mesi."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "lenti-icl",
+      "categoria": "Lenti intraoculari",
+      "titolo": "Lenti ICL: l'alternativa al laser per i difetti elevati",
+      "img": "/desanctis-nfu8/img/esame.webp",
+      "tempoLettura": "7 min",
+      "intro": "Non tutti gli occhi sono adatti al laser. Chi ha una miopia molto elevata o una cornea sottile spesso si sente dire «per lei non si può fare». Le lenti intraoculari ICL sono la risposta: correggono anche difetti molto alti, senza togliere tessuto alla cornea.",
+      "sezioni": [
+        {
+          "titolo": "Che cosa sono le ICL",
+          "paragrafi": [
+            "Le Visian ICL sono lenti intraoculari fachiche, cioè che si aggiungono al cristallino naturale senza rimuoverlo. Sono prodotte negli Stati Uniti da STAAR Surgical in Collamero, un copolimero di collagene altamente biocompatibile, e sono ultrasottili.",
+            "Correggono miopia fino a 20 diottrie, ipermetropia fino a 10 diottrie e astigmatismo fino a 6 diottrie."
+          ]
+        },
+        {
+          "titolo": "Per chi sono indicate",
+          "paragrafi": [
+            "Le ICL sono una soluzione da valutare in particolare per:"
+          ],
+          "elenco": [
+            "miopie elevate, oltre il limite di sicurezza del laser",
+            "cornee sottili o con forma non adatta al laser",
+            "occhio secco importante, che il laser potrebbe peggiorare",
+            "persone giovani che desiderano una soluzione reversibile"
+          ]
+        },
+        {
+          "titolo": "Come si svolge l'intervento",
+          "paragrafi": [
+            "L'intervento si esegue in regime ambulatoriale, in anestesia locale. La lente viene introdotta attraverso una piccola incisione corneale di 3 millimetri, che non richiede punti di sutura, e posizionata tra l'iride e il cristallino.",
+            "L'impianto non è visibile dall'esterno: nessuno si accorgerà che porta una lente. E la lente non si avverte."
+          ]
+        },
+        {
+          "titolo": "Il recupero",
+          "paragrafi": [
+            "Il recupero visivo è estremamente rapido: già dal giorno dopo l'intervento il paziente può riprendere le normali attività quotidiane. Le ICL garantiscono un'ottima qualità della visione e una correzione molto precisa anche dei difetti di grado elevato.",
+            "Nei giorni successivi si usano colliri antibiotici e antinfiammatori e si eseguono i controlli programmati."
+          ]
+        },
+        {
+          "titolo": "ICL o laser?",
+          "paragrafi": [
+            "Per difetti lievi e moderati, con una cornea adatta, il laser resta in genere la prima scelta: è veloce e molto collaudato. Le ICL entrano in gioco quando il laser non garantirebbe un risultato sicuro o stabile.",
+            "Un vantaggio delle ICL è la reversibilità: se in futuro fosse necessario, la lente può essere rimossa o sostituita, per esempio al momento di un intervento di cataratta."
+          ]
+        },
+        {
+          "titolo": "Gli esami prima dell'intervento",
+          "paragrafi": [
+            "Prima di proporre una ICL misuriamo con precisione le dimensioni interne dell'occhio, lo spessore e la forma della cornea, la profondità della camera anteriore e la conta delle cellule endoteliali, che rivestono la parte interna della cornea. Sono esami indolori e non invasivi, che permettono di scegliere la lente con le misure esatte per il Suo occhio."
+          ]
+        },
+        {
+          "titolo": "I controlli nel tempo",
+          "paragrafi": [
+            "Dopo l'impianto si programmano controlli periodici: nel primo anno più ravvicinati, poi annuali. Servono a verificare la posizione della lente, la pressione dell'occhio e lo stato della cornea e del cristallino. Sono visite semplici, ma importanti per mantenere nel tempo il risultato."
+          ]
+        },
+        {
+          "titolo": "La mia esperienza",
+          "paragrafi": [
+            "Mi occupo da oltre 25 anni di chirurgia refrattiva e del segmento anteriore dell'occhio, e come responsabile del Servizio di Patologia Corneale della Clinica Oculistica dell'Università di Torino conosco bene la cornea e i suoi limiti. Proprio per questo, quando la cornea non è adatta al laser, preferisco proporre una soluzione che la rispetti."
+          ]
+        },
+        {
+          "titolo": "Le ICL e la qualità della visione",
+          "paragrafi": [
+            "Una caratteristica apprezzata delle ICL è la qualità della visione: poiché la cornea non viene modificata, la sua forma naturale resta intatta. Molti pazienti con miopie elevate, abituati a occhiali spessi che rimpiccioliscono le immagini o a lenti a contatto mal tollerate, riferiscono di vedere in modo più nitido e naturale di quanto ricordassero.",
+            "Come per ogni intervento, nei primi tempi si possono notare aloni attorno alle luci di notte, che di solito si attenuano con l'adattamento."
+          ]
+        },
+        {
+          "titolo": "Le ICL toriche per l'astigmatismo",
+          "paragrafi": [
+            "Esistono anche ICL toriche, che correggono insieme miopia e astigmatismo. In questo caso la lente ha un orientamento preciso, che viene calcolato prima dell'intervento con le misure dell'occhio e verificato in sala operatoria. È una soluzione molto utile per chi ha un astigmatismo importante associato a una miopia elevata."
+          ]
+        },
+        {
+          "titolo": "Cosa fare prima e dopo",
+          "paragrafi": [
+            "Prima dell'intervento va sospeso l'uso delle lenti a contatto per alcuni giorni, come indicato in visita. Il giorno dell'intervento serve un accompagnatore, perché non si può guidare. Nei giorni successivi si usano i colliri prescritti, si evita di strofinare gli occhi e si rimanda per qualche giorno l'attività sportiva intensa e la piscina. I miei assistenti Le daranno tutte le istruzioni per iscritto."
+          ]
+        },
+        {
+          "titolo": "Le ICL e l'età",
+          "paragrafi": [
+            "Le ICL sono pensate soprattutto per pazienti giovani, con il cristallino ancora trasparente ed elastico. Dopo i 50-55 anni, quando il cristallino comincia a perdere flessibilità e trasparenza, spesso conviene valutare direttamente una lente intraoculare che sostituisca il cristallino, correggendo insieme il difetto visivo e la presbiopia."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "La lente si sente? No, non si avverte e non è visibile.",
+            "Si operano entrambi gli occhi insieme? Di solito a pochi giorni di distanza l'uno dall'altro.",
+            "Dura per sempre? È pensata per restare nell'occhio a lungo, ma può essere rimossa se necessario.",
+            "C'è un'età minima? Si valuta dopo i 18-21 anni, con un difetto stabile."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "cheratocono",
+      "categoria": "Cornea",
+      "titolo": "Cheratocono: i primi segnali e il cross-linking",
+      "img": "/desanctis-nfu8/img/rep-occhio.webp",
+      "tempoLettura": "7 min",
+      "intro": "Il cheratocono colpisce spesso ragazzi e giovani adulti e all'inizio dà disturbi lievi, facili da confondere con un comune astigmatismo. Riconoscerlo presto è fondamentale: oggi si può bloccarne la progressione.",
+      "sezioni": [
+        {
+          "titolo": "Che cos'è",
+          "paragrafi": [
+            "Il cheratocono è una malattia della cornea che va incontro a un progressivo assottigliamento e aumento di curvatura. Sfiancandosi, la cornea tende a sporgere in avanti e, nei casi avanzati, assume un aspetto a cono, da cui il nome.",
+            "La malattia esordisce di solito nell'infanzia o nell'adolescenza, prima dei 20 anni, e in più del 90% dei casi colpisce entrambi gli occhi. Nasce da una combinazione di fattori genetici, biochimici e comportamentali."
+          ]
+        },
+        {
+          "titolo": "I primi segnali",
+          "paragrafi": [
+            "Nelle fasi iniziali i disturbi sono lievi. Conviene una visita se si nota:"
+          ],
+          "elenco": [
+            "un astigmatismo che aumenta rapidamente da un controllo all'altro",
+            "occhiali che non bastano mai, con cambi frequenti",
+            "visione sfocata o immagini sdoppiate, anche con un occhio solo",
+            "abbagliamento e aloni attorno alle luci, soprattutto di notte",
+            "l'abitudine a strofinarsi spesso gli occhi, che può favorire la progressione"
+          ]
+        },
+        {
+          "titolo": "Come si fa la diagnosi",
+          "paragrafi": [
+            "Nelle fasi iniziali la diagnosi si fa con la tomografia corneale, un esame che misura la forma e lo spessore di tutta la cornea ed evidenzia l'area di assottigliamento. È indolore e dura pochi minuti.",
+            "Nei casi più avanzati, l'irregolarità della cornea si vede anche con la cheratoscopia: gli anelli concentrici riflessi sulla cornea appaiono deformati."
+          ]
+        },
+        {
+          "titolo": "Il cross-linking: bloccare la progressione",
+          "paragrafi": [
+            "Il cross-linking corneale è l'unico intervento efficace ad arrestare la progressione del cheratocono. Aumenta la rigidità del tessuto corneale e ferma lo sfiancamento.",
+            "Si esegue in ambulatorio, con anestesia in collirio. Sulla cornea si applica una soluzione di riboflavina, poi la si irradia con luce ultravioletta: l'interazione tra le due rinforza i legami tra le fibre di collagene. Al termine si applica una lente a contatto terapeutica, rimossa dopo 3-5 giorni.",
+            "Nei primi giorni si possono avere bruciore, lacrimazione e fastidio alla luce; la visione migliora progressivamente nelle settimane successive. Nella maggior parte dei casi la malattia si arresta, e a volte la vista migliora."
+          ]
+        },
+        {
+          "titolo": "Migliorare la vista",
+          "paragrafi": [
+            "Gli occhiali correggono il difetto solo nelle forme lievi. Negli stadi più avanzati si usano lenti a contatto specifiche, ad appoggio corneale o sclerale. Quando le lenti non sono tollerate, si possono impiantare anelli intrastromali, che rimodellano la cornea.",
+            "Solo nei casi più gravi si arriva al trapianto di cornea, oggi spesso eseguito con tecniche lamellari che sostituiscono solo gli strati malati."
+          ]
+        },
+        {
+          "titolo": "Perché non aspettare",
+          "paragrafi": [
+            "Il cheratocono tende a peggiorare soprattutto tra la seconda e la quarta decade di vita. Più si interviene presto con il cross-linking, più vista si conserva. Per questo, nei ragazzi con astigmatismo che cambia, è utile una tomografia corneale anche se la vista sembra ancora buona."
+          ]
+        },
+        {
+          "titolo": "Cheratocono e chirurgia refrattiva",
+          "paragrafi": [
+            "Il cheratocono è una delle condizioni che controindicano la LASIK e la SMILE: il laser assottiglierebbe ulteriormente una cornea già debole. Per questo, prima di ogni intervento refrattivo, la tomografia corneale è un esame obbligatorio.",
+            "Capita che sia proprio la visita per «togliere gli occhiali» a far scoprire un cheratocono iniziale: in quel caso la priorità diventa stabilizzarlo con il cross-linking."
+          ]
+        },
+        {
+          "titolo": "La mia esperienza",
+          "paragrafi": [
+            "Sono responsabile del Servizio di Patologia Corneale della Clinica Oculistica di Torino dal 1997 e consulente scientifico della Banca delle Cornee della Regione Piemonte. Sono stato tra i primi in Italia a utilizzare le tecniche di trapianto lamellare della cornea: DALK, DMEK e DSAEK."
+          ]
+        },
+        {
+          "titolo": "Cheratocono e gravidanza, allergie, strofinamento",
+          "paragrafi": [
+            "Alcuni fattori possono accelerare il cheratocono. Il più noto è lo strofinamento degli occhi, frequente in chi soffre di allergie: per questo, nei ragazzi allergici, curare l'allergia è anche un modo per proteggere la cornea. Anche alcune fasi ormonali, come la gravidanza, possono associarsi a una progressione: i controlli in quei periodi sono particolarmente utili."
+          ]
+        },
+        {
+          "titolo": "Il controllo dei familiari",
+          "paragrafi": [
+            "Il cheratocono ha anche una componente genetica. Se in famiglia c'è una persona con cheratocono, è consigliabile controllare con una tomografia corneale i fratelli e i figli, soprattutto tra i 10 e i 20 anni, anche se non hanno disturbi. Una diagnosi precoce permette di intervenire prima che la vista peggiori."
+          ]
+        },
+        {
+          "titolo": "Gli anelli intrastromali",
+          "paragrafi": [
+            "Quando la cornea è molto irregolare e le lenti a contatto non sono tollerate, gli anelli intrastromali sono una possibilità. Sono piccoli segmenti di materiale biocompatibile inseriti nello spessore della cornea, che la appiattiscono e ne rendono più regolare la forma, migliorando la qualità della visione. L'intervento è rapido e si può associare al cross-linking."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Il cheratocono porta alla cecità? No: può ridurre molto la vista, ma oggi si cura e si stabilizza.",
+            "Il cross-linking fa male? Si esegue con anestesia in collirio; i fastidi dei primi giorni si controllano bene.",
+            "Posso portare le lenti a contatto? Sì, lenti specifiche per cheratocono, applicate da un contattologo esperto.",
+            "Devo fare controlli? Sì: la tomografia va ripetuta periodicamente per verificare la stabilità."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "prof.ugodesanctis",
+    "nota": "il Professore non ha profili social: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "domanda",
+        "titolo": "Togliere gli occhiali a 45 anni?",
+        "risposta": "Sì: laser o lenti multifocali.",
+        "didascalia": "La presbiopia arriva per tutti dopo i 40 anni. Con la FEMTO-LASIK o con lenti intraoculari multifocali si può ridurre o eliminare l'occhiale da lettura.",
+        "hashtag": "#presbiopia #oculista #torino"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Lenti ICL: quando il laser non basta",
+        "punti": [
+          "Miopia fino a 20 diottrie",
+          "Cornea sottile",
+          "Incisione di 3 mm, senza punti",
+          "Si torna alle attività il giorno dopo"
+        ],
+        "didascalia": "Le ICL correggono difetti molto elevati senza togliere tessuto alla cornea. Non si vedono e non si sentono.",
+        "hashtag": "#ICL #miopia #chirurgiarefrattiva"
+      },
+      {
+        "stile": "foto",
+        "immagine": "occhio",
+        "titolo": "Cheratocono: i primi segnali",
+        "sottotitolo": "L'astigmatismo che cresce in fretta",
+        "didascalia": "Occhiali da cambiare spesso, immagini sdoppiate, aloni di notte. Una tomografia corneale chiarisce, e il cross-linking blocca la progressione.",
+        "hashtag": "#cheratocono #cornea #crosslinking"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Lo studio",
+    "altreLabel": "",
+    "email": "info@ugodesanctis.com",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio Oculistico de Sanctis",
+        "breve": "Corso Matteotti 28",
+        "indirizzo": "Corso Matteotti 28",
+        "citta": "Torino",
+        "cap": "10121",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di corso Matteotti 28, Torino"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Lo studio La richiama per fissare l'appuntamento. Se usa lenti a contatto, Le diremo per quanti giorni sospenderle prima della visita.",
+    "telefono": "0115623620",
+    "telefonoLabel": "011 562 3620",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "saluto": "Professore",
+    "oggettoMail": "Richiesta di visita oculistica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi il giorno e l'orario che preferisce: lo studio La ricontatta per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo",
+        "Valutazione preoperatoria"
+      ],
+      "motivi": [
+        "Visita oculistica completa",
+        "Togliere gli occhiali (laser o ICL)",
+        "Presbiopia",
+        "Cataratta",
+        "Cheratocono",
+        "Malattie della cornea",
+        "Controllo dopo l'intervento",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "un controllo oculistico completo",
+        "una valutazione di chirurgia refrattiva",
+        "una valutazione per la presbiopia",
+        "la cataratta",
+        "il cheratocono",
+        "una malattia della cornea",
+        "un controllo dopo l'intervento",
+        "un problema agli occhi"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio di corso Matteotti 28",
+          "frase": "lo studio di corso Matteotti 28, Torino"
+        }
+      ],
+      "privacy": "https://www.ugodesanctis.com/privacy-policy",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio il Suo difetto visivo o se porta lenti a contatto"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F2F5F8",
+      "ink": "#0E1218",
+      "muted": "#59616E",
+      "line": "#DEE3EA",
+      "brand": "#1D4F82",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#6CB8E6",
+      "deep": "#0A0E14",
+      "deep-ink": "#C9D3DF"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Onest:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Bodoni Moda",
+    "fontTesti": "Onest",
+    "fontUi": "Onest",
+    "favicon": "/desanctis-nfu8/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/desanctis-nfu8/brand/brand.json",
+    "pagine": [
+      "https://www.ugodesanctis.com/",
+      "https://www.ugodesanctis.com/curriculum/",
+      "https://www.ugodesanctis.com/studio-oculistico-torino/",
+      "https://www.ugodesanctis.com/lo-studio/il-team-studio-ugodesanctis/",
+      "https://www.ugodesanctis.com/lo-studio/recensioni/",
+      "https://www.ugodesanctis.com/convenzioni/",
+      "https://www.ugodesanctis.com/elimina-occhiali-e-lenti-a-contatto/tecniche-laser-a-confronto/",
+      "https://www.ugodesanctis.com/elimina-occhiali-e-lenti-a-contatto/lenti-intraoculari-icl/",
+      "https://www.ugodesanctis.com/elimina-occhiali-e-lenti-a-contatto/domande-frequenti/",
+      "https://www.ugodesanctis.com/cataratta/",
+      "https://www.ugodesanctis.com/cheratocono/",
+      "https://www.ugodesanctis.com/soluzioni/cross-linking-corneale/"
+    ]
+  }
+}
