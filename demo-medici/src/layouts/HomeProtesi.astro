@@ -1,0 +1,504 @@
+---
+// Layout "protesi" (prima demo: Dr. Danilo Sebastiano Mellano, ortopedico, chirurgia protesica dell'anca). Il quadrato aperto del suo
+// marchio DM come cornice (ritratto, figure), Archivo + Libre Franklin, blu del logo #36689F + azzurro #78B1DD, angoli quasi vivi.
+// Interattivi: prenotazione (ambulatorio a pillole + motivo → mail già scritta); «Tre vie per arrivare all'anca» (sezione schematica
+// dell'anca vista dall'alto, via anteriore / laterale / posteriore: percorso che si disegna, muscoli risparmiati o distaccati);
+// «Com'è fatta una protesi» (componenti che si separano, scheda materiali); «Il recupero» (cursore per tappe); video caricati al clic;
+// sedi a schede «Dove visito» / «Dove opero».
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const P = x.prenota;
+const mail = emailRichieste(m);
+const motivi = x.motivi as any[];
+const amb = x.ambulatori as any[];
+const sale = x.sale as any[];
+const vie = x.vie as any[];
+const comp = x.componentiProtesi as any[];
+const rec = x.recupero as any[];
+const video = x.video as any[];
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const msg0 = `Buongiorno Dottore, vorrei prenotare una visita per ${motivi[0].frase} presso ${amb[0].frase}.`;
+const mailHref = (t: string) => `mailto:${mail}?subject=${encodeURIComponent(P.oggettoMail)}&body=${encodeURIComponent(t)}`;
+// sezione schematica dell'anca (vista dall'alto): muscoli e percorsi delle tre vie
+const muscoli = [
+  { id: 'sartorio', nome: 'Sartorio', el: { cx: 205, cy: 122, rx: 56, ry: 30 }, lx: 205, ly: 78 },
+  { id: 'tensore', nome: 'Tensore fascia lata', el: { cx: 395, cy: 120, rx: 58, ry: 32 }, lx: 400, ly: 74 },
+  { id: 'medio', nome: 'Medio gluteo', el: { cx: 505, cy: 258, rx: 40, ry: 82 }, lx: 505, ly: 160 },
+  { id: 'rotatori', nome: 'Rotatori esterni', el: { cx: 340, cy: 362, rx: 70, ry: 20 }, lx: 262, ly: 368, a: 'end' },
+  { id: 'grande', nome: 'Grande gluteo', el: { cx: 418, cy: 444, rx: 150, ry: 40 }, lx: 300, ly: 512 }
+];
+const percorsi: Record<string, string> = { anteriore: 'M300 -10 L300 186', laterale: 'M640 256 L458 256', posteriore: 'M574 534 L350 302' };
+const tappeX = rec.map((_, i) => 4 + (i * 92) / (rec.length - 1));
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-8">
+      <a href={`/${m.slug}`} class="flex items-center gap-3" aria-label="Dr. Danilo Sebastiano Mellano, Ortopedia e Traumatologia">
+        <img src={m.brand.marchio} alt="" width="476" height="410" class="h-11 w-auto" />
+        <span class="leading-tight"><span class="block font-head text-[15px] font-bold text-deep sm:text-[17px]">Dr. Danilo Sebastiano Mellano</span><span class="block text-[12px] text-brand sm:text-[13px]">Ortopedia e Traumatologia</span></span>
+      </a>
+      <nav class="hidden items-center gap-6 text-[14.5px] text-ink/75 xl:flex" aria-label="Sezioni">
+        <a href="#aree" class="hover:text-brand">Le vie d'accesso</a><a href="#protesi" class="hover:text-brand">La protesi</a><a href="#robotica" class="hover:text-brand">Robotica</a><a href="#recupero" class="hover:text-brand">Il recupero</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#sedi" class="hover:text-brand">Dove visito</a>
+      </nav>
+      <a href="#prenota-box" class="btn !min-h-[40px] shrink-0 !rounded-md bg-brand !px-5 text-[14px] text-white hover:bg-deep">Prenoti</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden" data-hero>
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 pb-12 pt-10 sm:px-8 lg:grid-cols-12 lg:items-center lg:pb-16 lg:pt-14">
+        <div class="lg:col-span-7">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.18em] text-brand" data-entra>{x.hero.eyebrow}</p>
+          <h1 class="mt-5 font-head text-[2.9rem] font-extrabold leading-[1] tracking-[-0.02em] text-deep sm:text-[4.6rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-ink/80" data-entra>{x.hero.testo}</p>
+          <dl class="mt-9 grid max-w-xl grid-cols-3 gap-4" data-entra>
+            {(x.numeri as any[]).map((n) => <div class="border-l-2 border-brand2 pl-4"><dt class="sr-only">{n.testo}</dt><dd><span class="block text-[11.5px] uppercase tracking-[0.14em] text-muted">{n.pre || ' '}</span><span class="block font-head text-[2.1rem] font-extrabold leading-none text-deep sm:text-[2.7rem]" data-conta={n.valore} data-fmt={n.fmt}>{n.fmt}</span><span class="mt-1.5 block text-[13px] leading-snug text-muted">{n.testo}</span></dd></div>)}
+          </dl>
+        </div>
+        <div class="lg:col-span-5">
+          <figure class="cornice-dm relative mx-auto max-w-[440px]" data-cornice>
+            <span class="cornice-dm__lato" aria-hidden="true" data-cornice-lato></span>
+            <div class="relative overflow-hidden rounded-[4px] bg-surface" data-foto-hero><img src={foto.ritratto} alt={foto.ritrattoAlt} width="1000" height="1200" fetchpriority="high" class="aspect-[5/6] w-full object-cover object-[50%_25%]" /></div>
+          </figure>
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 pb-16 sm:px-8">
+        <div id="prenota-box" class="grid gap-6 rounded-md bg-deep p-5 text-white shadow-[0_24px_60px_-28px_rgba(14,36,64,.6)] sm:p-7 lg:grid-cols-12" data-prenota-box data-mail={mail} data-oggetto={P.oggettoMail} data-entra>
+          <fieldset class="lg:col-span-5"><legend class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-deep-ink">Dove preferisce</legend>
+            <div class="mt-3 grid grid-cols-2 gap-2">{amb.map((a, i) => <label class="amb-r"><input type="radio" name="amb" value={a.id} data-frase={a.frase} checked={i === 0} class="sr-only" /><span><strong>{a.nome}</strong><small>{a.struttura ?? a.indirizzo}</small></span></label>)}</div></fieldset>
+          <div class="flex flex-col gap-4 lg:col-span-7">
+            <label class="block"><span class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-deep-ink">Per che cosa</span>
+              <select class="campo mt-2 !rounded-md !border-white/20 bg-white text-ink" data-motivo>{motivi.map((t) => <option value={t.id} data-frase={t.frase}>{t.nome}</option>)}</select></label>
+            <div class="rounded-md border border-white/15 bg-white/5 px-4 py-3"><p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">Il Suo messaggio</p><p class="mt-1 text-[15.5px] leading-snug" data-anteprima aria-live="polite">{msg0}</p></div>
+            <div class="flex flex-col gap-2 sm:flex-row">
+              <a href={mailHref(msg0)} class="btn flex-1 !rounded-md bg-brand2 text-deep hover:bg-white" data-prenota><Icona nome="mail" /> Invii la mail</a>
+              <a href={telHref(P.telefono)} class="btn flex-1 !rounded-md border border-white/30 text-white hover:bg-white/10"><Icona nome="tel" /> {P.telefonoLabel}</a>
+            </div>
+            <p class="text-[12.5px] text-deep-ink/80">Telefono in orario d'ufficio. Porti le radiografie dell'anca, anche se non recenti.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRE VIE -->
+    <section id="aree" class="bg-surface px-4 py-16 sm:px-8 sm:py-24" data-vie data-vie-dati={JSON.stringify(vie)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.18em] text-brand">Protesi d'anca</p><h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-[1.04] tracking-[-0.02em] text-deep sm:text-[3.4rem]" data-sale>Tre vie per arrivare all'anca.</h2></div>
+          <p class="text-[16.5px] leading-relaxed text-ink/80 lg:col-span-5">Per impiantare una protesi il chirurgo deve raggiungere l'articolazione. Cambia il punto d'ingresso, e soprattutto quali muscoli si devono attraversare. Scelga una via.</p>
+        </div>
+        <div class="mt-10 grid gap-8 lg:grid-cols-12 lg:items-start">
+          <div class="lg:col-span-7">
+            <div class="grid grid-cols-3 gap-1 rounded-md bg-white p-1 ring-1 ring-line" role="tablist" aria-label="Via d'accesso">
+              {vie.map((v, i) => <button type="button" role="tab" id={`via-${v.id}`} aria-controls="via-pannello" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="via-tab rounded-[4px] px-2 py-2.5 text-[14.5px] font-semibold" data-via={v.id}>{v.nome}{v.sotto && <span class="hidden font-normal opacity-70 sm:inline"> · {v.sotto}</span>}</button>)}
+            </div>
+            <figure class="mt-4 rounded-md bg-white p-3 ring-1 ring-line sm:p-5">
+              <svg viewBox="0 -30 660 580" class="w-full" role="img" aria-labelledby="sez-tit" data-sezione>
+                <title id="sez-tit">Sezione schematica dell'anca destra vista dall'alto, con i muscoli attorno all'articolazione</title>
+                <ellipse cx="330" cy="268" rx="300" ry="262" fill="var(--c-surface)" stroke="var(--c-line)" stroke-width="2" />
+                <path d="M40 210 C90 150 170 170 215 205 C235 222 238 300 215 318 C170 352 95 360 52 320 Z" fill="#E7EBF0" stroke="#B9C3CE" stroke-width="2" />
+                <path d="M238 196 A70 70 0 0 0 238 316" fill="none" stroke="#9AA7B6" stroke-width="10" stroke-linecap="round" />
+                <path d="M320 232 L430 238 L430 276 L320 282 Z" fill="#E7EBF0" stroke="#B9C3CE" stroke-width="2" />
+                <circle cx="448" cy="256" r="32" fill="#E7EBF0" stroke="#B9C3CE" stroke-width="2" />
+                <circle cx="298" cy="256" r="56" fill="#F4F6F8" stroke="#9AA7B6" stroke-width="2.5" />
+                <text x="298" y="261" text-anchor="middle" class="sez-et sez-et--osso">Testa</text>
+                <text x="118" y="268" text-anchor="middle" class="sez-et sez-et--osso">Bacino</text>
+                {muscoli.map((u) => <g class="muscolo" data-muscolo={u.id}><ellipse cx={u.el.cx} cy={u.el.cy} rx={u.el.rx} ry={u.el.ry} /><text x={u.lx} y={u.ly} text-anchor={(u as any).a ?? 'middle'} class="sez-et">{u.nome}</text></g>)}
+                <text x="330" y="-8" text-anchor="middle" class="sez-et sez-et--dir">AVANTI</text>
+                <text x="330" y="545" text-anchor="middle" class="sez-et sez-et--dir">DIETRO</text>
+                {vie.map((v) => <path d={percorsi[v.id]} class="percorso" data-percorso={v.id} pathLength="1" />)}
+              </svg>
+              <figcaption class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-[13px] text-muted"><span class="inline-flex items-center gap-2"><span class="h-3 w-3 rounded-full bg-brand2"></span>Muscolo risparmiato</span><span class="inline-flex items-center gap-2"><span class="h-3 w-3 rounded-full bg-urgenza"></span>Muscolo distaccato e poi riparato</span><span>Schema semplificato, non in scala.</span></figcaption>
+            </figure>
+          </div>
+          <div id="via-pannello" role="tabpanel" aria-labelledby="via-anteriore" class="rounded-md bg-white p-6 ring-1 ring-line sm:p-8 lg:col-span-5" aria-live="polite">
+            <p class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand">Via <span data-via-nome>{vie[0].nome.toLowerCase()}</span></p>
+            <p class="mt-3 font-head text-[1.5rem] font-bold leading-snug text-deep" data-via-muscoli>{vie[0].muscoli}</p>
+            <dl class="mt-6 divide-y divide-line border-y border-line text-[15px]">
+              <div class="grid grid-cols-[9rem_1fr] gap-3 py-3"><dt class="text-muted">Recupero</dt><dd class="font-semibold text-deep" data-via-recupero>{vie[0].recupero}</dd></div>
+              <div class="grid grid-cols-[9rem_1fr] gap-3 py-3"><dt class="text-muted">Rischio di lussazione</dt><dd class="font-semibold text-deep" data-via-lussazione>{vie[0].lussazione}</dd></div>
+              <div class="grid grid-cols-[9rem_1fr] gap-3 py-3"><dt class="text-muted">Quando si usa</dt><dd class="text-ink/85" data-via-quando>{vie[0].quando}</dd></div>
+            </dl>
+            <p class="mt-5 text-[14.5px] leading-relaxed text-ink/75">Tutte le vie, nelle mani giuste, portano a buoni risultati. Quale sia la migliore per Lei lo decidiamo dopo la visita e lo studio delle radiografie.</p>
+            <div class="mt-6 flex flex-wrap gap-3"><button type="button" class="btn !rounded-md bg-brand text-white hover:bg-deep" data-prenota-motivo="protesi">Prenoti una valutazione</button><a href={`/${m.slug}/blog/via-anteriore`} class="btn !rounded-md text-brand hover:bg-surface">Legga l'articolo</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LA PROTESI -->
+    <section id="protesi" class="px-4 py-16 sm:px-8 sm:py-24" data-protesi data-comp={JSON.stringify(comp)}>
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-5">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.18em] text-brand">Com'è fatta</p>
+          <h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-[1.04] tracking-[-0.02em] text-deep sm:text-[3.2rem]" data-sale>Quattro pezzi, scelti per Lei.</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-ink/80">La protesi sostituisce le superfici consumate dall'artrosi. Materiali e fissaggio si scelgono in base all'età, alla qualità dell'osso e all'attività di ciascun paziente. Tocchi un componente.</p>
+          <div class="mt-8 grid grid-cols-2 gap-2" role="group" aria-label="Componenti della protesi">
+            {comp.map((c, i) => <button type="button" class="comp-btn rounded-md border border-line px-4 py-3 text-left" data-comp-btn={c.id} aria-pressed={i === 0 ? 'true' : 'false'}><span class="block font-head text-[1.05rem] font-bold text-deep">{c.nome}</span><span class="block text-[13px] text-muted">{c.materiale}</span></button>)}
+          </div>
+          <div class="mt-5 rounded-md bg-surface p-5" aria-live="polite">
+            <p class="font-head text-[1.25rem] font-bold text-deep" data-comp-nome>{comp[0].nome}</p>
+            <p class="mt-1 text-[15px] leading-relaxed text-ink/85" data-comp-testo>{comp[0].testo}</p>
+            <dl class="mt-3 grid grid-cols-2 gap-3 text-[14px]"><div><dt class="text-muted">Materiale</dt><dd class="font-semibold text-deep" data-comp-mat>{comp[0].materiale}</dd></div><div><dt class="text-muted">Fissaggio</dt><dd class="font-semibold text-deep" data-comp-fis>{comp[0].fissaggio}</dd></div></dl>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="relative grid gap-4 sm:grid-cols-[1fr_200px] sm:items-end">
+            <figure class="relative rounded-md bg-surface p-4">
+              <button type="button" class="absolute right-3 top-3 z-10 rounded-md bg-white px-3 py-1.5 text-[13.5px] font-semibold text-deep ring-1 ring-line hover:ring-deep" data-esplodi aria-pressed="false">Scomponi</button>
+              <svg viewBox="40 -90 320 640" class="mx-auto h-[420px] w-auto sm:h-[520px]" role="img" aria-label="Schema di una protesi d'anca: cotile, inserto, testa e stelo femorale" data-protesi-svg>
+                <g class="pz" data-pz="stelo"><path d="M196 150 L226 138 L272 196 L268 232 L258 486 Q250 512 236 486 L226 252 L210 206 Z" fill="#AEB8C4" stroke="#7D8A99" stroke-width="2" /><path d="M240 250 L246 470" stroke="#C9D1DA" stroke-width="5" stroke-linecap="round" /></g>
+                <g class="pz" data-pz="testa"><circle cx="200" cy="150" r="46" fill="#E7C6D4" stroke="#C28FA6" stroke-width="2" /><ellipse cx="186" cy="134" rx="14" ry="9" fill="#fff" opacity=".6" /></g>
+                <g class="pz" data-pz="inserto"><path d="M138 150 A62 62 0 0 1 262 150 L250 150 A50 50 0 0 0 150 150 Z" fill="#F4E6EC" stroke="#C9A3B5" stroke-width="2" /></g>
+                <g class="pz" data-pz="cotile"><path d="M118 150 A82 82 0 0 1 282 150 L262 150 A62 62 0 0 0 138 150 Z" fill="#C3CCD6" stroke="#7D8A99" stroke-width="2" /><circle cx="200" cy="78" r="5" fill="#7D8A99" /><circle cx="160" cy="92" r="4" fill="#7D8A99" /><circle cx="240" cy="92" r="4" fill="#7D8A99" /></g>
+              </svg>
+            </figure>
+            <figure class="hidden sm:block"><img src={foto.componenti} alt="I componenti di una protesi d'anca: cotile, inserto, testa e stelo femorale" width="482" height="359" loading="lazy" class="w-full rounded-md bg-white ring-1 ring-line" /><figcaption class="mt-2 text-[12.5px] text-muted">Dal materiale informativo che consegno ai pazienti.</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROBOTICA -->
+    <section id="robotica" class="bg-deep text-deep-ink">
+      <div class="relative h-[300px] overflow-hidden sm:h-[460px]"><img src={foto.sala} alt="Il Dr. Mellano in sala operatoria" width="1600" height="900" loading="lazy" class="h-full w-full object-cover object-[50%_30%]" data-sala /></div>
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-8 sm:py-20 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.18em] text-brand2">Tecnologia</p>
+          <h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-[1.04] tracking-[-0.02em] text-white sm:text-[3.2rem]" data-sale>Opera il chirurgo. Il robot aiuta la precisione.</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed">Uso di routine l'assistenza robotica nella chirurgia protesica. Prima dell'intervento studio come si muovono colonna e bacino, in piedi e seduti, per posizionare la protesi sull'anatomia di ciascun paziente.</p>
+          <a href={`/${m.slug}/blog/chirurgia-robotica`} class="btn mt-8 !rounded-md bg-white text-deep hover:bg-brand2">Cosa cambia per il paziente</a>
+        </div>
+        <ol class="grid gap-px overflow-hidden rounded-md bg-white/10 sm:grid-cols-3 lg:col-span-7 lg:self-end" data-stagger>
+          {[['ROSA Hip', 'Sistema robotico per la protesi d\'anca: guida gli strumenti secondo il piano preparato prima dell\'intervento.'], ['CORI · Smith & Nephew', 'Navigazione in tempo reale per posizionare le componenti con precisione di gradi e millimetri.'], ['Stampa 3D nelle revisioni', 'Immagini elaborate in 3D e simulazione dell\'intervento prima di entrare in sala operatoria.']].map(([t, d]) => <li class="bg-deep p-6"><h3 class="font-head text-[1.2rem] font-bold text-white">{t}</h3><p class="mt-2 text-[14.5px] leading-relaxed">{d}</p></li>)}
+        </ol>
+      </div>
+    </section>
+
+    <!-- RECUPERO -->
+    <section id="recupero" class="px-4 py-16 sm:px-8 sm:py-24" data-recupero data-rec={JSON.stringify(rec)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.18em] text-brand">Dopo l'intervento</p><h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-[1.04] tracking-[-0.02em] text-deep sm:text-[3.2rem]" data-sale>Il recupero, passo dopo passo.</h2></div>
+          <p class="text-[16.5px] leading-relaxed text-ink/80 lg:col-span-5">Tempi indicativi, per la maggior parte dei pazienti operati con accesso mininvasivo. Ogni percorso è personale: le tappe le decidiamo insieme.</p>
+        </div>
+        <div class="mt-10 grid gap-8 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-7">
+            <div class="relative px-1 pt-2">
+              <div class="relative h-10" aria-hidden="true">{rec.map((r, i) => <span class="absolute -translate-x-1/2 text-center text-[11.5px] font-semibold leading-tight text-muted" style={`left:${tappeX[i]}%`} data-rec-et={i}><span class="mx-auto mb-1 block h-2.5 w-2.5 rounded-full border-2 border-brand bg-white" data-rec-pt></span><span class="hidden sm:block">{r.quando.replace('Il giorno dell\'intervento', 'Giorno 0')}</span></span>)}</div>
+              <label for="mn-rec" class="sr-only">Tappa del recupero</label>
+              <input id="mn-rec" type="range" min="0" max={rec.length - 1} step="1" value="0" class="cursore-ds mt-2 w-full" data-rec-cursore />
+            </div>
+            <div class="mt-6 rounded-md bg-surface p-6 sm:p-8" aria-live="polite">
+              <p class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand" data-rec-quando>{rec[0].quando}</p>
+              <p class="mt-1 font-head text-[1.7rem] font-extrabold text-deep" data-rec-titolo>{rec[0].titolo}</p>
+              <p class="mt-2 text-[16px] leading-relaxed text-ink/85" data-rec-testo>{rec[0].testo}</p>
+              <div class="mt-5 flex gap-2"><button type="button" class="grid h-11 w-11 place-items-center rounded-md border border-line hover:border-deep" data-rec-prec aria-label="Tappa precedente"><Icona nome="sx" /></button><button type="button" class="grid h-11 w-11 place-items-center rounded-md bg-deep text-white hover:bg-brand" data-rec-succ aria-label="Tappa successiva"><Icona nome="dx" /></button></div>
+            </div>
+          </div>
+          <figure class="cornice-dm cornice-dm--piccola relative lg:col-span-5"><span class="cornice-dm__lato" aria-hidden="true"></span><img src={foto.cammino} alt="" width="1600" height="1000" loading="lazy" class="relative aspect-[4/3] w-full rounded-[4px] object-cover" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFILTRAZIONI -->
+    <section class="bg-surface px-4 py-16 sm:px-8 sm:py-20">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-center">
+        <figure class="grid grid-cols-2 gap-3 lg:col-span-5"><img src={foto.lastra} alt="Radiografia del bacino con artrosi dell'anca sinistra" width="379" height="326" loading="lazy" class="w-full rounded-md" /><img src={foto.anatomia} alt="Tavola anatomica dell'articolazione dell'anca" width="284" height="343" loading="lazy" class="w-full rounded-md bg-white" /></figure>
+        <div class="lg:col-span-7">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.18em] text-brand">Prima della protesi</p>
+          <h2 class="mt-2 font-head text-[2.2rem] font-extrabold leading-[1.06] tracking-[-0.02em] text-deep sm:text-[2.8rem]" data-sale>Non sempre serve operare subito.</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-ink/80">Nelle fasi iniziali e intermedie dell'artrosi eseguo infiltrazioni ecoguidate (acido ialuronico, cortisone) e trattamenti di medicina rigenerativa come il PRP. La protesi si valuta quando l'anca limita la vita di tutti i giorni.</p>
+          <ul class="mt-6 grid gap-3 sm:grid-cols-2">{[['Infiltrazioni ecoguidate', 'infiltrazione', 'infiltrazioni-anca'], ['PRP e cellule staminali', 'rigenerativa', 'infiltrazioni-anca'], ['Revisione di protesi', 'revisione', 'chirurgia-robotica'], ['Protesi di ginocchio', 'ginocchio', 'via-anteriore']].map(([t, mo]) => <li><button type="button" class="flex w-full items-center justify-between gap-3 rounded-md bg-white px-4 py-3.5 text-left font-semibold text-deep ring-1 ring-line hover:ring-brand" data-prenota-motivo={mo}>{t}<Icona nome="freccia" class="h-4 w-4 shrink-0 text-brand" /></button></li>)}</ul>
+          <a href={`/${m.slug}/articolo`} class="mt-6 inline-flex items-center gap-2 font-semibold text-brand hover:underline">Artrosi dell'anca: quando è il momento della protesi <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="px-4 py-16 sm:px-8 sm:py-24" data-video-box>
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-head text-[2.4rem] font-extrabold leading-[1.04] tracking-[-0.02em] text-deep sm:text-[3rem]" data-sale>In video</h2>
+        <div class="mt-8 grid gap-6 lg:grid-cols-12">
+          <div class="lg:col-span-8">
+            <div class="relative aspect-video overflow-hidden rounded-md bg-deep" data-player data-yt={video[0].id}>
+              <button type="button" class="group absolute inset-0 h-full w-full" data-play aria-label={`Guardi il video: ${video[0].titolo}`}>
+                <img src={`/${m.slug}/img/yt-${video[0].id}.webp`} alt="" width="480" height="270" loading="lazy" class="h-full w-full object-cover opacity-90" data-player-img />
+                <span class="absolute left-1/2 top-1/2 grid h-16 w-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-md bg-white text-deep shadow-lg transition-[scale] group-hover:scale-110"><svg viewBox="0 0 24 24" class="ml-1 h-7 w-7" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></span>
+              </button>
+            </div>
+            <p class="mt-3 font-head text-[1.2rem] font-bold text-deep" data-player-tit>{video[0].titolo}</p>
+            <p class="text-[13.5px] text-muted" data-player-fonte>{video[0].fonte} · si apre da YouTube</p>
+          </div>
+          <ul class="grid gap-3 sm:grid-cols-2 lg:col-span-4 lg:grid-cols-1" role="list">
+            {video.map((v, i) => <li><button type="button" class="vid-btn flex w-full items-center gap-3 rounded-md p-2 text-left ring-1 ring-line hover:ring-brand" data-vid={v.id} data-tit={v.titolo} data-fonte={v.fonte} aria-pressed={i === 0 ? 'true' : 'false'}><img src={`/${m.slug}/img/yt-${v.id}.webp`} alt="" width="480" height="270" loading="lazy" class="w-28 shrink-0 rounded-[4px]" /><span class="text-[14px] font-semibold leading-snug text-deep">{v.titolo}</span></button></li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <figure class="cornice-dm cornice-dm--piccola relative max-w-[420px]"><span class="cornice-dm__lato" aria-hidden="true"></span><img src={foto.camice} alt="Il Dr. Danilo Sebastiano Mellano" width="698" height="797" loading="lazy" class="relative w-full rounded-[4px]" /></figure>
+        </div>
+        <div class="lg:col-span-7">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.18em] text-brand">Chi sono</p>
+          <h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-[1.04] tracking-[-0.02em] text-deep sm:text-[3rem]" data-sale>Vent'anni di chirurgia dell'anca, tra Torino e il Verbano.</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-ink/80">Nei quindici anni al CTO di Torino ho svolto soprattutto traumatologia e chirurgia protesica di anca e ginocchio. Nella mia casistica dal 2004 sono documentati oltre 1000 interventi di protesi d'anca come primo operatore. Ho lavorato anche come medico missionario in Etiopia con Medici con l'Africa CUAMM.</p>
+          <ol class="relative mt-10 space-y-6 pl-8" data-storia>
+            <span class="absolute bottom-2 left-[7px] top-2 w-0.5 bg-line" aria-hidden="true"></span>
+            <span class="absolute left-[7px] top-2 w-0.5 origin-top bg-brand" style="bottom:.5rem" aria-hidden="true" data-storia-linea></span>
+            {(x.bioTappe as any[]).map((s) => <li class="relative"><span class="absolute -left-8 top-1 h-4 w-4 rounded-[3px] border-[3px] border-surface bg-brand" aria-hidden="true"></span><p class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand">{s.anno}</p><h3 class="mt-0.5 font-head text-[1.2rem] font-bold text-deep">{s.titolo}</h3><p class="mt-1 text-[15px] leading-relaxed text-ink/80">{s.testo}</p></li>)}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="px-4 py-16 sm:px-8 sm:py-24" data-sedi>
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-extrabold leading-[1.04] tracking-[-0.02em] text-deep sm:text-[3rem]" data-sale>Dove visito, dove opero.</h2>
+          <div class="grid w-full grid-cols-2 gap-1 rounded-md bg-surface p-1 md:w-auto" role="tablist" aria-label="Sedi">
+            <button type="button" role="tab" id="tab-visito" aria-controls="pan-visito" aria-selected="true" class="via-tab rounded-[4px] px-5 py-2.5 text-[14.5px] font-semibold" data-sede-tab="visito">Ambulatori</button>
+            <button type="button" role="tab" id="tab-opero" aria-controls="pan-opero" aria-selected="false" tabindex="-1" class="via-tab rounded-[4px] px-5 py-2.5 text-[14.5px] font-semibold" data-sede-tab="opero">Sale operatorie</button>
+          </div>
+        </div>
+        <div id="pan-visito" role="tabpanel" aria-labelledby="tab-visito" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-sede-pan="visito">
+          {amb.map((a) => <article class="flex flex-col rounded-md p-6 ring-1 ring-line"><Icona nome="pin" class="h-6 w-6 text-brand" /><h3 class="mt-4 font-head text-[1.35rem] font-bold text-deep">{a.nome}</h3>{a.struttura && <p class="text-[14px] font-semibold text-brand">{a.struttura}</p>}<p class="mt-1 text-[15px] text-ink/80">{a.indirizzo}</p><div class="mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-5 text-[14px] font-semibold"><button type="button" class="text-brand hover:underline" data-scegli-amb={a.id}>Prenoti qui</button><a href={mapsHref(a.indirizzo, a.citta)} target="_blank" rel="noopener" class="text-muted hover:text-deep">Mappa</a></div></article>)}
+        </div>
+        <div id="pan-opero" role="tabpanel" aria-labelledby="tab-opero" class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-sede-pan="opero" hidden>
+          {sale.map((s) => <article class="rounded-md bg-surface p-6"><Icona nome="ospedale" class="h-6 w-6 text-brand" /><h3 class="mt-4 font-head text-[1.25rem] font-bold text-deep">{s.nome}</h3><p class="text-[14px] font-semibold text-brand">{s.ruolo}</p><p class="mt-1 text-[15px] text-ink/80">{s.indirizzo}, {s.citta}</p></article>)}
+        </div>
+        <p class="mt-6 text-[15px] text-ink/80">Telefono <a href={telHref(P.telefono)} class="font-semibold text-brand hover:underline">{P.telefonoLabel}</a> in orario d'ufficio · <a href={`mailto:${m.sedi.email}`} class="font-semibold text-brand hover:underline">{m.sedi.email}</a></p>
+      </div>
+    </section>
+
+    <div class="stile-protesi bg-surface"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-extrabold leading-tight tracking-[-0.02em] text-deep sm:text-[3rem]" data-sale>Da leggere prima della visita</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group flex flex-col border-t-2 border-deep pt-4">
+              <span class="block overflow-hidden rounded-[4px]"><img src={b.img} alt="" width="900" height="560" loading="lazy" class="aspect-[4/3] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="mt-4 text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">{b.categoria} · {b.tempoLettura}</span>
+              <span class="mt-1.5 block font-head text-[1.25rem] font-bold leading-snug text-deep group-hover:text-brand">{b.titolo}</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.1rem] font-extrabold text-deep" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-md bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-md ring-1 ring-line sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.volto} alt="" width="32" height="32" class="h-8 w-8 rounded-full object-cover" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="900" height="560" loading="lazy" class="absolute inset-0 h-full w-full object-cover object-[50%_30%]" />
+                  <div class="absolute inset-x-3 bottom-3 rounded-md bg-white px-5 py-4"><p class="font-head text-[1.45rem] font-extrabold leading-tight text-deep">{p.titolo}</p><p class="mt-0.5 text-sm font-semibold text-brand">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="relative flex aspect-square flex-col justify-end overflow-hidden bg-deep p-7 text-white">
+                  <img src={m.brand.logoChiaro} alt="" width="487" height="579" class="absolute right-6 top-6 h-24 w-auto opacity-90" />
+                  <p class="relative font-head text-[2.2rem] font-extrabold leading-[1.02]">{p.titolo}</p><p class="relative mt-4 w-fit rounded-md bg-brand2 px-4 py-2 text-[14px] font-semibold text-deep">{p.risposta}</p>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.8rem] font-extrabold leading-[1.05]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-[2px] border-2 border-white"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-[2.3rem] font-extrabold sm:text-5xl">{P.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{P.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(P.telefono)} class="btn !rounded-md bg-white text-deep hover:bg-brand2"><Icona nome="tel" /> {P.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-md border border-white/50 text-white hover:bg-white/10">Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    let lenis: Lenis | null = null;
+    const vaiA = (sel: string) => { const el = document.querySelector<HTMLElement>(sel)!; const y = el.getBoundingClientRect().top + window.scrollY - 100; if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'auto' }); };
+
+    // --- Prenotazione ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const selM = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const aggiorna = () => {
+      const a = box.querySelector<HTMLInputElement>('input[name="amb"]:checked')!;
+      const t = `Buongiorno Dottore, vorrei prenotare una visita per ${selM.selectedOptions[0].dataset.frase} presso ${a.dataset.frase}.`;
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(box.dataset.oggetto!)}&body=${encodeURIComponent(t)}`;
+    };
+    selM.addEventListener('change', aggiorna);
+    box.querySelectorAll('input[name="amb"]').forEach((r) => r.addEventListener('change', aggiorna));
+    document.querySelectorAll<HTMLElement>('[data-prenota-motivo]').forEach((b) => b.addEventListener('click', () => { selM.value = b.dataset.prenotaMotivo!; aggiorna(); vaiA('#prenota-box'); selM.focus({ preventScroll: true }); }));
+    document.querySelectorAll<HTMLElement>('[data-scegli-amb]').forEach((b) => b.addEventListener('click', () => { const r = box.querySelector<HTMLInputElement>(`input[value="${b.dataset.scegliAmb}"]`)!; r.checked = true; aggiorna(); vaiA('#prenota-box'); r.focus({ preventScroll: true }); }));
+    aggiorna();
+
+    // --- Tab generiche (frecce) ---
+    const tablist = (tabs: HTMLElement[], attiva: (t: HTMLElement) => void) => {
+      tabs.forEach((t, i) => {
+        t.addEventListener('click', () => attiva(t));
+        t.addEventListener('keydown', (e) => {
+          const k = (e as KeyboardEvent).key; let j = -1;
+          if (k === 'ArrowRight') j = (i + 1) % tabs.length; else if (k === 'ArrowLeft') j = (i - 1 + tabs.length) % tabs.length; else if (k === 'Home') j = 0; else if (k === 'End') j = tabs.length - 1;
+          if (j >= 0) { e.preventDefault(); tabs[j].focus(); attiva(tabs[j]); }
+        });
+      });
+    };
+    const seleziona = (tabs: HTMLElement[], t: HTMLElement) => tabs.forEach((k) => { const s = k === t; k.setAttribute('aria-selected', String(s)); k.tabIndex = s ? 0 : -1; });
+
+    // --- Tre vie ---
+    const sv = document.querySelector<HTMLElement>('[data-vie]')!;
+    const VIE = JSON.parse(sv.dataset.vieDati!) as { id: string; nome: string; muscoli: string; recupero: string; lussazione: string; quando: string; taglio: string[]; risparmio: string[] }[];
+    const vTabs = Array.from(sv.querySelectorAll<HTMLElement>('[data-via]'));
+    const mostraVia = (id: string) => {
+      const v = VIE.find((k) => k.id === id)!;
+      sv.dataset.viaAttiva = id;
+      sv.querySelectorAll<SVGGElement>('[data-muscolo]').forEach((g) => { const mu = g.dataset.muscolo!; g.classList.toggle('taglio', v.taglio.includes(mu)); g.classList.toggle('salvo', v.risparmio.includes(mu)); });
+      sv.querySelectorAll<SVGPathElement>('[data-percorso]').forEach((p) => {
+        const on = p.dataset.percorso === id; p.classList.toggle('attivo', on);
+        if (on && !ridotto) gsap.fromTo(p, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.9, ease: 'power2.inOut' }); else p.style.strokeDashoffset = on ? '0' : '1';
+      });
+      sv.querySelector('[data-via-nome]')!.textContent = v.nome.toLowerCase();
+      sv.querySelector('[data-via-muscoli]')!.textContent = v.muscoli;
+      sv.querySelector('[data-via-recupero]')!.textContent = v.recupero;
+      sv.querySelector('[data-via-lussazione]')!.textContent = v.lussazione;
+      sv.querySelector('[data-via-quando]')!.textContent = v.quando;
+      sv.querySelector('#via-pannello')!.setAttribute('aria-labelledby', `via-${id}`);
+    };
+    tablist(vTabs, (t) => { seleziona(vTabs, t); mostraVia(t.dataset.via!); });
+    mostraVia('anteriore');
+
+    // --- Protesi ---
+    const pr = document.querySelector<HTMLElement>('[data-protesi]')!;
+    const COMP = JSON.parse(pr.dataset.comp!) as { id: string; nome: string; materiale: string; fissaggio: string; testo: string }[];
+    const svgP = pr.querySelector<SVGSVGElement>('[data-protesi-svg]')!;
+    const btnE = pr.querySelector<HTMLButtonElement>('[data-esplodi]')!;
+    const esplodi = (on: boolean) => { svgP.classList.toggle('esplosa', on); btnE.setAttribute('aria-pressed', String(on)); btnE.textContent = on ? 'Ricomponi' : 'Scomponi'; pr.dataset.esplosa = String(on); };
+    btnE.addEventListener('click', () => { pr.dataset.toccata = '1'; esplodi(!svgP.classList.contains('esplosa')); });
+    const scegliComp = (id: string) => {
+      pr.dataset.toccata = '1';
+      const c = COMP.find((k) => k.id === id)!;
+      pr.querySelectorAll<HTMLElement>('[data-comp-btn]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.compBtn === id)));
+      svgP.querySelectorAll<SVGGElement>('[data-pz]').forEach((g) => g.classList.toggle('scelto', g.dataset.pz === id));
+      svgP.classList.add('con-scelta');
+      pr.querySelector('[data-comp-nome]')!.textContent = c.nome; pr.querySelector('[data-comp-testo]')!.textContent = c.testo;
+      pr.querySelector('[data-comp-mat]')!.textContent = c.materiale; pr.querySelector('[data-comp-fis]')!.textContent = c.fissaggio;
+      pr.dataset.compAttivo = id;
+    };
+    pr.querySelectorAll<HTMLElement>('[data-comp-btn]').forEach((b) => b.addEventListener('click', () => { scegliComp(b.dataset.compBtn!); esplodi(true); }));
+    svgP.querySelectorAll<SVGGElement>('[data-pz]').forEach((g) => g.addEventListener('click', () => { scegliComp(g.dataset.pz!); esplodi(true); }));
+
+    // --- Recupero ---
+    const rc = document.querySelector<HTMLElement>('[data-recupero]')!;
+    const REC = JSON.parse(rc.dataset.rec!) as { quando: string; titolo: string; testo: string }[];
+    const cur = rc.querySelector<HTMLInputElement>('[data-rec-cursore]')!;
+    const tappa = (i: number) => {
+      i = Math.max(0, Math.min(REC.length - 1, i)); cur.value = String(i);
+      const r = REC[i];
+      rc.querySelector('[data-rec-quando]')!.textContent = r.quando; rc.querySelector('[data-rec-titolo]')!.textContent = r.titolo; rc.querySelector('[data-rec-testo]')!.textContent = r.testo;
+      cur.setAttribute('aria-valuetext', `${r.quando}: ${r.titolo}`);
+      rc.querySelectorAll<HTMLElement>('[data-rec-et]').forEach((e) => { const k = Number(e.dataset.recEt); e.classList.toggle('fatta', k <= i); e.classList.toggle('ora', k === i); });
+      rc.dataset.tappa = String(i);
+    };
+    cur.addEventListener('input', () => tappa(Number(cur.value)));
+    rc.querySelector('[data-rec-prec]')!.addEventListener('click', () => tappa(Number(cur.value) - 1));
+    rc.querySelector('[data-rec-succ]')!.addEventListener('click', () => tappa(Number(cur.value) + 1));
+    tappa(0);
+
+    // --- Video ---
+    const pl = document.querySelector<HTMLElement>('[data-player]')!;
+    const caricaVideo = (id: string, autoplay: boolean) => {
+      const f = document.createElement('iframe');
+      f.src = `https://www.youtube-nocookie.com/embed/${id}?rel=0${autoplay ? '&autoplay=1' : ''}`; f.title = 'Video'; f.allow = 'autoplay; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+      f.className = 'absolute inset-0 h-full w-full'; pl.replaceChildren(f); pl.dataset.caricato = id;
+    };
+    pl.querySelector('[data-play]')!.addEventListener('click', () => caricaVideo(pl.dataset.yt!, true));
+    document.querySelectorAll<HTMLElement>('[data-vid]').forEach((b) => b.addEventListener('click', () => {
+      document.querySelectorAll('[data-vid]').forEach((k) => k.setAttribute('aria-pressed', String(k === b)));
+      pl.dataset.yt = b.dataset.vid!;
+      document.querySelector('[data-player-tit]')!.textContent = b.dataset.tit!;
+      document.querySelector('[data-player-fonte]')!.textContent = `${b.dataset.fonte} · si apre da YouTube`;
+      if (pl.dataset.caricato) caricaVideo(b.dataset.vid!, true);
+      else { const im = pl.querySelector<HTMLImageElement>('[data-player-img]')!; im.src = b.querySelector('img')!.src; pl.querySelector('[data-play]')!.setAttribute('aria-label', `Guardi il video: ${b.dataset.tit}`); }
+    }));
+
+    // --- Sedi ---
+    const sTabs = Array.from(document.querySelectorAll<HTMLElement>('[data-sede-tab]'));
+    tablist(sTabs, (t) => { seleziona(sTabs, t); document.querySelectorAll<HTMLElement>('[data-sede-pan]').forEach((p) => { p.hidden = p.dataset.sedePan !== t.dataset.sedeTab; }); });
+
+    if (!ridotto) {
+      lenis = new Lenis({ anchors: { offset: -100 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis!.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.08em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= 3 ? 'text-brand' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.9, stagger: 0.07 }, 0.1)
+        .from('[data-foto-hero]', { clipPath: 'inset(100% 0 0 0)', duration: 1.2, ease: 'power3.inOut' }, 0.2)
+        .from('[data-cornice-lato]', { scale: 0.85, opacity: 0, duration: 1 }, 0.7)
+        .from('[data-entra]', { y: 22, opacity: 0, duration: 0.7, stagger: 0.1 }, 0.5);
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: fine > 1999 ? 1990 : 0 };
+        gsap.to(o, { v: fine, duration: 1.8, delay: 0.9, ease: 'power2.out', onUpdate: () => { el.textContent = String(Math.round(o.v)); }, onComplete: () => { el.textContent = el.dataset.fmt!; } });
+      });
+      gsap.to('[data-cornice-lato]', { x: 14, y: -14, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 32, opacity: 0, duration: 0.8, scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      ScrollTrigger.create({ trigger: '[data-protesi-svg]', start: 'top 60%', once: true, onEnter: () => { if (!pr.dataset.toccata) esplodi(true); } });
+      ScrollTrigger.create({ trigger: '[data-recupero]', start: 'top 55%', once: true, onEnter: () => { if (cur.value !== '0') return; let i = 0; const t = window.setInterval(() => { i++; if (i > 2 || cur.value !== String(i - 1)) { window.clearInterval(t); return; } tappa(i); }, 900); } });
+      gsap.from('[data-sala]', { scale: 1.12, ease: 'none', scrollTrigger: { trigger: '[data-sala]', start: 'top bottom', end: 'bottom top', scrub: true } });
+      gsap.fromTo('[data-storia-linea]', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '[data-storia]', start: 'top 75%', end: 'bottom 60%', scrub: true } });
+      gsap.from('[data-blog] > a', { y: 40, opacity: 0, duration: 0.7, stagger: 0.1, scrollTrigger: { trigger: '[data-blog]', start: 'top 88%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    } else {
+      esplodi(true);
+    }
+  </script>
+</Base>

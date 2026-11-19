@@ -1,0 +1,72 @@
+{
+  "medico": "Dr. Danilo Sebastiano Mellano",
+  "specialita": "Ortopedia e Traumatologia, chirurgia protesica dell'anca (e ginocchio)",
+  "sito": "https://www.dottordanilomellano.it/",
+  "logo": {
+    "originale": "img/logo.png (DM con protesi d'anca nella D + nome)",
+    "marchio": "img/marchio.png",
+    "chiari": [
+      "img/logo-chiaro.png",
+      "img/marchio-chiaro.png (blu scuro → bianco)"
+    ]
+  },
+  "colori": {
+    "blu": "#36689F",
+    "azzurro": "#78B1DD"
+  },
+  "font_sito": "serif di sistema (Elementor); demo: Archivo + Libre Franklin",
+  "foto": [
+    "Dottor-Danilo-Mellano-Ortopedico-specialista-chirurgia-dellanca-miniinvasiva.webp",
+    "Dottor-Danilo-Mellano-ortopedico-specialista-ortopedia-traumatologia-Torino-e-Piemonte.webp",
+    "FOTO-HOME-PAGE-SITO-1.jpg",
+    "Immagine1.webp",
+    "Immagine2.webp",
+    "OG-image-Danilo-Mellano-fondo-bianco.webp",
+    "OG-image-Danilo-Mellano.webp",
+    "Screenshot-2026-05-25-093839.webp",
+    "brochure-ANCA-immagine-anatomia.webp",
+    "brochure-ANCA-lastra.webp",
+    "brochure-ANCA-protesi-danca.webp",
+    "yt-IH4LD-jz0NI.jpg",
+    "yt-biOdjZG2ENU.jpg",
+    "yt-edmEuliEvdw.jpg",
+    "yt-m5ZCsIs_G-I.jpg"
+  ],
+  "repertorio": "riuso da demo precedenti (Unsplash gratuito): rep-raggi, rep-femore, rep-fisio (Russo), rep-cammino, rep-sala, rep-passeggiata (Pellegrino), rep-consulto (Motta)",
+  "contatti": {
+    "telefono": "328 342 1607 (orario d'ufficio)",
+    "email": "studiodanilomellano@gmail.com",
+    "whatsapp": null
+  },
+  "ambulatori": [
+    "Rivarolo Canavese, Corso Torino 77",
+    "Venaria Reale, Via Cesare Battisti 18",
+    "Centro Salus, Piazza Martiri della Libertà 16, Omegna",
+    "Clinica Fornaca, C.so Vittorio Emanuele II 91, Torino"
+  ],
+  "sale_operatorie": [
+    "Centro Ortopedico di Quadrante, Omegna (responsabile Ortopedia Interna dal 10/2022)",
+    "Clinica Fornaca, Torino",
+    "Humanitas Gradenigo, Torino (consulente dal 06/2024)",
+    "Humanitas San Pio X, Milano"
+  ],
+  "dati": [
+    "oltre 1000 protesi d'anca come primo operatore dal 2004",
+    "accesso anteriore mininvasivo",
+    "robotica ROSA Hip e CORI Smith & Nephew",
+    "revisioni con stampa 3D",
+    "infiltrazioni ecoguidate, PRP, staminali",
+    "CTO 2004-2019, Cottolengo 2019-22, MSKCC New York 2003, Nuffield Oxford 2019, CUAMM Etiopia"
+  ],
+  "social": [
+    "instagram.com/studiodanilomellano (fermo)",
+    "facebook.com/danilosebastiano.mellano",
+    "LinkedIn"
+  ],
+  "video": [
+    "biOdjZG2ENU",
+    "IH4LD-jz0NI",
+    "edmEuliEvdw",
+    "m5ZCsIs_G-I"
+  ]
+}

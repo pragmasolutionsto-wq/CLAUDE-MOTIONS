@@ -1,0 +1,964 @@
+{
+  "slug": "mellano-5dn4",
+  "layout": "protesi",
+  "sitoOrigine": "https://www.dottordanilomellano.it/",
+  "titolo": "Dr.",
+  "nome": "Danilo Sebastiano Mellano",
+  "specialita": "Ortopedico, chirurgia protesica dell'anca",
+  "firma": "Ortopedia e Traumatologia",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dr. Danilo Sebastiano Mellano · Ortopedico: protesi d'anca mininvasiva e robotica · Torino, Omegna, Rivarolo, Venaria",
+    "description": "Chirurgia protesica dell'anca con accesso anteriore mininvasivo e assistenza robotica, revisioni con stampa 3D, infiltrazioni ecoguidate e medicina rigenerativa. Visite a Rivarolo Canavese, Venaria Reale, Omegna e Torino."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/mellano-5dn4/img/logo.png",
+    "logoChiaro": "/mellano-5dn4/img/logo-chiaro.png",
+    "marchio": "/mellano-5dn4/img/marchio.png",
+    "logoAlt": "Dr. Danilo Sebastiano Mellano, Ortopedia e Traumatologia"
+  },
+  "foto": {
+    "ritratto": "/mellano-5dn4/img/ritratto.webp",
+    "ritrattoAlt": "Il Dr. Danilo Mellano con un modello di protesi d'anca",
+    "volto": "/mellano-5dn4/img/volto.webp",
+    "camice": "/mellano-5dn4/img/camice.webp",
+    "sala": "/mellano-5dn4/img/sala.webp",
+    "lastra": "/mellano-5dn4/img/lastra.webp",
+    "componenti": "/mellano-5dn4/img/componenti.webp",
+    "anatomia": "/mellano-5dn4/img/anatomia.webp",
+    "raggi": "/mellano-5dn4/img/rep-raggi.webp",
+    "femore": "/mellano-5dn4/img/rep-femore.webp",
+    "fisio": "/mellano-5dn4/img/rep-fisio.webp",
+    "cammino": "/mellano-5dn4/img/rep-cammino.webp",
+    "passeggiata": "/mellano-5dn4/img/rep-passeggiata.webp",
+    "consulto": "/mellano-5dn4/img/rep-consulto.webp",
+    "salaRep": "/mellano-5dn4/img/rep-sala.webp"
+  },
+  "hero": {
+    "eyebrow": "Ortopedia e Traumatologia · Chirurgia protesica dell'anca",
+    "titolo": "Tornare a camminare senza dolore.",
+    "testo": "Mi occupo di chirurgia protesica dal 2004: anca e ginocchio, con accesso mininvasivo e assistenza robotica, revisioni, infiltrazioni ecoguidate. Visito a Rivarolo Canavese, Venaria Reale, Omegna e Torino.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami"
+  },
+  "numeri": [
+    {
+      "valore": 1000,
+      "fmt": "1000",
+      "pre": "oltre",
+      "testo": "protesi d'anca come primo operatore"
+    },
+    {
+      "valore": 2004,
+      "fmt": "2004",
+      "pre": "dal",
+      "testo": "in chirurgia ortopedica"
+    },
+    {
+      "valore": 4,
+      "fmt": "4",
+      "pre": "",
+      "testo": "ambulatori in Piemonte"
+    }
+  ],
+  "motivi": [
+    {
+      "id": "anca",
+      "nome": "Dolore all'anca",
+      "frase": "un dolore all'anca"
+    },
+    {
+      "id": "protesi",
+      "nome": "Valutare una protesi d'anca",
+      "frase": "valutare una protesi d'anca"
+    },
+    {
+      "id": "ginocchio",
+      "nome": "Protesi di ginocchio",
+      "frase": "valutare una protesi di ginocchio"
+    },
+    {
+      "id": "revisione",
+      "nome": "Protesi da rivedere",
+      "frase": "un controllo della mia protesi d'anca"
+    },
+    {
+      "id": "infiltrazione",
+      "nome": "Infiltrazione ecoguidata",
+      "frase": "un'infiltrazione ecoguidata all'anca"
+    },
+    {
+      "id": "rigenerativa",
+      "nome": "PRP e medicina rigenerativa",
+      "frase": "un trattamento con PRP o medicina rigenerativa"
+    },
+    {
+      "id": "controllo",
+      "nome": "Controllo dopo l'intervento",
+      "frase": "un controllo dopo l'intervento"
+    },
+    {
+      "id": "altro",
+      "nome": "Altro problema ortopedico",
+      "frase": "un altro problema ortopedico"
+    }
+  ],
+  "ambulatori": [
+    {
+      "id": "rivarolo",
+      "nome": "Rivarolo Canavese",
+      "indirizzo": "Corso Torino 77",
+      "citta": "Rivarolo Canavese",
+      "frase": "l'ambulatorio di Rivarolo Canavese, corso Torino 77"
+    },
+    {
+      "id": "venaria",
+      "nome": "Venaria Reale",
+      "indirizzo": "Via Cesare Battisti 18",
+      "citta": "Venaria Reale",
+      "frase": "l'ambulatorio di Venaria Reale, via Cesare Battisti 18"
+    },
+    {
+      "id": "omegna",
+      "nome": "Omegna",
+      "struttura": "Centro Salus",
+      "indirizzo": "Piazza Martiri della Libertà 16",
+      "citta": "Omegna",
+      "frase": "il Centro Salus di Omegna"
+    },
+    {
+      "id": "torino",
+      "nome": "Torino",
+      "struttura": "Clinica Fornaca",
+      "indirizzo": "Corso Vittorio Emanuele II 91",
+      "citta": "Torino",
+      "frase": "la Clinica Fornaca di Torino"
+    }
+  ],
+  "sale": [
+    {
+      "nome": "Centro Ortopedico di Quadrante",
+      "ruolo": "Responsabile del Servizio di Ortopedia Interna dal 2022",
+      "indirizzo": "Lungo Lago Buozzi 25",
+      "citta": "Omegna"
+    },
+    {
+      "nome": "Clinica Fornaca di Sessant",
+      "ruolo": "Chirurgia protesica",
+      "indirizzo": "Corso Vittorio Emanuele II 91",
+      "citta": "Torino"
+    },
+    {
+      "nome": "Humanitas Gradenigo",
+      "ruolo": "Consulente dal 2024",
+      "indirizzo": "Corso Regina Margherita 8",
+      "citta": "Torino"
+    },
+    {
+      "nome": "Humanitas San Pio X",
+      "ruolo": "Chirurgia protesica",
+      "indirizzo": "Via Francesco Nava 31",
+      "citta": "Milano"
+    }
+  ],
+  "vie": [
+    {
+      "id": "anteriore",
+      "nome": "Anteriore",
+      "sotto": "mininvasiva",
+      "muscoli": "Nessun muscolo tagliato: si passa negli spazi naturali tra i muscoli.",
+      "recupero": "Più veloce nelle prime settimane",
+      "lussazione": "Minore",
+      "quando": "La maggior parte delle protesi primarie. È la via che uso quando è indicata.",
+      "taglio": [],
+      "risparmio": [
+        "tensore",
+        "sartorio",
+        "medio",
+        "rotatori",
+        "grande"
+      ]
+    },
+    {
+      "id": "laterale",
+      "nome": "Laterale",
+      "sotto": "transglutea",
+      "muscoli": "Il medio gluteo viene in parte distaccato e poi riparato.",
+      "recupero": "Possibile zoppia nelle prime settimane",
+      "lussazione": "Bassa",
+      "quando": "Buona esposizione dell'anca, anche in alcuni casi complessi.",
+      "taglio": [
+        "medio"
+      ],
+      "risparmio": [
+        "tensore",
+        "sartorio",
+        "rotatori",
+        "grande"
+      ]
+    },
+    {
+      "id": "posteriore",
+      "nome": "Posteriore",
+      "sotto": "",
+      "muscoli": "I piccoli muscoli rotatori vengono staccati e poi riparati; si attraversa il grande gluteo.",
+      "recupero": "Tempi standard",
+      "lussazione": "Ridotta dalle tecniche di riparazione moderne",
+      "quando": "La via più versatile: casi complessi e revisioni.",
+      "taglio": [
+        "rotatori",
+        "grande"
+      ],
+      "risparmio": [
+        "tensore",
+        "sartorio",
+        "medio"
+      ]
+    }
+  ],
+  "componentiProtesi": [
+    {
+      "id": "cotile",
+      "nome": "Cotile",
+      "materiale": "Metallo o polietilene",
+      "fissaggio": "Non cementato o cementato",
+      "testo": "La coppa che si fissa nell'acetabolo del bacino e ne prende il posto."
+    },
+    {
+      "id": "inserto",
+      "nome": "Inserto",
+      "materiale": "Ceramica o polietilene",
+      "fissaggio": "Si incastra nel cotile",
+      "testo": "Il rivestimento interno della coppa, la superficie su cui scorre la testa."
+    },
+    {
+      "id": "testa",
+      "nome": "Testa",
+      "materiale": "Ceramica o metallo",
+      "fissaggio": "Montata sullo stelo",
+      "testo": "La sfera che sostituisce la testa del femore e ruota dentro l'inserto."
+    },
+    {
+      "id": "stelo",
+      "nome": "Stelo femorale",
+      "materiale": "Metallo",
+      "fissaggio": "Non cementato o cementato",
+      "testo": "Si inserisce nel canale del femore e regge la testa."
+    }
+  ],
+  "recupero": [
+    {
+      "t": 0,
+      "quando": "Il giorno dell'intervento",
+      "titolo": "In reparto",
+      "testo": "Anestesia, intervento e prime ore di osservazione. Si inizia a muovere caviglia e piede nel letto."
+    },
+    {
+      "t": 1,
+      "quando": "Il giorno dopo",
+      "titolo": "In piedi",
+      "testo": "Nella maggior parte dei casi ci si alza e si cammina con il deambulatore, insieme al fisioterapista."
+    },
+    {
+      "t": 2,
+      "quando": "Dopo pochi giorni",
+      "titolo": "La dimissione",
+      "testo": "Si torna a casa o si prosegue la riabilitazione in struttura, con due stampelle e gli esercizi da fare ogni giorno."
+    },
+    {
+      "t": 3,
+      "quando": "Le prime settimane",
+      "titolo": "Le stampelle",
+      "testo": "Si cammina sempre di più e si riducono progressivamente gli ausili, secondo le indicazioni ricevute."
+    },
+    {
+      "t": 4,
+      "quando": "Dopo alcune settimane",
+      "titolo": "Guida e vita di tutti i giorni",
+      "testo": "Con un buon controllo della gamba si torna a guidare e alle attività quotidiane. Il controllo con la radiografia verifica la protesi."
+    },
+    {
+      "t": 5,
+      "quando": "Nei mesi successivi",
+      "titolo": "Lo sport leggero",
+      "testo": "Camminata, bicicletta, nuoto e golf sono in genere consentiti. I tempi si decidono insieme, caso per caso."
+    }
+  ],
+  "video": [
+    {
+      "id": "biOdjZG2ENU",
+      "titolo": "Protesi d'anca con le ultime innovazioni tecnologiche al COQ",
+      "fonte": "VCO Azzurra TV · 7 dicembre 2023"
+    },
+    {
+      "id": "IH4LD-jz0NI",
+      "titolo": "L'evoluzione delle tecniche chirurgiche e i benefici per i pazienti",
+      "fonte": "Intervista televisiva"
+    },
+    {
+      "id": "edmEuliEvdw",
+      "titolo": "L'équipe di Ortopedia del Centro Ortopedico di Quadrante",
+      "fonte": "Intervista"
+    },
+    {
+      "id": "m5ZCsIs_G-I",
+      "titolo": "Chirurgia protesica robotica in sala operatoria",
+      "fonte": "Dalla sala operatoria"
+    }
+  ],
+  "bioTappe": [
+    {
+      "anno": "2003",
+      "titolo": "New York",
+      "testo": "Periodo di formazione al Memorial Sloan Kettering Cancer Center."
+    },
+    {
+      "anno": "2004-2019",
+      "titolo": "CTO di Torino",
+      "testo": "Ortopedico al Centro Traumatologico Ortopedico, dove inizio la chirurgia protesica dell'anca."
+    },
+    {
+      "anno": "2019",
+      "titolo": "Oxford",
+      "testo": "Chirurgia complessa dell'anca al Nuffield Orthopaedic Centre."
+    },
+    {
+      "anno": "2019-2022",
+      "titolo": "Ospedale Cottolengo",
+      "testo": "Ortopedico all'Ospedale Cottolengo di Torino."
+    },
+    {
+      "anno": "Dal 2022",
+      "titolo": "Centro Ortopedico di Quadrante",
+      "testo": "Responsabile del Servizio di Ortopedia Interna a Omegna."
+    },
+    {
+      "anno": "Dal 2024",
+      "titolo": "Humanitas Gradenigo",
+      "testo": "Consulente ortopedico a Torino."
+    }
+  ],
+  "aree": {
+    "titolo": "",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "artrosi-anca-protesi",
+    "categoria": "Anca",
+    "titolo": "Artrosi dell'anca: quando è il momento della protesi",
+    "img": "/mellano-5dn4/img/rep-raggi.webp",
+    "tempoLettura": "9 min",
+    "intro": "Il dolore all'inguine che non passa, la difficoltà a mettersi le calze, le passeggiate sempre più corte: l'artrosi dell'anca toglie autonomia un passo alla volta. La protesi è uno degli interventi più riusciti della medicina moderna, ma va fatta al momento giusto. Le spiego come capirlo.",
+    "sezioni": [
+      {
+        "titolo": "Che cos'è la coxartrosi",
+        "paragrafi": [
+          "L'anca è una grande articolazione, paragonabile a uno snodo meccanico: la testa del femore ruota dentro l'acetabolo, una cavità a forma di coppa del bacino, sostenuta da capsula, legamenti e dai forti muscoli glutei.",
+          "Nell'artrosi, o coxartrosi, la cartilagine che riveste le due superfici si consuma progressivamente. Lo spazio tra le ossa si riduce fino a farle entrare in contatto, e l'articolazione diventa dolorosa e rigida. È la malattia che più spesso colpisce l'anca."
+        ]
+      },
+      {
+        "titolo": "I sintomi",
+        "paragrafi": [
+          "All'inizio la coxartrosi è subdola: un dolore sfumato all'inguine o al gluteo, a volte esteso lungo la coscia fino al ginocchio, tanto da essere confuso con una tendinite o una pubalgia. Compare soprattutto dopo uno sforzo.",
+          "Con la progressione il dolore si intensifica, arriva anche a riposo e di notte, e i movimenti si riducono. Diventano difficili i gesti di tutti i giorni: mettersi le calze e le scarpe, salire in auto, fare le scale, camminare a lungo. Spesso compare una zoppia."
+        ]
+      },
+      {
+        "titolo": "La diagnosi",
+        "paragrafi": [
+          "Alla visita si aggiunge sempre una radiografia del bacino in proiezione antero-posteriore e una proiezione assiale dell'anca dolorosa, eventualmente con una panoramica del bacino in piedi. La radiografia mostra la riduzione dello spazio articolare e lo stato dell'osso.",
+          "Questo protocollo permette anche di sospettare condizioni che hanno favorito l'artrosi, come la displasia dell'anca o il conflitto femoro-acetabolare. La TAC o la risonanza servono solo in casi selezionati."
+        ]
+      },
+      {
+        "titolo": "Le cure senza intervento",
+        "paragrafi": [
+          "Il trattamento conservativo rallenta la progressione e allevia il dolore, ma non è risolutivo, perché la cartilagine usurata non si rigenera. Comprende il controllo del peso, l'attività fisica adatta, come la cyclette o l'acqua, la fisioterapia, gli antinfiammatori nei periodi di dolore.",
+          "Le infiltrazioni ecoguidate nell'anca, con acido ialuronico o cortisone, e i trattamenti di medicina rigenerativa come il PRP possono dare sollievo per mesi, soprattutto nelle fasi iniziali e intermedie."
+        ]
+      },
+      {
+        "titolo": "Quando è il momento della protesi",
+        "paragrafi": [
+          "Non esiste un'età giusta o una radiografia «abbastanza brutta». Il momento è quando l'anca limita la vita. In particolare, conviene valutare la protesi quando:"
+        ],
+        "elenco": [
+          "il dolore è presente anche a riposo o di notte",
+          "i farmaci e le infiltrazioni non bastano più",
+          "camminare, fare le scale o mettersi le calze è diventato difficile",
+          "si rinuncia ad attività importanti, lavoro, viaggi, nipoti, sport",
+          "compare una zoppia o l'altra anca e la schiena iniziano a soffrire"
+        ],
+        "chiusura": "Aspettare troppo non conviene: i muscoli si indeboliscono, la rigidità aumenta e il recupero dopo l'intervento diventa più lento."
+      },
+      {
+        "titolo": "Com'è fatta una protesi d'anca",
+        "paragrafi": [
+          "La protesi sostituisce le superfici consumate. È composta da un cotile, una coppa metallica fissata nell'acetabolo, con un inserto in ceramica o polietilene; da uno stelo inserito nel femore, in metallo, non cementato o cementato; e da una testa in ceramica o metallo che si articola nell'inserto.",
+          "I materiali e le tecniche di oggi garantiscono una lunga durata: la maggior parte delle protesi funziona bene per molti anni."
+        ]
+      },
+      {
+        "titolo": "Come opero",
+        "paragrafi": [
+          "Nella mia casistica dal 2004 sono documentati oltre mille interventi di protesi d'anca come primo operatore. Quando è indicato, uso l'accesso anteriore mininvasivo, che passa tra i muscoli senza tagliarli: è una tecnica più complessa, da centri specializzati, che offre un recupero più veloce e un minor rischio di lussazione.",
+          "Eseguo di routine la chirurgia protesica con assistenza robotica, con i sistemi ROSA Hip e CORI di Smith & Nephew. Prima dell'intervento studio i rapporti tra colonna e bacino con radiografie mirate, per posizionare le componenti nel modo più preciso per quel paziente."
+        ]
+      },
+      {
+        "titolo": "Dopo l'intervento",
+        "paragrafi": [
+          "Nella maggior parte dei casi ci si alza e si cammina con il deambulatore già il giorno dopo. La degenza è di pochi giorni, poi si prosegue la riabilitazione, in struttura o a casa. Le stampelle accompagnano le prime settimane, e progressivamente si torna alle attività quotidiane, alla guida e allo sport leggero, secondo i tempi che indichiamo insieme."
+        ]
+      },
+      {
+        "titolo": "Cosa portare alla visita",
+        "paragrafi": [
+          "Porti le radiografie dell'anca, anche se non recenti, ed eventuali TAC o risonanze, insieme all'elenco dei farmaci che assume e alle informazioni su altri interventi. Se ha già fatto infiltrazioni o fisioterapia, mi dica quando e con quale beneficio: sono informazioni che aiutano a scegliere il momento giusto."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso:"
+        ],
+        "elenco": [
+          "Sono troppo giovane per la protesi? L'età conta meno dell'impatto sulla vita: oggi si impiantano protesi anche in pazienti attivi e giovani.",
+          "Sono troppo anziano? Se le condizioni generali lo permettono, la protesi migliora molto la qualità della vita anche in età avanzata.",
+          "Dopo potrò fare sport? Sì, attività come camminata, bicicletta, nuoto e golf sono in genere consentite.",
+          "Quanto dura una protesi? Con i materiali attuali, la maggior parte funziona bene per molti anni."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ortopedica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "via-anteriore",
+      "categoria": "Anca",
+      "titolo": "Protesi d'anca per via anteriore: cosa cambia",
+      "img": "/mellano-5dn4/img/rep-femore.webp",
+      "tempoLettura": "7 min",
+      "intro": "«Si può fare senza tagliare i muscoli?» Con l'accesso anteriore mininvasivo, spesso sì. Le spiego cos'è, quali vantaggi offre e perché non è la scelta giusta per tutti.",
+      "sezioni": [
+        {
+          "titolo": "Le vie per arrivare all'anca",
+          "paragrafi": [
+            "Per impiantare una protesi d'anca il chirurgo deve raggiungere l'articolazione. Le vie principali sono tre: posteriore, laterale e anteriore. Si differenziano per il punto in cui si incide la pelle e, soprattutto, per i muscoli che si devono attraversare.",
+            "Tutte le vie, nelle mani giuste, portano a buoni risultati. Cambiano i tempi e il modo del recupero."
+          ]
+        },
+        {
+          "titolo": "L'accesso anteriore",
+          "paragrafi": [
+            "Nell'accesso anteriore il chirurgo raggiunge l'anca dalla parte davanti, passando negli spazi naturali tra i muscoli, senza staccarli né tagliarli. È questo il cuore della tecnica: il completo risparmio muscolo-tendineo.",
+            "È una tecnica più complessa, che richiede esperienza e strumentazione dedicata, e per questo va eseguita in centri specialistici selezionati."
+          ]
+        },
+        {
+          "titolo": "I vantaggi",
+          "paragrafi": [
+            "Rispetto agli accessi tradizionali, i principali vantaggi sono:"
+          ],
+          "elenco": [
+            "completo risparmio dei muscoli e dei tendini",
+            "recupero più veloce nelle prime settimane",
+            "minor rischio di instabilità e lussazione della protesi",
+            "meno restrizioni nei movimenti dopo l'intervento"
+          ]
+        },
+        {
+          "titolo": "Le altre vie",
+          "paragrafi": [
+            "Nell'accesso laterale si passa attraverso il medio gluteo, che viene parzialmente distaccato e poi riparato: dà una buona esposizione dell'anca, ma nelle prime settimane può dare una zoppia.",
+            "Nell'accesso posteriore si staccano e poi si riparano i piccoli muscoli rotatori: è la via più versatile, adatta anche a casi complessi e alle revisioni. Con le tecniche di riparazione moderne il rischio di lussazione si è molto ridotto."
+          ]
+        },
+        {
+          "titolo": "Per chi è indicata",
+          "paragrafi": [
+            "La via anteriore è adatta alla maggior parte delle protesi primarie. In alcune situazioni, come certe deformità importanti, esiti di interventi precedenti o revisioni complesse, possono essere più indicate altre vie. La scelta si fa dopo la visita e lo studio delle radiografie, su ciascun paziente."
+          ]
+        },
+        {
+          "titolo": "Via anteriore e robot",
+          "paragrafi": [
+            "L'accesso anteriore si combina bene con le tecnologie di assistenza robotica e di navigazione, che uso di routine. Il robot aiuta a posizionare le componenti con grande precisione, tenendo conto dei rapporti tra colonna e bacino del singolo paziente. Mininvasività e precisione insieme sono la base di un recupero rapido e di una protesi stabile."
+          ]
+        },
+        {
+          "titolo": "Il recupero",
+          "paragrafi": [
+            "Di solito il paziente si alza e cammina già il giorno dopo l'intervento, con un ausilio. Le stampelle si abbandonano progressivamente nelle settimane successive. La riabilitazione resta fondamentale: una buona fisioterapia è parte del risultato tanto quanto l'intervento."
+          ]
+        },
+        {
+          "titolo": "La mia esperienza",
+          "paragrafi": [
+            "Dal 2004 ho eseguito oltre mille protesi d'anca come primo operatore, al CTO di Torino, al Cottolengo e oggi al Centro Ortopedico di Quadrante di Omegna, alla Clinica Fornaca, all'Humanitas Gradenigo e all'Humanitas San Pio X. Nel 2019 ho approfondito la chirurgia complessa dell'anca al Nuffield Orthopaedic Centre di Oxford."
+          ]
+        },
+        {
+          "titolo": "Prepararsi all'intervento",
+          "paragrafi": [
+            "Arrivare all'intervento in buona forma aiuta il recupero. Nelle settimane precedenti consiglio esercizi per rinforzare i muscoli della coscia e del gluteo, camminate brevi e regolari, e, se serve, un calo di peso. Conviene anche organizzare la casa: togliere i tappeti, preparare una sedia stabile e alta, tenere a portata di mano gli oggetti di uso frequente. Sono piccoli accorgimenti che rendono più sereni i primi giorni a casa."
+          ]
+        },
+        {
+          "titolo": "Dopo l'intervento, a casa",
+          "paragrafi": [
+            "Nei primi giorni a casa conviene usare una sedia alta e stabile, evitare i tappeti e tenere gli oggetti di uso frequente a portata di mano. Le stampelle servono per la sicurezza, non sono un segno di ritardo. Gli esercizi insegnati dal fisioterapista vanno ripetuti ogni giorno, con costanza: è il modo migliore per ritrovare forza ed equilibrio.",
+            "Il dolore delle prime settimane è in genere ben controllato dai farmaci prescritti alla dimissione. Un gonfiore della coscia e qualche livido sono frequenti e si riducono da soli. Se compaiono febbre, arrossamento della ferita o un dolore che aumenta invece di diminuire, è bene contattarmi."
+          ]
+        },
+        {
+          "titolo": "Chi può scegliere la via anteriore",
+          "paragrafi": [
+            "Il candidato ideale è una persona con artrosi primaria dell'anca, senza deformità importanti e senza interventi precedenti sulla stessa anca. Anche il peso e la forma del bacino contano, perché influenzano l'esposizione dell'articolazione. Nelle persone molto robuste o con anatomie particolari posso preferire un'altra via, se garantisce un intervento più sicuro. Lo scopo non è usare sempre la stessa tecnica, ma scegliere quella giusta per ciascuno."
+          ]
+        },
+        {
+          "titolo": "Accesso anteriore anche per il ginocchio?",
+          "paragrafi": [
+            "Il principio del risparmio muscolo-tendineo vale anche per la protesi di ginocchio, dove le tecniche mininvasive cercano di rispettare il più possibile il muscolo quadricipite. Anche in questo caso la scelta della tecnica si fa dopo la visita, sulla base delle radiografie e delle caratteristiche del paziente."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "La cicatrice è più piccola? In genere sì, ma la differenza importante è sotto la pelle, nei muscoli risparmiati.",
+            "Posso dormire su un fianco? Con la via anteriore le restrizioni sono minori; le indico caso per caso.",
+            "Quando posso guidare? Di solito dopo alcune settimane, quando il controllo della gamba è buono.",
+            "Si possono operare entrambe le anche? Sì, a distanza di alcuni mesi o, in casi selezionati, nella stessa seduta."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ortopedica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "infiltrazioni-anca",
+      "categoria": "Terapie",
+      "titolo": "Infiltrazioni all'anca: acido ialuronico, cortisone e PRP",
+      "img": "/mellano-5dn4/img/rep-fisio.webp",
+      "tempoLettura": "7 min",
+      "intro": "Non sempre l'artrosi dell'anca richiede subito una protesi. Nelle fasi iniziali e intermedie le infiltrazioni possono ridurre il dolore e migliorare il movimento per mesi. Le spiego quali esistono e quando hanno senso.",
+      "sezioni": [
+        {
+          "titolo": "Perché proprio l'anca è diversa",
+          "paragrafi": [
+            "L'anca è un'articolazione profonda, circondata da muscoli spessi e vicina a vasi e nervi importanti. Per questo, a differenza del ginocchio, l'infiltrazione all'anca va eseguita con la guida dell'ecografo, che permette di vedere l'ago e di portare il farmaco esattamente dentro l'articolazione.",
+            "Eseguo le infiltrazioni ecoguidate in ambulatorio: la procedura dura pochi minuti."
+          ]
+        },
+        {
+          "titolo": "Acido ialuronico",
+          "paragrafi": [
+            "L'acido ialuronico è una sostanza naturalmente presente nel liquido articolare, che lubrifica l'articolazione e ammortizza i carichi. Nell'artrosi si riduce. L'infiltrazione mira a ripristinarne una quantità adeguata, migliorando lo scorrimento e riducendo il dolore.",
+            "L'effetto non è immediato, ma si sviluppa nelle settimane successive e può durare diversi mesi."
+          ]
+        },
+        {
+          "titolo": "Cortisone e anestetico",
+          "paragrafi": [
+            "Il cortisone, associato a un anestetico, ha un'azione antinfiammatoria rapida: è utile nelle fasi di dolore acuto e infiammazione. Il suo effetto è in genere più veloce ma meno duraturo, e il numero di infiltrazioni nel tempo va limitato.",
+            "Spesso il cortisone e l'acido ialuronico si usano in momenti diversi dello stesso percorso."
+          ]
+        },
+        {
+          "titolo": "La medicina rigenerativa",
+          "paragrafi": [
+            "La medicina rigenerativa punta a stimolare la riparazione dei tessuti con cellule del paziente stesso. Con il PRP, il plasma ricco di piastrine, si preleva un campione di sangue, lo si concentra e lo si inietta nell'articolazione: i fattori di crescita delle piastrine hanno un effetto antinfiammatorio e trofico.",
+            "In casi selezionati si utilizzano cellule mesenchimali prelevate dal tessuto adiposo. Sono trattamenti da valutare con attenzione, soprattutto nelle fasi iniziali dell'artrosi."
+          ]
+        },
+        {
+          "titolo": "Quando funzionano, e quando no",
+          "paragrafi": [
+            "Le infiltrazioni danno i migliori risultati quando l'artrosi è lieve o moderata e la cartilagine è ancora in parte presente. Nelle forme avanzate, con le ossa a contatto, il beneficio si riduce e spesso è breve: in questi casi la protesi è la soluzione più efficace.",
+            "L'infiltrazione può anche servire a capire da dove viene il dolore: se dopo l'anestetico il dolore scompare, è probabile che nasca davvero dall'anca e non dalla schiena."
+          ]
+        },
+        {
+          "titolo": "Dopo l'infiltrazione",
+          "paragrafi": [
+            "Dopo la procedura si torna a casa subito. Nelle 24-48 ore successive conviene evitare sforzi e attività sportive intense. Un lieve fastidio nella zona dell'iniezione è possibile e passa in breve tempo. Le indico quando programmare il controllo e se ripetere il trattamento."
+          ]
+        },
+        {
+          "titolo": "Infiltrazioni e protesi",
+          "paragrafi": [
+            "Chi è in attesa di una protesi può fare un'infiltrazione per alleviare il dolore, ma non a ridosso dell'intervento: tra un'infiltrazione di cortisone e la protesi si lascia di solito un intervallo di alcuni mesi, per ridurre il rischio di infezione. È un aspetto da programmare insieme."
+          ]
+        },
+        {
+          "titolo": "Le cure da affiancare",
+          "paragrafi": [
+            "Le infiltrazioni funzionano meglio se non restano un gesto isolato. Esercizi di rinforzo dei glutei e della coscia, attività come la bicicletta o il nuoto, il controllo del peso e una postura corretta nella vita di tutti i giorni aiutano a mantenere il beneficio più a lungo. Nei periodi di dolore, il fisioterapista può guidare un programma di esercizi su misura."
+          ]
+        },
+        {
+          "titolo": "Chi non dovrebbe farle",
+          "paragrafi": [
+            "Le infiltrazioni non si eseguono in presenza di infezioni della pelle nella zona, di febbre o di infezioni in corso. Chi assume anticoagulanti, chi ha il diabete o allergie note deve segnalarlo prima: in alcuni casi basta qualche accorgimento, in altri conviene scegliere un altro trattamento. Per questo l'infiltrazione si decide sempre dopo una visita e non al telefono."
+          ]
+        },
+        {
+          "titolo": "Come si esegue",
+          "paragrafi": [
+            "Il paziente è sdraiato sul lettino. Dopo la disinfezione della pelle, con la sonda ecografica individuo l'articolazione e i vasi vicini, poi inserisco l'ago seguendone il percorso sullo schermo fino alla capsula articolare. Il farmaco viene iniettato lentamente e si vede distribuirsi dentro l'articolazione. Tutta la procedura dura pochi minuti e non richiede anestesia generale né digiuno."
+          ]
+        },
+        {
+          "titolo": "Un esempio di percorso",
+          "paragrafi": [
+            "Una persona di sessant'anni con un dolore all'inguine da alcuni mesi e un'artrosi iniziale alla radiografia potrebbe iniziare con esercizi mirati e, nei periodi di dolore, un'infiltrazione di cortisone. Se il dolore torna, si può passare all'acido ialuronico o al PRP. Se nel tempo l'artrosi avanza e le infiltrazioni durano sempre meno, è il segnale che conviene parlare di protesi. Ogni percorso, però, è personale: questo è solo un esempio.",
+            "Il controllo nel tempo serve proprio a questo: capire se il trattamento sta funzionando e quando cambiare strada, senza aspettare troppo e senza anticipare un intervento che non serve ancora."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "L'infiltrazione all'anca fa male? Si avverte la puntura e una lieve pressione; l'anestetico riduce il fastidio.",
+            "Quante se ne possono fare? Dipende dal farmaco: con il cortisone è prudente limitarne il numero.",
+            "Quanto dura l'effetto? Da alcune settimane a molti mesi, a seconda del farmaco e della fase dell'artrosi.",
+            "Servono esami prima? Una radiografia recente dell'anca è indispensabile per decidere."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ortopedica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "chirurgia-robotica",
+      "categoria": "Tecnologia",
+      "titolo": "Chirurgia protesica robotica: cosa cambia per il paziente",
+      "img": "/mellano-5dn4/img/rep-sala.webp",
+      "tempoLettura": "7 min",
+      "intro": "«Mi opera il robot?» No: opera il chirurgo. Il robot è uno strumento che aiuta a essere ancora più precisi. Le spiego come funziona la chirurgia protesica robotica e quali vantaggi porta.",
+      "sezioni": [
+        {
+          "titolo": "Cosa fa davvero il robot",
+          "paragrafi": [
+            "Nella chirurgia protesica robotica il chirurgo resta al comando in ogni momento. Il sistema robotico fornisce informazioni in tempo reale e guida gli strumenti per posizionare le componenti della protesi esattamente dove sono state pianificate.",
+            "Uso di routine i sistemi ROSA Hip e il sistema di navigazione CORI di Smith & Nephew."
+          ]
+        },
+        {
+          "titolo": "Perché la posizione conta",
+          "paragrafi": [
+            "La durata e la stabilità di una protesi dipendono molto dal corretto orientamento delle componenti: l'inclinazione della coppa, la lunghezza della gamba, l'offset, cioè la distanza tra femore e bacino. Pochi gradi di differenza possono fare la differenza tra una protesi stabile e una che rischia di lussarsi, o tra due gambe uguali e una più lunga."
+          ]
+        },
+        {
+          "titolo": "Il rapporto tra colonna e bacino",
+          "paragrafi": [
+            "Il bacino non è fermo: si inclina in modo diverso quando siamo in piedi, seduti o sdraiati, e il movimento cambia da persona a persona, soprattutto in chi ha problemi alla colonna. Prima dell'intervento valuto questi rapporti spino-pelvici con un protocollo radiografico mirato, in piedi e seduti.",
+            "Il sistema robotico permette di tenerne conto e di posizionare la protesi in modo personalizzato per i movimenti di quel paziente."
+          ]
+        },
+        {
+          "titolo": "I vantaggi per il paziente",
+          "paragrafi": [
+            "In sintesi, la tecnologia robotica aiuta a ottenere:"
+          ],
+          "elenco": [
+            "un posizionamento più preciso e riproducibile delle componenti",
+            "una lunghezza delle gambe più fedele a quella naturale",
+            "un minor rischio di instabilità della protesi",
+            "una pianificazione personalizzata sulla propria anatomia"
+          ]
+        },
+        {
+          "titolo": "La revisione delle protesi",
+          "paragrafi": [
+            "Anche le protesi possono dover essere sostituite, in parte o del tutto, per usura, mobilizzazione o infezione. Per gli interventi di revisione utilizzo tecnologie avanzate di elaborazione delle immagini e stampa 3D, con una simulazione dell'intervento prima di entrare in sala operatoria.",
+            "Studiare in anticipo l'osso residuo e la posizione dei nuovi impianti rende più prevedibile un intervento che è spesso complesso."
+          ]
+        },
+        {
+          "titolo": "Robot e mininvasività",
+          "paragrafi": [
+            "La precisione del robot si combina con l'accesso anteriore mininvasivo, che risparmia i muscoli. Insieme permettono un recupero più rapido e una protesi stabile fin dai primi giorni."
+          ]
+        },
+        {
+          "titolo": "Le domande giuste da fare",
+          "paragrafi": [
+            "Se sta valutando una protesi, può chiedere al chirurgo quale via d'accesso userà, se pianifica l'intervento con radiografie in piedi e seduti, quale tecnologia utilizza in sala e come sarà organizzata la riabilitazione. Sono domande legittime, a cui un buon chirurgo risponde volentieri. In visita le affrontiamo sempre, con le Sue radiografie davanti."
+          ]
+        },
+        {
+          "titolo": "Dove opero",
+          "paragrafi": [
+            "Opero al Centro Ortopedico di Quadrante di Omegna, dove dal 2022 sono responsabile del Servizio di Ortopedia Interna, alla Clinica Fornaca di Sessant e all'Humanitas Gradenigo a Torino, e all'Humanitas San Pio X a Milano. Visito a Rivarolo Canavese, Venaria Reale, Omegna e Torino."
+          ]
+        },
+        {
+          "titolo": "Come si svolge la pianificazione",
+          "paragrafi": [
+            "Prima dell'intervento raccolgo radiografie del bacino e dell'anca, e radiografie della colonna in piedi e seduti. Con questi dati calcolo come si muove il bacino del paziente nelle diverse posizioni e scelgo l'orientamento ideale della coppa e dello stelo. In sala operatoria il sistema robotico confronta in tempo reale la posizione degli strumenti con il piano, e mi permette di correggerla di pochi gradi o millimetri quando serve.",
+            "Al termine dell'intervento verifico la lunghezza delle gambe e la stabilità della protesi nei diversi movimenti. Questa attenzione ai dettagli è il motivo per cui uso il robot di routine, non solo nei casi difficili."
+          ]
+        },
+        {
+          "titolo": "Chi ha problemi alla schiena",
+          "paragrafi": [
+            "Chi ha un'artrodesi della colonna, una scoliosi o una rigidità lombare ha un bacino che si muove poco quando passa da in piedi a seduto. In questi pazienti il rischio di instabilità della protesi è più alto, e la pianificazione personalizzata diventa ancora più importante. È uno dei casi in cui la tecnologia fa davvero la differenza."
+          ]
+        },
+        {
+          "titolo": "Cosa dicono i dati",
+          "paragrafi": [
+            "Gli studi sulla chirurgia protesica assistita da robot mostrano un posizionamento delle componenti più vicino a quello pianificato rispetto alla tecnica tradizionale, con meno differenze tra un intervento e l'altro. La ricerca sugli effetti a lungo termine, come la durata della protesi, è ancora in corso: per questo ne parlo come di uno strumento in più, non come di una garanzia."
+          ]
+        },
+        {
+          "titolo": "Robot e revisioni",
+          "paragrafi": [
+            "Nelle revisioni l'anatomia è spesso alterata dal primo impianto: l'osso può essere ridotto e i riferimenti abituali non ci sono più. Le immagini elaborate in 3D e i modelli stampati permettono di studiare il caso in anticipo e di scegliere gli impianti più adatti, riducendo le sorprese in sala operatoria."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "L'intervento dura di più? Qualche minuto in più per la pianificazione, che si traduce in maggiore precisione.",
+            "Costa di più per il paziente? Dipende dalla struttura e dalla convenzione: ne parliamo in visita.",
+            "Il robot serve per tutti? È utile in quasi tutte le protesi primarie, in particolare nei casi con problemi di colonna.",
+            "Il recupero è diverso? Il recupero dipende soprattutto dall'accesso chirurgico e dalla riabilitazione."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita ortopedica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "studiodanilomellano",
+    "nota": "il profilo esiste ma è fermo da mesi: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "consulto",
+        "titolo": "Protesi d'anca mininvasiva",
+        "sottotitolo": "Si passa tra i muscoli, senza tagliarli",
+        "didascalia": "Con l'accesso anteriore si raggiunge l'anca negli spazi naturali tra i muscoli: recupero più veloce e minor rischio di lussazione. Non è per tutti: si decide in visita.",
+        "hashtag": "#protesidanca #ortopedia #mininvasiva"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Infiltrazioni all'anca: sempre con l'ecografo",
+        "punti": [
+          "L'anca è profonda",
+          "L'ago si vede in tempo reale",
+          "Acido ialuronico, cortisone o PRP",
+          "Pochi minuti, in ambulatorio"
+        ],
+        "didascalia": "Nelle fasi iniziali e intermedie dell'artrosi un'infiltrazione ecoguidata può ridurre il dolore per mesi. Le spiego quando ha senso.",
+        "hashtag": "#infiltrazioni #artrosi #anca"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Mi opera il robot?",
+        "risposta": "No: opera il chirurgo. Il robot aiuta la precisione.",
+        "didascalia": "Con i sistemi ROSA Hip e CORI pianifico la posizione della protesi sull'anatomia di ciascun paziente, tenendo conto anche della colonna.",
+        "hashtag": "#chirurgiarobotica #protesi #ortopedia"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove visito",
+    "altreLabel": "",
+    "email": "studiodanilomellano@gmail.com",
+    "luoghi": [
+      {
+        "tipo": "Ambulatorio",
+        "nome": "Ambulatorio di Rivarolo Canavese",
+        "breve": "Corso Torino 77",
+        "indirizzo": "Corso Torino 77",
+        "citta": "Rivarolo Canavese",
+        "mappa": true,
+        "principale": true,
+        "frase": "l'ambulatorio di Rivarolo Canavese, corso Torino 77"
+      },
+      {
+        "tipo": "Ambulatorio",
+        "nome": "Ambulatorio di Venaria Reale",
+        "breve": "Via Cesare Battisti 18",
+        "indirizzo": "Via Cesare Battisti 18",
+        "citta": "Venaria Reale",
+        "mappa": true,
+        "principale": false,
+        "frase": "l'ambulatorio di Venaria Reale, via Cesare Battisti 18"
+      },
+      {
+        "tipo": "Ambulatorio",
+        "nome": "Centro Salus",
+        "breve": "Piazza Martiri della Libertà 16",
+        "indirizzo": "Piazza Martiri della Libertà 16",
+        "citta": "Omegna",
+        "mappa": true,
+        "principale": false,
+        "frase": "il Centro Salus di Omegna"
+      },
+      {
+        "tipo": "Ambulatorio",
+        "nome": "Clinica Fornaca",
+        "breve": "Corso Vittorio Emanuele II 91",
+        "indirizzo": "Corso Vittorio Emanuele II 91",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": false,
+        "frase": "la Clinica Fornaca di Torino"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Lo studio La richiama per fissare l'appuntamento nell'ambulatorio che preferisce. Porti le radiografie dell'anca, anche se non recenti.",
+    "telefono": "3283421607",
+    "telefonoLabel": "328 342 1607",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "saluto": "Dottore",
+    "oggettoMail": "Richiesta di visita ortopedica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi il giorno e l'orario che preferisce: lo studio La ricontatta per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e ambulatorio vengono confermati dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo",
+        "Infiltrazione"
+      ],
+      "motivi": [
+        "Dolore all'anca",
+        "Valutare una protesi d'anca",
+        "Protesi di ginocchio",
+        "Protesi da rivedere",
+        "Infiltrazione ecoguidata",
+        "PRP e medicina rigenerativa",
+        "Controllo dopo l'intervento",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "un dolore all'anca",
+        "valutare una protesi d'anca",
+        "valutare una protesi di ginocchio",
+        "un controllo della mia protesi d'anca",
+        "un'infiltrazione ecoguidata all'anca",
+        "un trattamento di medicina rigenerativa",
+        "un controllo dopo l'intervento",
+        "un problema ortopedico"
+      ],
+      "luoghi": [
+        {
+          "nome": "Ambulatorio · Rivarolo Canavese",
+          "frase": "l'ambulatorio di Rivarolo Canavese, corso Torino 77"
+        },
+        {
+          "nome": "Ambulatorio · Venaria Reale",
+          "frase": "l'ambulatorio di Venaria Reale, via Cesare Battisti 18"
+        },
+        {
+          "nome": "Centro Salus · Omegna",
+          "frase": "il Centro Salus di Omegna"
+        },
+        {
+          "nome": "Clinica Fornaca · Torino",
+          "frase": "la Clinica Fornaca di Torino"
+        }
+      ],
+      "privacy": null,
+      "privacyTesto": "I dati inseriti servono solo a preparare la mail di richiesta: non vengono salvati da questa pagina.",
+      "notePlaceholder": "Per esempio da quanto tempo ha dolore o se ha già una radiografia"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F1F5FA",
+      "ink": "#0F1B2B",
+      "muted": "#5A6676",
+      "line": "#DCE4EE",
+      "brand": "#36689F",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#78B1DD",
+      "deep": "#0E2440",
+      "deep-ink": "#C4D4E6",
+      "urgenza": "#D0573F"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Libre+Franklin:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Archivo",
+    "fontTesti": "Libre Franklin",
+    "fontUi": "Libre Franklin",
+    "favicon": "/mellano-5dn4/img/marchio.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/mellano-5dn4/brand/brand.json",
+    "pagine": [
+      "https://www.dottordanilomellano.it/",
+      "https://www.dottordanilomellano.it/curriculum-dr-danilo-mellano/",
+      "https://www.dottordanilomellano.it/specializzazioni/interventi-di-protesi-anca-e-ginocchio-miniinvasivi-con-risparmio-muscolo-tendineo/",
+      "https://www.dottordanilomellano.it/specializzazioni/chirurgia-protesica-con-tecniche-robotiche/",
+      "https://www.dottordanilomellano.it/specializzazioni/revisione-di-protesi/",
+      "https://www.dottordanilomellano.it/specializzazioni/infiltrazioni-danca/",
+      "https://www.dottordanilomellano.it/contatti/"
+    ]
+  }
+}
