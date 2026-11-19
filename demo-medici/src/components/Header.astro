@@ -4,9 +4,11 @@ import { nomeCompleto, telHref, type Medico } from '../lib/medici';
 interface Props { m: Medico; home?: boolean }
 const { m, home = true } = Astro.props;
 const base = `/${m.slug}`;
-const link = [
+const link = ((m as any).plurale === true ? [
+  ['Chi siamo', '#chi-siamo'], ['Cosa facciamo', '#aree'], [(m as any).blog ? 'Blog' : 'Articoli', '#articoli'], ['Dove riceviamo', '#sedi'],
+] : [
   ['Chi sono', '#chi-sono'], ['Di cosa mi occupo', '#aree'], ['Come lavoro', '#come-lavoro'], [(m as any).blog ? 'Blog' : 'Articoli', '#articoli'], ['Dove ricevo', '#sedi'],
-].map(([t, h]) => [t, home ? h : `${base}${h}`]);
+]).map(([t, h]) => [t, home ? h : `${base}${h}`]);
 ---
 <header class="sticky z-30 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
   <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-8">

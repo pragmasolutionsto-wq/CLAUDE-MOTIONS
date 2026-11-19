@@ -1,0 +1,43 @@
+{
+  "medico": "Centro di Chirurgia del Piede (Dott. Carmelo Errichiello, Dott. Raul Cerlon; Dott. Davide Deledda in collaborazione)",
+  "specialita": "Diagnosi e chirurgia del piede e della caviglia",
+  "sito": "https://www.chirurgiapiede-pisani.it/ (Wix, realizzato da Webidoo)",
+  "logo": "nessun logo vero (testata di testo spezzata «CENTRO CHIRURGIA DEL PI / EDE»): logotipo di testo in Literata",
+  "colori": {
+    "blu_notte_rivista": "#12132F",
+    "azzurro_copertina": "#2C9AD1",
+    "blu": "#22357A",
+    "ocra_numeri": "#8C5E12",
+    "nota": "presi dalla copertina della rivista «Medicina e Chirurgia della Caviglia e del Piede» e dall'ocra del rilievo dietro al Dott. Errichiello"
+  },
+  "font": {
+    "sito": "tema Wix generico",
+    "demo": [
+      "Literata (mai corsivo)",
+      "Schibsted Grotesk"
+    ]
+  },
+  "contatti": {
+    "telefono": "011 55 74 284",
+    "whatsapp": "366 934 7763 (sig.ra Donatella, verificato sul sito: «messaggio di Whatsapp»)",
+    "email": "segreteria.chirurgiapiede@clinicafornaca.it",
+    "privacy": "https://www.iubenda.com/privacy-policy/76062689"
+  },
+  "sedi": [
+    "Studio medico: CDF (Centro Diagnostico Fornaca), 2° piano, corso Vittorio Emanuele II 87, 10128 Torino",
+    "Sede chirurgica: Clinica Fornaca di Sessant, corso Vittorio Emanuele II 91, 10128 Torino (sala operatoria il mercoledì)"
+  ],
+  "numeri": "29.935 pazienti e oltre 5.886 interventi al 1° gennaio 2026; circa 475 pubblicazioni; 68 corsi propedeutici diretti dal prof. Pisani (pagina Clinica, Scientifica, Didattica)",
+  "convenzioni": "Allianz, Aon, Assidai, Axa Caring, Blue Assistance, Emvap, Faschim, Fasdac, Fasi, Fasi/Assidai, Generali, Insalute, My Assistance, My Rete, Previmedical, Sas («alcuni esempi»)",
+  "foto": [
+    "foto/errichiello.jpg: Dott. Errichiello con papillon, rilievo del piede alle spalle (960x1099), usata in hero",
+    "foto/deledda.jpg (2766x4149), foto/cerlon.webp (301x304, piccola: solo nella scheda)",
+    "foto/scalone.jpeg: i due medici sullo scalone d'ingresso (403x615)",
+    "foto/fornaca.png: facciata e salotto della Clinica Fornaca (composita, divisa in due)",
+    "foto/sala-operatoria.jpg, camera.jpeg, visita.jpeg (piccole, 460px e 289px)",
+    "foto/rivista.jpeg: copertina della rivista; santavittoria.jpeg; sala-corsi.jpeg; dipinto.jpeg (dipinto antico di un'operazione al piede, dal sito)"
+  ],
+  "repertorio": "brand/repertorio/: 4 foto Unsplash gratuite (licenza Unsplash): piedi nudi su superficie bianca (Kristina Tochilko), su marciapiede (Charles Puaud), in spiaggia (Kier Allen), sull'erba (Emanuel Haas). Solo blog, articolo e un post",
+  "problemi_sito": "sito Wix con testata spezzata («PI / EDE»), hero con un dipinto scuro senza messaggio, nessun blog, nessun social, nessuna prenotazione online (solo telefono, WhatsApp e form generico), numeri forti (29.935 pazienti, 5.886 interventi) nascosti nella pagina Clinica, convenzioni in un paragrafo, curriculum lunghissimi senza gerarchia",
+  "note": "Centro attivo dal 1989, scuola del prof. Giacomo Pisani; rivista fondata nel 1977; corso 70+4 dal 3 al 6 maggio 2027"
+}

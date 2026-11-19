@@ -1,0 +1,1004 @@
+{
+  "slug": "piede-gq46",
+  "layout": "trattato",
+  "sitoOrigine": "https://www.chirurgiapiede-pisani.it/",
+  "titolo": "Centro di",
+  "nome": "Chirurgia del Piede",
+  "plurale": true,
+  "specialita": "Diagnosi e chirurgia del piede e della caviglia",
+  "firma": "Chirurgia del piede e della caviglia",
+  "citta": "Torino",
+  "meta": {
+    "title": "Centro di Chirurgia del Piede · Torino, Clinica Fornaca: alluce valgo, piede piatto, chirurgia del piede e della caviglia",
+    "description": "Dal 1989 a Torino: diagnosi e chirurgia del piede e della caviglia con i dottori Errichiello e Cerlon. Alluce valgo, alluce rigido, metatarsalgia, neuroma di Morton, piede piatto e cavo, fascite plantare. Prenoti su WhatsApp."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "",
+    "logoChiaro": "",
+    "marchio": "",
+    "logoAlt": "Centro di Chirurgia del Piede"
+  },
+  "foto": {
+    "ritratto": "/piede-gq46/img/errichiello.webp",
+    "ritrattoAlt": "Il Dott. Carmelo Errichiello nello studio del Centro",
+    "volto": "/piede-gq46/img/errichiello-volto.webp",
+    "scalone": "/piede-gq46/img/scalone.webp",
+    "fornaca": "/piede-gq46/img/fornaca.webp",
+    "salotto": "/piede-gq46/img/fornaca-salotto.webp",
+    "sala": "/piede-gq46/img/sala-operatoria.webp",
+    "camera": "/piede-gq46/img/camera.webp",
+    "dipinto": "/piede-gq46/img/dipinto.webp",
+    "rivista": "/piede-gq46/img/rivista.webp",
+    "santavittoria": "/piede-gq46/img/santavittoria.webp",
+    "corsi": "/piede-gq46/img/sala-corsi.webp",
+    "visita": "/piede-gq46/img/visita.webp",
+    "alluce": "/piede-gq46/img/rep-alluce.webp",
+    "piatto": "/piede-gq46/img/rep-piatto.webp",
+    "avampiede": "/piede-gq46/img/rep-avampiede.webp",
+    "percutanea": "/piede-gq46/img/rep-percutanea.webp"
+  },
+  "hero": {
+    "eyebrow": "Torino · dal 1989",
+    "titolo": "Il piede, curato da una scuola.",
+    "testo": "Diagnosi e chirurgia del piede e della caviglia. Visitiamo allo Studio di corso Vittorio Emanuele II 87 e operiamo, il mercoledì, nella Clinica Fornaca di Sessant, al civico 91. Dietro ogni visita ci sono quasi quarant'anni di casi, ricerca e insegnamento.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami la segreteria"
+  },
+  "numeri": [
+    {
+      "valore": 29935,
+      "testo": "pazienti seguiti dal 1989",
+      "fmt": "29.935"
+    },
+    {
+      "valore": 5886,
+      "testo": "interventi chirurgici",
+      "fmt": "5.886",
+      "piu": true
+    },
+    {
+      "valore": 475,
+      "testo": "pubblicazioni dei medici del Centro",
+      "fmt": "475",
+      "circa": true
+    },
+    {
+      "valore": 68,
+      "testo": "corsi propedeutici diretti dal prof. Pisani",
+      "fmt": "68"
+    }
+  ],
+  "numeriNota": "Dati del Centro al 1° gennaio 2026.",
+  "zone": [
+    {
+      "id": "alluce",
+      "nome": "Alluce",
+      "dove": "Il primo dito e la sua articolazione con il metatarso",
+      "pat": [
+        {
+          "nome": "Alluce valgo",
+          "testo": "L'alluce devia verso le altre dita e alla base sporge una prominenza che sfrega nella scarpa. Peggiora lentamente: si valuta con la visita e con radiografie in carico.",
+          "motivo": "alluce-valgo"
+        },
+        {
+          "nome": "Alluce rigido",
+          "testo": "È l'artrosi dell'articolazione alla base dell'alluce: il dito si piega sempre meno e fa male nella spinta del passo, spesso con un rilievo osseo sul dorso.",
+          "motivo": "alluce-rigido"
+        }
+      ]
+    },
+    {
+      "id": "dita",
+      "nome": "Dita minori",
+      "dove": "Dal secondo al quinto dito",
+      "pat": [
+        {
+          "nome": "Dito a martello",
+          "testo": "Il dito si flette e resta piegato, con un callo doloroso sul dorso o sulla punta. All'inizio si raddrizza a mano, poi diventa rigido. Spesso accompagna l'alluce valgo.",
+          "motivo": "dita"
+        }
+      ]
+    },
+    {
+      "id": "avampiede",
+      "nome": "Avampiede",
+      "dove": "La pianta sotto le teste dei metatarsi",
+      "pat": [
+        {
+          "nome": "Metatarsalgia",
+          "testo": "Dolore sotto la pianta, nella zona d'appoggio delle dita, spesso con callosità. È un sintomo: le cause vanno dal sovraccarico alle deformità di alluce e dita.",
+          "motivo": "metatarsalgia"
+        },
+        {
+          "nome": "Neuroma di Civinini-Morton",
+          "testo": "Un ispessimento del nervo tra due metatarsi, più spesso tra terzo e quarto dito: dolore bruciante, scosse o formicolio che migliorano togliendo la scarpa.",
+          "motivo": "morton"
+        }
+      ]
+    },
+    {
+      "id": "arco",
+      "nome": "Arco plantare",
+      "dove": "La volta interna del piede, tra avampiede e tallone",
+      "pat": [
+        {
+          "nome": "Piede piatto dell'adulto",
+          "testo": "La volta si abbassa nel tempo, spesso per un sovraccarico del tendine tibiale posteriore: dolore e gonfiore sul lato interno della caviglia, fatica a camminare.",
+          "motivo": "piatto-adulto"
+        },
+        {
+          "nome": "Piede piatto dell'infanzia",
+          "testo": "Nei bambini è spesso una fase normale della crescita. Lo valutiamo dai 6 anni in poi, quando è il momento di capire se e come intervenire.",
+          "motivo": "piatto-bambino"
+        },
+        {
+          "nome": "Piede cavo",
+          "testo": "L'arco è troppo alto: il carico si concentra su tallone e avampiede, con calli, dita in griffe e distorsioni ricorrenti della caviglia.",
+          "motivo": "cavo"
+        }
+      ]
+    },
+    {
+      "id": "tallone",
+      "nome": "Tallone",
+      "dove": "Il retropiede e la sua inserzione plantare",
+      "pat": [
+        {
+          "nome": "Fascite plantare e tallodinia",
+          "testo": "Dolore sotto il tallone, più forte ai primi passi del mattino o dopo essere stati seduti. Nella maggior parte dei casi guarisce senza intervento.",
+          "motivo": "tallone"
+        }
+      ]
+    },
+    {
+      "id": "caviglia",
+      "nome": "Caviglia e tendini",
+      "dove": "I tendini che corrono lungo i lati e dietro il tallone, e l'articolazione della caviglia",
+      "pat": [
+        {
+          "nome": "Patologie dei tendini del piede e della caviglia",
+          "testo": "Achilleo, tibiale posteriore, peronieri: infiammazioni, degenerazioni e rotture che danno dolore, gonfiore e instabilità.",
+          "motivo": "tendini"
+        },
+        {
+          "nome": "Esiti traumatici e artrosi",
+          "testo": "Dopo fratture e distorsioni gravi, o con gli anni, l'articolazione può consumarsi: dolore, rigidità e gonfiore che limitano il passo.",
+          "motivo": "artrosi"
+        }
+      ]
+    }
+  ],
+  "motivi": [
+    {
+      "id": "alluce-valgo",
+      "nome": "Alluce valgo",
+      "frase": "l'alluce valgo"
+    },
+    {
+      "id": "alluce-rigido",
+      "nome": "Alluce rigido",
+      "frase": "l'alluce rigido"
+    },
+    {
+      "id": "dita",
+      "nome": "Dito a martello",
+      "frase": "un dito a martello"
+    },
+    {
+      "id": "metatarsalgia",
+      "nome": "Metatarsalgia",
+      "frase": "un dolore sotto l'avampiede (metatarsalgia)"
+    },
+    {
+      "id": "morton",
+      "nome": "Neuroma di Morton",
+      "frase": "un sospetto neuroma di Morton"
+    },
+    {
+      "id": "piatto-adulto",
+      "nome": "Piede piatto (adulto)",
+      "frase": "un piede piatto"
+    },
+    {
+      "id": "piatto-bambino",
+      "nome": "Piede piatto (bambino, dai 6 anni)",
+      "frase": "il piede piatto di mio figlio"
+    },
+    {
+      "id": "cavo",
+      "nome": "Piede cavo",
+      "frase": "un piede cavo"
+    },
+    {
+      "id": "tallone",
+      "nome": "Dolore al tallone",
+      "frase": "un dolore al tallone o una fascite plantare"
+    },
+    {
+      "id": "tendini",
+      "nome": "Tendini",
+      "frase": "un problema ai tendini del piede o della caviglia"
+    },
+    {
+      "id": "artrosi",
+      "nome": "Artrosi o esiti di trauma",
+      "frase": "un'artrosi o gli esiti di un trauma al piede o alla caviglia"
+    },
+    {
+      "id": "controllo",
+      "nome": "Controllo dopo l'intervento",
+      "frase": "un controllo dopo l'intervento"
+    },
+    {
+      "id": "altro",
+      "nome": "Altro",
+      "frase": "un problema al piede o alla caviglia"
+    }
+  ],
+  "mediciDati": [
+    {
+      "id": "errichiello",
+      "nome": "Dott. Carmelo Errichiello",
+      "breve": "Dott. Errichiello",
+      "frase": "il Dott. Errichiello",
+      "ruolo": "Chirurgo ortopedico",
+      "foto": "/piede-gq46/img/errichiello.webp",
+      "w": 960,
+      "h": 1099,
+      "sintesi": "Dal 1979 al 2008 al C.T.O. di Torino, dove ha diretto fino al 2008 l'Unità di Chirurgia del Piede e della Caviglia della II Clinica Ortopedica Universitaria. Idoneità nazionale a Primario di Ortopedia e Traumatologia.",
+      "fatti": [
+        "Laurea con lode a Napoli (1976), specializzazione in Ortopedia e Traumatologia (1979)",
+        "Specializzazioni a Parma in Fisioterapia (1984) e Chirurgia della Mano (1990)",
+        "Docente di Chirurgia del Piede alla Scuola di Specializzazione in Ortopedia dell'Università di Torino",
+        "162 pubblicazioni, primo autore di «Semeiotica Clinica del Piede» (2022) e «Clinical Semiotics of the Foot» (2023)",
+        "Coordinatore del Comitato di Redazione della rivista «Medicina e Chirurgia della Caviglia e del Piede»"
+      ]
+    },
+    {
+      "id": "cerlon",
+      "nome": "Dott. Raul Cerlon",
+      "breve": "Dott. Cerlon",
+      "frase": "il Dott. Cerlon",
+      "ruolo": "Chirurgo ortopedico",
+      "foto": "/piede-gq46/img/cerlon.webp",
+      "w": 301,
+      "h": 304,
+      "sintesi": "Al C.T.O. di Torino dal 1980 al 2017, dove ha guidato la struttura di chirurgia artroscopica e mini-invasiva del piede e della caviglia e poi la struttura dipartimentale di chirurgia del piede e della caviglia.",
+      "fatti": [
+        "Laurea con lode a Torino (1979), specializzazione in Ortopedia e Traumatologia (1985)",
+        "Specializzazioni in Medicina Legale (1988) e Medicina Fisica e Riabilitativa (2007)",
+        "2003-2008: chirurgia artroscopica e mini-invasiva del piede e della caviglia, II Clinica Ortopedica del C.T.O.",
+        "Docente di chirurgia del piede e della caviglia alle scuole di Medicina Fisica e di Ortopedia dell'Università di Torino",
+        "41 pubblicazioni e co-autore di testi monografici"
+      ]
+    },
+    {
+      "id": "deledda",
+      "nome": "Dott. Davide Deledda",
+      "breve": "Dott. Deledda",
+      "frase": "il Dott. Deledda",
+      "ruolo": "Ortopedico, in collaborazione",
+      "foto": "/piede-gq46/img/deledda.webp",
+      "w": 900,
+      "h": 1100,
+      "sintesi": "Specializzato con il massimo dei voti in Ortopedia e Traumatologia a Torino nel 2016, collabora con il Centro dal 2017, dopo averlo frequentato durante la specializzazione.",
+      "fatti": [
+        "Laurea a Torino (2010), specializzazione in Ortopedia e Traumatologia (2016)",
+        "Sport medicine alla clinica Sporthopaedicum di Berlino (2016)",
+        "Docente ai Corsi di Propedeutica di Chirurgia del Piede di Santa Vittoria d'Alba",
+        "Pubblicazioni su riviste nazionali e internazionali"
+      ]
+    }
+  ],
+  "collaboratori": [
+    [
+      "D.ssa Virginia Caliendo",
+      "Dermatologia"
+    ],
+    [
+      "Dott. Paolo Clerico",
+      "Reumatologia"
+    ],
+    [
+      "D.ssa Daniela Decaroli",
+      "Anestesia e Rianimazione"
+    ],
+    [
+      "Dott. Ugo Dominici",
+      "Angiologia"
+    ],
+    [
+      "D.ssa Elena La Marmora",
+      "Medicina Fisica e Riabilitativa"
+    ],
+    [
+      "Dott. Massimo Navissano",
+      "Chirurgia Plastica"
+    ],
+    [
+      "Dott. Bruno Torchio",
+      "Anatomia patologica"
+    ],
+    [
+      "Dott. Walter Troni",
+      "Elettromiografia, Neurologia"
+    ]
+  ],
+  "assicurazioni": [
+    "Allianz",
+    "Aon",
+    "Assidai",
+    "Axa Caring",
+    "Blue Assistance",
+    "Emvap",
+    "Faschim",
+    "Fasdac",
+    "Fasi",
+    "Fasi/Assidai",
+    "Generali",
+    "Insalute",
+    "My Assistance",
+    "My Rete",
+    "Previmedical",
+    "Sas"
+  ],
+  "scuola": [
+    {
+      "anno": "1977",
+      "titolo": "Nasce la rivista",
+      "testo": "Il prof. Giacomo Pisani fonda «Chirurgia del Piede - Foot Surgery», oggi «Medicina e Chirurgia della Caviglia e del Piede», quadrimestrale peer reviewed edito da Minerva Medica e indicizzato in EMBASE e Scopus.",
+      "img": "/piede-gq46/img/rivista.webp"
+    },
+    {
+      "anno": "1989",
+      "titolo": "Nasce il Centro",
+      "testo": "Il Centro di Chirurgia del Piede viene costituito sotto la direzione del prof. Giacomo Pisani, poi del Dott. Pier Carlo Pisani fino all'aprile 2017.",
+      "img": "/piede-gq46/img/fornaca-salotto.webp"
+    },
+    {
+      "anno": "1990",
+      "titolo": "I corsi di Santa Vittoria d'Alba",
+      "testo": "Dopo i primi 20 corsi all'Ospedale Civile di Alba, i Corsi Propedeutici alla Patologia del Piede si spostano a Santa Vittoria d'Alba: 68 edizioni dirette dal prof. Pisani, circa 80 corsisti ogni anno.",
+      "img": "/piede-gq46/img/santavittoria.webp"
+    },
+    {
+      "anno": "2017",
+      "titolo": "La continuità",
+      "testo": "Da maggio 2017 l'attività ambulatoriale e chirurgica prosegue con i dottori Errichiello e Cerlon, in collaborazione con il Dott. Deledda.",
+      "img": "/piede-gq46/img/scalone.webp"
+    },
+    {
+      "anno": "2027",
+      "titolo": "Corso 70+4",
+      "testo": "La scuola continua con l'Associazione G. Pisani ex-alumni: il prossimo corso propedeutico è in programma dal 3 al 6 maggio 2027, con borse di studio per specializzandi.",
+      "img": "/piede-gq46/img/sala-corsi.webp"
+    }
+  ],
+  "estero": [
+    "20 corsi teorico-pratici in Clinica Fornaca per ortopedici tedeschi, con borsa della Società Tedesca di Chirurgia del Piede",
+    "2 corsi per ortopedici brasiliani a Santa Vittoria d'Alba",
+    "Corsi alle Cliniche Ortopediche di Augsburg e Aachen",
+    "2 corsi all'Avana, Cuba",
+    "2 corsi a Campo Grande e all'Ospedale San Julião, Brasile"
+  ],
+  "settimana": [
+    {
+      "g": "Lun",
+      "nome": "Lunedì",
+      "tipo": "Ambulatorio",
+      "testo": "Visite, medicazioni e controlli post-operatori allo Studio, corso Vittorio Emanuele II 87, 2° piano."
+    },
+    {
+      "g": "Mar",
+      "nome": "Martedì",
+      "tipo": "Ambulatorio",
+      "testo": "Visite, medicazioni e controlli post-operatori allo Studio, corso Vittorio Emanuele II 87, 2° piano."
+    },
+    {
+      "g": "Mer",
+      "nome": "Mercoledì",
+      "tipo": "Sala operatoria",
+      "testo": "Seduta operatoria alla Clinica Fornaca di Sessant, al civico 91: a pochi passi dallo Studio dove si fanno visite e controlli."
+    },
+    {
+      "g": "Gio",
+      "nome": "Giovedì",
+      "tipo": "Ambulatorio",
+      "testo": "Visite, medicazioni e controlli post-operatori allo Studio, corso Vittorio Emanuele II 87, 2° piano."
+    },
+    {
+      "g": "Ven",
+      "nome": "Venerdì",
+      "tipo": "Ambulatorio",
+      "testo": "Visite, medicazioni e controlli post-operatori allo Studio, corso Vittorio Emanuele II 87, 2° piano."
+    }
+  ],
+  "percorso": [
+    {
+      "titolo": "La visita",
+      "luogo": "Studio · civico 87",
+      "testo": "Ascoltiamo la storia del disturbo, guardiamo come appoggia e come cammina, esaminiamo il piede in carico e da sdraiato. Porti scarpe e plantari che usa di solito e gli esami già fatti."
+    },
+    {
+      "titolo": "Gli esami",
+      "luogo": "Se servono",
+      "testo": "Per la maggior parte delle deformità bastano radiografie in carico, cioè in piedi: mostrano gli angoli reali sotto il peso del corpo. Ecografia o risonanza solo quando aggiungono qualcosa."
+    },
+    {
+      "titolo": "La decisione",
+      "luogo": "Insieme",
+      "testo": "Spieghiamo cosa abbiamo trovato e le possibilità: plantari, scarpe, fisioterapia, infiltrazioni o intervento. Si opera quando il disturbo limita la vita di tutti i giorni, non per un numero."
+    },
+    {
+      "titolo": "L'intervento",
+      "luogo": "Clinica Fornaca · civico 91",
+      "testo": "Il mercoledì, nella sede chirurgica della Clinica Fornaca di Sessant. Di solito in anestesia locoregionale, cioè solo della gamba, con il ricovero il più breve possibile."
+    },
+    {
+      "titolo": "Medicazioni e controlli",
+      "luogo": "Studio · civico 87",
+      "testo": "Nelle settimane successive La rivediamo allo Studio per medicazioni, radiografie di controllo e indicazioni sul ritorno alle scarpe, al lavoro e allo sport."
+    }
+  ],
+  "aree": {
+    "titolo": "",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi siamo",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "alluce-valgo",
+    "categoria": "Alluce valgo",
+    "titolo": "Alluce valgo: intervento, recupero e risultati",
+    "img": "/piede-gq46/img/rep-alluce.webp",
+    "tempoLettura": "8 min",
+    "intro": "L'alluce valgo è la deformità del piede che vediamo più spesso. Molte persone rimandano l'intervento per anni, per paura del dolore o di un recupero lungo. Qui spieghiamo quando ha senso operare, come si svolge l'intervento oggi e cosa aspettarsi nelle settimane successive.",
+    "sezioni": [
+      {
+        "titolo": "Che cos'è l'alluce valgo",
+        "paragrafi": [
+          "Nell'alluce valgo il primo metatarso, l'osso lungo che porta all'alluce, devia verso l'interno del piede, mentre l'alluce si sposta verso le altre dita. Alla base del dito compare la classica «cipolla»: una prominenza ossea che sfrega nella scarpa e spesso si arrossa.",
+          "Non è solo un problema estetico. Con il tempo l'alluce spinge meno nel passo, il carico si sposta sulle teste dei metatarsi vicini e possono comparire dolore sotto la pianta, calli e dita a martello.",
+          "La predisposizione è in gran parte familiare e legata alla forma del piede; è più frequente nelle donne. Le scarpe strette e con il tacco alto non sono l'unica causa, ma accelerano la deformità e il dolore."
+        ]
+      },
+      {
+        "titolo": "Come si valuta",
+        "paragrafi": [
+          "La visita parte dalla storia del disturbo: da quanto tempo c'è, quanto limita il cammino, quali scarpe riesce ancora a portare. Poi osserviamo il piede in piedi e da sdraiati, la mobilità dell'alluce, le dita vicine e l'appoggio della pianta.",
+          "Le radiografie in carico, fatte in piedi, sono l'esame fondamentale. Ci permettono di misurare gli angoli tra metatarso e falange e tra primo e secondo metatarso, di vedere se l'articolazione è consumata e di scegliere la tecnica più adatta. Lo stesso alluce, con angoli diversi, si corregge in modi diversi."
+        ]
+      },
+      {
+        "titolo": "Quando conviene operare",
+        "paragrafi": [
+          "Non si opera un angolo: si opera un piede che fa male o che limita la vita di tutti i giorni. Le ragioni più frequenti per proporre l'intervento sono:"
+        ],
+        "elenco": [
+          "dolore alla prominenza o all'articolazione, nonostante scarpe comode",
+          "difficoltà a trovare calzature e a camminare a lungo",
+          "dolore sotto la pianta per il carico che si sposta sulle altre teste metatarsali",
+          "dita vicine che iniziano a deformarsi",
+          "deformità che peggiora nel tempo"
+        ],
+        "chiusura": "Plantari, distanziatori e scarpe larghe possono alleviare il fastidio, ma non correggono la deformità. Se il piede non fa male e Lei cammina bene, spesso basta un controllo nel tempo."
+      },
+      {
+        "titolo": "Come si svolge l'intervento",
+        "paragrafi": [
+          "L'intervento corregge l'asse del primo metatarso con una osteotomia, cioè un taglio controllato dell'osso che viene riposizionato e fissato, di solito con piccole viti. Si interviene anche sui tessuti molli attorno all'articolazione e, se serve, sulle dita vicine.",
+          "Per le deformità lievi e moderate si usano osteotomie vicine all'articolazione; per quelle più gravi può servire una correzione più alta, alla base del metatarso. Esistono tecniche tradizionali, mini-invasive e percutanee: la scelta dipende dal piede e dalla deformità, non dalla moda del momento.",
+          "Al Centro operiamo il mercoledì nella sede chirurgica della Clinica Fornaca di Sessant, al civico 91 di corso Vittorio Emanuele II. Di solito l'intervento si esegue in anestesia locoregionale, che addormenta solo il piede e la gamba, con una leggera sedazione se il paziente lo desidera."
+        ]
+      },
+      {
+        "titolo": "Il recupero, settimana per settimana",
+        "paragrafi": [
+          "Ogni piede e ogni tecnica hanno i loro tempi: quelli che seguono sono indicazioni generali, che adattiamo a ciascuno.",
+          "Nei primi giorni è importante tenere il piede sollevato il più possibile, per limitare il gonfiore e il dolore, che si controlla bene con i farmaci prescritti. Nella maggior parte dei casi si cammina da subito con una scarpa post-operatoria a suola rigida, che protegge la correzione.",
+          "Le medicazioni e i controlli si fanno allo Studio, al civico 87. Intorno alla sesta settimana una radiografia di controllo verifica la guarigione dell'osso: di solito da quel momento si torna gradualmente a una scarpa comoda e ampia.",
+          "Il gonfiore è la parte più lenta: può durare alcuni mesi, soprattutto la sera. Il ritorno alla guida, al lavoro e allo sport dipende dal tipo di intervento, dal piede operato e dall'attività che svolge: ne parliamo insieme prima dell'intervento, così può organizzarsi."
+        ]
+      },
+      {
+        "titolo": "I risultati e i rischi",
+        "paragrafi": [
+          "Quando l'indicazione è corretta, la grande maggioranza dei pazienti è soddisfatta: il dolore alla prominenza si risolve, le scarpe tornano a calzare e il piede lavora meglio.",
+          "Come ogni intervento, anche questo ha dei rischi, che spieghiamo sempre in visita: rigidità dell'articolazione, ritardo nella guarigione dell'osso, fastidio ai mezzi di sintesi, infezione, trombosi e, nel tempo, la possibilità che la deformità si ripresenti. Una correzione ben pianificata, un recupero seguito e scarpe adatte riducono molto queste eventualità."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che ci fanno spesso in visita:"
+        ],
+        "elenco": [
+          "Si possono operare entrambi i piedi insieme? In casi selezionati sì, ma di solito preferiamo un piede alla volta per rendere il recupero più semplice.",
+          "L'alluce valgo si ripresenta? È possibile, ma raro quando la tecnica è adatta alla deformità e il piede viene seguito nel recupero.",
+          "Dopo potrò portare qualsiasi scarpa? Il piede sarà più stretto e indolore, ma le scarpe molto strette e con il tacco alto restano sconsigliate.",
+          "Le viti vanno tolte? Di solito no: si rimuovono solo se danno fastidio."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita specialistica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "chirurgia-percutanea",
+      "categoria": "Tecniche",
+      "titolo": "Chirurgia percutanea del piede: cos'è e per chi è adatta",
+      "img": "/piede-gq46/img/rep-percutanea.webp",
+      "tempoLettura": "7 min",
+      "intro": "«Si può fare senza tagli?» È una delle domande che sentiamo più spesso. La chirurgia percutanea del piede esiste da anni ed è entrata nella pratica di molti centri. Spieghiamo cos'è davvero, quali vantaggi offre e perché non è la risposta per tutti.",
+      "sezioni": [
+        {
+          "titolo": "Che cosa significa percutanea",
+          "paragrafi": [
+            "Nella chirurgia percutanea il chirurgo lavora attraverso incisioni di pochi millimetri, senza aprire ampiamente la pelle. Con piccole frese motorizzate esegue le osteotomie, cioè i tagli correttivi dell'osso, e le correzioni sui tessuti molli.",
+            "Poiché il chirurgo non vede direttamente l'osso, l'intervento è guidato dall'amplificatore di brillanza, una radiografia in tempo reale che mostra la posizione degli strumenti e della correzione.",
+            "Tra le tecniche mini-invasive c'è anche una via di mezzo: incisioni piccole, ma non puntiformi, con una parte della correzione eseguita a vista."
+          ]
+        },
+        {
+          "titolo": "Per quali problemi si usa",
+          "paragrafi": [
+            "Le indicazioni più frequenti riguardano l'avampiede:"
+          ],
+          "elenco": [
+            "alluce valgo lieve e moderato, e in casi selezionati anche più marcato",
+            "dita a martello e dita in griffe",
+            "metatarsalgie da sovraccarico delle teste metatarsali",
+            "quinto dito varo, la cosiddetta «cipollina del sarto»",
+            "alcune esostosi, cioè sporgenze ossee dolorose"
+          ],
+          "chiusura": "Il retropiede e la caviglia, invece, richiedono spesso approcci diversi, anche se le tecniche mini-invasive si stanno estendendo."
+        },
+        {
+          "titolo": "I vantaggi",
+          "paragrafi": [
+            "Incisioni più piccole significano in genere meno danno ai tessuti molli, cicatrici quasi invisibili e, in molti casi, un gonfiore iniziale più contenuto. Spesso si cammina da subito con una scarpa post-operatoria e l'intervento si svolge in anestesia locoregionale.",
+            "È importante però non confondere «mini-invasivo» con «senza recupero». L'osso tagliato ha bisogno dello stesso tempo per guarire, qualunque sia la dimensione della ferita: le settimane con la scarpa post-operatoria e i controlli radiografici restano necessari."
+          ]
+        },
+        {
+          "titolo": "I limiti",
+          "paragrafi": [
+            "Nella chirurgia percutanea non sempre l'osteotomia viene fissata con viti: in alcune tecniche la correzione è mantenuta dal bendaggio, che va quindi rinnovato con regolarità e precisione nelle prime settimane. Per questo il paziente deve essere disponibile a controlli frequenti.",
+            "Non tutte le deformità si prestano: un alluce valgo molto grave, un'instabilità della base del primo metatarso o un'articolazione consumata possono richiedere una correzione più stabile, con tecnica aperta o con un'artrodesi.",
+            "Infine, è una chirurgia con una lunga curva di apprendimento: il risultato dipende molto dall'esperienza di chi la esegue."
+          ]
+        },
+        {
+          "titolo": "Come scegliamo",
+          "paragrafi": [
+            "Al Centro la domanda non è «percutanea sì o no», ma «qual è la correzione giusta per questo piede». Valutiamo la deformità con la visita e le radiografie in carico, l'età, la qualità dell'osso, le esigenze di lavoro e di sport.",
+            "La chirurgia percutanea e mini-invasiva è da anni anche un tema dei nostri corsi di aggiornamento a Santa Vittoria d'Alba, dove abbiamo ospitato colleghi che l'hanno sviluppata e diffusa. Conoscere bene tutte le tecniche è il modo migliore per proporre a ciascuno quella più adatta, senza forzature."
+          ]
+        },
+        {
+          "titolo": "Dopo l'intervento",
+          "paragrafi": [
+            "Nelle prime settimane si cammina con la scarpa post-operatoria, tenendo il piede sollevato quando si è seduti. Le medicazioni si fanno allo Studio, con un calendario che Le diamo prima dell'intervento.",
+            "Intorno alla sesta settimana, se la radiografia conferma la guarigione, si passa gradualmente a una scarpa comoda. Il gonfiore può durare ancora qualche mese: è normale e si riduce un po' alla volta."
+          ]
+        },
+        {
+          "titolo": "La visita prima di decidere",
+          "paragrafi": [
+            "Prima di scegliere la tecnica, ci serve capire bene il piede. In visita osserviamo l'appoggio in piedi e il cammino, la mobilità dell'alluce e delle dita, le callosità sotto la pianta e la forma delle scarpe che usa ogni giorno.",
+            "Le radiografie in carico ci dicono quanto è ampia la deformità, se l'articolazione è consumata e come sono lunghi i metatarsi. Sono proprio questi dettagli a orientare verso una correzione percutanea, mini-invasiva o tradizionale.",
+            "Porti con sé anche l'elenco dei farmaci che assume, in particolare anticoagulanti e antiaggreganti, e le informazioni su diabete, problemi di circolazione o fumo: sono fattori che pesano sulla guarigione di qualsiasi intervento."
+          ]
+        },
+        {
+          "titolo": "Cosa chiedere al chirurgo",
+          "paragrafi": [
+            "È giusto che Lei arrivi all'intervento con le idee chiare. Alcune domande utili: quale correzione è prevista e perché, se verranno usate viti o solo il bendaggio, quanto tempo dovrà portare la scarpa post-operatoria, ogni quanto saranno le medicazioni, quando potrà guidare e tornare al lavoro.",
+            "Sono le stesse domande a cui rispondiamo in visita, perché un recupero sereno comincia da aspettative realistiche."
+          ]
+        },
+        {
+          "titolo": "Il ruolo del paziente",
+          "paragrafi": [
+            "Nella chirurgia percutanea il paziente ha una parte importante. Rispettare il calendario delle medicazioni, tenere il bendaggio asciutto e integro, camminare con la scarpa post-operatoria e tenere il piede sollevato da seduti sono gesti semplici che proteggono la correzione nelle settimane in cui l'osso guarisce."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che ci fanno spesso:"
+          ],
+          "elenco": [
+            "Fa meno male? Spesso il dolore dei primi giorni è più contenuto, ma dipende dal piede e dal tipo di correzione.",
+            "Si torna prima al lavoro? A volte sì, soprattutto nei lavori da seduti; nei lavori in piedi i tempi sono simili alla chirurgia tradizionale.",
+            "Il risultato è lo stesso? Quando l'indicazione è giusta, i risultati sono paragonabili a quelli delle tecniche aperte."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita specialistica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "piede-piatto-adulto",
+      "categoria": "Piede piatto",
+      "titolo": "Piede piatto nell'adulto: quando l'arco si abbassa con gli anni",
+      "img": "/piede-gq46/img/rep-piatto.webp",
+      "tempoLettura": "7 min",
+      "intro": "Molte persone hanno il piede piatto da sempre e non hanno alcun disturbo. Altre notano che, con gli anni, l'arco di un piede si abbassa e la caviglia comincia a fare male. Sono due situazioni molto diverse: vediamo come distinguerle e cosa si può fare.",
+      "sezioni": [
+        {
+          "titolo": "Piatto da sempre o piatto «acquisito»",
+          "paragrafi": [
+            "Il piede piatto flessibile presente fin dall'infanzia è spesso una caratteristica costituzionale: se non dà dolore e non limita le attività, di solito non richiede cure particolari.",
+            "Diverso è il piede piatto che compare o peggiora in età adulta, spesso da un solo lato. In questi casi l'arco cede perché le strutture che lo sostengono si sono indebolite: il più delle volte il tendine tibiale posteriore, che corre lungo il lato interno della caviglia e «tira su» la volta del piede.",
+            "Oggi si parla di deformità progressiva del piede piatto: un nome che sottolinea come, se non riconosciuta, tenda a peggiorare nel tempo."
+          ]
+        },
+        {
+          "titolo": "I segnali da non sottovalutare",
+          "paragrafi": [
+            "Conviene farsi visitare se nota:"
+          ],
+          "elenco": [
+            "dolore e gonfiore sul lato interno della caviglia, dopo aver camminato o stando in piedi",
+            "un piede che sembra più piatto dell'altro, o scarpe che si consumano in modo diverso",
+            "fatica a camminare a lungo o su terreni irregolari",
+            "difficoltà a sollevarsi sulla punta di un solo piede",
+            "nelle fasi più avanzate, dolore anche sul lato esterno del piede"
+          ],
+          "chiusura": "Sovrappeso, diabete, ipertensione e alcuni traumi della caviglia sono fattori che si associano più spesso a questo problema."
+        },
+        {
+          "titolo": "Come lo valutiamo",
+          "paragrafi": [
+            "In visita guardiamo il piede in piedi, da davanti e da dietro: un tallone che devia verso l'esterno e le dita che si vedono troppo dal lato esterno sono segni tipici. Chiediamo di salire sulle punte, prima con entrambi i piedi e poi con uno solo, e controlliamo forza e sensibilità del tendine.",
+            "Valutiamo poi se la deformità è ancora flessibile, cioè correggibile a mano, o già rigida. È la distinzione che più orienta la cura.",
+            "Le radiografie in carico mostrano la forma della volta e lo stato delle articolazioni; l'ecografia o la risonanza permettono di vedere il tendine quando serve."
+          ]
+        },
+        {
+          "titolo": "Le cure senza intervento",
+          "paragrafi": [
+            "Nelle fasi iniziali la maggior parte dei pazienti migliora senza chirurgia. Plantari su misura che sostengono la volta, scarpe stabili, esercizi di rinforzo del tibiale posteriore e dei muscoli del piede, controllo del peso.",
+            "Nei periodi di dolore più intenso può servire un breve periodo con un tutore che scarica il tendine. L'obiettivo è dare al tendine il tempo di recuperare e rallentare la progressione della deformità."
+          ]
+        },
+        {
+          "titolo": "Quando serve l'intervento",
+          "paragrafi": [
+            "Se il dolore persiste nonostante le cure, o la deformità peggiora, si valuta la chirurgia. Quando il piede è ancora flessibile si può ricostruire la volta, combinando interventi sui tendini e osteotomie, cioè correzioni dell'osso, per riallineare il tallone e l'arco.",
+            "Quando invece le articolazioni sono rigide o consumate, può essere più indicata un'artrodesi: si fondono una o più articolazioni del retropiede in posizione corretta. Il piede perde un po' di mobilità laterale, ma torna stabile e indolore.",
+            "Sono interventi più impegnativi di quelli dell'avampiede: il recupero richiede alcuni mesi, con un periodo senza carico, e lo programmiamo insieme in dettaglio."
+          ]
+        },
+        {
+          "titolo": "E nei bambini?",
+          "paragrafi": [
+            "Il piede piatto dei bambini è un capitolo a sé. Nei primi anni l'arco non è ancora formato ed è normale vedere un piede piatto. Al Centro valutiamo il piede piatto dell'infanzia dai 6 anni in poi, quando si può capire se l'arco si sta formando e se ci sono segnali che richiedono un trattamento."
+          ]
+        },
+        {
+          "titolo": "Il ruolo delle scarpe",
+          "paragrafi": [
+            "Nel piede piatto dell'adulto la scarpa conta molto. Meglio modelli con il contrafforte del tallone rigido, che tiene fermo il retropiede, una suola stabile e non troppo morbida, spazio sufficiente per un plantare.",
+            "Le scarpe molto flessibili, le ciabatte e le calzature consumate sul lato interno aumentano il carico sul tendine tibiale posteriore. Non serve una scarpa ortopedica: basta una buona scarpa da cammino o da città, scelta con attenzione."
+          ]
+        },
+        {
+          "titolo": "Il piede cavo: il problema opposto",
+          "paragrafi": [
+            "Esiste anche il problema opposto, il piede cavo, in cui l'arco è troppo alto. Il carico si concentra sul tallone e sull'avampiede, compaiono callosità sotto le teste metatarsali, dita in griffe e distorsioni ricorrenti della caviglia.",
+            "Anche qui la visita parte dall'appoggio e dalla flessibilità del piede. Nei casi in cui il piede cavo compare o peggiora, è importante escludere una causa neurologica, che valutiamo insieme ai colleghi neurologi con cui collaboriamo."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che ci fanno spesso:"
+          ],
+          "elenco": [
+            "Il plantare va portato per sempre? Dipende: in molti casi serve nei periodi di maggiore carico, non necessariamente tutto il giorno.",
+            "Posso continuare a camminare e fare sport? Sì, scegliendo attività e scarpe adatte e riducendo i carichi nelle fasi di dolore.",
+            "Se non faccio nulla cosa succede? Il piede piatto acquisito tende a peggiorare: riconoscerlo presto permette quasi sempre cure più semplici."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita specialistica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "metatarsalgia-morton",
+      "categoria": "Avampiede",
+      "titolo": "Dolore sotto l'avampiede: metatarsalgia o neuroma di Morton?",
+      "img": "/piede-gq46/img/rep-avampiede.webp",
+      "tempoLettura": "7 min",
+      "intro": "«Mi sembra di camminare su un sasso»: è una frase che sentiamo spesso. Il dolore sotto la pianta, nella zona d'appoggio delle dita, ha cause diverse. Le due più frequenti sono la metatarsalgia e il neuroma di Morton: si somigliano, ma si curano in modo diverso.",
+      "sezioni": [
+        {
+          "titolo": "Una zona che lavora molto",
+          "paragrafi": [
+            "Quando camminiamo, nella fase di spinta il peso del corpo si concentra sulle teste dei metatarsi, le estremità delle cinque ossa lunghe che portano alle dita. È una zona protetta da un cuscinetto di grasso, ma molto sollecitata, soprattutto con scarpe strette o con il tacco.",
+            "Quando qualcosa altera la distribuzione del carico, o questo cuscinetto si assottiglia con l'età, compare il dolore."
+          ]
+        },
+        {
+          "titolo": "La metatarsalgia",
+          "paragrafi": [
+            "Metatarsalgia significa semplicemente dolore ai metatarsi: è un sintomo, non una diagnosi. Di solito si sente sotto la seconda e la terza testa metatarsale, spesso con una callosità dura nello stesso punto. Le cause più comuni sono:"
+          ],
+          "elenco": [
+            "un alluce valgo o rigido, che spinge meno e trasferisce il carico sulle dita vicine",
+            "un metatarso più lungo degli altri",
+            "dita a martello, che spingono in basso le teste metatarsali",
+            "un piede cavo, che concentra il peso sull'avampiede",
+            "sovrappeso, attività in piedi prolungate, calzature non adatte"
+          ],
+          "chiusura": "Capire la causa è il primo passo: curare solo il callo, senza correggere ciò che lo produce, porta a recidive continue."
+        },
+        {
+          "titolo": "Il neuroma di Civinini-Morton",
+          "paragrafi": [
+            "Il neuroma di Morton, descritto per primo dall'italiano Filippo Civinini, non è un tumore: è un ispessimento fibroso di un nervo digitale, compresso tra due teste metatarsali. Più spesso si trova tra il terzo e il quarto dito, a volte tra il secondo e il terzo.",
+            "I sintomi sono tipici: dolore bruciante o a scossa sotto la pianta, che può irradiarsi alle dita, formicolio o sensazione di avere una piega nella calza. Peggiora con le scarpe strette e migliora togliendole e massaggiando il piede.",
+            "In visita, comprimendo l'avampiede di lato, si può avvertire uno scatto doloroso. Un'ecografia o una risonanza confermano la diagnosi e aiutano a distinguerlo da altre cause, come una sinovite o una borsite."
+          ]
+        },
+        {
+          "titolo": "Le cure senza intervento",
+          "paragrafi": [
+            "Per entrambi i problemi si parte quasi sempre dalle cure conservative. Scarpe con la punta ampia e il tacco basso, un plantare con un piccolo rialzo appena dietro le teste metatarsali per scaricarle, la riduzione dei carichi nei periodi di dolore.",
+            "Nel neuroma di Morton, se il dolore persiste, un'infiltrazione nel punto giusto può ridurre l'infiammazione attorno al nervo. Molti pazienti migliorano così in modo duraturo."
+          ]
+        },
+        {
+          "titolo": "Quando si opera",
+          "paragrafi": [
+            "Se il dolore persiste nonostante le cure, si valuta l'intervento. Nel neuroma di Morton si può liberare il nervo dalla compressione o asportare il tratto ispessito: dopo l'asportazione rimane di solito una piccola zona di sensibilità ridotta tra le due dita, che in genere disturba poco.",
+            "Nella metatarsalgia si interviene sulla causa: correggendo l'alluce valgo o le dita a martello e, quando serve, accorciando o sollevando i metatarsi sovraccaricati con osteotomie dedicate. Molti di questi interventi si possono eseguire anche con tecniche mini-invasive."
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Ci sono utili le scarpe che usa di più, compresi eventuali plantari, e gli esami già fatti, con i referti. Se il dolore va e viene, annoti in quali situazioni compare: una lunga camminata, certe scarpe, la corsa. Sono informazioni preziose per arrivare alla diagnosi giusta."
+          ]
+        },
+        {
+          "titolo": "Il piede in carico racconta molto",
+          "paragrafi": [
+            "La pianta del piede si studia in carico. Guardando come appoggia e dove si formano i calli, e osservando le scarpe che usa ogni giorno, capiamo spesso dove si concentra il peso e perché.",
+            "Un'impronta al podoscopio e le radiografie in piedi completano il quadro: mostrano la lunghezza dei metatarsi, l'allineamento dell'alluce e delle dita e la forma dell'arco. Sono informazioni che un esame fatto da sdraiati non può dare."
+          ]
+        },
+        {
+          "titolo": "Quando il dolore non è dei metatarsi",
+          "paragrafi": [
+            "Non tutto il dolore sotto l'avampiede è metatarsalgia o neuroma. Una piccola frattura da stress, frequente in chi ha aumentato all'improvviso camminate o corsa, dà un dolore puntiforme e un gonfiore sul dorso del piede.",
+            "Altre volte il dolore nasce da una lesione della placca plantare, la struttura che stabilizza la base del dito, o da un'infiammazione articolare. Per questo, prima di qualsiasi cura, cerchiamo sempre di dare un nome preciso al problema."
+          ]
+        },
+        {
+          "titolo": "Calli: cosa fare e cosa evitare",
+          "paragrafi": [
+            "La callosità sotto la pianta è la risposta della pelle a un carico eccessivo. Toglierla dal podologo dà sollievo, ma torna se la causa resta. Eviti i callifughi aggressivi e i tagli fai da te, soprattutto se ha il diabete o problemi di circolazione."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che ci fanno spesso:"
+          ],
+          "elenco": [
+            "Il neuroma è pericoloso? No: è un ispessimento benigno del nervo, ma può essere molto doloroso.",
+            "Il plantare basta? Spesso sì, se è fatto per scaricare il punto giusto e la scarpa è adatta.",
+            "Posso continuare a correre? Nelle fasi di dolore conviene ridurre i carichi; poi si riprende con scarpe e plantare adeguati."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita specialistica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "chirurgiapiede.torino",
+    "nota": "il Centro non ha profili social: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Alluce valgo: quando operare",
+        "punti": [
+          "Fa male anche con scarpe comode",
+          "Non trova più calzature",
+          "Dolore sotto la pianta",
+          "Le dita vicine si deformano"
+        ],
+        "didascalia": "Non si opera un angolo: si opera un piede che fa male. Plantari e distanziatori alleviano, ma non correggono la deformità.",
+        "hashtag": "#allucevalgo #chirurgiadelpiede #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Chirurgia percutanea: per tutti?",
+        "risposta": "No. Per il piede giusto, sì.",
+        "didascalia": "Incisioni di pochi millimetri e meno danno ai tessuti, ma l'osso ha bisogno degli stessi tempi per guarire. La tecnica si sceglie sul piede, non sulla moda.",
+        "hashtag": "#chirurgiapercutanea #piede #ortopedia"
+      },
+      {
+        "stile": "foto",
+        "immagine": "piatto",
+        "titolo": "Piede piatto nell'adulto",
+        "sottotitolo": "Quando l'arco cede con gli anni",
+        "didascalia": "Dolore e gonfiore sul lato interno della caviglia, un piede più piatto dell'altro, fatica a salire sulle punte: segnali da non sottovalutare.",
+        "hashtag": "#piedepiatto #caviglia #torino"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove siamo",
+    "altreLabel": "Sede chirurgica",
+    "email": "segreteria.chirurgiapiede@clinicafornaca.it",
+    "luoghi": [
+      {
+        "tipo": "Studio medico",
+        "nome": "Studio del Centro di Chirurgia del Piede",
+        "breve": "CDF, 2° piano",
+        "indirizzo": "Corso Vittorio Emanuele II 87",
+        "citta": "Torino",
+        "cap": "10128",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo Studio del Centro, corso Vittorio Emanuele II 87 (CDF, 2° piano)",
+        "testo": "Visite, medicazioni e controlli post-operatori, dal lunedì al venerdì. Al secondo piano del Centro Diagnostico Fornaca.",
+        "img": "/piede-gq46/img/scalone.webp"
+      },
+      {
+        "tipo": "Sede chirurgica",
+        "nome": "Clinica Fornaca di Sessant",
+        "breve": "civico 91",
+        "indirizzo": "Corso Vittorio Emanuele II 91",
+        "citta": "Torino",
+        "cap": "10128",
+        "mappa": true,
+        "principale": false,
+        "frase": "la Clinica Fornaca di Sessant, corso Vittorio Emanuele II 91",
+        "testo": "Gli interventi, il mercoledì, a pochi passi dallo Studio.",
+        "img": "/piede-gq46/img/fornaca.webp"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "La segreteria, sig.ra Donatella, risponde al telefono e su WhatsApp. Visite private o in convenzione con le principali assicurazioni sanitarie.",
+    "telefono": "0115574284",
+    "telefonoLabel": "011 55 74 284",
+    "chiamaLabel": "la segreteria",
+    "whatsapp": "393669347763",
+    "whatsappLabel": "366 934 7763",
+    "saluto": "sig.ra Donatella",
+    "oggettoMail": "Richiesta di visita",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi il giorno e l'orario che preferisce: la segreteria La ricontatta su WhatsApp per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e medico vengono confermati dalla segreteria.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo",
+        "Medicazione o controllo post-operatorio"
+      ],
+      "motivi": [
+        "Alluce valgo",
+        "Alluce rigido",
+        "Dito a martello",
+        "Metatarsalgia",
+        "Neuroma di Morton",
+        "Piede piatto (adulto)",
+        "Piede piatto (bambino, dai 6 anni)",
+        "Piede cavo",
+        "Dolore al tallone",
+        "Tendini",
+        "Artrosi o esiti di trauma",
+        "Controllo dopo l'intervento",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "l'alluce valgo",
+        "l'alluce rigido",
+        "un dito a martello",
+        "un dolore sotto l'avampiede (metatarsalgia)",
+        "un sospetto neuroma di Morton",
+        "un piede piatto",
+        "il piede piatto di mio figlio",
+        "un piede cavo",
+        "un dolore al tallone o una fascite plantare",
+        "un problema ai tendini del piede o della caviglia",
+        "un'artrosi o gli esiti di un trauma al piede o alla caviglia",
+        "un controllo dopo l'intervento",
+        "un problema al piede o alla caviglia"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio del Centro · corso Vittorio Emanuele II 87",
+          "frase": "lo Studio del Centro, corso Vittorio Emanuele II 87 (CDF, 2° piano)"
+        }
+      ],
+      "privacy": "https://www.iubenda.com/privacy-policy/76062689",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo e se ha già radiografie"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#F3F5F9",
+      "ink": "#14162E",
+      "muted": "#5B6078",
+      "line": "#DDE1EB",
+      "brand": "#22357A",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#2C9AD1",
+      "deep": "#12132F",
+      "deep-ink": "#C9D3EA",
+      "ocra": "#8C5E12"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600;7..72,700&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Literata",
+    "fontTesti": "Schibsted Grotesk",
+    "fontUi": "Schibsted Grotesk",
+    "favicon": "/piede-gq46/img/errichiello-volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/piede-gq46/brand/brand.json",
+    "pagine": [
+      "https://www.chirurgiapiede-pisani.it/",
+      "https://www.chirurgiapiede-pisani.it/il-centro",
+      "https://www.chirurgiapiede-pisani.it/clinica",
+      "https://www.chirurgiapiede-pisani.it/scientifica",
+      "https://www.chirurgiapiede-pisani.it/didattica",
+      "https://www.chirurgiapiede-pisani.it/corsi-di-aggiornamento",
+      "https://www.chirurgiapiede-pisani.it/dove-siamo",
+      "https://www.chirurgiapiede-pisani.it/richiedi-informazioni"
+    ]
+  }
+}

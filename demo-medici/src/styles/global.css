@@ -12,6 +12,7 @@
   --color-brand2: var(--c-brand2);
   --color-deep: var(--c-deep);
   --color-deep-ink: var(--c-deep-ink);
+  --color-ocra: var(--c-ocra, #8C5E12);
   --font-head: var(--f-head);
   --font-sans: var(--f-sans);
 }
@@ -333,4 +334,52 @@ html { scroll-behavior: smooth; }
   .sede-btn[aria-pressed="true"] { border-color: var(--c-brand); background: color-mix(in srgb, var(--c-brand) 7%, #fff); box-shadow: inset 0 0 0 1px var(--c-brand); }
   .sede-btn:disabled { opacity: .45; cursor: not-allowed; }
   .stile-movimento .card { border-radius: 24px; }
+}
+
+/* Layout "trattato": capitoli numerati, tavole a tratto, sommario laterale */
+@layer components {
+  .cap-testa { max-width: 52rem; }
+  .cap-num { font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--c-ocra); }
+  .cap-scura .cap-num { color: #D9A54A; }
+  .cap-titolo { margin-top: .6rem; font-family: var(--f-head); font-weight: 600; font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1.05; letter-spacing: -0.022em; color: var(--c-deep); }
+  .cap-filetto { display: block; margin-top: 1.1rem; height: 2px; width: 7rem; background: var(--c-deep); transform-origin: left; }
+  .cap-scura .cap-filetto { background: #D9A54A; }
+  .cap-intro { margin-top: 1.1rem; font-size: 17.5px; line-height: 1.65; color: color-mix(in srgb, var(--c-ink) 80%, transparent); max-width: 44rem; }
+  .opz { display: block; cursor: pointer; }
+  .opz span { display: flex; min-height: 44px; align-items: center; justify-content: center; border: 1px solid var(--c-line); padding: .45rem .6rem; text-align: center; font-size: 14px; font-weight: 500; line-height: 1.2; transition: background-color .2s, color .2s, border-color .2s; }
+  .opz:hover span { border-color: var(--c-deep); }
+  .opz input:checked + span { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .opz input:focus-visible + span { outline: 2px solid var(--c-brand2); outline-offset: 2px; }
+  .scheda .campo { border-radius: 3px; }
+  .zona-btn { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .zona-btn:hover { border-color: var(--c-deep); }
+  .zona-btn[aria-pressed="true"] { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .zona-svg { fill: transparent; cursor: pointer; transition: fill .25s; }
+  .zona-svg:hover { fill: color-mix(in srgb, var(--c-brand2) 14%, transparent); }
+  .zona-svg.attiva, .zona-svg.attiva ellipse { fill: url(#cp-tratto); }
+  g.zona-svg ellipse { fill: inherit; }
+  .zona-tendini path { stroke: var(--c-muted); stroke-width: 1.4; stroke-dasharray: 4 4; cursor: pointer; transition: stroke .25s, stroke-width .25s; }
+  .zona-tendini.attiva path { stroke: var(--c-brand2); stroke-width: 4; stroke-dasharray: 7 4; }
+  .cursore { accent-color: var(--c-deep); height: 28px; cursor: pointer; }
+  .classe-hva { color: var(--c-muted); transition: border-color .3s, color .3s; }
+  .classe-hva.attiva { border-color: var(--c-ocra); color: var(--c-deep); }
+  .giorno-btn { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s; }
+  .giorno-btn:hover { background: var(--c-surface); }
+  .giorno-btn[aria-pressed="true"] { background: var(--c-deep); color: #fff; }
+  .giorno-btn[data-tipo="sala"] > span:last-child { color: var(--c-brand2); opacity: 1; }
+  .medico-tab { color: var(--c-muted); border-bottom: 3px solid transparent; margin-bottom: -1px; transition: color .2s, border-color .2s; }
+  .medico-tab:hover { color: var(--c-deep); }
+  .medico-tab[aria-selected="true"] { color: var(--c-deep); border-color: var(--c-brand2); }
+  .ass-chip { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .ass-chip:hover { border-color: var(--c-deep); }
+  .ass-chip.spenta { opacity: .3; }
+  .ass-chip[aria-pressed="true"] { background: var(--c-deep); border-color: var(--c-deep); color: #fff; opacity: 1; }
+  .esito-si { border-color: var(--c-brand2) !important; }
+  .sommario { opacity: 0; pointer-events: none; transition: opacity .4s; }
+  .sommario.visibile { opacity: 1; pointer-events: auto; }
+  .som-voce { transition: color .2s, border-color .2s; }
+  .som-voce:hover { color: var(--c-deep); }
+  .som-voce.attiva { color: var(--c-deep); border-color: var(--c-deep); font-weight: 600; }
+  .stile-trattato .card { border-radius: 3px; box-shadow: none; border: 1px solid var(--c-line); }
+  .stile-trattato .campo, .stile-trattato .btn, .stile-trattato .slot, .stile-trattato .giorno { border-radius: 3px; }
 }

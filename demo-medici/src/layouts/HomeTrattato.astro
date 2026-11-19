@@ -1,0 +1,728 @@
+---
+// Layout "trattato" (prima demo: Centro di Chirurgia del Piede, Torino, scuola Pisani dal 1989). Impostazione da trattato di
+// chirurgia: Literata (mai corsivo) + Schibsted Grotesk, inchiostro blu notte della rivista del Centro (#12132F) con l'azzurro della
+// copertina (#2C9AD1) e un ocra per i numeri di capitolo e di tavola. Capitoli con numero romano e filetto che si traccia, tavole
+// (figure) disegnate a tratto con didascalia, sommario laterale fisso su schermi larghi. Interattivi utili: prenotazione WhatsApp alla
+// segreteria (medico, motivo, privato/assicurazione); "Dove fa male?" (mappa della pianta → patologie trattate); "L'impronta"
+// (podoscopio con l'indice di Chippaux-Smirak regolabile); "L'angolo dell'alluce" (schema con l'angolo regolabile e la classe);
+// "Una settimana al Centro" (giorni → ambulatorio / sala operatoria); medici a schede; convenzioni con ricerca.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const zone = x.zone as any[];
+const motivi = x.motivi as any[];
+const medici = x.mediciDati as any[];
+const ass = x.assicurazioni as string[];
+const sedi = m.sedi.luoghi as any[];
+const P = x.prenota;
+const wa = String(P.whatsapp);
+const msg0 = `Buongiorno ${P.saluto}, vorrei prenotare una visita per ${motivi[0].frase}, in regime privato.`;
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const R = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+const capitoli = [['aree', 'Dove fa male'], ['impronta', "L'impronta"], ['alluce', "L'alluce valgo"], ['percorso', 'Il percorso'], ['chi-siamo', 'I medici'], ['scuola', 'La Scuola'], ['convenzioni', 'Convenzioni'], ['sedi', 'Dove siamo']];
+const cap = (id: string) => R[capitoli.findIndex((c) => c[0] === id)];
+
+// --- impronta (podoscopio): k = indice di Chippaux-Smirak in %, larghezza dell'istmo / larghezza dell'avampiede
+const FF = 174, XL = 196, YI = 296;
+const banda = (k: number) => {
+  const W = (k / 100) * FF;
+  const xm = XL - W, xt = Math.max(48, 206 - 30 - W * 0.9), xb = Math.max(100, 182 - 30 - W * 0.6);
+  const cx = 2 * xm - (xb + xt) / 2;
+  return { d: `M206 190 Q198 296 182 404 L${xb.toFixed(1)} 404 Q${cx.toFixed(1)} 296 ${xt.toFixed(1)} 190 Z`, xm };
+};
+const K0 = 36;
+const b0 = banda(K0);
+// --- alluce: angolo HVA in gradi
+const H0 = 24;
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <div class="fixed inset-x-0 z-50 h-[2px] origin-left scale-x-0 bg-brand2" style="top: var(--banner-h)" data-avanzamento aria-hidden="true"></div>
+  <header class="sticky z-40 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-[1180px] items-center justify-between gap-4 px-4 py-3 sm:px-8">
+      <a href={`/${m.slug}`} class="min-w-0 leading-tight">
+        <span class="block whitespace-nowrap font-head text-[15.5px] font-semibold tracking-[-0.01em] text-deep sm:text-[20px]">Centro di Chirurgia del Piede</span>
+        <span class="block text-[10.5px] font-medium uppercase tracking-[0.2em] text-muted sm:text-[11.5px]">Torino · <span class="hidden sm:inline">Clinica Fornaca · </span>dal 1989</span>
+      </a>
+      <nav class="hidden items-center gap-6 text-[14px] font-medium text-ink/70 lg:flex" aria-label="Sezioni">
+        <a href="#aree" class="hover:text-brand">Patologie</a><a href="#alluce" class="hover:text-brand">Alluce valgo</a><a href="#chi-siamo" class="hover:text-brand">I medici</a><a href="#scuola" class="hover:text-brand">La Scuola</a><a href="#convenzioni" class="hover:text-brand">Convenzioni</a><a href="#sedi" class="hover:text-brand">Dove siamo</a>
+      </nav>
+      <a href="#prenota-box" class="btn !min-h-[42px] shrink-0 !rounded-[3px] bg-deep !px-4 text-sm text-white hover:bg-brand"><Icona nome="commento" class="h-4 w-4" /> Prenoti</a>
+    </div>
+  </header>
+
+  <!-- SOMMARIO (schermi larghi) -->
+  <nav class="sommario fixed left-6 top-1/2 z-30 hidden w-[140px] -translate-y-1/2 min-[1560px]:block" aria-label="Sommario" data-sommario>
+    <p class="text-[10.5px] font-semibold uppercase tracking-[0.22em] text-muted">Sommario</p>
+    <ol class="mt-3 space-y-1.5 border-l border-line">
+      {capitoli.map(([id, t], i) => <li><a href={`#${id}`} class="som-voce -ml-px block border-l-2 border-transparent py-0.5 pl-3 text-[12.5px] leading-snug text-muted" data-som={id}><span class="font-head text-[11px] font-semibold text-ocra">{R[i]}</span> {t}</a></li>)}
+    </ol>
+  </nav>
+
+  <main class="trattato">
+    <!-- FRONTESPIZIO -->
+    <section class="relative border-b border-line" data-hero>
+      <div class="mx-auto grid max-w-[1180px] gap-10 px-4 pb-14 pt-10 sm:px-8 lg:grid-cols-12 lg:gap-14 lg:pb-20 lg:pt-14">
+        <div class="lg:col-span-7">
+          <p class="flex items-center gap-3 text-[12px] font-semibold uppercase tracking-[0.24em] text-ocra" data-entra><span class="h-px w-10 bg-ocra"></span>{x.hero.eyebrow}</p>
+          <h1 class="mt-5 font-head text-[2.9rem] font-semibold leading-[1.02] tracking-[-0.025em] text-deep sm:text-[4.6rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 max-w-[38rem] text-[18px] leading-relaxed text-ink/80" data-entra>{x.hero.testo}</p>
+
+          <!-- SCHEDA DI PRENOTAZIONE -->
+          <div id="prenota-box" class="scheda mt-9 border border-deep/80 bg-white" data-prenota-box data-wa={wa} data-saluto={P.saluto} data-entra>
+            <div class="flex items-center justify-between border-b border-deep/80 bg-deep px-5 py-3 text-white">
+              <p class="font-head text-[17px] font-semibold">Scheda di prenotazione</p>
+              <p class="hidden text-[12px] text-deep-ink sm:block">risponde la sig.ra Donatella</p>
+            </div>
+            <div class="grid gap-x-6 gap-y-5 p-5 sm:grid-cols-2 sm:p-6">
+              <fieldset class="sm:col-span-2">
+                <legend class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Con chi</legend>
+                <div class="mt-2 grid grid-cols-2 gap-1.5 sm:grid-cols-4">
+                  <label class="opz"><input type="radio" name="medico" value="" checked class="sr-only" /><span>Il primo disponibile</span></label>
+                  {medici.map((d) => <label class="opz"><input type="radio" name="medico" value={d.id} data-frase={d.frase} class="sr-only" /><span>{d.breve}</span></label>)}
+                </div>
+              </fieldset>
+              <label class="block"><span class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Per cosa</span>
+                <select class="campo mt-2" data-motivo>{motivi.map((t) => <option value={t.id} data-frase={t.frase}>{t.nome}</option>)}</select></label>
+              <fieldset>
+                <legend class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Come</legend>
+                <div class="mt-2 grid grid-cols-2 gap-1.5">
+                  <label class="opz"><input type="radio" name="regime" value="privato" checked class="sr-only" /><span>Privato</span></label>
+                  <label class="opz"><input type="radio" name="regime" value="assicurazione" class="sr-only" /><span>Assicurazione</span></label>
+                </div>
+              </fieldset>
+              <label class="block sm:col-span-2" hidden data-ass-box><span class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Quale assicurazione</span>
+                <select class="campo mt-2" data-ass>{ass.map((a) => <option value={a}>{a}</option>)}<option value="">Un'altra assicurazione</option></select></label>
+            </div>
+            <div class="border-t border-line bg-surface px-5 py-4 sm:px-6">
+              <p class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Il Suo messaggio</p>
+              <p class="mt-1.5 font-head text-[17px] leading-snug text-deep" data-anteprima aria-live="polite">{msg0}</p>
+              <div class="mt-4 flex flex-col gap-2.5 sm:flex-row">
+                <a href={`https://wa.me/${wa}?text=${encodeURIComponent(msg0)}`} target="_blank" rel="noopener" class="btn !rounded-[3px] bg-brand text-white hover:bg-deep" data-prenota><Icona nome="commento" /> Invii su WhatsApp</a>
+                <a href={telHref(P.telefono)} class="btn !rounded-[3px] border border-deep/30 bg-white text-deep hover:border-deep"><Icona nome="tel" /> {P.telefonoLabel}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <figure class="relative" data-tavola-hero>
+            <div class="border border-line bg-white p-2.5">
+              <div class="overflow-hidden" data-foto-hero><img src={foto.ritratto} alt={foto.ritrattoAlt} width="960" height="1099" fetchpriority="high" class="aspect-[960/1099] w-full object-cover" data-foto-img /></div>
+            </div>
+            <figcaption class="mt-3 flex gap-3 text-[13.5px] leading-snug text-muted"><span class="shrink-0 font-head font-semibold text-ocra">Tav. I</span><span>Il Dott. Carmelo Errichiello nello Studio del Centro. Alle spalle, un rilievo dedicato al piede.</span></figcaption>
+          </figure>
+          <dl class="mt-8 grid grid-cols-2 border-t border-deep/80">
+            {(x.numeri as any[]).map((n, i) => (
+              <div class={`border-b border-line py-4 ${i % 2 ? 'pl-5' : 'border-r pr-4'}`}>
+                <dt class="sr-only">{n.testo}</dt>
+                <dd><span class="block font-head text-[2rem] font-semibold leading-none tracking-[-0.02em] text-deep sm:text-[2.4rem]">{n.circa && <span class="text-[0.55em] font-medium text-muted">circa </span>}<span data-conta={n.valore} data-fmt={n.fmt}>{n.fmt}</span>{n.piu && <span class="text-brand2">+</span>}</span><span class="mt-1.5 block text-[13.5px] leading-snug text-muted">{n.testo}</span></dd>
+              </div>
+            ))}
+          </dl>
+          <p class="mt-3 text-[12px] text-muted">{x.numeriNota}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- I. DOVE FA MALE -->
+    <section id="aree" class="cap px-4 py-16 sm:px-8 sm:py-24" data-cap="aree">
+      <div class="mx-auto max-w-[1180px]">
+        <header class="cap-testa"><p class="cap-num">Capitolo {cap('aree')}</p><h2 class="cap-titolo">Dove fa male?</h2><span class="cap-filetto" data-filetto></span>
+          <p class="cap-intro">Le patologie che trattiamo più spesso, zona per zona. Scelga dove sente il disturbo, sulla tavola o dall'elenco.</p></header>
+        <div class="mt-12 grid gap-10 lg:grid-cols-12" data-mappa data-zone={JSON.stringify(zone.map((z) => ({ id: z.id, nome: z.nome, dove: z.dove })))}>
+          <figure class="lg:col-span-5">
+            <div class="tavola relative mx-auto max-w-[360px] border border-line bg-surface px-6 py-5">
+              <svg viewBox="0 0 300 560" class="w-full" role="group" aria-label="Pianta del piede divisa in zone">
+                <defs>
+                  <clipPath id="cp-pianta"><path d="M150,540 C112,540 94,512 94,476 C94,436 103,404 100,362 C97,318 76,284 68,246 C62,214 60,186 66,160 C72,136 100,122 130,126 C168,130 212,134 232,160 C244,178 244,202 240,228 C234,272 226,322 222,372 C218,422 214,452 212,478 C208,518 188,540 150,540 Z" /></clipPath>
+                  <pattern id="cp-tratto" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="var(--c-brand2)" stroke-width="2.2" /></pattern>
+                  <pattern id="cp-tratto-lieve" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="7" stroke="var(--c-deep)" stroke-opacity=".12" stroke-width="1" /></pattern>
+                </defs>
+                <g class="piede-base">
+                  <path d="M150,540 C112,540 94,512 94,476 C94,436 103,404 100,362 C97,318 76,284 68,246 C62,214 60,186 66,160 C72,136 100,122 130,126 C168,130 212,134 232,160 C244,178 244,202 240,228 C234,272 226,322 222,372 C218,422 214,452 212,478 C208,518 188,540 150,540 Z" fill="url(#cp-tratto-lieve)" />
+                  <g fill="#fff"><ellipse cx="92" cy="92" rx="27" ry="38" /><ellipse cx="140" cy="100" rx="15" ry="21" /><ellipse cx="172" cy="108" rx="14" ry="19" /><ellipse cx="200" cy="121" rx="12" ry="16" /><ellipse cx="223" cy="141" rx="10.5" ry="14" /></g>
+                </g>
+                <g clip-path="url(#cp-pianta)">
+                  <rect x="40" y="128" width="220" height="108" class="zona-svg" data-zona-svg="avampiede" />
+                  <rect x="40" y="236" width="220" height="176" class="zona-svg" data-zona-svg="arco" />
+                  <rect x="40" y="412" width="220" height="140" class="zona-svg" data-zona-svg="tallone" />
+                </g>
+                <circle cx="90" cy="168" r="26" class="zona-svg" data-zona-svg="alluce" />
+                <ellipse cx="92" cy="92" rx="27" ry="38" class="zona-svg" data-zona-svg="alluce" />
+                <g class="zona-svg" data-zona-svg="dita"><ellipse cx="140" cy="100" rx="15" ry="21" /><ellipse cx="172" cy="108" rx="14" ry="19" /><ellipse cx="200" cy="121" rx="12" ry="16" /><ellipse cx="223" cy="141" rx="10.5" ry="14" /></g>
+                <g class="zona-tendini" data-zona-svg="caviglia" fill="none"><path d="M100,400 C97,440 96,470 100,500" /><path d="M218,400 C216,440 214,470 210,500" /><path d="M112,528 C130,544 170,544 190,528" /></g>
+                <g class="piede-linee" fill="none" stroke="var(--c-deep)" stroke-width="1.6" stroke-linejoin="round" data-tratto>
+                  <path d="M150,540 C112,540 94,512 94,476 C94,436 103,404 100,362 C97,318 76,284 68,246 C62,214 60,186 66,160 C72,136 100,122 130,126 C168,130 212,134 232,160 C244,178 244,202 240,228 C234,272 226,322 222,372 C218,422 214,452 212,478 C208,518 188,540 150,540 Z" />
+                  <ellipse cx="92" cy="92" rx="27" ry="38" /><ellipse cx="140" cy="100" rx="15" ry="21" /><ellipse cx="172" cy="108" rx="14" ry="19" /><ellipse cx="200" cy="121" rx="12" ry="16" /><ellipse cx="223" cy="141" rx="10.5" ry="14" />
+                </g>
+                <g class="text-[11px]" fill="var(--c-muted)" font-family="var(--f-testi, inherit)" aria-hidden="true"><text x="0" y="214">avampiede</text><text x="0" y="318">arco</text><text x="226" y="470">tallone</text></g>
+              </svg>
+            </div>
+            <figcaption class="mx-auto mt-3 flex max-w-[360px] gap-3 text-[13px] leading-snug text-muted"><span class="shrink-0 font-head font-semibold text-ocra">Tav. II</span><span>La pianta del piede vista dal basso. La linea tratteggiata indica il decorso dei tendini attorno al tallone.</span></figcaption>
+          </figure>
+          <div class="lg:col-span-7">
+            <div class="grid grid-cols-2 gap-1.5 sm:grid-cols-3" role="group" aria-label="Zone del piede">
+              {zone.map((z, i) => <button type="button" class="zona-btn border border-line px-3.5 py-3 text-left" data-zona-id={z.id} aria-pressed={i === 0 ? 'true' : 'false'}><span class="block font-head text-[16px] font-semibold">{z.nome}</span><span class="block text-[12.5px] opacity-75">{z.pat.length} {z.pat.length === 1 ? 'patologia' : 'patologie'}</span></button>)}
+            </div>
+            <div class="mt-6 border-t-2 border-deep pt-5">
+              <p class="text-[13px] text-muted" data-zona-dove>{zone[0].dove}</p>
+              {zone.map((z, i) => (
+                <div data-zona-pannello={z.id} hidden={i !== 0}>
+                  {z.pat.map((p: any) => (
+                    <article class="border-b border-line py-5">
+                      <h3 class="font-head text-[1.45rem] font-semibold text-deep">{p.nome}</h3>
+                      <p class="mt-2 max-w-2xl text-[16px] leading-relaxed text-ink/80">{p.testo}</p>
+                      <button type="button" class="mt-3 inline-flex items-center gap-2 text-[14px] font-semibold text-brand hover:underline" data-prenota-motivo={p.motivo}>Prenoti una visita per questo <Icona nome="freccia" class="h-4 w-4" /></button>
+                    </article>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- II. L'IMPRONTA -->
+    <section id="impronta" class="cap border-y border-line bg-surface px-4 py-16 sm:px-8 sm:py-24" data-cap="impronta">
+      <div class="mx-auto max-w-[1180px]">
+        <header class="cap-testa"><p class="cap-num">Capitolo {cap('impronta')}</p><h2 class="cap-titolo">L'impronta del piede</h2><span class="cap-filetto" data-filetto></span>
+          <p class="cap-intro">In visita guardiamo il piede in carico, anche al podoscopio: la sua impronta dice molto dell'arco plantare. Sposti il cursore e veda come cambia.</p></header>
+        <div class="mt-12 grid gap-10 lg:grid-cols-12 lg:items-center" data-impronta>
+          <figure class="lg:col-span-5">
+            <div class="tavola mx-auto max-w-[340px] border border-line bg-white p-4">
+              <svg viewBox="0 0 260 520" class="w-full" aria-labelledby="impronta-desc" role="img">
+                <desc id="impronta-desc">Impronta plantare con la larghezza dell'istmo regolabile</desc>
+                <defs><pattern id="cp-griglia" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="var(--c-line)" stroke-width="1" /></pattern></defs>
+                <rect width="260" height="520" fill="url(#cp-griglia)" />
+                <g fill="var(--c-deep)" data-stampa>
+                  <ellipse cx="76" cy="80" rx="22" ry="27" /><ellipse cx="122" cy="68" rx="12" ry="15" /><ellipse cx="151" cy="72" rx="11" ry="14" /><ellipse cx="178" cy="82" rx="10" ry="13" /><ellipse cx="202" cy="98" rx="9" ry="12" />
+                  <path d="M48,170 C46,130 90,112 130,116 C170,119 214,124 222,158 C228,186 214,214 196,222 C160,236 98,236 68,222 C54,214 49,196 48,170 Z" />
+                  <ellipse cx="148" cy="452" rx="52" ry="60" />
+                  <path d={b0.d} data-banda />
+                </g>
+                <g stroke="var(--c-ocra)" stroke-width="1.4" fill="var(--c-ocra)" font-size="13" font-weight="600">
+                  <line x1="48" y1="146" x2="222" y2="146" stroke-dasharray="3 3" /><line x1="48" y1="138" x2="48" y2="154" /><line x1="222" y1="138" x2="222" y2="154" />
+                  <text x="135" y="136" text-anchor="middle" stroke="none">a</text>
+                  <line x1={b0.xm} y1={YI} x2={XL} y2={YI} stroke="var(--c-brand2)" stroke-width="2.4" data-righello />
+                  <line x1={b0.xm} y1={YI - 9} x2={b0.xm} y2={YI + 9} stroke="var(--c-brand2)" stroke-width="2" data-righello-sx />
+                  <line x1={XL} y1={YI - 9} x2={XL} y2={YI + 9} stroke="var(--c-brand2)" stroke-width="2" />
+                  <text x="236" y="300" fill="var(--c-brand2)" stroke="none">b</text>
+                </g>
+              </svg>
+            </div>
+            <figcaption class="mx-auto mt-3 flex max-w-[340px] gap-3 text-[13px] leading-snug text-muted"><span class="shrink-0 font-head font-semibold text-ocra">Tav. III</span><span>Impronta al podoscopio. Indice di Chippaux-Smirak = b / a: larghezza dell'istmo sulla larghezza dell'avampiede.</span></figcaption>
+          </figure>
+          <div class="lg:col-span-7">
+            <label for="cp-indice" class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Larghezza dell'istmo (b / a)</label>
+            <div class="mt-3 flex items-center gap-5">
+              <input id="cp-indice" type="range" min="0" max="75" step="1" value={K0} class="cursore w-full" data-indice aria-valuetext={`${K0} per cento`} />
+              <p class="w-[5.5rem] shrink-0 text-right font-head text-[2.6rem] font-semibold leading-none text-deep"><span data-indice-val>{K0}</span><span class="text-[0.5em] text-muted">%</span></p>
+            </div>
+            <div class="mt-2 flex justify-between text-[12px] text-muted"><span>arco alto</span><span>nella norma</span><span>arco basso</span></div>
+            <div class="mt-8 border-l-2 border-brand2 pl-5">
+              <p class="font-head text-[1.6rem] font-semibold text-deep" data-indice-classe aria-live="polite">Nella norma</p>
+              <p class="mt-2 max-w-xl text-[16px] leading-relaxed text-ink/80" data-indice-testo></p>
+              <button type="button" class="mt-4 inline-flex items-center gap-2 text-[14px] font-semibold text-brand hover:underline" data-indice-prenota data-prenota-motivo="piatto-adulto">Prenoti una visita <Icona nome="freccia" class="h-4 w-4" /></button>
+            </div>
+            <p class="mt-8 max-w-xl text-[13.5px] leading-relaxed text-muted">Valori orientativi. L'impronta da sola non fa diagnosi: la valutiamo insieme all'esame del piede in piedi e da sdraiato, alla flessibilità dell'arco e, quando servono, alle radiografie in carico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- III. L'ALLUCE VALGO -->
+    <section id="alluce" class="cap px-4 py-16 sm:px-8 sm:py-24" data-cap="alluce">
+      <div class="mx-auto max-w-[1180px]">
+        <header class="cap-testa"><p class="cap-num">Capitolo {cap('alluce')}</p><h2 class="cap-titolo">L'angolo dell'alluce valgo</h2><span class="cap-filetto" data-filetto></span>
+          <p class="cap-intro">Sulle radiografie in carico misuriamo l'angolo tra il primo metatarso e la falange dell'alluce. È uno dei dati che orientano la scelta della correzione.</p></header>
+        <div class="mt-12 grid gap-10 lg:grid-cols-12 lg:items-center" data-hva>
+          <div class="order-2 lg:order-1 lg:col-span-6">
+            <label for="cp-hva" class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Angolo metatarso-falangeo</label>
+            <div class="mt-3 flex items-center gap-5">
+              <input id="cp-hva" type="range" min="5" max="50" step="1" value={H0} class="cursore w-full" data-hva-range aria-valuetext={`${H0} gradi`} />
+              <p class="w-[5.5rem] shrink-0 text-right font-head text-[2.6rem] font-semibold leading-none text-deep"><span data-hva-val>{H0}</span><span class="text-[0.6em] text-muted">°</span></p>
+            </div>
+            <ol class="mt-4 grid grid-cols-4 text-[12px]" aria-hidden="true">
+              {[['fino a 15°', 'norma'], ['16-20°', 'lieve'], ['21-40°', 'moderato'], ['oltre 40°', 'grave']].map(([a, b]) => <li class="classe-hva border-t-[3px] border-line pt-2" data-classe-hva={b}><span class="block font-semibold capitalize">{b}</span><span class="text-muted">{a}</span></li>)}
+            </ol>
+            <div class="mt-8">
+              <p class="font-head text-[1.6rem] font-semibold text-deep" data-hva-classe aria-live="polite"></p>
+              <p class="mt-2 max-w-xl text-[16px] leading-relaxed text-ink/80" data-hva-testo></p>
+            </div>
+            <blockquote class="mt-8 max-w-xl border-l-2 border-ocra pl-5 font-head text-[1.25rem] leading-snug text-deep">Non si opera un angolo: si opera un piede che fa male o che limita la vita di tutti i giorni.</blockquote>
+            <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[14px] font-semibold">
+              <a href={`/${m.slug}/articolo`} class="inline-flex items-center gap-2 text-brand hover:underline">Legga: intervento, recupero e risultati <Icona nome="freccia" class="h-4 w-4" /></a>
+              <button type="button" class="inline-flex items-center gap-2 text-brand hover:underline" data-prenota-motivo="alluce-valgo">Prenoti una visita</button>
+            </div>
+          </div>
+          <figure class="order-1 lg:order-2 lg:col-span-6">
+            <div class="tavola mx-auto max-w-[400px] border border-line bg-surface px-4 py-6">
+              <svg viewBox="70 50 210 410" class="mx-auto w-full max-w-[300px]" role="img" aria-labelledby="hva-desc">
+                <desc id="hva-desc">Schema del primo raggio del piede con l'angolo dell'alluce regolabile</desc>
+                <defs><pattern id="cp-osso" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="var(--c-deep)" stroke-opacity=".18" stroke-width="1" /></pattern>
+                  <pattern id="cp-emin" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="4" stroke="var(--c-ocra)" stroke-width="1.6" /></pattern></defs>
+                <g class="ossa" stroke="var(--c-deep)" stroke-width="1.5" stroke-linejoin="round">
+                  <!-- secondo raggio -->
+                  <g fill="#fff"><path d="M203,448 L227,448 L226,414 C222,384 221,304 222,266 A16,16 0 1 0 208,266 C209,304 208,384 204,414 Z" /><path d="M207,228 C208,214 208,190 209,172 A8,8 0 0 1 221,172 C222,190 222,214 223,228 Q215,223 207,228 Z" /><path d="M209,160 C210,150 210,140 211,132 A6,6 0 0 1 219,132 C220,140 220,150 221,160 Q215,157 209,160 Z" /><path d="M210,122 C211,114 212,108 213,104 Q215,100 217,104 C218,108 219,114 220,122 Q215,120 210,122 Z" /></g>
+                  <g data-m1 transform={`rotate(${-(7 + Math.max(0, H0 - 12) * 0.22)} 150 440)`}>
+                    <path d="M133,445 L167,445 L166,410 C160,380 160,300 162,262 A21,21 0 1 0 138,262 C140,300 140,380 134,410 Z" fill="#fff" />
+                    <path d="M133,445 L167,445 L166,410 C160,380 160,300 162,262 A21,21 0 1 0 138,262 C140,300 140,380 134,410 Z" fill="url(#cp-osso)" stroke="none" />
+                    <circle cx="131" cy="244" r={Math.max(0, 4 + (H0 - 10) * 0.35)} fill="url(#cp-emin)" stroke="var(--c-ocra)" data-eminenza />
+                    <line x1="150" y1="440" x2="150" y2="150" stroke="var(--c-brand2)" stroke-width="1.2" stroke-dasharray="5 4" />
+                    <g data-p1 transform={`rotate(${H0} 150 240)`}>
+                      <path d="M139,214 C141,200 141,170 142,150 A10,10 0 0 1 158,150 C159,170 159,200 161,214 Q150,208 139,214 Z" fill="#fff" />
+                      <path d="M141,138 C142,124 143,110 146,98 Q150,90 154,98 C157,110 158,124 159,138 Q150,134 141,138 Z" fill="#fff" />
+                      <line x1="150" y1="240" x2="150" y2="70" stroke="var(--c-ocra)" stroke-width="1.2" stroke-dasharray="5 4" />
+                    </g>
+                  </g>
+                </g>
+                <path d="" fill="none" stroke="var(--c-ocra)" stroke-width="1.6" data-arco-hva />
+                <text x="0" y="0" fill="var(--c-ocra)" font-size="15" font-weight="700" text-anchor="middle" data-arco-label></text>
+                <text x="78" y="452" fill="var(--c-muted)" font-size="10">I metatarso</text><text x="234" y="452" fill="var(--c-muted)" font-size="10">II</text>
+              </svg>
+            </div>
+            <figcaption class="mx-auto mt-3 flex max-w-[400px] gap-3 text-[13px] leading-snug text-muted"><span class="shrink-0 font-head font-semibold text-ocra">Tav. IV</span><span>Il primo raggio visto dall'alto, schema. In ocra la prominenza mediale, la «cipolla», che cresce con la deformità.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- IV. IL PERCORSO -->
+    <section id="percorso" class="cap border-t border-line px-4 py-16 sm:px-8 sm:py-24" data-cap="percorso">
+      <div class="mx-auto max-w-[1180px]">
+        <header class="cap-testa"><p class="cap-num">Capitolo {cap('percorso')}</p><h2 class="cap-titolo">Una settimana al Centro</h2><span class="cap-filetto" data-filetto></span>
+          <p class="cap-intro">Lo Studio e la sala operatoria sono sullo stesso corso, a due civici di distanza: chi La visita è chi La opera e La segue dopo.</p></header>
+        <div class="mt-12" data-settimana data-giorni={JSON.stringify(x.settimana)}>
+          <div class="grid grid-cols-5 border border-deep/80" role="group" aria-label="Giorni della settimana">
+            {(x.settimana as any[]).map((g, i) => <button type="button" class={`giorno-btn min-w-0 px-1 py-4 text-center sm:px-2 ${i ? 'border-l border-deep/20' : ''}`} data-giorno={i} data-tipo={g.tipo === 'Sala operatoria' ? 'sala' : 'amb'} aria-pressed={i === 2 ? 'true' : 'false'}><span class="block font-head text-[1.3rem] font-semibold">{g.g}</span><span class="mt-1 block text-[11.5px] uppercase tracking-[0.12em] opacity-80">{g.tipo === 'Sala operatoria' ? 'Sala' : <><span class="sm:hidden">Amb.</span><span class="hidden sm:inline">Ambulatorio</span></>}</span></button>)}
+          </div>
+          <div class="mt-5 grid gap-6 sm:grid-cols-12 sm:items-center">
+            <div class="sm:col-span-8"><p class="font-head text-[1.5rem] font-semibold text-deep"><span data-giorno-nome>{x.settimana[2].nome}</span> · <span class="text-brand" data-giorno-tipo>{x.settimana[2].tipo}</span></p><p class="mt-1.5 text-[16px] leading-relaxed text-ink/80" data-giorno-testo>{x.settimana[2].testo}</p></div>
+            <div class="sm:col-span-4"><img src={foto.sala} alt="La sala operatoria della Clinica Fornaca" width="460" height="313" loading="lazy" class="w-full border border-line" data-giorno-img data-img-sala={foto.sala} data-img-amb={foto.visita} data-alt-sala="La sala operatoria della Clinica Fornaca" data-alt-amb="Una visita allo Studio del Centro" /></div>
+          </div>
+        </div>
+        <ol class="relative mt-16 grid gap-8 lg:grid-cols-5 lg:gap-6" data-percorso>
+          <span class="absolute left-[7px] top-2 bottom-2 w-px bg-line lg:hidden" aria-hidden="true"></span>
+          <span class="absolute inset-x-0 top-[7px] hidden h-px bg-line lg:block" aria-hidden="true"></span>
+          <span class="absolute inset-x-0 top-[7px] hidden h-px origin-left bg-deep lg:block" aria-hidden="true" data-percorso-linea></span>
+          {(x.percorso as any[]).map((p) => <li class="relative pl-8 lg:pl-0 lg:pt-8"><span class="absolute left-0 top-0 h-[15px] w-[15px] rotate-45 border-2 border-deep bg-white" aria-hidden="true"></span><p class="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-ocra">{p.luogo}</p><h3 class="mt-1 font-head text-[1.3rem] font-semibold text-deep">{p.titolo}</h3><p class="mt-2 text-[15px] leading-relaxed text-ink/80">{p.testo}</p></li>)}
+        </ol>
+      </div>
+    </section>
+
+    <!-- V. I MEDICI -->
+    <section id="chi-siamo" class="cap border-t border-line bg-surface px-4 py-16 sm:px-8 sm:py-24" data-cap="chi-siamo">
+      <div class="mx-auto max-w-[1180px]">
+        <header class="cap-testa"><p class="cap-num">Capitolo {cap('chi-siamo')}</p><h2 class="cap-titolo">I medici</h2><span class="cap-filetto" data-filetto></span>
+          <p class="cap-intro">Chirurghi ortopedici formati alla scuola del prof. Giacomo Pisani, con decenni di attività al C.T.O. di Torino e di insegnamento all'Università.</p></header>
+        <div class="mt-10" data-medici>
+          <div class="flex gap-1 overflow-x-auto border-b border-deep/80" role="tablist" aria-label="Medici del Centro">
+            {medici.map((d, i) => <button type="button" role="tab" id={`tab-${d.id}`} aria-controls={`pan-${d.id}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="medico-tab shrink-0 px-4 py-3 text-left" data-medico-tab={d.id}><span class="block font-head text-[16.5px] font-semibold">{d.nome}</span><span class="block text-[12.5px] opacity-75">{d.ruolo}</span></button>)}
+          </div>
+          {medici.map((d, i) => (
+            <div role="tabpanel" id={`pan-${d.id}`} aria-labelledby={`tab-${d.id}`} hidden={i !== 0} class="grid gap-8 pt-8 md:grid-cols-12" data-medico-pan={d.id}>
+              <figure class="md:col-span-4"><div class="max-w-[300px] border border-line bg-white p-2"><img src={d.foto} alt={d.nome} width={d.w} height={d.h} loading="lazy" class="aspect-square w-full object-cover object-top" /></div></figure>
+              <div class="md:col-span-8">
+                <h3 class="font-head text-[2rem] font-semibold leading-tight text-deep">{d.nome}</h3>
+                <p class="mt-3 max-w-2xl text-[17px] leading-relaxed text-ink/85">{d.sintesi}</p>
+                <ul class="mt-6 max-w-2xl divide-y divide-line border-y border-line">{d.fatti.map((f: string) => <li class="flex gap-3 py-2.5 text-[15px] leading-snug text-ink/85"><span class="mt-[7px] h-[7px] w-[7px] shrink-0 rotate-45 bg-brand2" aria-hidden="true"></span>{f}</li>)}</ul>
+                <button type="button" class="mt-5 inline-flex items-center gap-2 text-[14px] font-semibold text-brand hover:underline" data-prenota-medico={d.id}>Chieda una visita con il {d.breve} <Icona nome="freccia" class="h-4 w-4" /></button>
+              </div>
+            </div>
+          ))}
+          <div class="mt-14 border-t border-line pt-8">
+            <p class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Collaborano con il Centro</p>
+            <ul class="mt-4 grid gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-4">{(x.collaboratori as string[][]).map(([n, s]) => <li class="text-[14.5px] leading-snug"><span class="font-semibold text-deep">{n}</span><span class="block text-muted">{s}</span></li>)}</ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VI. LA SCUOLA -->
+    <section id="scuola" class="cap bg-deep px-4 py-16 text-deep-ink sm:px-8 sm:py-24" data-cap="scuola">
+      <div class="mx-auto max-w-[1180px]">
+        <header class="cap-testa cap-scura"><p class="cap-num">Capitolo {cap('scuola')}</p><h2 class="cap-titolo !text-white">La Scuola</h2><span class="cap-filetto" data-filetto></span>
+          <p class="cap-intro !text-deep-ink">Il Centro nasce da una scuola: quella del prof. Giacomo Pisani, che ha formato generazioni di ortopedici italiani e stranieri. Oggi la portiamo avanti in sala operatoria, in aula e sulla rivista.</p></header>
+        <figure class="mt-12 max-w-[980px]">
+          <div class="overflow-hidden border border-white/15"><img src={foto.dipinto} alt="Dipinto antico che raffigura un'operazione al piede" width="980" height="399" loading="lazy" class="w-full" data-dipinto /></div>
+          <figcaption class="mt-3 flex gap-3 text-[13px] text-deep-ink/70"><span class="shrink-0 font-head font-semibold text-[#D9A54A]">Tav. V</span><span>Un'operazione al piede in un dipinto antico, immagine scelta dal Centro per raccontare la sua storia.</span></figcaption>
+        </figure>
+        <ol class="relative mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-5 lg:gap-6" data-scuola>
+          <span class="absolute inset-x-0 top-[1.4rem] hidden h-px bg-white/15 lg:block" aria-hidden="true"></span>
+          <span class="absolute inset-x-0 top-[1.4rem] hidden h-px origin-left bg-[#D9A54A] lg:block" aria-hidden="true" data-scuola-linea></span>
+          {(x.scuola as any[]).map((s) => (
+            <li class="relative" data-tappa-scuola>
+              <p class="relative inline-block bg-deep pr-3 font-head text-[2.4rem] font-semibold leading-none text-white">{s.anno}</p>
+              <div class="mt-4 overflow-hidden border border-white/15"><img src={s.img} alt="" width="460" height="313" loading="lazy" class="aspect-[3/2] w-full object-cover" /></div>
+              <h3 class="mt-4 font-head text-[1.2rem] font-semibold text-white">{s.titolo}</h3>
+              <p class="mt-1.5 text-[14.5px] leading-relaxed">{s.testo}</p>
+            </li>
+          ))}
+        </ol>
+        <div class="mt-16 grid gap-10 border-t border-white/15 pt-10 lg:grid-cols-12">
+          <div class="flex gap-6 lg:col-span-6">
+            <img src={foto.rivista} alt="Copertina della rivista Medicina e Chirurgia della Caviglia e del Piede" width="289" height="378" loading="lazy" class="w-[120px] shrink-0 self-start border border-white/15 sm:w-[150px]" />
+            <div><p class="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#D9A54A]">La rivista</p><h3 class="mt-2 font-head text-[1.45rem] font-semibold leading-snug text-white">Medicina e Chirurgia della Caviglia e del Piede</h3><p class="mt-2 text-[15px] leading-relaxed">Quadrimestrale di anatomia, fisiologia, patologia e clinica della caviglia e del piede, fondato nel 1977. Peer reviewed, indicizzato in EMBASE e Scopus. Il Dott. Errichiello coordina il Comitato di Redazione, di cui fanno parte anche i dottori Cerlon e Deledda.</p></div>
+          </div>
+          <div class="lg:col-span-6">
+            <p class="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#D9A54A]">Insegnare, anche all'estero</p>
+            <ul class="mt-3 divide-y divide-white/10 border-y border-white/10">{(x.estero as string[]).map((e) => <li class="py-2.5 text-[15px] leading-snug">{e}</li>)}</ul>
+            <p class="mt-4 text-[14px] leading-relaxed text-deep-ink/80">Circa 475 pubblicazioni a nome dei medici del Centro e dei borsisti, i Trattati di Chirurgia del Piede del prof. Pisani in 3 edizioni e le monografie dei suoi collaboratori.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VII. CONVENZIONI -->
+    <section id="convenzioni" class="cap px-4 py-16 sm:px-8 sm:py-24" data-cap="convenzioni">
+      <div class="mx-auto max-w-[1180px]">
+        <header class="cap-testa"><p class="cap-num">Capitolo {cap('convenzioni')}</p><h2 class="cap-titolo">La Sua assicurazione è convenzionata?</h2><span class="cap-filetto" data-filetto></span>
+          <p class="cap-intro">Visite e interventi si possono fare in regime privato o in convenzione con le compagnie assicurative. Cerchi la Sua tra quelle che il Centro indica come esempio.</p></header>
+        <div class="mt-10 grid gap-10 lg:grid-cols-12" data-convenzioni>
+          <div class="lg:col-span-5">
+            <label for="cp-cerca" class="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Nome dell'assicurazione o del fondo</label>
+            <input id="cp-cerca" type="search" autocomplete="off" placeholder="Per esempio: Fasi" class="campo mt-2 !rounded-[3px]" data-cerca />
+            <div class="mt-5 border-l-2 border-line pl-5" data-esito-box>
+              <p class="font-head text-[1.35rem] font-semibold text-deep" data-esito aria-live="polite">Scriva o scelga dall'elenco</p>
+              <p class="mt-1.5 text-[14.5px] leading-relaxed text-muted" data-esito-testo>L'elenco riporta alcuni esempi: se la Sua non c'è, la segreteria Le conferma la copertura.</p>
+              <button type="button" class="btn mt-4 !rounded-[3px] bg-deep text-white hover:bg-brand" hidden data-esito-prenota>Prenoti con questa assicurazione</button>
+            </div>
+          </div>
+          <ul class="flex flex-wrap content-start gap-2 lg:col-span-7" aria-label="Assicurazioni convenzionate (esempi)">
+            {ass.map((a) => <li><button type="button" class="ass-chip border border-line px-3.5 py-2 text-[14.5px] font-medium" data-ass-chip={a} aria-pressed="false">{a}</button></li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIII. DOVE SIAMO -->
+    <section id="sedi" class="cap border-t border-line bg-surface px-4 py-16 sm:px-8 sm:py-24" data-cap="sedi">
+      <div class="mx-auto max-w-[1180px]">
+        <header class="cap-testa"><p class="cap-num">Capitolo {cap('sedi')}</p><h2 class="cap-titolo">Dove siamo</h2><span class="cap-filetto" data-filetto></span>
+          <p class="cap-intro">Corso Vittorio Emanuele II, Torino, tra Porta Nuova e Porta Susa: lo Studio al civico 87, la sede chirurgica al 91.</p></header>
+        <div class="mt-12 grid gap-8 md:grid-cols-2" data-sedi>
+          {sedi.map((s, i) => (
+            <article class="border border-line bg-white">
+              <div class="grid grid-cols-5">
+                <img src={s.img} alt={s.nome} width={i ? 493 : 403} height={i ? 380 : 615} loading="lazy" class="col-span-2 h-full max-h-[300px] w-full object-cover" />
+                <div class="col-span-3 flex flex-col p-5 sm:p-6">
+                  <p class="text-[11.5px] font-semibold uppercase tracking-[0.16em] text-ocra">{s.tipo}</p>
+                  <h3 class="mt-1.5 font-head text-[1.35rem] font-semibold leading-snug text-deep">{s.nome}</h3>
+                  <p class="mt-2 text-[15px] leading-snug">{s.indirizzo}<br />{s.cap} {s.citta}{i === 0 && <><br /><span class="text-muted">CDF, 2° piano</span></>}</p>
+                  <p class="mt-3 text-[14px] leading-relaxed text-muted">{s.testo}</p>
+                  <a href={mapsHref(s.indirizzo, s.citta)} target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-2 pt-4 text-[14px] font-semibold text-brand hover:underline"><Icona nome="pin" class="h-4 w-4" /> Indicazioni</a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div class="mt-8 grid gap-6 border-t-2 border-deep pt-6 sm:grid-cols-3">
+          <p class="text-[15px]"><span class="block text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Segreteria</span>Sig.ra Donatella</p>
+          <p class="text-[15px]"><span class="block text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Telefono e WhatsApp</span><a href={telHref(P.telefono)} class="font-semibold text-brand hover:underline">{P.telefonoLabel}</a> · <a href={`https://wa.me/${wa}`} target="_blank" rel="noopener" class="font-semibold text-brand hover:underline">{P.whatsappLabel}</a></p>
+          <p class="min-w-0 text-[15px]"><span class="block text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">Email</span><a href={`mailto:${m.sedi.email}`} class="break-all font-semibold text-brand hover:underline">{m.sedi.email}</a></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-trattato"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="border-t border-line px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-[1180px]">
+        <div class="flex flex-col gap-3 border-b-2 border-deep pb-4 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.3rem] font-semibold leading-tight tracking-[-0.02em] text-deep sm:text-[3rem]" data-sale>Letture per i pazienti</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="grid gap-x-8 md:grid-cols-2" data-blog>
+          {blog.map((b, i) => (
+            <a href={b.href} class={`group grid grid-cols-[110px_1fr] gap-5 border-b border-line py-6 sm:grid-cols-[150px_1fr] ${i === 0 ? 'md:col-span-2 md:grid-cols-[1.1fr_1fr] md:gap-10' : ''}`}>
+              <span class="block overflow-hidden bg-surface"><img src={b.img} alt="" width="1500" height="1000" loading="lazy" class={`w-full object-cover transition-[scale] duration-700 group-hover:scale-105 ${i === 0 ? 'aspect-[3/2]' : 'aspect-square'}`} /></span>
+              <span class="flex flex-col justify-center"><span class="text-[12px] font-semibold uppercase tracking-[0.14em] text-ocra">{b.categoria} · {b.tempoLettura}</span><span class={`mt-2 block font-head font-semibold leading-snug text-deep group-hover:text-brand ${i === 0 ? 'text-[1.5rem] sm:text-[2.1rem]' : 'text-[1.2rem]'}`}>{b.titolo}</span>{i === 0 && <span class="mt-3 hidden text-[16px] leading-relaxed text-ink/75 sm:block">{b.intro}</span>}</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.1rem] font-semibold tracking-[-0.02em] text-deep" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><span class="grid h-8 w-8 place-items-center bg-deep font-head text-[12px] font-semibold text-white">CP</span><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="1500" height="1000" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-3 bottom-3 border-l-4 border-brand2 bg-white px-5 py-4"><p class="font-head text-[1.45rem] font-semibold leading-tight text-deep">{p.titolo}</p><p class="mt-0.5 text-sm font-semibold text-brand">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="relative flex aspect-square flex-col justify-between bg-white p-7">
+                  <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-ocra">Domanda frequente</p>
+                  <div><p class="font-head text-[1.9rem] font-semibold leading-[1.08] text-deep">{p.titolo}</p><p class="mt-4 border-t-2 border-deep pt-3 font-head text-[1.15rem] font-semibold text-brand">{p.risposta}</p></div>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-deep p-7 text-white">
+                  <p class="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#D9A54A]">Centro di Chirurgia del Piede</p>
+                  <p class="mt-3 font-head text-[1.75rem] font-semibold leading-[1.08]">{p.titolo}</p>
+                  <ul class="mt-5 divide-y divide-white/15 border-y border-white/15">{p.punti.map((t: string) => <li class="py-2 text-[14.5px]">{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-deep px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-[1180px] flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-[2.3rem] font-semibold sm:text-[2.9rem]">{P.titolo}</h2><p class="mt-2 max-w-xl text-deep-ink">{P.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={`https://wa.me/${wa}`} target="_blank" rel="noopener" class="btn !rounded-[3px] bg-white text-deep hover:opacity-90"><Icona nome="commento" /> WhatsApp {P.whatsappLabel}</a>
+          <a href="#prenota" class="btn !rounded-[3px] border border-white/40 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    let lenis: Lenis | null = null;
+    const vaiA = (sel: string) => { const el = document.querySelector<HTMLElement>(sel)!; const y = el.getBoundingClientRect().top + window.scrollY - 110; if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'auto' }); };
+
+    // --- Scheda di prenotazione (WhatsApp) ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const selMot = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const selAss = box.querySelector<HTMLSelectElement>('[data-ass]')!;
+    const assBox = box.querySelector<HTMLElement>('[data-ass-box]')!;
+    const radio = (n: string) => box.querySelector<HTMLInputElement>(`input[name="${n}"]:checked`)!;
+    const messaggio = () => {
+      const med = radio('medico');
+      const con = med.value ? ` con ${med.dataset.frase}` : '';
+      const fr = selMot.selectedOptions[0].dataset.frase;
+      const reg = radio('regime').value === 'privato' ? ', in regime privato' : selAss.value ? `, con la mia assicurazione ${selAss.value}` : ', con la mia assicurazione sanitaria (da verificare)';
+      return `Buongiorno ${box.dataset.saluto}, vorrei prenotare una visita${con} per ${fr}${reg}.`;
+    };
+    const aggiorna = () => {
+      assBox.hidden = radio('regime').value !== 'assicurazione';
+      const t = messaggio();
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `https://wa.me/${box.dataset.wa}?text=${encodeURIComponent(t)}`;
+      if (!ridotto) gsap.fromTo('[data-anteprima]', { opacity: 0.35 }, { opacity: 1, duration: 0.3 });
+    };
+    box.addEventListener('change', aggiorna);
+    const alBox = () => { vaiA('#prenota-box'); };
+    document.querySelectorAll<HTMLElement>('[data-prenota-motivo]').forEach((b) => b.addEventListener('click', () => { selMot.value = b.dataset.prenotaMotivo!; aggiorna(); alBox(); selMot.focus({ preventScroll: true }); }));
+    document.querySelectorAll<HTMLElement>('[data-prenota-medico]').forEach((b) => b.addEventListener('click', () => { box.querySelector<HTMLInputElement>(`input[name="medico"][value="${b.dataset.prenotaMedico}"]`)!.checked = true; aggiorna(); alBox(); }));
+    aggiorna();
+
+    // --- I. Dove fa male ---
+    const mp = document.querySelector<HTMLElement>('[data-mappa]')!;
+    const ZO = JSON.parse(mp.dataset.zone!) as { id: string; nome: string; dove: string }[];
+    const scegliZona = (id: string) => {
+      mp.querySelectorAll<HTMLElement>('[data-zona-id]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.zonaId === id)));
+      mp.querySelectorAll<SVGElement>('[data-zona-svg]').forEach((s) => s.classList.toggle('attiva', s.dataset.zonaSvg === id));
+      mp.querySelectorAll<HTMLElement>('[data-zona-pannello]').forEach((p) => { p.hidden = p.dataset.zonaPannello !== id; });
+      mp.querySelector('[data-zona-dove]')!.textContent = ZO.find((z) => z.id === id)!.dove;
+      mp.dataset.attiva = id;
+      if (!ridotto) gsap.fromTo(`[data-zona-pannello="${id}"] article`, { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, stagger: 0.07, ease: 'power2.out' });
+    };
+    mp.querySelectorAll<HTMLElement>('[data-zona-id]').forEach((b) => b.addEventListener('click', () => scegliZona(b.dataset.zonaId!)));
+    mp.querySelectorAll<SVGElement>('[data-zona-svg]').forEach((s) => s.addEventListener('click', () => scegliZona(s.dataset.zonaSvg!)));
+    scegliZona(ZO[0].id);
+
+    // --- II. Impronta ---
+    const im = document.querySelector<HTMLElement>('[data-impronta]')!;
+    const rk = im.querySelector<HTMLInputElement>('[data-indice]')!;
+    const FF = 174, XL = 196;
+    const banda = (k: number) => {
+      const W = (k / 100) * FF;
+      const xm = XL - W, xt = Math.max(48, 206 - 30 - W * 0.9), xb = Math.max(100, 182 - 30 - W * 0.6);
+      const cx = 2 * xm - (xb + xt) / 2;
+      return { d: `M206 190 Q198 296 182 404 L${xb.toFixed(1)} 404 Q${cx.toFixed(1)} 296 ${xt.toFixed(1)} 190 Z`, xm };
+    };
+    const CLASSI: [number, string, string, string][] = [
+      [0, 'Arco molto alto', "L'istmo non tocca terra: avampiede e tallone sono separati. È tipico del piede cavo marcato, che concentra il carico su tallone e teste metatarsali. Merita una valutazione, anche per capirne la causa.", 'cavo'],
+      [1, 'Arco alto', "L'appoggio esterno è sottile: un piede tendenzialmente cavo. Se compaiono calli sotto l'avampiede, dita in griffe o distorsioni ricorrenti, ne parliamo in visita.", 'cavo'],
+      [30, 'Nella norma', "L'appoggio esterno ha una larghezza nella media: la volta distribuisce il carico in modo equilibrato.", 'altro'],
+      [45, 'Arco basso', "L'istmo si allarga: l'arco tende ad abbassarsi sotto carico. Spesso non dà disturbi; se compare dolore sul lato interno della caviglia, è bene farlo valutare.", 'piatto-adulto'],
+      [60, 'Piede piatto', "L'impronta è quasi piena: la volta appoggia a terra. Nell'adulto, soprattutto se è cambiata con gli anni o da un solo lato, va valutata la funzione del tendine tibiale posteriore.", 'piatto-adulto']
+    ];
+    const pathBanda = im.querySelector<SVGPathElement>('[data-banda]')!;
+    const disegnaImpronta = (anima = true) => {
+      const k = Number(rk.value); const b = banda(k);
+      const c = [...CLASSI].reverse().find((q) => k >= q[0])!;
+      if (ridotto || !anima) pathBanda.setAttribute('d', b.d); else gsap.to(pathBanda, { attr: { d: b.d }, duration: 0.25, ease: 'power2.out', overwrite: true });
+      im.querySelector('[data-righello]')!.setAttribute('x1', String(b.xm));
+      im.querySelectorAll('[data-righello-sx]').forEach((l) => { l.setAttribute('x1', String(b.xm)); l.setAttribute('x2', String(b.xm)); });
+      im.querySelector('[data-indice-val]')!.textContent = String(k);
+      im.querySelector('[data-indice-classe]')!.textContent = c[1];
+      im.querySelector('[data-indice-testo]')!.textContent = c[2];
+      im.querySelector<HTMLElement>('[data-indice-prenota]')!.dataset.prenotaMotivo = c[3];
+      rk.setAttribute('aria-valuetext', `${k} per cento, ${c[1].toLowerCase()}`);
+      im.dataset.classe = c[1];
+    };
+    rk.addEventListener('input', () => disegnaImpronta());
+    disegnaImpronta(false);
+
+    // --- III. Alluce ---
+    const hv = document.querySelector<HTMLElement>('[data-hva]')!;
+    const rh = hv.querySelector<HTMLInputElement>('[data-hva-range]')!;
+    const HCL: [number, string, string, string][] = [
+      [0, 'norma', 'Angolo nella norma', "L'alluce è ben allineato al metatarso. Se c'è dolore, la causa va cercata altrove: un alluce rigido, un sovraccarico, un problema delle dita vicine."],
+      [16, 'lieve', 'Deformità lieve', "Spesso bastano scarpe ampie e un controllo nel tempo. Si interviene se il dolore limita, di solito con una correzione vicino all'articolazione."],
+      [21, 'moderato', 'Deformità moderata', "Se fa male o crea problemi con le scarpe, una correzione vicino all'articolazione, anche con tecnica mini-invasiva o percutanea, è spesso sufficiente."],
+      [41, 'grave', 'Deformità grave', "Può servire una correzione più alta, alla base del metatarso. Il carico si sposta spesso sulle dita vicine, con metatarsalgia e dita a martello."]
+    ];
+    const m1 = hv.querySelector<SVGGElement>('[data-m1]')!, p1 = hv.querySelector<SVGGElement>('[data-p1]')!;
+    const em = hv.querySelector<SVGCircleElement>('[data-eminenza]')!;
+    const arco = hv.querySelector<SVGPathElement>('[data-arco-hva]')!, lab = hv.querySelector<SVGTextElement>('[data-arco-label]')!;
+    const stato = { a: Number(rh.value) };
+    const geometria = (a: number) => {
+      const ima = 7 + Math.max(0, a - 12) * 0.22;
+      m1.setAttribute('transform', `rotate(${-ima} 150 440)`);
+      p1.setAttribute('transform', `rotate(${a} 150 240)`);
+      em.setAttribute('r', String(Math.max(0, 4 + (a - 10) * 0.35)));
+      const t = (-ima * Math.PI) / 180; const jx = 150 + (0 * Math.cos(t) - (240 - 440) * Math.sin(t)), jy = 440 + (0 * Math.sin(t) + (240 - 440) * Math.cos(t));
+      const a1 = ((-90 - ima) * Math.PI) / 180, a2 = ((-90 - ima + a) * Math.PI) / 180, r = 72;
+      arco.setAttribute('d', `M${(jx + r * Math.cos(a1)).toFixed(1)} ${(jy + r * Math.sin(a1)).toFixed(1)} A${r} ${r} 0 0 1 ${(jx + r * Math.cos(a2)).toFixed(1)} ${(jy + r * Math.sin(a2)).toFixed(1)}`);
+      const am = (a1 + a2) / 2;
+      lab.setAttribute('x', (jx + 92 * Math.cos(am)).toFixed(1)); lab.setAttribute('y', (jy + 92 * Math.sin(am) + 5).toFixed(1));
+      lab.textContent = `${Math.round(a)}°`;
+    };
+    const disegnaAlluce = (anima = true) => {
+      const a = Number(rh.value);
+      const c = [...HCL].reverse().find((q) => a >= q[0])!;
+      if (ridotto || !anima) { stato.a = a; geometria(a); } else gsap.to(stato, { a, duration: 0.35, ease: 'power2.out', overwrite: true, onUpdate: () => geometria(stato.a) });
+      hv.querySelector('[data-hva-val]')!.textContent = String(a);
+      hv.querySelector('[data-hva-classe]')!.textContent = c[2];
+      hv.querySelector('[data-hva-testo]')!.textContent = c[3];
+      hv.querySelectorAll<HTMLElement>('[data-classe-hva]').forEach((l) => l.classList.toggle('attiva', l.dataset.classeHva === c[1]));
+      rh.setAttribute('aria-valuetext', `${a} gradi, ${c[2].toLowerCase()}`);
+      hv.dataset.classe = c[1];
+    };
+    rh.addEventListener('input', () => disegnaAlluce());
+    disegnaAlluce(false);
+
+    // --- IV. Settimana ---
+    const st = document.querySelector<HTMLElement>('[data-settimana]')!;
+    const GI = JSON.parse(st.dataset.giorni!) as { nome: string; tipo: string; testo: string }[];
+    const img = st.querySelector<HTMLImageElement>('[data-giorno-img]')!;
+    st.querySelectorAll<HTMLElement>('[data-giorno]').forEach((b) => b.addEventListener('click', () => {
+      const g = GI[Number(b.dataset.giorno)];
+      st.querySelectorAll('[data-giorno]').forEach((k) => k.setAttribute('aria-pressed', String(k === b)));
+      st.querySelector('[data-giorno-nome]')!.textContent = g.nome; st.querySelector('[data-giorno-tipo]')!.textContent = g.tipo; st.querySelector('[data-giorno-testo]')!.textContent = g.testo;
+      const t = b.dataset.tipo!; img.src = img.dataset[t === 'sala' ? 'imgSala' : 'imgAmb']!; img.alt = img.dataset[t === 'sala' ? 'altSala' : 'altAmb']!;
+      st.dataset.giornoScelto = b.dataset.giorno;
+    }));
+
+    // --- V. Medici (tab) ---
+    const tabs = [...document.querySelectorAll<HTMLElement>('[data-medico-tab]')];
+    const apri = (t: HTMLElement) => {
+      tabs.forEach((k) => { const on = k === t; k.setAttribute('aria-selected', String(on)); k.tabIndex = on ? 0 : -1; document.getElementById(k.getAttribute('aria-controls')!)!.hidden = !on; });
+      if (!ridotto) gsap.fromTo(`[data-medico-pan="${t.dataset.medicoTab}"]`, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4 });
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => apri(t));
+      t.addEventListener('keydown', (e) => { const d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!d) return; e.preventDefault(); const n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); apri(n); });
+    });
+
+    // --- VII. Convenzioni ---
+    const cv = document.querySelector<HTMLElement>('[data-convenzioni]')!;
+    const cerca = cv.querySelector<HTMLInputElement>('[data-cerca]')!;
+    const chips = [...cv.querySelectorAll<HTMLButtonElement>('[data-ass-chip]')];
+    const btnAss = cv.querySelector<HTMLButtonElement>('[data-esito-prenota]')!;
+    const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '');
+    let scelta = '';
+    const esito = (titolo: string, testo: string, nome: string) => {
+      cv.querySelector('[data-esito]')!.textContent = titolo; cv.querySelector('[data-esito-testo]')!.textContent = testo;
+      scelta = nome; btnAss.hidden = !nome; cv.dataset.risultato = nome ? 'si' : 'no';
+      cv.querySelector<HTMLElement>('[data-esito-box]')!.classList.toggle('esito-si', !!nome);
+    };
+    const filtra = () => {
+      const q = norm(cerca.value);
+      const trovati = chips.filter((c) => q && norm(c.dataset.assChip!).includes(q));
+      chips.forEach((c) => { c.classList.toggle('spenta', !!q && !trovati.includes(c)); c.setAttribute('aria-pressed', String(trovati.length === 1 && trovati[0] === c)); });
+      if (!q) esito("Scriva o scelga dall'elenco", "L'elenco riporta alcuni esempi: se la Sua non c'è, la segreteria Le conferma la copertura.", '');
+      else if (trovati.length === 1 || trovati.some((c) => norm(c.dataset.assChip!) === q)) { const c = trovati.find((k) => norm(k.dataset.assChip!) === q) ?? trovati[0]; chips.forEach((k) => k.setAttribute('aria-pressed', String(k === c))); esito(`Sì, ${c.dataset.assChip} è tra le convenzioni`, 'Visite e interventi possono essere eseguiti in convenzione. Al momento della prenotazione la segreteria verifica la Sua polizza.', c.dataset.assChip!); }
+      else if (trovati.length > 1) esito(`${trovati.length} risultati`, 'Scelga la Sua dall\'elenco.', '');
+      else esito('Non è tra gli esempi pubblicati', "L'elenco non è completo: scriva alla segreteria e Le confermiamo se la Sua assicurazione è convenzionata.", '');
+    };
+    cerca.addEventListener('input', filtra);
+    chips.forEach((c) => c.addEventListener('click', () => { cerca.value = c.dataset.assChip!; filtra(); }));
+    btnAss.addEventListener('click', () => { box.querySelector<HTMLInputElement>('input[name="regime"][value="assicurazione"]')!.checked = true; selAss.value = scelta; aggiorna(); alBox(); selAss.focus({ preventScroll: true }); });
+
+    // --- Sommario ---
+    const som = document.querySelector<HTMLElement>('[data-sommario]')!;
+    const voci = [...som.querySelectorAll<HTMLElement>('[data-som]')];
+    const attivaVoce = (id: string) => { voci.forEach((v) => v.classList.toggle('attiva', v.dataset.som === id)); som.dataset.attivo = id; };
+    document.querySelectorAll<HTMLElement>('[data-cap]').forEach((s) => ScrollTrigger.create({ trigger: s, start: 'top 45%', end: 'bottom 45%', onToggle: (e) => { if (e.isActive) attivaVoce(s.dataset.cap!); } }));
+    ScrollTrigger.create({ trigger: '[data-hero]', start: 'bottom 60%', endTrigger: '#prenota', end: 'top 60%', onToggle: (e) => som.classList.toggle('visibile', e.isActive) });
+    gsap.to('[data-avanzamento]', { scaleX: 1, ease: 'none', scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: true } });
+
+    if (!ridotto) {
+      lenis = new Lenis({ anchors: { offset: -100 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis!.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.1em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= 4 ? 'text-brand' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('[data-foto-hero]', { clipPath: 'inset(0 0 100% 0)', duration: 1.4, ease: 'power3.inOut' })
+        .from('[data-foto-img]', { scale: 1.15, duration: 1.8 }, '<')
+        .from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.9, stagger: 0.06 }, 0.1)
+        .from('[data-entra]', { y: 22, opacity: 0, duration: 0.7, stagger: 0.12 }, 0.45)
+        .from('[data-tavola-hero] figcaption', { opacity: 0, duration: 0.6 }, 1.2);
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.6, delay: 0.8, ease: 'power2.out', onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString('it-IT'); }, onComplete: () => { el.textContent = el.dataset.fmt!; } });
+      });
+      gsap.utils.toArray<HTMLElement>('.cap-testa').forEach((c) => {
+        const tlc = gsap.timeline({ scrollTrigger: { trigger: c, start: 'top 85%', once: true } });
+        tlc.from(c.querySelector('.cap-num'), { opacity: 0, y: 10, duration: 0.5 })
+          .from(c.querySelector('.cap-titolo'), { opacity: 0, y: 26, duration: 0.8 }, '<0.1')
+          .fromTo(c.querySelector('[data-filetto]'), { scaleX: 0 }, { scaleX: 1, duration: 1, ease: 'power2.inOut' }, '<0.2')
+          .from(c.querySelector('.cap-intro'), { opacity: 0, y: 14, duration: 0.6 }, '<0.3');
+      });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 30, opacity: 0, duration: 0.8, scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      // tavole disegnate a tratto
+      const tratti = gsap.utils.toArray<SVGGeometryElement>('[data-tratto] > *');
+      tratti.forEach((p) => { const l = p.getTotalLength(); p.style.strokeDasharray = `${l}`; p.style.strokeDashoffset = `${l}`; });
+      gsap.to(tratti, { strokeDashoffset: 0, duration: 1.6, stagger: 0.06, ease: 'power2.inOut', scrollTrigger: { trigger: '[data-mappa]', start: 'top 75%', once: true }, onComplete: () => tratti.forEach((p) => { p.style.strokeDasharray = ''; }) });
+      gsap.from('.zona-btn', { y: 16, opacity: 0, duration: 0.5, stagger: 0.05, scrollTrigger: { trigger: '[data-mappa]', start: 'top 75%', once: true } });
+      ScrollTrigger.create({ trigger: '[data-impronta]', start: 'top 70%', once: true, onEnter: () => { if (rk.value !== String(36)) return; const o = { k: 4 }; rk.value = '4'; disegnaImpronta(false); gsap.to(o, { k: 36, duration: 1.4, delay: 0.3, ease: 'power2.inOut', onUpdate: () => { rk.value = String(Math.round(o.k)); disegnaImpronta(false); } }); } });
+      ScrollTrigger.create({ trigger: '[data-hva]', start: 'top 70%', once: true, onEnter: () => { if (rh.value !== String(24)) return; const o = { a: 8 }; gsap.to(o, { a: 24, duration: 1.4, delay: 0.3, ease: 'power2.inOut', onUpdate: () => { rh.value = String(Math.round(o.a)); stato.a = o.a; geometria(o.a); }, onComplete: () => disegnaAlluce(false) }); } });
+      gsap.fromTo('[data-percorso-linea]', { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '[data-percorso]', start: 'top 80%', end: 'bottom 60%', scrub: true } });
+      gsap.from('[data-percorso] > li', { y: 30, opacity: 0, duration: 0.7, stagger: 0.12, scrollTrigger: { trigger: '[data-percorso]', start: 'top 85%', once: true } });
+      gsap.from('[data-dipinto]', { scale: 1.12, ease: 'none', scrollTrigger: { trigger: '[data-dipinto]', start: 'top bottom', end: 'bottom top', scrub: true } });
+      gsap.fromTo('[data-scuola-linea]', { scaleX: 0 }, { scaleX: 1, ease: 'none', scrollTrigger: { trigger: '[data-scuola]', start: 'top 80%', end: 'bottom 70%', scrub: true } });
+      gsap.from('[data-tappa-scuola]', { y: 40, opacity: 0, duration: 0.8, stagger: 0.12, scrollTrigger: { trigger: '[data-scuola]', start: 'top 85%', once: true } });
+      gsap.from('.ass-chip', { y: 12, opacity: 0, duration: 0.4, stagger: 0.025, scrollTrigger: { trigger: '[data-convenzioni]', start: 'top 80%', once: true } });
+      gsap.from('[data-sedi] > article', { y: 40, opacity: 0, duration: 0.8, stagger: 0.12, scrollTrigger: { trigger: '[data-sedi]', start: 'top 85%', once: true } });
+      gsap.from('[data-blog] > a', { y: 30, opacity: 0, duration: 0.7, stagger: 0.08, scrollTrigger: { trigger: '[data-blog]', start: 'top 88%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>
