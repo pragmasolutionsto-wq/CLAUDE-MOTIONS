@@ -1,0 +1,1160 @@
+{
+  "slug": "savant-sh44",
+  "layout": "movimento",
+  "sitoOrigine": "https://www.savantfisiatra.it/",
+  "titolo": "Dr.",
+  "nome": "Luca Savant",
+  "specialita": "Medico Fisiatra, specialista in Medicina Fisica e Riabilitazione",
+  "firma": "Medico Fisiatra",
+  "citta": "Torino e Ciriè",
+  "meta": {
+    "title": "Dr. Luca Savant · Medico Fisiatra a Torino e Ciriè: onde d'urto, infiltrazioni ecoguidate, ozonoterapia",
+    "description": "Visita fisiatrica con ecografia, onde d'urto focalizzate, infiltrazioni ecoguidate, ozonoterapia, mesoterapia, osteopatia ed EPI. Studio Duca 16 a Torino, Omnia Salus a Ciriè, IRR Torino."
+  },
+  "brand": {
+    "header": "testo",
+    "logoScuro": "/savant-sh44/img/logo.png",
+    "logoChiaro": "",
+    "marchio": "/savant-sh44/img/logo.png",
+    "logoAlt": "Dr. Luca Savant"
+  },
+  "foto": {
+    "ritratto": "/savant-sh44/img/ritratto.webp",
+    "ritrattoAlt": "Il Dr. Luca Savant",
+    "volto": "/savant-sh44/img/volto.webp",
+    "logo": "/savant-sh44/img/logo.png",
+    "duca": "/savant-sh44/img/duca16.webp",
+    "ducaLargo": "/savant-sh44/img/duca16-largo.webp",
+    "omnia": "/savant-sh44/img/omnia.webp",
+    "irr": "/savant-sh44/img/irr.webp",
+    "trattamento": "/savant-sh44/img/rep-trattamento.webp",
+    "ozono": "/savant-sh44/img/rep-ozono.webp",
+    "scelta": "/savant-sh44/img/rep-scelta.webp",
+    "movimento": "/savant-sh44/img/rep-movimento.webp"
+  },
+  "hero": {
+    "eyebrow": "Medico Fisiatra · Torino e Ciriè",
+    "titolo": "Riabilitare la persona, non solo il sintomo.",
+    "testo": "Sono specialista in Medicina Fisica e Riabilitazione. In visita valuto il problema dal punto di vista medico, ecografico e posturale e, quando serve, inizio il trattamento già nella stessa seduta.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami",
+    "box": {
+      "titolo": "Prenoti",
+      "motivi": [
+        "Spalla",
+        "Gomito",
+        "Collo",
+        "Schiena o ernia",
+        "Anca",
+        "Ginocchio",
+        "Piede o tallone",
+        "Postura",
+        "Recupero dopo un intervento"
+      ],
+      "motiviFrase": [
+        "un dolore alla spalla",
+        "un dolore al gomito",
+        "un dolore al collo",
+        "mal di schiena o un'ernia",
+        "un dolore all'anca",
+        "un dolore al ginocchio",
+        "un dolore al piede o al tallone",
+        "un problema posturale",
+        "il recupero dopo un intervento"
+      ],
+      "motivoLabel": "Motivo",
+      "sedeLabel": "Sede"
+    }
+  },
+  "trattamenti": [
+    {
+      "id": "visita",
+      "nome": "Visita fisiatrica",
+      "frase": "una visita fisiatrica",
+      "durata": 30,
+      "sedi": [
+        "duca",
+        "omnia",
+        "irr"
+      ],
+      "testo": "Valuto il problema dal punto di vista medico, ecografico e posturale, e imposto il percorso: a volte il trattamento si fa già nella stessa seduta.",
+      "contro": "Nessuna."
+    },
+    {
+      "id": "onde",
+      "nome": "Onde d'urto focalizzate",
+      "frase": "una seduta di onde d'urto focalizzate",
+      "durata": 15,
+      "sedi": [
+        "duca",
+        "omnia",
+        "irr"
+      ],
+      "testo": "Impulsi di onde acustiche ad alta energia, eco-assistite, che stimolano la circolazione e i processi di riparazione di tendini, muscoli e ossa.",
+      "contro": "Malattie della coagulazione, infezioni o tumori nella zona, pacemaker, gravidanza."
+    },
+    {
+      "id": "infiltrazione",
+      "nome": "Infiltrazione ecoguidata",
+      "frase": "un'infiltrazione ecoguidata",
+      "durata": 15,
+      "sedi": [
+        "duca",
+        "omnia",
+        "irr"
+      ],
+      "testo": "Cortisone, acido ialuronico o ossigeno-ozono, portati con precisione nel punto giusto grazie all'ecografo, che mostra l'ago in tempo reale.",
+      "contro": "Infezioni nella zona o sistemiche, disturbi della coagulazione, allergia al farmaco, protesi o mezzi di sintesi nell'articolazione, deficit immunitari."
+    },
+    {
+      "id": "anca",
+      "nome": "Infiltrazione ecoguidata dell'anca",
+      "frase": "un'infiltrazione ecoguidata all'anca",
+      "durata": 30,
+      "sedi": [
+        "duca",
+        "omnia",
+        "irr"
+      ],
+      "testo": "Per l'artrosi dell'anca, la condropatia, le lesioni del labbro acetabolare e le infiammazioni che non rispondono ai trattamenti non invasivi.",
+      "contro": "Allergia al farmaco, gravi disturbi della coagulazione, artrite settica o infezioni, pazienti non collaboranti."
+    },
+    {
+      "id": "ozono",
+      "nome": "Ozonoterapia",
+      "frase": "una seduta di ozonoterapia",
+      "durata": 15,
+      "sedi": [
+        "duca",
+        "omnia",
+        "irr"
+      ],
+      "testo": "Piccole iniezioni di ossigeno-ozono con azione antinfiammatoria e antidolorifica, soprattutto per schiena, collo, ernie e protrusioni.",
+      "contro": "Ipertiroidismo, favismo, ipoglicemia, gravi malattie cardio-respiratorie o del sangue non compensate, gravidanza e allattamento."
+    },
+    {
+      "id": "meso",
+      "nome": "Mesoterapia",
+      "frase": "una seduta di mesoterapia",
+      "durata": 15,
+      "sedi": [
+        "duca",
+        "omnia",
+        "irr"
+      ],
+      "testo": "Microiniezioni superficiali di farmaci nella zona dolente: contratture, cervicalgie anche dopo un colpo di frusta, epicondiliti.",
+      "contro": "Allergia al farmaco, infezioni locali, disturbi della coagulazione, stati di immunodepressione."
+    },
+    {
+      "id": "osteopatia",
+      "nome": "Osteopatia",
+      "frase": "una seduta di osteopatia",
+      "durata": 30,
+      "sedi": [
+        "duca",
+        "irr"
+      ],
+      "testo": "Terapia manuale per dolori muscolari e articolari, disturbi posturali, contratture muscolari e fasciali. Mi sono formato all'IITM di Bologna.",
+      "contro": "Instabilità articolari, mezzi di sintesi, osteoporosi e malattie dell'osso, problemi vascolari e viscerali."
+    },
+    {
+      "id": "epi",
+      "nome": "Elettrolisi percutanea (EPI)",
+      "frase": "una seduta di elettrolisi percutanea (EPI)",
+      "durata": 30,
+      "sedi": [
+        "duca",
+        "omnia"
+      ],
+      "testo": "Una corrente leggera, portata con un ago sottile sotto guida ecografica, per le tendinopatie croniche che non guariscono.",
+      "contro": "Pacemaker, gravi disturbi della coagulazione, infezioni o lesioni della pelle nella zona, disturbi della sensibilità, metalli nella zona, gravidanza."
+    }
+  ],
+  "zone": [
+    {
+      "id": "spalla",
+      "nome": "Spalla",
+      "problemi": "Tendinopatia calcifica, capsulite adesiva (spalla congelata), rigidità, tendinopatie della cuffia.",
+      "tratt": [
+        "visita",
+        "onde",
+        "infiltrazione",
+        "epi"
+      ]
+    },
+    {
+      "id": "gomito",
+      "nome": "Gomito",
+      "problemi": "Epicondilite (gomito del tennista) ed epitrocleite.",
+      "tratt": [
+        "visita",
+        "onde",
+        "infiltrazione",
+        "epi",
+        "meso"
+      ]
+    },
+    {
+      "id": "collo",
+      "nome": "Collo",
+      "problemi": "Cervicalgia, cervicobrachialgia, contratture, dolori dopo un colpo di frusta.",
+      "tratt": [
+        "visita",
+        "ozono",
+        "meso",
+        "osteopatia"
+      ]
+    },
+    {
+      "id": "schiena",
+      "nome": "Schiena",
+      "problemi": "Lombalgia, lombosciatalgia, ernie e protrusioni discali, artrosi della colonna.",
+      "tratt": [
+        "visita",
+        "ozono",
+        "osteopatia"
+      ]
+    },
+    {
+      "id": "anca",
+      "nome": "Anca",
+      "problemi": "Artrosi dell'anca, condropatia, borsite trocanterica, lesioni del labbro acetabolare.",
+      "tratt": [
+        "visita",
+        "anca",
+        "onde",
+        "infiltrazione"
+      ]
+    },
+    {
+      "id": "ginocchio",
+      "nome": "Ginocchio",
+      "problemi": "Artrosi, condropatia, tendinopatia rotulea e della zampa d'oca.",
+      "tratt": [
+        "visita",
+        "infiltrazione",
+        "onde",
+        "epi",
+        "meso"
+      ]
+    },
+    {
+      "id": "piede",
+      "nome": "Piede e tallone",
+      "problemi": "Fascite plantare, sperone calcaneare, tendinopatia achillea.",
+      "tratt": [
+        "visita",
+        "onde",
+        "epi",
+        "infiltrazione"
+      ]
+    },
+    {
+      "id": "postura",
+      "nome": "Postura",
+      "problemi": "Dolori diffusi, alterazioni posturali, esiti di traumi o di interventi.",
+      "tratt": [
+        "visita",
+        "osteopatia"
+      ]
+    }
+  ],
+  "chi": [
+    {
+      "id": "fisiatra",
+      "nome": "Il Fisiatra",
+      "studi": "Medico chirurgo, 6 anni di laurea + 5 di specializzazione",
+      "testo": "Specialista medico della riabilitazione: analizza il problema considerando lo stato di salute generale e la postura, e costruisce un progetto riabilitativo personalizzato che può includere farmaci, infiltrazioni, fisioterapia, terapie manuali e strumentali."
+    },
+    {
+      "id": "ortopedico",
+      "nome": "L'Ortopedico",
+      "studi": "Medico chirurgo, 6 anni di laurea + 5 di specializzazione",
+      "testo": "Primo riferimento per i problemi chirurgici e traumatologici importanti, come fratture e lussazioni. Propone l'intervento quando la riabilitazione conservativa non basta."
+    },
+    {
+      "id": "fisioterapista",
+      "nome": "Il Fisioterapista",
+      "studi": "Professione sanitaria, laurea di 3 anni",
+      "testo": "Programma ed esegue i trattamenti di fisioterapia seguendo le indicazioni del fisiatra o dell'ortopedico. Non prescrive esami e non fa diagnosi mediche."
+    }
+  ],
+  "domande": [
+    {
+      "testo": "Ho una frattura o una lussazione",
+      "chi": "ortopedico",
+      "perche": "Fratture e lussazioni sono il campo dell'ortopedico, che valuta anche se serve un intervento. Dopo, il fisiatra imposta il recupero."
+    },
+    {
+      "testo": "Ho un dolore che non passa da settimane",
+      "chi": "fisiatra",
+      "perche": "Serve prima una diagnosi medica: con la visita e l'ecografia capisco da dove nasce il dolore e quale percorso scegliere."
+    },
+    {
+      "testo": "Vorrei un'infiltrazione o le onde d'urto",
+      "chi": "fisiatra",
+      "perche": "Sono trattamenti medici: le onde d'urto focalizzate le esegue solo il medico specialista, le infiltrazioni anche l'ortopedico."
+    },
+    {
+      "testo": "Mi hanno già prescritto la fisioterapia",
+      "chi": "fisioterapista",
+      "perche": "Se il programma è già stato impostato dal medico, il fisioterapista lo esegue e riferisce al medico come procede."
+    },
+    {
+      "testo": "Devo recuperare dopo un intervento",
+      "chi": "fisiatra",
+      "perche": "Il fisiatra costruisce il progetto riabilitativo dopo l'intervento, insieme al chirurgo e ai fisioterapisti."
+    }
+  ],
+  "approccio": [
+    {
+      "nome": "Medico",
+      "testo": "La storia clinica, i farmaci, le altre malattie: il dolore va letto dentro la salute di tutta la persona."
+    },
+    {
+      "nome": "Ecografico",
+      "testo": "In visita uso l'ecografo per vedere tendini, muscoli e articolazioni e, se serve, per guidare il trattamento."
+    },
+    {
+      "nome": "Posturale",
+      "testo": "Cerco i fattori posturali e disfunzionali profondi che stanno alla radice del problema, spesso sconosciuti al paziente."
+    },
+    {
+      "nome": "Condiviso",
+      "testo": "Spiego le scelte e le condivido: senza la partecipazione del paziente, ogni terapia è destinata a funzionare meno."
+    }
+  ],
+  "storia": [
+    {
+      "anno": "2007",
+      "titolo": "Laurea in Medicina e Chirurgia",
+      "testo": "A pieni voti, all'Università di Torino, con una tesi sulle radiofrequenze nelle lesioni del legamento crociato anteriore."
+    },
+    {
+      "anno": "2014",
+      "titolo": "Specializzazione in Medicina Fisica e Riabilitazione",
+      "testo": "Con una tesi su terapia del dolore e riabilitazione della protesi di ginocchio."
+    },
+    {
+      "anno": "Formazione",
+      "titolo": "Osteopatia, ozono, onde d'urto",
+      "testo": "Osteopatia muscolo-scheletrica all'IITM di Bologna; ozonoterapia con la SIOOT; onde d'urto focalizzate con la SITOD."
+    },
+    {
+      "anno": "Esperienza",
+      "titolo": "Centri di riabilitazione",
+      "testo": "IRR, Centro Mios (direttore tecnico), PKT (vicedirettore sanitario), IRM, CDC, visite medico-sportive per Sisport FIAT."
+    },
+    {
+      "anno": "2023",
+      "titolo": "Direttore sanitario di Omnia Salus",
+      "testo": "Da settembre 2023 sono Direttore sanitario e tecnico del centro medico riabilitativo Omnia Salus di Ciriè."
+    }
+  ],
+  "sediDati": [
+    {
+      "id": "duca",
+      "tipo": "Studio",
+      "nome": "Studio Medico Duca 16",
+      "breve": "Torino, Crocetta",
+      "indirizzo": "Corso Duca degli Abruzzi 16",
+      "citta": "Torino",
+      "cap": "",
+      "mappa": true,
+      "principale": true,
+      "frase": "lo Studio Medico Duca 16, corso Duca degli Abruzzi 16, Torino",
+      "telefono": "011 749 0268",
+      "img": "/savant-sh44/img/duca16.webp",
+      "testo": "Quartiere Crocetta, a pochi passi dalla metro Vinzaglio. Un ambiente signorile e sobrio, con parcheggio facile nelle vicinanze.",
+      "telefoni": [
+        {
+          "label": "Prenotazioni",
+          "numero": "011 749 0268"
+        }
+      ]
+    },
+    {
+      "id": "omnia",
+      "tipo": "Centro medico riabilitativo",
+      "nome": "Omnia Salus",
+      "breve": "Ciriè",
+      "indirizzo": "Omnia Salus",
+      "citta": "Ciriè",
+      "cap": "",
+      "mappa": true,
+      "principale": false,
+      "frase": "il centro Omnia Salus di Ciriè",
+      "telefono": "011 297 0599",
+      "img": "/savant-sh44/img/omnia.webp",
+      "testo": "Centro aperto nel 2023, di cui sono Direttore sanitario e tecnico: ambulatori, palestra di fisioterapia e piscina per la riabilitazione in acqua.",
+      "telefoni": [
+        {
+          "label": "Prenotazioni",
+          "numero": "011 297 0599"
+        }
+      ]
+    },
+    {
+      "id": "irr",
+      "tipo": "Istituto riabilitativo",
+      "nome": "IRR · Istituto delle Riabilitazioni Riba",
+      "breve": "Torino",
+      "indirizzo": "IRR Istituto delle Riabilitazioni Riba",
+      "citta": "Torino",
+      "cap": "",
+      "mappa": true,
+      "principale": false,
+      "frase": "l'IRR, Istituto delle Riabilitazioni Riba, Torino",
+      "telefono": "011 399 9222",
+      "img": "/savant-sh44/img/irr.webp",
+      "testo": "Oltre 2.200 mq con piscina riabilitativa riscaldata e pista da running sul tetto. Collaborating Center della Federazione Internazionale di Medicina dello Sport.",
+      "telefoni": [
+        {
+          "label": "Prenotazioni",
+          "numero": "011 399 9222"
+        }
+      ]
+    }
+  ],
+  "numeri": [
+    {
+      "valore": 2007,
+      "suffisso": "",
+      "testo": "laurea in Medicina a Torino"
+    },
+    {
+      "valore": 8,
+      "suffisso": "",
+      "testo": "prestazioni, da 15 a 30 minuti"
+    },
+    {
+      "valore": 3,
+      "suffisso": "",
+      "testo": "sedi tra Torino e Ciriè"
+    }
+  ],
+  "aree": {
+    "titolo": "Trova il trattamento",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "onde-durto",
+    "categoria": "Terapie",
+    "titolo": "Onde d'urto focalizzate: per cosa funzionano e come si svolgono",
+    "img": "/savant-sh44/img/rep-trattamento.webp",
+    "tempoLettura": "7 min",
+    "intro": "Negli ultimi anni le onde d'urto focalizzate sono diventate un trattamento affermato per molte patologie di tendini, muscoli e ossa. Le spiego come agiscono, quando le propongo e cosa aspettarsi da una seduta.",
+    "sezioni": [
+      {
+        "titolo": "Che cosa sono",
+        "paragrafi": [
+          "La terapia con onde d'urto consiste in una serie di rapidi impulsi di onde meccaniche, cioè acustiche, prodotti da uno specifico generatore e trasmessi ai tessuti attraverso la pelle.",
+          "Sui tessuti esercitano una stimolazione meccanica, una specie di micro-massaggio: aumentano il flusso di sangue, riducono l'infiammazione e stimolano i processi di riparazione."
+        ]
+      },
+      {
+        "titolo": "Focalizzate o radiali: la differenza",
+        "paragrafi": [
+          "Le onde d'urto radiali si diffondono in superficie e sono indicate soprattutto per contratture muscolari e fasciali superficiali.",
+          "Le onde d'urto focalizzate, invece, concentrano un fascio di energia ad alta pressione, oltre 500 bar, in un punto preciso, e riescono a raggiungere i tessuti in profondità, fino a circa 8 centimetri. È questa la terapia che eseguo: può essere effettuata solo dal medico specialista."
+        ]
+      },
+      {
+        "titolo": "Perché eco-assistite",
+        "paragrafi": [
+          "Durante la seduta uso l'ecografo. Mi permette di individuare con precisione il punto da trattare, per esempio una calcificazione nel tendine della spalla, e di aumentare la sicurezza del trattamento.",
+          "Con l'ecografia posso anche seguire, seduta dopo seduta, come cambia il tessuto trattato."
+        ]
+      },
+      {
+        "titolo": "Le indicazioni principali",
+        "paragrafi": [
+          "Le onde d'urto focalizzate sono indicate sia nei disturbi infiammatori, come tendiniti e fasciti, sia in quelli degenerativi, come calcificazioni e artrosi. Le più frequenti:"
+        ],
+        "elenco": [
+          "tendinopatia calcifica di spalla;",
+          "sperone calcaneare e fascite plantare;",
+          "epicondilite ed epitrocleite al gomito;",
+          "borsite trocanterica (sindrome dolorosa del gran trocantere);",
+          "tendinopatia achillea, rotulea e della zampa d'oca;",
+          "rigidità articolare di spalla, ginocchio, anca e gomito, capsulite adesiva;",
+          "sindromi algodistrofiche (CRPS) e artrosi."
+        ]
+      },
+      {
+        "titolo": "Come si svolge una seduta",
+        "paragrafi": [
+          "Una seduta dura circa 15 minuti. Dopo aver individuato la zona con l'ecografo, applico il gel e appoggio la sonda sulla pelle: gli impulsi si avvertono come piccoli colpi ritmici.",
+          "Possono dare un certo fastidio, che di solito è ben tollerato; regolo l'intensità in base alla sensibilità della persona. Il numero di sedute e la loro frequenza dipendono dal problema e da come risponde il tessuto."
+        ]
+      },
+      {
+        "titolo": "Dopo il trattamento",
+        "paragrafi": [
+          "In genere si torna subito alle normali attività. Nei giorni successivi la zona può essere un po' più sensibile: è una reazione attesa e passa da sola.",
+          "Spesso abbino le onde d'urto a esercizi mirati o ad altri trattamenti: l'obiettivo non è solo calmare il dolore, ma rimettere il tendine in condizione di lavorare bene."
+        ]
+      },
+      {
+        "titolo": "Quando non si possono fare",
+        "paragrafi": [
+          "Le onde d'urto focalizzate sono generalmente sicure e ripetibili nel tempo, ma non vanno eseguite in caso di:"
+        ],
+        "elenco": [
+          "malattie della coagulazione del sangue;",
+          "infezioni o tumori nella zona da trattare;",
+          "pacemaker;",
+          "gravidanza."
+        ],
+        "chiusura": "Per questo, prima del trattamento, faccio sempre una visita."
+      },
+      {
+        "titolo": "Prima la diagnosi",
+        "paragrafi": [
+          "Le onde d'urto non sono una terapia «per tutto». Un dolore alla spalla, per esempio, può nascere da una calcificazione, ma anche da una lesione del tendine o da un problema del collo. Solo dopo la diagnosi si sceglie se le onde d'urto sono la scelta giusta, da sole o insieme ad altri trattamenti.",
+          "Durante la visita fisiatrica valuto il problema dal punto di vista medico, ecografico e posturale, e Le propongo un percorso completo."
+        ]
+      },
+      {
+        "titolo": "In sintesi",
+        "paragrafi": [
+          "Le onde d'urto focalizzate eco-assistite sono un trattamento medico preciso, rapido e ripetibile, utile per molti problemi di tendini e articolazioni quando sono inseriti in un percorso completo."
+        ]
+      },
+      {
+        "titolo": "La spalla calcifica: un esempio",
+        "paragrafi": [
+          "Una delle indicazioni più classiche è la tendinopatia calcifica di spalla: depositi di calcio nel tendine della cuffia dei rotatori, che possono dare un dolore intenso, soprattutto di notte e alzando il braccio.",
+          "Con l'ecografo vedo la calcificazione, ne misuro le dimensioni e la colpisco con precisione. Nelle sedute successive posso controllare come cambia, e insieme al trattamento indico gli esercizi per recuperare il movimento della spalla."
+        ]
+      },
+      {
+        "titolo": "Fascite plantare e sperone calcaneare",
+        "paragrafi": [
+          "Il dolore sotto il tallone, più forte ai primi passi del mattino, è spesso dovuto a una fascite plantare, talvolta con uno sperone calcaneare. È un disturbo comune in chi cammina o corre molto, ma anche in chi sta tanto in piedi.",
+          "Le onde d'urto focalizzate sono uno dei trattamenti più utilizzati in questi casi, insieme allo stretching, alla correzione degli appoggi e, quando serve, a plantari su misura."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso:"
+        ],
+        "elenco": [
+          "Le onde d'urto fanno male? Danno un fastidio, di solito ben tollerato; regolo l'intensità durante la seduta.",
+          "Quante sedute servono? Dipende dal problema: lo decidiamo insieme dopo la visita e lo rivalutiamo strada facendo.",
+          "Posso fare sport? Nella maggior parte dei casi sì, con qualche accorgimento nei giorni successivi alla seduta.",
+          "Sono ripetibili? Sì, sono un trattamento sicuro e ripetibile nel tempo, se indicato."
+        ]
+      },
+      {
+        "titolo": "Dove le eseguo",
+        "paragrafi": [
+          "Eseguo le onde d'urto focalizzate eco-assistite allo Studio Medico Duca 16 di Torino, al centro Omnia Salus di Ciriè e all'IRR di Torino.",
+          "Per prenotare può chiamare la sede che preferisce oppure scrivermi a info@savantfisiatra.it."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita fisiatrica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "ozonoterapia-ernia",
+      "categoria": "Schiena",
+      "titolo": "Ozonoterapia per ernia e mal di schiena: cosa sapere",
+      "img": "/savant-sh44/img/rep-ozono.webp",
+      "tempoLettura": "6 min",
+      "intro": "L'ossigeno-ozonoterapia si usa da molti anni in medicina, e una delle sue applicazioni più frequenti riguarda il mal di schiena, le ernie e le protrusioni discali. Ecco come funziona e quando la propongo.",
+      "sezioni": [
+        {
+          "titolo": "Che cos'è",
+          "paragrafi": [
+            "L'ossigeno-ozonoterapia utilizza una miscela di ossigeno e ozono, prodotta al momento da un apposito apparecchio alla concentrazione adatta al trattamento.",
+            "L'ozono ha diverse azioni: antinfiammatoria, antidolorifica, antisettica e immunomodulante; riattiva inoltre il microcircolo, cioè la circolazione nei vasi più piccoli."
+          ]
+        },
+        {
+          "titolo": "Per quali disturbi",
+          "paragrafi": [
+            "In ambito muscolo-scheletrico le indicazioni più frequenti sono:"
+          ],
+          "elenco": [
+            "lombalgia e lombosciatalgia;",
+            "cervicalgia e cervicobrachialgia;",
+            "ernie discali e protrusioni;",
+            "artrosi della colonna e delle articolazioni;",
+            "dolori muscolari e articolari, dolore cronico."
+          ],
+          "chiusura": "L'uso più comune è per via iniettiva, nelle patologie dolorose e infiammatorie della colonna, dei muscoli e delle articolazioni: in questi casi è un trattamento efficace e ben tollerato."
+        },
+        {
+          "titolo": "Come si svolge la seduta",
+          "paragrafi": [
+            "La seduta dura circa 15 minuti e non richiede preparazione. Prelevo la miscela dall'apparecchio ed eseguo un numero variabile di piccole iniezioni, a seconda del problema e della zona, nell'area dolorosa o infiammata.",
+            "Dopo il trattamento La faccio riposare qualche minuto. È sempre consigliabile camminare per 5-10 minuti dopo ogni seduta."
+          ]
+        },
+        {
+          "titolo": "Effetti indesiderati",
+          "paragrafi": [
+            "Gli effetti indesiderati sono generalmente modesti. Il più comune è un lieve dolore nel punto dell'iniezione, che passa da solo nel giro di qualche ora.",
+            "Come per ogni trattamento, prima di iniziare valuto con attenzione la Sua situazione e i farmaci che assume."
+          ]
+        },
+        {
+          "titolo": "Quando non si fa",
+          "paragrafi": [
+            "L'ozonoterapia è controindicata in caso di:"
+          ],
+          "elenco": [
+            "ipertiroidismo non compensato;",
+            "favismo;",
+            "ipoglicemia;",
+            "gravi malattie cardio-respiratorie o del sangue non compensate;",
+            "gravidanza e allattamento."
+          ],
+          "chiusura": "Non va mai usata per via inalatoria."
+        },
+        {
+          "titolo": "Ernia del disco: non tutte sono uguali",
+          "paragrafi": [
+            "Un'ernia del disco vista in risonanza non sempre è la causa del dolore, e non sempre richiede un trattamento invasivo. Molte persone hanno protrusioni senza sintomi.",
+            "Per questo la visita è fondamentale: valuto il dolore, la sua distribuzione, la forza e la sensibilità, la postura e le abitudini. Se compaiono perdita di forza importante o disturbi del controllo della vescica o dell'intestino, serve invece una valutazione urgente."
+          ]
+        },
+        {
+          "titolo": "Un percorso, non una singola terapia",
+          "paragrafi": [
+            "L'ozonoterapia funziona meglio dentro un percorso: esercizi mirati, correzione della postura e delle abitudini, eventualmente terapia manuale. L'idea di risolvere un problema cronico con una sola terapia è ormai superata.",
+            "Il mio obiettivo è curare il dolore, ma anche individuare i fattori che lo mantengono, per ridurre il rischio che ritorni."
+          ]
+        },
+        {
+          "titolo": "Postura e abitudini",
+          "paragrafi": [
+            "Molti mal di schiena ricorrenti hanno una componente legata alla postura, al lavoro e alla sedentarietà. In visita valuto anche questi aspetti: come sta seduto, come solleva i pesi, quanto si muove durante la giornata. Piccoli cambiamenti, mantenuti nel tempo, riducono le ricadute più di qualsiasi singolo trattamento."
+          ]
+        },
+        {
+          "titolo": "Cosa può fare a casa",
+          "paragrafi": [
+            "Nei periodi di dolore acuto è utile restare il più possibile attivi, compatibilmente con il dolore: camminare a passo tranquillo aiuta più del riposo assoluto a letto. Il caldo locale può dare sollievo alle contratture.",
+            "Quando il dolore si attenua, gli esercizi per la mobilità e il rinforzo dei muscoli del tronco diventano fondamentali per ridurre le ricadute. Glieli indico in modo personalizzato, in base a cosa ho trovato in visita."
+          ]
+        },
+        {
+          "titolo": "Lombosciatalgia: quando il dolore scende nella gamba",
+          "paragrafi": [
+            "Quando un'ernia o una protrusione irrita una radice nervosa, il dolore può scendere lungo la gamba, a volte fino al piede: è la lombosciatalgia. Spesso si associa a formicolii e a una sensazione di gamba pesante.",
+            "Nella maggior parte dei casi il disturbo migliora con un trattamento conservativo. L'ozonoterapia, insieme agli esercizi e alla correzione delle abitudini, può aiutare a ridurre il dolore e l'infiammazione e a tornare prima alle attività di ogni giorno."
+          ]
+        },
+        {
+          "titolo": "E il collo?",
+          "paragrafi": [
+            "Lo stesso vale per la cervicalgia e la cervicobrachialgia, quando il dolore dal collo si irradia alla spalla e al braccio. Anche qui la visita serve a capire da dove nasce il dolore: un'ernia cervicale, una contrattura, un problema della spalla o della postura.",
+            "A seconda del caso posso proporre l'ozonoterapia, la mesoterapia, la terapia manuale o una combinazione di trattamenti."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Quante sedute servono? Dipende dal problema e dalla risposta: di solito si programma un ciclo e lo si rivaluta.",
+            "Posso lavorare dopo la seduta? In genere sì: dopo qualche minuto di riposo e una breve camminata si torna alle proprie attività.",
+            "Sostituisce l'intervento? In molti casi permette di evitarlo, ma non sempre: la decisione si prende dopo la visita e gli esami.",
+            "Devo portare la risonanza? Sì, se l'ha già fatta: le immagini e i referti sono molto utili."
+          ]
+        },
+        {
+          "titolo": "La prima seduta",
+          "paragrafi": [
+            "Quando l'ozonoterapia è indicata, la prima seduta può essere eseguita già durante la visita fisiatrica, ed è inclusa nella visita.",
+            "Ricevo allo Studio Medico Duca 16 di Torino, al centro Omnia Salus di Ciriè e all'IRR di Torino. Può scrivermi a info@savantfisiatra.it."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita fisiatrica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "infiltrazioni-ecoguidate",
+      "categoria": "Articolazioni",
+      "titolo": "Infiltrazioni ecoguidate: perché la precisione fa la differenza",
+      "img": "/savant-sh44/img/rep-movimento.webp",
+      "tempoLettura": "6 min",
+      "intro": "Un'infiltrazione porta il farmaco direttamente dove serve: in un'articolazione, intorno a un tendine, in una borsa infiammata. Con la guida ecografica il trattamento diventa più preciso e più sicuro.",
+      "sezioni": [
+        {
+          "titolo": "A cosa servono",
+          "paragrafi": [
+            "Le infiltrazioni permettono di trattare molte patologie delle articolazioni e dei tessuti molli, sia infiammatorie sia degenerative: artrosi, tendinopatie, condropatie.",
+            "Sono un trattamento medico a basso rischio, utile quando la risposta ai farmaci o alle terapie strumentali non è sufficiente."
+          ]
+        },
+        {
+          "titolo": "Le sedi più frequenti",
+          "paragrafi": [
+            "Le zone che tratto più spesso sono:"
+          ],
+          "elenco": [
+            "ginocchio e spalla;",
+            "caviglia;",
+            "mano e articolazione trapezio-metacarpale (rizoartrosi);",
+            "gomito, per epicondilite ed epitrocleite;",
+            "anca, sia il gran trocantere sia l'articolazione coxo-femorale."
+          ]
+        },
+        {
+          "titolo": "Quali farmaci",
+          "paragrafi": [
+            "I farmaci più usati sono i corticosteroidi, con un'azione antinfiammatoria rapida; l'acido ialuronico, che migliora la lubrificazione dell'articolazione; e la miscela di ossigeno-ozono.",
+            "La scelta dipende dal tipo di problema, dalla sua fase e dalle caratteristiche della persona: ne parliamo insieme in visita."
+          ]
+        },
+        {
+          "titolo": "Perché con l'ecografo",
+          "paragrafi": [
+            "Con la guida ecografica vedo in tempo reale il percorso dell'ago e il suo corretto posizionamento nel tessuto da trattare. Questo aumenta molto la precisione.",
+            "L'ecografo mostra anche vasi, nervi e strutture delicate, migliorando la sicurezza. Se c'è un versamento nell'articolazione, posso aspirarlo nella stessa seduta, riducendo in poco tempo dolore e rigidità."
+          ]
+        },
+        {
+          "titolo": "Come si svolge",
+          "paragrafi": [
+            "La seduta dura circa 15 minuti, 30 per l'anca. Dopo aver disinfettato la pelle e individuato il punto con l'ecografo, eseguo l'infiltrazione con un ago sottile.",
+            "In genere le infiltrazioni si fanno a cadenza settimanale; il numero di sedute dipende dal farmaco e dalla gravità del problema."
+          ]
+        },
+        {
+          "titolo": "Dopo l'infiltrazione",
+          "paragrafi": [
+            "È comune un periodo di dolore, di solito lieve, per 24-48 ore. In quei giorni è consigliabile applicare il ghiaccio a cicli e non sollecitare l'articolazione trattata.",
+            "Se compaiono febbre, arrossamento o gonfiore importante, mi contatti subito."
+          ]
+        },
+        {
+          "titolo": "Quando non si fanno",
+          "paragrafi": [
+            "Le infiltrazioni sono controindicate in caso di:"
+          ],
+          "elenco": [
+            "infezioni nella zona o infezioni generali;",
+            "disturbi della coagulazione;",
+            "allergia al farmaco;",
+            "articolazioni con protesi o mezzi di sintesi;",
+            "deficit del sistema immunitario."
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Per scegliere il trattamento giusto mi sono utili le radiografie, le ecografie o le risonanze già fatte, con i referti, l'elenco dei farmaci che assume, in particolare anticoagulanti e antiaggreganti, ed eventuali allergie note. Se ha già fatto infiltrazioni in passato, è importante sapere quali farmaci sono stati usati e con quale risultato. Mi indichi anche se ha protesi o placche nella zona da trattare."
+          ]
+        },
+        {
+          "titolo": "La spalla dolorosa",
+          "paragrafi": [
+            "Nella spalla, le infiltrazioni ecoguidate permettono di raggiungere con precisione la borsa subacromiale, l'articolazione o la guaina del capo lungo del bicipite, strutture vicine tra loro ma molto diverse.",
+            "Proprio perché i dolori di spalla hanno tante cause diverse, l'ecografia in visita è preziosa: mi permette di capire quale struttura è infiammata e di trattare quella, non un punto qualsiasi.",
+            "Nella capsulite adesiva, la cosiddetta spalla congelata, l'infiltrazione può aiutare a ridurre il dolore nella fase più infiammatoria, mentre il recupero del movimento passa dagli esercizi e, quando indicato, dalle onde d'urto."
+          ]
+        },
+        {
+          "titolo": "Ecoguidata o a mano libera?",
+          "paragrafi": [
+            "Non tutte le infiltrazioni richiedono l'ecografo: alcune articolazioni superficiali si possono trattare con precisione anche a mano libera, sulla base dei punti di repere anatomici.",
+            "Uso la guida ecografica quando la struttura da raggiungere è profonda o piccola, quando vicino passano vasi o nervi, o quando serve verificare che il farmaco arrivi esattamente nel punto giusto. È il caso, per esempio, dell'anca."
+          ]
+        },
+        {
+          "titolo": "Artrosi del ginocchio: un esempio",
+          "paragrafi": [
+            "Nell'artrosi del ginocchio la cartilagine si consuma e l'articolazione diventa dolorosa e rigida, a volte con versamento. Un'infiltrazione può ridurre l'infiammazione o migliorare la lubrificazione, e aiutare a riprendere a camminare con meno dolore.",
+            "L'infiltrazione però funziona meglio se accompagnata da esercizi di rinforzo, controllo del peso e attività fisica adatta: è la combinazione a fare la differenza nel tempo."
+          ]
+        },
+        {
+          "titolo": "Il gomito del tennista",
+          "paragrafi": [
+            "L'epicondilite, il cosiddetto gomito del tennista, non colpisce solo chi gioca a tennis: è frequente in chi usa molto il mouse, gli attrezzi o fa lavori manuali ripetitivi.",
+            "Oltre alle infiltrazioni, a seconda della fase, posso proporre le onde d'urto, la mesoterapia o l'elettrolisi percutanea, sempre insieme a esercizi specifici."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "L'infiltrazione fa male? Si sente la puntura e un senso di pressione, di solito ben tollerati.",
+            "Posso guidare dopo? In genere sì, ma per l'anca e il ginocchio è meglio non affaticare l'arto nelle ore successive.",
+            "Quante infiltrazioni si possono fare? Dipende dal farmaco: con i cortisonici è prudente limitarne il numero nel tempo."
+          ]
+        },
+        {
+          "titolo": "Parte di un percorso",
+          "paragrafi": [
+            "Un'infiltrazione può spegnere un'infiammazione, ma il risultato dura di più se si interviene anche sulle cause: carichi, postura, forza muscolare, gesti ripetuti. Per questo, insieme all'infiltrazione, Le indico spesso esercizi o altri trattamenti.",
+            "Eseguo le infiltrazioni ecoguidate allo Studio Medico Duca 16 di Torino, al centro Omnia Salus di Ciriè e all'IRR di Torino."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita fisiatrica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "fisiatra-ortopedico-fisioterapista",
+      "categoria": "Orientarsi",
+      "titolo": "Fisiatra, ortopedico o fisioterapista: a chi rivolgersi?",
+      "img": "/savant-sh44/img/rep-scelta.webp",
+      "tempoLettura": "5 min",
+      "intro": "La riabilitazione è un mondo ampio, con molte figure professionali. Per chi ha un dolore o una limitazione non è sempre facile capire a chi rivolgersi per primo. Ecco qualche indicazione pratica.",
+      "sezioni": [
+        {
+          "titolo": "Tre figure, tre percorsi di studio",
+          "paragrafi": [
+            "La prima scelta, davanti a un problema di dolore o di disabilità, ricade di solito sull'ortopedico, sul fisiatra o sul fisioterapista. Tutti hanno un percorso universitario, ma diverso.",
+            "Ortopedico e fisiatra sono medici chirurghi: 6 anni di laurea e poi 5 anni di specializzazione. Il fisioterapista appartiene alle professioni sanitarie, con una laurea di 3 anni."
+          ]
+        },
+        {
+          "titolo": "Il fisiatra",
+          "paragrafi": [
+            "Il fisiatra è lo specialista medico della riabilitazione. Analizza il problema considerando le condizioni cliniche generali e la postura, e costruisce un progetto riabilitativo personalizzato.",
+            "Il progetto può includere farmaci, infiltrazioni, fisioterapia, terapie manuali e strumentali, come le onde d'urto."
+          ]
+        },
+        {
+          "titolo": "L'ortopedico",
+          "paragrafi": [
+            "L'ortopedico è il primo riferimento per i problemi chirurgici e traumatologici importanti, come fratture e lussazioni.",
+            "Propone l'intervento quando la riabilitazione conservativa non basta o non è efficace."
+          ]
+        },
+        {
+          "titolo": "Cosa hanno in comune",
+          "paragrafi": [
+            "Sia l'ortopedico sia il fisiatra sono competenti nelle terapie infiltrative e, grazie alla formazione medica, possono interpretare e prescrivere esami come radiografie, ecografie e risonanze magnetiche.",
+            "Spesso lavorano insieme: l'ortopedico opera, il fisiatra imposta il recupero."
+          ]
+        },
+        {
+          "titolo": "Il fisioterapista",
+          "paragrafi": [
+            "Il fisioterapista è il professionista che programma ed esegue i trattamenti di fisioterapia, seguendo le indicazioni del fisiatra o dell'ortopedico.",
+            "Si occupa delle terapie rieducative e riferisce al medico come procede il percorso, ma non può prescrivere esami né fare diagnosi mediche."
+          ]
+        },
+        {
+          "titolo": "Come orientarsi",
+          "paragrafi": [
+            "Qualche esempio pratico:"
+          ],
+          "elenco": [
+            "dopo una caduta con sospetta frattura o lussazione, l'ortopedico;",
+            "un dolore che non passa da settimane, o che ritorna, il fisiatra, per una diagnosi e un progetto;",
+            "un programma di esercizi già prescritto dal medico, il fisioterapista;",
+            "il recupero dopo un intervento, il fisiatra insieme al fisioterapista."
+          ],
+          "chiusura": "Nella pagina principale trova uno strumento che La aiuta a scegliere in base alla Sua situazione."
+        },
+        {
+          "titolo": "Prima la diagnosi",
+          "paragrafi": [
+            "La scelta del percorso più adatto, veloce ed efficace parte sempre dalla diagnosi medica. È il primo momento fondamentale per capire il problema, che è legato alla salute generale della persona, e fornisce informazioni essenziali a tutti gli altri professionisti.",
+            "Altre figure lavorano in ambiti specifici e si confrontano con il medico per il bene e la sicurezza del paziente."
+          ]
+        },
+        {
+          "titolo": "Dopo un intervento",
+          "paragrafi": [
+            "Dopo un intervento ortopedico, per esempio una protesi di ginocchio o una ricostruzione del legamento crociato, il recupero è una fase delicata quanto l'operazione stessa. Il fisiatra imposta il programma, controlla il dolore e i progressi, e decide insieme al chirurgo e al fisioterapista quando aumentare i carichi e riprendere le attività, dal lavoro allo sport. È un percorso che si costruisce insieme, passo dopo passo."
+          ]
+        },
+        {
+          "titolo": "Lo sportivo con un dolore",
+          "paragrafi": [
+            "Chi fa sport ha spesso bisogno di tornare in fretta all'attività. In questi casi la diagnosi precisa è ancora più importante: un dolore al tendine può richiedere riposo relativo, un altro può migliorare proprio con il carico guidato.",
+            "Ho fatto per anni visite medico-sportive e servizio medico sui campi di gara: so quanto conti, per uno sportivo, sapere cosa può fare e cosa deve evitare, settimana per settimana.",
+            "Il percorso ideale unisce la valutazione del fisiatra, i trattamenti medici quando servono e il lavoro in palestra con il fisioterapista."
+          ]
+        },
+        {
+          "titolo": "Cosa succede in una visita fisiatrica",
+          "paragrafi": [
+            "La visita fisiatrica dura circa 30 minuti. Raccolgo la storia del problema, le abitudini e le attività, valuto la postura, il movimento, la forza e, quando serve, uso l'ecografo per vedere direttamente tendini, muscoli e articolazioni.",
+            "Alla fine Le spiego cosa ho trovato e Le propongo un percorso: a volte un trattamento si può fare già nella stessa seduta, altre volte servono esami o un programma di fisioterapia."
+          ]
+        },
+        {
+          "titolo": "E l'osteopata, il chinesiologo, il massoterapista?",
+          "paragrafi": [
+            "Nel mondo della riabilitazione lavorano anche altre figure, ognuna con il proprio ambito. Possono dare un grande contributo, ma è importante che si confrontino con il medico, soprattutto quando il problema non migliora o compaiono sintomi nuovi.",
+            "Personalmente mi sono formato anche in osteopatia muscolo-scheletrica, all'Istituto Italiano di Terapia Manuale di Bologna: la uso come parte del percorso, dopo la diagnosi medica."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Serve l'impegnativa per la visita fisiatrica privata? No, si prenota direttamente, per telefono o via mail.",
+            "Devo portare gli esami? Sì, se li ha: radiografie, ecografie e risonanze, con i referti.",
+            "Il fisiatra opera? No: se serve un intervento, La indirizzo all'ortopedico o al chirurgo più adatto e poi La seguo nel recupero."
+          ]
+        },
+        {
+          "titolo": "Lavorare insieme",
+          "paragrafi": [
+            "Nei centri dove lavoro, come Omnia Salus e l'IRR, medici e fisioterapisti collaborano ogni giorno: il fisiatra imposta e controlla il percorso, il fisioterapista lo porta avanti in palestra o in piscina.",
+            "Se ha dubbi su a chi rivolgersi, mi scriva a info@savantfisiatra.it: Le indico il percorso più adatto."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita fisiatrica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "savantfisiatra",
+    "nota": "il Dottore ha una pagina Facebook ma non un profilo Instagram: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "lista",
+        "titolo": "Onde d'urto: per cosa funzionano",
+        "punti": [
+          "Calcificazioni della spalla",
+          "Fascite plantare e sperone",
+          "Gomito del tennista",
+          "Tendine d'Achille e rotuleo"
+        ],
+        "didascalia": "Le onde d'urto focalizzate raggiungono i tessuti fino a circa 8 cm di profondità. Le eseguo con l'ecografo, per colpire il punto giusto.",
+        "hashtag": "#ondedurto #fisiatra #torino"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Ozonoterapia per l'ernia: funziona?",
+        "risposta": "Per molti, sì: dentro un percorso.",
+        "didascalia": "L'ossigeno-ozono ha un'azione antinfiammatoria e antidolorifica. Funziona meglio insieme a esercizi e correzione della postura.",
+        "hashtag": "#ozonoterapia #ernia #maldischiena"
+      },
+      {
+        "stile": "foto",
+        "immagine": "trattamento",
+        "titolo": "Infiltrazione ecoguidata",
+        "sottotitolo": "L'ago si vede, il farmaco arriva dove serve",
+        "didascalia": "Con l'ecografo vedo in tempo reale ago, vasi e nervi: più precisione e più sicurezza.",
+        "hashtag": "#infiltrazioni #ecografia #riabilitazione"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "Ricevo anche presso",
+    "email": "info@savantfisiatra.it",
+    "luoghi": [
+      {
+        "id": "duca",
+        "tipo": "Studio",
+        "nome": "Studio Medico Duca 16",
+        "breve": "Torino, Crocetta",
+        "indirizzo": "Corso Duca degli Abruzzi 16",
+        "citta": "Torino",
+        "cap": "",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo Studio Medico Duca 16, corso Duca degli Abruzzi 16, Torino",
+        "telefono": "011 749 0268",
+        "img": "/savant-sh44/img/duca16.webp",
+        "testo": "Quartiere Crocetta, a pochi passi dalla metro Vinzaglio. Un ambiente signorile e sobrio, con parcheggio facile nelle vicinanze.",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "011 749 0268"
+          }
+        ]
+      },
+      {
+        "id": "omnia",
+        "tipo": "Centro medico riabilitativo",
+        "nome": "Omnia Salus",
+        "breve": "Ciriè",
+        "indirizzo": "Omnia Salus",
+        "citta": "Ciriè",
+        "cap": "",
+        "mappa": true,
+        "principale": false,
+        "frase": "il centro Omnia Salus di Ciriè",
+        "telefono": "011 297 0599",
+        "img": "/savant-sh44/img/omnia.webp",
+        "testo": "Centro aperto nel 2023, di cui sono Direttore sanitario e tecnico: ambulatori, palestra di fisioterapia e piscina per la riabilitazione in acqua.",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "011 297 0599"
+          }
+        ]
+      },
+      {
+        "id": "irr",
+        "tipo": "Istituto riabilitativo",
+        "nome": "IRR · Istituto delle Riabilitazioni Riba",
+        "breve": "Torino",
+        "indirizzo": "IRR Istituto delle Riabilitazioni Riba",
+        "citta": "Torino",
+        "cap": "",
+        "mappa": true,
+        "principale": false,
+        "frase": "l'IRR, Istituto delle Riabilitazioni Riba, Torino",
+        "telefono": "011 399 9222",
+        "img": "/savant-sh44/img/irr.webp",
+        "testo": "Oltre 2.200 mq con piscina riabilitativa riscaldata e pista da running sul tetto. Collaborating Center della Federazione Internazionale di Medicina dello Sport.",
+        "telefoni": [
+          {
+            "label": "Prenotazioni",
+            "numero": "011 399 9222"
+          }
+        ]
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Ricevo su appuntamento in tre sedi. La prima seduta di ozonoterapia, quando indicata, è inclusa nella visita fisiatrica.",
+    "telefono": "3914059685",
+    "telefonoLabel": "391 405 9685",
+    "chiamaLabel": "lo studio",
+    "whatsapp": null,
+    "oggettoMail": "Richiesta di prenotazione",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi sede, giorno e orario che preferisce: La ricontattiamo per confermare l'appuntamento.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30",
+        "18:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate dallo studio.",
+      "tipi": [
+        "Prima visita",
+        "Visita di controllo",
+        "Trattamento"
+      ],
+      "motivi": [
+        "Spalla",
+        "Gomito",
+        "Collo",
+        "Schiena o ernia",
+        "Anca",
+        "Ginocchio",
+        "Piede o tallone",
+        "Postura",
+        "Recupero dopo un intervento"
+      ],
+      "motiviFrase": [
+        "un dolore alla spalla",
+        "un dolore al gomito",
+        "un dolore al collo",
+        "mal di schiena o un'ernia",
+        "un dolore all'anca",
+        "un dolore al ginocchio",
+        "un dolore al piede o al tallone",
+        "un problema posturale",
+        "il recupero dopo un intervento"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio Medico Duca 16 · Torino, Crocetta",
+          "frase": "lo Studio Medico Duca 16, corso Duca degli Abruzzi 16, Torino"
+        },
+        {
+          "nome": "Omnia Salus · Ciriè",
+          "frase": "il centro Omnia Salus di Ciriè"
+        },
+        {
+          "nome": "IRR · Torino",
+          "frase": "l'IRR, Istituto delle Riabilitazioni Riba, Torino"
+        }
+      ],
+      "privacy": "https://www.savantfisiatra.it/privacy-policy/",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio da quanto tempo ha il disturbo"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#EEF6F5",
+      "ink": "#0E1B2B",
+      "muted": "#566475",
+      "line": "#D8E6E4",
+      "brand": "#0266BF",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#6BBEB3",
+      "deep": "#0B2A45",
+      "deep-ink": "#CFE3EE"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Albert+Sans:wght@400;500;600&display=swap",
+    "fontTitoli": "Plus Jakarta Sans",
+    "fontTesti": "Albert Sans",
+    "fontUi": "Albert Sans",
+    "favicon": "/savant-sh44/img/logo.png"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/savant-sh44/brand/brand.json",
+    "pagine": [
+      "https://www.savantfisiatra.it/",
+      "https://www.savantfisiatra.it/dottor-luca-savant-medico-fisiatra/",
+      "https://www.savantfisiatra.it/centro/studio-torino-dr-luca-savant/",
+      "https://www.savantfisiatra.it/centro/omnia-salus/",
+      "https://www.savantfisiatra.it/centro/irr-istituto-riabilitazioni-riba/",
+      "https://www.savantfisiatra.it/prestazione/onde-durto-focalizzate/",
+      "https://www.savantfisiatra.it/prestazione/ozonoterapia/",
+      "https://www.savantfisiatra.it/prestazione/infiltrazioni-ecoguidate/"
+    ]
+  }
+}

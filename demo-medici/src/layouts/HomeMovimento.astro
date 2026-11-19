@@ -1,0 +1,468 @@
+---
+// Layout "movimento" (prima demo: Dr. Luca Savant, fisiatra, Torino e Ciriè). Ricco e curato ma serio (lezione Pellegrino):
+// fondo chiaro, Plus Jakarta Sans + Albert Sans, blu #0266BF e verde acqua #6BBEB3 del logo, archi concentrici del suo logo come
+// unico motivo grafico. Interattività utile: "Trova il trattamento" (zona → prestazioni indicate, durata, sedi, controindicazioni,
+// Prenota questo); "Una visita, quattro sguardi" (sezione scura con avanzamento allo scroll); "Radiali o focalizzate?" (schema in
+// sezione con la profondità del fuoco regolabile); "A chi rivolgersi?" (situazioni → figura giusta); prenotazione per prestazione con
+// le sole sedi che la offrono e il telefono della sede.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const sedi = x.sediDati as any[];
+const tratt = x.trattamenti as any[];
+const zone = x.zone as any[];
+const mail = emailRichieste(m);
+const T = Object.fromEntries(tratt.map((t) => [t.id, t]));
+const S = Object.fromEntries(sedi.map((s) => [s.id, s]));
+const testo = (t: any, s: any) => `Buongiorno Dottore, vorrei prenotare ${t.frase} presso ${s.frase}.`;
+const href0 = `mailto:${mail}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(testo(tratt[0], sedi[0]))}`;
+const z0 = zone[0];
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const iconeApproccio = ['persone', 'lente', 'osso', 'commento'];
+// schema delle onde d'urto: 1 cm = 34 px, superficie a y=40
+const Y0 = 40, CM = 34;
+const strati = [[0, 0.3, 'Pelle', '#F6D9C8'], [0.3, 1.6, 'Sottocute', '#FBEBD9'], [1.6, 5.2, 'Muscolo', '#F2C7C0'], [5.2, 6.4, 'Tendini e fasce', '#E8E4D8'], [6.4, 9, 'Osso', '#E7EDF2']];
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/90 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-8">
+      <a href={`/${m.slug}`} class="flex min-w-0 items-center gap-3 leading-tight">
+        <img src={foto.logo} alt="" width="512" height="512" class="h-10 w-10 shrink-0 object-contain" />
+        <span class="min-w-0"><span class="block font-head text-[18px] font-extrabold text-deep sm:text-[20px]">Dr. Luca Savant</span><span class="block text-[12.5px] font-medium text-brand">Medico Fisiatra</span></span>
+      </a>
+      <nav class="hidden items-center gap-6 text-[14.5px] font-medium text-ink/70 xl:flex">
+        <a href="#aree" class="hover:text-brand">Trova il trattamento</a><a href="#onde" class="hover:text-brand">Onde d'urto</a><a href="#chi-rivolgersi" class="hover:text-brand">A chi rivolgersi</a><a href="#sedi" class="hover:text-brand">Sedi</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#articoli" class="hover:text-brand">Blog</a>
+      </nav>
+      <a href="#prenota-box" class="btn !min-h-[42px] shrink-0 !rounded-full bg-brand !px-5 text-sm text-white hover:opacity-90"><Icona nome="calendario" class="h-4 w-4" /> <span class="hidden sm:inline">Prenoti</span><span class="sm:hidden">Prenoti</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-surface" data-hero>
+      <svg viewBox="0 0 600 600" class="archi pointer-events-none absolute -right-40 top-10 hidden w-[760px] lg:block" aria-hidden="true">
+        {[90, 160, 230, 300].map((r, i) => <path d={`M ${300 - r} 300 A ${r} ${r} 0 0 0 ${300 + r} 300`} fill="none" stroke={i % 2 ? 'var(--c-brand2)' : 'var(--c-brand)'} stroke-opacity={0.22 - i * 0.03} stroke-width="22" stroke-linecap="round" data-arco />)}
+      </svg>
+      <div class="relative mx-auto grid max-w-7xl gap-12 px-4 pb-16 pt-10 sm:px-8 lg:grid-cols-12 lg:items-center lg:pb-24 lg:pt-16">
+        <div class="lg:col-span-6">
+          <p class="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-[13px] font-semibold text-brand shadow-sm" data-entra><span class="h-2 w-2 rounded-full bg-brand2"></span>{x.hero.eyebrow}</p>
+          <h1 class="mt-5 font-head text-[2.8rem] font-extrabold leading-[1.02] tracking-[-0.02em] text-deep sm:text-[4.3rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-ink/80" data-entra>{x.hero.testo}</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row" data-entra>
+            <a href="#aree" class="btn !rounded-full bg-brand text-white hover:opacity-90"><Icona nome="lente" /> Trovi il Suo trattamento</a>
+            <a href="#prenota-box" class="btn !rounded-full border border-deep/15 bg-white text-deep hover:border-brand"><Icona nome="calendario" /> Prenoti una visita</a>
+          </div>
+          <ul class="mt-10 grid max-w-xl grid-cols-3 gap-3" data-entra>
+            <li class="rounded-2xl bg-white p-4 shadow-sm"><p class="font-head text-[1.9rem] font-extrabold leading-none text-brand"><span data-conta="8">8</span></p><p class="mt-1.5 text-[13px] leading-snug text-muted">prestazioni, da 15 a 30 minuti</p></li>
+            <li class="rounded-2xl bg-white p-4 shadow-sm"><p class="font-head text-[1.9rem] font-extrabold leading-none text-brand"><span data-conta="3">3</span></p><p class="mt-1.5 text-[13px] leading-snug text-muted">sedi tra Torino e Ciriè</p></li>
+            <li class="rounded-2xl bg-white p-4 shadow-sm"><p class="font-head text-[1.9rem] font-extrabold leading-none text-brand">Eco</p><p class="mt-1.5 text-[13px] leading-snug text-muted">ecografia in visita, per diagnosi e trattamento</p></li>
+          </ul>
+        </div>
+        <div class="relative lg:col-span-6">
+          <div class="relative mx-auto max-w-[520px]">
+            <div class="overflow-hidden rounded-[2rem] shadow-[0_30px_80px_rgb(11_42_69/.25)]" data-foto-hero>
+              <img src={foto.duca} alt="L'ingresso dello Studio Medico Duca 16, in corso Duca degli Abruzzi a Torino" width="1200" height="1500" class="aspect-[4/5] w-full object-cover sm:aspect-[5/5]" data-foto-img />
+            </div>
+            <div class="absolute -bottom-8 -left-4 flex items-end gap-4 rounded-[1.6rem] bg-white p-3 pr-6 shadow-[0_20px_50px_rgb(11_42_69/.18)] sm:-left-10" data-carta-medico>
+              <div class="h-28 w-28 shrink-0 overflow-hidden rounded-[1.2rem] bg-brand2 sm:h-32 sm:w-32"><img src={foto.ritratto} alt={foto.ritrattoAlt} width="282" height="290" class="h-full w-full object-cover object-top" /></div>
+              <div class="pb-1"><p class="font-head text-[1.15rem] font-extrabold leading-tight text-deep">Dr. Luca Savant</p><p class="mt-0.5 text-[13px] leading-snug text-muted">Specialista in Medicina Fisica<br />e Riabilitazione</p></div>
+            </div>
+            <p class="absolute -top-4 right-4 max-w-[15rem] rounded-2xl bg-deep px-4 py-3 text-[13.5px] font-medium leading-snug text-white shadow-lg sm:-right-6" data-carta-promo>La prima seduta di ozonoterapia, se indicata, è inclusa nella visita.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TROVA IL TRATTAMENTO -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24" data-trova data-zone={JSON.stringify(zone)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div><p class="text-[13px] font-bold uppercase tracking-[0.16em] text-brand2">Trova il trattamento</p>
+          <h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-tight tracking-[-0.02em] text-deep sm:text-[3.2rem]" data-sale>Dove sente dolore?</h2></div>
+          <p class="max-w-md text-[16.5px] text-muted">Scelga la zona: Le mostro i trattamenti che eseguo per quei disturbi, quanto durano e in quali sedi.</p>
+        </div>
+        <div class="-mx-4 mt-8 flex gap-2 overflow-x-auto px-4 pb-2 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0" role="group" aria-label="Zona del dolore">
+          {zone.map((z, i) => <button type="button" class="zona-chip shrink-0 rounded-full border border-line px-5 py-2.5 text-[15px] font-semibold" data-zona={z.id} aria-pressed={i === 0 ? 'true' : 'false'}>{z.nome}</button>)}
+        </div>
+        <div class="mt-8 grid gap-6 lg:grid-cols-12">
+          <aside class="rounded-[1.75rem] bg-deep p-7 text-white lg:col-span-4 lg:self-start" aria-live="polite">
+            <p class="text-[13px] font-bold uppercase tracking-[0.16em] text-brand2">La zona</p>
+            <p class="mt-2 font-head text-[2.2rem] font-extrabold leading-tight" data-zona-nome>{z0.nome}</p>
+            <p class="mt-3 text-[16px] leading-relaxed text-deep-ink" data-zona-problemi>{z0.problemi}</p>
+            <p class="mt-6 border-t border-white/15 pt-5 text-[15px] text-deep-ink"><span class="font-head text-[1.6rem] font-extrabold text-white" data-zona-n>{z0.tratt.length}</span> trattamenti indicati. Si parte sempre dalla visita: è lì che scegliamo insieme.</p>
+          </aside>
+          <div class="grid gap-4 sm:grid-cols-2 lg:col-span-8" data-carte>
+            {tratt.map((t) => (
+              <article class="tratt-card flex flex-col rounded-[1.5rem] border border-line bg-white p-6" data-tratt={t.id} hidden={!z0.tratt.includes(t.id)}>
+                <div class="flex items-start justify-between gap-3"><h3 class="font-head text-[1.3rem] font-extrabold leading-tight text-deep">{t.nome}</h3><span class="shrink-0 rounded-full bg-surface px-3 py-1 text-[13px] font-bold text-brand">{t.durata} min</span></div>
+                <p class="mt-2.5 text-[15px] leading-relaxed text-ink/80">{t.testo}</p>
+                <ul class="mt-4 flex flex-wrap gap-1.5" aria-label="Sedi">{sedi.map((s) => <li class={`rounded-md px-2 py-1 text-[12px] font-semibold ${t.sedi.includes(s.id) ? 'bg-brand2/20 text-deep' : 'bg-surface text-muted/60 line-through'}`}>{s.id === 'duca' ? 'Duca 16' : s.id === 'omnia' ? 'Ciriè' : 'IRR'}</li>)}</ul>
+                <details class="mt-4 text-[14px]"><summary class="cursor-pointer font-semibold text-muted">Controindicazioni</summary><p class="mt-2 leading-relaxed text-ink/75">{t.contro}</p></details>
+                <button type="button" class="mt-auto inline-flex items-center gap-2 pt-5 text-left font-semibold text-brand hover:underline" data-prenota-tratt={t.id}>Prenoti questo trattamento <Icona nome="freccia" class="h-4 w-4" /></button>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNA VISITA, QUATTRO SGUARDI -->
+    <section class="relative overflow-hidden bg-deep px-4 py-16 text-white sm:px-8 sm:py-24" data-approccio>
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <div class="lg:sticky lg:top-32">
+            <p class="text-[13px] font-bold uppercase tracking-[0.16em] text-brand2">Il mio metodo</p>
+            <h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-tight tracking-[-0.02em] sm:text-[3.2rem]" data-sale>Una visita, quattro sguardi</h2>
+            <p class="mt-4 max-w-md text-[17px] leading-relaxed text-deep-ink">«Quello che mi appassiona di più, da fisiatra, è la possibilità di valutare il paziente in modo completo.» Trattare un problema con una sola terapia è un'idea superata.</p>
+            <div class="mt-8 h-1.5 max-w-xs overflow-hidden rounded-full bg-white/10"><div class="h-full w-0 rounded-full bg-brand2" data-approccio-barra></div></div>
+          </div>
+        </div>
+        <ol class="space-y-5 lg:col-span-7">
+          {(x.approccio as any[]).map((a, i) => (
+            <li class="sguardo flex gap-5 rounded-[1.5rem] bg-white/[0.04] p-6 ring-1 ring-white/10 sm:p-8" data-sguardo>
+              <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-brand2/15 text-brand2"><Icona nome={iconeApproccio[i]} class="h-7 w-7" /></span>
+              <div><h3 class="font-head text-[1.5rem] font-extrabold">{a.nome}</h3><p class="mt-1.5 text-[16px] leading-relaxed text-deep-ink">{a.testo}</p></div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <!-- ONDE D'URTO: radiali o focalizzate -->
+    <section id="onde" class="px-4 py-16 sm:px-8 sm:py-24" data-onde>
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-5">
+          <p class="text-[13px] font-bold uppercase tracking-[0.16em] text-brand2">Onde d'urto</p>
+          <h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-tight tracking-[-0.02em] text-deep sm:text-[3.2rem]" data-sale>Radiali o focalizzate?</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-ink/80">Non sono la stessa cosa. Le onde radiali si disperdono in superficie; quelle focalizzate, che eseguo con l'ecografo, concentrano l'energia in profondità.</p>
+          <div class="mt-6 inline-flex rounded-full bg-surface p-1" role="group" aria-label="Tipo di onde d'urto">
+            <button type="button" class="onde-btn rounded-full px-5 py-2.5 text-[15px] font-bold" data-tipo="focalizzate" aria-pressed="true">Focalizzate</button>
+            <button type="button" class="onde-btn rounded-full px-5 py-2.5 text-[15px] font-bold" data-tipo="radiali" aria-pressed="false">Radiali</button>
+          </div>
+          <label class="mt-6 block" data-fuoco-box><span class="flex justify-between text-[14px] font-semibold text-deep"><span>Profondità del fuoco</span><span><span data-fuoco-cm>5</span> cm</span></span>
+            <input type="range" min="1" max="8" step="0.5" value="5" class="mt-2 w-full accent-[var(--c-brand)]" data-fuoco aria-label="Profondità del fuoco in centimetri" /></label>
+          <dl class="mt-6 grid grid-cols-2 gap-3" aria-live="polite">
+            <div class="rounded-2xl bg-surface p-4"><dt class="text-[12.5px] font-semibold uppercase tracking-[0.1em] text-muted">Pressione</dt><dd class="mt-1 font-head text-[1.4rem] font-extrabold text-deep" data-onde-pressione>oltre 500 bar</dd></div>
+            <div class="rounded-2xl bg-surface p-4"><dt class="text-[12.5px] font-semibold uppercase tracking-[0.1em] text-muted">Profondità</dt><dd class="mt-1 font-head text-[1.4rem] font-extrabold text-deep" data-onde-prof>fino a circa 8 cm</dd></div>
+          </dl>
+          <p class="mt-4 text-[15.5px] leading-relaxed text-ink/80" data-onde-testo aria-live="polite">Indicate per tendini, calcificazioni, fascite plantare e artrosi. Possono essere eseguite solo dal medico specialista.</p>
+        </div>
+        <figure class="lg:col-span-7">
+          <div class="overflow-hidden rounded-[1.75rem] border border-line bg-white p-4 sm:p-6">
+            <svg viewBox="0 0 560 360" class="w-full" role="img" aria-label="Schema in sezione dei tessuti con la propagazione delle onde d'urto" data-schema>
+              {strati.map(([a, b, n, c]) => <g><rect x="70" y={Y0 + (a as number) * CM} width="470" height={((b as number) - (a as number)) * CM} fill={c as string} /><text x="530" y={(b as number) - (a as number) < 0.6 ? Y0 - 6 : Y0 + (((a as number) + (b as number)) / 2) * CM + 4} text-anchor="end" font-size="12" font-weight="600" fill="#566475">{n}</text></g>)}
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((c) => <g><line x1="56" x2="66" y1={Y0 + c * CM} y2={Y0 + c * CM} stroke="#566475" /><text x="50" y={Y0 + c * CM + 4} text-anchor="end" font-size="11" fill="#566475">{c}</text></g>)}
+              <text x="20" y="24" font-size="11" fill="#566475">cm</text>
+              <rect x="246" y="6" width="68" height="30" rx="10" fill="var(--c-deep)" />
+              <text x="280" y="26" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">sonda</text>
+              <path d="" fill="var(--c-brand)" fill-opacity=".28" stroke="var(--c-brand)" stroke-width="1.5" data-fascio />
+              <circle cx="280" cy={Y0 + 5 * CM} r="7" fill="var(--c-brand)" stroke="#fff" stroke-width="2.5" data-fuoco-punto />
+            </svg>
+          </div>
+          <figcaption class="mt-3 text-center text-[13px] text-muted">Schema illustrativo, non in scala reale.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- A CHI RIVOLGERSI -->
+    <section id="chi-rivolgersi" class="bg-surface px-4 py-16 sm:px-8 sm:py-24" data-chi data-domande={JSON.stringify(x.domande)}>
+      <div class="mx-auto max-w-7xl">
+        <p class="text-[13px] font-bold uppercase tracking-[0.16em] text-brand2">Orientarsi</p>
+        <h2 class="mt-2 max-w-3xl font-head text-[2.4rem] font-extrabold leading-tight tracking-[-0.02em] text-deep sm:text-[3.2rem]" data-sale>Fisiatra, ortopedico o fisioterapista?</h2>
+        <p class="mt-3 max-w-2xl text-[17px] text-ink/80">Scelga la situazione che La riguarda: Le dico a chi rivolgersi per primo.</p>
+        <div class="mt-8 flex flex-wrap gap-2" role="group" aria-label="La Sua situazione">
+          {(x.domande as any[]).map((d, i) => <button type="button" class="domanda-chip rounded-full border border-line bg-white px-4 py-2.5 text-[15px] font-semibold" data-domanda={i} aria-pressed="false">{d.testo}</button>)}
+        </div>
+        <p class="mt-5 min-h-[3rem] max-w-3xl text-[16.5px] leading-relaxed text-deep" data-chi-perche aria-live="polite">Ortopedico e fisiatra sono medici chirurghi; il fisioterapista è una professione sanitaria. Ognuno ha un ruolo preciso.</p>
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          {(x.chi as any[]).map((c) => (
+            <article class="chi-card rounded-[1.5rem] border-2 border-transparent bg-white p-7" data-chi-card={c.id}>
+              <h3 class="font-head text-[1.5rem] font-extrabold text-deep">{c.nome}</h3>
+              <p class="mt-1 text-[13.5px] font-semibold text-brand">{c.studi}</p>
+              <p class="mt-3 text-[15.5px] leading-relaxed text-ink/80">{c.testo}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <p class="text-[13px] font-bold uppercase tracking-[0.16em] text-brand2">{m.sedi.titolo}</p>
+        <h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-tight tracking-[-0.02em] text-deep sm:text-[3.2rem]" data-sale>Tre sedi, un solo metodo</h2>
+        <div class="mt-10 grid gap-6 lg:grid-cols-3" data-sedi>
+          {sedi.map((s) => (
+            <article class="group flex flex-col overflow-hidden rounded-[1.75rem] border border-line bg-white">
+              <div class="overflow-hidden"><img src={s.img} alt={s.nome} width="1300" height="975" loading="lazy" class="aspect-[4/3] w-full object-cover transition-[scale] duration-700 group-hover:scale-[1.04]" /></div>
+              <div class="flex flex-1 flex-col p-6">
+                <p class="text-[13px] font-semibold text-brand">{s.tipo} · {s.breve}</p>
+                <h3 class="mt-1 font-head text-[1.45rem] font-extrabold leading-tight text-deep">{s.nome}</h3>
+                <p class="mt-2 text-[15px] leading-relaxed text-ink/75">{s.testo}</p>
+                <p class="mt-4 text-[13.5px] text-muted"><span class="font-semibold text-deep">Qui: </span>{tratt.filter((t) => t.sedi.includes(s.id)).map((t) => t.nome).join(', ')}.</p>
+                <div class="mt-auto flex flex-wrap gap-x-5 gap-y-2 pt-5"><a href={telHref(s.telefono)} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="tel" class="h-4 w-4" />{s.telefono}</a><a href={mapsHref(s.indirizzo, s.citta)} target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-semibold text-brand hover:underline"><Icona nome="pin" class="h-4 w-4" /> Mappa</a></div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-[360px] overflow-hidden rounded-[2rem] bg-brand2/30 pt-10">
+            <svg viewBox="0 0 400 200" class="absolute inset-x-0 top-6 w-full" aria-hidden="true">{[60, 110, 160].map((r) => <path d={`M ${200 - r} 200 A ${r} ${r} 0 0 1 ${200 + r} 200`} fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="14" stroke-linecap="round" />)}</svg>
+            <img src={foto.ritratto} alt={foto.ritrattoAlt} width="282" height="290" loading="lazy" class="relative mx-auto w-[78%]" />
+          </div>
+          <p class="mt-6 text-center text-[15px] text-muted">Contatti diretti: <a href={`mailto:${m.sedi.email}`} class="font-semibold text-brand hover:underline">{m.sedi.email}</a> · <a href={telHref(m.prenota.telefono)} class="font-semibold text-brand hover:underline">{m.prenota.telefonoLabel}</a></p>
+        </div>
+        <div class="lg:col-span-7">
+          <p class="text-[13px] font-bold uppercase tracking-[0.16em] text-brand2">Chi sono</p>
+          <h2 class="mt-2 font-head text-[2.4rem] font-extrabold leading-tight tracking-[-0.02em] text-deep sm:text-[3.2rem]" data-sale>Riabilitare la persona nella sua vita di tutti i giorni</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-ink/85">Il mio obiettivo non è solo curare il problema per cui il paziente viene in visita, ma individuare i fattori posturali e disfunzionali profondi che ne sono alla radice. È una sfida mai banale, a volte difficile, ma proprio per questo molto affascinante.</p>
+          <ol class="relative mt-8 space-y-6 pl-8" data-storia>
+            <span class="absolute bottom-2 left-[7px] top-2 w-0.5 bg-line" aria-hidden="true"></span>
+            <span class="absolute left-[7px] top-2 w-0.5 origin-top bg-brand" style="bottom:.5rem" aria-hidden="true" data-storia-linea></span>
+            {(x.storia as any[]).map((s) => <li class="relative"><span class="absolute -left-8 top-1 h-4 w-4 rounded-full border-[3px] border-surface bg-brand" aria-hidden="true"></span><p class="text-[13px] font-bold uppercase tracking-[0.12em] text-brand2">{s.anno}</p><h3 class="mt-0.5 font-head text-[1.2rem] font-extrabold text-deep">{s.titolo}</h3><p class="mt-1 text-[15.5px] leading-relaxed text-ink/80">{s.testo}</p></li>)}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRENOTAZIONE PER PRESTAZIONE -->
+    <section id="prenota-box" class="px-4 py-16 sm:px-8 sm:py-24" data-prenota-box data-mail={mail} data-oggetto={m.prenota.oggettoMail} data-tratt={JSON.stringify(tratt.map((t) => ({ id: t.id, frase: t.frase, sedi: t.sedi, durata: t.durata })))} data-sedi={JSON.stringify(sedi.map((s) => ({ id: s.id, frase: s.frase, telefono: s.telefono })))}>
+      <div class="mx-auto grid max-w-7xl overflow-hidden rounded-[2rem] shadow-[0_30px_80px_rgb(11_42_69/.14)] ring-1 ring-line lg:grid-cols-12">
+        <div class="bg-white p-6 sm:p-10 lg:col-span-7">
+          <h2 class="font-head text-[2.2rem] font-extrabold leading-tight tracking-[-0.02em] text-deep sm:text-[2.8rem]">Prenoti</h2>
+          <label class="mt-6 block"><span class="text-[13px] font-bold uppercase tracking-[0.14em] text-muted">Cosa vuole prenotare</span>
+            <select class="campo mt-2" data-prestazione>{tratt.map((t) => <option value={t.id}>{t.nome} · {t.durata} min</option>)}</select></label>
+          <p class="mt-6 text-[13px] font-bold uppercase tracking-[0.14em] text-muted" id="sede-label">Dove</p>
+          <div class="mt-2 grid gap-2 sm:grid-cols-3" role="group" aria-labelledby="sede-label">
+            {sedi.map((s, i) => <button type="button" class="sede-btn rounded-2xl border border-line p-3.5 text-left" data-sede={s.id} aria-pressed={i === 0 ? 'true' : 'false'}><span class="block font-head text-[15.5px] font-extrabold text-deep">{s.nome.split(' · ')[0]}</span><span class="block text-[12.5px] text-muted" data-sede-nota>{s.breve}</span></button>)}
+          </div>
+          <p class="mt-3 text-[13.5px] text-muted" data-sede-avviso aria-live="polite"></p>
+        </div>
+        <div class="flex flex-col justify-between gap-6 bg-deep p-6 text-white sm:p-10 lg:col-span-5">
+          <div><p class="text-[13px] font-bold uppercase tracking-[0.14em] text-brand2">Il Suo messaggio</p>
+          <p class="mt-3 font-head text-[1.3rem] font-bold leading-snug" data-anteprima aria-live="polite">{testo(tratt[0], sedi[0])}</p></div>
+          <div class="flex flex-col gap-3">
+            <a href={href0} data-prenota class="btn !rounded-full bg-brand2 text-deep hover:opacity-90"><Icona nome="mail" /> Invii la mail</a>
+            <a href={telHref(sedi[0].telefono)} class="btn !rounded-full border border-white/30 text-white hover:bg-white/10" data-tel-link><Icona nome="tel" /> Chiami la sede · <span data-tel-testo>{sedi[0].telefono}</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-movimento bg-surface"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.4rem] font-extrabold leading-tight tracking-[-0.02em] text-deep sm:text-[3.2rem]" data-sale>Dal mio blog</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group flex flex-col overflow-hidden rounded-[1.5rem] border border-line bg-white">
+              <span class="block overflow-hidden bg-surface"><img src={b.img} alt="" width="1500" height="1000" loading="lazy" class="aspect-[4/3] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="flex flex-1 flex-col p-5"><span class="text-[12.5px] font-bold uppercase tracking-[0.1em] text-brand2">{b.categoria} · {b.tempoLettura}</span><span class="mt-2 block font-head text-[1.2rem] font-extrabold leading-snug text-deep group-hover:text-brand">{b.titolo}</span></span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-extrabold tracking-[-0.02em] text-deep" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-[1.5rem] border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.volto} alt="" width="32" height="32" class="h-8 w-8 rounded-full object-cover" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="1500" height="1000" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-3 bottom-3 rounded-2xl bg-white/95 px-5 py-4"><p class="font-head text-[1.5rem] font-extrabold leading-tight text-deep">{p.titolo}</p><p class="mt-0.5 text-sm font-semibold text-brand">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="relative flex aspect-square flex-col justify-end overflow-hidden bg-brand p-7 text-white">
+                  <svg viewBox="0 0 200 100" class="absolute -right-10 top-6 w-56 opacity-30" aria-hidden="true">{[30, 55, 80].map((r) => <path d={`M ${100 - r} 100 A ${r} ${r} 0 0 1 ${100 + r} 100`} fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" />)}</svg>
+                  <p class="relative font-head text-[1.9rem] font-extrabold leading-[1.05]">{p.titolo}</p><p class="relative mt-4 w-fit rounded-full bg-white px-4 py-2 text-[14px] font-bold text-brand">{p.risposta}</p>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-deep p-7 text-white">
+                  <p class="font-head text-[1.8rem] font-extrabold leading-[1.05]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-brand2"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-brand px-4 py-14 text-white sm:px-8">
+      <svg viewBox="0 0 400 200" class="pointer-events-none absolute -right-24 -top-6 w-[480px] opacity-20" aria-hidden="true">{[70, 120, 170].map((r) => <path d={`M ${200 - r} 200 A ${r} ${r} 0 0 1 ${200 + r} 200`} fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" />)}</svg>
+      <div class="relative mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-[2.4rem] font-extrabold sm:text-5xl">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(m.prenota.telefono)} class="btn !rounded-full bg-white text-brand hover:opacity-90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-full border border-white/50 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    let lenis: Lenis | null = null;
+    const vaiA = (sel: string) => { const el = document.querySelector<HTMLElement>(sel)!; const y = el.getBoundingClientRect().top + window.scrollY - 100; if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'auto' }); };
+
+    // --- Prenotazione per prestazione ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const TR = JSON.parse(box.dataset.tratt!) as { id: string; frase: string; sedi: string[]; durata: number }[];
+    const SE = JSON.parse(box.dataset.sedi!) as { id: string; frase: string; telefono: string }[];
+    const sel = box.querySelector<HTMLSelectElement>('[data-prestazione]')!;
+    const bottoni = [...box.querySelectorAll<HTMLButtonElement>('[data-sede]')];
+    const aggiorna = () => {
+      const t = TR.find((k) => k.id === sel.value)!;
+      let attiva = bottoni.find((b) => b.getAttribute('aria-pressed') === 'true')!;
+      bottoni.forEach((b) => { const ok = t.sedi.includes(b.dataset.sede!); b.disabled = !ok; b.querySelector('[data-sede-nota]')!.textContent = ok ? (b.dataset.breve ??= b.querySelector('[data-sede-nota]')!.textContent!) : 'non disponibile qui'; });
+      if (attiva.disabled) { attiva = bottoni.find((b) => !b.disabled)!; bottoni.forEach((b) => b.setAttribute('aria-pressed', String(b === attiva))); }
+      const s = SE.find((k) => k.id === attiva.dataset.sede)!;
+      const msg = `Buongiorno Dottore, vorrei prenotare ${t.frase} presso ${s.frase}.`;
+      box.querySelector('[data-anteprima]')!.textContent = msg;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(box.dataset.oggetto!)}&body=${encodeURIComponent(msg)}`;
+      box.querySelector<HTMLAnchorElement>('[data-tel-link]')!.href = `tel:${s.telefono.replace(/\D/g, '')}`;
+      box.querySelector('[data-tel-testo]')!.textContent = s.telefono;
+      box.querySelector('[data-sede-avviso]')!.textContent = t.sedi.length < 3 ? `Questa prestazione si esegue in ${t.sedi.length} sedi su 3.` : '';
+      if (!ridotto) gsap.fromTo('[data-anteprima]', { opacity: 0.3, y: 6 }, { opacity: 1, y: 0, duration: 0.3 });
+    };
+    sel.addEventListener('change', aggiorna);
+    bottoni.forEach((b) => b.addEventListener('click', () => { if (b.disabled) return; bottoni.forEach((k) => k.setAttribute('aria-pressed', String(k === b))); aggiorna(); }));
+    aggiorna();
+
+    // --- Trova il trattamento ---
+    const tv = document.querySelector<HTMLElement>('[data-trova]')!;
+    const ZO = JSON.parse(tv.dataset.zone!) as { id: string; nome: string; problemi: string; tratt: string[] }[];
+    const carte = [...tv.querySelectorAll<HTMLElement>('[data-tratt]')];
+    const zona = (id: string) => {
+      const z = ZO.find((k) => k.id === id)!;
+      tv.querySelectorAll<HTMLElement>('[data-zona]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.zona === id)));
+      tv.querySelector('[data-zona-nome]')!.textContent = z.nome;
+      tv.querySelector('[data-zona-problemi]')!.textContent = z.problemi;
+      tv.querySelector('[data-zona-n]')!.textContent = String(z.tratt.length);
+      const vis: HTMLElement[] = [];
+      carte.forEach((c) => { const ok = z.tratt.includes(c.dataset.tratt!); c.hidden = !ok; if (ok) vis.push(c); });
+      if (!ridotto) gsap.fromTo(vis, { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.06, ease: 'power2.out' });
+      tv.dataset.attiva = id;
+    };
+    tv.querySelectorAll<HTMLElement>('[data-zona]').forEach((b) => b.addEventListener('click', () => zona(b.dataset.zona!)));
+    document.querySelectorAll<HTMLElement>('[data-prenota-tratt]').forEach((b) => b.addEventListener('click', () => { sel.value = b.dataset.prenotaTratt!; aggiorna(); vaiA('#prenota-box'); sel.focus({ preventScroll: true }); }));
+
+    // --- Onde d'urto: schema ---
+    const on = document.querySelector<HTMLElement>('[data-onde]')!;
+    const fascio = on.querySelector<SVGPathElement>('[data-fascio]')!;
+    const punto = on.querySelector<SVGCircleElement>('[data-fuoco-punto]')!;
+    const rng = on.querySelector<HTMLInputElement>('[data-fuoco]')!;
+    const Y0 = 40, CM = 34, X = 280;
+    let tipo = 'focalizzate';
+    const forma = (t: string, cm: number) => {
+      const yf = Y0 + cm * CM;
+      return t === 'focalizzate'
+        ? { d: `M ${X - 34} ${Y0} L ${X + 34} ${Y0} L ${X + 3} ${yf} L ${X - 3} ${yf} Z`, cy: yf, r: 7 }
+        : { d: `M ${X - 30} ${Y0} L ${X + 30} ${Y0} Q ${X + 120} ${Y0 + 50} ${X + 70} ${Y0 + 2.4 * CM} Q ${X} ${Y0 + 2.9 * CM} ${X - 70} ${Y0 + 2.4 * CM} Q ${X - 120} ${Y0 + 50} ${X - 30} ${Y0} Z`, cy: Y0 + 1.2 * CM, r: 0 };
+    };
+    const disegna = (anima = true) => {
+      const f = forma(tipo, Number(rng.value));
+      if (ridotto || !anima) { fascio.setAttribute('d', f.d); punto.setAttribute('cy', String(f.cy)); punto.setAttribute('r', String(f.r)); }
+      else { gsap.to(fascio, { attr: { d: f.d }, duration: 0.5, ease: 'power2.out' }); gsap.to(punto, { attr: { cy: f.cy, r: f.r }, duration: 0.5, ease: 'power2.out' }); }
+      on.querySelector('[data-fuoco-cm]')!.textContent = String(rng.value).replace('.', ',');
+      on.dataset.tipo = tipo;
+    };
+    const TESTI: Record<string, string[]> = {
+      focalizzate: ['oltre 500 bar', 'fino a circa 8 cm', "Indicate per tendini, calcificazioni, fascite plantare e artrosi. Possono essere eseguite solo dal medico specialista."],
+      radiali: ['più bassa, diffusa', 'superficiale', "Si disperdono vicino alla superficie: sono usate soprattutto per contratture muscolari e fasciali superficiali."]
+    };
+    on.querySelectorAll<HTMLElement>('[data-tipo]').forEach((b) => b.addEventListener('click', () => {
+      tipo = b.dataset.tipo!;
+      on.querySelectorAll('[data-tipo]').forEach((k) => k.setAttribute('aria-pressed', String(k === b)));
+      const [p, pr, t] = TESTI[tipo];
+      on.querySelector('[data-onde-pressione]')!.textContent = p; on.querySelector('[data-onde-prof]')!.textContent = pr; on.querySelector('[data-onde-testo]')!.textContent = t;
+      rng.disabled = tipo === 'radiali'; on.querySelector('[data-fuoco-box]')!.classList.toggle('opacity-40', tipo === 'radiali');
+      disegna();
+    }));
+    rng.addEventListener('input', () => disegna());
+    disegna(false);
+
+    // --- A chi rivolgersi ---
+    const ch = document.querySelector<HTMLElement>('[data-chi]')!;
+    const DO = JSON.parse(ch.dataset.domande!) as { testo: string; chi: string; perche: string }[];
+    ch.querySelectorAll<HTMLElement>('[data-domanda]').forEach((b) => b.addEventListener('click', () => {
+      const d = DO[Number(b.dataset.domanda)];
+      ch.querySelectorAll('[data-domanda]').forEach((k) => k.setAttribute('aria-pressed', String(k === b)));
+      ch.querySelectorAll<HTMLElement>('[data-chi-card]').forEach((c) => { c.classList.toggle('scelta', c.dataset.chiCard === d.chi); c.classList.toggle('attenuata', c.dataset.chiCard !== d.chi); });
+      ch.querySelector('[data-chi-perche]')!.textContent = d.perche;
+      ch.dataset.chi = d.chi;
+      if (!ridotto) gsap.fromTo(`[data-chi-card="${d.chi}"]`, { y: 10 }, { y: 0, duration: 0.4, ease: 'back.out(2)' });
+    }));
+
+    if (!ridotto) {
+      lenis = new Lenis({ anchors: { offset: -100 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis!.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.08em] align-bottom" aria-hidden="true"><span class="inline-block ${i === 2 ? 'text-brand' : ''}">${w}</span></span>`).join(' ');
+      const archi = gsap.utils.toArray<SVGPathElement>('[data-arco]');
+      archi.forEach((a) => { const l = a.getTotalLength(); a.style.strokeDasharray = `${l}`; a.style.strokeDashoffset = `${l}`; });
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from('[data-foto-hero]', { clipPath: 'inset(100% 0 0 0 round 2rem)', duration: 1.3, ease: 'power3.inOut' })
+        .from('[data-foto-img]', { scale: 1.2, duration: 1.6 }, '<')
+        .from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.8, stagger: 0.05 }, 0.15)
+        .from('[data-entra]', { y: 24, opacity: 0, duration: 0.7, stagger: 0.1 }, 0.5)
+        .from('[data-carta-medico]', { x: -40, opacity: 0, duration: 0.8 }, 0.9)
+        .from('[data-carta-promo]', { y: -20, opacity: 0, duration: 0.7 }, 1.1)
+        .to(archi, { strokeDashoffset: 0, duration: 1.6, stagger: 0.15, ease: 'power2.out' }, 0.4);
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.4, delay: 0.9, ease: 'power2.out', onUpdate: () => { el.textContent = String(Math.round(o.v)); } });
+      });
+      gsap.to('[data-foto-img]', { yPercent: 7, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.to('.archi', { rotate: 18, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom top', scrub: true } });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 36, opacity: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      gsap.from('.zona-chip', { y: 20, opacity: 0, duration: 0.5, stagger: 0.05, scrollTrigger: { trigger: '[data-trova]', start: 'top 75%', once: true } });
+      gsap.utils.toArray<HTMLElement>('[data-sguardo]').forEach((s) => gsap.from(s, { y: 50, opacity: 0, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: s, start: 'top 85%', once: true } }));
+      gsap.to('[data-approccio-barra]', { width: '100%', ease: 'none', scrollTrigger: { trigger: '[data-approccio]', start: 'top 60%', end: 'bottom 70%', scrub: true } });
+      gsap.from('[data-schema]', { y: 30, opacity: 0, duration: 0.9, scrollTrigger: { trigger: '[data-schema]', start: 'top 85%', once: true, onEnter: () => { rng.value = '1'; disegna(false); gsap.delayedCall(0.4, () => { if (rng.value === '1') { rng.value = '5'; disegna(); } }); } } });
+      gsap.from('[data-sedi] > article', { y: 50, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: '[data-sedi]', start: 'top 85%', once: true } });
+      gsap.fromTo('[data-storia-linea]', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '[data-storia]', start: 'top 75%', end: 'bottom 60%', scrub: true } });
+      gsap.from('[data-blog] > a', { y: 50, opacity: 0, duration: 0.7, stagger: 0.1, scrollTrigger: { trigger: '[data-blog]', start: 'top 88%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>

@@ -1,0 +1,31 @@
+{
+  "medico": "Dr. Luca Savant",
+  "specialita": "Medico Fisiatra, specialista in Medicina Fisica e Riabilitazione",
+  "sito": "https://www.savantfisiatra.it/ (WordPress, realizzato da ARCA Studios). Risponde 403 ai client da riga di comando: letto solo tramite Firecrawl, nessun camuffamento",
+  "logo": "icona (cerchio blu + archi verde acqua) usata in header; nome in testo",
+  "colori": { "verde_acqua": "#6BBEB3", "blu": "#0266BF", "blu_notte_demo": "#0B2A45" },
+  "font": { "sito": "tema WordPress", "demo": ["Plus Jakarta Sans", "Albert Sans"] },
+  "contatti": {
+    "email": "info@savantfisiatra.it",
+    "cellulare": "391 405 9685",
+    "facebook": "https://www.facebook.com/savantfisiatra.it",
+    "privacy": "https://www.savantfisiatra.it/privacy-policy/"
+  },
+  "sedi": [
+    "Studio Medico Duca 16, Corso Duca degli Abruzzi 16, Torino (Crocetta) · 011 749 0268",
+    "Omnia Salus, Ciriè (TO), di cui è Direttore sanitario e tecnico da settembre 2023 · 011 297 0599 (indirizzo non indicato sul sito)",
+    "IRR Istituto delle Riabilitazioni Riba, Torino · 011 399 9222 (indirizzo non indicato sul sito)"
+  ],
+  "whatsapp": "nessun numero WhatsApp verificato: prenotazione con mail già compilata",
+  "prestazioni": "visita fisiatrica 30', onde d'urto focalizzate eco-assistite 15', infiltrazione ecoguidata/mano libera 15', infiltrazione ecoguidata dell'anca 30', ozonoterapia 15', mesoterapia 15', osteopatia 30' (Duca, IRR), elettrolisi percutanea EPI 30' (Duca, Omnia)",
+  "promozione": "prima seduta di ozonoterapia inclusa nella visita fisiatrica (dal suo sito)",
+  "foto": [
+    "foto-01-ritratto.png: unica foto del medico, 440x380, scontornata male (residuo bianco a destra rimosso)",
+    "sede-duca16-androne.jpg: ingresso di Corso Duca 16 (2024), usata in hero",
+    "sede-omnia-salus.jpg, sede-irr-piscina.jpg: foto delle sedi pubblicate sul suo sito"
+  ],
+  "non_usate": "molte immagini del suo sito sono generate con Gemini (nomi file «Gemini_Generated_Image_…», settembre 2026): escluse",
+  "cv": "laurea Torino 2007; specializzazione Medicina Fisica e Riabilitazione 2014; osteopatia IITM Bologna; ozonoterapia SIOOT; onde d'urto SITOD; IRR, Mios, PKT, IRM, CDC, Sisport FIAT; Direttore sanitario Omnia Salus dal 2023; una pubblicazione su Pathos Journal; relatore SIMFER 2014",
+  "problemi_sito": "hero con foto stock e testo poco leggibile; immagini generate con AI nelle prestazioni; blog fermo a ottobre 2021 (Trello); nessun Instagram; prenotazione solo telefonica per sede; schede prestazione ripetitive",
+  "repertorio": "foto stock già presenti sul suo sito (massaggio Pexels, molecole ozono, donna che si stira, scrivania)"
+}
