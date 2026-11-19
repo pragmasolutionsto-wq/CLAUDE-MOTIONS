@@ -627,3 +627,33 @@ html { scroll-behavior: smooth; }
   .stile-conduzione .campo, .stile-conduzione .slot, .stile-conduzione .giorno { border-radius: 12px; }
   .stile-conduzione .btn { border-radius: 12px; }
 }
+
+/* Layout "sezione": occhio strato per strato, esami filtrabili */
+@layer components {
+  .parte { cursor: pointer; }
+  .parte path, .parte circle, .parte ellipse { fill: color-mix(in srgb, var(--c-brand2) 10%, #fff); stroke: color-mix(in srgb, var(--c-brand) 55%, #fff); stroke-width: 2; transition: fill .3s, stroke .3s; }
+  .parte[data-parte="vitreo"] circle { fill: color-mix(in srgb, var(--c-brand2) 6%, #fff); }
+  .parte[data-parte="superficie"] path { fill: none; stroke: color-mix(in srgb, var(--c-brand2) 70%, #fff); stroke-width: 5; stroke-dasharray: 2 6; stroke-linecap: round; }
+  .parte .macula { fill: color-mix(in srgb, var(--c-brand) 40%, #fff); }
+  .parte:hover path, .parte:hover circle, .parte:hover ellipse { stroke: var(--c-brand); }
+  .parte.scelta path, .parte.scelta circle, .parte.scelta ellipse { fill: color-mix(in srgb, var(--c-brand2) 45%, #fff); stroke: var(--c-brand); stroke-width: 3; }
+  .parte.scelta[data-parte="vitreo"] circle { fill: color-mix(in srgb, var(--c-brand2) 22%, #fff); }
+  .parte.scelta[data-parte="superficie"] path { fill: none; stroke: var(--c-brand); stroke-width: 6; }
+  .iride path { stroke: var(--c-brand); stroke-width: 9; stroke-linecap: round; }
+  .raggio { stroke: color-mix(in srgb, var(--c-brand2) 60%, #fff); stroke-width: 2; stroke-dasharray: 6 6; }
+  .guida { stroke: var(--c-muted); stroke-width: 1; fill: none; }
+  .oc-et { font: 600 15px/1 var(--font-sans, sans-serif); fill: var(--c-deep); pointer-events: none; }
+  .oc-et--pic { font-size: 13px; font-weight: 500; fill: var(--c-muted); }
+  .pt-tab { background: #fff; color: var(--c-deep); box-shadow: inset 0 0 0 1px var(--c-line); transition: background-color .2s, color .2s; }
+  .pt-tab:hover { box-shadow: inset 0 0 0 1px var(--c-deep); }
+  .pt-tab[aria-selected="true"] { background: var(--c-deep); color: #fff; box-shadow: none; }
+  .filtro { background: #fff; color: var(--c-deep); transition: background-color .2s, color .2s, border-color .2s; }
+  .filtro:hover { border-color: var(--c-deep); }
+  .filtro[aria-pressed="true"] { background: var(--c-deep); border-color: var(--c-deep); color: #fff; }
+  .esame { transition: box-shadow .4s; }
+  .esame.in-evidenza { box-shadow: 0 0 0 3px var(--c-brand2), 0 18px 40px -20px rgba(0,59,92,.45); }
+  .esame:focus { outline: none; }
+  .stile-sezione .card { border-radius: 24px; }
+  .stile-sezione .campo, .stile-sezione .slot, .stile-sezione .giorno { border-radius: 14px; }
+  .stile-sezione .btn { border-radius: 999px; }
+}

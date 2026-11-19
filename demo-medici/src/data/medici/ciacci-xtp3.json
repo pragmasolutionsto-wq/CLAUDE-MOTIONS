@@ -1,0 +1,1175 @@
+{
+  "slug": "ciacci-xtp3",
+  "layout": "sezione",
+  "sitoOrigine": "https://www.oculistadavidciacci.it/",
+  "titolo": "Dott.",
+  "nome": "David Ciacci",
+  "specialita": "Oculista, chirurgo oftalmico e specialista in Medicina Legale",
+  "firma": "Oculista",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. David Ciacci · Oculista a Torino: prevenzione, OCT, retina, glaucoma, cataratta, patente e medicina legale",
+    "description": "Studio oculistico in corso Stati Uniti 3, Torino, dal 1985. Visita completa, OCT e angio-OCT, campo visivo, retina e maculopatia, glaucoma, chirurgia della cataratta con femtolaser, ortottica, rinnovo patente, consulenze medico-legali."
+  },
+  "brand": {
+    "header": "logo",
+    "logoScuro": "/ciacci-xtp3/img/logo.png",
+    "logoChiaro": "/ciacci-xtp3/img/logo-chiaro.png",
+    "marchio": "",
+    "logoAlt": "Dr. David Ciacci, oculista"
+  },
+  "foto": {
+    "ritratto": "/ciacci-xtp3/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. David Ciacci",
+    "volto": "/ciacci-xtp3/img/volto.webp",
+    "studio": "/ciacci-xtp3/img/studio.webp",
+    "lampada": "/ciacci-xtp3/img/lampada.webp",
+    "octTeam": "/ciacci-xtp3/img/oct-team.webp",
+    "team": "/ciacci-xtp3/img/team.webp",
+    "jonsson": "/ciacci-xtp3/img/jonsson.webp",
+    "chirurgia": "/ciacci-xtp3/img/chirurgia.webp",
+    "occhio": "/ciacci-xtp3/img/rep-occhio.webp",
+    "pc": "/ciacci-xtp3/img/rep-pc.webp",
+    "bambino": "/ciacci-xtp3/img/rep-bambino.webp",
+    "retina": "/ciacci-xtp3/img/rep-retina.webp",
+    "glaucoma": "/ciacci-xtp3/img/rep-glaucoma.webp",
+    "vitreo": "/ciacci-xtp3/img/rep-vitreo.webp"
+  },
+  "hero": {
+    "eyebrow": "Oculista · Chirurgo oftalmico · Specialista in Medicina Legale",
+    "titolo": "Vedere bene comincia da ciò che non si vede.",
+    "testo": "Molte malattie degli occhi crescono in silenzio. Nel mio studio di corso Stati Uniti, dal 1985, le cerchiamo prima che diano sintomi: visita completa, OCT e campo visivo, con il mio team di ortottisti.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Chiami"
+  },
+  "numeri": [
+    {
+      "valore": 40,
+      "fmt": "40",
+      "pre": "oltre",
+      "testo": "anni di esperienza"
+    },
+    {
+      "valore": 1985,
+      "fmt": "1985",
+      "pre": "dal",
+      "testo": "lo studio a Torino"
+    },
+    {
+      "valore": 41,
+      "fmt": "41",
+      "pre": "",
+      "testo": "recensioni Google, «Eccellente»"
+    }
+  ],
+  "motivi": [
+    {
+      "id": "visita",
+      "nome": "Visita oculistica completa",
+      "frase": "un controllo oculistico completo"
+    },
+    {
+      "id": "prevenzione",
+      "nome": "Prevenzione: visita + OCT + campo visivo",
+      "frase": "un percorso di prevenzione con OCT e campo visivo"
+    },
+    {
+      "id": "retina",
+      "nome": "Retina e maculopatia",
+      "frase": "un controllo della retina"
+    },
+    {
+      "id": "glaucoma",
+      "nome": "Glaucoma, pressione dell'occhio",
+      "frase": "un controllo per il glaucoma"
+    },
+    {
+      "id": "cataratta",
+      "nome": "Cataratta",
+      "frase": "la cataratta"
+    },
+    {
+      "id": "bambino",
+      "nome": "Visita per un bambino",
+      "frase": "mio figlio"
+    },
+    {
+      "id": "ortottica",
+      "nome": "Visita ortottica",
+      "frase": "una valutazione ortottica"
+    },
+    {
+      "id": "patente",
+      "nome": "Rinnovo patente",
+      "frase": "il rinnovo della patente"
+    },
+    {
+      "id": "secco",
+      "nome": "Occhio secco",
+      "frase": "un problema di occhio secco"
+    },
+    {
+      "id": "legale",
+      "nome": "Consulenza medico-legale",
+      "frase": "una consulenza medico-legale oculistica"
+    }
+  ],
+  "parti": [
+    {
+      "id": "superficie",
+      "nome": "Superficie e lacrime",
+      "testo": "Il film lacrimale lubrifica e protegge l'occhio. Quando è scarso o di cattiva qualità, gli occhi bruciano, si arrossano e la vista fluttua.",
+      "patologie": [
+        "Occhio secco",
+        "Blefarite",
+        "Affaticamento al videoterminale"
+      ],
+      "esami": [
+        "secco",
+        "visita"
+      ],
+      "chirurgia": "",
+      "motivo": "secco"
+    },
+    {
+      "id": "cornea",
+      "nome": "Cornea",
+      "testo": "La finestra trasparente dell'occhio. Deve essere integra, regolare e ben lubrificata per mettere a fuoco la luce.",
+      "patologie": [
+        "Cheratocono",
+        "Astigmatismo irregolare",
+        "Malattie dell'endotelio"
+      ],
+      "esami": [
+        "sirius",
+        "endoteliale"
+      ],
+      "chirurgia": "Anelli intrastromali per il cheratocono.",
+      "motivo": "visita"
+    },
+    {
+      "id": "cristallino",
+      "nome": "Cristallino",
+      "testo": "La lente naturale dell'occhio, che cambia forma per mettere a fuoco da vicino. Con gli anni perde elasticità e trasparenza.",
+      "patologie": [
+        "Presbiopia",
+        "Cataratta"
+      ],
+      "esami": [
+        "visita"
+      ],
+      "chirurgia": "Cataratta con femtolaser, senza punti; interventi combinati cataratta + vitrectomia.",
+      "motivo": "cataratta"
+    },
+    {
+      "id": "vitreo",
+      "nome": "Vitreo",
+      "testo": "Il gel trasparente che riempie l'occhio. Con l'età può alterarsi e staccarsi dalla retina, dando mosche volanti e lampi.",
+      "patologie": [
+        "Mosche volanti",
+        "Distacco del vitreo"
+      ],
+      "esami": [
+        "fondo",
+        "goldmann",
+        "ecografia"
+      ],
+      "chirurgia": "Vitrectomia 27 G, con strumenti ultra-sottili.",
+      "motivo": "retina"
+    },
+    {
+      "id": "retina",
+      "nome": "Retina e macula",
+      "testo": "Il tessuto nervoso che trasforma la luce in impulsi. La macula, al centro, è responsabile della visione dei dettagli.",
+      "patologie": [
+        "Maculopatia",
+        "Pucker maculare",
+        "Occlusioni retiniche",
+        "Distacco di retina"
+      ],
+      "esami": [
+        "oct",
+        "retinografia",
+        "amsler",
+        "fondo"
+      ],
+      "chirurgia": "Vitrectomia 27 G; distacco di retina con endolaser e gas.",
+      "motivo": "retina"
+    },
+    {
+      "id": "nervo",
+      "nome": "Nervo ottico",
+      "testo": "Porta il segnale visivo al cervello. Il glaucoma lo danneggia lentamente, spesso senza sintomi fino alle fasi avanzate.",
+      "patologie": [
+        "Glaucoma",
+        "Neuropatie ottiche"
+      ],
+      "esami": [
+        "campo",
+        "tonometria",
+        "carico",
+        "oct"
+      ],
+      "chirurgia": "",
+      "motivo": "glaucoma"
+    },
+    {
+      "id": "muscoli",
+      "nome": "Muscoli e motilità",
+      "testo": "Sei muscoli per occhio coordinano i movimenti: se non lavorano insieme compaiono strabismo, visione doppia, affaticamento.",
+      "patologie": [
+        "Strabismo",
+        "Occhio pigro",
+        "Visione doppia"
+      ],
+      "esami": [
+        "ortottica",
+        "hess"
+      ],
+      "chirurgia": "",
+      "motivo": "ortottica"
+    }
+  ],
+  "esami": [
+    {
+      "id": "visita",
+      "nome": "Visita oculistica completa",
+      "tag": [
+        "prevenzione",
+        "bambini"
+      ],
+      "img": "/ciacci-xtp3/img/es-visita.webp",
+      "testo": "La base di ogni percorso: vista da lontano e da vicino, pressione oculare, esame del segmento anteriore e del fondo."
+    },
+    {
+      "id": "oct",
+      "nome": "OCT e angio-OCT",
+      "tag": [
+        "prevenzione",
+        "retina",
+        "glaucoma"
+      ],
+      "img": "/ciacci-xtp3/img/es-oct.webp",
+      "testo": "Mostra la retina e il nervo ottico in sezione, strato per strato; l'angio-OCT visualizza i vasi senza mezzo di contrasto."
+    },
+    {
+      "id": "campo",
+      "nome": "Campo visivo computerizzato",
+      "tag": [
+        "prevenzione",
+        "glaucoma",
+        "patente"
+      ],
+      "img": "/ciacci-xtp3/img/es-campo.webp",
+      "testo": "Misura l'ampiezza della visione: essenziale per glaucoma e malattie del nervo ottico."
+    },
+    {
+      "id": "tonometria",
+      "nome": "Tonometria",
+      "tag": [
+        "glaucoma",
+        "prevenzione"
+      ],
+      "img": "/ciacci-xtp3/img/es-tonometria.webp",
+      "testo": "Misura la pressione dentro l'occhio, il principale fattore di rischio del glaucoma."
+    },
+    {
+      "id": "carico",
+      "nome": "Test da carico idrico",
+      "tag": [
+        "glaucoma"
+      ],
+      "img": "/ciacci-xtp3/img/es-carico.webp",
+      "testo": "Valuta come varia la pressione oculare dopo aver bevuto una quantità d'acqua stabilita."
+    },
+    {
+      "id": "retinografia",
+      "nome": "Retinografia",
+      "tag": [
+        "retina"
+      ],
+      "img": "/ciacci-xtp3/img/es-retinografia.webp",
+      "testo": "Fotografia del fondo dell'occhio, utile per documentare e confrontare nel tempo."
+    },
+    {
+      "id": "fondo",
+      "nome": "Fondo dell'occhio",
+      "tag": [
+        "retina",
+        "prevenzione"
+      ],
+      "img": "/ciacci-xtp3/img/es-fondo.webp",
+      "testo": "Osservazione diretta di retina, macula e nervo ottico, a volte con dilatazione della pupilla."
+    },
+    {
+      "id": "goldmann",
+      "nome": "Lente di Goldmann",
+      "tag": [
+        "retina"
+      ],
+      "img": "/ciacci-xtp3/img/es-goldmann.webp",
+      "testo": "Lente a contatto diagnostica per esplorare la periferia della retina e l'angolo dell'occhio."
+    },
+    {
+      "id": "amsler",
+      "nome": "Test di Amsler",
+      "tag": [
+        "retina"
+      ],
+      "img": "/ciacci-xtp3/img/es-amsler.webp",
+      "testo": "Una griglia di linee per scoprire distorsioni della visione centrale, tipiche delle malattie della macula."
+    },
+    {
+      "id": "ecografia",
+      "nome": "Ecografia bulbare",
+      "tag": [
+        "retina"
+      ],
+      "img": "/ciacci-xtp3/img/es-ecografia.webp",
+      "testo": "Esplora l'interno dell'occhio con gli ultrasuoni quando cataratta o sangue impediscono di vedere la retina."
+    },
+    {
+      "id": "sirius",
+      "nome": "Esame Sirius",
+      "tag": [
+        "cornea"
+      ],
+      "img": "/ciacci-xtp3/img/es-sirius.webp",
+      "testo": "Tomografia della cornea: forma, spessore e curvatura, fondamentale per il cheratocono e prima della chirurgia."
+    },
+    {
+      "id": "endoteliale",
+      "nome": "Microscopia endoteliale",
+      "tag": [
+        "cornea"
+      ],
+      "img": "",
+      "testo": "Conta e studia le cellule dello strato interno della cornea, importante prima di un intervento di cataratta."
+    },
+    {
+      "id": "secco",
+      "nome": "Esami per l'occhio secco",
+      "tag": [
+        "secco"
+      ],
+      "img": "/ciacci-xtp3/img/es-secco.webp",
+      "testo": "Quantità e qualità delle lacrime e stato della superficie dell'occhio."
+    },
+    {
+      "id": "ortottica",
+      "nome": "Valutazione ortottica",
+      "tag": [
+        "bambini"
+      ],
+      "img": "/ciacci-xtp3/img/es-ortottica.webp",
+      "testo": "Allineamento e movimenti degli occhi, visione binoculare, occhio pigro: eseguita dall'ortottista."
+    },
+    {
+      "id": "hess",
+      "nome": "Test di Hess",
+      "tag": [
+        "bambini"
+      ],
+      "img": "/ciacci-xtp3/img/es-hess.webp",
+      "testo": "Misura in modo preciso i deficit dei muscoli oculari, nella visione doppia e nello strabismo."
+    },
+    {
+      "id": "tetra",
+      "nome": "Protocollo Tetra",
+      "tag": [
+        "secco"
+      ],
+      "img": "/ciacci-xtp3/img/es-tetra.webp",
+      "testo": "Un protocollo di esami su tablet eseguito in studio: ne parliamo in visita."
+    },
+    {
+      "id": "patente",
+      "nome": "Rinnovo patente",
+      "tag": [
+        "patente"
+      ],
+      "img": "/ciacci-xtp3/img/es-patente.webp",
+      "testo": "Visita e consulenza specialistica per il rinnovo della patente, con i requisiti visivi previsti."
+    },
+    {
+      "id": "legale",
+      "nome": "Consulenza medico-legale",
+      "tag": [
+        "legale"
+      ],
+      "img": "",
+      "testo": "Perizie oculistiche per infortuni, cause di lavoro, invalidità civile e contenziosi assicurativi."
+    }
+  ],
+  "filtriEsami": [
+    {
+      "id": "",
+      "nome": "Tutti"
+    },
+    {
+      "id": "prevenzione",
+      "nome": "Prevenzione"
+    },
+    {
+      "id": "retina",
+      "nome": "Retina e macula"
+    },
+    {
+      "id": "glaucoma",
+      "nome": "Glaucoma"
+    },
+    {
+      "id": "cornea",
+      "nome": "Cornea"
+    },
+    {
+      "id": "bambini",
+      "nome": "Bambini e motilità"
+    },
+    {
+      "id": "secco",
+      "nome": "Occhio secco"
+    },
+    {
+      "id": "patente",
+      "nome": "Patente"
+    },
+    {
+      "id": "legale",
+      "nome": "Medico-legale"
+    }
+  ],
+  "bioTappe": [
+    {
+      "anno": "1984",
+      "titolo": "Laurea alla Sapienza, Roma",
+      "testo": "Medicina e Chirurgia, 110/110 e lode."
+    },
+    {
+      "anno": "1985",
+      "titolo": "Apre lo studio a Torino",
+      "testo": "Lo studio oculistico che dirigo ancora oggi."
+    },
+    {
+      "anno": "1988",
+      "titolo": "Specializzazione in Oftalmologia",
+      "testo": "Università La Sapienza, Roma. Dal 1988 al 1999 ufficiale medico dell'Esercito Italiano."
+    },
+    {
+      "anno": "1994",
+      "titolo": "Specializzazione in Medicina Legale",
+      "testo": "Università di Torino. Consulente del Tribunale (1994-2020), di primarie compagnie assicurative (1994-2014) e del Ministero dell'Economia e delle Finanze (2008-2012)."
+    },
+    {
+      "anno": "2020",
+      "titolo": "Gruppo CIDIMU",
+      "testo": "Coordinatore del servizio di oftalmologia, sedi di via Legnano e Centro IRR."
+    },
+    {
+      "anno": "2021",
+      "titolo": "Clinica Baviera, Torino",
+      "testo": "Direttore sanitario."
+    }
+  ],
+  "recensioniGoogle": [
+    {
+      "nome": "Marie E.",
+      "data": "dicembre 2024",
+      "testo": "Visita molto scrupolosa!"
+    },
+    {
+      "nome": "Elena F.",
+      "data": "ottobre 2024",
+      "testo": "un medico veramente competente\nha subito individuato il mio problema, mi ha spiegato tutto nel minimo dettaglio, mi ha dato indicazioni su come fare per cercare di risolvere il mio problema\nnon posso far altro che consigliarlo\noltre a tutto questo, è gentilissimo ed empatico\nmitico Dott Ciacci!"
+    },
+    {
+      "nome": "Ilaria A.",
+      "data": "settembre 2024",
+      "testo": "Dottore competente e simpatico"
+    },
+    {
+      "nome": "Maria C.",
+      "data": "luglio 2024",
+      "testo": "I have met doctor Ciacci a couple of years ago and been under his therapy since due to high pressure in the eye. I can truly recommend doctor Ciacci for his knowledge and the modern equipment in his studio. Combing this with a clear explanation, making you feel comfortable and taking time. For me being an expat it is very comfortable to be able to speak also in English with the doctor. Definitely recommended and as well the team surrounding him!"
+    },
+    {
+      "nome": "Maria B.",
+      "data": "giugno 2024",
+      "testo": "Mi sono rivolta al dottor Ciacci per problema di forte miopia e cataratta. Sono stata un caso abbastanza difficile ma la bravura, la competenza e la professionalità del dottore e del suo staff mi hanno risolto i problemi in breve tempo. Ho ottenuto dei risultati eccellenti e immediati recuperando la vista senza problemi. Un ringraziamento al dottor Ciacci e a tutti i suoi collaboratori per la loro disponibilità e gentilezza. Lo consiglio vivamente"
+    },
+    {
+      "nome": "Claudia M.",
+      "data": "giugno 2024",
+      "testo": "Super disponibili, mi sono venuti incontro e hanno organizzato il mio rinnovo della patente veramente in fretta. Super consigliati!!"
+    },
+    {
+      "nome": "Rosy C.",
+      "data": "giugno 2024",
+      "testo": "Ho 68 anni e sono una paziente del Dr. Ciacci che mi ha operato di cataratta ad entrambi gli occhi a distanza di 15 gg. l'uno dall'altro.\nNon nascondo la mia forte apprensione e preoccupazione prima dell'intervento ma la disponibilità, gentilezza e professionalità del dottore e di tutto lo staff medico mi hanno fatto superare ogni timore e paura così da affrontare serenamente anche il secondo intervento senza problemi con risultati eccellenti e immediati.\nRingrazio, pertanto, il Dr. Ciacci e tutti i suoi collaboratori."
+    },
+    {
+      "nome": "Leonardo D.",
+      "data": "giugno 2024",
+      "testo": "Ottimo studio; velocità, competenza e affidabilità."
+    },
+    {
+      "nome": "Daniele B.",
+      "data": "giugno 2024",
+      "testo": "Visita per rinnovo patente: professionale, rapido, veloce, poca attesa, cordiale. Tutto quello che serve per il rinnovo patente.\nConsigliato!!"
+    }
+  ],
+  "affiliazioni": [
+    "SOI · Società Oftalmologica Italiana",
+    "SOL · consigliere del direttivo 2023-2025",
+    "ASMOII"
+  ],
+  "emergenze": {
+    "telefono": "3661395569",
+    "telefonoLabel": "366 139 5569",
+    "segni": [
+      "Calo improvviso della vista",
+      "Lampi e una pioggia di mosche volanti",
+      "Un'ombra o una tenda nel campo visivo",
+      "Occhio rosso e dolente con vista annebbiata",
+      "Trauma o corpo estraneo nell'occhio",
+      "Schizzo di sostanze chimiche: lavare subito con acqua"
+    ]
+  },
+  "aree": {
+    "titolo": "",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "maculopatia",
+    "categoria": "Retina",
+    "titolo": "Maculopatia: controlli e prevenzione",
+    "img": "/ciacci-xtp3/img/rep-retina.webp",
+    "tempoLettura": "9 min",
+    "intro": "La maculopatia colpisce la parte centrale della retina, quella che ci serve per leggere, guidare, riconoscere i volti. Nelle fasi iniziali spesso non dà sintomi. Le spiego come si riconosce, quali controlli servono e cosa si può fare per proteggere la vista.",
+    "sezioni": [
+      {
+        "titolo": "Che cos'è la macula",
+        "paragrafi": [
+          "La retina è il tessuto nervoso che tappezza l'interno dell'occhio e trasforma la luce in impulsi nervosi. Al suo centro c'è la macula, una zona piccolissima ma preziosa, ricca di fotorecettori: è lei che ci permette la visione dei dettagli.",
+          "Quando la macula si ammala, la vista periferica resta, ma il centro dell'immagine diventa sfocato, deformato o scuro."
+        ]
+      },
+      {
+        "titolo": "Le forme della maculopatia",
+        "paragrafi": [
+          "La forma più comune è la degenerazione maculare legata all'età. Si divide in due tipi. Nella forma secca si accumulano depositi sotto la retina e il tessuto si assottiglia lentamente. Nella forma umida crescono sotto la retina nuovi vasi sanguigni anomali, che perdono liquido e sangue: la vista può peggiorare in poche settimane.",
+          "Esistono anche altre malattie della macula, come il pucker o membrana epiretinica, e le alterazioni legate al diabete o alla miopia elevata."
+        ]
+      },
+      {
+        "titolo": "I sintomi",
+        "paragrafi": [
+          "I segnali da non sottovalutare sono:"
+        ],
+        "elenco": [
+          "linee dritte che appaiono storte o ondulate",
+          "una macchia scura o sfocata al centro della visione",
+          "difficoltà a leggere anche con gli occhiali giusti",
+          "colori meno vivaci",
+          "bisogno di più luce per vedere i dettagli"
+        ],
+        "chiusura": "Se uno di questi sintomi compare all'improvviso, la visita va fatta in tempi brevi."
+      },
+      {
+        "titolo": "I fattori di rischio",
+        "paragrafi": [
+          "Il rischio aumenta con:"
+        ],
+        "elenco": [
+          "l'età, soprattutto dopo i 55-60 anni",
+          "il fumo, il fattore modificabile più importante",
+          "la familiarità per maculopatia",
+          "l'ipertensione e le malattie cardiovascolari",
+          "un'alimentazione povera di frutta e verdura",
+          "l'esposizione prolungata alla luce solare senza protezione"
+        ]
+      },
+      {
+        "titolo": "Gli esami che fanno la differenza",
+        "paragrafi": [
+          "La sola visita mostra le lesioni già evidenti. Le alterazioni iniziali, microscopiche, si vedono solo con strumenti diagnostici computerizzati. Per la macula l'esame chiave è la tomografia a coerenza ottica, l'OCT, che mostra la retina in sezione strato per strato, senza contatto e in pochi secondi.",
+          "L'angio-OCT visualizza i vasi della retina senza bisogno di iniezioni di contrasto ed è prezioso per riconoscere la forma umida. La retinografia fotografa il fondo dell'occhio e permette di confrontarlo nel tempo."
+        ]
+      },
+      {
+        "titolo": "Il test di Amsler, a casa",
+        "paragrafi": [
+          "Il test di Amsler è una griglia di linee dritte con un punto al centro. Si guarda con un occhio alla volta, alla distanza di lettura e con gli occhiali da vicino. Se le linee appaiono storte, interrotte o se manca una parte della griglia, è un segnale da riferire subito all'oculista.",
+          "Chi ha già una maculopatia o un rischio elevato può usarlo una volta alla settimana: è un modo semplice per accorgersi presto di un cambiamento."
+        ]
+      },
+      {
+        "titolo": "Le cure",
+        "paragrafi": [
+          "Per la forma umida esistono le iniezioni intravitreali di farmaci che bloccano la crescita dei vasi anomali: sono eseguite in ambiente sterile, con anestesia in collirio, e possono stabilizzare o migliorare la vista se iniziate presto. Per questo una diagnosi tempestiva è decisiva.",
+          "Nella forma secca l'obiettivo è rallentare la progressione: smettere di fumare, seguire un'alimentazione ricca di verdure a foglia verde e pesce, proteggere gli occhi dal sole e, nei casi indicati, assumere integratori specifici."
+        ]
+      },
+      {
+        "titolo": "Ogni quanto controllarsi",
+        "paragrafi": [
+          "Un adulto in buona salute dovrebbe fare una visita oculistica ogni due anni. Dopo i 65 anni, o in presenza di patologie, il controllo diventa annuale o anche semestrale. Chi ha una maculopatia segue un calendario personalizzato, con OCT ripetuti nel tempo."
+        ]
+      },
+      {
+        "titolo": "La vita con la maculopatia",
+        "paragrafi": [
+          "Chi ha una maculopatia avanzata può continuare a fare molte cose con qualche accorgimento: luce abbondante e ben diretta per leggere, caratteri grandi su telefono e computer, lenti d'ingrandimento e ausili per l'ipovisione. La riabilitazione visiva, svolta con l'ortottista, insegna a usare al meglio le zone della retina ancora sane. Non è una resa: è un modo per restare autonomi il più a lungo possibile."
+        ]
+      },
+      {
+        "titolo": "Il pucker maculare",
+        "paragrafi": [
+          "Il pucker, o membrana epiretinica, è un sottile velo che si forma sulla superficie della macula e la raggrinzisce. All'inizio spesso non dà sintomi; poi compaiono immagini distorte e un calo della vista. Si vede bene con l'OCT. Quando disturba, si può rimuovere con la vitrectomia: oggi con strumenti da 27 gauge, ultra-sottili, che riducono l'invasività e i tempi di recupero."
+        ]
+      },
+      {
+        "titolo": "Cosa portare alla visita",
+        "paragrafi": [
+          "Porti gli occhiali che usa, da vicino e da lontano, i referti delle visite precedenti e, se li ha, gli OCT già eseguiti: il confronto nel tempo è prezioso. Porti anche l'elenco dei farmaci, in particolare anticoagulanti e farmaci per il diabete. Se usa lenti a contatto, le tolga 24 ore prima."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso:"
+        ],
+        "elenco": [
+          "La maculopatia porta alla cecità? Colpisce la visione centrale, ma la vista periferica in genere resta.",
+          "Si può prevenire? Non sempre, ma smettere di fumare e controllarsi riduce molto il rischio di perdere vista.",
+          "L'OCT è doloroso? No, è un esame rapido e senza contatto.",
+          "Gli occhiali possono correggerla? No: gli occhiali correggono i difetti visivi, non le malattie della retina."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "retina-sana",
+      "categoria": "Prevenzione",
+      "titolo": "Retina sana: perché conta",
+      "img": "/ciacci-xtp3/img/rep-occhio.webp",
+      "tempoLettura": "7 min",
+      "intro": "«Ci vedo bene, perché dovrei fare una visita?» Perché molte malattie della retina non danno sintomi finché non sono avanzate. Le spiego perché la retina è così importante e come proteggerla.",
+      "sezioni": [
+        {
+          "titolo": "Il viaggio della luce",
+          "paragrafi": [
+            "Per vedere, la luce attraversa tre strutture trasparenti: la cornea, il cristallino e il vitreo. Arriva poi alla retina, dove i fotorecettori, coni e bastoncelli, la trasformano in un impulso nervoso. Il nervo ottico porta l'impulso al cervello, nell'area visiva della regione occipitale, che elabora l'immagine.",
+            "Perché la visione sia nitida, ogni passaggio deve funzionare: la cornea integra e ben lubrificata, il cristallino trasparente, il vitreo limpido, la retina sana."
+          ]
+        },
+        {
+          "titolo": "Quando la retina non sta bene",
+          "paragrafi": [
+            "Una retina malata non riesce a inviare segnali chiari al cervello. Ne derivano un calo della vista e, nei casi più gravi, la cecità. Tra le malattie più frequenti ci sono la maculopatia, le membrane epiretiniche, le occlusioni dei vasi retinici, la retinopatia diabetica e il distacco di retina."
+          ]
+        },
+        {
+          "titolo": "Il vitreo e le mosche volanti",
+          "paragrafi": [
+            "Il vitreo è il gel trasparente che riempie l'occhio. Con l'età può alterarsi e distaccarsi dalla retina: compaiono allora mosche volanti, corpi mobili, ragnatele e, a volte, lampi di luce. Nella maggior parte dei casi è un fenomeno innocuo, ma solo una visita con l'esame del fondo oculare può escludere una rottura della retina."
+          ]
+        },
+        {
+          "titolo": "I segnali di allarme",
+          "paragrafi": [
+            "Va fatta una visita urgente se compaiono all'improvviso:"
+          ],
+          "elenco": [
+            "una pioggia di mosche volanti o corpi scuri",
+            "lampi di luce, soprattutto ai lati del campo visivo",
+            "un'ombra o una tenda che copre parte della vista",
+            "un calo improvviso della vista da un occhio"
+          ],
+          "chiusura": "Sono possibili segni di distacco di retina: intervenire in tempi rapidi è fondamentale."
+        },
+        {
+          "titolo": "Perché la prevenzione",
+          "paragrafi": [
+            "La maggior parte delle lesioni della retina ha un decorso lento e insidioso: il paziente non si accorge di nulla finché il problema non si manifesta. La sola visita fornisce informazioni sulle lesioni già evidenti; le alterazioni iniziali, microscopiche, si vedono con strumenti diagnostici avanzati e computerizzati.",
+            "Molte malattie della retina, se diagnosticate presto, si possono trattare con buoni risultati."
+          ]
+        },
+        {
+          "titolo": "Gli esami per la retina",
+          "paragrafi": [
+            "Nel mio studio la valutazione della retina si basa su:"
+          ],
+          "elenco": [
+            "visita oculistica completa con esame del fondo oculare",
+            "OCT e angio-OCT, per vedere la retina strato per strato",
+            "retinografia, per documentare il fondo dell'occhio",
+            "test di Amsler, per la funzione della macula",
+            "ecografia bulbare, quando i mezzi trasparenti non permettono di vedere la retina"
+          ]
+        },
+        {
+          "titolo": "Chi deve controllarsi di più",
+          "paragrafi": [
+            "Chi ha il diabete o la pressione alta, chi è fortemente miope, chi ha più di 60 anni e chi ha casi di malattie della retina in famiglia dovrebbe fare controlli più frequenti. Anche chi ha subito un trauma all'occhio, pur senza sintomi, merita una valutazione del fondo oculare."
+          ]
+        },
+        {
+          "titolo": "Proteggere la retina ogni giorno",
+          "paragrafi": [
+            "Non fumare, mantenere sotto controllo pressione, glicemia e colesterolo, seguire un'alimentazione ricca di verdure, frutta e pesce, e proteggere gli occhi dal sole con occhiali di qualità: sono abitudini semplici che fanno bene anche alla retina."
+          ]
+        },
+        {
+          "titolo": "La miopia elevata",
+          "paragrafi": [
+            "Chi è molto miope ha un occhio più lungo del normale, con una retina più sottile e tesa. Il rischio di rotture, distacco e alterazioni della macula è più alto. Per questo, anche se gli occhiali correggono bene la vista, il fondo oculare va controllato con regolarità, soprattutto dopo i 40 anni o in presenza di lampi e mosche volanti."
+          ]
+        },
+        {
+          "titolo": "Retina e diabete",
+          "paragrafi": [
+            "Il diabete danneggia nel tempo i piccoli vasi della retina: è la retinopatia diabetica, una delle principali cause di calo della vista in età lavorativa. Nelle fasi iniziali non dà alcun disturbo. Per questo chi ha il diabete dovrebbe fare un controllo del fondo oculare almeno una volta all'anno, anche se vede bene, e mantenere glicemia e pressione sotto controllo."
+          ]
+        },
+        {
+          "titolo": "Le occlusioni dei vasi retinici",
+          "paragrafi": [
+            "Un'arteria o una vena della retina può chiudersi, in modo parziale o totale, per una trombosi. Il sintomo tipico è un calo improvviso della vista da un occhio, a volte solo in una parte del campo visivo. I principali fattori di rischio sono le malattie del sistema circolatorio, il diabete e l'ipertensione. È una situazione da valutare subito, e richiede anche un controllo generale da parte del medico."
+          ]
+        },
+        {
+          "titolo": "Prepararsi all'esame",
+          "paragrafi": [
+            "Gli esami della retina sono veloci e non invasivi. Se è prevista la dilatazione della pupilla, conviene venire accompagnati, perché la vista resta offuscata per alcune ore e non si deve guidare. Occhiali da sole a portata di mano aiutano a sopportare meglio la luce all'uscita."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Le mosche volanti sono pericolose? Di solito no, ma se compaiono all'improvviso vanno controllate.",
+            "Serve la dilatazione della pupilla? Non sempre: dipende dal caso. Se instillate, le gocce offuscano la vista per alcune ore.",
+            "Posso guidare dopo la visita? Se ho dilatato la pupilla, è meglio di no.",
+            "Ogni quanto controllare la retina? Ogni due anni in salute, più spesso dopo i 65 anni o con patologie."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "visita-ortottica",
+      "categoria": "Ortottica",
+      "titolo": "Visita ortottica: a cosa serve",
+      "img": "/ciacci-xtp3/img/es-ortottica.webp",
+      "tempoLettura": "7 min",
+      "intro": "Occhi stanchi a fine giornata, visione doppia, un bambino che strizza gli occhi o inclina la testa: sono situazioni in cui la visita ortottica è preziosa. Le spiego chi è l'ortottista e cosa valuta.",
+      "sezioni": [
+        {
+          "titolo": "Che cos'è l'ortottica",
+          "paragrafi": [
+            "L'ortottica è una branca dell'oculistica che si occupa dello strabismo e delle alterazioni della motilità oculare, cioè di come gli occhi si muovono e lavorano insieme. L'ortottista è un professionista sanitario laureato, assistente in oftalmologia, che lavora in collaborazione con il medico oculista."
+          ]
+        },
+        {
+          "titolo": "Cosa fa l'ortottista",
+          "paragrafi": [
+            "Tra le attività principali dell'ortottista:"
+          ],
+          "elenco": [
+            "lo screening visivo dei bambini in età prescolare e scolare",
+            "la valutazione e la rieducazione dello strabismo e dell'ambliopia, l'occhio pigro",
+            "la prevenzione dell'astenopia, l'affaticamento visivo di chi lavora al videoterminale",
+            "l'esecuzione di esami strumentali, in collaborazione con l'oculista",
+            "la riabilitazione visiva dei pazienti ipovedenti"
+          ]
+        },
+        {
+          "titolo": "Nei bambini",
+          "paragrafi": [
+            "Nei bambini l'ortottista si occupa soprattutto di strabismo, correzione dei difetti visivi e ambliopia. L'occhio pigro si recupera bene se trattato presto, durante l'infanzia, mentre diventa difficile da correggere dopo i primi anni di vita. Per questo consiglio il primo controllo a 3 anni, poi a 6 e a 12 anni, anticipandolo se si notano problemi o c'è familiarità."
+          ]
+        },
+        {
+          "titolo": "Negli adulti",
+          "paragrafi": [
+            "Negli adulti la visita ortottica è utile in caso di affaticamento visivo, mal di testa legato alla lettura o al computer, visione doppia comparsa improvvisamente o progressivamente. La visione doppia improvvisa va sempre valutata con attenzione, perché può avere cause neurologiche."
+          ]
+        },
+        {
+          "titolo": "Come si svolge",
+          "paragrafi": [
+            "La visita dura in genere tra i 30 e i 45 minuti. L'ortottista valuta l'acuità visiva, l'allineamento degli occhi, i movimenti oculari in tutte le direzioni, la capacità di usare i due occhi insieme e la visione stereoscopica, cioè la percezione della profondità. Tra gli esami possibili c'è il test di Hess, che misura in modo preciso eventuali deficit dei muscoli oculari."
+          ]
+        },
+        {
+          "titolo": "Ortottica e dislessia",
+          "paragrafi": [
+            "Alcuni bambini con difficoltà di lettura hanno anche piccoli disturbi della visione binoculare o dell'accomodazione. La dislessia è un disturbo specifico dell'apprendimento e non dipende dalla vista, ma escludere un problema visivo è un passo utile del percorso, insieme agli altri specialisti."
+          ]
+        },
+        {
+          "titolo": "Nel mio studio",
+          "paragrafi": [
+            "Nel mio studio la collaborazione tra oculista e ortottista è quotidiana: la Dott.ssa Francesca Jonsson, ortottista e assistente in oftalmologia, esegue la valutazione ortottica e gran parte degli esami strumentali. Questa sinergia permette di affrontare ogni caso con una prospettiva più ampia."
+          ]
+        },
+        {
+          "titolo": "La visione doppia negli adulti",
+          "paragrafi": [
+            "Vedere doppio, cioè la diplopia, può avere cause molto diverse: un problema dei muscoli oculari, della tiroide, del diabete, dei nervi che comandano i movimenti degli occhi. Se compare all'improvviso, insieme a mal di testa, difficoltà a parlare o debolezza, è un'urgenza da pronto soccorso. Se si sviluppa lentamente, la visita oculistica e quella ortottica, con il test di Hess, aiutano a capire quale muscolo è coinvolto e a indirizzare gli accertamenti, anche con altri specialisti."
+          ]
+        },
+        {
+          "titolo": "Lo strabismo",
+          "paragrafi": [
+            "Lo strabismo è un difetto di allineamento degli occhi: uno dei due devia verso l'interno, l'esterno, l'alto o il basso, in modo costante o solo a tratti. Nel bambino non va mai considerato un difetto che passa da solo con la crescita. Oltre all'aspetto estetico, lo strabismo può impedire lo sviluppo di una buona visione binoculare e favorire l'occhio pigro. Occhiali, occlusione dell'occhio migliore, esercizi e, in alcuni casi, chirurgia sono le possibili soluzioni, decise insieme all'oculista."
+          ]
+        },
+        {
+          "titolo": "L'occhio pigro",
+          "paragrafi": [
+            "L'ambliopia, o occhio pigro, è una vista ridotta in un occhio che non ha potuto svilupparsi bene durante l'infanzia, per uno strabismo o una forte differenza di difetto visivo tra i due occhi. Il bambino spesso non se ne accorge, perché usa l'occhio migliore. Il trattamento più comune è la correzione con gli occhiali e l'occlusione dell'occhio sano per alcune ore al giorno, per far lavorare quello pigro. Prima si inizia, migliori sono i risultati."
+          ]
+        },
+        {
+          "titolo": "I segnali da osservare nei bambini",
+          "paragrafi": [
+            "I genitori possono notare alcuni segnali:"
+          ],
+          "elenco": [
+            "un occhio che devia, anche solo quando il bambino è stanco",
+            "testa inclinata o girata per guardare",
+            "strizzare gli occhi o chiuderne uno alla luce",
+            "avvicinarsi molto ai libri o allo schermo",
+            "difficoltà a leggere, mal di testa o stanchezza dopo i compiti"
+          ]
+        },
+        {
+          "titolo": "L'affaticamento visivo",
+          "paragrafi": [
+            "Chi lavora molte ore al videoterminale può sviluppare astenopia: occhi stanchi, bruciore, mal di testa, difficoltà a mantenere la concentrazione. A volte la causa è un piccolo deficit di convergenza, cioè della capacità degli occhi di avvicinarsi per guardare da vicino. La valutazione ortottica lo misura e, se serve, propone esercizi mirati."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Serve l'impegnativa? Per la visita privata no.",
+            "Dopo la visita oculistica serve anche quella ortottica? Nei bambini è spesso consigliata, negli adulti solo se ci sono disturbi specifici.",
+            "Gli esercizi funzionano? In alcuni disturbi della convergenza sì, se seguiti con costanza.",
+            "Devo portare gli occhiali? Sì, tutti quelli che usa."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "presbiopia-pc",
+      "categoria": "Vista",
+      "titolo": "Presbiopia e PC: vedere bene a ogni distanza",
+      "img": "/ciacci-xtp3/img/rep-pc.webp",
+      "tempoLettura": "7 min",
+      "intro": "Allontanare il libro per leggere, occhi stanchi dopo ore al computer, il telefono che sembra sempre troppo vicino. Presbiopia e lavoro al videoterminale sono tra i motivi più frequenti di visita. Le spiego perché succede e come si corregge bene.",
+      "sezioni": [
+        {
+          "titolo": "Tre distanze, tre fuochi",
+          "paragrafi": [
+            "Nella giornata l'occhio mette a fuoco di continuo a tre distanze diverse: lontano, per la guida, la televisione e tutto ciò che sta oltre i 2-3 metri; intermedia, intorno ai 50 centimetri, quella del computer; vicino, a 25-30 centimetri, per la lettura e i lavori di precisione."
+          ]
+        },
+        {
+          "titolo": "Che cos'è la presbiopia",
+          "paragrafi": [
+            "La presbiopia è la difficoltà a vedere bene da vicino. È causata dalla perdita di elasticità del cristallino, che non riesce più ad accomodare, cioè a cambiare forma per mettere a fuoco gli oggetti vicini. Il segno tipico è allontanare il giornale o il libro per leggerlo.",
+            "Si manifesta in genere intorno ai 40 anni, ma già a 35 molte persone ne avvertono i primi segni, soprattutto se passano molte ore al computer."
+          ]
+        },
+        {
+          "titolo": "Il computer e lo smartphone",
+          "paragrafi": [
+            "Cellulare, tablet e computer, usati anche 8, 10 o 12 ore al giorno, impongono all'occhio continui sforzi di accomodazione involontari. Ne derivano stanchezza visiva e discomfort, che pesano sul lavoro e sul benessere personale."
+          ]
+        },
+        {
+          "titolo": "I sintomi",
+          "paragrafi": [
+            "I disturbi più comuni sono:"
+          ],
+          "elenco": [
+            "occhi arrossati e bruciore",
+            "mal di testa a fine giornata",
+            "sensazione di affaticamento persistente",
+            "difficoltà a mettere a fuoco anche da lontano dopo molte ore al computer",
+            "dolore agli occhi e secchezza"
+          ]
+        },
+        {
+          "titolo": "L'errore più comune",
+          "paragrafi": [
+            "Molti pazienti usano l'occhiale in modo improprio: per esempio le lenti da vicino anche per lo schermo, che sta più lontano, o lenti troppo forti. Il risultato è una postura scorretta, collo e spalle contratti e occhi ancora più stanchi."
+          ]
+        },
+        {
+          "titolo": "Le soluzioni",
+          "paragrafi": [
+            "La correzione giusta dipende dal lavoro e dalle abitudini. Le possibilità sono:"
+          ],
+          "elenco": [
+            "occhiali da vicino, per chi legge e usa poco il computer",
+            "lenti per la media distanza o da ufficio, studiate per schermo e scrivania",
+            "lenti progressive, per chi vuole un solo occhiale per tutte le distanze",
+            "lenti a contatto multifocali, in pazienti selezionati",
+            "chirurgia con lenti intraoculari multifocali, quando c'è anche una cataratta"
+          ]
+        },
+        {
+          "titolo": "Le buone abitudini al videoterminale",
+          "paragrafi": [
+            "Qualche regola semplice aiuta molto:"
+          ],
+          "elenco": [
+            "schermo a 50-70 centimetri, con il bordo superiore all'altezza degli occhi",
+            "luce ambiente adeguata, senza riflessi sullo schermo",
+            "una pausa ogni 20 minuti, guardando lontano per qualche secondo",
+            "ammiccare spesso e, se serve, usare lacrime artificiali"
+          ]
+        },
+        {
+          "titolo": "La visita giusta",
+          "paragrafi": [
+            "Una valutazione accurata misura la vista a tutte e tre le distanze, considerando la Sua postazione di lavoro e le ore davanti allo schermo. Quando i disturbi persistono, una valutazione ortottica e gli esami per l'occhio secco completano il quadro."
+          ]
+        },
+        {
+          "titolo": "Lo smartphone, un caso a parte",
+          "paragrafi": [
+            "Il telefono si tiene spesso più vicino di un libro, anche a 20 centimetri, e lo si guarda per molti minuti di fila. Per chi ha iniziato a soffrire di presbiopia è la distanza più difficile. Ingrandire i caratteri, aumentare il contrasto e allontanare un poco il telefono aiutano subito; la correzione giusta fa il resto."
+          ]
+        },
+        {
+          "titolo": "Presbiopia e guida",
+          "paragrafi": [
+            "Al volante servono una buona visione da lontano e la capacità di leggere rapidamente il cruscotto e il navigatore, a distanza intermedia. Le lenti progressive di buona qualità permettono di passare da una distanza all'altra con un piccolo movimento degli occhi. Al rinnovo della patente è l'occasione giusta per una verifica completa."
+          ]
+        },
+        {
+          "titolo": "Presbiopia e altri difetti",
+          "paragrafi": [
+            "La presbiopia si somma ai difetti già presenti. Chi è miope spesso legge meglio togliendo gli occhiali; chi è ipermetrope avverte la presbiopia prima degli altri. L'astigmatismo, se non corretto, rende ancora più faticoso il lavoro a distanza intermedia. Per questo la correzione va costruita su misura, partendo da una visita completa e non solo da una prova degli occhiali."
+          ]
+        },
+        {
+          "titolo": "L'occhio secco al computer",
+          "paragrafi": [
+            "Davanti allo schermo ammicchiamo molto meno del normale: le lacrime evaporano e la superficie dell'occhio si secca. Bruciore, sensazione di sabbia negli occhi e visione che fluttua sono i sintomi tipici. Gli esami per l'occhio secco valutano quantità e qualità delle lacrime; lacrime artificiali adatte, pause regolari e un ambiente non troppo secco danno spesso un grande sollievo."
+          ]
+        },
+        {
+          "titolo": "Quando pensare alla chirurgia",
+          "paragrafi": [
+            "Dopo i 55-60 anni, quando il cristallino comincia a perdere trasparenza, la chirurgia della cataratta con lenti intraoculari multifocali può correggere insieme cataratta e presbiopia, riducendo la dipendenza dagli occhiali. È una scelta da valutare con attenzione in visita, considerando lo stato della retina e le abitudini visive del paziente."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Gli occhiali da lettura del supermercato vanno bene? Possono essere una soluzione temporanea, ma non correggono astigmatismo e differenze tra i due occhi.",
+            "Le progressive si usano al computer? Sì, ma spesso una lente da ufficio è più comoda.",
+            "La presbiopia peggiora? Aumenta fino ai 60 anni circa, poi si stabilizza.",
+            "I filtri per la luce blu servono? Possono dare comfort, ma non sostituiscono la correzione giusta e le pause."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita oculistica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "oculista_davidciacci",
+    "nota": "il profilo ha 28.600 follower ma è fermo da mesi: esempi di post per ripartire.",
+    "post": [
+      {
+        "stile": "foto",
+        "immagine": "vitreo",
+        "titolo": "Retina sana: perché conta",
+        "sottotitolo": "Le malattie della retina crescono in silenzio",
+        "didascalia": "Ci vedo bene, perché fare una visita? Perché maculopatia, glaucoma e molte malattie della retina non danno sintomi all'inizio. Con OCT e campo visivo le scopriamo prima.",
+        "hashtag": "#retina #prevenzione #oculista"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Visita ortottica: a cosa serve",
+        "punti": [
+          "Strabismo e occhio pigro",
+          "Visione doppia",
+          "Occhi stanchi al computer",
+          "Screening dei bambini"
+        ],
+        "didascalia": "L'ortottista lavora con l'oculista su come gli occhi si muovono e collaborano. Nei bambini, prima si interviene e meglio è.",
+        "hashtag": "#ortottica #bambini #vista"
+      },
+      {
+        "stile": "domanda",
+        "titolo": "Allontana il telefono per leggere?",
+        "risposta": "È la presbiopia. Si corregge bene.",
+        "didascalia": "Lontano, intermedio, vicino: l'occhio mette a fuoco a tre distanze. Con la lente giusta per il computer gli occhi si stancano molto meno.",
+        "hashtag": "#presbiopia #computer #occhiali"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Lo studio",
+    "altreLabel": "",
+    "email": "segreteria@studiociacci.com",
+    "luoghi": [
+      {
+        "tipo": "Studio",
+        "nome": "Studio Oculistico David Ciacci",
+        "breve": "Corso Stati Uniti 3, 2° piano",
+        "indirizzo": "Corso Stati Uniti 3",
+        "citta": "Torino",
+        "cap": "10128",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di corso Stati Uniti 3, Torino"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Dal lunedì al venerdì, dalle 9 alle 19, su appuntamento. Porti gli occhiali che usa e i referti precedenti; tolga le lenti a contatto 24 ore prima.",
+    "telefono": "3341938164",
+    "telefonoLabel": "334 193 8164",
+    "chiamaLabel": "la segreteria",
+    "whatsapp": null,
+    "saluto": "Dottore",
+    "oggettoMail": "Richiesta di visita oculistica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce: la segreteria La ricontatta entro 24 ore per confermare.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30",
+        "18:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data e ora vengono confermate dalla segreteria.",
+      "tipi": [
+        "Prima visita",
+        "Controllo",
+        "Esami strumentali"
+      ],
+      "motivi": [
+        "Visita oculistica completa",
+        "Prevenzione con OCT e campo visivo",
+        "Retina e maculopatia",
+        "Glaucoma",
+        "Cataratta",
+        "Visita per un bambino",
+        "Rinnovo patente",
+        "Altro"
+      ],
+      "motiviFrase": [
+        "un controllo oculistico completo",
+        "un percorso di prevenzione",
+        "un controllo della retina",
+        "un controllo per il glaucoma",
+        "la cataratta",
+        "mio figlio",
+        "il rinnovo della patente",
+        "un problema agli occhi"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio di corso Stati Uniti 3",
+          "frase": "lo studio di corso Stati Uniti 3, Torino"
+        }
+      ],
+      "privacy": "https://www.iubenda.com/privacy-policy/86819966",
+      "privacyTesto": "",
+      "notePlaceholder": "Per esempio i Suoi disturbi o se porta lenti a contatto"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#EEF4F7",
+      "ink": "#0B1A24",
+      "muted": "#58666F",
+      "line": "#D8E3EA",
+      "brand": "#003B5C",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#3F91BA",
+      "deep": "#022B42",
+      "deep-ink": "#BCD0DD",
+      "urgenza": "#C8453B"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Young+Serif&family=Mona+Sans:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Young Serif",
+    "fontTesti": "Mona Sans",
+    "fontUi": "Mona Sans",
+    "favicon": "/ciacci-xtp3/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/ciacci-xtp3/brand/brand.json",
+    "pagine": [
+      "https://www.oculistadavidciacci.it/",
+      "https://www.oculistadavidciacci.it/chi-siamo/",
+      "https://www.oculistadavidciacci.it/esami/",
+      "https://www.oculistadavidciacci.it/chirurgia-oculistica/",
+      "https://www.oculistadavidciacci.it/contatti/",
+      "https://www.oculistadavidciacci.it/aprofondimenti/"
+    ]
+  }
+}
