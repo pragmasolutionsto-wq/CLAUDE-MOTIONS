@@ -1,0 +1,465 @@
+---
+// Layout "conduzione" (prima demo: Dott. Alessandro Blandino, cardiologo elettrofisiologo). Costruito sul sistema elettrico del cuore:
+// Funnel Display + Funnel Sans, petrolio del suo logo #0A86A2 + azzurro #5CC6DC su blu notte #08222D, angoli 16-20px.
+// Interattivi: prenotazione WhatsApp (sede a pillole + motivo, numero verificato sul suo sito); «La mappa elettrica del cuore»
+// (aritmie a schede → zone del sistema di conduzione evidenziate, impulso animato, ECG generato che si disegna, cosa/sintomi/cura);
+// «Tre energie per l'ablazione» (tab con le sue figure); «Qual è il rischio di ictus?» (punteggio CHA2DS2-VA, indicazioni generali);
+// sedi a schede con telefono di ciascuna.
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const P = x.prenota;
+const motivi = x.motivi as any[];
+const sedi = x.sediL as any[];
+const ar = x.aritmie as any[];
+const en = x.energie as any[];
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const msg0 = `Buongiorno Dottore, vorrei prenotare una visita per ${motivi[0].frase} presso ${sedi[0].frase}.`;
+const waHref = (t: string) => `https://wa.me/${P.whatsapp}?text=${encodeURIComponent(t)}`;
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-8">
+      <a href={`/${m.slug}`} aria-label={m.brand.logoAlt}><img src={m.brand.logoScuro} alt={m.brand.logoAlt} width="1773" height="900" class="h-11 w-auto sm:h-12" /></a>
+      <nav class="hidden items-center gap-6 text-[14.5px] text-ink/75 xl:flex" aria-label="Sezioni">
+        <a href="#aree" class="hover:text-brand">Le aritmie</a><a href="#ablazione" class="hover:text-brand">L'ablazione</a><a href="#ictus" class="hover:text-brand">Rischio di ictus</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#sedi" class="hover:text-brand">Dove ricevo</a>
+      </nav>
+      <a href="#prenota-box" class="btn !min-h-[40px] shrink-0 !rounded-xl bg-brand !px-5 text-[14px] text-white hover:bg-deep">Prenoti</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden" data-hero>
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 pb-10 pt-10 sm:px-8 lg:grid-cols-12 lg:items-center lg:pt-14">
+        <div class="lg:col-span-6">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand" data-entra>{x.hero.eyebrow}</p>
+          <h1 class="mt-5 font-head text-[3rem] font-semibold leading-[1] tracking-[-0.03em] text-deep sm:text-[4.6rem]" data-titolo-hero>{x.hero.titolo}</h1>
+          <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-ink/80" data-entra>{x.hero.testo}</p>
+          <dl class="mt-9 grid max-w-xl grid-cols-3 gap-4" data-entra>
+            {(x.numeri as any[]).map((n) => <div class="rounded-2xl bg-surface p-4"><dt class="sr-only">{n.testo}</dt><dd><span class="block text-[11px] uppercase tracking-[0.14em] text-muted">{n.pre}</span><span class="block font-head text-[1.9rem] font-semibold leading-none text-deep sm:text-[2.4rem]" data-conta={n.valore} data-fmt={n.fmt}>{n.fmt}</span><span class="mt-1.5 block text-[12.5px] leading-snug text-muted">{n.testo}</span></dd></div>)}
+          </dl>
+        </div>
+        <div class="relative lg:col-span-6">
+          <figure class="relative overflow-hidden rounded-[24px] bg-surface" data-foto-hero><img src={foto.ritratto} alt={foto.ritrattoAlt} width="1200" height="1000" fetchpriority="high" class="aspect-[6/5] w-full object-cover" /></figure>
+          <div class="absolute -bottom-6 left-4 right-4 rounded-2xl bg-deep p-4 text-white shadow-2xl sm:left-auto sm:right-6 sm:w-[340px]" data-entra>
+            <p class="flex items-center justify-between text-[11.5px] font-semibold uppercase tracking-[0.16em] text-brand2"><span>Ritmo sinusale</span><span class="text-white/70" data-hero-bpm>72 bpm</span></p>
+            <svg viewBox="0 0 600 120" class="mt-2 h-16 w-full" aria-hidden="true"><path d="" fill="none" stroke="var(--c-brand2)" stroke-width="2.5" stroke-linejoin="round" data-hero-ecg /></svg>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-8">
+        <div id="prenota-box" class="grid gap-5 rounded-[24px] bg-surface p-5 ring-1 ring-line sm:p-7 lg:grid-cols-12" data-prenota-box data-wa={P.whatsapp} data-entra>
+          <fieldset class="lg:col-span-7"><legend class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Dove preferisce</legend>
+            <div class="mt-3 flex flex-wrap gap-2">{sedi.map((s, i) => <label class="sede-r"><input type="radio" name="sede" value={s.id} data-frase={s.frase} data-tel={s.tel} data-tel-label={s.telLabel} checked={i === 0} class="sr-only" /><span><strong>{s.nome}</strong><small>{s.breve}</small></span></label>)}</div></fieldset>
+          <div class="flex flex-col gap-3 lg:col-span-5">
+            <label class="block"><span class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Per che cosa</span>
+              <select class="campo mt-2 !rounded-xl bg-white" data-motivo>{motivi.map((t) => <option value={t.id} data-frase={t.frase}>{t.nome}</option>)}</select></label>
+            <div class="rounded-xl bg-white px-4 py-3 ring-1 ring-line"><p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">Il Suo messaggio</p><p class="mt-1 text-[15px] leading-snug text-deep" data-anteprima aria-live="polite">{msg0}</p></div>
+            <div class="grid gap-2 sm:grid-cols-2">
+              <a href={waHref(msg0)} target="_blank" rel="noopener" class="btn !rounded-xl bg-brand text-white hover:bg-deep" data-prenota><Icona nome="commento" /> Scriva su WhatsApp</a>
+              <a href={telHref(sedi[0].tel)} class="btn !rounded-xl bg-white text-deep ring-1 ring-line hover:ring-deep" data-tel-sede><Icona nome="tel" /> <span data-tel-label>{sedi[0].telLabel}</span></a>
+            </div>
+            <p class="text-[12.5px] text-muted">Risposta entro 24 ore. Per visite urgenti chiami il 338 737 0117. In caso di dolore al petto o svenimento chiami il 112.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPPA ELETTRICA -->
+    <section id="aree" class="bg-deep px-4 py-16 text-deep-ink sm:px-8 sm:py-24" data-mappa data-ar={JSON.stringify(ar)}>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand2">Le aritmie</p><h2 class="mt-2 font-head text-[2.5rem] font-semibold leading-[1.02] tracking-[-0.025em] text-white sm:text-[3.6rem]" data-sale>La mappa elettrica del cuore.</h2></div>
+          <p class="text-[16.5px] leading-relaxed lg:col-span-5">Ogni battito è un impulso elettrico che segue sempre la stessa strada. Le aritmie nascono quando qualcosa cambia lungo il percorso. Scelga un'aritmia: Le mostro dove nasce e come appare all'ECG.</p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-2" role="tablist" aria-label="Aritmie">
+          {ar.map((a, i) => <button type="button" role="tab" id={`ar-${a.id}`} aria-controls="ar-pannello" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="ar-tab rounded-xl px-4 py-2.5 text-[14.5px] font-semibold" data-ar-tab={a.id}>{a.nome}</button>)}
+        </div>
+        <div class="mt-8 grid gap-8 lg:grid-cols-12 lg:items-start">
+          <figure class="rounded-[24px] bg-white/[0.04] p-4 ring-1 ring-white/10 sm:p-6 lg:col-span-6">
+            <svg viewBox="0 0 520 540" class="mx-auto w-full max-w-[520px]" role="img" aria-labelledby="cuore-tit" data-cuore>
+              <title id="cuore-tit">Schema del cuore con il sistema di conduzione elettrica: nodo del seno, nodo atrio-ventricolare, fascio di His e branche</title>
+              <path d="M260 70 C200 30 110 40 80 110 C50 180 70 260 120 340 C170 420 230 480 262 515 C300 478 360 420 410 340 C460 260 475 175 440 110 C405 45 320 32 260 70 Z" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.35)" stroke-width="2" />
+              <path d="M262 92 L262 505" stroke="rgba(255,255,255,.18)" stroke-width="2" />
+              <path d="M88 235 Q262 268 452 230" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="2" />
+              <g class="zona" data-zona="atri"><path d="M95 225 C80 160 110 75 200 72 C235 72 255 85 262 95 C270 85 300 70 340 72 C420 78 452 150 440 225 Q262 255 95 225 Z" /></g>
+              <g class="zona" data-zona="vd"><path d="M262 260 L262 500 C215 455 150 385 112 300 C100 270 98 250 100 240 Q190 258 262 260 Z" /></g>
+              <g class="vene" data-zona="vene">{[[350, 60], [392, 66], [430, 92], [446, 132]].map(([a, b]) => <path d={`M${a} ${b} l${(a - 380) / 3 + 10} -34`} />)}</g>
+              <text x="160" y="160" text-anchor="middle" class="cu-et">Atrio destro</text>
+              <text x="365" y="160" text-anchor="middle" class="cu-et">Atrio sinistro</text>
+              <text x="180" y="370" text-anchor="middle" class="cu-et">Ventricolo destro</text>
+              <text x="355" y="370" text-anchor="middle" class="cu-et">Ventricolo sinistro</text>
+              <text x="455" y="40" text-anchor="middle" class="cu-et cu-et--pic">Vene polmonari</text>
+              <path d="M150 112 C180 160 220 210 255 248" class="via" pathLength="1" />
+              <path d="M150 112 C230 120 300 150 340 190" class="via via--sec" pathLength="1" />
+              <path d="M258 252 L262 300" class="via via--his" pathLength="1" />
+              <path d="M262 300 C258 360 236 420 200 470 C180 440 150 400 128 330" class="via" pathLength="1" />
+              <path d="M262 300 C272 360 300 420 330 470 C360 430 395 380 410 300" class="via" pathLength="1" />
+              <ellipse cx="258" cy="262" rx="34" ry="22" class="circuito" data-zona="circuito" />
+              <g class="focus" data-zona="focus"><circle cx="372" cy="402" r="16" /><path d="M372 380 v-12 M372 424 v12 M350 402 h-12 M394 402 h12" /></g>
+              <g class="blocco" data-zona="blocco"><path d="M244 266 l26 26 M270 266 l-26 26" /></g>
+              <circle cx="150" cy="112" r="12" class="nodo" data-zona="seno" />
+              <circle cx="256" cy="250" r="10" class="nodo" data-zona="av" />
+              <circle cx="262" cy="300" r="6" class="nodo nodo--his" data-zona="his" />
+              <text x="128" y="92" text-anchor="middle" class="cu-et cu-et--nodo">Nodo del seno</text>
+              <text x="318" y="246" text-anchor="start" class="cu-et cu-et--nodo">Nodo AV</text>
+              <text x="276" y="318" text-anchor="start" class="cu-et cu-et--pic">Fascio di His</text>
+              <g data-impulsi></g>
+            </svg>
+          </figure>
+          <div id="ar-pannello" role="tabpanel" aria-labelledby="ar-normale" class="lg:col-span-6" aria-live="polite">
+            <div class="rounded-[24px] bg-[#04161E] p-5 ring-1 ring-white/10">
+              <p class="flex items-center justify-between text-[11.5px] font-semibold uppercase tracking-[0.16em]"><span class="text-brand2" data-ar-ecg-nome>ECG · {ar[0].breve}</span><span class="text-white/50">derivazione II</span></p>
+              <svg viewBox="0 0 600 140" class="mt-3 h-28 w-full" aria-hidden="true">
+                <defs><pattern id="griglia" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(92,198,220,.12)" stroke-width="1" /></pattern></defs>
+                <rect width="600" height="140" fill="url(#griglia)" />
+                <path d="" fill="none" stroke="var(--c-brand2)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" data-ar-ecg />
+              </svg>
+            </div>
+            <h3 class="mt-6 font-head text-[2rem] font-semibold leading-tight text-white" data-ar-nome>{ar[0].nome}</h3>
+            <p class="mt-2 text-[16px] leading-relaxed" data-ar-cosa>{ar[0].cosa}</p>
+            <dl class="mt-5 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl bg-white/[0.05] p-4"><dt class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">Come si sente</dt><dd class="mt-1 text-[15px] leading-relaxed text-white/90" data-ar-sintomi>{ar[0].sintomi}</dd></div>
+              <div class="rounded-2xl bg-white/[0.05] p-4" data-ar-cura-box hidden><dt class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">Come si cura</dt><dd class="mt-1 text-[15px] leading-relaxed text-white/90" data-ar-cura></dd></div>
+            </dl>
+            <div class="mt-6 flex flex-wrap gap-2"><button type="button" class="btn !rounded-xl bg-brand2 text-deep hover:bg-white" data-ar-prenota>Prenoti una visita</button><a href="#" class="btn !rounded-xl text-white ring-1 ring-white/25 hover:bg-white/10" data-ar-link hidden>Legga l'articolo</a></div>
+            <p class="mt-4 text-[12.5px] text-deep-ink/70">Schema semplificato e tracciati indicativi, a scopo divulgativo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABLAZIONE -->
+    <section id="ablazione" class="px-4 py-16 sm:px-8 sm:py-24" data-energie>
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-7"><p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand">Ablazione della fibrillazione atriale</p><h2 class="mt-2 font-head text-[2.5rem] font-semibold leading-[1.02] tracking-[-0.025em] text-deep sm:text-[3.4rem]" data-sale>Isolare le vene polmonari. Con tre energie.</h2></div>
+          <p class="text-[16.5px] leading-relaxed text-ink/80 lg:col-span-5">Dalla vena dell'inguine si raggiunge l'atrio sinistro e si creano micro-lesioni attorno alle vene polmonari. Le tre energie danno risultati clinici molto simili.</p>
+        </div>
+        <div class="mt-10 grid gap-8 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <div class="grid grid-cols-3 gap-1 rounded-2xl bg-surface p-1" role="tablist" aria-label="Energie">
+              {en.map((e, i) => <button type="button" role="tab" id={`en-${e.id}`} aria-controls="en-pannello" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="en-tab rounded-xl px-2 py-2.5 text-[13.5px] font-semibold leading-tight" data-en={e.id} data-sotto={e.sotto} data-testo={e.testo}>{e.nome}</button>)}
+            </div>
+            <div id="en-pannello" role="tabpanel" aria-labelledby={`en-${en[0].id}`} class="mt-4 grid grid-cols-[120px_1fr] gap-4 rounded-2xl p-4 ring-1 ring-line sm:grid-cols-[160px_1fr]">
+              {en.map((e, i) => <img src={e.img} alt={`Schema: ${e.nome}`} width="600" height="692" loading="lazy" class="w-full rounded-xl bg-white" data-en-img={e.id} hidden={i !== 0} />)}
+              <div><p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand" data-en-sotto>{en[0].sotto}</p><p class="mt-1 text-[15.5px] leading-relaxed text-ink/85" data-en-testo>{en[0].testo}</p></div>
+            </div>
+            <dl class="mt-6 grid grid-cols-3 gap-3 text-center">
+              {[['80-90%', 'successo completo nella FA parossistica'], ['70-80%', 'nelle forme persistenti'], ['1-1,5%', 'complicanze nella mia casistica']].map(([v, t]) => <div class="rounded-2xl bg-surface p-3"><dt class="sr-only">{t}</dt><dd><span class="block whitespace-nowrap font-head text-[1.15rem] font-semibold text-deep sm:text-[1.6rem]">{v}</span><span class="mt-1 block text-[12px] leading-snug text-muted">{t}</span></dd></div>)}
+            </dl>
+            <a href={`/${m.slug}/articolo`} class="mt-6 inline-flex items-center gap-2 font-semibold text-brand hover:underline">Legga tutto sull'ablazione della FA <Icona nome="freccia" class="h-4 w-4" /></a>
+          </div>
+          <figure class="lg:col-span-7"><img src={foto.mappe} alt="Mappe elettroanatomiche di ablazione della fibrillazione atriale eseguite dal Dott. Blandino" width="1400" height="993" loading="lazy" class="w-full rounded-[24px] bg-white ring-1 ring-line" data-mappe-img /><figcaption class="mt-2 text-[13px] text-muted">Isolamento delle vene polmonari con mappaggio elettroanatomico: casi trattati al Mauriziano.</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ICTUS -->
+    <section id="ictus" class="bg-surface px-4 py-16 sm:px-8 sm:py-24" data-ictus>
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-start">
+        <div class="lg:col-span-5">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand">Fibrillazione atriale e ictus</p>
+          <h2 class="mt-2 font-head text-[2.5rem] font-semibold leading-[1.02] tracking-[-0.025em] text-deep sm:text-[3.2rem]" data-sale>Qual è il Suo rischio di ictus?</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-ink/80">Se ha una fibrillazione atriale, il rischio di ictus si stima con il punteggio CHA2DS2-VA, usato dalle linee guida europee. Lo calcoli con i Suoi dati: è un punto di partenza da discutere in visita.</p>
+          <p class="mt-4 rounded-2xl bg-white p-4 text-[14px] leading-relaxed text-ink/80 ring-1 ring-line">Non sospenda né inizi mai un anticoagulante da solo: la decisione tiene conto anche del rischio di sanguinamento e degli altri farmaci.</p>
+        </div>
+        <form class="grid gap-6 rounded-[24px] bg-white p-6 ring-1 ring-line sm:p-8 lg:col-span-7 lg:grid-cols-2" data-cha onsubmit="return false">
+          <div class="space-y-3">
+            <fieldset><legend class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Età</legend>
+              <div class="mt-2 grid grid-cols-3 gap-1 rounded-xl bg-surface p-1">{[['0', 'sotto 65'], ['1', '65-74'], ['2', '75 e oltre']].map(([v, t], i) => <label class="eta-r"><input type="radio" name="eta" value={v} checked={i === 0} class="sr-only" /><span>{t}</span></label>)}</div></fieldset>
+            {[['scompenso', 1, 'Scompenso cardiaco'], ['ipertensione', 1, 'Pressione alta'], ['diabete', 1, 'Diabete'], ['ictus', 2, 'Ictus, TIA o embolia in passato'], ['vascolare', 1, 'Infarto, arteriopatia o placche aortiche']].map(([id, p, t]) => <label class="flex items-start gap-3 rounded-xl px-1 py-1.5 text-[15px] text-deep"><input type="checkbox" value={p} data-cha-voce={id} class="mt-1 h-4 w-4 accent-[var(--c-brand)]" />{t}<span class="ml-auto shrink-0 text-[12.5px] text-muted">+{p}</span></label>)}
+          </div>
+          <div class="flex flex-col rounded-2xl bg-deep p-6 text-deep-ink" aria-live="polite">
+            <p class="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand2">Punteggio CHA2DS2-VA</p>
+            <p class="mt-2 font-head text-[4.5rem] font-semibold leading-none text-white" data-cha-punti>0</p>
+            <p class="mt-3 text-[15.5px] leading-relaxed text-white/90" data-cha-testo></p>
+            <button type="button" class="btn mt-auto !rounded-xl bg-brand2 text-deep hover:bg-white" data-prenota-motivo="fa">Ne parliamo in visita</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <p class="text-[12.5px] font-semibold uppercase tracking-[0.16em] text-brand">Chi sono</p>
+          <h2 class="mt-2 font-head text-[2.5rem] font-semibold leading-[1.02] tracking-[-0.025em] text-deep sm:text-[3.2rem]" data-sale>Dalla clinica alla sala di elettrofisiologia.</h2>
+          <p class="mt-4 text-[16.5px] leading-relaxed text-ink/80">Sono cardiologo, aritmologo ed elettrofisiologo interventista, specialista anche in Nutrizione Umana. Sono dirigente medico nella S.S. di Elettrofisiologia dell'Ospedale Mauriziano Umberto I di Torino.</p>
+          <blockquote class="mt-6 border-l-4 border-brand pl-5 font-head text-[1.35rem] font-medium leading-snug text-deep">«L'obiettivo è offrire la diagnosi più accurata e il miglior trattamento possibile, per efficacia e sicurezza, personalizzando ogni percorso. Perché ogni persona è unica e speciale.»</blockquote>
+          <figure class="mt-8 grid grid-cols-[1fr_1.4fr] gap-3"><img src={foto.procedura} alt="Il Dott. Blandino in sala di elettrofisiologia" width="400" height="545" loading="lazy" class="w-full rounded-2xl" /><div class="grid content-start gap-2">{(x.credenziali as string[][]).map(([t, d]) => <div class="rounded-2xl bg-surface p-3"><p class="font-head text-[1.05rem] font-semibold text-deep">{t}</p><p class="text-[12.5px] leading-snug text-muted">{d}</p></div>)}</div></figure>
+        </div>
+        <div class="lg:col-span-7">
+          <ol class="relative space-y-7 pl-8" data-storia>
+            <span class="absolute bottom-2 left-[7px] top-2 w-0.5 bg-line" aria-hidden="true"></span>
+            <span class="absolute left-[7px] top-2 w-0.5 origin-top bg-brand" style="bottom:.5rem" aria-hidden="true" data-storia-linea></span>
+            {(x.cv as any[]).map((s) => <li class="relative"><span class="absolute -left-8 top-1 h-4 w-4 rounded-full border-[3px] border-white bg-brand ring-1 ring-brand" aria-hidden="true"></span><p class="text-[12.5px] font-semibold uppercase tracking-[0.14em] text-brand">{s.anno}</p><h3 class="mt-0.5 font-head text-[1.35rem] font-semibold text-deep">{s.titolo}</h3><p class="mt-1 text-[15.5px] leading-relaxed text-ink/80">{s.testo}</p></li>)}
+          </ol>
+          <p class="mt-10 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-muted">Socio di</p>
+          <ul class="mt-3 flex flex-wrap gap-2">{(x.affiliazioni as string[]).map((a) => <li class="rounded-xl bg-surface px-4 py-2 font-head text-[15px] font-semibold text-deep">{a}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEDI -->
+    <section id="sedi" class="bg-deep text-deep-ink">
+      <div class="relative h-[220px] overflow-hidden sm:h-[340px]"><img src={foto.torino} alt="Torino con la Mole Antonelliana e le Alpi" width="1600" height="893" loading="lazy" class="h-full w-full object-cover object-[50%_60%]" data-torino /></div>
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-8">
+        <h2 class="font-head text-[2.5rem] font-semibold leading-[1.02] tracking-[-0.025em] text-white sm:text-[3.2rem]" data-sale>Dove ricevo</h2>
+        <p class="mt-3 max-w-2xl text-[16px]">Tre sedi a Torino, una a Carmagnola e visite a domicilio con ECG. Le procedure si eseguono al Mauriziano, anche in regime SSN.</p>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {sedi.map((s) => <article class="flex flex-col rounded-[20px] bg-white/[0.05] p-5 ring-1 ring-white/10"><Icona nome={s.id === 'domicilio' ? 'edificio' : s.id === 'mauriziano' ? 'ospedale' : 'pin'} class="h-6 w-6 text-brand2" /><h3 class="mt-3 font-head text-[1.2rem] font-semibold leading-snug text-white">{s.nome}</h3><p class="mt-1 text-[14px]">{s.indirizzo ? `${s.indirizzo}, ${s.citta}` : s.breve}</p>{s.nota && <p class="mt-2 text-[13px] text-deep-ink/80">{s.nota}</p>}<div class="mt-auto flex flex-wrap gap-x-4 gap-y-1 pt-4 text-[14px] font-semibold"><a href={telHref(s.tel)} class="text-brand2 hover:underline">{s.telLabel}</a><button type="button" class="text-white hover:underline" data-scegli-sede={s.id}>Prenoti qui</button>{s.indirizzo && <a href={mapsHref(s.indirizzo, s.citta)} target="_blank" rel="noopener" class="text-deep-ink/70 hover:text-white">Mappa</a>}</div></article>)}
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-conduzione bg-surface"><PrenotaCalendario m={m} /></div>
+
+    <!-- BLOG + IG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.5rem] font-semibold leading-tight tracking-[-0.025em] text-deep sm:text-[3rem]" data-sale>Da leggere prima della visita</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-semibold text-brand hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group flex flex-col">
+              <span class="block overflow-hidden rounded-[20px] bg-surface"><img src={b.img} alt="" width="900" height="560" loading="lazy" class="aspect-[4/3] w-full object-cover transition-[scale] duration-700 group-hover:scale-105" /></span>
+              <span class="mt-4 text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">{b.categoria} · {b.tempoLettura}</span>
+              <span class="mt-1.5 block font-head text-[1.3rem] font-semibold leading-snug text-deep group-hover:text-brand">{b.titolo}</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.1rem] font-semibold text-deep" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-xl bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-[20px] ring-1 ring-line sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.volto} alt="" width="32" height="32" class="h-8 w-8 rounded-full object-cover" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="900" height="560" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-3 bottom-3 rounded-2xl bg-white px-5 py-4"><p class="font-head text-[1.5rem] font-semibold leading-tight text-deep">{p.titolo}</p><p class="mt-0.5 text-sm font-semibold text-brand">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="relative flex aspect-square flex-col justify-end overflow-hidden bg-deep p-7 text-white">
+                  <svg viewBox="0 0 600 120" class="absolute inset-x-0 top-10 w-full opacity-60" aria-hidden="true"><path d="M0 70 H120 l12 -8 l10 8 H200 l8 14 l12 -64 l12 70 l8 -20 H300 l14 -10 l14 10 H420 l8 14 l12 -64 l12 70 l8 -20 H600" fill="none" stroke="var(--c-brand2)" stroke-width="3" /></svg>
+                  <p class="relative font-head text-[2.2rem] font-semibold leading-[1.02]">{p.titolo}</p><p class="relative mt-4 w-fit rounded-xl bg-brand2 px-4 py-2 text-[14px] font-semibold text-deep">{p.risposta}</p>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-brand p-7 text-white">
+                  <p class="font-head text-[1.9rem] font-semibold leading-[1.05]">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 text-[15px]"><span class="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full border-2 border-white"></span>{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-[2.4rem] font-semibold sm:text-5xl">{P.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{P.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={waHref(msg0)} target="_blank" rel="noopener" class="btn !rounded-xl bg-white text-deep hover:bg-brand2"><Icona nome="commento" /> WhatsApp</a>
+          <a href="#prenota" class="btn !rounded-xl border border-white/50 text-white hover:bg-white/10">Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+    let lenis: Lenis | null = null;
+    const vaiA = (sel: string) => { const el = document.querySelector<HTMLElement>(sel)!; const y = el.getBoundingClientRect().top + window.scrollY - 100; if (lenis) lenis.scrollTo(y); else window.scrollTo({ top: y, behavior: 'auto' }); };
+
+    // --- ECG generato ---
+    type Pt = [number, number];
+    const B = 80;
+    const battito = (x: number, o: { p?: boolean; largo?: boolean; brugada?: boolean; inv?: boolean } = {}): Pt[] => {
+      const r: Pt[] = [];
+      if (o.p !== false) r.push([x, B], [x + 6, B - 6], [x + 12, B]);
+      const q = x + 20, w = o.largo ? 1.9 : 1;
+      r.push([q, B], [q + 3 * w, B + 6], [q + 7 * w, B - 58], [q + 11 * w, B + 16], [q + 14 * w, B]);
+      const s = q + 14 * w;
+      if (o.brugada) r.push([s + 2, B - 34], [s + 10, B - 30], [s + 20, B - 18], [s + 28, B - 4], [s + 34, B + 4], [s + 40, B]);
+      else r.push([s + 10, B], [s + 18, o.inv ? B + 14 : B - 14], [s + 28, B]);
+      return r;
+    };
+    const genera = (tipo: string): string => {
+      let pts: Pt[] = [[0, B]];
+      const reg = (passo: number, opt = {}) => { for (let x = 10; x < 590; x += passo) pts.push(...battito(x, opt)); };
+      if (tipo === 'sinusale') reg(100);
+      else if (tipo === 'bradicardia') reg(190);
+      else if (tipo === 'tpsv') { for (let x = 6; x < 590; x += 42) pts.push(...battito(x, { p: false })); }
+      else if (tipo === 'brugada') reg(110, { brugada: true });
+      else if (tipo === 'extrasistoli') { [10, 110, 210].forEach((x) => pts.push(...battito(x))); pts.push(...battito(285, { p: false, largo: true, inv: true })); [440, 540].forEach((x) => pts.push(...battito(x))); }
+      else if (tipo === 'fa') {
+        const rr = [62, 95, 48, 80, 110, 55, 70, 92];
+        let x = 6, k = 0; const f: Pt[] = [];
+        while (x < 590) { const fine = x + rr[k % rr.length]; for (let t = x; t < Math.min(fine, 590); t += 6) f.push([t, B + Math.sin(t * 1.7) * 3 + Math.sin(t * 0.9) * 2]); const b = battito(Math.min(fine - 26, 560), { p: false }); if (fine < 600) f.push(...b); x = fine; k++; }
+        pts = [[0, B], ...f];
+      }
+      pts = pts.filter(([a]) => a <= 600).sort((a, b) => a[0] - b[0]);
+      pts.push([600, B]);
+      return 'M' + pts.map(([a, b]) => `${a.toFixed(1)} ${b.toFixed(1)}`).join(' L');
+    };
+    const heroEcg = document.querySelector<SVGPathElement>('[data-hero-ecg]')!;
+    heroEcg.setAttribute('d', genera('sinusale'));
+
+    // --- Prenotazione ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const selM = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const aggiorna = () => {
+      const s = box.querySelector<HTMLInputElement>('input[name="sede"]:checked')!;
+      const t = `Buongiorno Dottore, vorrei prenotare una visita per ${selM.selectedOptions[0].dataset.frase} presso ${s.dataset.frase}.`;
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `https://wa.me/${box.dataset.wa}?text=${encodeURIComponent(t)}`;
+      box.querySelector<HTMLAnchorElement>('[data-tel-sede]')!.href = `tel:${s.dataset.tel}`;
+      box.querySelector('[data-tel-label]')!.textContent = s.dataset.telLabel!;
+    };
+    selM.addEventListener('change', aggiorna);
+    box.querySelectorAll('input[name="sede"]').forEach((r) => r.addEventListener('change', aggiorna));
+    const scegli = (id: string) => { selM.value = id; aggiorna(); vaiA('#prenota-box'); selM.focus({ preventScroll: true }); };
+    document.querySelectorAll<HTMLElement>('[data-prenota-motivo]').forEach((b) => b.addEventListener('click', () => scegli(b.dataset.prenotaMotivo!)));
+    document.querySelectorAll<HTMLElement>('[data-scegli-sede]').forEach((b) => b.addEventListener('click', () => { const r = box.querySelector<HTMLInputElement>(`input[value="${b.dataset.scegliSede}"]`)!; r.checked = true; aggiorna(); vaiA('#prenota-box'); r.focus({ preventScroll: true }); }));
+    aggiorna();
+
+    // --- Tab ---
+    const tablist = (tabs: HTMLElement[], attiva: (t: HTMLElement) => void) => {
+      tabs.forEach((t, i) => {
+        t.addEventListener('click', () => attiva(t));
+        t.addEventListener('keydown', (e) => {
+          const k = (e as KeyboardEvent).key; let j = -1;
+          if (k === 'ArrowRight' || k === 'ArrowDown') j = (i + 1) % tabs.length; else if (k === 'ArrowLeft' || k === 'ArrowUp') j = (i - 1 + tabs.length) % tabs.length; else if (k === 'Home') j = 0; else if (k === 'End') j = tabs.length - 1;
+          if (j >= 0) { e.preventDefault(); tabs[j].focus(); attiva(tabs[j]); }
+        });
+      });
+    };
+    const seleziona = (tabs: HTMLElement[], t: HTMLElement) => tabs.forEach((k) => { const s = k === t; k.setAttribute('aria-selected', String(s)); k.tabIndex = s ? 0 : -1; });
+
+    // --- Mappa elettrica ---
+    const mp = document.querySelector<HTMLElement>('[data-mappa]')!;
+    const AR = JSON.parse(mp.dataset.ar!) as { id: string; nome: string; breve: string; zone: string[]; ecg: string; cosa: string; sintomi: string; cura: string; motivo: string; link: string }[];
+    const slug = location.pathname.split('/').filter(Boolean)[0];
+    const ecgP = mp.querySelector<SVGPathElement>('[data-ar-ecg]')!;
+    const imp = mp.querySelector<SVGGElement>('[data-impulsi]')!;
+    const NS = 'http://www.w3.org/2000/svg';
+    const percorso = 'M150 112 C180 160 220 210 255 248 L262 300 C272 360 300 420 330 470';
+    let anim: gsap.core.Timeline | null = null;
+    const animaImpulso = (tipo: string) => {
+      anim?.kill(); imp.replaceChildren();
+      if (ridotto) return;
+      const pallino = (r = 7) => { const c = document.createElementNS(NS, 'circle'); c.setAttribute('r', String(r)); c.setAttribute('class', 'impulso'); imp.appendChild(c); return c; };
+      const guida = document.createElementNS(NS, 'path'); guida.setAttribute('d', percorso); const L = guida.getTotalLength();
+      const lungo = (c: SVGCircleElement, dur: number, tl: gsap.core.Timeline, at: number | string = 0, fino = 1) => { const o = { t: 0 }; tl.fromTo(o, { t: 0 }, { t: fino, duration: dur, ease: 'none', onUpdate: () => { const p = guida.getPointAtLength(o.t * L); c.setAttribute('cx', String(p.x)); c.setAttribute('cy', String(p.y)); } }, at); };
+      anim = gsap.timeline({ repeat: -1 });
+      if (tipo === 'fa') {
+        for (let i = 0; i < 9; i++) { const c = pallino(5); const x0 = 120 + Math.random() * 280, y0 = 100 + Math.random() * 110; c.setAttribute('cx', String(x0)); c.setAttribute('cy', String(y0)); anim.to(c, { attr: { cx: 120 + Math.random() * 280, cy: 100 + Math.random() * 110 }, duration: 0.35 + Math.random() * 0.3, ease: 'sine.inOut', yoyo: true, repeat: 3 }, i * 0.08); }
+      } else if (tipo === 'tpsv') {
+        const c = pallino(); const o = { a: 0 };
+        anim.to(o, { a: Math.PI * 2, duration: 0.45, ease: 'none', repeat: 4, onUpdate: () => { c.setAttribute('cx', String(258 + Math.cos(o.a) * 34)); c.setAttribute('cy', String(262 + Math.sin(o.a) * 22)); } });
+      } else if (tipo === 'bradicardia') {
+        const c = pallino(); lungo(c, 1.1, anim, 0, 0.38); anim.to(c, { attr: { r: 0 }, duration: 0.3 }).to({}, { duration: 1 });
+      } else {
+        const c = pallino(); lungo(c, 0.75, anim); anim.set(c, { attr: { r: 0 } }).to({}, { duration: 0.35 }).set(c, { attr: { r: 7 } });
+        if (tipo === 'extrasistoli') { const f = mp.querySelector('[data-zona="focus"]'); anim.fromTo(f, { scale: 1, transformOrigin: '372px 402px' }, { scale: 1.35, duration: 0.15, yoyo: true, repeat: 1 }, 0.9); }
+      }
+    };
+    const arTabs = Array.from(mp.querySelectorAll<HTMLElement>('[data-ar-tab]'));
+    const mostraAr = (id: string) => {
+      const a = AR.find((k) => k.id === id)!;
+      mp.dataset.aritmia = id;
+      mp.querySelectorAll<SVGElement>('[data-zona]').forEach((z) => z.classList.toggle('accesa', a.zone.includes(z.dataset.zona!)));
+      mp.querySelector('[data-ar-nome]')!.textContent = a.nome; mp.querySelector('[data-ar-cosa]')!.textContent = a.cosa; mp.querySelector('[data-ar-sintomi]')!.textContent = a.sintomi;
+      mp.querySelector('[data-ar-ecg-nome]')!.textContent = `ECG · ${a.breve}`;
+      const cb = mp.querySelector<HTMLElement>('[data-ar-cura-box]')!; cb.hidden = !a.cura; mp.querySelector('[data-ar-cura]')!.textContent = a.cura;
+      const ln = mp.querySelector<HTMLAnchorElement>('[data-ar-link]')!; ln.hidden = !a.link; ln.href = a.link === 'articolo' ? `/${slug}/articolo` : `/${slug}/blog/${a.link}`;
+      mp.querySelector<HTMLElement>('[data-ar-prenota]')!.dataset.motivo = a.motivo;
+      mp.querySelector('#ar-pannello')!.setAttribute('aria-labelledby', `ar-${id}`);
+      ecgP.setAttribute('d', genera(a.ecg)); ecgP.dataset.tipo = a.ecg;
+      if (!ridotto) { const le = ecgP.getTotalLength(); gsap.fromTo(ecgP, { strokeDasharray: le, strokeDashoffset: le }, { strokeDashoffset: 0, duration: 1.4, ease: 'none' }); }
+      animaImpulso(a.ecg);
+    };
+    tablist(arTabs, (t) => { seleziona(arTabs, t); mostraAr(t.dataset.arTab!); });
+    mp.querySelector<HTMLElement>('[data-ar-prenota]')!.addEventListener('click', (e) => scegli((e.currentTarget as HTMLElement).dataset.motivo!));
+    mostraAr('normale');
+
+    // --- Energie ---
+    const enTabs = Array.from(document.querySelectorAll<HTMLElement>('[data-en]'));
+    const dati = Array.from(document.querySelectorAll<HTMLImageElement>('[data-en-img]'));
+    tablist(enTabs, (t) => {
+      seleziona(enTabs, t);
+      dati.forEach((im) => { im.hidden = im.dataset.enImg !== t.dataset.en; });
+      document.querySelector('#en-pannello')!.setAttribute('aria-labelledby', t.id);
+      document.querySelector('[data-en-sotto]')!.textContent = t.dataset.sotto!;
+      document.querySelector('[data-en-testo]')!.textContent = t.dataset.testo!;
+      document.querySelector<HTMLElement>('[data-energie]')!.dataset.energiaAttiva = t.dataset.en!;
+    });
+
+    // --- CHA2DS2-VA ---
+    const ch = document.querySelector<HTMLFormElement>('[data-cha]')!;
+    const calcola = () => {
+      let p = Number(ch.querySelector<HTMLInputElement>('input[name="eta"]:checked')!.value);
+      ch.querySelectorAll<HTMLInputElement>('[data-cha-voce]').forEach((c) => { if (c.checked) p += Number(c.value); });
+      ch.querySelector('[data-cha-punti]')!.textContent = String(p);
+      ch.querySelector('[data-cha-testo]')!.textContent = p === 0 ? 'Rischio basso: in genere l\'anticoagulante non è indicato. Il rischio va comunque rivalutato nel tempo, perché cambia con l\'età e le malattie.' : p === 1 ? 'Rischio intermedio: le linee guida indicano di considerare l\'anticoagulante, valutando anche il rischio di sanguinamento.' : 'Rischio più alto: in genere le linee guida raccomandano la terapia anticoagulante, se non ci sono controindicazioni.';
+      ch.dataset.punti = String(p);
+    };
+    ch.addEventListener('change', calcola); calcola();
+
+    if (!ridotto) {
+      lenis = new Lenis({ anchors: { offset: -100 }, lerp: 0.1 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis!.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+      const h = document.querySelector<HTMLElement>('[data-titolo-hero]')!;
+      const parole = (h.textContent ?? '').trim().split(/\s+/);
+      h.setAttribute('aria-label', parole.join(' '));
+      h.innerHTML = parole.map((w, i) => `<span class="inline-block overflow-hidden pb-[0.08em] align-bottom" aria-hidden="true"><span class="inline-block ${i >= 3 ? 'text-brand' : ''}">${w}</span></span>`).join(' ');
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      tl.from(h.querySelectorAll(':scope > span > span'), { yPercent: 110, duration: 0.9, stagger: 0.07 }, 0.1)
+        .from('[data-foto-hero]', { clipPath: 'inset(0 0 0 100% round 24px)', duration: 1.2, ease: 'power3.inOut' }, 0.2)
+        .from('[data-entra]', { y: 22, opacity: 0, duration: 0.7, stagger: 0.1 }, 0.5);
+      const lh = heroEcg.getTotalLength();
+      gsap.fromTo(heroEcg, { strokeDasharray: lh, strokeDashoffset: lh }, { strokeDashoffset: 0, duration: 2.6, ease: 'none', repeat: -1, repeatDelay: 0.8 });
+      document.querySelectorAll<HTMLElement>('[data-conta]').forEach((el) => {
+        const fine = Number(el.dataset.conta); const o = { v: 0 };
+        gsap.to(o, { v: fine, duration: 1.8, delay: 0.9, ease: 'power2.out', onUpdate: () => { el.textContent = Math.round(o.v).toLocaleString('it-IT'); }, onComplete: () => { el.textContent = el.dataset.fmt!; } });
+      });
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 30, opacity: 0, duration: 0.8, scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      gsap.from('[data-cuore] .via', { strokeDashoffset: 1, strokeDasharray: 1, duration: 1.4, stagger: 0.15, ease: 'power2.inOut', scrollTrigger: { trigger: '[data-cuore]', start: 'top 75%', once: true } });
+      gsap.from('[data-torino]', { scale: 1.12, ease: 'none', scrollTrigger: { trigger: '[data-torino]', start: 'top bottom', end: 'bottom top', scrub: true } });
+      gsap.fromTo('[data-storia-linea]', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '[data-storia]', start: 'top 75%', end: 'bottom 60%', scrub: true } });
+      gsap.from('[data-blog] > a', { y: 40, opacity: 0, duration: 0.7, stagger: 0.1, scrollTrigger: { trigger: '[data-blog]', start: 'top 88%', once: true } });
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>

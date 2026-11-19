@@ -1,0 +1,1005 @@
+{
+  "slug": "blandino-9ymf",
+  "layout": "conduzione",
+  "sitoOrigine": "https://alessandroblandino.it/",
+  "titolo": "Dott.",
+  "nome": "Alessandro Blandino",
+  "specialita": "Cardiologo, aritmologo ed elettrofisiologo interventista",
+  "firma": "Cardiologo · Elettrofisiologo",
+  "citta": "Torino",
+  "meta": {
+    "title": "Dott. Alessandro Blandino · Cardiologo ed elettrofisiologo a Torino e Carmagnola: aritmie, ablazione, fibrillazione atriale",
+    "description": "Cardiologo, aritmologo ed elettrofisiologo interventista all'Ospedale Mauriziano di Torino. Fibrillazione atriale, extrasistoli, tachicardie, ablazione transcatetere, pacemaker. Visite a Torino, Carmagnola e a domicilio."
+  },
+  "brand": {
+    "header": "marchio",
+    "logoScuro": "/blandino-9ymf/img/logo.png",
+    "logoChiaro": "/blandino-9ymf/img/logo-chiaro.png",
+    "marchio": "/blandino-9ymf/img/logo.png",
+    "logoAlt": "Dott. Alessandro Blandino, Cardiologo, Aritmologo, Elettrofisiologo"
+  },
+  "foto": {
+    "ritratto": "/blandino-9ymf/img/ritratto.webp",
+    "ritrattoAlt": "Il Dott. Alessandro Blandino nel suo studio",
+    "volto": "/blandino-9ymf/img/volto.webp",
+    "procedura": "/blandino-9ymf/img/procedura.webp",
+    "torino": "/blandino-9ymf/img/torino.webp",
+    "mappe": "/blandino-9ymf/img/mappe-fa.webp",
+    "endoepi": "/blandino-9ymf/img/mappe-endoepi.webp",
+    "ascolto": "/blandino-9ymf/img/rep-ascolto.webp",
+    "ecg": "/blandino-9ymf/img/rep-ecg.webp",
+    "tracciato": "/blandino-9ymf/img/rep-tracciato.webp",
+    "prato": "/blandino-9ymf/img/rep-prato.webp"
+  },
+  "hero": {
+    "eyebrow": "Cardiologo · Aritmologo · Elettrofisiologo interventista",
+    "titolo": "Il ritmo del cuore, capito e curato.",
+    "testo": "Mi occupo di aritmie: fibrillazione atriale, extrasistoli, tachicardie, bradicardie. Le studio con l'ECG e l'Holter, le curo con i farmaci e con l'ablazione transcatetere all'Ospedale Mauriziano di Torino.",
+    "ctaPrenota": "Prenoti una visita",
+    "ctaContatta": "Scriva su WhatsApp"
+  },
+  "numeri": [
+    {
+      "valore": 12000,
+      "fmt": "12.000",
+      "pre": "oltre",
+      "testo": "pazienti trattati, clinicamente e con ablazione"
+    },
+    {
+      "valore": 50,
+      "fmt": "50",
+      "pre": "oltre",
+      "testo": "pubblicazioni scientifiche internazionali"
+    },
+    {
+      "valore": 15,
+      "fmt": "15",
+      "pre": "oltre",
+      "testo": "anni tra Italia e Regno Unito"
+    }
+  ],
+  "motivi": [
+    {
+      "id": "palpitazioni",
+      "nome": "Palpitazioni, battito irregolare",
+      "frase": "palpitazioni o battito irregolare"
+    },
+    {
+      "id": "fa",
+      "nome": "Fibrillazione atriale",
+      "frase": "una fibrillazione atriale"
+    },
+    {
+      "id": "ablazione",
+      "nome": "Valutare un'ablazione",
+      "frase": "valutare un'ablazione transcatetere"
+    },
+    {
+      "id": "extrasistoli",
+      "nome": "Extrasistoli",
+      "frase": "delle extrasistoli"
+    },
+    {
+      "id": "pacemaker",
+      "nome": "Pacemaker o defibrillatore",
+      "frase": "un controllo di pacemaker o defibrillatore"
+    },
+    {
+      "id": "visita",
+      "nome": "Visita cardiologica con ECG",
+      "frase": "un controllo cardiologico con ECG"
+    },
+    {
+      "id": "checkup",
+      "nome": "Check-up cardiologico",
+      "frase": "un check-up cardiologico"
+    },
+    {
+      "id": "pressione",
+      "nome": "Pressione alta, colesterolo",
+      "frase": "pressione alta o colesterolo"
+    },
+    {
+      "id": "nutrizione",
+      "nome": "Consulenza nutrizionale",
+      "frase": "una consulenza nutrizionale"
+    }
+  ],
+  "sediL": [
+    {
+      "id": "colombo",
+      "nome": "Studio medico privato",
+      "breve": "Via Cristoforo Colombo 17",
+      "indirizzo": "Via Cristoforo Colombo 17",
+      "citta": "Torino",
+      "cap": "10128",
+      "tel": "3387370117",
+      "telLabel": "338 737 0117",
+      "frase": "lo studio di via Cristoforo Colombo 17, Torino"
+    },
+    {
+      "id": "mauriziano",
+      "nome": "Ospedale Mauriziano Umberto I",
+      "breve": "Largo Filippo Turati 62",
+      "indirizzo": "Largo Filippo Turati 62",
+      "citta": "Torino",
+      "cap": "10128",
+      "tel": "0115085200",
+      "telLabel": "011 508 5200",
+      "frase": "l'Ospedale Mauriziano di Torino",
+      "nota": "Ablazioni, impianti e procedure, anche in regime SSN"
+    },
+    {
+      "id": "larc",
+      "nome": "Poliambulatorio LARC",
+      "breve": "Via Mombarcaro 80",
+      "indirizzo": "Via Mombarcaro 80",
+      "citta": "Torino",
+      "cap": "",
+      "tel": "0110341777",
+      "telLabel": "011 034 1777",
+      "frase": "il Poliambulatorio LARC di Torino"
+    },
+    {
+      "id": "carmagnola",
+      "nome": "Studi Medici Don Bosco",
+      "breve": "Via Rubatto 2, Carmagnola",
+      "indirizzo": "Via Rubatto 2",
+      "citta": "Carmagnola",
+      "cap": "10022",
+      "tel": "3387370117",
+      "telLabel": "338 737 0117",
+      "frase": "gli Studi Medici Don Bosco di Carmagnola"
+    },
+    {
+      "id": "domicilio",
+      "nome": "A domicilio",
+      "breve": "Torino, con ECG",
+      "indirizzo": "",
+      "citta": "Torino",
+      "cap": "",
+      "tel": "3387370117",
+      "telLabel": "338 737 0117",
+      "frase": "il mio domicilio a Torino",
+      "nota": "Per chi ha difficoltà a muoversi o dopo un ricovero, con ECG a 12 derivazioni"
+    }
+  ],
+  "aritmie": [
+    {
+      "id": "normale",
+      "nome": "Ritmo normale",
+      "breve": "Ritmo sinusale",
+      "zone": [
+        "seno",
+        "av",
+        "his"
+      ],
+      "ecg": "sinusale",
+      "cosa": "Ogni battito parte dal nodo del seno, attraversa gli atri, rallenta un attimo nel nodo atrio-ventricolare e scende lungo il fascio di His fino ai ventricoli.",
+      "sintomi": "Nessuno: in genere non ci si accorge del proprio battito.",
+      "cura": "",
+      "motivo": "visita",
+      "link": ""
+    },
+    {
+      "id": "fa",
+      "nome": "Fibrillazione atriale",
+      "breve": "Atri in caos",
+      "zone": [
+        "atri",
+        "vene"
+      ],
+      "ecg": "fa",
+      "cosa": "Gli atri sono attraversati da impulsi caotici, spesso partiti dalle vene polmonari. Il nodo atrio-ventricolare ne lascia passare solo una parte, in modo irregolare.",
+      "sintomi": "Cardiopalmo irregolare, affanno, stanchezza. A volte nessun sintomo.",
+      "cura": "Anticoagulante per prevenire l'ictus, farmaci per ritmo e frequenza, cardioversione, ablazione con isolamento delle vene polmonari, occlusione dell'auricola sinistra.",
+      "motivo": "fa",
+      "link": "articolo"
+    },
+    {
+      "id": "tpsv",
+      "nome": "Tachicardia parossistica",
+      "breve": "Un circuito vicino al nodo AV",
+      "zone": [
+        "circuito"
+      ],
+      "ecg": "tpsv",
+      "cosa": "L'impulso trova un circuito, spesso attorno al nodo atrio-ventricolare, e ci gira in tondo: il cuore accelera all'improvviso e si ferma altrettanto bruscamente.",
+      "sintomi": "Battito velocissimo e regolare che inizia e finisce di colpo, a volte con capogiro.",
+      "cura": "Manovre vagali e farmaci per interrompere la crisi; l'ablazione del circuito è spesso risolutiva.",
+      "motivo": "ablazione",
+      "link": "ablazione-transcatetere"
+    },
+    {
+      "id": "extrasistoli",
+      "nome": "Extrasistoli",
+      "breve": "Un battito anticipato",
+      "zone": [
+        "focus"
+      ],
+      "ecg": "extrasistoli",
+      "cosa": "Un gruppo di cellule, negli atri o nei ventricoli, scarica prima del tempo. Segue una piccola pausa e un battito più forte.",
+      "sintomi": "Tuffo al cuore, colpo nel petto, sensazione di battito saltato.",
+      "cura": "Spesso basta rassicurare e ridurre caffè, alcol, stress. Se molto frequenti: farmaci o ablazione mirata.",
+      "motivo": "extrasistoli",
+      "link": "extrasistoli"
+    },
+    {
+      "id": "bradicardia",
+      "nome": "Bradicardia",
+      "breve": "Il segnale rallenta o si blocca",
+      "zone": [
+        "seno",
+        "blocco"
+      ],
+      "ecg": "bradicardia",
+      "cosa": "Il nodo del seno è troppo lento, oppure il segnale si blocca nel passaggio verso i ventricoli. Il cuore batte troppo piano per le necessità dell'organismo.",
+      "sintomi": "Stanchezza, affanno, capogiri, a volte svenimenti.",
+      "cura": "Si correggono le cause, come alcuni farmaci; se serve, un pacemaker, anche senza fili (leadless).",
+      "motivo": "pacemaker",
+      "link": ""
+    },
+    {
+      "id": "brugada",
+      "nome": "Sindrome di Brugada",
+      "breve": "Un difetto dei canali elettrici",
+      "zone": [
+        "vd"
+      ],
+      "ecg": "brugada",
+      "cosa": "Una malattia genetica dei canali elettrici del cuore, che riguarda soprattutto il ventricolo destro. L'ECG mostra un aspetto tipico, che a volte compare solo con la febbre.",
+      "sintomi": "Spesso nessuno; in alcuni casi svenimenti o aritmie gravi.",
+      "cura": "Stratificazione del rischio con ECG dedicato; trattare subito la febbre ed evitare alcuni farmaci; nei pazienti ad alto rischio un defibrillatore impiantabile (ICD) o la chinidina.",
+      "motivo": "palpitazioni",
+      "link": ""
+    }
+  ],
+  "energie": [
+    {
+      "id": "radiofrequenza",
+      "nome": "Radiofrequenza",
+      "sotto": "a caldo",
+      "img": "/blandino-9ymf/img/energia-radiofrequenza.webp",
+      "testo": "Il catetere scalda il tessuto punto per punto, creando una linea di micro-lesioni attorno alle vene polmonari. È la tecnica più versatile, usata anche per le altre aritmie."
+    },
+    {
+      "id": "crio",
+      "nome": "Crioablazione",
+      "sotto": "a freddo",
+      "img": "/blandino-9ymf/img/energia-crio.webp",
+      "testo": "Un palloncino raffreddato si appoggia all'imbocco di ciascuna vena polmonare e congela il tessuto tutto attorno, in un solo passaggio."
+    },
+    {
+      "id": "pfa",
+      "nome": "Campo elettrico pulsato",
+      "sotto": "elettroporazione, PFA",
+      "img": "/blandino-9ymf/img/energia-pfa.webp",
+      "testo": "Impulsi elettrici brevissimi e ad alta intensità colpiscono in modo selettivo le cellule del cuore, risparmiando i tessuti vicini come l'esofago e il nervo frenico."
+    }
+  ],
+  "cv": [
+    {
+      "anno": "2006",
+      "titolo": "Laurea e specializzazione",
+      "testo": "Medicina e Chirurgia con lode a Torino, Esame di Stato 270/270, specializzazione in Cardiologia 70/70 con lode."
+    },
+    {
+      "anno": "2012-13",
+      "titolo": "Londra, St. Bartholomew Hospital",
+      "testo": "Clinical Fellowship con borsa europea EHRA in elettrofisiologia interventistica, con il Prof. Richard Schilling."
+    },
+    {
+      "anno": "2016",
+      "titolo": "PhD e Master",
+      "testo": "Dottorato in Medicina e Terapia Sperimentale a Torino; Master di II livello in Biostatistica ed Epidemiologia Clinica a Pavia."
+    },
+    {
+      "anno": "2017-19",
+      "titolo": "Ospedale Cardinal Massaia, Asti",
+      "testo": "Dirigente medico in Cardiologia, con attività interventistica."
+    },
+    {
+      "anno": "Dal 2019",
+      "titolo": "Ospedale Mauriziano, Torino",
+      "testo": "Dirigente medico della S.S. di Elettrofisiologia: ablazioni di aritmie complesse, pacemaker, ICD e CRT-D."
+    }
+  ],
+  "credenziali": [
+    [
+      "EHRA ECES Lv.2",
+      "Certificazione europea in elettrofisiologia"
+    ],
+    [
+      "EHRA ECDS Lv.2",
+      "Certificazione europea in dispositivi impiantabili"
+    ],
+    [
+      "GMC UK",
+      "Registrato come specialista in Cardiologia nel Regno Unito"
+    ],
+    [
+      "PhD",
+      "Medicina e Terapia Sperimentale, Università di Torino"
+    ]
+  ],
+  "affiliazioni": [
+    "ESC",
+    "EHRA",
+    "AIAC",
+    "ANMCO",
+    "SIC"
+  ],
+  "aree": {
+    "titolo": "",
+    "intro": "",
+    "voci": []
+  },
+  "fiducia": [],
+  "bio": {
+    "titolo": "Chi sono",
+    "paragrafi": [],
+    "tappe": [],
+    "societaLabel": "",
+    "societa": []
+  },
+  "recensioni": {
+    "titolo": "",
+    "nota": "",
+    "voci": []
+  },
+  "metodo": {
+    "titolo": "",
+    "intro": "",
+    "punti": []
+  },
+  "banda": {
+    "img": "",
+    "titolo": "",
+    "testo": ""
+  },
+  "articolo": {
+    "id": "ablazione-fibrillazione-atriale",
+    "categoria": "Aritmie",
+    "titolo": "Ablazione della fibrillazione atriale",
+    "img": "/blandino-9ymf/img/mappe-fa.webp",
+    "tempoLettura": "10 min",
+    "intro": "La fibrillazione atriale è l'aritmia più comune. Quando i farmaci non bastano, o quando il paziente preferisce evitarli per anni, l'ablazione transcatetere è la procedura più efficace per riportare il cuore al suo ritmo normale. Le spiego come funziona, cosa aspettarsi e quali sono i risultati.",
+    "sezioni": [
+      {
+        "titolo": "Che cos'è la fibrillazione atriale",
+        "paragrafi": [
+          "Nel cuore sano ogni battito parte da un piccolo gruppo di cellule, il nodo del seno, e si propaga in modo ordinato. Nella fibrillazione atriale gli atri, le due cavità superiori del cuore, sono attraversati da impulsi elettrici caotici e rapidissimi. Il battito diventa irregolare, spesso veloce.",
+          "Si può avvertire come cardiopalmo, affanno, stanchezza, calo della resistenza allo sforzo. A volte invece non dà sintomi e si scopre per caso con un elettrocardiogramma."
+        ]
+      },
+      {
+        "titolo": "Perché va curata",
+        "paragrafi": [
+          "La fibrillazione atriale non trattata aumenta il rischio di ictus fino a cinque volte, perché nel cuore che fibrilla si possono formare coaguli. Per questo la prima valutazione riguarda sempre la terapia anticoagulante. Oltre al rischio di ictus, l'aritmia peggiora la qualità di vita e, nel tempo, può indebolire il muscolo cardiaco."
+        ]
+      },
+      {
+        "titolo": "Quando si propone l'ablazione",
+        "paragrafi": [
+          "L'ablazione si propone ai pazienti con sintomi, in particolare:"
+        ],
+        "elenco": [
+          "quando i farmaci antiaritmici non hanno funzionato, non sono tollerati o danno effetti collaterali",
+          "come prima scelta, in pazienti selezionati che preferiscono evitare una terapia farmacologica a lungo termine",
+          "nello scompenso cardiaco, per migliorare la funzione del cuore e ridurre i ricoveri"
+        ]
+      },
+      {
+        "titolo": "Il principio: isolare le vene polmonari",
+        "paragrafi": [
+          "Nella maggior parte dei casi la fibrillazione atriale nasce da impulsi che partono dalle vene polmonari, i vasi che portano il sangue dai polmoni all'atrio sinistro. L'ablazione crea delle micro-lesioni del tessuto attorno a queste vene, che bloccano gli impulsi anomali: si parla di isolamento elettrico delle vene polmonari.",
+          "Nelle forme più avanzate, per la progressione della malattia, può essere necessario trattare anche altre zone dell'atrio."
+        ]
+      },
+      {
+        "titolo": "Come si svolge la procedura",
+        "paragrafi": [
+          "La procedura si esegue in anestesia locale con sedazione. Attraverso la vena femorale, all'inguine, si introducono i cateteri e si raggiunge il cuore; con una puntura del setto che divide i due atri, detta transettale, si accede all'atrio sinistro.",
+          "Con i sistemi di mappaggio elettroanatomico si ricostruisce in tre dimensioni l'anatomia e l'attività elettrica dell'atrio, e si eseguono le lesioni con grande precisione."
+        ]
+      },
+      {
+        "titolo": "Tre forme di energia",
+        "paragrafi": [
+          "Per creare le lesioni si possono usare diverse energie:"
+        ],
+        "elenco": [
+          "radiofrequenza, che usa il calore",
+          "crioablazione, che usa un palloncino che congela il tessuto",
+          "elettroporazione o campo elettrico pulsato (PFA), che con impulsi elettrici ad alta intensità colpisce in modo selettivo le cellule cardiache"
+        ],
+        "chiusura": "Le tre energie mostrano risultati clinici molto simili: la scelta dipende soprattutto dall'esperienza dell'operatore e dalla disponibilità del centro."
+      },
+      {
+        "titolo": "Prima e dopo",
+        "paragrafi": [
+          "Prima della procedura servono gli esami del sangue e un'ecocardiografia transesofagea, che esclude la presenza di coaguli nel cuore, l'unica vera controindicazione all'ablazione. La terapia anticoagulante è l'aspetto più importante: va seguita con attenzione prima, durante e dopo la procedura.",
+          "I controlli standard, con ECG, visita aritmologica e Holter, si programmano a 3 e a 12 mesi."
+        ]
+      },
+      {
+        "titolo": "I risultati",
+        "paragrafi": [
+          "Il successo dipende dal tipo di fibrillazione atriale, da quanto tempo è presente e dalle dimensioni dell'atrio sinistro. Il successo completo è dell'80-90% nella forma parossistica e del 70-80% nelle forme persistenti. In circa il 25-35% dei pazienti, per raggiungere questi risultati, serve una seconda procedura.",
+          "Nella mia casistica le complicanze si aggirano sull'1-1,5% e sono rappresentate soprattutto da sanguinamenti nel punto di accesso all'inguine, molto raramente da un versamento attorno al cuore."
+        ]
+      },
+      {
+        "titolo": "L'approccio endo-epicardico",
+        "paragrafi": [
+          "Di solito l'ablazione si esegue dall'interno del cuore, dall'endocardio. Quando il tessuto dell'atrio è molto spesso, però, le lesioni possono non raggiungere tutto lo spessore della parete, e il rischio di recidive aumenta. Nell'approccio endo-epicardico, introdotto nel 2010 dal gruppo del Prof. Shivkumar a Los Angeles, si lavora contemporaneamente dall'interno e dall'esterno del cuore, con un accesso sotto lo sterno. Le lesioni diventano più profonde ed efficaci. È una tecnica riservata a casi selezionati, che valutiamo insieme."
+        ]
+      },
+      {
+        "titolo": "Cosa fare a casa nei primi giorni",
+        "paragrafi": [
+          "Nei giorni dopo la procedura è normale avvertire un po' di stanchezza, un fastidio al petto o qualche palpitazione: l'atrio sta guarendo e nei primi tre mesi qualche episodio di aritmia non significa che la procedura non abbia funzionato. Il punto di accesso all'inguine va tenuto a riposo e controllato. Si riprendono gradualmente le attività, evitando sforzi intensi per il periodo che Le indico. La terapia anticoagulante non va mai sospesa di propria iniziativa."
+        ]
+      },
+      {
+        "titolo": "Domande frequenti",
+        "paragrafi": [
+          "Alcune domande che mi fanno spesso:"
+        ],
+        "elenco": [
+          "Si sente dolore? La procedura si fa in anestesia locale con sedazione: il disagio è in genere limitato.",
+          "Quanto si resta in ospedale? Di solito uno o due giorni, secondo il decorso.",
+          "Potrò smettere l'anticoagulante? Dipende dal rischio di ictus, non dal successo dell'ablazione: lo valutiamo insieme.",
+          "Se l'aritmia torna? Spesso si può ripetere la procedura; molti pazienti hanno comunque meno episodi."
+        ]
+      }
+    ],
+    "nota": "Questo articolo ha scopo informativo e non sostituisce la visita cardiologica né le indicazioni del Suo medico."
+  },
+  "blog": [
+    {
+      "id": "extrasistoli",
+      "categoria": "Aritmie",
+      "titolo": "Extrasistoli: quasi sempre benigne",
+      "img": "/blandino-9ymf/img/rep-tracciato.webp",
+      "tempoLettura": "7 min",
+      "intro": "«Sento un tuffo al cuore», «Il cuore salta un battito». Sono le descrizioni più comuni delle extrasistoli. Spaventano, ma nella grande maggioranza dei casi sono innocue. Le spiego cosa sono, quando preoccuparsi e come si trattano.",
+      "sezioni": [
+        {
+          "titolo": "Che cosa sono",
+          "paragrafi": [
+            "Le extrasistoli sono battiti anticipati, che partono da un punto del cuore diverso dal normale segnapassi, il nodo del seno. Possono nascere negli atri, extrasistoli sopraventricolari, o nei ventricoli, extrasistoli ventricolari.",
+            "Dopo un battito anticipato c'è spesso una piccola pausa, e il battito successivo è più forte: è questo che si avverte come tuffo o colpo al petto."
+          ]
+        },
+        {
+          "titolo": "Quanto sono frequenti",
+          "paragrafi": [
+            "Quasi tutti hanno qualche extrasistole nell'arco della giornata, anche senza accorgersene. Un Holter delle 24 ore ne registra spesso alcune decine o centinaia anche in persone perfettamente sane."
+          ]
+        },
+        {
+          "titolo": "Cosa le favorisce",
+          "paragrafi": [
+            "Le extrasistoli aumentano con:"
+          ],
+          "elenco": [
+            "stress, ansia e poco sonno",
+            "caffè, tè, bevande energetiche e alcol",
+            "fumo",
+            "digestione difficile e reflusso",
+            "squilibri di potassio o magnesio",
+            "alcuni farmaci e problemi della tiroide"
+          ]
+        },
+        {
+          "titolo": "Quando preoccuparsi",
+          "paragrafi": [
+            "È bene fare una visita cardiologica, e non rimandare, quando le extrasistoli:"
+          ],
+          "elenco": [
+            "sono molto frequenti o in aumento",
+            "si accompagnano a svenimenti, dolore al petto o affanno",
+            "compaiono soprattutto durante lo sforzo",
+            "si presentano in chi ha già una malattia del cuore o casi di morte improvvisa in famiglia"
+          ]
+        },
+        {
+          "titolo": "Gli esami",
+          "paragrafi": [
+            "La valutazione parte dalla visita con ECG. L'Holter delle 24 ore conta le extrasistoli e ne mostra la forma; l'ecocardiogramma controlla la struttura e la funzione del cuore. In alcuni casi servono un test da sforzo o una risonanza magnetica cardiaca.",
+            "L'obiettivo è capire se il cuore è sano: in un cuore strutturalmente normale le extrasistoli sono quasi sempre benigne."
+          ]
+        },
+        {
+          "titolo": "Il trattamento",
+          "paragrafi": [
+            "Spesso basta rassicurare e ridurre i fattori che le favoriscono. Se i sintomi disturbano molto, si possono usare farmaci come i beta-bloccanti o altri antiaritmici.",
+            "Quando le extrasistoli ventricolari sono molto numerose, danno sintomi importanti o iniziano a indebolire il cuore, l'ablazione transcatetere mirata sul punto da cui nascono può eliminarle in modo definitivo."
+          ]
+        },
+        {
+          "titolo": "Le extrasistoli molto frequenti",
+          "paragrafi": [
+            "Quando le extrasistoli ventricolari superano una certa quota dei battiti totali della giornata, possono nel tempo affaticare il cuore e ridurne la forza di contrazione. È uno dei motivi per cui contarle con l'Holter è importante. In questi casi trattarle, con farmaci o con l'ablazione, può proteggere il cuore e far recuperare la sua funzione."
+          ]
+        },
+        {
+          "titolo": "Lo sport",
+          "paragrafi": [
+            "Chi fa sport, anche agonistico, ha spesso qualche extrasistole. Di per sé non è un problema, ma l'idoneità sportiva richiede una valutazione accurata, con Holter che comprenda una seduta di allenamento ed ecocardiogramma. Se le extrasistoli spariscono durante lo sforzo, di solito è un segno rassicurante."
+          ]
+        },
+        {
+          "titolo": "Extrasistoli in gravidanza e nei giovani",
+          "paragrafi": [
+            "In gravidanza le extrasistoli diventano spesso più frequenti, per l'aumento del volume di sangue e dei battiti: nella grande maggioranza dei casi sono innocue e si riducono dopo il parto. Anche nei ragazzi e nei giovani adulti sono comuni, specie in periodi di studio intenso, poco sonno e molto caffè. In entrambi i casi una visita con ECG e, se serve, un Holter bastano di solito a rassicurare."
+          ]
+        },
+        {
+          "titolo": "Il circolo dell'ansia",
+          "paragrafi": [
+            "Le extrasistoli e l'ansia si alimentano a vicenda. Sentire il cuore che salta fa preoccupare, la preoccupazione aumenta l'adrenalina e l'adrenalina rende le extrasistoli più frequenti. Spesso il passo più utile è proprio una diagnosi chiara: sapere che il cuore è sano e che quei battiti non sono pericolosi riduce l'ansia e, con lei, anche i sintomi. Tecniche di respirazione, attività fisica regolare e un sonno sufficiente aiutano a spezzare il circolo."
+          ]
+        },
+        {
+          "titolo": "Come si vivono",
+          "paragrafi": [
+            "Molte persone sentono le extrasistoli soprattutto la sera, a riposo o sdraiate sul fianco sinistro, quando il battito si percepisce di più. Questo non vuol dire che siano più pericolose in quei momenti: semplicemente ci si fa più caso. Tenere un diario degli episodi, con l'ora e cosa si stava facendo, aiuta molto durante la visita."
+          ]
+        },
+        {
+          "titolo": "Sopraventricolari e ventricolari",
+          "paragrafi": [
+            "Le extrasistoli sopraventricolari nascono negli atri e sono in genere le più innocue, anche se a volte possono annunciare la comparsa di una fibrillazione atriale. Le extrasistoli ventricolari nascono nei ventricoli: nella maggior parte dei casi sono benigne, ma meritano più attenzione quando sono molto numerose, hanno forme diverse tra loro o compaiono a coppie o in brevi sequenze. L'Holter e l'ecocardiogramma aiutano a distinguere queste situazioni."
+          ]
+        },
+        {
+          "titolo": "Cosa portare alla visita",
+          "paragrafi": [
+            "Porti gli ECG e gli Holter già fatti, anche vecchi, gli esami del sangue recenti con elettroliti e tiroide, e l'elenco dei farmaci e degli integratori che assume. Se usa uno smartwatch che registra l'ECG, porti anche quei tracciati: possono essere utili per vedere il tipo di extrasistole."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "Le extrasistoli possono causare un infarto? No: sono un disturbo del ritmo, non delle coronarie.",
+            "Devo smettere il caffè? Se nota che peggiorano dopo il caffè, ridurlo può aiutare.",
+            "Possono sparire da sole? Sì, spesso vanno e vengono nei periodi di stress.",
+            "L'ansia le peggiora? Sì, e a loro volta le extrasistoli possono aumentare l'ansia: spezzare il circolo aiuta."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita cardiologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "ablazione-transcatetere",
+      "categoria": "Trattamenti",
+      "titolo": "Ablazione transcatetere: cos'è",
+      "img": "/blandino-9ymf/img/rep-ecg.webp",
+      "tempoLettura": "7 min",
+      "intro": "Molte aritmie si possono curare in modo definitivo con una procedura mini-invasiva, senza aprire il torace. Le spiego cos'è l'ablazione transcatetere, per quali aritmie si usa e come si svolge.",
+      "sezioni": [
+        {
+          "titolo": "L'idea di base",
+          "paragrafi": [
+            "Ogni aritmia ha un'origine: un punto da cui partono impulsi anomali o un circuito in cui l'impulso gira in tondo. L'ablazione individua quel punto o quel circuito e lo interrompe con una piccola lesione mirata del tessuto cardiaco, eliminando l'aritmia."
+          ]
+        },
+        {
+          "titolo": "Per quali aritmie",
+          "paragrafi": [
+            "L'ablazione si usa, tra le altre, per:"
+          ],
+          "elenco": [
+            "tachicardie parossistiche sopraventricolari, dove spesso è risolutiva",
+            "flutter atriale",
+            "fibrillazione atriale",
+            "extrasistoli e tachicardie ventricolari",
+            "sindrome di Wolff-Parkinson-White"
+          ]
+        },
+        {
+          "titolo": "Come si arriva al cuore",
+          "paragrafi": [
+            "Non si apre il torace. I cateteri, sottili tubicini flessibili, vengono introdotti dalla vena femorale all'inguine, in anestesia locale con sedazione, e guidati fino al cuore sotto controllo radioscopico."
+          ]
+        },
+        {
+          "titolo": "Lo studio elettrofisiologico",
+          "paragrafi": [
+            "Una volta nel cuore, i cateteri registrano l'attività elettrica dall'interno e possono stimolarla per riprodurre l'aritmia: è lo studio elettrofisiologico. Serve a capire con esattezza il meccanismo e il punto di origine dell'aritmia, prima di trattarla."
+          ]
+        },
+        {
+          "titolo": "Il mappaggio tridimensionale",
+          "paragrafi": [
+            "I sistemi di mappaggio elettroanatomico ricostruiscono in tre dimensioni le cavità del cuore e mostrano a colori come si propaga l'impulso. Su questa mappa si pianificano e si eseguono le lesioni con precisione millimetrica."
+          ]
+        },
+        {
+          "titolo": "Le energie",
+          "paragrafi": [
+            "Le lesioni si eseguono con la radiofrequenza, che usa il calore, con la crioablazione, che usa il freddo, o con il campo elettrico pulsato, una tecnica più recente che colpisce in modo selettivo le cellule cardiache. Nei casi più complessi si può lavorare anche dall'esterno del cuore, con un approccio endo-epicardico."
+          ]
+        },
+        {
+          "titolo": "Dopo la procedura",
+          "paragrafi": [
+            "Di solito si resta in osservazione per poche ore o una notte. Il punto di accesso all'inguine va tenuto a riposo per il tempo indicato. Nei giorni successivi si riprendono gradualmente le attività, evitando sforzi intensi per un breve periodo. I controlli successivi verificano che l'aritmia non si ripresenti."
+          ]
+        },
+        {
+          "titolo": "La mia esperienza",
+          "paragrafi": [
+            "Mi sono formato in elettrofisiologia interventistica al St. Bartholomew Hospital di Londra con una borsa europea EHRA, sotto la guida del Prof. Richard Schilling. Dal 2019 sono dirigente medico della Struttura di Elettrofisiologia dell'Ospedale Mauriziano di Torino, dove eseguo ablazioni di aritmie complesse e impianto di pacemaker, ICD e CRT-D."
+          ]
+        },
+        {
+          "titolo": "Quanto conta l'esperienza",
+          "paragrafi": [
+            "L'ablazione è una procedura tecnica, in cui l'esperienza dell'operatore e del centro fa la differenza: nella lettura delle mappe, nella scelta dell'energia, nella gestione dei casi complessi. Per questo è importante rivolgersi a centri di elettrofisiologia con un'attività costante e a operatori che si aggiornano sulle tecniche più recenti, come il campo elettrico pulsato. Non abbia timore di chiedere quante procedure di quel tipo esegue il centro ogni anno: è una domanda legittima."
+          ]
+        },
+        {
+          "titolo": "Il flutter atriale",
+          "paragrafi": [
+            "Il flutter atriale è un'aritmia parente della fibrillazione: l'impulso gira in un grande circuito nell'atrio destro, quasi sempre passando per una zona precisa vicino alla valvola tricuspide, chiamata istmo cavo-tricuspidale. Una linea di ablazione su questo istmo interrompe il circuito: è una procedura molto efficace, con alte probabilità di risolvere il flutter in modo definitivo."
+          ]
+        },
+        {
+          "titolo": "Prima della procedura",
+          "paragrafi": [
+            "Prima dell'ablazione rivediamo insieme gli esami: ECG con l'aritmia registrata, Holter, ecocardiogramma e, se servono, una risonanza o una TAC del cuore. Le do indicazioni precise sui farmaci da sospendere e su quelli da continuare, in particolare gli antiaritmici e gli anticoagulanti. Di solito si arriva a digiuno. È utile essere accompagnati, sia all'arrivo sia alla dimissione."
+          ]
+        },
+        {
+          "titolo": "Le tachicardie parossistiche",
+          "paragrafi": [
+            "Le tachicardie parossistiche sopraventricolari sono tra le aritmie in cui l'ablazione dà i risultati migliori. Il cuore accelera all'improvviso, spesso oltre 150 battiti al minuto, e si ferma altrettanto bruscamente. Il meccanismo è quasi sempre un piccolo circuito vicino al nodo atrio-ventricolare o una via elettrica accessoria. Individuato il circuito, una lesione mirata lo interrompe e nella grande maggioranza dei casi l'aritmia non si ripresenta più, senza bisogno di farmaci."
+          ]
+        },
+        {
+          "titolo": "Pacemaker e defibrillatori",
+          "paragrafi": [
+            "L'elettrofisiologia non si occupa solo delle aritmie veloci. Quando il cuore è troppo lento serve un pacemaker, oggi disponibile anche senza fili, impiantato direttamente nel cuore. Nei pazienti a rischio di aritmie gravi si impianta un defibrillatore (ICD), e nello scompenso cardiaco un sistema di resincronizzazione (CRT-D) che coordina la contrazione dei ventricoli. Sono procedure che eseguo al Mauriziano."
+          ]
+        },
+        {
+          "titolo": "I rischi",
+          "paragrafi": [
+            "Come ogni procedura invasiva, l'ablazione ha qualche rischio, che dipende dal tipo di aritmia e dalla complessità. I più comuni sono piccoli sanguinamenti o ematomi nel punto di accesso all'inguine. Complicanze più serie sono rare. Prima di decidere Le spiego rischi e benefici nel Suo caso specifico, con il tempo per tutte le domande."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "È un intervento chirurgico? No, è una procedura mini-invasiva attraverso le vene.",
+            "Quanto dura? Da meno di un'ora a qualche ora, secondo l'aritmia.",
+            "Si vede la cicatrice? Resta solo un piccolo segno all'inguine.",
+            "Si esegue anche in convenzione? Le procedure al Mauriziano sono disponibili anche in regime SSN."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita cardiologica né le indicazioni del Suo medico."
+    },
+    {
+      "id": "fibrillazione-ictus",
+      "categoria": "Prevenzione",
+      "titolo": "Fibrillazione atriale e ictus",
+      "img": "/blandino-9ymf/img/rep-ascolto.webp",
+      "tempoLettura": "7 min",
+      "intro": "La conseguenza più temuta della fibrillazione atriale non è il cuore che batte irregolare, ma l'ictus. La buona notizia è che oggi il rischio si può ridurre in modo molto efficace. Le spiego perché succede e come si previene.",
+      "sezioni": [
+        {
+          "titolo": "Perché la fibrillazione causa l'ictus",
+          "paragrafi": [
+            "Quando gli atri fibrillano non si contraggono in modo efficace. Il sangue ristagna, soprattutto in una piccola tasca dell'atrio sinistro chiamata auricola, e lì si possono formare coaguli. Se un coagulo si stacca e raggiunge il cervello, chiude un'arteria e provoca un ictus.",
+            "Per questo la fibrillazione atriale non trattata aumenta il rischio di ictus fino a cinque volte."
+          ]
+        },
+        {
+          "titolo": "Un rischio diverso da persona a persona",
+          "paragrafi": [
+            "Non tutti i pazienti con fibrillazione atriale hanno lo stesso rischio. Per stimarlo si usa un punteggio, oggi chiamato CHA2DS2-VA, che somma alcuni fattori: età, ipertensione, diabete, scompenso cardiaco, malattie delle arterie e un precedente ictus o attacco ischemico transitorio."
+          ]
+        },
+        {
+          "titolo": "Gli anticoagulanti",
+          "paragrafi": [
+            "La prevenzione si basa sulla terapia anticoagulante, che riduce molto la formazione di coaguli. Oggi si usano soprattutto gli anticoagulanti orali diretti, che non richiedono i controlli frequenti del sangue necessari con il warfarin. La scelta e la dose dipendono dalla funzione dei reni, dall'età, dal peso e dagli altri farmaci."
+          ]
+        },
+        {
+          "titolo": "Il rischio di sanguinamento",
+          "paragrafi": [
+            "Gli anticoagulanti aumentano il rischio di sanguinamento. Per questo la decisione si prende valutando insieme il rischio di ictus e quello emorragico, e correggendo i fattori che favoriscono i sanguinamenti, come la pressione alta non controllata o alcuni farmaci antinfiammatori."
+          ]
+        },
+        {
+          "titolo": "Quando l'anticoagulante non si può usare",
+          "paragrafi": [
+            "In alcuni pazienti l'anticoagulante non è possibile, per esempio dopo sanguinamenti importanti. In questi casi si può valutare l'occlusione dell'auricola sinistra: con una procedura per via percutanea si chiude l'auricola con un dispositivo, eliminando la principale sede di formazione dei coaguli."
+          ]
+        },
+        {
+          "titolo": "E l'ablazione?",
+          "paragrafi": [
+            "L'ablazione migliora i sintomi e la qualità di vita, ma la decisione sull'anticoagulante dipende dal rischio di ictus del paziente, non dal successo della procedura. È un punto che chiarisco sempre: anche dopo un'ablazione riuscita l'anticoagulante può essere ancora necessario."
+          ]
+        },
+        {
+          "titolo": "I segnali dell'ictus",
+          "paragrafi": [
+            "Riconoscere un ictus in tempo è fondamentale. Chiami subito il 112 o il 118 se compaiono all'improvviso:"
+          ],
+          "elenco": [
+            "bocca storta o asimmetria del volto",
+            "debolezza o formicolio di un braccio o di una gamba",
+            "difficoltà a parlare o a capire",
+            "perdita improvvisa della vista da un occhio",
+            "forte mal di testa improvviso o perdita dell'equilibrio"
+          ]
+        },
+        {
+          "titolo": "Scoprire la fibrillazione in tempo",
+          "paragrafi": [
+            "Molte persone scoprono di avere la fibrillazione atriale solo dopo un ictus. Sentire il polso, misurare la pressione con apparecchi che segnalano un battito irregolare e fare un ECG in caso di dubbi aiuta a riconoscerla prima. Anche gli orologi e i dispositivi indossabili possono dare un primo segnale, da confermare sempre con un elettrocardiogramma."
+          ]
+        },
+        {
+          "titolo": "La fibrillazione silenziosa",
+          "paragrafi": [
+            "Una parte dei pazienti con fibrillazione atriale non avverte alcun sintomo. È la forma più insidiosa, perché il rischio di ictus è lo stesso di chi ha sintomi evidenti. Per questo, dopo i 65 anni o in presenza di fattori di rischio, conviene controllare periodicamente il polso e fare un elettrocardiogramma durante le visite."
+          ]
+        },
+        {
+          "titolo": "Come si calcola il rischio",
+          "paragrafi": [
+            "Il punteggio CHA2DS2-VA assegna un punto per lo scompenso cardiaco, l'ipertensione, il diabete, le malattie vascolari come un infarto o un'arteriopatia, e l'età tra 65 e 74 anni; due punti per l'età dai 75 anni in su e per un precedente ictus, attacco ischemico transitorio o embolia. Con zero punti in genere l'anticoagulante non serve; con un punto va considerato; con due o più punti è in genere raccomandato. È uno strumento, non una sentenza: la decisione finale tiene conto di tutto il quadro."
+          ]
+        },
+        {
+          "titolo": "Vivere con l'anticoagulante",
+          "paragrafi": [
+            "L'anticoagulante va preso con regolarità, senza saltare dosi: il suo effetto protettivo dura poco. Prima di un intervento chirurgico, di una procedura dal dentista o di un esame invasivo va sempre segnalato al medico, che dirà se e quando sospenderlo. Attenzione anche agli antinfiammatori e ad alcuni integratori, che possono aumentare il rischio di sanguinamento. Portare con sé l'elenco dei farmaci è una buona abitudine."
+          ]
+        },
+        {
+          "titolo": "Prevenire la fibrillazione",
+          "paragrafi": [
+            "Alcuni fattori aumentano il rischio di sviluppare la fibrillazione atriale e di vederla ripresentarsi: la pressione alta, il sovrappeso, il diabete, l'alcol, le apnee notturne e la sedentarietà. Correggerli non è un dettaglio: riduce gli episodi, migliora i risultati dei farmaci e dell'ablazione e protegge il cuore nel tempo. Per questo nel mio percorso la nutrizione clinica e lo stile di vita hanno un posto importante."
+          ]
+        },
+        {
+          "titolo": "Domande frequenti",
+          "paragrafi": [
+            "Alcune domande che mi fanno spesso:"
+          ],
+          "elenco": [
+            "L'aspirina basta? No, per prevenire l'ictus nella fibrillazione atriale non è indicata.",
+            "Devo fare gli esami del sangue spesso? Con gli anticoagulanti diretti i controlli sono meno frequenti, ma la funzione dei reni va verificata.",
+            "Posso fare sport? Sì, con le cautele che valutiamo insieme.",
+            "Se la fibrillazione è sparita smetto il farmaco? Non da solo: la decisione si prende con il cardiologo."
+          ]
+        }
+      ],
+      "nota": "Questo articolo ha scopo informativo e non sostituisce la visita cardiologica né le indicazioni del Suo medico."
+    }
+  ],
+  "instagram": {
+    "handle": "dott.alessandroblandino",
+    "nota": "il Dottore non ha profili social: esempi di post realizzati per questa anteprima.",
+    "post": [
+      {
+        "stile": "domanda",
+        "titolo": "Il cuore salta un battito?",
+        "risposta": "Quasi sempre sono extrasistoli benigne.",
+        "didascalia": "Tuffo al cuore, colpo nel petto: le extrasistoli spaventano ma in un cuore sano sono quasi sempre innocue. Ecco quando invece serve una visita.",
+        "hashtag": "#extrasistoli #cardiologo #torino"
+      },
+      {
+        "stile": "lista",
+        "titolo": "Ablazione: cos'è",
+        "punti": [
+          "Dalla vena dell'inguine, senza aprire il torace",
+          "Mappa 3D dell'attività elettrica",
+          "Caldo, freddo o campo pulsato",
+          "Spesso risolutiva per le tachicardie"
+        ],
+        "didascalia": "Molte aritmie si curano in modo definitivo con una procedura mini-invasiva. Le spiego come funziona.",
+        "hashtag": "#ablazione #aritmie #elettrofisiologia"
+      },
+      {
+        "stile": "foto",
+        "immagine": "ascolto",
+        "titolo": "Fibrillazione atriale e ictus",
+        "sottotitolo": "Il rischio si può ridurre",
+        "didascalia": "La fibrillazione atriale aumenta il rischio di ictus fino a cinque volte. Con la terapia giusta, scelta sul Suo rischio, si previene in modo efficace.",
+        "hashtag": "#fibrillazioneatriale #ictus #prevenzione"
+      }
+    ]
+  },
+  "sedi": {
+    "titolo": "Dove ricevo",
+    "altreLabel": "",
+    "email": null,
+    "luoghi": [
+      {
+        "tipo": "Studio medico privato",
+        "nome": "Studio medico privato",
+        "breve": "Via Cristoforo Colombo 17",
+        "indirizzo": "Via Cristoforo Colombo 17",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": true,
+        "frase": "lo studio di via Cristoforo Colombo 17, Torino"
+      },
+      {
+        "tipo": "Ospedale Mauriziano Umberto I",
+        "nome": "Ospedale Mauriziano Umberto I",
+        "breve": "Largo Filippo Turati 62",
+        "indirizzo": "Largo Filippo Turati 62",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": false,
+        "frase": "l'Ospedale Mauriziano di Torino"
+      },
+      {
+        "tipo": "Poliambulatorio LARC",
+        "nome": "Poliambulatorio LARC",
+        "breve": "Via Mombarcaro 80",
+        "indirizzo": "Via Mombarcaro 80",
+        "citta": "Torino",
+        "mappa": true,
+        "principale": false,
+        "frase": "il Poliambulatorio LARC di Torino"
+      },
+      {
+        "tipo": "Studi Medici Don Bosco",
+        "nome": "Studi Medici Don Bosco",
+        "breve": "Via Rubatto 2, Carmagnola",
+        "indirizzo": "Via Rubatto 2",
+        "citta": "Carmagnola",
+        "mappa": true,
+        "principale": false,
+        "frase": "gli Studi Medici Don Bosco di Carmagnola"
+      },
+      {
+        "tipo": "A domicilio",
+        "nome": "A domicilio",
+        "breve": "Torino, con ECG",
+        "indirizzo": "A domicilio",
+        "citta": "Torino",
+        "mappa": false,
+        "principale": false,
+        "frase": "il mio domicilio a Torino"
+      }
+    ],
+    "struttureLabel": "",
+    "strutture": []
+  },
+  "prenota": {
+    "titolo": "Prenoti una visita",
+    "testo": "Risposta entro 24 ore per confermare data e sede. Porti ECG, Holter, ecocardiogrammi ed esami recenti, con l'elenco dei farmaci.",
+    "telefono": "3387370117",
+    "telefonoLabel": "338 737 0117",
+    "chiamaLabel": "il Dottore",
+    "whatsapp": "393387370117",
+    "saluto": "Dottore",
+    "oggettoMail": "Richiesta di visita cardiologica",
+    "calendario": {
+      "titolo": "Scelga giorno e orario",
+      "intro": "Indichi quando preferisce: il messaggio parte su WhatsApp e Le rispondiamo entro 24 ore per confermare.",
+      "giorni": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mattina": [
+        "09:00",
+        "10:00",
+        "11:00",
+        "12:00"
+      ],
+      "pomeriggio": [
+        "14:30",
+        "15:30",
+        "16:30",
+        "17:30",
+        "18:30"
+      ],
+      "settimane": 6,
+      "notaOrari": "Orari indicativi: data, ora e sede vengono confermate dal Dottore.",
+      "tipi": [
+        "Visita cardiologica",
+        "Visita aritmologica",
+        "Controllo"
+      ],
+      "motivi": [
+        "Palpitazioni, battito irregolare",
+        "Fibrillazione atriale",
+        "Valutare un'ablazione",
+        "Extrasistoli",
+        "Pacemaker o defibrillatore",
+        "Controllo cardiologico con ECG",
+        "Check-up",
+        "Consulenza nutrizionale"
+      ],
+      "motiviFrase": [
+        "palpitazioni",
+        "una fibrillazione atriale",
+        "valutare un'ablazione",
+        "delle extrasistoli",
+        "un controllo di pacemaker o defibrillatore",
+        "un controllo cardiologico con ECG",
+        "un check-up cardiologico",
+        "una consulenza nutrizionale"
+      ],
+      "luoghi": [
+        {
+          "nome": "Studio medico privato · Torino",
+          "frase": "lo studio di via Cristoforo Colombo 17, Torino"
+        },
+        {
+          "nome": "Ospedale Mauriziano Umberto I · Torino",
+          "frase": "l'Ospedale Mauriziano di Torino"
+        },
+        {
+          "nome": "Poliambulatorio LARC · Torino",
+          "frase": "il Poliambulatorio LARC di Torino"
+        },
+        {
+          "nome": "Studi Medici Don Bosco · Carmagnola",
+          "frase": "gli Studi Medici Don Bosco di Carmagnola"
+        },
+        {
+          "nome": "A domicilio · Torino",
+          "frase": "il mio domicilio a Torino"
+        }
+      ],
+      "privacy": null,
+      "privacyTesto": "I dati inseriti servono solo a comporre il messaggio di richiesta: questa pagina non li salva.",
+      "notePlaceholder": "Per esempio i sintomi, da quanto tempo, o gli esami che ha già fatto"
+    }
+  },
+  "tema": {
+    "palette": {
+      "bg": "#FFFFFF",
+      "surface": "#EFF7F9",
+      "ink": "#0C1C24",
+      "muted": "#566872",
+      "line": "#D6E6EB",
+      "brand": "#0A86A2",
+      "brand-ink": "#FFFFFF",
+      "brand2": "#5CC6DC",
+      "deep": "#08222D",
+      "deep-ink": "#B9D3DB",
+      "urgenza": "#D9473C"
+    },
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700&family=Funnel+Sans:wght@400;500;600;700&display=swap",
+    "fontTitoli": "Funnel Display",
+    "fontTesti": "Funnel Sans",
+    "fontUi": "Funnel Sans",
+    "favicon": "/blandino-9ymf/img/volto.webp"
+  },
+  "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",
+  "fonti": {
+    "brand": "/blandino-9ymf/brand/brand.json",
+    "pagine": [
+      "https://alessandroblandino.it/",
+      "https://alessandroblandino.it/ablazione-fibrillazione-atriale/",
+      "https://alessandroblandino.it/cardiologo-torino/",
+      "https://alessandroblandino.it/cardiologo-carmagnola/",
+      "https://alessandroblandino.it/articoli/"
+    ]
+  }
+}

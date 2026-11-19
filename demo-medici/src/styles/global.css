@@ -581,3 +581,49 @@ html { scroll-behavior: smooth; }
   .stile-condivisa .campo, .stile-condivisa .slot, .stile-condivisa .giorno { border-radius: 14px; }
   .stile-condivisa .btn { border-radius: 999px; }
 }
+
+/* Layout "conduzione": mappa elettrica del cuore, energie, CHA2DS2-VA */
+@layer components {
+  .sede-r { cursor: pointer; }
+  .sede-r span { display: flex; min-height: 54px; flex-direction: column; justify-content: center; border-radius: 14px; border: 1px solid var(--c-line); background: #fff; padding: .45rem .9rem; transition: background-color .2s, border-color .2s, color .2s; }
+  .sede-r strong { font-size: 14.5px; line-height: 1.2; color: var(--c-deep); }
+  .sede-r small { font-size: 12.5px; color: var(--c-muted); line-height: 1.25; }
+  .sede-r:hover span { border-color: var(--c-deep); }
+  .sede-r input:checked + span { background: var(--c-deep); border-color: var(--c-deep); }
+  .sede-r input:checked + span strong { color: #fff; }
+  .sede-r input:checked + span small { color: var(--c-brand2); }
+  .sede-r input:focus-visible + span { outline: 2px solid var(--c-brand); outline-offset: 2px; }
+  .ar-tab { color: var(--c-deep-ink); background: rgb(255 255 255 / .06); transition: background-color .2s, color .2s; }
+  .ar-tab:hover { background: rgb(255 255 255 / .12); color: #fff; }
+  .ar-tab[aria-selected="true"] { background: var(--c-brand2); color: var(--c-deep); }
+  .ar-tab:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+  .cu-et { font: 600 14px/1 var(--font-sans, sans-serif); fill: rgb(255 255 255 / .55); }
+  .cu-et--nodo { fill: var(--c-brand2); font-size: 13.5px; }
+  .cu-et--pic { font-size: 12px; font-weight: 500; }
+  .zona path { fill: transparent; transition: fill .4s; }
+  .zona.accesa path { fill: color-mix(in srgb, var(--c-urgenza) 28%, transparent); }
+  .vene path { stroke: rgb(255 255 255 / .35); stroke-width: 9; stroke-linecap: round; fill: none; transition: stroke .4s; }
+  .vene.accesa path { stroke: var(--c-urgenza); }
+  .via { fill: none; stroke: var(--c-brand2); stroke-width: 3.5; stroke-linecap: round; opacity: .75; }
+  .via--sec { stroke-width: 2; opacity: .45; }
+  .via--his { stroke-width: 5; }
+  .nodo { fill: var(--c-deep); stroke: var(--c-brand2); stroke-width: 3; transition: fill .3s, stroke .3s; }
+  .nodo.accesa { fill: var(--c-brand2); }
+  .circuito { fill: none; stroke: var(--c-urgenza); stroke-width: 3; stroke-dasharray: 6 6; opacity: 0; transition: opacity .3s; }
+  .circuito.accesa { opacity: 1; }
+  .focus circle { fill: var(--c-urgenza); }
+  .focus path { stroke: var(--c-urgenza); stroke-width: 3; stroke-linecap: round; }
+  .focus, .blocco { opacity: 0; transition: opacity .3s; }
+  .focus.accesa, .blocco.accesa { opacity: 1; }
+  .blocco path { stroke: var(--c-urgenza); stroke-width: 6; stroke-linecap: round; }
+  .impulso { fill: #fff; filter: drop-shadow(0 0 6px var(--c-brand2)); }
+  .en-tab { color: var(--c-muted); transition: background-color .2s, color .2s; }
+  .en-tab[aria-selected="true"] { background: var(--c-deep); color: #fff; }
+  .eta-r { cursor: pointer; }
+  .eta-r span { display: grid; place-items: center; min-height: 42px; border-radius: 10px; font-size: 14px; font-weight: 600; color: var(--c-muted); transition: background-color .2s, color .2s; }
+  .eta-r input:checked + span { background: var(--c-deep); color: #fff; }
+  .eta-r input:focus-visible + span { outline: 2px solid var(--c-brand); outline-offset: 2px; }
+  .stile-conduzione .card { border-radius: 20px; }
+  .stile-conduzione .campo, .stile-conduzione .slot, .stile-conduzione .giorno { border-radius: 12px; }
+  .stile-conduzione .btn { border-radius: 12px; }
+}

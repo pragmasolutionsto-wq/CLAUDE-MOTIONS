@@ -1,0 +1,49 @@
+{
+  "medico": "Dott. Alessandro Blandino",
+  "specialita": "Cardiologo, aritmologo, elettrofisiologo interventista, nutrizionista (Mauriziano, Torino)",
+  "sito": "https://alessandroblandino.it/ (realizzato da Scia Digital Studio)",
+  "logo": {
+    "originale": "img/logo.png (cuore con ECG, petrolio)",
+    "chiaro": "img/logo-chiaro.png"
+  },
+  "colori": {
+    "petrolio": "#0A86A2"
+  },
+  "font_demo": "Funnel Display + Funnel Sans",
+  "foto": [
+    "Torino.webp",
+    "ablazione-fibrillazione-atriale-1.jpg",
+    "ablazione-fibrillazione-atriale-2.jpg",
+    "ablazione-fibrillazione-atriale-3.jpg",
+    "aiac.jpeg",
+    "anmco.png",
+    "dott-blandino-procedura.png",
+    "dott-blandino-studio.png",
+    "ehra.png",
+    "esc.png",
+    "logo-blandino.png",
+    "sic.png",
+    "topdoctors.jpg"
+  ],
+  "repertorio": "riuso: rep-ascolto, rep-ecg, rep-tracciato (Caruzzo), rep-prato (Carone)",
+  "contatti": {
+    "cellulare_whatsapp": "338 737 0117 (verificato: link wa.me sul suo sito)",
+    "mauriziano": "011 508 5200 / 011 508 5201",
+    "larc": "011 034 1777 (sul sito il link tel è 01103417770)"
+  },
+  "sedi": [
+    "Ospedale Mauriziano Umberto I, Largo Filippo Turati 62, 10128 Torino",
+    "Studio medico privato, Via Cristoforo Colombo 17, 10128 Torino",
+    "Poliambulatorio LARC, Via Mombarcaro 80 (anche C.so Venezia 10), Torino",
+    "Studi Medici Don Bosco, Via Rubatto 2, 10022 Carmagnola (in una FAQ del sito: C.so Ivrea 14/E — incoerenza)",
+    "visite a domicilio a Torino"
+  ],
+  "dati": [
+    ">12.000 pazienti, 50+ pubblicazioni, 15+ anni",
+    "laurea 2006 lode, cardiologia 70/70 lode, EHRA fellowship St Bartholomew Londra 2012-13 (Prof. Schilling), PhD 2016 + master biostatistica Pavia",
+    "Asti 2017-19, Mauriziano dal 2019",
+    "EHRA ECES Lv.2, ECDS Lv.2, GMC UK 7295824, OMCeO Torino 20904",
+    "ablazione FA: successo 80-90% parossistica, 70-80% persistente, complicanze 1-1,5% nella sua casistica",
+    "blog: 4 articoli, ultimo luglio 2024; nessun social"
+  ]
+}
