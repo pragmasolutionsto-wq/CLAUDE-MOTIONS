@@ -1,6 +1,6 @@
 {
   "slug": "pellegrino-8pcj",
-  "layout": "radiografia",
+  "layout": "oncologia",
   "sitoOrigine": "https://pietropellegrino.it/",
   "titolo": "Dott.",
   "nome": "Pietro Pellegrino",
@@ -78,6 +78,50 @@
       "valore": 3,
       "suffisso": "",
       "testo": "fellowship: Rizzoli, Berna, Reus"
+    }
+  ],
+  "temi": [
+    {
+      "id": "benigni",
+      "nome": "Tumori ossei benigni",
+      "testo": "La maggior parte delle lesioni che si trovano nelle ossa è benigna: osteocondromi, encondromi, cisti ossee, fibromi. Molte vanno solo tenute sotto controllo nel tempo; altre si operano, per il dolore o per il rischio di frattura. Fa eccezione il tumore a cellule giganti, benigno ma aggressivo localmente.",
+      "quando": "Una lesione scoperta per caso in una radiografia, un dolore sempre nello stesso punto.",
+      "link": "articolo"
+    },
+    {
+      "id": "sarcomi-osso",
+      "nome": "Sarcomi dell'osso",
+      "testo": "Osteosarcoma, sarcoma di Ewing e condrosarcoma sono tumori rari, che si curano in équipe con oncologo e radioterapista. Oggi, nella grande maggioranza dei casi, la chirurgia riesce a conservare l'arto, con una ricostruzione su misura.",
+      "quando": "Un dolore che non passa a riposo e di notte, un gonfiore che cresce, una frattura dopo un trauma minimo.",
+      "link": "articolo"
+    },
+    {
+      "id": "sarcomi-molli",
+      "nome": "Sarcomi dei tessuti molli",
+      "testo": "Nascono da muscoli, grasso, vasi e nervi, più spesso nella coscia. Una massa profonda, che cresce o più grande di 5 centimetri va studiata con una risonanza magnetica prima di qualsiasi intervento, e la biopsia va pianificata dal chirurgo che opererà.",
+      "quando": "Una massa che cresce, profonda o più grande di 5 cm, anche se non fa male.",
+      "link": "blog/sarcomi-tessuti-molli"
+    },
+    {
+      "id": "metastasi",
+      "nome": "Metastasi ossee",
+      "testo": "Quando un tumore raggiunge lo scheletro, l'obiettivo è controllare il dolore, prevenire le fratture e conservare l'autonomia. Insieme all'oncologo e al radioterapista valuto se e quando stabilizzare l'osso, anche con mezzi di sintesi in fibra di carbonio.",
+      "quando": "Un dolore osseo che non passa in chi ha avuto un tumore, una lesione vista in TC o PET.",
+      "link": "blog/metastasi-ossee"
+    },
+    {
+      "id": "ricostruzione",
+      "nome": "Ricostruzione e protesi",
+      "testo": "Dopo l'asportazione di un tumore l'osso va ricostruito: uso megaprotesi modulari, protesi custom made progettate sulla TC del paziente, innesti e mezzi in fibra di carbonio. Mi occupo anche della revisione di protesi che vanno sostituite.",
+      "quando": "Dopo un intervento oncologico, o quando una protesi va rivista.",
+      "link": "articolo"
+    },
+    {
+      "id": "seconda-opinione",
+      "nome": "Seconda opinione",
+      "testo": "Davanti a una diagnosi rara è normale voler sentire un altro parere. Valuto le immagini, i referti e, se c'è, l'esame istologico, e Le spiego con chiarezza le possibilità di cura.",
+      "quando": "Prima di decidere un intervento, o se ha dubbi sul percorso proposto.",
+      "link": "articolo"
     }
   ],
   "regioni": [
@@ -275,7 +319,7 @@
     "id": "tumori-ossei",
     "categoria": "Ortopedia oncologica",
     "titolo": "Tumori ossei: diagnosi e chirurgia a Torino",
-    "img": "/pellegrino-8pcj/img/rep-sala.webp",
+    "img": "/pellegrino-8pcj/img/rep-laboratorio.webp",
     "tempoLettura": "7 min",
     "intro": "Sentire le parole «tumore dell'osso» spaventa. Eppure la maggior parte delle lesioni che si trovano nelle ossa è benigna, e anche per i tumori maligni la chirurgia di oggi permette quasi sempre di conservare l'arto. Le spiego come lavoro, dal primo dolore alla ricostruzione.",
     "sezioni": [
@@ -858,20 +902,20 @@
   "tema": {
     "palette": {
       "bg": "#FFFFFF",
-      "surface": "#EEF3FB",
-      "ink": "#0B1220",
-      "muted": "#566176",
-      "line": "#DCE3EE",
-      "brand": "#1C64F2",
+      "surface": "#F3F5F8",
+      "ink": "#16202E",
+      "muted": "#5A6676",
+      "line": "#DDE2E9",
+      "brand": "#16365C",
       "brand-ink": "#FFFFFF",
-      "brand2": "#7CC8FF",
-      "deep": "#0B1220",
-      "deep-ink": "#C9D6EA"
+      "brand2": "#4F7FA8",
+      "deep": "#0F2440",
+      "deep-ink": "#C8D4E3"
     },
-    "fontUrl": "https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap",
-    "fontTitoli": "Archivo",
-    "fontTesti": "Public Sans",
-    "fontUi": "Public Sans",
+    "fontUrl": "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Work+Sans:wght@400;500;600&display=swap",
+    "fontTitoli": "Source Serif 4",
+    "fontTesti": "Work Sans",
+    "fontUi": "Work Sans",
     "favicon": "/pellegrino-8pcj/img/volto.webp"
   },
   "repertorio": "Alcune immagini sono foto di repertorio inserite per questa anteprima.",

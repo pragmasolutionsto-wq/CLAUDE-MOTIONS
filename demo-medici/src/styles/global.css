@@ -306,29 +306,13 @@ html { scroll-behavior: smooth; }
   .stile-percorso .card { border-radius: 28px; }
 }
 
-/* Layout "radiografia": negativoscopio, scheletro, segnali, percorso, materiale, pellicola */
+/* Layout "oncologia": sobrio, editoriale */
 @layer components {
-  .griglia-lastra { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M48 0H0V48' fill='none' stroke='%23ffffff' stroke-opacity='.05'/%3E%3C/svg%3E"); }
-  .griglia-fine { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M16 0H0V16' fill='none' stroke='%23ffffff' stroke-opacity='.25'/%3E%3C/svg%3E"); }
-  .scan { box-shadow: 0 0 18px 4px rgb(124 200 255 / .7); }
-  .senza-moto .scan { display: none; }
-  .zona-tab { transition: background-color .2s, color .2s, border-color .2s; }
-  .zona-tab:hover { border-color: var(--c-brand2); }
-  .zona-tab[aria-selected="true"] { background: var(--c-brand2); border-color: var(--c-brand2); color: var(--c-deep); }
-  .punto-zona { background: rgb(28 100 242 / .55); box-shadow: 0 0 0 2px rgb(255 255 255 / .6); transition: background-color .2s, transform .2s; }
-  .punto-zona:hover, .punto-zona.attivo { background: var(--c-brand2); }
-  .punto-zona.attivo { box-shadow: 0 0 0 6px rgb(124 200 255 / .25), 0 0 0 2px #fff; }
-  .punto-zona.attivo span { background: var(--c-deep); }
-  [data-osso] { transition: stroke .3s, filter .3s; }
-  [data-osso].acceso, [data-osso].acceso * { stroke: #ffffff; filter: drop-shadow(0 0 6px rgb(124 200 255 / .9)); }
-  .segnale { transition: border-color .2s, background-color .2s; }
-  .segnale.spuntato { border-color: var(--c-brand); background: color-mix(in srgb, var(--c-brand) 7%, #fff); }
-  .tappa-nodo { background: #fff; color: var(--c-muted); box-shadow: 0 0 0 2px var(--c-line); transition: background-color .3s, color .3s, box-shadow .3s; }
-  .tappa-btn.fatto .tappa-nodo { background: var(--c-brand); color: #fff; box-shadow: 0 0 0 2px var(--c-brand); }
-  .tappa-btn[aria-selected="true"] .tappa-nodo { box-shadow: 0 0 0 6px color-mix(in srgb, var(--c-brand) 25%, transparent); }
-  .materiale-btn { color: rgb(255 255 255 / .7); transition: background-color .2s, color .2s; }
-  .materiale-btn[aria-pressed="true"] { background: var(--c-brand2); color: var(--c-deep); }
-  .pellicola { scrollbar-width: thin; cursor: grab; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='12'%3E%3Crect x='8' y='3' width='12' height='6' rx='1.5' fill='%23ffffff' fill-opacity='.18'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='12'%3E%3Crect x='8' y='3' width='12' height='6' rx='1.5' fill='%23ffffff' fill-opacity='.18'/%3E%3C/svg%3E"); background-repeat: repeat-x; background-position: top left, bottom left; }
-  .pellicola.trascina { cursor: grabbing; scroll-snap-type: none; user-select: none; }
-  .stile-radiografia .card { border-radius: 16px; }
+  .tema-tab { color: var(--c-muted); transition: color .2s, border-color .2s, background-color .2s; }
+  .tema-tab:hover { color: var(--c-brand); }
+  .tema-tab[aria-selected="true"] { color: var(--c-brand); border-color: var(--c-brand); font-weight: 600; background: var(--c-surface); }
+  @media (min-width: 1024px) { .tema-tab[aria-selected="true"] { background: transparent; } }
+  .segnale:hover { background: var(--c-surface); }
+  .tappa[open] .tappa-punto { background: var(--c-brand); }
+  .stile-oncologia .card { border-radius: 10px; }
 }

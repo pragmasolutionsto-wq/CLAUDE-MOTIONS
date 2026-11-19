@@ -1,0 +1,360 @@
+---
+// Layout "oncologia" (Dott. Pietro Pellegrino, ortopedia oncologica, CTO di Torino). Rifatto su richiesta di Meme dopo la versione
+// "radiografia" (bocciata: "sembra un videogioco, non è serio"). Impostazione editoriale e istituzionale: fondo chiaro, Source Serif 4
+// (mai corsivo) + Work Sans, blu notte sobrio, molto spazio bianco, filetti sottili. Movimento discreto: comparse lente, linea del
+// percorso che si disegna. Interattività utile: temi a schede (tastiera), "Quando rivolgersi allo specialista" con consiglio,
+// percorso di cura a voci apribili, prenotazione con "Ho già degli esami".
+import Base from './Base.astro';
+import Icona from '../components/Icona.astro';
+import PrenotaCalendario from '../components/PrenotaCalendario.astro';
+import Footer from '../components/Footer.astro';
+import CtaMobile from '../components/CtaMobile.astro';
+import { telHref, mapsHref, emailRichieste, type Medico } from '../lib/medici';
+
+interface Props { m: Medico }
+const { m } = Astro.props;
+const x = m as any;
+const foto = x.foto;
+const box = x.hero.box;
+const sede = (m.sedi.luoghi as any[])[0];
+const mail = emailRichieste(m);
+const ESAMI = ' Ho già degli esami (radiografia, TC o risonanza) da mostrarLe.';
+const testo = (mo: string) => `Buongiorno Dottore, vorrei prenotare una visita per ${mo} presso ${sede.frase}.`;
+const href0 = `mailto:${mail}?subject=${encodeURIComponent(m.prenota.oggettoMail)}&body=${encodeURIComponent(testo(box.motiviFrase[0]))}`;
+const temi = x.temi as any[];
+const blog = [{ ...m.articolo, href: `/${m.slug}/articolo` }, ...(x.blog as any[]).map((b) => ({ ...b, href: `/${m.slug}/blog/${b.id}` }))];
+const ig = m.instagram;
+const cv = (x.cv as any[]).filter((c) => c.anno);
+const fellowship = 'Inselspital di Berna';
+---
+<Base title={m.meta.title} description={m.meta.description} tema={m.tema}>
+  <header class="sticky z-40 border-b border-line bg-white/95 backdrop-blur" style="top: var(--banner-h)">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-8">
+      <a href={`/${m.slug}`} class="min-w-0 leading-tight">
+        <span class="block font-head text-[21px] font-semibold text-brand sm:text-[24px]">Dott. Pietro Pellegrino</span>
+        <span class="block text-[12.5px] text-muted"><span class="hidden sm:inline">Chirurgia ortopedica oncologica</span><span class="sm:hidden">Ortopedia oncologica</span> · Torino</span>
+      </a>
+      <nav class="hidden items-center gap-7 text-[14.5px] text-ink/75 lg:flex">
+        <a href="#aree" class="hover:text-brand">Di cosa mi occupo</a><a href="#percorso" class="hover:text-brand">Il percorso</a><a href="#chi-sono" class="hover:text-brand">Chi sono</a><a href="#articoli" class="hover:text-brand">Approfondimenti</a><a href="#sedi" class="hover:text-brand">Dove ricevo</a>
+      </nav>
+      <a href={telHref(m.prenota.telefono)} class="btn !min-h-[42px] shrink-0 !rounded-md bg-brand !px-5 text-sm text-white hover:opacity-90"><Icona nome="tel" class="h-4 w-4" /> <span class="hidden sm:inline">{m.prenota.telefonoLabel}</span><span class="sm:hidden">Chiami</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="px-4 pt-10 sm:px-8 lg:pt-16" data-hero>
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12 lg:items-end">
+        <div class="pb-6 lg:col-span-7 lg:pb-16">
+          <p class="text-[14px] font-medium tracking-wide text-brand2" data-entra>Dirigente Medico · CTO, Città della Salute e della Scienza di Torino</p>
+          <h1 class="mt-4 font-head text-[2.6rem] font-semibold leading-[1.08] text-ink sm:text-[3.6rem]" data-sale-hero>Mi occupo dei tumori delle ossa e dei tessuti molli.</h1>
+          <p class="mt-6 max-w-xl text-[18px] leading-relaxed text-ink/80" data-entra>Sono chirurgo ortopedico. Curo tumori benigni e maligni dell'apparato muscolo-scheletrico e metastasi ossee, in collaborazione con oncologi, radioterapisti e radiologi.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row" data-entra>
+            <a href="#prenota-box" class="btn !rounded-md bg-brand text-white hover:opacity-90"><Icona nome="calendario" /> Prenoti una visita</a>
+            <a href={telHref(m.prenota.telefono)} class="btn !rounded-md border border-line text-brand hover:bg-surface"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          </div>
+        </div>
+        <div class="order-first lg:order-none lg:col-span-5">
+          <figure class="relative mx-auto max-w-[300px] overflow-hidden rounded-t-[1.5rem] bg-surface sm:max-w-none" data-ritratto-box>
+            <img src={foto.ritratto} alt={foto.ritrattoAlt} width="477" height="459" class="relative mx-auto mt-8 w-[88%]" data-ritratto />
+          </figure>
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl border-y border-line">
+        <ul class="grid gap-y-4 py-6 text-[14.5px] text-ink/80 sm:grid-cols-3 sm:divide-x sm:divide-line" data-entra>
+          <li class="sm:pr-6"><span class="block font-head text-[1.05rem] font-semibold text-ink">Formazione internazionale</span>Istituto Ortopedico Rizzoli, {fellowship}, Hospital Sant Joan de Reus</li>
+          <li class="sm:px-6"><span class="block font-head text-[1.05rem] font-semibold text-ink">Ricerca</span>Oltre 20 pubblicazioni scientifiche e circa 40 comunicazioni e poster</li>
+          <li class="sm:pl-6"><span class="block font-head text-[1.05rem] font-semibold text-ink">Società scientifiche</span>Italian Sarcoma Group, ISOLS, EMSOS, SIOT</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DI COSA MI OCCUPO -->
+    <section id="aree" class="px-4 py-16 sm:px-8 sm:py-24" data-temi data-dati={JSON.stringify(temi)} data-base={`/${m.slug}/`}>
+      <div class="mx-auto max-w-6xl">
+        <h2 class="font-head text-[2.2rem] font-semibold leading-tight sm:text-[2.8rem]" data-sale>Di cosa mi occupo</h2>
+        <div class="mt-10 grid gap-8 lg:grid-cols-12">
+          <div class="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:mx-0 lg:col-span-4 lg:flex-col lg:gap-0 lg:overflow-visible lg:border-l lg:border-line lg:px-0" role="tablist" aria-label="Di cosa mi occupo">
+            {temi.map((t, i) => <button type="button" role="tab" id={`tema-${t.id}`} aria-controls="tema-pannello" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} class="tema-tab shrink-0 rounded-md border border-line px-4 py-2.5 text-left text-[15.5px] lg:-ml-px lg:rounded-none lg:border-0 lg:border-l-2 lg:py-3.5 lg:pl-6" data-tema-tab={i}>{t.nome}</button>)}
+          </div>
+          <div id="tema-pannello" role="tabpanel" aria-labelledby={`tema-${temi[0].id}`} class="lg:col-span-8" aria-live="polite" data-tema-pannello>
+            <h3 class="font-head text-[1.8rem] font-semibold leading-tight text-brand" data-tema-nome>{temi[0].nome}</h3>
+            <p class="mt-4 max-w-2xl text-[17.5px] leading-relaxed text-ink/85" data-tema-testo>{temi[0].testo}</p>
+            <div class="mt-6 max-w-2xl border-l-2 border-brand2 bg-surface px-5 py-4">
+              <p class="text-[13px] font-semibold uppercase tracking-[0.12em] text-muted">Quando venire in visita</p>
+              <p class="mt-1 text-[16px] leading-relaxed" data-tema-quando>{temi[0].quando}</p>
+            </div>
+            <a href={`/${m.slug}/${temi[0].link}`} class="mt-6 inline-flex items-center gap-2 font-medium text-brand underline-offset-4 hover:underline" data-tema-link>Approfondisca nell'articolo <Icona nome="freccia" class="h-4 w-4" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUANDO RIVOLGERSI ALLO SPECIALISTA -->
+    <section id="segnali" class="bg-surface px-4 py-16 sm:px-8 sm:py-24" data-segnali>
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <h2 class="font-head text-[2.2rem] font-semibold leading-tight sm:text-[2.8rem]" data-sale>Quando rivolgersi allo specialista</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-ink/80">La maggior parte dei dolori alle ossa dipende da sforzi, traumi o artrosi e migliora con il riposo. Alcuni segnali, però, meritano un approfondimento. Indichi quelli che riconosce.</p>
+        </div>
+        <div class="lg:col-span-7">
+          <fieldset class="divide-y divide-line rounded-lg border border-line bg-white">
+            <legend class="sr-only">Segnali</legend>
+            {(x.segnali as string[]).map((s, i) => (
+              <label class="segnale flex cursor-pointer items-start gap-4 px-5 py-4">
+                <input type="checkbox" class="mt-1 h-[18px] w-[18px] shrink-0 accent-[var(--c-brand)]" data-segnale={i} />
+                <span class="text-[16.5px] leading-snug">{s}</span>
+              </label>
+            ))}
+          </fieldset>
+          <div class="mt-5 rounded-lg bg-white p-5 ring-1 ring-line" aria-live="polite" data-consiglio>
+            <p class="font-head text-[1.2rem] font-semibold text-brand" data-consiglio-titolo>Il mio consiglio</p>
+            <p class="mt-1 text-[16px] leading-relaxed text-ink/85" data-consiglio-testo>Se il dolore è legato agli sforzi e passa con il riposo, di solito non è preoccupante.</p>
+            <a href="#prenota-box" class="mt-3 hidden items-center gap-2 font-medium text-brand underline-offset-4 hover:underline" data-consiglio-link>Prenoti una valutazione <Icona nome="freccia" class="h-4 w-4" /></a>
+          </div>
+          <p class="mt-3 text-[13px] text-muted">È un'indicazione generale e non sostituisce la visita.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IL PERCORSO -->
+    <section id="percorso" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <h2 class="font-head text-[2.2rem] font-semibold leading-tight sm:text-[2.8rem]" data-sale>Il percorso di cura</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-ink/80">I tumori dell'apparato muscolo-scheletrico si curano in équipe. Ecco cosa succede, dalla prima visita ai controlli.</p>
+        </div>
+        <div class="relative lg:col-span-8" data-percorso>
+          <span class="absolute bottom-6 left-[7px] top-6 w-px bg-line" aria-hidden="true"></span>
+          <span class="absolute left-[7px] top-6 w-px origin-top bg-brand" style="bottom:1.5rem" aria-hidden="true" data-linea></span>
+          {(x.percorso as any[]).map((p, i) => (
+            <details class="tappa group relative pl-10" open={i === 0} data-tappa>
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 border-b border-line py-5">
+                <span class="tappa-punto absolute left-0 top-[1.55rem] h-[15px] w-[15px] rounded-full border-2 border-brand bg-white" aria-hidden="true"></span>
+                <span class="font-head text-[1.4rem] font-semibold">{p.nome}</span>
+                <span class="text-[22px] leading-none text-brand2 transition-[rotate] group-open:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <p class="pb-6 pt-3 text-[16.5px] leading-relaxed text-ink/85">{p.testo}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- RICOSTRUIRE -->
+    <section class="bg-deep text-white">
+      <div class="mx-auto grid max-w-6xl lg:grid-cols-2">
+        <div class="relative min-h-[280px] overflow-hidden"><img src={foto.sala} alt="" width="1600" height="1000" loading="lazy" class="absolute inset-0 h-full w-full object-cover" data-parallasse /></div>
+        <div class="px-6 py-14 sm:px-12 sm:py-20">
+          <h2 class="font-head text-[2rem] font-semibold leading-tight sm:text-[2.5rem]" data-sale>Asportare il tumore, conservare l'arto</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-deep-ink">Lo scopo dell'intervento è togliere il tumore con margini adeguati e restituire un arto che funziona. Oggi, nella grande maggioranza dei casi, è possibile.</p>
+          <ul class="mt-6 space-y-4">
+            {(x.tecniche as any[]).map((t) => <li class="border-t border-white/15 pt-4"><p class="font-head text-[1.2rem] font-semibold">{t.nome}</p><p class="mt-1 text-[15.5px] leading-relaxed text-deep-ink">{t.testo}</p></li>)}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="chi-sono" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <h2 class="font-head text-[2.2rem] font-semibold leading-tight sm:text-[2.8rem]" data-sale>Chi sono</h2>
+          <p class="mt-5 text-[17px] leading-relaxed text-ink/85">Dopo la specializzazione in patologia traumatica e degenerativa muscolo-scheletrica, ho dedicato la mia attività clinica e scientifica alla chirurgia ortopedica oncologica al CTO di Torino, dove opero come Dirigente Medico.</p>
+          <p class="mt-3 text-[17px] leading-relaxed text-ink/85">Mi sono formato in centri di riferimento come l'Inselspital di Berna, l'Istituto Ortopedico Rizzoli di Bologna e l'Hospital Universitari Sant Joan de Reus. Lavoro con tecniche mini-invasive e ricostruttive, incluse protesi custom made e mezzi di sintesi in fibra di carbonio.</p>
+          <a href={x.recensioniTd.url} target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 text-[15px] text-ink/80 hover:text-brand"><span class="flex gap-0.5 text-brand">{[0, 1, 2, 3, 4].map(() => <Icona nome="stella" class="h-4 w-4 fill-current" />)}</span>{x.recensioniTd.media}/5 su {x.recensioniTd.fonte} ({x.recensioniTd.numero} recensioni)</a>
+        </div>
+        <div class="lg:col-span-7">
+          <table class="w-full border-collapse text-left" data-cv>
+            <caption class="sr-only">Formazione e incarichi</caption>
+            <tbody>
+              {cv.map((c) => <tr class="border-b border-line align-top"><th scope="row" class="w-28 py-4 pr-4 font-head text-[1.05rem] font-semibold text-brand2">{c.anno}</th><td class="py-4"><span class="block font-semibold">{c.titolo}</span><span class="text-[15px] text-ink/75">{c.testo}</span></td></tr>)}
+              <tr class="border-b border-line align-top"><th scope="row" class="w-28 py-4 pr-4 font-head text-[1.05rem] font-semibold text-brand2">Fellowship</th><td class="py-4"><span class="block font-semibold">Inselspital, Berna</span><span class="text-[15px] text-ink/75">Ospedale universitario di Berna, Svizzera.</span></td></tr>
+            </tbody>
+          </table>
+          <p class="mt-5 text-[15px] text-muted">Socio di {(x.societa as string[]).join(', ')}.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRENOTAZIONE -->
+    <section id="prenota-box" class="bg-surface px-4 py-16 sm:px-8 sm:py-20" data-prenota-box data-mail={mail} data-oggetto={m.prenota.oggettoMail} data-sede={sede.frase} data-esami={ESAMI}>
+      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <h2 class="font-head text-[2.2rem] font-semibold leading-tight sm:text-[2.8rem]" data-sale>Prenoti una visita</h2>
+          <p class="mt-4 text-[17px] leading-relaxed text-ink/80">{m.prenota.testo}</p>
+          <p class="mt-6 text-[15.5px]"><span class="font-semibold">{sede.nome}</span><br />{sede.indirizzo}, {sede.cap} {sede.citta}</p>
+        </div>
+        <div class="rounded-lg bg-white p-6 ring-1 ring-line sm:p-8 lg:col-span-7">
+          <label class="block"><span class="text-[14px] font-medium text-muted">Motivo della visita</span>
+            <select class="campo mt-1.5" data-motivo>{box.motivi.map((t: string, i: number) => <option value={box.motiviFrase[i]}>{t}</option>)}</select></label>
+          <label class="mt-4 flex cursor-pointer items-center gap-3 text-[15.5px]"><input type="checkbox" class="h-[18px] w-[18px] accent-[var(--c-brand)]" data-ho-esami /> Ho già degli esami (radiografia, TC o risonanza)</label>
+          <p class="mt-5 border-l-2 border-brand2 bg-surface px-4 py-3 text-[16px] leading-relaxed" data-anteprima aria-live="polite">{testo(box.motiviFrase[0])}</p>
+          <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+            <a href={href0} data-prenota class="btn flex-1 !rounded-md bg-brand text-white hover:opacity-90"><Icona nome="mail" /> Invii la richiesta via mail</a>
+            <a href={telHref(m.prenota.telefono)} class="btn flex-1 !rounded-md border border-line text-brand hover:bg-surface"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          </div>
+          <p class="mt-4 flex items-start gap-2 text-[12.5px] text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="mt-px h-3.5 w-3.5" />{x.prenota.notaRichieste}</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="stile-oncologia"><PrenotaCalendario m={m} /></div>
+
+    <!-- APPROFONDIMENTI + IG -->
+    <section id="articoli" class="px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2.2rem] font-semibold leading-tight sm:text-[2.8rem]" data-sale>Approfondimenti</h2>
+          <a href={`/${m.slug}/blog`} class="inline-flex items-center gap-2 font-medium text-brand underline-offset-4 hover:underline">Tutti gli articoli <Icona nome="freccia" class="h-4 w-4" /></a>
+        </div>
+        <div class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4" data-blog>
+          {blog.map((b) => (
+            <a href={b.href} class="group block">
+              <span class="block overflow-hidden rounded-md bg-surface"><img src={b.img} alt="" width="1400" height="1000" loading="lazy" class="aspect-[4/3] w-full object-cover transition-[scale] duration-700 group-hover:scale-[1.03]" /></span>
+              <span class="mt-4 block text-[13px] text-muted">{b.categoria} · {b.tempoLettura}</span>
+              <span class="mt-1 block font-head text-[1.3rem] font-semibold leading-snug group-hover:text-brand">{b.titolo}</span>
+            </a>
+          ))}
+        </div>
+
+        <div class="mt-20 flex flex-col gap-3 border-t border-line pt-12 md:flex-row md:items-end md:justify-between">
+          <h2 class="font-head text-[2rem] font-semibold" data-sale>Su Instagram</h2>
+          <p class="inline-flex w-fit items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-xs text-muted"><img src="/pragma-logo-sm.png" alt="" width="14" height="14" class="h-3.5 w-3.5" /> Proposta Pragma: {ig.nota}</p>
+        </div>
+        <div class="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 lg:grid lg:grid-cols-3 lg:overflow-visible" data-stagger>
+          {ig.post.map((p: any) => (
+            <article class="w-[84%] shrink-0 snap-center overflow-hidden rounded-lg border border-line bg-white sm:w-[60%] lg:w-auto">
+              <header class="flex items-center gap-3 px-4 py-3"><img src={foto.volto} alt="" width="32" height="32" class="h-8 w-8 rounded-full object-cover" /><span class="text-sm font-semibold">{ig.handle}</span></header>
+              {p.stile === 'foto' && (
+                <div class="relative aspect-square overflow-hidden bg-surface">
+                  <img src={foto[p.immagine]} alt="" width="1200" height="1400" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+                  <div class="absolute inset-x-0 bottom-0 bg-white px-5 py-4"><p class="font-head text-[1.5rem] font-semibold leading-tight text-ink">{p.titolo}</p><p class="mt-0.5 text-sm text-brand2">{p.sottotitolo}</p></div>
+                </div>
+              )}
+              {p.stile === 'domanda' && (
+                <div class="flex aspect-square flex-col justify-end bg-brand p-7 text-white">
+                  <p class="font-head text-[1.9rem] font-semibold leading-[1.1]">{p.titolo}</p><p class="mt-4 border-t border-white/30 pt-4 text-[16px]">{p.risposta}</p>
+                </div>
+              )}
+              {p.stile === 'lista' && (
+                <div class="flex aspect-square flex-col justify-center bg-surface p-7">
+                  <p class="font-head text-[1.7rem] font-semibold leading-[1.1] text-brand">{p.titolo}</p>
+                  <ul class="mt-5 space-y-2.5">{p.punti.map((t: string) => <li class="flex items-start gap-2.5 border-t border-line pt-2.5 text-[15px]">{t}</li>)}</ul>
+                </div>
+              )}
+              <p class="px-4 py-4 text-[13px] leading-relaxed text-ink/80"><span class="font-semibold">{ig.handle}</span> {p.didascalia} <span class="text-brand2">{p.hashtag}</span></p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- DOVE RICEVO -->
+    <section id="sedi" class="bg-surface px-4 py-16 sm:px-8 sm:py-24">
+      <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-2" data-stagger>
+        <article class="rounded-lg bg-white p-7 ring-1 ring-line">
+          <p class="text-[13px] font-semibold uppercase tracking-[0.12em] text-muted">Visite private</p>
+          <h3 class="mt-2 font-head text-[1.6rem] font-semibold">{sede.nome}</h3>
+          <p class="mt-1 text-[16px] text-ink/75">{sede.indirizzo}, {sede.cap} {sede.citta}</p>
+          <div class="mt-5 flex flex-wrap gap-x-6 gap-y-2"><a href={telHref(m.prenota.telefono)} class="inline-flex items-center gap-2 font-medium text-brand hover:underline"><Icona nome="tel" class="h-4 w-4" />{m.prenota.telefonoLabel}</a><a href={mapsHref(sede.indirizzo, sede.citta)} target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-medium text-brand hover:underline"><Icona nome="pin" class="h-4 w-4" /> Apra la mappa</a></div>
+        </article>
+        <article class="rounded-lg bg-white p-7 ring-1 ring-line">
+          <p class="text-[13px] font-semibold uppercase tracking-[0.12em] text-muted">Dove opero</p>
+          <h3 class="mt-2 font-head text-[1.6rem] font-semibold">{x.ospedale.nome}</h3>
+          <p class="mt-1 text-[16px] text-ink/75">{x.ospedale.reparto} · {x.ospedale.indirizzo}</p>
+          <p class="mt-5 text-[15px] text-ink/75">Il percorso in ospedale si concorda dopo la visita, insieme all'équipe multidisciplinare.</p>
+        </article>
+      </div>
+      <h2 class="sr-only">{m.sedi.titolo}</h2>
+    </section>
+
+    <section class="bg-brand px-4 py-14 text-white sm:px-8">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div><h2 class="font-head text-[2.2rem] font-semibold sm:text-[2.6rem]">{m.prenota.titolo}</h2><p class="mt-2 max-w-xl text-white/85">{m.prenota.testo}</p></div>
+        <div class="flex shrink-0 flex-col gap-3 whitespace-nowrap sm:flex-row">
+          <a href={telHref(m.prenota.telefono)} class="btn !rounded-md bg-white text-brand hover:opacity-90"><Icona nome="tel" /> {m.prenota.telefonoLabel}</a>
+          <a href="#prenota" class="btn !rounded-md border border-white/50 text-white hover:bg-white/10"><Icona nome="calendario" /> Scelga giorno e orario</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer m={m} />
+  <CtaMobile m={m} />
+  <script>
+    import '../scripts/motion.ts';
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import Lenis from 'lenis';
+    gsap.registerPlugin(ScrollTrigger);
+    const ridotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.toggle('senza-moto', ridotto);
+
+    // --- Prenotazione ---
+    const box = document.querySelector<HTMLElement>('[data-prenota-box]')!;
+    const sel = box.querySelector<HTMLSelectElement>('[data-motivo]')!;
+    const esami = box.querySelector<HTMLInputElement>('[data-ho-esami]')!;
+    const aggiorna = () => {
+      const t = `Buongiorno Dottore, vorrei prenotare una visita per ${sel.value} presso ${box.dataset.sede}.${esami.checked ? box.dataset.esami : ''}`;
+      box.querySelector('[data-anteprima]')!.textContent = t;
+      box.querySelector<HTMLAnchorElement>('[data-prenota]')!.href = `mailto:${box.dataset.mail}?subject=${encodeURIComponent(box.dataset.oggetto!)}&body=${encodeURIComponent(t)}`;
+    };
+    sel.addEventListener('change', aggiorna); esami.addEventListener('change', aggiorna);
+
+    // --- Di cosa mi occupo ---
+    const tm = document.querySelector<HTMLElement>('[data-temi]')!;
+    const TE = JSON.parse(tm.dataset.dati!) as { id: string; nome: string; testo: string; quando: string; link: string }[];
+    const tt = [...tm.querySelectorAll<HTMLElement>('[data-tema-tab]')];
+    let tAtt = 0;
+    const tema = (i: number, focus = false) => {
+      const d = TE[i];
+      tt.forEach((b, k) => { b.setAttribute('aria-selected', String(k === i)); b.tabIndex = k === i ? 0 : -1; });
+      tm.querySelector('[data-tema-nome]')!.textContent = d.nome;
+      tm.querySelector('[data-tema-testo]')!.textContent = d.testo;
+      tm.querySelector('[data-tema-quando]')!.textContent = d.quando;
+      tm.querySelector<HTMLAnchorElement>('[data-tema-link]')!.href = tm.dataset.base + d.link;
+      tm.querySelector('[data-tema-pannello]')!.setAttribute('aria-labelledby', tt[i].id);
+      if (!ridotto) gsap.fromTo('[data-tema-pannello] > *', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.05, ease: 'power2.out' });
+      tm.dataset.tema = d.id; tAtt = i;
+      if (focus) tt[i].focus();
+    };
+    tt.forEach((b, i) => {
+      b.addEventListener('click', () => tema(i));
+      b.addEventListener('keydown', (e) => { const k = (e as KeyboardEvent).key, n = tt.length; if (k === 'ArrowDown' || k === 'ArrowRight') { e.preventDefault(); tema((tAtt + 1) % n, true); } if (k === 'ArrowUp' || k === 'ArrowLeft') { e.preventDefault(); tema((tAtt + n - 1) % n, true); } });
+    });
+
+    // --- Quando rivolgersi ---
+    const sg = document.querySelector<HTMLElement>('[data-segnali]')!;
+    const cb = [...sg.querySelectorAll<HTMLInputElement>('[data-segnale]')];
+    const calcola = () => {
+      const n = cb.filter((c) => c.checked).length, storia = cb[cb.length - 1].checked;
+      const liv = n === 0 ? 0 : n === 1 && !storia ? 1 : 2;
+      const T = ['Se il dolore è legato agli sforzi e passa con il riposo, di solito non è preoccupante.',
+        'Se il disturbo continua per qualche settimana, ne parli con il Suo medico: una radiografia può bastare a chiarire.',
+        'Questi segnali meritano un approfondimento: il primo passo è una radiografia, poi una visita specialistica. Non significa un tumore, ma è il momento di capire.'];
+      sg.querySelector('[data-consiglio-testo]')!.textContent = T[liv];
+      const l = sg.querySelector<HTMLElement>('[data-consiglio-link]')!; l.classList.toggle('hidden', liv < 2); l.classList.toggle('inline-flex', liv === 2);
+      sg.dataset.livello = String(liv);
+    };
+    cb.forEach((c) => c.addEventListener('change', calcola));
+
+    if (!ridotto) {
+      const lenis = new Lenis({ anchors: { offset: -100 }, lerp: 0.12 });
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((t) => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+      const tl = gsap.timeline({ defaults: { ease: 'power2.out' } });
+      tl.from('[data-ritratto]', { y: 30, opacity: 0, duration: 1.2 })
+        .from('[data-sale-hero]', { y: 24, opacity: 0, duration: 1 }, 0.15)
+        .from('[data-entra]', { y: 16, opacity: 0, duration: 0.8, stagger: 0.12 }, 0.4);
+      gsap.utils.toArray<HTMLElement>('[data-sale]').forEach((el) => gsap.from(el, { y: 24, opacity: 0, duration: 0.9, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 88%', once: true } }));
+      gsap.fromTo('[data-linea]', { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '[data-percorso]', start: 'top 75%', end: 'bottom 60%', scrub: true } });
+      gsap.from('[data-tappa]', { y: 16, opacity: 0, duration: 0.6, stagger: 0.08, scrollTrigger: { trigger: '[data-percorso]', start: 'top 80%', once: true } });
+      gsap.from('[data-cv] tr', { opacity: 0, x: -12, duration: 0.5, stagger: 0.06, scrollTrigger: { trigger: '[data-cv]', start: 'top 85%', once: true } });
+      gsap.from('[data-blog] > a', { y: 30, opacity: 0, duration: 0.8, stagger: 0.1, scrollTrigger: { trigger: '[data-blog]', start: 'top 88%', once: true } });
+      gsap.utils.toArray<HTMLElement>('[data-parallasse]').forEach((im) => gsap.fromTo(im, { yPercent: -6, scale: 1.12 }, { yPercent: 6, scale: 1.12, ease: 'none', scrollTrigger: { trigger: im.parentElement!, start: 'top bottom', end: 'bottom top', scrub: true } }));
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    }
+  </script>
+</Base>

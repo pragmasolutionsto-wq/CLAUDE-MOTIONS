@@ -6,9 +6,9 @@
   "logo": "nessun logo: logotipo di testo",
   "colori": {
     "sito": "blu del template TopDoctors #1C64F2",
-    "demo": "blu #1C64F2 + azzurro raggi X #7CC8FF su blu notte #0B1220"
+    "demo": "blu notte #16365C + blu ardesia #4F7FA8, fondo chiaro (versione sobria; la prima versione scura «radiografia» è stata bocciata da Meme)"
   },
-  "font": { "sito": "template TopDoctors", "demo": ["Archivo", "Public Sans"] },
+  "font": { "sito": "template TopDoctors", "demo": ["Source Serif 4", "Work Sans"] },
   "contatti": {
     "telefono": "+39 011 19274275 (numero TopDoctors)",
     "email": "nessuna email pubblicata: prenotazione demo verso Pragma, dichiarato in pagina",
