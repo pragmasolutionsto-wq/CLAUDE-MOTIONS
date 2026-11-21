@@ -26,6 +26,7 @@ SEGS = [
     ('9772', 10.0, 11.3667),     # portellone elettrico
     ('9774', 1.0667, 5.8667),    # e oltre ad essere un S line è anche Identity Black
     ('9775', 0.0, 1.1667),       # introvabile
-    ('9777', 0.2333, 2.8667),    # 26.000 sono i chilometri, non il prezzo (tolta la battuta sul prezzo)
+    ('9777', 0.2333, 2.8667),    # 26.000 sono i chilometri, non il prezzo
+    ('9777', 3.8, 6.6667),       # con 7-8 mila euro in più forse ve la portate a casa
     ('9777', 8.4, 10.2333),      # ciao, vieni a vederla
 ]

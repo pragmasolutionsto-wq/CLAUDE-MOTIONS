@@ -6,7 +6,9 @@ MUSIC_IN = 0.10   # primo battito della traccia a 0.11 s
 ins = ['-i', f'{W}/voice.wav', '-ss', str(MUSIC_IN), '-i', f'{W}/music.mp3']
 fl = ['[0:a]volume=3dB,apad,asplit=2[vo][key]',
       f"[1:a]atrim=0:{dur},volume=-11dB,afade=t=out:st={dur - 1.2}:d=1.2[mu0]",
-      '[mu0][key]sidechaincompress=threshold=0.02:ratio=7:attack=25:release=380:makeup=1[mu]']
+      '[mu0][key]sidechaincompress=threshold=0.02:ratio=7:attack=25:release=380:makeup=1[mu1]',
+      # silenzio comico: la musica si ferma di colpo sulla scenetta e riparte sulla battuta successiva
+      "[mu1]volume='if(between(t,{0},{1}),0,1)':eval=frame[mu]".format(*tl.get('silence', [-2, -1]))]
 names = []
 for i, s in enumerate(tl['sfx']):
     ins += ['-i', f"{W}/{s['n']}.wav"]

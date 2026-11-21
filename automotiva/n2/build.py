@@ -83,12 +83,12 @@ fx = [
 for f in fx:
     f['s'], f['e'] = q(f['s']), q(f['e'])
 
-sfx = [dict(t=S(1), n='hit', db=-9), dict(t=S(2), n='hit', db=-10), dict(t=round(S(11) - 0.05, 3), n='whoosh', db=-11), dict(t=S(12), n='hit', db=-10)]
+sfx = [dict(t=S(1), n='hit', db=-9), dict(t=S(2), n='hit', db=-10), dict(t=S(12), n='hit', db=-10)]
 sfx += [dict(t=round(b['s'] - 0.1, 3), n='whoosh', db=-13) for b in broll]
 sfx += [dict(t=f['s'], n='hit', db=-11) for f in fx if f['k'] == 'num']
 sfx += [dict(t=it[1], n='tick', db=-13) for f in fx for it in f.get('items', [])]
 sfx += [dict(t=round(total - 0.9, 3), n='riser', db=-14), dict(t=total, n='hit', db=-7)]
-tl = dict(fps=FPS, beat=BEAT, total=total, dur=round(total + END, 4), segs=segs, hook=[], broll=broll, rets=rets, subs=chunks, fx=fx, sfx=sfx,
+tl = dict(fps=FPS, beat=BEAT, total=total, dur=round(total + END, 4), segs=segs, hook=[], silence=[q(S(10) - 0.05), S(12)], broll=broll, rets=rets, subs=chunks, fx=fx, sfx=sfx,
           end=dict(kind='v', src='9777', frm=10.6, rate=1))
 json.dump(tl, open(os.path.join(R, 'timeline.json'), 'w'), ensure_ascii=False, indent=1)
 print(f'parlato fino a {total:.2f}s, totale {total + END:.2f}s, {len(chunks)} blocchi, {len(broll)} inserti, {len(fx)} grafiche')
