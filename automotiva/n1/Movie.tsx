@@ -98,7 +98,7 @@ const Subs: React.FC = () => {
   const active = c.words.reduce((q: number, w: Any, i: number) => (t >= w.t - 0.03 ? i : q), 0);
   const pin = eBack(prog(t, c.t - 0.03, c.t + 0.15), 2.6);
   const len = c.words.reduce((n: number, w: Any) => n + w.w.length + 1, 0);
-  const size = len > 17 ? 78 : len > 14 ? 86 : len > 11 ? 96 : 112;
+  const size = len > 17 ? 78 : len > 15 ? 74 : len > 14 ? 86 : len > 11 ? 96 : 112;
   return (
     <div style={{position: 'absolute', left: 40, right: 40, top: 1215, height: 250, display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', fontFamily: DISPLAY, fontStretch: '108%', fontWeight: 900, fontSize: size, lineHeight: 1.06, letterSpacing: -1, textTransform: 'uppercase', transform: `rotate(${k % 2 ? 1.6 : -1.6}deg) skewX(-5deg) scale(${lerp(0.72, 1, pin)})`}}>
       {c.words.map((w: Any, i: number) => {
