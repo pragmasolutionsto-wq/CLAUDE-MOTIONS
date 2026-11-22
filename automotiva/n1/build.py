@@ -57,7 +57,7 @@ hook = [
 # dettagli e foto a tutto schermo sopra il parlato
 B = [
     dict(s=W(3, '19') - 0.08, e=E_(3), kind='v', src='9780', frm=0.3, rate=1, tr='whip'),
-    dict(s=W(4, 'full') - 0.12, e=E_(4), kind='v', src='9785', frm=0.3, rate=1, tr='zoom'),
+    dict(s=W(4, 'Matrix') - 0.12, e=E_(4), kind='v', src='9785', frm=0.3, rate=1, tr='zoom'),
     dict(s=W(5, 'anteriori') - 0.3, e=W(5, 'sensori', 1) - 0.05, kind='v', src='9782', frm=0.4, rate=1, tr='whipL'),
     dict(s=W(5, 'posteriori') - 0.35, e=E_(5), kind='p', src='p_04', x0=0.44, x1=0.56, z0=1.0, z1=1.08, tr='whip'),
     dict(s=W(8, 'pelle') - 0.15, e=E_(8), kind='v', src='9791', frm=1.3, rate=1, tr='slide'),
@@ -84,7 +84,7 @@ fx = [
     dict(k='num', s=W(1, '150') - 0.05, e=E_(1), n=150, unit='CV', label='POTENZA', frm=90),
     dict(k='tags', s=W(2, 'automatico') - 0.05, e=E_(2), items=[['S TRONIC', W(2, 'S tronic') - 0.05], ['7 RAPPORTI', W(2, 'sette') - 0.05]]),
     dict(k='num', s=W(3, '19') - 0.05, e=E_(3), n=19, unit='″', label='CERCHI IN LEGA', frm=14),
-    dict(k='tags', s=W(4, 'full') - 0.05, e=E_(4), items=[['FULL LED', W(4, 'full') - 0.05], ['NUOVA GENERAZIONE', W(4, 'nuova') - 0.05]]),
+    dict(k='tags', s=W(4, 'Matrix') - 0.05, e=E_(4), items=[['MATRIX LED', W(4, 'Matrix') - 0.05], ['NUOVA GENERAZIONE', W(4, 'nuova') - 0.05]]),
     dict(k='sonar', s=W(5, 'Sensori') , e=E_(5), items=[['ANTERIORI', W(5, 'anteriori') - 0.05], ['POSTERIORI', W(5, 'posteriori') - 0.05]]),
     dict(k='sline', s=W(6, 'S line') , e=E_(6), items=[['ESTERNO', W(6, 'esterno') - 0.05], ['INTERNO', W(6, 'interno') - 0.05]]),
     dict(k='stack', s=W(10, 'Apple') - 0.05, e=E_(10), items=[['APPLE CARPLAY', W(10, 'Apple') - 0.05], ['ANDROID AUTO', W(10, 'Android') - 0.05], ['NAVIGAZIONE', W(10, 'navigazione') - 0.05]]),

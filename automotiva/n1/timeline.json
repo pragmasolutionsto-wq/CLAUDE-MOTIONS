@@ -551,7 +551,7 @@
      "g": false
     },
     {
-     "w": "full",
+     "w": "Matrix",
      "t": 19.273,
      "g": true
     },
@@ -723,7 +723,7 @@
    "e": 29.613,
    "words": [
     {
-     "w": "illuminato",
+     "w": "retroilluminato",
      "t": 29.007,
      "g": true
     }
@@ -1257,7 +1257,7 @@
    "e": 21.1333,
    "items": [
     [
-     "FULL LED",
+     "MATRIX LED",
      19.223
     ],
     [
