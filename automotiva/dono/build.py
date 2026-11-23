@@ -4,7 +4,7 @@ R = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, R)
 from segs import SEGS
 FPS = 30; END = 4.0
 SW = json.load(open(os.path.join(R, '../work/dono/segwords.json')))
-GOLD = re.compile(r'^(Denis|gratuitamente|famiglia|famiglie|cielo|benissimo|chiavi|revisione|voltura|pieno|fortuna|donare|iniziativa|mano)$', re.I)
+GOLD = re.compile(r'^(Denis|gratuitamente|famiglia|famiglie|cielo|manna|benissimo|chiavi|revisione|voltura|pieno|fortuna|donare|iniziativa|mano)$', re.I)
 q = lambda x: round(round(x * FPS) / FPS, 4)
 t, segs, words = 0.0, [], []
 for k, ((c, a, b, _), ws) in enumerate(zip(SEGS, SW)):
