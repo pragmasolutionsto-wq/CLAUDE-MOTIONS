@@ -1,6 +1,6 @@
 # testo a schermo per ogni segmento: (parola, quante parole ASR copre, oro[, tempo forzato]); [] = senza sottotitoli
 CAPS = [
-    [('Una', 1, 0), ('Golf', 1, 1), ('così', 1, 0), ('non', 1, 0), ('la', 1, 0), ('trovi', 1, 0), ('due', 1, 1), ('volte.', 1, 1)],
+    [('Una', 1, 0), ('Golf', 1, 1), ('come', 1, 0), ('questa', 1, 1), ('non', 1, 0), ('la', 1, 0), ('trovi', 1, 0), ('due', 1, 1), ('volte.', 1, 1)],
     [('E', 1, 0), ('non', 1, 0), ('è', 1, 0), ('quella', 1, 0), ('del', 1, 0), ('tuo', 1, 0), ('vicino.', 1, 1)],
     [('Vieni.', 1, 0)],
     [('È', 1, 0), ('una', 0, 0, 0.55), ('GTI.', 0, 1, 0.8)],

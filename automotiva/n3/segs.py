@@ -3,7 +3,7 @@
 M = lambda r=1.0: dict(mute=True, rate=r)
 NAT = dict(nat=True)
 SEGS = [
-    ('9872', 0.9667, 3.1333),     # una Golf così non la trovi due volte
+    ('9870', 0.7, 3.2),           # una Golf come questa non la trovi due volte (la frase firma)
     ('9872', 3.2667, 5.0),        # e non è quella del tuo vicino
     ('9872', 5.0667, 5.4667),     # vieni
     ('9872', 6.0, 7.3),           # è una GTI
