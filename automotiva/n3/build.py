@@ -52,12 +52,14 @@ B = [
     dict(s=S(7), e=E_(7), kind='v', src='9853', frm=0.5, rate=1, tr='zoom'),
     dict(s=W(9, 'diamantati') - 0.1, e=W(9, 'le') - 0.05, kind='v', src='9876', frm=0.2, rate=1, tr='whip'),
     dict(s=W(9, 'pinze') - 0.1, e=W(9, 'che') - 0.05, kind='v', src='9854', frm=0.2, rate=1, tr='slide'),
+    dict(s=W(10, '81.000') - 0.2, e=E_(10), kind='p', src='p_13', x0=0.44, x1=0.58, z0=1.05, z1=1.12, tr='zoom'),
     dict(s=W(11, 'filo') - 0.1, e=E_(11), kind='v', src='9868', frm=0.3, rate=1, tr='whipL'),
     dict(s=W(12, 'battitacco') - 0.1, e=E_(12), kind='v', src='9862', frm=0.2, rate=1, tr='zoom'),
     dict(s=W(13, 'interni') - 0.1, e=E_(13), kind='v', src='9863', frm=0.3, rate=1, tr='whip'),
     dict(s=W(14, 'sportivo') - 0.1, e=E_(14), kind='v', src='9860', frm=0.4, rate=1, tr='slide'),
     dict(s=W(15, 'cavalli') - 0.25, e=E_(15), kind='v', src='9859', frm=0.4, rate=1, tr='zoom'),
     dict(s=W(21, 'centrale') - 0.1, e=W(21, 'ha') - 0.05, kind='v', src='9861', frm=0.8, rate=1, tr='whipL'),
+    dict(s=S(22), e=E_(22), kind='p', src='p_14', x0=0.36, x1=0.6, z0=1.0, z1=1.0, tr='whip'),
     dict(s=W(27, 'tettuccio') - 0.1, e=E_(27), kind='v', src='9864', frm=0.6, rate=1, tr='whip'),
     dict(s=S(28), e=E_(28), kind='v', src='9849', frm=1.0, rate=1, tr='slide'),
 ]
@@ -78,7 +80,7 @@ fx = [
     dict(k='num', s=W(8, '19') - 0.02, e=E_(8), n=19, unit='″', label='CERCHI DIAMANTATI', frm=14),
     dict(k='tags', s=W(9, 'bicolore') - 0.05, e=E_(9), items=[['BICOLORE', W(9, 'bicolore') - 0.05], ['PINZE ROSSE', W(9, 'pinze') - 0.05]]),
     dict(k='tags', s=W(10, '2019') - 0.05, e=W(10, '81.000') - 0.1, items=[['ANNO 2019', W(10, '2019') - 0.05]]),
-    dict(k='num', s=W(10, '81.000') - 0.05, e=E_(10), n=81000, unit='KM', label='CHILOMETRI', frm=60000, big=1),
+    dict(k='num', s=W(10, '81.000') - 0.05, e=E_(10), n=81141, unit='KM', label='CHILOMETRI', frm=60000, big=1),
     dict(k='stack', s=W(13, 'interni') - 0.05, e=E_(14), items=[['INTERNI IN PELLE', W(13, 'interni') - 0.05], ['VOLANTE SPORTIVO', W(14, 'Volante') - 0.05]]),
     dict(k='num', s=W(15, '245') - 0.02, e=E_(15), n=245, unit='CV', label='POTENZA', frm=150),
     dict(k='tags', s=S(17) + 0.15, e=E_(17), items=[['ASCOLTA.', S(17) + 0.15]]),
@@ -98,7 +100,7 @@ sfx += [dict(t=f['s'], n='hit', db=-11) for f in fx if f['k'] == 'num']
 sfx += [dict(t=it[1], n='tick', db=-13) for f in fx for it in f.get('items', [])]
 sfx += [dict(t=total, n='hit', db=-7)]
 tl = dict(fps=FPS, beat=BEAT, total=total, dur=round(total + END, 4), segs=segs, hook=[], silence=silence, broll=broll, rets=rets, subs=chunks, fx=fx, sfx=sfx,
-          end=dict(kind='v', src='9848', frm=0.3, rate=0.7))
+          end=dict(kind='p', src='p_01', x0=0.36, x1=0.42, z0=1.04, z1=1.12))
 json.dump(tl, open(os.path.join(R, 'timeline.json'), 'w'), ensure_ascii=False, indent=1)
 print(f'parlato fino a {total:.2f}s, totale {total + END:.2f}s, {len(chunks)} blocchi, {len(broll)} inserti, {len(fx)} grafiche')
 for b in broll: print('  inserto', b['s'], b['e'], b['src'], round(b['e'] - b['s'], 2))
