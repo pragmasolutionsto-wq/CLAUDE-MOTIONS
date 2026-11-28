@@ -1,0 +1,170 @@
+@import 'tailwindcss';
+
+/* Design token. Dark è il tema di default; light si attiva con data-theme="light". */
+:root {
+  --navy-950: #0b1426;
+  --navy-900: #111c33;
+  --navy-800: #1a2745;
+  --gold-500: #c9a24b;
+  --gold-300: #e2c98a;
+  --ivory-50: #faf8f3;
+  --slate-500: #64748b;
+  --vital-500: #2ba39a;
+
+  --bg: var(--navy-950);
+  --surface: var(--navy-900);
+  --card: var(--navy-800);
+  --line: #2c3c61;
+  --fg: #f3f0e8;
+  --muted: #a9b4c8;
+  --gold: var(--gold-500);
+  --gold-fg: var(--gold-300);
+  --on-gold: var(--navy-950);
+  --vital: var(--vital-500);
+  --vital-fg: #63cdc4;
+  --ok: #2e9e6b;
+  --ok-fg: #62c996;
+  --warn: #d9922b;
+  --warn-fg: #f0b85c;
+  --alert: #d2553f;
+  --alert-fg: #f39480;
+  --info: #3b82c4;
+  --info-fg: #86bbea;
+  --overlay: rgb(3 8 18 / 0.7);
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg: var(--ivory-50);
+  --surface: #ffffff;
+  --card: #ffffff;
+  --line: #e2dccf;
+  --fg: var(--navy-950);
+  --muted: #55627a;
+  --gold-fg: #7a5a12;
+  --vital-fg: #166f68;
+  --ok-fg: #1c7049;
+  --warn-fg: #8a560b;
+  --alert-fg: #ac3a27;
+  --info-fg: #22609b;
+  --overlay: rgb(11 20 38 / 0.45);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-gold: var(--gold);
+  --color-gold-fg: var(--gold-fg);
+  --color-on-gold: var(--on-gold);
+  --color-vital: var(--vital);
+  --color-vital-fg: var(--vital-fg);
+  --color-ok: var(--ok);
+  --color-ok-fg: var(--ok-fg);
+  --color-warn: var(--warn);
+  --color-warn-fg: var(--warn-fg);
+  --color-alert: var(--alert);
+  --color-alert-fg: var(--alert-fg);
+  --color-info: var(--info);
+  --color-info-fg: var(--info-fg);
+  --color-overlay: var(--overlay);
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Fraunces Variable', ui-serif, Georgia, serif;
+  /* Scala tipografica: 12 / 14 / 16 / 20 / 24 / 32 / 44 */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Importi e metriche sempre allineati. */
+.num,
+table td,
+table th {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@keyframes pulse-soft {
+  50% {
+    opacity: 0.45;
+  }
+}
+.skeleton {
+  background: color-mix(in srgb, var(--muted) 18%, transparent);
+  border-radius: 8px;
+  animation: pulse-soft 1.6s ease-in-out infinite;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+}
+@keyframes slide-in-up {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+.anim-fade {
+  animation: fade-in 180ms ease-out;
+}
+.anim-sheet {
+  animation: slide-in-up 220ms ease-out;
+}
+@media (min-width: 640px) {
+  .anim-sheet {
+    animation: slide-in-right 220ms ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Grafici: testo degli assi leggibile in entrambi i temi. */
+.recharts-text {
+  fill: var(--muted);
+  font-size: 12px;
+}
+.recharts-cartesian-grid line {
+  stroke: var(--line);
+}
