@@ -117,11 +117,15 @@ dc = F('Per tutto dicembre')
 fx += [dict(k='stack', s=q(W(dc, 'dicembre') - 0.05), e=E_(dc + 1), items=[['DICEMBRE', W(dc, 'dicembre') - 0.05], ['FINANZIAMENTO', W(dc, 'finanziamento') - 0.05], ['CONTANTI', W(dc + 1, 'contanti') - 0.05]]),
        dict(k='stack', s=q(W(F('Pieno omaggio'), 'Pieno') - 0.05), e=total, items=[['PIENO OMAGGIO', W(F('Pieno omaggio'), 'Pieno') - 0.05], ['PANETTONE', W(F('e panettone'), 'panettone') - 0.05]])]
 bl = [s['bleep'] for s in segs if 'bleep' in s]
-fx += [dict(k='tags', s=x[0] - 0.05, e=x[1] + 0.7, items=[['BIP!', x[0] - 0.05]]) for x in bl]
 for f in fx:
     f['s'], f['e'] = q(f['s']), q(f['e'])
     for it in f.get('items', []): it[1] = round(it[1], 3)
 
+pn = F('e panettone')
+pan = dict(seg=pn, at=round(W(pn, 'panettone') - S(pn) - 0.05, 3))
+for c in chunks:
+    if S(pn) - 0.01 <= c['t'] < E_(pn): c['top'] = 1500
+sfx_pan = [dict(t=round(W(pn, 'panettone') - 0.05, 3), n='ping', db=-11)]
 # bianco e nero + silenzio della musica: tratti comici contigui uniti
 bw = []
 for s in segs:
@@ -133,14 +137,13 @@ bleeps = [s['bleep'] for s in segs if 'bleep' in s]
 sfx = [dict(t=S(1), n='hit', db=-9)]
 sfx += [dict(t=round(b['s'] - 0.1, 3), n='whoosh', db=-14) for b in B]
 sfx += [dict(t=f['s'], n='ping', db=-12) for f in fx if f['k'] == 'logo' and f['brand']]
-sfx += [dict(t=x, n='tick', db=-10) for x in counter['hits']]
 sfx += [dict(t=it[1], n='tick', db=-13) for f in fx for it in f.get('items', [])]
 sfx += [dict(t=a, n='stop', db=-12) for a, b in bw] + [dict(t=b, n='hit', db=-10) for a, b in bw]
-sfx += [dict(t=total, n='hit', db=-7)]
+sfx += sfx_pan + [dict(t=total, n='hit', db=-7)]
 # le gag in bianco e nero: niente whoosh/ping dentro i silenzi
 inbw = lambda x: any(a - 0.02 <= x < b - 0.05 for a, b in bw)
 sfx = [s for s in sfx if s['n'] in ('stop', 'hit') or not inbw(s['t'])]
-tl = dict(fps=FPS, total=total, dur=round(total + END, 4), segs=segs, hook=[], silence=bw, bw=bw, bleeps=bleeps, broll=B, rets=rets, subs=chunks, fx=fx, counter=counter, sfx=sfx,
+tl = dict(fps=FPS, total=total, dur=round(total + END, 4), segs=segs, hook=[], silence=bw, bw=bw, bleeps=bleeps, broll=B, rets=rets, subs=chunks, fx=fx, sfx=sfx, panettone=pan,
           end=dict(kind='v', src='9915', frm=3.0, rate=0.8))
 json.dump(tl, open(os.path.join(R, 'timeline.json'), 'w'), ensure_ascii=False, indent=1)
 print(f'parlato fino a {total:.2f}s, totale {total + END:.2f}s, {len(chunks)} blocchi, {len(B)} inserti, {len(fx)} grafiche')

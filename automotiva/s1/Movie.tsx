@@ -16,11 +16,12 @@ const useLT = () => {
   return {lt: f / FPS, d: durationInFrames / FPS};
 };
 
-const Clip: React.FC<{src: string; from: number; rate?: number; z0: number; z1: number}> = ({src, from, rate = 1, z0, z1}) => {
+const Clip: React.FC<{src: string; from: number; rate?: number; z0: number; z1: number; children?: React.ReactNode}> = ({src, from, rate = 1, z0, z1, children}) => {
   const {lt, d} = useLT();
   return (
     <AbsoluteFill style={{transform: `scale(${lerp(z0, z1, lt / d)})`}}>
       <OffthreadVideo src={staticFile(`s1/${src}.mp4`)} startFrom={fr(from)} playbackRate={rate} muted style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+      {children}
     </AbsoluteFill>
   );
 };
@@ -100,7 +101,7 @@ const Subs: React.FC = () => {
   const len = c.words.reduce((n: number, w: Any) => n + w.w.length + 1, 0);
   const size = len > 17 ? 78 : len > 14 ? 86 : len > 11 ? 96 : 112;
   return (
-    <div style={{position: 'absolute', left: 40, right: 40, top: 1215, height: 250, display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', fontFamily: DISPLAY, fontStretch: '108%', fontWeight: 900, fontSize: size, lineHeight: 1.06, letterSpacing: -1, textTransform: 'uppercase', transform: `rotate(${k % 2 ? 1.6 : -1.6}deg) skewX(-5deg) scale(${lerp(0.72, 1, pin)})`}}>
+    <div style={{position: 'absolute', left: 40, right: 40, top: c.top ?? 1215, height: c.top ? 120 : 250, display: 'flex', flexWrap: 'wrap', alignContent: 'center', justifyContent: 'center', fontFamily: DISPLAY, fontStretch: '108%', fontWeight: 900, fontSize: size, lineHeight: 1.06, letterSpacing: -1, textTransform: 'uppercase', transform: `rotate(${k % 2 ? 1.6 : -1.6}deg) skewX(-5deg) scale(${lerp(0.72, 1, pin)})`}}>
       {c.words.map((w: Any, i: number) => {
         const hot = i === active;
         const p = eBack(prog(t, w.t - 0.03, w.t + 0.13), 2.8);
@@ -243,21 +244,15 @@ const Logo: React.FC<{f: Any}> = ({f}) => {
   );
 };
 
-// contatore dei tettucci apribili: la cifra ribalta in 3D a ogni scatto
-const Counter: React.FC = () => {
-  const {lt, d} = useLT();
-  const C = T.counter as Any;
-  const tt = lt + C.s;
-  const n = (C.hits as number[]).filter((h) => tt >= h).length;
-  const last = (C.hits as number[]).filter((h) => tt >= h).slice(-1)[0] ?? C.s;
-  const flip = eO5(prog(tt, last, last + 0.34));
-  const a = eBack(prog(lt, 0, 0.3), 1.6), out = eI3(prog(lt, d - 0.25, d));
+// panettone che compare tra le mani sul finale (sta dentro l'inquadratura, quindi segue il suo zoom)
+const Panettone: React.FC<{at: number}> = ({at}) => {
+  const {lt} = useLT();
+  const p = eBack(prog(lt, at, at + 0.32), 2.2);
+  if (lt < at) return null;
+  const bob = Math.sin((lt - at) * 7) * 6;
   return (
-    <div style={{position: 'absolute', right: 44, top: 560, opacity: (a > 0 ? 1 : 0) * (1 - out), transform: `rotate(3deg) scale(${lerp(0.5, 1, Math.min(a, 1.04)) + (1 - flip) * 0.16})`, transformOrigin: '100% 0', display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 8}}>
-      <div style={{background: NERO, border: `4px solid ${ORO}`, boxShadow: '10px 10px 0 rgba(0,0,0,.55)', padding: '4px 22px 10px', perspective: 600}}>
-        <div style={{fontFamily: DISPLAY, fontStretch: '112%', fontWeight: 900, fontSize: 150, lineHeight: 1, color: ORO_ACCESO, transform: `rotateX(${(1 - flip) * -90}deg)`, transformOrigin: '50% 60%', textAlign: 'center', minWidth: 110}}>{n}</div>
-      </div>
-      <div style={{background: ORO, color: NERO, fontFamily: MONO, fontWeight: 600, fontSize: 24, letterSpacing: 3, padding: '5px 12px'}}>TETTUCCI APRIBILI</div>
+    <div style={{position: 'absolute', left: 508 - 148, top: 1335 - 170 + bob, width: 296, transform: `scale(${lerp(0.1, 1, p)}) rotate(${(1 - Math.min(p, 1)) * -18}deg)`, transformOrigin: '50% 80%', filter: 'drop-shadow(0 18px 22px rgba(0,0,0,.45))'}}>
+      <Img src={staticFile('s1/panettone.png')} style={{width: '100%'}} />
     </div>
   );
 };
@@ -356,7 +351,9 @@ export const Movie: React.FC = () => {
       <AbsoluteFill style={{filter: `${bwr ? 'grayscale(1) contrast(1.22) brightness(0.96)' : 'contrast(1.08) saturate(1.04) brightness(1.02)'}${k > 0.04 ? ` blur(${k * 9}px)` : ''}`, transform: `translate(${sh.x}px, ${sh.y}px) scale(${1.02 + k * 0.12 + bwIn * 0.06})`}}>
         {(T.segs as Any[]).map((s, i) => (
           <Sequence key={`s${i}`} from={fr(s.at)} durationInFrames={fr(s.at + s.d) - fr(s.at)}>
-            <Clip src={s.clip} from={s.i} rate={s.rate} z0={s.z} z1={s.z + (s.mute ? 0.1 : 0.04)} />
+            <Clip src={s.clip} from={s.i} rate={s.rate} z0={s.z} z1={s.z + (s.mute ? 0.1 : 0.04)}>
+              {(T.panettone as Any).seg === i ? <Panettone at={(T.panettone as Any).at} /> : null}
+            </Clip>
           </Sequence>
         ))}
         {(T.broll as Any[]).map((b, i) => (
@@ -381,9 +378,6 @@ export const Movie: React.FC = () => {
           <Fx f={f} />
         </Sequence>
       ))}
-      <Sequence from={fr((T.counter as Any).s)} durationInFrames={fr((T.counter as Any).e) - fr((T.counter as Any).s)}>
-        <Counter />
-      </Sequence>
       <Subs />
       <Sequence from={fr(T.total)} durationInFrames={fr(T.dur) - fr(T.total)}>
         <In tr="zoom">
