@@ -19,5 +19,5 @@ mix = f'{W}/mix.wav'
 subprocess.run(['ffmpeg', '-v', 'error', '-y', *ins, '-filter_complex', ';'.join(fl), '-map', '[out]', '-ar', '48000', '-ac', '2', mix], check=True)
 print('mix ok')
 if len(sys.argv) > 2:
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', sys.argv[1], '-i', mix, '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'slow', '-crf', '20', '-maxrate', '12M', '-bufsize', '24M', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '256k', '-shortest', '-movflags', '+faststart', sys.argv[2]], check=True)
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', sys.argv[1], '-i', mix, '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'slow', '-crf', '22', '-maxrate', '7M', '-bufsize', '14M', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '256k', '-shortest', '-movflags', '+faststart', sys.argv[2]], check=True)
     print('mux ok', sys.argv[2])
